@@ -68,6 +68,9 @@ def parse_date(text: str):
     return None
 
 
+# Any quoted/linked path ending in .html, e.g. "soar/playbooks/x.html" or "/log-management/help/x.html"
+HTML_PATH_RE = re.compile(r"""["'(]((?:https?://[^"'()\s]+|[\w./-]+)\.html)(?:#[^"'()\s]*)?["')]""")
+
 PAGE_DATE_RE = re.compile(
     r"last\s+updated\s*(?:on)?\s*:?\s*"
     r"([A-Za-z]{3,9}\.? \d{1,2},? \d{4}|\d{1,2} [A-Za-z]{3,9}\.? \d{4}|"
@@ -107,6 +110,10 @@ def extract(page_html: str):
     soup = BeautifulSoup(page_html, "html.parser")
 
     links = [a["href"] for a in soup.find_all("a", href=True)]
+    # The help menu is likely built by JavaScript, so also pick up page paths
+    # written inside inline scripts / data attributes, and remember script files
+    links += HTML_PATH_RE.findall(page_html)
+    scripts = [t["src"] for t in soup.find_all("script", src=True)]
 
     # Read "Last updated on: May 02, 2026" from the WHOLE page first, wherever
     # it sits (header, banner, title block), before any part is stripped out.
@@ -142,7 +149,7 @@ def extract(page_html: str):
             continue
         lines.append(line)
 
-    return "\n".join(lines), page_date or last_updated, links
+    return "\n".join(lines), page_date or last_updated, links, scripts
 
 
 def sitemap_urls():
@@ -182,7 +189,7 @@ def sitemap_urls():
 
 
 def crawl():
-    seen, pages = set(), {}
+    seen, pages, js_seen = set(), {}, set()
     queue = deque(normalize(u) for u in START_URLS)
     # Optional: extra known URLs (one per line) so pages no menu links to still get checked
     seed_file = Path("seed_urls.txt")
@@ -203,9 +210,25 @@ def crawl():
         if status != 200 or not body:
             continue
 
-        text, last_updated, links = extract(body)
+        text, last_updated, links, scripts = extract(body)
         pages[url] = {"text": text, "last_updated": last_updated}
         print(f"  ✓ {url}")
+
+        # Read each same-site JavaScript file once; menus often list every page there
+        for src in scripts:
+            js_url = urljoin(url, src)
+            if js_url in js_seen or urlparse(js_url).netloc != urlparse(url).netloc:
+                continue
+            js_seen.add(js_url)
+            js_status, js_body = fetch(js_url)
+            time.sleep(REQUEST_DELAY)
+            if js_status == 200:
+                for path in HTML_PATH_RE.findall(js_body):
+                    # paths in a menu script may be relative to the page or to the help root
+                    for base in (url, *START_URLS):
+                        nxt = normalize(urljoin(base, path))
+                        if in_scope(nxt) and nxt not in seen:
+                            queue.append(nxt)
 
         for href in links:
             nxt = normalize(urljoin(url, href))
