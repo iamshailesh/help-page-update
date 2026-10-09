@@ -1,0 +1,271 @@
+Overview
+Demo
+Pricing
+Support
+Sign Up
+Login
+Help Document
+Overview
+Setting up
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Subscription
+Prerequisites
+Service Level Agreement (SLA)
+Amazon Web Services (AWS)
+Microsoft 365 Auto Configuration
+Microsoft 365 Manual Configuration
+Dashboard
+Reports
+Available Reports
+Manage Predefined Reports
+Manage Report Views
+Custom Reports
+Types of Report Views
+Report Exporting
+Schedule exports
+Other report options
+LDAP events
+Advanced Active Directory reports
+User Work Hours
+Account lockout analyzer
+Compliance Reports
+Search
+Search
+Search tool
+Save searches
+Share searches
+Export searches
+Add or remove fields from the search results
+Tagging tool
+Cloud correlation
+Understanding correlation
+Generating correlation reports
+Managing correlation rules
+UEBA
+Overview
+What is UEBA
+Architecture
+Training phase of the Anomaly models
+Data sources
+Anomaly rules of UEBA
+List of anomaly rules
+Working with anomaly rules - view, manage and customize rules
+Investigating anomalies
+Dashboards
+Adding users and entities to watchlists
+Anomaly reports and alerts
+Zia Insights
+Overview
+Using Zia Insights
+Setting up Zia Insights
+Invoking Zia Insights
+Alerts
+Creating alert profiles
+View log alerts
+Ticketing tool configuration
+Manage profiles
+Threat investigation
+Incident Workbench
+Overview
+Access
+User analytics
+Process Analytics
+Advanced Threat Analytics
+Incident building
+Device summary
+Incident management
+Incident management
+Configuration settings
+Devices
+Applications
+Overview
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+AD Audit Plus
+Print Server
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro
+Manage Cloud Sources
+Vulnerability data
+vCenter
+Threat management solutions
+Threat Source
+File Monitoring
+File Integrity Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Windows File Cluster
+NetApp Server
+QNAP NAS
+Import log data
+Admin settings
+Manage Agents
+Agent Settings
+Log Source Groups
+User management
+Accounts Management
+Configuring object level auditing
+Configuring audit policies
+Configuring Windows member server audit policies
+Technician audit
+Advanced Threat Analytics
+Bulk actions for Agents
+Privacy settings
+Notification settings
+Notification Templates
+Working Hour Settings
+Reload Archive Logs
+My account settings
+Product settings
+Log Collection Filter
+Custom log parsing
+License
+Storage Tiers
+Overview
+Configuring Storage Tiers
+Managing Storage Tiers
+Using Stats Analysis
+Cloud Storage Estimator
+Listener ports
+Log forwarding
+Developer space
+Custom Widgets
+Extension Profile Generation
+Extension Builder
+Marketplace
+Installing Extensions
+Compliance Extensions
+Nginx
+Veeam
+MariaDB
+Okta
+Dropbox
+MikroTik
+MongoDB
+Topsec
+Sangfor
+Ticketing tool integration
+Jira Service Desk
+ServiceDesk Plus
+Zendesk
+Cloud protection
+Cloud Protection in Log360 Cloud
+Gateway Cluster
+Gateway Server
+Prerequisites for Gateway Server configuration
+Installing Gateway Server
+Endpoint Configuration
+Certificate Authority Configuration
+Manage Certificate Trust Store
+Two-way SSL Support
+Manage Banned Applications
+Manage Sanctioned Applications
+Gateway Server Failover
+Application Insight
+User Access Insight
+Cloud Access Reports
+CASB application reports
+Shadow Cloud Application Reports
+Reports on Banned Cloud Applications
+File Upload Reports
+Threat Analytics in Cloud Protection
+Regenerate Access Key
+Troubleshooting gateway server errors
+API Support
+Teams
+Overview
+Managing Teams
+MSSP Edition
+Introduction
+MSSP Account Setup
+Dashboard
+Manage Customers
+Evaluation Customers
+Customer Portal
+Portal User Management
+Customer Portal MFA
+Centralized Technician audit
+My Account Settings
+Technician Management
+License
+Troubleshooting
+Overview
+WMI-based errors
+Encryption at Rest (EAR)
+Contact us
+Related Products
+Log360
+Comprehensive SIEM and UEBA
+Download
+|
+Demo
+AD360
+Integrated Identity & Access Management
+Download
+|
+Demo
+ADManager Plus
+Active Directory Management & Reporting
+Download
+|
+Demo
+ADAudit Plus
+Real-time Active Directory Auditing and UBA
+Download
+|
+Demo
+ADSelfService Plus
+Self-Service Password Management
+Download
+|
+Demo
+EventLog Analyzer
+Real-time Log Analysis & Reporting
+Download
+|
+Demo
+Exchange Reporter Plus
+Exchange Server Auditing & Reporting
+Download
+|
+Demo
+Log360 Cloud
+Teams
+Overview
+Teams in Log360 Cloud
+The Teams feature in Log360 Cloud aims to create a structured environment where multiple teams within an organization can operate securely and independently.
+It helps users with:
+1. Business Unit Structure:
+Teams feature a flat architecture, providing a simpler organizational structure compared to
+MSSPs
+. Each team operates as a separate entity within the organization.
+2. Account Creation and Conversion:
+Upon signup, account creation for teams is not visible in the UI. Users with the Standard/Professional plan can be converted into teams accounts
+via support request
+. Upon successful conversion, users are redirected to the 'Manage Team' home page. The 'Create Team' option is hidden once the maximum limit for team creation is reached.
+3. Space Switching Tab:
+Users can seamlessly switch between different teams using the space switching tab. Upon switching to a team account, users are redirected to the respective team's interface. Additionally, redirection to the Manage Team page can be achieved using the drop-down menu at the header.
+4. Data Segregation
+: It ensures enhanced security and organization allowing each team to integrate different ticketing tools, such as ServiceDesk Plus, AlarmsOne or Zendesk, based on their specific needs. Similarly, teams can configure separate S3 buckets for forwarding logs, offering unparalleled customization and scalability.
+5. User Management
+: Users can be added to each team through the User Management page in the Settings tab. Upon addition, users receive a confirmation email to access their account. They can be part of multiple teams concurrently.
+6. Licensing:
+Licensing for each team is handled individually, allowing for granular control over resources and costs. Each team's licensing needs to be managed separately, and different license plans can be assigned to each team. This flexibility allows organizations to tailor subscriptions based on specific team needs, optimizing costs. For instance, in the case of system admin and domain admin, where monitoring requirements differ, assigning a basic plan to system admin machines and a professional plan to domain admin machines can enhance cost efficiency. This customization isn't typically offered by MSSP plans, providing a valuable edge in optimizing resources without sacrificing functionality. Please refer to our
+help document
+for more details on licensing.
+Â© 2025 Zoho Corporation Pvt. Ltd. All rights reserved.

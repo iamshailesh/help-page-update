@@ -1,0 +1,317 @@
+Overview
+Demo
+Pricing
+Support
+Sign Up
+Login
+Help Document
+Overview
+Setting up
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Subscription
+Prerequisites
+Service Level Agreement (SLA)
+Amazon Web Services (AWS)
+Microsoft 365 Auto Configuration
+Microsoft 365 Manual Configuration
+Dashboard
+Reports
+Available Reports
+Manage Predefined Reports
+Manage Report Views
+Custom Reports
+Types of Report Views
+Report Exporting
+Schedule exports
+Other report options
+LDAP events
+Advanced Active Directory reports
+User Work Hours
+Account lockout analyzer
+Compliance Reports
+Search
+Search
+Search tool
+Save searches
+Share searches
+Export searches
+Add or remove fields from the search results
+Tagging tool
+Cloud correlation
+Understanding correlation
+Generating correlation reports
+Managing correlation rules
+UEBA
+Overview
+What is UEBA
+Architecture
+Training phase of the Anomaly models
+Data sources
+Anomaly rules of UEBA
+List of anomaly rules
+Working with anomaly rules - view, manage and customize rules
+Investigating anomalies
+Dashboards
+Adding users and entities to watchlists
+Anomaly reports and alerts
+Zia Insights
+Overview
+Using Zia Insights
+Setting up Zia Insights
+Invoking Zia Insights
+Alerts
+Creating alert profiles
+View log alerts
+Ticketing tool configuration
+Manage profiles
+Threat investigation
+Incident Workbench
+Overview
+Access
+User analytics
+Process Analytics
+Advanced Threat Analytics
+Incident building
+Device summary
+Incident management
+Incident management
+Configuration settings
+Devices
+Applications
+Overview
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+AD Audit Plus
+Print Server
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro
+Manage Cloud Sources
+Vulnerability data
+vCenter
+Threat management solutions
+Threat Source
+File Monitoring
+File Integrity Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Windows File Cluster
+NetApp Server
+QNAP NAS
+Import log data
+Admin settings
+Manage Agents
+Agent Settings
+Log Source Groups
+User management
+Accounts Management
+Configuring object level auditing
+Configuring audit policies
+Configuring Windows member server audit policies
+Technician audit
+Advanced Threat Analytics
+Bulk actions for Agents
+Privacy settings
+Notification settings
+Notification Templates
+Working Hour Settings
+Reload Archive Logs
+My account settings
+Product settings
+Log Collection Filter
+Custom log parsing
+License
+Storage Tiers
+Overview
+Configuring Storage Tiers
+Managing Storage Tiers
+Using Stats Analysis
+Cloud Storage Estimator
+Listener ports
+Log forwarding
+Developer space
+Custom Widgets
+Extension Profile Generation
+Extension Builder
+Marketplace
+Installing Extensions
+Compliance Extensions
+Nginx
+Veeam
+MariaDB
+Okta
+Dropbox
+MikroTik
+MongoDB
+Topsec
+Sangfor
+Ticketing tool integration
+Jira Service Desk
+ServiceDesk Plus
+Zendesk
+Cloud protection
+Cloud Protection in Log360 Cloud
+Gateway Cluster
+Gateway Server
+Prerequisites for Gateway Server configuration
+Installing Gateway Server
+Endpoint Configuration
+Certificate Authority Configuration
+Manage Certificate Trust Store
+Two-way SSL Support
+Manage Banned Applications
+Manage Sanctioned Applications
+Gateway Server Failover
+Application Insight
+User Access Insight
+Cloud Access Reports
+CASB application reports
+Shadow Cloud Application Reports
+Reports on Banned Cloud Applications
+File Upload Reports
+Threat Analytics in Cloud Protection
+Regenerate Access Key
+Troubleshooting gateway server errors
+API Support
+Teams
+Overview
+Managing Teams
+MSSP Edition
+Introduction
+MSSP Account Setup
+Dashboard
+Manage Customers
+Evaluation Customers
+Customer Portal
+Portal User Management
+Customer Portal MFA
+Centralized Technician audit
+My Account Settings
+Technician Management
+License
+Troubleshooting
+Overview
+WMI-based errors
+Encryption at Rest (EAR)
+Contact us
+Related Products
+Log360
+Comprehensive SIEM and UEBA
+Download
+|
+Demo
+AD360
+Integrated Identity & Access Management
+Download
+|
+Demo
+ADManager Plus
+Active Directory Management & Reporting
+Download
+|
+Demo
+ADAudit Plus
+Real-time Active Directory Auditing and UBA
+Download
+|
+Demo
+ADSelfService Plus
+Self-Service Password Management
+Download
+|
+Demo
+EventLog Analyzer
+Real-time Log Analysis & Reporting
+Download
+|
+Demo
+Exchange Reporter Plus
+Exchange Server Auditing & Reporting
+Download
+|
+Demo
+Log360 Cloud
+Alerts
+Creating alert profiles
+Alerts
+Log360 Cloud's alerting and incident management modules help security teams detect and mitigate security threats at an early stage. This section elaborates on how you can trigger and manage alerts.
+Creating Alert Profiles
+Alert profiles allow you to define the criteria to trigger an alert. You can set up multiple alerts with different criteria by creating multiple alert profiles. Follow the steps given below to create an alert profile:
+Navigate to the
+Alerts
+tab and click on
+Manage Profiles
+in the top right corner.
+Click on the
++ Add Alert Profile
+button.
+Provide a unique name for the alert profile in the Alert Name field.
+Assign a criticality to the alert profile. Choose from
+Critical, Trouble
+and
+Attention
+.
+In the
+Select Device
+field, click on the
++
+icon to select the device(s) and/or device groups(s) for which the alert profile must be configured.
+In the
+Select Alert
+field, click on the
++
+icon to define the alert criteria.
+The alert criteria can be chosen from the following categories:
+Predefined alerts
+- This is a collection of predefined alert profiles that address common use cases. Using the predefined alerts, you can save time and set up an alert profile with minimal effort.
+Compliance alerts
+- This is a collection of predefined compliance-specific alerting conditions. These alerts will help you comply with regulations such as CCPA, FISMA, PCI DSS 4.0, HIPAA, SOX, ISO 27001:2022 and
+more
+. Each predefined set of compliance alerts tracks security events such as failed logon attempts, policy changes, and account changes that fall under the scope of the specified regulation.
+Custom alerts
+- Customize your alert condition based on the log message, type, and more. This option is useful to set alerts for specific requirements in your organization. You can define conditions and group them with
+AND/OR
+operations. Select the comparator and then provide the value for the attributes. With drag and drop functionality, you can group and ungroup the alert criteria.
+In the
+Alert Format Message
+field, you can customize your alert message by adding information such as the event name, source, and more. To set the variables, click on
++Add
+near the
+Alert Format Message
+.
+Under
+Alert Notification
+, tick the
+Email Notification
+check box if you want to receive an email when the alert is triggered and provide the required details such as the
+reciever's email address, subject line, and message text
+. The default mail content is shown in the
+Message
+field. You can modify this message according to your requirement and add arguments from the
+Macros
+list.
+Tick the
+Threshold
+check box under
+Advanced Configuration
+to receive threshold-based alerts. Specifying the number of events that have to occur within the given time will trigger a threshold-based alert. For threshold alerts, the maximum range allowed is from 2 to 10 and the maximum time should be within 99 minutes. A single threshold alert can be evaluated 10000 times per hour. The log processing of threshold alert profiles is scheduled every 15 minutes. Hence a slight delay in the generated reports is to be expected as opposed to normal alerts. Upon meeting this set threshold, you will receive alerts.
+Note
+: Alert notification emails are restricted to 5000 per day. Alert notification emails will stop once the limit is reached and will resume the next day.
+Click the
+Save Profile
+button once you have specified all the necessary fields.
+Â© 2025 Zoho Corporation Pvt. Ltd. All rights reserved.

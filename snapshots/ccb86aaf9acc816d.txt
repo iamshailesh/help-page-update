@@ -1,0 +1,333 @@
+Overview
+Demo
+Pricing
+Support
+Sign Up
+Login
+Help Document
+Overview
+Setting up
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Subscription
+Prerequisites
+Service Level Agreement (SLA)
+Amazon Web Services (AWS)
+Microsoft 365 Auto Configuration
+Microsoft 365 Manual Configuration
+Dashboard
+Reports
+Available Reports
+Manage Predefined Reports
+Manage Report Views
+Custom Reports
+Types of Report Views
+Report Exporting
+Schedule exports
+Other report options
+LDAP events
+Advanced Active Directory reports
+User Work Hours
+Account lockout analyzer
+Compliance Reports
+Search
+Search
+Search tool
+Save searches
+Share searches
+Export searches
+Add or remove fields from the search results
+Tagging tool
+Cloud correlation
+Understanding correlation
+Generating correlation reports
+Managing correlation rules
+UEBA
+Overview
+What is UEBA
+Architecture
+Training phase of the Anomaly models
+Data sources
+Anomaly rules of UEBA
+List of anomaly rules
+Working with anomaly rules - view, manage and customize rules
+Investigating anomalies
+Dashboards
+Adding users and entities to watchlists
+Anomaly reports and alerts
+Zia Insights
+Overview
+Using Zia Insights
+Setting up Zia Insights
+Invoking Zia Insights
+Alerts
+Creating alert profiles
+View log alerts
+Ticketing tool configuration
+Manage profiles
+Threat investigation
+Incident Workbench
+Overview
+Access
+User analytics
+Process Analytics
+Advanced Threat Analytics
+Incident building
+Device summary
+Incident management
+Incident management
+Configuration settings
+Devices
+Applications
+Overview
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+AD Audit Plus
+Print Server
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro
+Manage Cloud Sources
+Vulnerability data
+vCenter
+Threat management solutions
+Threat Source
+File Monitoring
+File Integrity Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Windows File Cluster
+NetApp Server
+QNAP NAS
+Import log data
+Admin settings
+Manage Agents
+Agent Settings
+Log Source Groups
+User management
+Accounts Management
+Configuring object level auditing
+Configuring audit policies
+Configuring Windows member server audit policies
+Technician audit
+Advanced Threat Analytics
+Bulk actions for Agents
+Privacy settings
+Notification settings
+Notification Templates
+Working Hour Settings
+Reload Archive Logs
+My account settings
+Product settings
+Log Collection Filter
+Custom log parsing
+License
+Storage Tiers
+Overview
+Configuring Storage Tiers
+Managing Storage Tiers
+Using Stats Analysis
+Cloud Storage Estimator
+Listener ports
+Log forwarding
+Developer space
+Custom Widgets
+Extension Profile Generation
+Extension Builder
+Marketplace
+Installing Extensions
+Compliance Extensions
+Nginx
+Veeam
+MariaDB
+Okta
+Dropbox
+MikroTik
+MongoDB
+Topsec
+Sangfor
+Ticketing tool integration
+Jira Service Desk
+ServiceDesk Plus
+Zendesk
+Cloud protection
+Cloud Protection in Log360 Cloud
+Gateway Cluster
+Gateway Server
+Prerequisites for Gateway Server configuration
+Installing Gateway Server
+Endpoint Configuration
+Certificate Authority Configuration
+Manage Certificate Trust Store
+Two-way SSL Support
+Manage Banned Applications
+Manage Sanctioned Applications
+Gateway Server Failover
+Application Insight
+User Access Insight
+Cloud Access Reports
+CASB application reports
+Shadow Cloud Application Reports
+Reports on Banned Cloud Applications
+File Upload Reports
+Threat Analytics in Cloud Protection
+Regenerate Access Key
+Troubleshooting gateway server errors
+API Support
+Teams
+Overview
+Managing Teams
+MSSP Edition
+Introduction
+MSSP Account Setup
+Dashboard
+Manage Customers
+Evaluation Customers
+Customer Portal
+Portal User Management
+Customer Portal MFA
+Centralized Technician audit
+My Account Settings
+Technician Management
+License
+Troubleshooting
+Overview
+WMI-based errors
+Encryption at Rest (EAR)
+Contact us
+Related Products
+Log360
+Comprehensive SIEM and UEBA
+Download
+|
+Demo
+AD360
+Integrated Identity & Access Management
+Download
+|
+Demo
+ADManager Plus
+Active Directory Management & Reporting
+Download
+|
+Demo
+ADAudit Plus
+Real-time Active Directory Auditing and UBA
+Download
+|
+Demo
+ADSelfService Plus
+Self-Service Password Management
+Download
+|
+Demo
+EventLog Analyzer
+Real-time Log Analysis & Reporting
+Download
+|
+Demo
+Exchange Reporter Plus
+Exchange Server Auditing & Reporting
+Download
+|
+Demo
+Log360 Cloud
+Admin Settings
+Storage Tiers
+Overview
+About Log360 Cloud's Storage Tiers
+In this page:
+About Storage Tiers
+Workflow
+Core capabilities and operational benefits
+About Storage Tiers
+Log360 Cloud offers multiple storage tiers for efficient managing, flexible retention, and cost reduction. This multi-tiered storage option lets you apply different retention policies across the collected data. Each storage tier lets you specify what type of logs can be stored and how they need to be cleaned up. Each tier can be customized with its own retention period, log types, sources, and filtering criteria, making it possible to retain important logs for longer durations while minimizing the storage of less relevant or high-volume logs.
+This approach helps organizations control storage consumption and prioritize critical logs without compromising on cost or performance. Log360 Cloud also offers you detailed statistical analysis of log trends across tiers.
+The following capabilities form the core of the storage management system in Log360 Cloud:
+Storage Tiers
+Storage Stats Analysis
+Storage Tiers
+Storage Tiers allow you to define separate log retention strategies for different types of logs. Instead of applying a single policy across all data, you can create up to twenty custom tiers, each with its own configuration for log types, sources, retention periods, and optional filters, such as
+log severity levels, host IP, and device name.
+Each tier supports two types of retention:
+Search retention
+: Defines how long logs remain available for live search, alerting, and reporting.
+Archive retention
+: Defines how long logs are retained in long-term storage after they leave the search storage.
+Log360 Cloud includes the following built-in tiers:
+Default Storage Tier
+: Store logs that do not match any custom tier. This tier cannot be disabled or deleted.
+Alert Storage Tier
+: Store logs that
+match configured alert profiles.
+These logs are analyzed in real time to trigger alerts based on configured thresholds or conditions.
+Correlation Storage Tier
+: Store logs that
+match configured correlation rules
+, which analyze multiple log events across sources to detect attacks or suspicious behavior.
+NOTE
+: If storage is already full, correlation analysis and alert generation will not take place until space is freed.
+You can address this by:
+Purchasing additional storage.
+Reducing the retention period of redundant tiers.
+Cleaning up logs from redundant storage tiers.
+Enabling the overwrite feature to automatically delete older logs.
+Storage Tiers can be edited, disabled, cleaned, or deleted (except built-in ones). Any changes apply only to newly collected logs. If a tier is disabled, logs are routed to the next matching tier or the default tier. Existing logs within a disabled tier are retained until their retention period ends.
+Storage Tiers help you retain important logs for longer durations and purge high-volume or less relevant logs early, resulting in better control over storage.
+Storage Stats Analysis
+To help visualize how storage is consumed across different tiers, Log360 Cloud offers detailed usage insights through the Stats Analysis view. You can track storage trends over time, identify high-volume log sources, and analyze which log types are contributing most to overall storage usage.
+Statistics can be filtered by storage tier, log type, and log source. The visual graphs display both log size and log count, based on the time logs were received rather than the
+original timestamp of the log event
+.
+You can filter using a custom date range, with a maximum limit of 365 days. For Default and Custom Storage Tiers,
+Top Log Sources
+and
+Top Log Types
+tabs help identify the devices or event categories contributing most to storage consumption. For Alerts and Correlation Storage Tiers, the respective
+Top Profiles
+and
+Top Rules
+tabs highlight alert profiles or correlation rules generating the most log volume. This visibility allows administrators to adjust retention policies, apply filters, or reassign logs to more appropriate tiers for better storage optimization.
+Workflow of Storage Tiers
+The workflow starts with the collection of incoming logs, which are then analyzed by the detection engine and assigned to storage tiers based on specific criteria to ensure efficient storage and processing.
+Log collection
+: All incoming logs are routed to the detection engine.
+Log processing
+: Logs are analyzed based on criteria such as log source, log type, username, and severity , etc.
+Tier matching
+: Each log is evaluated against all configured storage tiers.
+Custom tier:
+Logs matching custom tier configurations are directed to the respective custom storage tiers.
+Priority-based routing
+: If multiple tiers have identical configurations, logs are routed to the tier with the highest priority as set by the user.
+Default tier:
+Logs that do not match any custom tier are sent to the default storage tier.
+Detection engine
+: Following tier assignment, logs undergo further processing, including correlation, alert, and threat detection.
+Core capabilities and operational benefits of Storage Tiers
+Log360 Cloud's storage tiering capabilities enable IT and security teams to manage log data intelligently, control retention at scale, and reduce overall storage overhead without compromising on visibility or compliance. These capabilities help teams:
+Implement tier-specific retention policies:
+Apply targeted search and archive durations based on log type or source, ensuring critical data is preserved while less relevant logs are systematically removed according to the configured retention policy.
+Optimize storage cost:
+By separating frequently queried logs into search storage and moving less-accessed data to archive storage
+Visibility into usage trends
+:
+Leverage the built-in statistics to get visibility into storage trends across tiers, highlighting which log categories contribute most to usage. These insights support informed decisions around tier configuration and resource allocation.
+Read also
+This document detailed the key features and operational benefits of Storage Tiers in Log360 Cloud. To learn how to configure and manage these capabilities in your environment, refer to the following articles:
+Configuring Storage Tiers
+Managing Storage Tiers
+Â© 2025 Zoho Corporation Pvt. Ltd. All rights reserved.

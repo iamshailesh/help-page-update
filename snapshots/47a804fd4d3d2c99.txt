@@ -1,0 +1,507 @@
+Overview
+Demo
+Pricing
+Support
+Sign Up
+Login
+Help Document
+Overview
+Setting up
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Subscription
+Prerequisites
+Service Level Agreement (SLA)
+Amazon Web Services (AWS)
+Microsoft 365 Auto Configuration
+Microsoft 365 Manual Configuration
+Dashboard
+Reports
+Available Reports
+Manage Predefined Reports
+Manage Report Views
+Custom Reports
+Types of Report Views
+Report Exporting
+Schedule exports
+Other report options
+LDAP events
+Advanced Active Directory reports
+User Work Hours
+Account lockout analyzer
+Compliance Reports
+Search
+Search
+Search tool
+Save searches
+Share searches
+Export searches
+Add or remove fields from the search results
+Tagging tool
+Cloud correlation
+Understanding correlation
+Generating correlation reports
+Managing correlation rules
+UEBA
+Overview
+What is UEBA
+Architecture
+Training phase of the Anomaly models
+Data sources
+Anomaly rules of UEBA
+List of anomaly rules
+Working with anomaly rules - view, manage and customize rules
+Investigating anomalies
+Dashboards
+Adding users and entities to watchlists
+Anomaly reports and alerts
+Zia Insights
+Overview
+Using Zia Insights
+Setting up Zia Insights
+Invoking Zia Insights
+Alerts
+Creating alert profiles
+View log alerts
+Ticketing tool configuration
+Manage profiles
+Threat investigation
+Incident Workbench
+Overview
+Access
+User analytics
+Process Analytics
+Advanced Threat Analytics
+Incident building
+Device summary
+Incident management
+Incident management
+Configuration settings
+Devices
+Applications
+Overview
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+AD Audit Plus
+Print Server
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro
+Manage Cloud Sources
+Vulnerability data
+vCenter
+Threat management solutions
+Threat Source
+File Monitoring
+File Integrity Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Windows File Cluster
+NetApp Server
+QNAP NAS
+Import log data
+Admin settings
+Manage Agents
+Agent Settings
+Log Source Groups
+User management
+Accounts Management
+Configuring object level auditing
+Configuring audit policies
+Configuring Windows member server audit policies
+Technician audit
+Advanced Threat Analytics
+Bulk actions for Agents
+Privacy settings
+Notification settings
+Notification Templates
+Working Hour Settings
+Reload Archive Logs
+My account settings
+Product settings
+Log Collection Filter
+Custom log parsing
+License
+Storage Tiers
+Overview
+Configuring Storage Tiers
+Managing Storage Tiers
+Using Stats Analysis
+Cloud Storage Estimator
+Listener ports
+Log forwarding
+Developer space
+Custom Widgets
+Extension Profile Generation
+Extension Builder
+Marketplace
+Installing Extensions
+Compliance Extensions
+Nginx
+Veeam
+MariaDB
+Okta
+Dropbox
+MikroTik
+MongoDB
+Topsec
+Sangfor
+Ticketing tool integration
+Jira Service Desk
+ServiceDesk Plus
+Zendesk
+Cloud protection
+Cloud Protection in Log360 Cloud
+Gateway Cluster
+Gateway Server
+Prerequisites for Gateway Server configuration
+Installing Gateway Server
+Endpoint Configuration
+Certificate Authority Configuration
+Manage Certificate Trust Store
+Two-way SSL Support
+Manage Banned Applications
+Manage Sanctioned Applications
+Gateway Server Failover
+Application Insight
+User Access Insight
+Cloud Access Reports
+CASB application reports
+Shadow Cloud Application Reports
+Reports on Banned Cloud Applications
+File Upload Reports
+Threat Analytics in Cloud Protection
+Regenerate Access Key
+Troubleshooting gateway server errors
+API Support
+Teams
+Overview
+Managing Teams
+MSSP Edition
+Introduction
+MSSP Account Setup
+Dashboard
+Manage Customers
+Evaluation Customers
+Customer Portal
+Portal User Management
+Customer Portal MFA
+Centralized Technician audit
+My Account Settings
+Technician Management
+License
+Troubleshooting
+Overview
+WMI-based errors
+Encryption at Rest (EAR)
+Contact us
+Related Products
+Log360
+Comprehensive SIEM and UEBA
+Download
+|
+Demo
+AD360
+Integrated Identity & Access Management
+Download
+|
+Demo
+ADManager Plus
+Active Directory Management & Reporting
+Download
+|
+Demo
+ADAudit Plus
+Real-time Active Directory Auditing and UBA
+Download
+|
+Demo
+ADSelfService Plus
+Self-Service Password Management
+Download
+|
+Demo
+EventLog Analyzer
+Real-time Log Analysis & Reporting
+Download
+|
+Demo
+Exchange Reporter Plus
+Exchange Server Auditing & Reporting
+Download
+|
+Demo
+Log360 Cloud
+Admin Settings
+Advanced Threat Analytics
+Advanced Threat Analytics
+Modern security teams cannot rely only on the logs data to find out potential attacks. We need more information than just what error was triggered, and internal logs will not provide that data for us. The Advanced Threat Analytics (ATA) feature in Log360 Cloud pulls data about malicious IPs, and domains that have an assigned reputation score and uses that to alert the administrators of any suspicious IP tries to connect to your network.
+To enable Advanced Threat Analytics, follow the steps below:
+Login to the Log360 Cloud application
+with Admin permissions
+.
+Go to the
+Settings â Admin â Management â Threat Management â Advanced Threat Analytics
+.
+Log360 Cloud provides you with two options to choose from,
+Default Threat Server
+When Enabled, Log360 Cloud correlates the information available in OTX AlienVault, FireHol, PhishTank and ThreatFox to trigger alerts if there's a match. This option only fetches data on the blacklisted IPs.
+Note
+: All Log360 Cloud customers get access to this basic Threat Intelligence feature.
+Advanced Threat Analytics
+Overview
+The Advanced Threat Analytics feature gives valuable insights into the severity of threats using the reputation score for potentially malicious URLs, domains, and IP addresses.
+This option allows Log360 Cloud to provide more context about the potential attack by correlating crucial data from the threat feeds.
+Note
+: This feature is available as an add-on for all Log360 Cloud customers. You can purchase the ATA add-on either from the Threat Configuration page or through the License page.
+Vendor support:
+Log360 Cloud supports the following vendors for the Advanced Threat Analytics data:
+Log360 Cloud Threat Analytics
+Default integration from Log360 Cloud suite. This can be accessed once the add-on is purchased.
+Constella Intelligence
+When you purchase Advanced Threat Analytics, you gain access to Dark Web Monitoring. You can configure Dark Web Monitoring using your licensed domain to monitor potential threats associated with your organization.
+VirusTotal
+Third-party threat feed integration. This follows the Bring Your Own Key(BYOK) model. If you have bought VirusTotal access separately, you can use your API key and get the threat analytics information in Log360 Cloud.
+Access
+Here's how users can access the Advanced Threat Analytics information for different usecases:
+Investigation
+: To investigate the external threat sources, the Threat Analytics information can be accessed through the External Threat report and the
+Incident Workbench
+.
+Detection:
+The
+Default Threat
+alert criteria detects interaction with external threat sources. Once the Advanced Threat Analytics add-on is applied, the alerts will be accurately fine-tuned to reduce false positives.
+External Threat report
+Navigation: Log360 Cloud home >
+Reports
+> Select
+Threats
+from the drop-down in the top left corner >
+Threat Analytics
+>
+External Threat
+The
+External Threat
+report contains information on the source of the threat, severity, reputation score, and more.
+View reports of
+Top Attacked Hosts
+and
+Threats by Category
+for the selected period.
+Click on IPs in the Threat Source column and select
+Go To Incident Workbench
+to get contextual risk data from the integrated threat feeds
+Setting Alerts for External Threats
+From the
+Alerts
+tab, go to
+Manage Profiles -> Add Alert Profile
+.
+When required to select an alert, choose
+Threat Analytics
+as the
+Alert Log Type
+and select the
+External Threat
+radio button and click
+Save
+.
+Log360 Cloud will send an alert whenever a malicious IP tries to connect with your network.
+Note:
+An alert profile with the name "
+External Threat
+" will be automatically created on enabling default threat or advanced threat analytics, or when ATA add-on is purchased during license upgrade.
+Enabling "Auto add new devices" will automatically activate the alert profile for all newly added devices.
+Log360 Cloud Threat Analytics
+Note:
+Once you purchase the Advanced Threat Analytics add-on, the Log360 Cloud Threat Analytics will be enabled by default.
+Analysis
+The Log360 Cloud Threat Analytics is available in the Incident Workbench.
+Learn
+how to invoke the Incident Workbench from different dashboards of Log360 Cloud.
+Note:
+To understand the different terminologies used in the Log360 Cloud Threat Analytics reports, please use the Help Card in the bottom left corner.
+Select any IP or Domain to analyze in the Workbench. You can access the following data:
+Info
+This section contains the Reputation Score of the Threat Source on a scale of 0-100.
+Note
+: The risk factor is inversely proportional to the Reputation Score.
+You can also view the Reputation Score Trend chart, Status of the Threat Source (whether it's actively part of the threat list), Category, Number of occurrences on threat list, and when the source has been released from the threat list.
+Geo Info
+The Geo Info contains location mapping details of the Threat Source such as city, state, region and the Whois information of the domain.
+Related Indicators
+This section contains the risk profile of the related indicators of IPs, and Domains.
+The related indicators are produced by tracking the relationships between IPs, URLs, files and mobile apps using predictive threat intelligence to determine whether a new source interacting with this network is malicious or not.
+Context:
+Imagine a scenario where an attack is detected to be originating from a particular IP address. There could potentially be numerous other IP addresses, URLs, files, or mobile apps linked to this initial IP. It is crucial to be aware of these associated sources and identify them if they interact with your network, as the threat actor behind the attack might be controlling them as well.
+Contextual Type
+The Contextual Type contains the list of related indicators for the specific threat source. Click on the drop down and select the type of the related indicator.
+Threat level
+The threat level categorizes the related indicators based on their risk levels.
+The following are the 5 risk levels in descending order:
+High Risk
+Suspicious
+Moderate Risk
+Low Risk
+Trustworthy
+Related Indicators
+Here are the threat sources and the related indicators:
+Threat source - IP
+Related indicator
+Description
+Hosted URLs
+Websites that are mapped to the particular IP address.
+ASN(Autonomuous System Number)
+The related ASN which uniquely identifies the larger group of IPs to which the threat source belongs to.
+Hosted Files
+Files hosted on the specific IP.
+Threat source - Domain
+Related indicator
+Description
+Virtually hosted domains
+Websites sharing the same server with unique domain names.
+Subdomains
+Different webpages carrying unique prefixes to a common domain.
+Hosted Files
+Files hosted on the domain
+Hosted IPs
+The IP addresses that can be mapped to the particular domain
+Common Registrant
+Individual or organization that owns and manages the domain.
+Limitation:
+Users can only view upto 1000 related indicators under each threat level for a specific relationship.
+Threat Evidences
+This section contains evidences produced by the security vendor for attempted attacks or malicious activities that can be mapped back to the specific threat source.
+Threat Evidence covers a list of incidents which caused an IP to be flagged as malicious. The response contains:
+Timestamp for when the incidents were observed initially.
+The period during which the incidents continued to persist.
+Whether the series of incidents were severe enough to be determined as possible threats.
+The specific type of threat(s) detected and other additional details available for the Threat Indicator.
+Threat evidence example 1: Phishing
+Threat evidence example 2: Files hosted by the domain
+Limitation
+: Some of the threat evidence may not be available due to incomplete retrieval of information from honeypots and other internal integrations.
+Constella Intelligence Integration
+Overview
+Constella Intelligence specializes in digital risk protection, including monitoring the dark web and other online channels, to mitigate threats like fraud, cybercrime, and brand abuse. Integration with Log360 Cloud enhances threat detection, provides a comprehensive view of digital risks, enables proactive brand protection, ensures regulatory compliance, and facilitates efficient incident response.
+Configuring dark web threat feeds:
+Login to the Log360 Cloud application with
+Admin permissions
+.
+Go to the
+Settings â Admin â Management â Threat Management â Advanced Threat Analytics
+. Proceed to configure the respective feeds to access the threat analytics data.
+Configure the Dark Web Threat feeds by clicking on Configure shown in the image below.
+After clicking configure, a pop-up will prompt you to enter an email domain to monitor for dark web exposure. Once entered, provide a valid email address of the domain for verification.
+Note
+: Configuring an email domain requires a matching license. Please ensure the configured domain is associated with a purchased license.
+An OTP will be sent to the entered email address. Upon successful verification of the OTP, your domain will be configured for dark web breaches.
+Upon successful configuration, you will see a confirmation page indicating the successful configuration of your domain for dark web breaches.
+To reconfigure another domain for monitoring, click on Re-Configure . A configuration popup will appear; follow the same steps that you followed during Initial Domain Configuration
+To disable Darkweb Threat Feeds, uncheck the checkbox. A prompt will appear; select 'Yes' to disable dark web monitoring.
+Log360 Cloud's Threat Analytics and Dark Web Monitoring are independent features. They can be enabled or disabled individually.
+Breach reports
+Email analysis
+Note
+: The retention period for Constella Intelligence logs is the same as the storage retention period.
+Features provided:
+Threat analytics dashboard tab:
+Conveniently locate breaches that have occurred within the configured domain.
+Breach reports:
+Access detailed reports on breaches.
+Predefined alert for supply chain breach:
+Receive alerts for supply chain breaches.
+VirusTotal
+Note:
+VirusTotal is one of the largest live threat feeds that consolidates risk scores of IPs, URLS, Domains, and files from a wide range of security vendors. This integration in Log360 Cloud follows the Bring Your Own Key(BYOK) model. If you have bought VirusTotal access separately, you can use your API key and analyze threat sources in Log360 Cloud.
+VirusTotal terms of service:
+Users can access VirusTotal API in two ways:
+Public API: Provides free access with specific limitations, including constraints on request frequency and access with lower priority.
+Premium API: Provides exclusive access without limitations on request frequency and prioritized access, complemented by additional benefits.
+Recommendation: For business workflows, it is recommended to use Premium API for integration.
+To learn more about VirusTotal, their
+terms of service
+,
+privacy policy
+, and
+API usage
+, please
+visit their website
+.
+Configuration
+Note
+: Please refer to VirusTotal's
+privacy policy
+to understand how user-submitted data is utilized for analysis, as well as their policies on data processing, sharing, retention, and deletion.
+Once you have purchased the Advanced Threat Analytics add-on and applied the license, head to the
+Advanced Threat Analytics
+page.
+Navigation:
+Settings
+â
+Admin
+â
+Management
+â
+ThreatManagement
+â
+Advanced Threat Analytics
+â
+VirusTotal
+â
+Integrate
+To get the VirusTotal API key:
+Visit
+https://www.virustotal.com
+and sign up for a VirusTotal account.
+Sign in to VirusTotal and find your API key and go to your
+Usernameâ SettingsâAPI Key
+.
+Use the API Key provided by VirusTotal for integrating with Log360 Cloud.
+Paste the API key and click on
+Connect
+to finish configuring VirusTotal.
+Analysis
+In Log360 Cloud, users can access the data from VirusTotal through the Incident Workbench.
+Learn
+how to invoke the Incident Workbench from different dashboards of Log360 Cloud.
+Note:
+To understand the different terminologies used in the VirusTotal reports, please use the Help Card in the bottom left corner.
+Select any IP or Domain to analyze in the Workbench. You can access the following data:
+VirusTotal Info
+This section contains the Detection Score of the Threat Source, which is the number of security vendors who have flagged the source as risky out of all the security vendors. Along with this, the basic details and the geo info of the Threat Source are also available.
+Security Vendor Analysis
+This section contains the individual analysis of 85+ security vendors such as SOCRadar, Fortinet, Forcepoint ThreatSeeker, and ArcSight Threat Intelligence
+Click on the search icon in the top left corner to filter based on Security Vendor, Analysis Category, and Analysis Result.
+Here are the Analysis Categories:
+Malicious
+Suspicious
+Harmless
+Undetected
+Timeout
+Whois Info
+This section contains the Whois information of the threat source domain.
+SSL Certificate
+This section contains details of the SSL certificate issued to the Threat Source and who issued it.
+Related files
+This section maps the relationship of the files to the IP address in the following ways:
+Files communicating with the IP address
+Files downloaded from the IP address
+Files containing the IP address
+Resolutions
+This section contains the past and current IP resolutions for a particular domain.
+Â© 2025 Zoho Corporation Pvt. Ltd. All rights reserved.

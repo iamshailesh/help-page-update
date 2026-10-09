@@ -1,0 +1,325 @@
+Overview
+Demo
+Pricing
+Support
+Sign Up
+Login
+Help Document
+Overview
+Setting up
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Subscription
+Prerequisites
+Service Level Agreement (SLA)
+Amazon Web Services (AWS)
+Microsoft 365 Auto Configuration
+Microsoft 365 Manual Configuration
+Dashboard
+Reports
+Available Reports
+Manage Predefined Reports
+Manage Report Views
+Custom Reports
+Types of Report Views
+Report Exporting
+Schedule exports
+Other report options
+LDAP events
+Advanced Active Directory reports
+User Work Hours
+Account lockout analyzer
+Compliance Reports
+Search
+Search
+Search tool
+Save searches
+Share searches
+Export searches
+Add or remove fields from the search results
+Tagging tool
+Cloud correlation
+Understanding correlation
+Generating correlation reports
+Managing correlation rules
+UEBA
+Overview
+What is UEBA
+Architecture
+Training phase of the Anomaly models
+Data sources
+Anomaly rules of UEBA
+List of anomaly rules
+Working with anomaly rules - view, manage and customize rules
+Investigating anomalies
+Dashboards
+Adding users and entities to watchlists
+Anomaly reports and alerts
+Zia Insights
+Overview
+Using Zia Insights
+Setting up Zia Insights
+Invoking Zia Insights
+Alerts
+Creating alert profiles
+View log alerts
+Ticketing tool configuration
+Manage profiles
+Threat investigation
+Incident Workbench
+Overview
+Access
+User analytics
+Process Analytics
+Advanced Threat Analytics
+Incident building
+Device summary
+Incident management
+Incident management
+Configuration settings
+Devices
+Applications
+Overview
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+AD Audit Plus
+Print Server
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro
+Manage Cloud Sources
+Vulnerability data
+vCenter
+Threat management solutions
+Threat Source
+File Monitoring
+File Integrity Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Windows File Cluster
+NetApp Server
+QNAP NAS
+Import log data
+Admin settings
+Manage Agents
+Agent Settings
+Log Source Groups
+User management
+Accounts Management
+Configuring object level auditing
+Configuring audit policies
+Configuring Windows member server audit policies
+Technician audit
+Advanced Threat Analytics
+Bulk actions for Agents
+Privacy settings
+Notification settings
+Notification Templates
+Working Hour Settings
+Reload Archive Logs
+My account settings
+Product settings
+Log Collection Filter
+Custom log parsing
+License
+Storage Tiers
+Overview
+Configuring Storage Tiers
+Managing Storage Tiers
+Using Stats Analysis
+Cloud Storage Estimator
+Listener ports
+Log forwarding
+Developer space
+Custom Widgets
+Extension Profile Generation
+Extension Builder
+Marketplace
+Installing Extensions
+Compliance Extensions
+Nginx
+Veeam
+MariaDB
+Okta
+Dropbox
+MikroTik
+MongoDB
+Topsec
+Sangfor
+Ticketing tool integration
+Jira Service Desk
+ServiceDesk Plus
+Zendesk
+Cloud protection
+Cloud Protection in Log360 Cloud
+Gateway Cluster
+Gateway Server
+Prerequisites for Gateway Server configuration
+Installing Gateway Server
+Endpoint Configuration
+Certificate Authority Configuration
+Manage Certificate Trust Store
+Two-way SSL Support
+Manage Banned Applications
+Manage Sanctioned Applications
+Gateway Server Failover
+Application Insight
+User Access Insight
+Cloud Access Reports
+CASB application reports
+Shadow Cloud Application Reports
+Reports on Banned Cloud Applications
+File Upload Reports
+Threat Analytics in Cloud Protection
+Regenerate Access Key
+Troubleshooting gateway server errors
+API Support
+Teams
+Overview
+Managing Teams
+MSSP Edition
+Introduction
+MSSP Account Setup
+Dashboard
+Manage Customers
+Evaluation Customers
+Customer Portal
+Portal User Management
+Customer Portal MFA
+Centralized Technician audit
+My Account Settings
+Technician Management
+License
+Troubleshooting
+Overview
+WMI-based errors
+Encryption at Rest (EAR)
+Contact us
+Related Products
+Log360
+Comprehensive SIEM and UEBA
+Download
+|
+Demo
+AD360
+Integrated Identity & Access Management
+Download
+|
+Demo
+ADManager Plus
+Active Directory Management & Reporting
+Download
+|
+Demo
+ADAudit Plus
+Real-time Active Directory Auditing and UBA
+Download
+|
+Demo
+ADSelfService Plus
+Self-Service Password Management
+Download
+|
+Demo
+EventLog Analyzer
+Real-time Log Analysis & Reporting
+Download
+|
+Demo
+Exchange Reporter Plus
+Exchange Server Auditing & Reporting
+Download
+|
+Demo
+Log360 Cloud
+UEBA
+Overview
+User and Entity Behavior Analytics (UEBA) in Log360 Cloud
+In this page
+Overview
+Key Components of UEBA
+Data Collection & Normalization
+Baseline Profile Establishment
+Behavioral Analysis & Pattern Detection
+Risk Scoring & Categorization
+Alert Generation
+Log360 Cloud's UEBA for Advanced Security Analytics
+Log360 Cloud UEBA: Use Cases
+Identifying Slow-Moving and APT Attacks
+Risk Accumulation Methodology
+Temporal Pattern Recognition
+Lateral Movement Detection
+Data Exfiltration Indicators
+Overview
+User and Entity Behavior Analytics (UEBA) in
+ManageEngine Log360 Cloud
+is an advanced security analytics capability designed to detect anomalous activities and potential threats by analyzing patterns in user and entity behavior. Unlike traditional rule-based detection systems, Log360 Cloudâs UEBA leverages machine learning (ML) and statistical modeling to establish behavioral baselines for users and hosts. This enables the identification of subtle deviations that may indicate malicious activity, such as
+insider threats
+,
+data exfiltration
+,
+account compromises
+, and
+Advanced Persistent Threats (APTs)
+.
+Log360 Cloud's UEBA also comes with
+integrated risk scoring
+mechanism, which assigns a risk score to users and entities. This helps prioritize potential bad actors based on severity, enabling you to minimize the incident response time, if any.
+Key components
+Data Collection & Normalization
+: UEBA ingests data from Log360 Cloud's data engine. The collected data is normalized to create a consistent format for analysis and fed into the UEBA engine.
+Refer to the table
+for a detailed list of data sources supported by UEBA.
+Baseline Profile Establishment
+: The system observes normal user and entity behaviors over time to establish baseline profiles. These profiles serve as reference points for identifying anomalies. Learn about how the anomaly model establishes baselines to detect deviations from
+Training phase of the Anomaly models
+.
+Behavioral Analysis & Pattern Detection
+: Using the established baselines, Log360 Cloud analyzes current activities to detect patterns that deviate from normal behavior . The anomalies are identified based on time, count, and pattern based deviations.
+Risk Scoring & Categorization
+: Each user and entity detected for an anomaly is assigned a risk score based on its severity and potential impact. Anomalies are categorized as Time, Count and Pattern, in a concise table to facilitate easier investigation.
+Alert Generation
+: Upon enabling alerts, the users will receive alerts when anomalies are detected, based on the alert profile configured for the various anomaly rules. To know more about managing alerts in Log360 Cloud UEBA read
+Setting up alerts for anomalies.
+Log360 Cloud's UEBA for advanced security analytics
+Log360 Cloud's UEBA enhances security analytics by leveraging machine learning to establish behavioral baselines, enabling the detection of subtle, slow-moving threats like Advanced Persistent Threats (APTs) that evade traditional rule-based systems.
+Unlike static correlation rules, which rely on predefined patterns (e.g., "five failed logins in 5 minutes"), UEBAâs anomaly detection identifies deviations from normal behavior, for example, a device communicating with rare external IPs, or a secure folder or a set of files is usually accessed only by very specific user(s) or a host, is now suddenly being accessed by a new user or host. This will be flagged as an anomaly initially. But if such behavior becomes repetitive, the model gets trained with the same gradually, and it won't flag it as an anomaly anymore. While correlation rules excel at flagging known attack sequences (e.g., brute-force attempts followed by a successful login), UEBA focuses on detecting
+contextual anomalies
+âlow-risk, sporadic activities that collectively indicate a stealthy attack.
+By assigning risk scores to these anomalous users and entities, Log360 Cloud's UEBA prioritizes users and entities that could pose as potential threats that correlation rules might miss, bridging the gap between immediate alerts and long-term attack patterns. Together, anomaly detection and correlation rules provide layered defense: the former helps uncover novel or slow-burning risks, while the latter targets specific, predefined threats, ensuring comprehensive coverage against both known and emerging attack vectors.
+Log360 Cloud UEBA: Use cases
+Identifying Slow-Moving and APT Attacks
+Risk Accumulation Methodology
+Anomalous behavior of users and entities is constantly monitored keenly by Log360 Cloud's UEBA across the network. Over time, if a user or entity is repeatedly detected for anomalies, their cumulative behavior contributes to an elevated risk score, even if the anomalies in question seem to be negligible at first. This approach proves to be beneficial in the detection of Advanced Persistent Threats (APTs), which often rely on maintaining a low profile and performing subtle actions that evade traditional security alerts.
+Temporal Pattern Recognition
+The solution monitors for temporal patterns in user and entity behaviors, identifying suspicious progressions of activities that might individually appear innocuous but collectively reveal attack methodologies. This capability is crucial for detecting threat actors who operate over extended timeframes to achieve their objectives.
+Lateral Movement Detection
+By tracking entity relationships and access patterns, Log360 Cloud's UEBA can identify
+lateral movement
+within networksâa common tactic in APT campaigns where attackers progressively expand their control across systems while maintaining stealth. The system correlates seemingly unrelated events across different network segments to expose these sophisticated attack chains.
+Data Exfiltration Indicators
+The UEBA component specifically monitors for subtle indicators of data exfiltration attempts, such as
+suspicious bulk file modifications
+or
+deletions
+on Windows systems and
+bulk data transfer activities
+in cloud platforms like Salesforce. These indicators are crucial for identifying the final stages of many APT attacks.
+Read also
+This document elaborated the overview and use cases of Log360 Cloud's UEBA. For configuring and leveraging the capabilities of UEBA, refer the below articles:
+Anomaly rules in UEBA
+Investigating anomalies
+Â© 2025 Zoho Corporation Pvt. Ltd. All rights reserved.

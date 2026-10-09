@@ -1,0 +1,387 @@
+Overview
+Demo
+Pricing
+Support
+Sign Up
+Login
+Help Document
+Overview
+Setting up
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Subscription
+Prerequisites
+Service Level Agreement (SLA)
+Amazon Web Services (AWS)
+Microsoft 365 Auto Configuration
+Microsoft 365 Manual Configuration
+Dashboard
+Reports
+Available Reports
+Manage Predefined Reports
+Manage Report Views
+Custom Reports
+Types of Report Views
+Report Exporting
+Schedule exports
+Other report options
+LDAP events
+Advanced Active Directory reports
+User Work Hours
+Account lockout analyzer
+Compliance Reports
+Search
+Search
+Search tool
+Save searches
+Share searches
+Export searches
+Add or remove fields from the search results
+Tagging tool
+Cloud correlation
+Understanding correlation
+Generating correlation reports
+Managing correlation rules
+UEBA
+Overview
+What is UEBA
+Architecture
+Training phase of the Anomaly models
+Data sources
+Anomaly rules of UEBA
+List of anomaly rules
+Working with anomaly rules - view, manage and customize rules
+Investigating anomalies
+Dashboards
+Adding users and entities to watchlists
+Anomaly reports and alerts
+Zia Insights
+Overview
+Using Zia Insights
+Setting up Zia Insights
+Invoking Zia Insights
+Alerts
+Creating alert profiles
+View log alerts
+Ticketing tool configuration
+Manage profiles
+Threat investigation
+Incident Workbench
+Overview
+Access
+User analytics
+Process Analytics
+Advanced Threat Analytics
+Incident building
+Device summary
+Incident management
+Incident management
+Configuration settings
+Devices
+Applications
+Overview
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+AD Audit Plus
+Print Server
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro
+Manage Cloud Sources
+Vulnerability data
+vCenter
+Threat management solutions
+Threat Source
+File Monitoring
+File Integrity Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Windows File Cluster
+NetApp Server
+QNAP NAS
+Import log data
+Admin settings
+Manage Agents
+Agent Settings
+Log Source Groups
+User management
+Accounts Management
+Configuring object level auditing
+Configuring audit policies
+Configuring Windows member server audit policies
+Technician audit
+Advanced Threat Analytics
+Bulk actions for Agents
+Privacy settings
+Notification settings
+Notification Templates
+Working Hour Settings
+Reload Archive Logs
+My account settings
+Product settings
+Log Collection Filter
+Custom log parsing
+License
+Storage Tiers
+Overview
+Configuring Storage Tiers
+Managing Storage Tiers
+Using Stats Analysis
+Cloud Storage Estimator
+Listener ports
+Log forwarding
+Developer space
+Custom Widgets
+Extension Profile Generation
+Extension Builder
+Marketplace
+Installing Extensions
+Compliance Extensions
+Nginx
+Veeam
+MariaDB
+Okta
+Dropbox
+MikroTik
+MongoDB
+Topsec
+Sangfor
+Ticketing tool integration
+Jira Service Desk
+ServiceDesk Plus
+Zendesk
+Cloud protection
+Cloud Protection in Log360 Cloud
+Gateway Cluster
+Gateway Server
+Prerequisites for Gateway Server configuration
+Installing Gateway Server
+Endpoint Configuration
+Certificate Authority Configuration
+Manage Certificate Trust Store
+Two-way SSL Support
+Manage Banned Applications
+Manage Sanctioned Applications
+Gateway Server Failover
+Application Insight
+User Access Insight
+Cloud Access Reports
+CASB application reports
+Shadow Cloud Application Reports
+Reports on Banned Cloud Applications
+File Upload Reports
+Threat Analytics in Cloud Protection
+Regenerate Access Key
+Troubleshooting gateway server errors
+API Support
+Teams
+Overview
+Managing Teams
+MSSP Edition
+Introduction
+MSSP Account Setup
+Dashboard
+Manage Customers
+Evaluation Customers
+Customer Portal
+Portal User Management
+Customer Portal MFA
+Centralized Technician audit
+My Account Settings
+Technician Management
+License
+Troubleshooting
+Overview
+WMI-based errors
+Encryption at Rest (EAR)
+Contact us
+Related Products
+Log360
+Comprehensive SIEM and UEBA
+Download
+|
+Demo
+AD360
+Integrated Identity & Access Management
+Download
+|
+Demo
+ADManager Plus
+Active Directory Management & Reporting
+Download
+|
+Demo
+ADAudit Plus
+Real-time Active Directory Auditing and UBA
+Download
+|
+Demo
+ADSelfService Plus
+Self-Service Password Management
+Download
+|
+Demo
+EventLog Analyzer
+Real-time Log Analysis & Reporting
+Download
+|
+Demo
+Exchange Reporter Plus
+Exchange Server Auditing & Reporting
+Download
+|
+Demo
+Log360 Cloud
+Configuration settings
+Applications
+Oracle server
+Adding Oracle Server
+Note
+: Ensure Log360 Cloud agent is installed on at least one Windows device in your network. To configure the agent, follow the steps provided
+here
+.
+Log into your
+Log360 Cloud dashboard
+.
+Navigate to
+Settings -> Configuration Settings -> Log source configuration -> Applications
+tab.
+From the right panel, click on the
+General Applications
+tab to view the list of applications being monitored.
+To add a new application, click on
+Add General Applications
+.
+Select the
+Oracle
+from the drop down box.
+Expand the list by clicking the "
++
+" icon to add a new device.
+Choose from the drop-down menu to add Configured devices, Workgroup devices, domain devices, etc.
+To add new devices manually, click on
+Configure Manually
+and enter
+Log Source
+.
+If the device type is syslog, check the
+Add as Syslog device
+box. If the device type is Windows, enter
+Username > Password > Verify Credentials
+.
+Select an agent from the drop-down list and click
+Select
+.
+Select the respective platforms, agent and click
+Add
+.
+The applications will now be added for monitoring.
+Oracle Server Configuration
+Oracle server - Windows platform
+Oracle server - Unix platform
+Reference:
+http://download.oracle.com/docs/cd/B28359_01/network.111/b28531/auditing.htm#CEGBIIJD
+For Oracle server installed in Windows platform
+Connect to SQL *Plus using the sqlplus command.
+Execute the command given below to check whether the audit_trail is set to OS or not.
+Copy to Clipboard
+Show parameter AUDIT_TRAIL;
+Change audit parameters using the below command:
+Copy to Clipboard
+Show parameter AUDIT_TRAIL;ALTER SYSTEM SET AUDIT_TRAIL=OS SCOPE=SPFILE;
+Restart the Oracle server to let the changes take effect.
+To disable AUDIT_TRAIL
+Copy to Clipboard
+ALTER SYSTEM SET audit_trail = NONE SCOPE=SPFILE ;
+For Oracle Server installed in Unix platform
+Execute the command given below to check whether the audit_trail is set to OS or not.
+Copy to Clipboard
+Show parameter AUDIT_TRAIL;
+Change audit parameters using the below command:
+Copy to Clipboard
+ALTER SYSTEM SET AUDIT_TRAIL=OS SCOPE=SPFILE;
+To enable Oracle syslog auditing, follow the procedure given below:
+Manually add and set the
+AUDIT_SYSLOG_LEVEL
+parameter in the initialization parameter file, initsid.ora.
+The
+AUDIT_SYSLOG_LEVEL
+parameter is set to specify a facility and priority in the format AUDIT_SYSLOG_LEVEL=facility.priority.
+facility
+: Describes the part of the operating system that is logging the message. Accepted values are user, local0âlocal7, syslog, daemon, kern, mail, auth, lpr, news, uucp, and cron.
+The local0âlocal7 values are predefined tags that enable you to sort the syslog message into categories. These categories can be log files or other destinations that the syslog utility can access. To find more information about these types of tags, refer to the syslog utility MAN page.
+priority
+: Defines the severity of the message. Accepted values are notice, info, debug, warning, err, crit, alert, and emerg.
+The syslog daemon compares the value assigned to the facility argument of the
+AUDIT_SYSLOG_LEVEL
+parameter with the
+syslog.conf
+file to determine where to log information.
+For example
+,the following statement identifies the facility as local1 with a priority level of warning:
+A
+UDIT_SYSLOG_LEVEL
+=local1.warning
+See Oracle Database Reference for more information about AUDIT_SYSLOG_LEVEL.
+Log in to the machine that contains the syslog configuration file, /etc/syslog.conf, with the superuser (root) privilege.
+Add the audit file destination to the syslog configuration file
+/etc/syslog.conf
+.
+For example: assuming you had set the AUDIT_SYSLOG_LEVEL to local1.warning, enter the following:
+Copy to Clipboard
+local1.warning /var/log/audit.log
+This setting logs all warning messages to the
+/var/log/audit.log
+file.
+Restart the syslog logger:
+Copy to Clipboard
+$/etc/rc.d/init.d/syslog restart
+Now, all audit records will be captured in the file /var/log/audit.log through the syslog daemon.
+Restart the Oracle server so that the changes take effect.
+Note
+: When logged in as SYSDBA/SYSOPER, Oracle database provides limited information on database activity monitoring. Hence, to get the complete audit trail activities of Oracle database, we suggest that you log in as a user with privilege other than SYSDBA/SYSOPER.
+Auditing statements
+DDL
+You can audit DDL activities of a selected user in the database.
+To enable auditing of all privileges of users:
+Copy to Clipboard
+AUDIT ALL PRIVILEGES by user_name; (or)
+AUDIT CREATE TABLE by user_name;
+To enable auditing of specific privileges:
+Copy to Clipboard
+AUDIT CREATE TABLE by user_name;
+Add your required auditing option near "CREATE TABLE".
+Restart the Oracle server to let the changes take effect.
+Note
+: To check the audit options that are enabled under any user, execute the statement given below.
+Copy to Clipboard
+SELECT user_name, audit_option, success, failure FROM DBA_STMT_AUDIT_OPTS;
+DML
+This auditing enables you to audit specific statements on a particular object. It always applies to all users of the database.
+Copy to Clipboard
+AUDIT SELECT, INSERT, UPDATE, DELETE on table_name
+You can also add your required auditing option(s) here.
+The following statement specifies default auditing options for objects that might be created in the future:
+Copy to Clipboard
+AUDIT SELECT, INSERT, UPDATE, DELETE on DEFAULT;
+Restart the Oracle server to let the changes take effect.
+Note
+: To check the audit options that are enabled under any object, simply execute the below statement.
+Copy to Clipboard
+SELECT OWNER, OBJECT_NAME, OBJECT_TYPE, INS, UPD, DEL FROM DBA_OBJ_AUDIT_OPTS;
+To disable audit option, use NOAUDIT instead of AUDIT in same statement.
+Details about the audit options are available here.
+Â© 2025 Zoho Corporation Pvt. Ltd. All rights reserved.

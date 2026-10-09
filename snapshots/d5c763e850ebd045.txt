@@ -1,0 +1,381 @@
+Overview
+Demo
+Pricing
+Support
+Sign Up
+Login
+Help Document
+Overview
+Setting up
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Subscription
+Prerequisites
+Service Level Agreement (SLA)
+Amazon Web Services (AWS)
+Microsoft 365 Auto Configuration
+Microsoft 365 Manual Configuration
+Dashboard
+Reports
+Available Reports
+Manage Predefined Reports
+Manage Report Views
+Custom Reports
+Types of Report Views
+Report Exporting
+Schedule exports
+Other report options
+LDAP events
+Advanced Active Directory reports
+User Work Hours
+Account lockout analyzer
+Compliance Reports
+Search
+Search
+Search tool
+Save searches
+Share searches
+Export searches
+Add or remove fields from the search results
+Tagging tool
+Cloud correlation
+Understanding correlation
+Generating correlation reports
+Managing correlation rules
+UEBA
+Overview
+What is UEBA
+Architecture
+Training phase of the Anomaly models
+Data sources
+Anomaly rules of UEBA
+List of anomaly rules
+Working with anomaly rules - view, manage and customize rules
+Investigating anomalies
+Dashboards
+Adding users and entities to watchlists
+Anomaly reports and alerts
+Zia Insights
+Overview
+Using Zia Insights
+Setting up Zia Insights
+Invoking Zia Insights
+Alerts
+Creating alert profiles
+View log alerts
+Ticketing tool configuration
+Manage profiles
+Threat investigation
+Incident Workbench
+Overview
+Access
+User analytics
+Process Analytics
+Advanced Threat Analytics
+Incident building
+Device summary
+Incident management
+Incident management
+Configuration settings
+Devices
+Applications
+Overview
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+AD Audit Plus
+Print Server
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro
+Manage Cloud Sources
+Vulnerability data
+vCenter
+Threat management solutions
+Threat Source
+File Monitoring
+File Integrity Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Windows File Cluster
+NetApp Server
+QNAP NAS
+Import log data
+Admin settings
+Manage Agents
+Agent Settings
+Log Source Groups
+User management
+Accounts Management
+Configuring object level auditing
+Configuring audit policies
+Configuring Windows member server audit policies
+Technician audit
+Advanced Threat Analytics
+Bulk actions for Agents
+Privacy settings
+Notification settings
+Notification Templates
+Working Hour Settings
+Reload Archive Logs
+My account settings
+Product settings
+Log Collection Filter
+Custom log parsing
+License
+Storage Tiers
+Overview
+Configuring Storage Tiers
+Managing Storage Tiers
+Using Stats Analysis
+Cloud Storage Estimator
+Listener ports
+Log forwarding
+Developer space
+Custom Widgets
+Extension Profile Generation
+Extension Builder
+Marketplace
+Installing Extensions
+Compliance Extensions
+Nginx
+Veeam
+MariaDB
+Okta
+Dropbox
+MikroTik
+MongoDB
+Topsec
+Sangfor
+Ticketing tool integration
+Jira Service Desk
+ServiceDesk Plus
+Zendesk
+Cloud protection
+Cloud Protection in Log360 Cloud
+Gateway Cluster
+Gateway Server
+Prerequisites for Gateway Server configuration
+Installing Gateway Server
+Endpoint Configuration
+Certificate Authority Configuration
+Manage Certificate Trust Store
+Two-way SSL Support
+Manage Banned Applications
+Manage Sanctioned Applications
+Gateway Server Failover
+Application Insight
+User Access Insight
+Cloud Access Reports
+CASB application reports
+Shadow Cloud Application Reports
+Reports on Banned Cloud Applications
+File Upload Reports
+Threat Analytics in Cloud Protection
+Regenerate Access Key
+Troubleshooting gateway server errors
+API Support
+Teams
+Overview
+Managing Teams
+MSSP Edition
+Introduction
+MSSP Account Setup
+Dashboard
+Manage Customers
+Evaluation Customers
+Customer Portal
+Portal User Management
+Customer Portal MFA
+Centralized Technician audit
+My Account Settings
+Technician Management
+License
+Troubleshooting
+Overview
+WMI-based errors
+Encryption at Rest (EAR)
+Contact us
+Related Products
+Log360
+Comprehensive SIEM and UEBA
+Download
+|
+Demo
+AD360
+Integrated Identity & Access Management
+Download
+|
+Demo
+ADManager Plus
+Active Directory Management & Reporting
+Download
+|
+Demo
+ADAudit Plus
+Real-time Active Directory Auditing and UBA
+Download
+|
+Demo
+ADSelfService Plus
+Self-Service Password Management
+Download
+|
+Demo
+EventLog Analyzer
+Real-time Log Analysis & Reporting
+Download
+|
+Demo
+Exchange Reporter Plus
+Exchange Server Auditing & Reporting
+Download
+|
+Demo
+Log360 Cloud
+Admin Settings
+Storage Tiers
+Managing Storage Tiers
+Managing Storage Tiers
+In this page:
+Overview
+Enabling and disabling Storage Tiers
+Viewing details
+Modifying Storage Tiers
+Clearing Logs
+Deleting Storage Tiers
+Managing Priority
+Overview
+This section explains how to manage your configured Storage Tiers in ManageEngine Log360 Cloud. After creating Storage Tiers, you may need to enable, disable or modify them, view details, clear stored logs, delete tiers that are no longer needed, or adjust the priority order in which logs are matched and routed.
+This ensures your storage stays structured and manageable to suit your organization's needs.
+Enabling and disabling Storage Tiers
+To disable an active Storage Tier:
+In the
+Storage Tiers
+page, locate the storage tier you want to disable and click the checkbox next to the tier name to select it.
+Click the
+icon.
+Figure 1: Disabling a Storage Tier
+In the confirmation popup, click
+Proceed
+to confirm.
+Figure 2: Disabling a Storage Tier
+To enable a previously disabled Storage Tier:
+In the
+Storage Tiers
+page, select the checkbox next to the tier you want to enable.
+Click the
+icon.
+Figure 3: Enabling a Storage Tier
+In the confirmation pop-up, click
+Proceed
+to confirm.
+Figure 4: Enabling a Storage Tier
+The tier will be reactivated, and new logs matching its conditions will be routed to it automatically.
+Viewing details of a Storage Tier
+In the
+Storage Tiers
+page, locate the tier you want to review.
+Click
+View Details
+next to that tier.
+Figure 5: Viewing details of a Storage tier
+A slide-out panel will appear, displaying key configurations, such as:
+The Storage Tier name.
+Selected Log Types and Log Sources.
+Applied filter conditions (criteria pattern).
+Search Retention and Archive Retention settings.
+Any advanced configuration like daily ingestion limits.
+Figure 6: Viewing details of a Storage tier
+Click
+Close
+to return to the Storage Tiers page.
+NOTE
+: If all mapped log sources for a Storage Tier have been deleted, the Log Sources field in the details panel will display '
+Deleted
+'. This means the tier will no longer match any incoming logs until you update its configuration with valid log sources.
+Figure 7: Viewing details of a Storage tier
+Modifying Storage Tiers
+In the
+Storage Tiers
+page, click the
+icon next to the tier you want to modify.
+Figure 8: Modifying a Storage Tier
+Update any required fields, such as the tier name, log types, log sources, search retention, archival retention, or advanced configuration settings.
+NOTE
+: Only the retention period can be modified for the Predefined Storage Tiers.
+Click
+Update
+to save your changes.
+Figure 9: Modifying a Storage Tier
+NOTE
+: If you reduce the retention period, only the data that exceeds the newly set retention duration will be permanently deleted. Data within the updated retention period will remain unaffected.
+Type the tier name exactly as shown in the prompt and click
+Proceed
+to confirm.
+Figure 10: Modifying a Storage Tier
+Clearing Logs
+To clear all logs stored in a specific Storage Tier:
+In the Storage Tiers page, click the
+icon next to the Storage Tier you want to clean up.
+NOTE
+: Clearing all logs will remove logs stored in both the search and archival storage.
+Figure 11: Clearing logs from a Storage Tier
+A confirmation prompt appears. Type the Storage Tier name exactly as displayed to confirm the action.
+Click
+Proceed
+to delete the logs.
+Figure 12: Clearing logs from a Storage Tier
+NOTE
+: This action is irreversible. All logs in the selected Storage Tier will be permanently removed, and storage space will be freed up for new logs.
+Deleting Storage Tiers
+In the
+Storage Tiers
+page, click the
+icon next to the Storage Tier you want to remove.
+NOTE
+: Default built-in tiers, such as the Default Storage Tier, Alerts Storage Tier, or Correlation Storage Tier, cannot be deleted.
+Figure 13: Deleting a Storage Tier
+A confirmation prompt appears. Type the tier name exactly as displayed to confirm the action.
+Click
+Proceed
+to complete the deletion.
+Figure 14: Deleting a Storage Tier
+Managing Priority
+In the
+Storage Tiers
+page, click
+Manage Priority
+.
+Figure 15: Managing the priority of Storage Tiers
+Use the
+six-dot handle
+next to each tier to drag and drop it into the desired order.
+Figure 16: Managing the priority of Storage Tiers
+You can also adjust the order by clicking the up and down arrows in the
+Set Priority
+column.
+Figure 17: Managing the priority of Storage Tiers
+Click
+Save Changes
+to apply the new order, or click
+Cancel
+to discard changes.
+Figure 18: Managing the priority of Storage Tiers
+Read also
+This page explained how to manage Storage Tiers in ManageEngine Log360 Cloud. To learn how to setup Storage Tiers or analyze storage usage and trends, refer to the following articles:
+Configuring Storage Tiers
+Using Stats Analysis
+Â© 2025 Zoho Corporation Pvt. Ltd. All rights reserved.

@@ -1,0 +1,343 @@
+Overview
+Demo
+Pricing
+Support
+Sign Up
+Login
+Help Document
+Overview
+Setting up
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Subscription
+Prerequisites
+Service Level Agreement (SLA)
+Amazon Web Services (AWS)
+Microsoft 365 Auto Configuration
+Microsoft 365 Manual Configuration
+Dashboard
+Reports
+Available Reports
+Manage Predefined Reports
+Manage Report Views
+Custom Reports
+Types of Report Views
+Report Exporting
+Schedule exports
+Other report options
+LDAP events
+Advanced Active Directory reports
+User Work Hours
+Account lockout analyzer
+Compliance Reports
+Search
+Search
+Search tool
+Save searches
+Share searches
+Export searches
+Add or remove fields from the search results
+Tagging tool
+Cloud correlation
+Understanding correlation
+Generating correlation reports
+Managing correlation rules
+UEBA
+Overview
+What is UEBA
+Architecture
+Training phase of the Anomaly models
+Data sources
+Anomaly rules of UEBA
+List of anomaly rules
+Working with anomaly rules - view, manage and customize rules
+Investigating anomalies
+Dashboards
+Adding users and entities to watchlists
+Anomaly reports and alerts
+Zia Insights
+Overview
+Using Zia Insights
+Setting up Zia Insights
+Invoking Zia Insights
+Alerts
+Creating alert profiles
+View log alerts
+Ticketing tool configuration
+Manage profiles
+Threat investigation
+Incident Workbench
+Overview
+Access
+User analytics
+Process Analytics
+Advanced Threat Analytics
+Incident building
+Device summary
+Incident management
+Incident management
+Configuration settings
+Devices
+Applications
+Overview
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+AD Audit Plus
+Print Server
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro
+Manage Cloud Sources
+Vulnerability data
+vCenter
+Threat management solutions
+Threat Source
+File Monitoring
+File Integrity Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Windows File Cluster
+NetApp Server
+QNAP NAS
+Import log data
+Admin settings
+Manage Agents
+Agent Settings
+Log Source Groups
+User management
+Accounts Management
+Configuring object level auditing
+Configuring audit policies
+Configuring Windows member server audit policies
+Technician audit
+Advanced Threat Analytics
+Bulk actions for Agents
+Privacy settings
+Notification settings
+Notification Templates
+Working Hour Settings
+Reload Archive Logs
+My account settings
+Product settings
+Log Collection Filter
+Custom log parsing
+License
+Storage Tiers
+Overview
+Configuring Storage Tiers
+Managing Storage Tiers
+Using Stats Analysis
+Cloud Storage Estimator
+Listener ports
+Log forwarding
+Developer space
+Custom Widgets
+Extension Profile Generation
+Extension Builder
+Marketplace
+Installing Extensions
+Compliance Extensions
+Nginx
+Veeam
+MariaDB
+Okta
+Dropbox
+MikroTik
+MongoDB
+Topsec
+Sangfor
+Ticketing tool integration
+Jira Service Desk
+ServiceDesk Plus
+Zendesk
+Cloud protection
+Cloud Protection in Log360 Cloud
+Gateway Cluster
+Gateway Server
+Prerequisites for Gateway Server configuration
+Installing Gateway Server
+Endpoint Configuration
+Certificate Authority Configuration
+Manage Certificate Trust Store
+Two-way SSL Support
+Manage Banned Applications
+Manage Sanctioned Applications
+Gateway Server Failover
+Application Insight
+User Access Insight
+Cloud Access Reports
+CASB application reports
+Shadow Cloud Application Reports
+Reports on Banned Cloud Applications
+File Upload Reports
+Threat Analytics in Cloud Protection
+Regenerate Access Key
+Troubleshooting gateway server errors
+API Support
+Teams
+Overview
+Managing Teams
+MSSP Edition
+Introduction
+MSSP Account Setup
+Dashboard
+Manage Customers
+Evaluation Customers
+Customer Portal
+Portal User Management
+Customer Portal MFA
+Centralized Technician audit
+My Account Settings
+Technician Management
+License
+Troubleshooting
+Overview
+WMI-based errors
+Encryption at Rest (EAR)
+Contact us
+Related Products
+Log360
+Comprehensive SIEM and UEBA
+Download
+|
+Demo
+AD360
+Integrated Identity & Access Management
+Download
+|
+Demo
+ADManager Plus
+Active Directory Management & Reporting
+Download
+|
+Demo
+ADAudit Plus
+Real-time Active Directory Auditing and UBA
+Download
+|
+Demo
+ADSelfService Plus
+Self-Service Password Management
+Download
+|
+Demo
+EventLog Analyzer
+Real-time Log Analysis & Reporting
+Download
+|
+Demo
+Exchange Reporter Plus
+Exchange Server Auditing & Reporting
+Download
+|
+Demo
+Log360 Cloud
+Admin Settings
+Configuring Windows member server audit policies
+Configure audit polices manually
+Configure the list of Windows servers to be audited
+Open Active Directory Users and Computers.
+Right-click the domain and select New > Group.
+In the New object - Group window that opens, type in âLog360CloudMSâ as the Group name, check Group scope: Domain Local and Group type: Security. Click OK.
+Right-click the newly created group and select Properties > Members > Add. Add all the Windows servers that you want to audit as a member of this group. Click OK.
+Using domain admin credentials, log in to any computer that has the Group Policy Management Console (GPMC) on it.
+Note
+: The GPMC will not be installed on workstations and/or enabled on member servers by default, so we recommend configuring audit policies on Windows domain controllers. Otherwise follow the steps in this page to install GPMC on your desired member server or workstation.
+Go to Start > Windows Administrative Tools > Group Policy Management.
+In the GPMC, right-click the domain in which you want to configure the Group Policy. Select Create a GPO and Link it here. In the New GPO window that opens, type in âLog360CloudMSPolicyâ and click OK.
+Select the Log360CloudMSPolicy GPO. Under Security Filtering, select Authenticated Users. Click Remove. In the Group Policy Management window that opens, select OK.
+Select the Log360CloudMSPolicy GPO. Under Security Filtering, click Add and choose the security group Log360CloudMS created previously. Click OK.
+Installing the Group Policy Management Console (GPMC)
+The GPMC must be installed on the machine used to run Log360 Cloud. Install GPMC in the machine running Log360 Cloud using the steps below:
+For Windows Server 2012 and above
+Go to Start > Control Panel, and select Turn Windows features on and off under Programs.
+In the Add Roles and Feature Wizard window that opens, select Features.
+Check Group Policy Management, and click Next.
+Click Install.
+For Windows Server 2008 and 2008 R2
+Go to Start > Control Panel, and select Turn Windows features on and off under Programs.
+In the Server manager window, select Features > Add Features.
+Check Group Policy Management, and click Next.
+Click Install.
+Configure advanced audit policies
+Advanced audit policies help administrators exercise granular control over which activities get recorded in the logs, helping reduce event noise. We recommend configuring advanced audit policies on Windows Server 2008 and above.
+Log in to any computer that has the GPMC with Domain Admin credentials. Open the GPMC, then right-click Log360CloudMSPolicy and select Edit.
+In the Group Policy Management Editor, go to Computer Configuration â Policies â Windows Settings â Security Settings â Advanced Audit Policy Configuration â Audit Policy. Double-click on the relevant policy setting.
+Navigate to the right pane and right-click on the relevant Subcategory. Select Properties, then choose Success, Failure, or both, as directed in the table below.
+Category
+Sub Category
+Audit Events
+Account Management
+Audit Computer Account Management
+Audit Distribution Group Management
+Audit Security Group Management
+Audit User Account Management
+Success
+Success and Failure
+Detailed Tracking
+Audit Process Creation
+Audit Process Termination
+Success
+DS Access
+Audit Directory Service Changes
+Audit Directory Service Access
+Success
+Logon/Logoff
+Audit Logon
+Audit Network Policy Server
+Audit Other Logon/Logoff Events
+Audit Logoff
+Success and Failure
+Success
+Object Access
+Audit File System
+Audit Handle Manipulation
+Audit File Share
+Success and Failure
+Policy Change
+Audit Authentication Policy Change
+Audit Authorization Policy Change
+Success
+System
+Audit Security State Change
+Success
+Force advanced audit policies
+When using advanced audit policies, ensure that they are forced over legacy audit policies.
+Log in to any computer that has the GPMC with Domain Admin credentials. Open the GPMC, right-click Log360CloudMSPolicy, then select Edit.
+In the Group Policy Management Editor, go to Computer Configuration â Policies â Windows Settings â Security Settings â Local Policies â Security Options.
+Navigate to the right pane, then right-click Audit: Force audit policy subcategory settings. Select Properties, then Enable.
+Configure legacy audit policies
+Due to the unavailability of advanced audit policies in Windows Server 2003 and earlier versions, legacy audit policies need to be configured for these types of servers.
+Log in to any computer that has the GPMC with Domain Admin credentials. Open the GPMC, right-click Log360CloudMSPolicy, then select Edit.
+In the Group Policy Management Editor, go to Computer Configuration â Policies â Windows Settings â Security Settings â Local Policies, and double-click Audit Policy.
+Navigate to the right pane and right-click on the relevant policy. Select Properties, then choose Success, Failure, or both, as directed in the table below:
+Category
+Audit Events
+Account Logon
+Success and Failure
+Audit Logon/Logoff
+Success and Failure
+Account Management
+Success
+Directory Service Access
+Success
+Process Tracking
+Success
+Object Access
+Success
+System Events
+Success
+Â© 2025 Zoho Corporation Pvt. Ltd. All rights reserved.

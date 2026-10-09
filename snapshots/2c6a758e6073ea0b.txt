@@ -1,0 +1,375 @@
+Overview
+Demo
+Pricing
+Support
+Sign Up
+Login
+Help Document
+Overview
+Setting up
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Subscription
+Prerequisites
+Service Level Agreement (SLA)
+Amazon Web Services (AWS)
+Microsoft 365 Auto Configuration
+Microsoft 365 Manual Configuration
+Dashboard
+Reports
+Available Reports
+Manage Predefined Reports
+Manage Report Views
+Custom Reports
+Types of Report Views
+Report Exporting
+Schedule exports
+Other report options
+LDAP events
+Advanced Active Directory reports
+User Work Hours
+Account lockout analyzer
+Compliance Reports
+Search
+Search
+Search tool
+Save searches
+Share searches
+Export searches
+Add or remove fields from the search results
+Tagging tool
+Cloud correlation
+Understanding correlation
+Generating correlation reports
+Managing correlation rules
+UEBA
+Overview
+What is UEBA
+Architecture
+Training phase of the Anomaly models
+Data sources
+Anomaly rules of UEBA
+List of anomaly rules
+Working with anomaly rules - view, manage and customize rules
+Investigating anomalies
+Dashboards
+Adding users and entities to watchlists
+Anomaly reports and alerts
+Zia Insights
+Overview
+Using Zia Insights
+Setting up Zia Insights
+Invoking Zia Insights
+Alerts
+Creating alert profiles
+View log alerts
+Ticketing tool configuration
+Manage profiles
+Threat investigation
+Incident Workbench
+Overview
+Access
+User analytics
+Process Analytics
+Advanced Threat Analytics
+Incident building
+Device summary
+Incident management
+Incident management
+Configuration settings
+Devices
+Applications
+Overview
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+AD Audit Plus
+Print Server
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro
+Manage Cloud Sources
+Vulnerability data
+vCenter
+Threat management solutions
+Threat Source
+File Monitoring
+File Integrity Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Windows File Cluster
+NetApp Server
+QNAP NAS
+Import log data
+Admin settings
+Manage Agents
+Agent Settings
+Log Source Groups
+User management
+Accounts Management
+Configuring object level auditing
+Configuring audit policies
+Configuring Windows member server audit policies
+Technician audit
+Advanced Threat Analytics
+Bulk actions for Agents
+Privacy settings
+Notification settings
+Notification Templates
+Working Hour Settings
+Reload Archive Logs
+My account settings
+Product settings
+Log Collection Filter
+Custom log parsing
+License
+Storage Tiers
+Overview
+Configuring Storage Tiers
+Managing Storage Tiers
+Using Stats Analysis
+Cloud Storage Estimator
+Listener ports
+Log forwarding
+Developer space
+Custom Widgets
+Extension Profile Generation
+Extension Builder
+Marketplace
+Installing Extensions
+Compliance Extensions
+Nginx
+Veeam
+MariaDB
+Okta
+Dropbox
+MikroTik
+MongoDB
+Topsec
+Sangfor
+Ticketing tool integration
+Jira Service Desk
+ServiceDesk Plus
+Zendesk
+Cloud protection
+Cloud Protection in Log360 Cloud
+Gateway Cluster
+Gateway Server
+Prerequisites for Gateway Server configuration
+Installing Gateway Server
+Endpoint Configuration
+Certificate Authority Configuration
+Manage Certificate Trust Store
+Two-way SSL Support
+Manage Banned Applications
+Manage Sanctioned Applications
+Gateway Server Failover
+Application Insight
+User Access Insight
+Cloud Access Reports
+CASB application reports
+Shadow Cloud Application Reports
+Reports on Banned Cloud Applications
+File Upload Reports
+Threat Analytics in Cloud Protection
+Regenerate Access Key
+Troubleshooting gateway server errors
+API Support
+Teams
+Overview
+Managing Teams
+MSSP Edition
+Introduction
+MSSP Account Setup
+Dashboard
+Manage Customers
+Evaluation Customers
+Customer Portal
+Portal User Management
+Customer Portal MFA
+Centralized Technician audit
+My Account Settings
+Technician Management
+License
+Troubleshooting
+Overview
+WMI-based errors
+Encryption at Rest (EAR)
+Contact us
+Related Products
+Log360
+Comprehensive SIEM and UEBA
+Download
+|
+Demo
+AD360
+Integrated Identity & Access Management
+Download
+|
+Demo
+ADManager Plus
+Active Directory Management & Reporting
+Download
+|
+Demo
+ADAudit Plus
+Real-time Active Directory Auditing and UBA
+Download
+|
+Demo
+ADSelfService Plus
+Self-Service Password Management
+Download
+|
+Demo
+EventLog Analyzer
+Real-time Log Analysis & Reporting
+Download
+|
+Demo
+Exchange Reporter Plus
+Exchange Server Auditing & Reporting
+Download
+|
+Demo
+Log360 Cloud
+Marketplace
+Installing Extensions
+Extensions
+Extensions are pre-built software components that can either add a set of custom features into Log360 Cloud or integrate other third-party applications into Log360 Cloud. Log360 Cloud's flexible platform enables it to address a wide-range of industry specific use cases.
+To help create new ManageEngine Log360 Cloud extensions, we have introduced
+Extension Profile Generator
+and
+Extension Builder
+. These capabilities allow developers to build powerful extensions and third-party integrations and publish them to the larger community of ManageEngine Log360 Cloud users through the ManageEngine Marketplace.
+Nature of Extensions
+The extensions you create fall into one of the following two categories:
+Native Extensions
+Third-Party Application Extensions
+Native Extensions
+Native extensions enhance ManageEngine Log360 Cloud's functionality by adding custom features to the system. These extensions can include one or more of the following components:
+Log Formats
+Reports
+Alert Profiles
+Correlation Rules
+Custom Widgets
+Web Tabs
+Applications
+For instance, if a Log360 Cloud customer requires out-of-the-box reports, alert profiles, and correlation rules for their organization, a developer can build native extensions and share them with the customer, saving them significant time on customization.
+Third-party Application Extensions
+Third-party application extensions enable users to integrate data from external security or business applications into Log360 Cloud. Customers can download the extension for the application they use in their organization from the Marketplace, install it, and utilize it seamlessly.
+To integrate data from third-party applications, users must first add applications. Once the data is integrated, they can create the following features:
+Log Formats
+Reports
+Alert Profiles
+Correlation Rules
+Custom Widgets
+Web Tabs
+Applications
+How to install extensions
+Installing an Extension from the Marketplace
+To install an extension from the Marketplace:
+Navigate to
+Settings â Admin â Marketplace â All Extensions
+.
+Browse the
+Marketplace
+, select the desired extension, and click
+Install
+.
+Your Log360 Cloud organization, where the extension will be installed, will be listed.
+Review the
+Terms and Conditions
+and agree to install the extension.
+Once you click
+Install
+, you will be redirected to
+Settings â Admin â Marketplace â Installed Extensions
+.
+Click
+Continue to Install
+to finalise the installation.
+Before installing, you can customize extension components such as reports, log formats, and other configurations using the
+Customize
+feature.
+Installing an Extension from a Private URL
+To install an extension shared privately by a developer or vendor:
+Click
+Install Private Extensions
+.
+Paste the
+Installation URL
+of the extension.
+Click
+Fetch Extension Details
+.
+Click
+Continue to Install
+after agreeing to the
+Terms and Conditions
+.
+Just like extensions from the Marketplace, private extensions can also be customized before installation.
+Updating an Extension
+If an update is available for an installed extension, an
+Update
+icon will appear in the
+Installed Extensions
+table.
+Click the
+Update
+icon to update the extension.
+Similar to installation, users can customize the components that need to be updated.
+Uninstalling an Extension
+To uninstall an extension:
+Click the
+Delete
+icon in the
+Manage Extensions
+table.
+When an extension is deleted, all configurations associated with it will also be removed.
+Modifying an Extension
+After an extension has been customized and installed, users can reinstall components that were not initially installed by clicking the
+Modify
+icon in the
+Manage Extensions
+table.
+Extension Details
+To view an extension's summary, usage statistics, installation history, and contents, click Details in the
+Manage Extensions
+table.
+Extension Configurations
+To configure applications or log sources for an extension:
+Click
+Manage
+in the
+Manage Extensions
+table.
+The configuration details window will open, allowing users to configure applications or log sources.
+Installation History
+To view the installation history of an extension, click the
+Installation History
+button.
+Troubleshooting Steps for Extension Installation Failure
+Step 1:
+Ensure that you have a stable internet connection.
+Step 2:
+Verify that the extension is compatible with your application's version.
+Step 3:
+Clear your browser cache and retry the installation.
+Step 4:
+Check the failure status in the Installation History for more details.
+Step 5:
+If the issue persists, contact our support team or the extension developer for further assistance.
+Â© 2025 Zoho Corporation Pvt. Ltd. All rights reserved.

@@ -1,0 +1,359 @@
+Overview
+Demo
+Pricing
+Support
+Sign Up
+Login
+Help Document
+Overview
+Setting up
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Subscription
+Prerequisites
+Service Level Agreement (SLA)
+Amazon Web Services (AWS)
+Microsoft 365 Auto Configuration
+Microsoft 365 Manual Configuration
+Dashboard
+Reports
+Available Reports
+Manage Predefined Reports
+Manage Report Views
+Custom Reports
+Types of Report Views
+Report Exporting
+Schedule exports
+Other report options
+LDAP events
+Advanced Active Directory reports
+User Work Hours
+Account lockout analyzer
+Compliance Reports
+Search
+Search
+Search tool
+Save searches
+Share searches
+Export searches
+Add or remove fields from the search results
+Tagging tool
+Cloud correlation
+Understanding correlation
+Generating correlation reports
+Managing correlation rules
+UEBA
+Overview
+What is UEBA
+Architecture
+Training phase of the Anomaly models
+Data sources
+Anomaly rules of UEBA
+List of anomaly rules
+Working with anomaly rules - view, manage and customize rules
+Investigating anomalies
+Dashboards
+Adding users and entities to watchlists
+Anomaly reports and alerts
+Zia Insights
+Overview
+Using Zia Insights
+Setting up Zia Insights
+Invoking Zia Insights
+Alerts
+Creating alert profiles
+View log alerts
+Ticketing tool configuration
+Manage profiles
+Threat investigation
+Incident Workbench
+Overview
+Access
+User analytics
+Process Analytics
+Advanced Threat Analytics
+Incident building
+Device summary
+Incident management
+Incident management
+Configuration settings
+Devices
+Applications
+Overview
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+AD Audit Plus
+Print Server
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro
+Manage Cloud Sources
+Vulnerability data
+vCenter
+Threat management solutions
+Threat Source
+File Monitoring
+File Integrity Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Windows File Cluster
+NetApp Server
+QNAP NAS
+Import log data
+Admin settings
+Manage Agents
+Agent Settings
+Log Source Groups
+User management
+Accounts Management
+Configuring object level auditing
+Configuring audit policies
+Configuring Windows member server audit policies
+Technician audit
+Advanced Threat Analytics
+Bulk actions for Agents
+Privacy settings
+Notification settings
+Notification Templates
+Working Hour Settings
+Reload Archive Logs
+My account settings
+Product settings
+Log Collection Filter
+Custom log parsing
+License
+Storage Tiers
+Overview
+Configuring Storage Tiers
+Managing Storage Tiers
+Using Stats Analysis
+Cloud Storage Estimator
+Listener ports
+Log forwarding
+Developer space
+Custom Widgets
+Extension Profile Generation
+Extension Builder
+Marketplace
+Installing Extensions
+Compliance Extensions
+Nginx
+Veeam
+MariaDB
+Okta
+Dropbox
+MikroTik
+MongoDB
+Topsec
+Sangfor
+Ticketing tool integration
+Jira Service Desk
+ServiceDesk Plus
+Zendesk
+Cloud protection
+Cloud Protection in Log360 Cloud
+Gateway Cluster
+Gateway Server
+Prerequisites for Gateway Server configuration
+Installing Gateway Server
+Endpoint Configuration
+Certificate Authority Configuration
+Manage Certificate Trust Store
+Two-way SSL Support
+Manage Banned Applications
+Manage Sanctioned Applications
+Gateway Server Failover
+Application Insight
+User Access Insight
+Cloud Access Reports
+CASB application reports
+Shadow Cloud Application Reports
+Reports on Banned Cloud Applications
+File Upload Reports
+Threat Analytics in Cloud Protection
+Regenerate Access Key
+Troubleshooting gateway server errors
+API Support
+Teams
+Overview
+Managing Teams
+MSSP Edition
+Introduction
+MSSP Account Setup
+Dashboard
+Manage Customers
+Evaluation Customers
+Customer Portal
+Portal User Management
+Customer Portal MFA
+Centralized Technician audit
+My Account Settings
+Technician Management
+License
+Troubleshooting
+Overview
+WMI-based errors
+Encryption at Rest (EAR)
+Contact us
+Related Products
+Log360
+Comprehensive SIEM and UEBA
+Download
+|
+Demo
+AD360
+Integrated Identity & Access Management
+Download
+|
+Demo
+ADManager Plus
+Active Directory Management & Reporting
+Download
+|
+Demo
+ADAudit Plus
+Real-time Active Directory Auditing and UBA
+Download
+|
+Demo
+ADSelfService Plus
+Self-Service Password Management
+Download
+|
+Demo
+EventLog Analyzer
+Real-time Log Analysis & Reporting
+Download
+|
+Demo
+Exchange Reporter Plus
+Exchange Server Auditing & Reporting
+Download
+|
+Demo
+Log360 Cloud
+Admin Settings
+Notification settings
+Notification settings
+Log360 Cloud notifies users about important events in their network via both email and SMS. The email and SMS settings can be configured according to your environment's requirements.
+Note
+: Log360 Cloud uses Zoho MTS (Mobile Transaction Service) to act as an intermediate between Zoho services and tele providers to send SMS.
+Alert limit reached
+To configure notifications for alert limit saturation,
+Click
+Configure
+present against Alert Limit Reached in the Notification Settings page.
+You can select any or both of the below criteria for which you want to be notified:
+Alert notification limit is reached (Number of email notifications sent in a day)
+Alert trigger limit is reached (Number if alerts triggered in a day for a profile)
+You can enable email and SMS notifications. Select the Email Notification and SMS Notification checkboxes to enable email and SMS notifications.
+Enter the email address and phone number to receive notifications. If you have multiple email addresses or phone numbers, please make sure to separate them using commas.
+Click
+Choose
+to select the contacts from the existing list of contacts and click
+Add
+.
+Click
+Save
+.
+To configure or change notification settings
+Open the product console, navigate to
+Settings â Admin â System Settings â Notification Settings
+.
+To configure notification settings for
+Access Key Regeneration, Account Termination, GDPR Enabled and Reload Historical Logs
+:
+Click Configure.
+To receive notifications via Email and SMS, select both
+Email Notification and SMS Notification
+.
+Fill in the
+email address and phone number
+with the country code to which you would like to receive notifications in the respective boxes.
+Click
+Choose
+to select the contacts from the list. Click
+Add
+.
+Click
+Save
+.
+Collector Down Notification Settings
+To configure notifications,
+In the
+Settings
+tab, go to
+Admin > System Settings > Notifications Settings
+.
+Click configure
+To receive notifications via Email and SMS, select both Email Notification and SMS Notification.
+Fill in the email address and phone number with the country code to which you would like to receive notifications in the respective boxes.
+Select Choose to select the contacts and email from the list.
+You can configure Working Hours and Non-Working Hours which were previously configured in the
+Working Hours Settings
+tab
+Under
+Time Filter
+, you can select
+Custom Hours
+to set your custom days and hours.
+Choose the edit icon to customize your preferred days and hours.
+Once the custom hours have been selected, click
+Save
+.
+Note
+: Notification will be triggered according to the configured notification setting. Notifications outside the configured time period will be blocked. For example, if you configure notifications between (9hrs-18hrs) for (Monday-Tuesday), notifications will be triggered for (Monday-Tuesday) between (9.00AM-17.59PM). Notifications will not be triggered outside this time frame.
+Storage Threshold Reached
+To configure notification settings,
+Click Configure.
+Enter the minimum storage threshold (in GB), at which you would like to get notified.
+Under
+Throttle
+, enter the time period after which you would like to receive the subsequent notification.
+To receive notifications via Email and SMS, select both
+Email Notification and SMS Notification
+.
+Fill in the
+email address and phone number
+with the country code to which you would like to receive notifications in the respective boxes.
+Click Choose to select the contacts from the list. Click
+Add
+.
+Click
+Save
+.
+User Management
+To configure notification settings,
+Click Configure.
+Under
+Configure Settings
+, select from the following user actions you would like to be notified about.
+If a user adds or deletes another user
+If a user enables or disables another user and
+If a user changes the access of another user
+To receive notifications via Email and SMS, select both
+Email Notification and SMS Notification
+.
+Fill in the
+email address and phone number
+with the country code to which you would like to receive notifications in the respective boxes.
+Select
+Choose
+to select the contacts from the list. Click Add.
+Click
+Save
+.
+Â© 2025 Zoho Corporation Pvt. Ltd. All rights reserved.

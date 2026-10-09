@@ -1,0 +1,355 @@
+Overview
+Demo
+Pricing
+Support
+Sign Up
+Login
+Help Document
+Overview
+Setting up
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Subscription
+Prerequisites
+Service Level Agreement (SLA)
+Amazon Web Services (AWS)
+Microsoft 365 Auto Configuration
+Microsoft 365 Manual Configuration
+Dashboard
+Reports
+Available Reports
+Manage Predefined Reports
+Manage Report Views
+Custom Reports
+Types of Report Views
+Report Exporting
+Schedule exports
+Other report options
+LDAP events
+Advanced Active Directory reports
+User Work Hours
+Account lockout analyzer
+Compliance Reports
+Search
+Search
+Search tool
+Save searches
+Share searches
+Export searches
+Add or remove fields from the search results
+Tagging tool
+Cloud correlation
+Understanding correlation
+Generating correlation reports
+Managing correlation rules
+UEBA
+Overview
+What is UEBA
+Architecture
+Training phase of the Anomaly models
+Data sources
+Anomaly rules of UEBA
+List of anomaly rules
+Working with anomaly rules - view, manage and customize rules
+Investigating anomalies
+Dashboards
+Adding users and entities to watchlists
+Anomaly reports and alerts
+Zia Insights
+Overview
+Using Zia Insights
+Setting up Zia Insights
+Invoking Zia Insights
+Alerts
+Creating alert profiles
+View log alerts
+Ticketing tool configuration
+Manage profiles
+Threat investigation
+Incident Workbench
+Overview
+Access
+User analytics
+Process Analytics
+Advanced Threat Analytics
+Incident building
+Device summary
+Incident management
+Incident management
+Configuration settings
+Devices
+Applications
+Overview
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+AD Audit Plus
+Print Server
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro
+Manage Cloud Sources
+Vulnerability data
+vCenter
+Threat management solutions
+Threat Source
+File Monitoring
+File Integrity Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Windows File Cluster
+NetApp Server
+QNAP NAS
+Import log data
+Admin settings
+Manage Agents
+Agent Settings
+Log Source Groups
+User management
+Accounts Management
+Configuring object level auditing
+Configuring audit policies
+Configuring Windows member server audit policies
+Technician audit
+Advanced Threat Analytics
+Bulk actions for Agents
+Privacy settings
+Notification settings
+Notification Templates
+Working Hour Settings
+Reload Archive Logs
+My account settings
+Product settings
+Log Collection Filter
+Custom log parsing
+License
+Storage Tiers
+Overview
+Configuring Storage Tiers
+Managing Storage Tiers
+Using Stats Analysis
+Cloud Storage Estimator
+Listener ports
+Log forwarding
+Developer space
+Custom Widgets
+Extension Profile Generation
+Extension Builder
+Marketplace
+Installing Extensions
+Compliance Extensions
+Nginx
+Veeam
+MariaDB
+Okta
+Dropbox
+MikroTik
+MongoDB
+Topsec
+Sangfor
+Ticketing tool integration
+Jira Service Desk
+ServiceDesk Plus
+Zendesk
+Cloud protection
+Cloud Protection in Log360 Cloud
+Gateway Cluster
+Gateway Server
+Prerequisites for Gateway Server configuration
+Installing Gateway Server
+Endpoint Configuration
+Certificate Authority Configuration
+Manage Certificate Trust Store
+Two-way SSL Support
+Manage Banned Applications
+Manage Sanctioned Applications
+Gateway Server Failover
+Application Insight
+User Access Insight
+Cloud Access Reports
+CASB application reports
+Shadow Cloud Application Reports
+Reports on Banned Cloud Applications
+File Upload Reports
+Threat Analytics in Cloud Protection
+Regenerate Access Key
+Troubleshooting gateway server errors
+API Support
+Teams
+Overview
+Managing Teams
+MSSP Edition
+Introduction
+MSSP Account Setup
+Dashboard
+Manage Customers
+Evaluation Customers
+Customer Portal
+Portal User Management
+Customer Portal MFA
+Centralized Technician audit
+My Account Settings
+Technician Management
+License
+Troubleshooting
+Overview
+WMI-based errors
+Encryption at Rest (EAR)
+Contact us
+Related Products
+Log360
+Comprehensive SIEM and UEBA
+Download
+|
+Demo
+AD360
+Integrated Identity & Access Management
+Download
+|
+Demo
+ADManager Plus
+Active Directory Management & Reporting
+Download
+|
+Demo
+ADAudit Plus
+Real-time Active Directory Auditing and UBA
+Download
+|
+Demo
+ADSelfService Plus
+Self-Service Password Management
+Download
+|
+Demo
+EventLog Analyzer
+Real-time Log Analysis & Reporting
+Download
+|
+Demo
+Exchange Reporter Plus
+Exchange Server Auditing & Reporting
+Download
+|
+Demo
+Log360 Cloud
+Setting up
+Subscription
+Subscription
+Overview
+This page outlines the detailed information on how Log360 Cloudâs pricing is structured based on log storage volume and retention period. It outlines available subscription plans, options for additional search and archival storage.You can also find guidance on estimating your storage needs and contacting the support or sales team for custom requirements.
+Search storage (hot storage)
+Logs stored here are immediately accessible for real-time search through the live search functionality.
+Archival storage (cold storage)
+Logs stored here are securely retained to meet long-term compliance requirements and can be retrieved using the
+Reload Archive Logs
+option when needed for investigations.
+For every unit of search storage purchased, you will receive
+three times
+the
+Archival storage
+. For example, 50 GB of
+Search storage
+automatically includes 150 GB of
+Archival storage
+at no extra cost.
+For organizations that need to retain large volumes of log data for extended periods, an additional storage may be necessary. As a cost-effective solution, you can purchase additional archival storage at
+$0.25 per GB
+per year.
+To quickly estimate your storage requirements based on the number of users in your network, log volumes, and retention period refer to the
+Log360 Cloud SIEM storage calculator page
+.
+To know more about the pricing details you can refer to the
+Log360 Cloud pricing page
+.
+For anything above
+20 TB
+, please contact our
+sales team
+at:
+sales@manageengine.com
+Pricing is based on the
+volume of logs stored and the subscription is valid for a period of 1 year
+. Log retention is limited to the period of subscription.
+Note
+: If you require additional period of log retention, please contact our support team at
+support@log360cloud.com
+and we will do the needful.
+Additional search storage
+Basic Plan - 120$/year (Default search storage: 50GB)
+Standard Plan - 540$/year (Default search storage: 50GB)
+Professional Plan - 840$/year (Default search storage: 50GB)
+50 GB
+$500.00
+$700.00
+$900.00
+100 GB
+$980.00
+$1,380.00
+$1,780.00
+250 GB
+$2,400.00
+$3,400.00
+$4,400.00
+500 GB
+$4,700.00
+$6,700.00
+$8,700.00
+750 GB
+$6,900.00
+$9,900.00
+$12,900.00
+1 TB
+$9,000.00
+$13,000.00
+$17,000.00
+2 TB
+$17,600.00
+$25,600.00
+$33,600.00
+3 TB
+$25,800.00
+$37,800.00
+$49,800.00
+4 TB
+$33,600.00
+$49,600.00
+$65,600.00
+5 TB
+$41,000.00
+$61,000.00
+$81,000.00
+10 TB
+$80,000.00
+$1,20,000.00
+$1,60,000.00
+15 TB
+$1,17,000.00
+$1,77,000.00
+$2,37,000.00
+20 TB
+$1,50,000.00
+$2,30,000.00
+$3,10,000.00
+Note
+: The Advanced Threat Analytics add-on is priced at $495 per year, plus $0.50 per GB for every additional search storage purchased.
+Read also
+This page explained how Log360 Cloud subscriptions are structured based on storage and retention needs. To continue setting up your environment, refer to the following pages for related configurations:
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Prerequisites
+Â© 2025 Zoho Corporation Pvt. Ltd. All rights reserved.

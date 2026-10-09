@@ -1,0 +1,550 @@
+Overview
+Demo
+Pricing
+Support
+Sign Up
+Login
+Help Document
+Overview
+Setting up
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Subscription
+Prerequisites
+Service Level Agreement (SLA)
+Amazon Web Services (AWS)
+Microsoft 365 Auto Configuration
+Microsoft 365 Manual Configuration
+Dashboard
+Reports
+Available Reports
+Manage Predefined Reports
+Manage Report Views
+Custom Reports
+Types of Report Views
+Report Exporting
+Schedule exports
+Other report options
+LDAP events
+Advanced Active Directory reports
+User Work Hours
+Account lockout analyzer
+Compliance Reports
+Search
+Search
+Search tool
+Save searches
+Share searches
+Export searches
+Add or remove fields from the search results
+Tagging tool
+Cloud correlation
+Understanding correlation
+Generating correlation reports
+Managing correlation rules
+UEBA
+Overview
+What is UEBA
+Architecture
+Training phase of the Anomaly models
+Data sources
+Anomaly rules of UEBA
+List of anomaly rules
+Working with anomaly rules - view, manage and customize rules
+Investigating anomalies
+Dashboards
+Adding users and entities to watchlists
+Anomaly reports and alerts
+Zia Insights
+Overview
+Using Zia Insights
+Setting up Zia Insights
+Invoking Zia Insights
+Alerts
+Creating alert profiles
+View log alerts
+Ticketing tool configuration
+Manage profiles
+Threat investigation
+Incident Workbench
+Overview
+Access
+User analytics
+Process Analytics
+Advanced Threat Analytics
+Incident building
+Device summary
+Incident management
+Incident management
+Configuration settings
+Devices
+Applications
+Overview
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+AD Audit Plus
+Print Server
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro
+Manage Cloud Sources
+Vulnerability data
+vCenter
+Threat management solutions
+Threat Source
+File Monitoring
+File Integrity Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Windows File Cluster
+NetApp Server
+QNAP NAS
+Import log data
+Admin settings
+Manage Agents
+Agent Settings
+Log Source Groups
+User management
+Accounts Management
+Configuring object level auditing
+Configuring audit policies
+Configuring Windows member server audit policies
+Technician audit
+Advanced Threat Analytics
+Bulk actions for Agents
+Privacy settings
+Notification settings
+Notification Templates
+Working Hour Settings
+Reload Archive Logs
+My account settings
+Product settings
+Log Collection Filter
+Custom log parsing
+License
+Storage Tiers
+Overview
+Configuring Storage Tiers
+Managing Storage Tiers
+Using Stats Analysis
+Cloud Storage Estimator
+Listener ports
+Log forwarding
+Developer space
+Custom Widgets
+Extension Profile Generation
+Extension Builder
+Marketplace
+Installing Extensions
+Compliance Extensions
+Nginx
+Veeam
+MariaDB
+Okta
+Dropbox
+MikroTik
+MongoDB
+Topsec
+Sangfor
+Ticketing tool integration
+Jira Service Desk
+ServiceDesk Plus
+Zendesk
+Cloud protection
+Cloud Protection in Log360 Cloud
+Gateway Cluster
+Gateway Server
+Prerequisites for Gateway Server configuration
+Installing Gateway Server
+Endpoint Configuration
+Certificate Authority Configuration
+Manage Certificate Trust Store
+Two-way SSL Support
+Manage Banned Applications
+Manage Sanctioned Applications
+Gateway Server Failover
+Application Insight
+User Access Insight
+Cloud Access Reports
+CASB application reports
+Shadow Cloud Application Reports
+Reports on Banned Cloud Applications
+File Upload Reports
+Threat Analytics in Cloud Protection
+Regenerate Access Key
+Troubleshooting gateway server errors
+API Support
+Teams
+Overview
+Managing Teams
+MSSP Edition
+Introduction
+MSSP Account Setup
+Dashboard
+Manage Customers
+Evaluation Customers
+Customer Portal
+Portal User Management
+Customer Portal MFA
+Centralized Technician audit
+My Account Settings
+Technician Management
+License
+Troubleshooting
+Overview
+WMI-based errors
+Encryption at Rest (EAR)
+Contact us
+Related Products
+Log360
+Comprehensive SIEM and UEBA
+Download
+|
+Demo
+AD360
+Integrated Identity & Access Management
+Download
+|
+Demo
+ADManager Plus
+Active Directory Management & Reporting
+Download
+|
+Demo
+ADAudit Plus
+Real-time Active Directory Auditing and UBA
+Download
+|
+Demo
+ADSelfService Plus
+Self-Service Password Management
+Download
+|
+Demo
+EventLog Analyzer
+Real-time Log Analysis & Reporting
+Download
+|
+Demo
+Exchange Reporter Plus
+Exchange Server Auditing & Reporting
+Download
+|
+Demo
+Log360 Cloud
+Reports
+Available Reports
+Log360Cloud Reports
+Log360Cloud offers 1000+ out-of-the-box reports and also the capability to create custom reports as per your requirements. These reports can help review the key security events happening in your network and also meet compliance requirements.
+The reports can be accessed from the
+Reports
+tab of the UI. The events shown in the reports can be drilled down to the raw logs and filtered based on various log fields.
+Available Reports:
+Note
+: Some AD reports include object filter that can be used to filter data based on the domain objects.
+Reports Module
+Report category
+Available reports
+Devices
+Windows
+Windows Events
+Windows Severity Reports
+Windows Critical Reports
+Windows Logon Reports
+Windows System Events
+Threat Detection
+USB Storage Auditing
+Network Policy Server
+Registry Changes
+Windows Backup and Restore
+Application Crashes
+Windows Firewall Auditing
+DNS Server
+Network Share Auditing
+Policy Changes
+Group Management
+Local Account Management
+Process Tracking
+Windows Logoff Reports
+Windows Failed Logon Reports
+Threat Detection From Antivirus
+Infrastructure Reports
+Windows Important Events
+Hyper-V Server Events
+Windows Firewall Threats
+Application Whitelisting
+Program Inventory
+Hyper-V VM Management
+User activity
+Powershell Auditing
+Devices
+Active Directory
+User Logon Reports
+Account Management
+User Management
+Group Management
+Computer Management
+Permission Changes
+Configuration Auditing
+DNS Changes
+AzureAD Password Protection
+Domain Object Changes
+LAPS Audit
+GPO Setting Changes
+OU Management
+GPO Management
+Other AD Object Changes
+ADFS Auditing
+DNS Server Events
+DC Credential Validation
+Kerberos Events
+Trust Relationships Changes
+Advanced DNS Server Audit
+AD Replication Audit
+LDAP Auditing
+Netlogon vulnerable Schannel Connection Audit
+Devices
+Unix
+Unix Events
+Unix Logon Reports
+Unix Logoff Reports
+Unix Failed Logon Reports
+Unix User Account Management
+Unix Removable Disk Auditing
+SUDO Commands
+Unix Mail Server Reports
+Unix Threats
+Unix NFS Events
+Unix Other Events
+Unix FTP Server Reports
+Unix System Events
+Unix Severity Reports
+Unix Critical Reports
+Devices
+Network devices
+Predefined reports for Arista, Barracuda, Check Point, Cisco, F5, Fortinet, FirePower, H3C, Huawei, Juniper, Meraki, NetScreen, pfSense, Palo Alto, SonicWall, Sophos, WatchGuard devices, Dell, Forcepoint and StormShield.
+All Events
+Important Events
+Router Logon Report
+Router Configuration Report
+Router Accepted Connections
+Denied Connections
+Router Traffic Report by Protocol
+Router/Switch System Events
+Router Traffic Errors
+IDS/IPS Activity
+Firewall Threats
+Firewall Traffic Reports
+Denied Connections
+Common Reports
+Firewall Logon Reports
+Firewall Account Management
+Firewall VPN Logon Reports
+Firewall VPN Users Reports
+VPN Connection Status Report
+Network Device Severity Reports
+Network Device Risk Reports
+Firewall Website Traffic Reports
+Devices
+VM Management
+Predefined reports for ESXi
+Hypervisor Events
+VMWare Logons/Logoff
+VMWare System Events
+VMWare Server Events
+Cloud Sources
+AWS
+User Login Activity
+Failed/Unauthorized Activity
+IAM Activity
+User Activity
+Network Security Groups
+VPC Activity
+S3 Bucket Activity Reports
+WAF Reports
+Security Token Service
+AWS Config Reports
+EC2 Reports
+Amazon Auto Scaling Reports
+Amazon ELB Reports
+RDS Reports
+Route 53
+S3 File Changes Audit
+S3 Traffic Analysis Reports
+Classic LoadBalancer Reports
+Application LoadBalancer Reports
+Network LoadBalancer Report
+Microsoft 365
+Microsoft 365 Overview
+Exchange online
+Azure AD
+Microsoft Teams
+OneDrive Online
+Sharepoint Online
+Salesforce
+All Events
+Failed Events
+Unauthorized Events
+Failed Logins
+Successful Logins
+Login As Event
+Report Exports
+Report Activity
+MultiBlock Report Activity
+Content Distribution Activity
+Content Transfer Activity
+Document Attachments Download
+Search Activity
+Search Click Activity
+All Setup Audit Trail Events
+Custom Object Events
+Manage Users Events
+User Management Settings Events
+Application Events
+Connected Apps Events
+General Applications
+SQL Server
+SQL Server Events
+DDL Auditing Report
+DML Auditing Report
+Logon/Logout Events
+Failed Logon Events
+Startup Shutdown Events
+Server Principal Changes
+Database Principal Changes
+Password Changes
+Audit Changes
+Backup and Restore Events
+Security Reports
+System Events
+Permission Denied Report
+Integrity Report
+Authority Changes
+Trace Changes
+Oracle
+Oracle Events
+Auditing Account Management
+Auditing Report
+Auditing Server Report
+Security Reports
+Terminal
+Terminal Server Events
+Terminal Server Gateway Logons
+Terminal Server Gateway Communications
+Terminal Server Gateway Top Reports
+Sysmon
+Sysmon Events
+Process Audit Report
+Registry Audit Report
+File Audit Report
+Library And Drivers Report
+Network Audit Report
+WMI Audit Report
+Configuration Report
+Exchange Reporter Plus
+Exchange Events
+Mailbox Audit Logging
+Admin Audit Logging
+Mailbox Import Export Changes
+Folder Access Permission Changes
+Security Applications
+MalwareBytes
+Malwarebytes Reports
+FireEye
+FireEye Reports
+Symantec Endpoint Protection
+Symantec Reports
+Symantec DLP
+Symantec DLP Reports
+CEF Format
+CEF Format Reports
+McAfee
+McAfee Events
+McAfee Threat Reports
+McAfee Virus Reports
+Trend Micro
+Trend Micro Events
+Logon Reports
+Policy Management
+User Account Management
+Security Reports
+Advanced Threat Analytics
+Global threat feeds
+External Threat
+Dark web threat feeds
+All Breach Data
+DarkWeb Breach Data
+Botnet Leak Data
+Supply Chain breach
+Import Supported Log Sources
+Apache
+Apache Server Events
+WebServer Error Reports
+WebServer Top Reports
+WebServer Attack Reports
+WebServer Advanced Reports
+DB2 Logs
+DB2 Events
+DDL Auditing Report
+DML Auditing Report
+Database Connection Auditing
+Database Server Reports
+DHCP Linux
+DHCP Linux Events
+DHCP Server Reports
+DHCP Windows
+DHCP Windows Events
+DHCP Server Reports
+IIS W3C Web
+IIS Web Server Events
+WebServer Top Reports
+WebServer Error Reports
+WebServer Attack Reports
+IIS W3C FTP
+IIS FTP Events
+FTP Server Reports
+MySQL
+MySQL Events
+Logon Reports
+General Statements Reports
+Database Administrative Statements Reports
+MySQL Server Events
+Postgres
+PostgreSQL Events
+DDL Auditing Report
+DML Auditing Report
+Logon Reports
+Auditing Account Management
+Database Administrative Statements Reports
+PostgreSQL Server Events
+SAP ERP Audit Logs
+SAP Events
+Logon Reports
+User Account Management
+Configuration Reports
+Attack Reports
+System Events
+Device Severity Reports
+File Integrity Monitoring
+Windows File Monitoring
+File Monitoring
+EMC Isilon
+File Monitoring
+Synology NAS
+File Monitoring
+EMC Server
+File Monitoring
+Â© 2025 Zoho Corporation Pvt. Ltd. All rights reserved.

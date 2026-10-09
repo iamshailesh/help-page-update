@@ -1,0 +1,1252 @@
+Overview
+Demo
+Pricing
+Support
+Sign Up
+Login
+Help Document
+Overview
+Setting up
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Subscription
+Prerequisites
+Service Level Agreement (SLA)
+Amazon Web Services (AWS)
+Microsoft 365 Auto Configuration
+Microsoft 365 Manual Configuration
+Dashboard
+Reports
+Available Reports
+Manage Predefined Reports
+Manage Report Views
+Custom Reports
+Types of Report Views
+Report Exporting
+Schedule exports
+Other report options
+LDAP events
+Advanced Active Directory reports
+User Work Hours
+Account lockout analyzer
+Compliance Reports
+Search
+Search
+Search tool
+Save searches
+Share searches
+Export searches
+Add or remove fields from the search results
+Tagging tool
+Cloud correlation
+Understanding correlation
+Generating correlation reports
+Managing correlation rules
+UEBA
+Overview
+What is UEBA
+Architecture
+Training phase of the Anomaly models
+Data sources
+Anomaly rules of UEBA
+List of anomaly rules
+Working with anomaly rules - view, manage and customize rules
+Investigating anomalies
+Dashboards
+Adding users and entities to watchlists
+Anomaly reports and alerts
+Zia Insights
+Overview
+Using Zia Insights
+Setting up Zia Insights
+Invoking Zia Insights
+Alerts
+Creating alert profiles
+View log alerts
+Ticketing tool configuration
+Manage profiles
+Threat investigation
+Incident Workbench
+Overview
+Access
+User analytics
+Process Analytics
+Advanced Threat Analytics
+Incident building
+Device summary
+Incident management
+Incident management
+Configuration settings
+Devices
+Applications
+Overview
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+AD Audit Plus
+Print Server
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro
+Manage Cloud Sources
+Vulnerability data
+vCenter
+Threat management solutions
+Threat Source
+File Monitoring
+File Integrity Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Windows File Cluster
+NetApp Server
+QNAP NAS
+Import log data
+Admin settings
+Manage Agents
+Agent Settings
+Log Source Groups
+User management
+Accounts Management
+Configuring object level auditing
+Configuring audit policies
+Configuring Windows member server audit policies
+Technician audit
+Advanced Threat Analytics
+Bulk actions for Agents
+Privacy settings
+Notification settings
+Notification Templates
+Working Hour Settings
+Reload Archive Logs
+My account settings
+Product settings
+Log Collection Filter
+Custom log parsing
+License
+Storage Tiers
+Overview
+Configuring Storage Tiers
+Managing Storage Tiers
+Using Stats Analysis
+Cloud Storage Estimator
+Listener ports
+Log forwarding
+Developer space
+Custom Widgets
+Extension Profile Generation
+Extension Builder
+Marketplace
+Installing Extensions
+Compliance Extensions
+Nginx
+Veeam
+MariaDB
+Okta
+Dropbox
+MikroTik
+MongoDB
+Topsec
+Sangfor
+Ticketing tool integration
+Jira Service Desk
+ServiceDesk Plus
+Zendesk
+Cloud protection
+Cloud Protection in Log360 Cloud
+Gateway Cluster
+Gateway Server
+Prerequisites for Gateway Server configuration
+Installing Gateway Server
+Endpoint Configuration
+Certificate Authority Configuration
+Manage Certificate Trust Store
+Two-way SSL Support
+Manage Banned Applications
+Manage Sanctioned Applications
+Gateway Server Failover
+Application Insight
+User Access Insight
+Cloud Access Reports
+CASB application reports
+Shadow Cloud Application Reports
+Reports on Banned Cloud Applications
+File Upload Reports
+Threat Analytics in Cloud Protection
+Regenerate Access Key
+Troubleshooting gateway server errors
+API Support
+Teams
+Overview
+Managing Teams
+MSSP Edition
+Introduction
+MSSP Account Setup
+Dashboard
+Manage Customers
+Evaluation Customers
+Customer Portal
+Portal User Management
+Customer Portal MFA
+Centralized Technician audit
+My Account Settings
+Technician Management
+License
+Troubleshooting
+Overview
+WMI-based errors
+Encryption at Rest (EAR)
+Contact us
+Related Products
+Log360
+Comprehensive SIEM and UEBA
+Download
+|
+Demo
+AD360
+Integrated Identity & Access Management
+Download
+|
+Demo
+ADManager Plus
+Active Directory Management & Reporting
+Download
+|
+Demo
+ADAudit Plus
+Real-time Active Directory Auditing and UBA
+Download
+|
+Demo
+ADSelfService Plus
+Self-Service Password Management
+Download
+|
+Demo
+EventLog Analyzer
+Real-time Log Analysis & Reporting
+Download
+|
+Demo
+Exchange Reporter Plus
+Exchange Server Auditing & Reporting
+Download
+|
+Demo
+Log360 Cloud
+Setting up
+Adding Syslog devices
+Adding Syslog devices
+Configuring the Syslog Service on a UNIX devices
+Configuring the Syslog Service on a Mac OS devices
+Configuring the Syslog Service on a HP-UX/Solaris/AIX Device
+Configuring the Syslog Service on VMware
+Configuring the Syslog Service on Arista Switches
+Configuring the Syslog Service on Cisco Switches
+Configuring the Syslog Service on HP Switches
+Configuring the Syslog Service on Cisco devices
+Configuring the Syslog Service on Cisco Firepower devices
+Configuring the Syslog Service on SonicWall devices
+Configuring the Syslog Service on Juniper devices
+Configuring the Syslog Service on PaloAlto devices
+Configuring the Syslog Service on Fortinet devices
+Configuring the Syslog Service on Check Point devices
+Configuring the Syslog Service on NetScreen devices
+Configuring the Syslog Service on WatchGuard devices
+Configuring the Syslog Service on Sophos devices
+Configuring the Syslog Service on Barracuda devices
+Configuring the Syslog Service on Barracuda Web Application Firewall
+Configuring the Syslog Service on Barracuda Email Security Gateway
+Configuring the Syslog Service on Huawei Firewall devices
+Configuring the Syslog Service on Meraki devices
+Configuring the Syslog Service on pfSense devices
+Configuring the Syslog Service on H3C devices
+Configuration steps for Syslog forwarding from F5 devices to Log360 Cloud Agent
+Adding the Windows Firewall to Log360 Cloud
+Configuring the Syslog Service on Cyberoam devices
+Configuring the Syslog Service on Dell Switches
+Configuring the Syslog Service on Forcepoint Switches
+Configuration the Syslog service on Stormshield devices
+Configuring the Syslog Service on a UNIX devices
+Note
+: Please take a note of the default port numbers used for the different protocols.
+Default port number
+protocol used
+513 & 514
+UDP
+514
+TCP
+513
+TLS
+To identify the Syslog service in use, execute the following command:
+Copy to Clipboard
+ps aux | grep syslog
+As a result, this will return the currently running Syslog service.
+Follow these steps to configure log forwarding to the Log360 Cloud server based on the Syslog service used.
+Add the required entries in the configuration file based on the protocol.
+syslogd
+File path: /etc/syslog.conf
+UDP:
+Copy to Clipboard
+*.*<space/tab>@<agent_machine_name or ip>:<port_no>
+rsyslogd
+File path: /etc/rsyslog.conf
+UDP:
+Copy to Clipboard
+*.*<space/tab>@<agent_machine_name or ip>:<port_no>
+TCP
+Copy to Clipboard
+*.*<space/tab>@@<agent_machine_name or ip>:<port_no>
+TLS
+Note
+: Please check the
+prerequisites
+before appending the entries mentioned
+Copy to Clipboard
+$DefaultNetstreamDriverCAFile </path/to/CACertificate.crt>
+$ActionSendStreamDriver gtls
+$ActionSendStreamDriverMode 1
+$ActionSendStreamDriverAuthMode x509/name
+$ActionSendStreamDriverPermittedPeer <commonname>
+*.*<space/tab>@@<agent_machine_name or ip>:<port_no>
+syslog-ng
+File path: /etc/syslog-ng/syslog-ng.conf
+UDP:
+Copy to Clipboard
+destination d_log360cloud { network( <agent_machine_name or ip> port(<port>) transport("udp") ); };
+log { source(<source_name>); destination(d_log360cloud); };
+TCP:
+Copy to Clipboard
+destination d_log360cloud { network( <agent_machine_name or ip> port(<port>) transport("tcp") ); };
+log { source(<source_name>); destination(d_log360cloud); };
+TLS:
+Note
+: Please check the
+prerequisites
+before appending the entries mentioned
+Copy to Clipboard
+destination d_log360cloud { network("<agent_machine_name or ip>" port("<port>") transport("tls") tls(key-file("/path/to/private.key") cert-file("/path/to/certificate.crt") ca-dir("/path/to/ca/directory"))); };
+log { source(<source_name>); destination(d_log360cloud); };
+<source_name> can be found from existing configuration of source with system(); and internal(); calls in the syslog-ng.conf file
+For ex: Here the <source_name> should be "
+s_src
+"
+source s_src {
+system();
+internal();
+};
+Save the configuration and
+restart
+the Syslog daemon using the below command:
+Copy to Clipboard
+service <syslog/rsyslog/syslog-ng> restart
+or
+Copy to Clipboard
+systemctl restart <syslog/rsyslog/syslog-ng>
+Login as root user and edit the
+syslog.conf/rsyslog.conf/syslog-ng.conf
+file in the
+/etc
+directory.
+You can check the logger in the device by executing '
+ps -aux | grep syslog
+' command in the Terminal or Shell.
+For UDP based log collection:
+*.*<space/tab>@<agent_machine_name or ip>:<port_no>
+at the end of the configuration file, where <agent_machine_name or ip> is the DNS name or IP address of the machine on which Log360 Cloud Agent is running. Save the configuration and exit the editor.
+For TCP based log collection:
+*.*<space/tab>@@<agent_machine_name or ip>:<port_no>
+at the end, where <server_name> is the DNS name or IP address of the machine on which Log360 Cloud Agent is running. Save the configuration and exit the editor.
+Note
+: Ensure that Log360 Cloud Agent server that you provide is reachable from the Syslog device.
+Prerequisites
+Install a valid certificate in agents.
+Click here
+to know how to install a valid certificate.
+Only PFX format is supported for storing certificates. If you use keystore format, convert it to PFX.
+For configuring log forwarding, obtain the root certificate from the certificate vendor.
+Using other certificates:
+For configuring log forwarding, get the root certificate from the certificate vendor.
+Forwarding application logs to the Log360 Cloud Agent Server
+If any particular applications' logs needs to be forwarded then the following configurations needs to be done in Linux devices under rsyslog.conf (or) syslog.conf
+Under the MODULES section, check whether the "$ModLoad imfile" is included. (This module "imfile" converts any input text file into a syslog message,which can then be forwarded to the Log360 Cloud Agent Server.)
+The following directives contain the details of the external log file:
+$InputFileName <Monitored_File_Absolute_Path>
+$InputFileStateFile <State_Filename>
+$InputFileSeverity <Severity >
+$InputFileFacility <Facility >
+$InputRunFileMonitor
+To forward the logs we must provide this line:
+<Facility>.<Severity> @Host-Ip:Port
+Example:
+$InputFileName /var/log/sample.log
+$InputFileStateFile sample
+$InputFileSeverity info
+$InputFileFacility local6
+local6.info @log360cloud-Server:514
+Here
+/var/log/sample.log
+is the external file to be forwarded.
+Note:
+These instructions can be applied to all Linux devices.
+Please use a unique <State_Filename> for different <Monitored_File_Absolute_Path>.
+When forwarding audit logs, sometimes default policies in Red Hat systems with Security enhancement (SElinux) won't allow the audit logs to be read. In that case, the audit logs can be forwarded by adding "active=yes" in etc/audisp/plugins.d/syslog.conf:
+Configuring the Syslog Service on a Mac OS devices
+Login as root user and edit the
+syslog.conf
+file in the
+/etc
+directory.
+Append
+*.*<tab>@<server_IP>
+at the end, where
+<server_IP>
+is the IP Address of the machine on which Log360 Cloud Agent is running.
+Note
+: Ensure that the Log360 Cloud Agent server IP address is reachable from the MAC OS device.
+Save the file and exit the editor.
+Execute the below commands to restart the syslog device:
+$ sudo launchctl unload /System/Library/LaunchDaemons/com.apple.syslogd.plist
+$ sudo launchctl load /System/Library/LaunchDaemons/com.apple.syslogd.plist
+Configuring the Syslog Service on a HP-UX/Solaris/AIX Device
+Login as root user.
+Edit the syslog.conf file in the /etc directory as shown below.
+*.emerg;*.alert;*.crit;*.err;*.warning;*.notice;*.info;*.debug<tab-separation>@<agent_machine_name or ip>
+where
+<agent_machine_name or ip>
+is the name of the machine where Log360 Cloud Agent is running. Ensure that there is only a
+tab separation
+in between *.debug and
+@<agent_machine_name or ip>
+.
+Note
+: For a Solaris device, it is enough to include *.debug<tab-separation>@<agent_machine_name or ip> in the syslog.conf file.
+Save the configuration and exit the editor.
+Edit the
+services
+file in the /
+etc
+directory.
+Change the syslog service port number to
+514
+, which is one of the default listener of Log360 Cloud Agent. But if you choose a different port other than 514 then remember to enter that same port when adding the device in Log360 Cloud Agent.
+Start the syslog daemon on the OS with the appropriate command:
+(for HP-UX)
+/sbin/init.d/syslogd start
+(for Solaris)
+/etc/init.d/syslog start
+(for Solaris 10)
+svcadm -v restart svc:/system/system-log:default
+(for IBM AIX)
+startsrc -s syslogd
+Configuring the Syslog Service on VMware
+All ESX and ESXi devices run a syslog service (syslogd), which logs messages from the VMkernel and other system components to a file.
+To configure the syslog service on an ESX device:
+Neither vSphere Client nor vicfg-syslog can be used to configure syslog behavior for an ESX device. To configure syslog for an ESX device, you must edit the
+/etc/syslog.conf
+file.
+To configure the syslog service on an ESXi device:
+On ESXi devices, you can use the vSphere Client or the vSphere CLI command vicfg-syslog to configure the following options:
+Log file path
+: Specifies a datastore path to the file where syslogd logs all messages.
+Remote host
+: Specifies a remote device to which syslog messages are forwarded. In order to receive the forwarded syslog messages, your remote host must have a syslog service installed.
+Remote port
+: Specifies the port used by the remote host to receive syslog messages.
+Configuration using vSphere CLI command: For more information on vicfg-syslog, refer the vSphere Command-Line Interface Installation and Reference Guide.
+Configuration using vSphere Client:
+In the vSphere Client inventory, click on the host.
+Click the
+Configuration
+tab.
+Click
+Advanced Settings
+under
+Software
+.
+Select
+Syslog
+in the tree control.
+In the Syslog.Local.DatastorePath text box, enter the datastore path to the file where syslog will log messages. If no path is specified, the default path is /var/log/messages.
+The datastore path format is [<datastorename>] </path/to/file> where the path is relative to the root of the volume backing the datastore.
+Example
+: The datastore path [storage1] var/log/messages maps to the path / vmfs/volumes/storage1/var/log/messages.
+In the Syslog.Remote.Devicename text box, enter the name of the remote host where syslog data will be forwarded. If no value is specified, no data is forwarded.
+In the Syslog.Remote.Port text box, enter the port on the remote host where syslog data will be forwarded. By default Syslog.Remote.Port is set to
+514
+, the default UDP port used by syslog. Changes to Syslog.Remote.Port only take effect if Syslog.Remote.Devicename is configured.
+Click
+OK
+.
+Configuring the Syslog Service on Arista Switches
+Login to the Arista Switch
+Go to the
+config
+mode.
+Configure the Switch as below to send the logs to the Log360 Cloud Agent Server
+Arista#
+config terminal
+Arista(config)#
+logging host < agent_server_Ip > < port_number > protocol [tcp/udp]
+Arista(config)#
+logging trap information
+Arista(config)#
+copy running-config startup-config
+To configure command executed logs:
+Arista (config)#
+aaa accounting commands all console start-stop logging
+Arista (config)#
+aaa accounting commands all default start-stop logging
+Arista (config)#
+aaa accounting exec console start-stop logging
+Arista (config)#
+aaa accounting exec default start-stop logging
+Arista (config)#
+copy running-config startup-config
+To configure logon logs:
+Arista (config)# aaa authentication policy on-success log
+Arista (config)# aaa authentication policy on-failure log
+Arista (config)# copy running-config startup-config
+Configuring the Syslog Service on Cisco Switches
+Login to the switch.
+Go to the config mode.
+Configure the switch as below (here, we have used Catalyst 2900) to send the logs to the Log360 Cloud Agent server:
+<Catalyst2900># config terminal
+<Catalyst2900>(config)# logging <agent_server_IP>
+For the latest catalyst switches
+Catalyst6500(config)# set logging <agent_server_IP>
+We can also configure logging facility and trap notifications with the below commands:
+Catalyst6500(config)# logging facility local7
+Catalyst6500(config)# logging trap notifications
+Note: The same commands are also applicable for Cisco Routers.
+Please refer CiscoÂ® documentation for detailed steps on configuring the Syslog service in the respective routers or switches. Contact
+log360-support@manageengine.com
+if the Syslog format of your Cisco devices are different from the standard syslog format supported by Log360 Cloud Agent.
+Configuring the Syslog Service on HP Switches
+Login to the switch.
+Enter the following commands.
+HpSwitch#
+configure terminal
+HpSwitch(config)#
+logging severity debug
+HpSwitch(config)#
+logging <Agent_IP_ADDRESS>
+Configuring the Syslog Service on Cisco devices
+To configure the Syslog service on Cisco devices, follow the steps below:
+Login to the Firewall.
+Go to the config mode;
+Configure the switch as given below (here, we have used Catalyst 2900) to send the logs to the Log360 Cloud Agent server:
+Cisco-ASA#
+config terminal
+Cisco-ASA (config)#
+logging host <agent _server_IP> [TCP/UDP]/< Port_Number >
+Note
+: The default UDP port is 514. The default TCP port is 1470.
+Cisco-ASA (config)#
+logging trap information
+Cisco-ASA (config)#
+logging facility local7
+Configuring the Syslog Service on Cisco Firepower devices
+Step 1: Syslog server configuration
+To configure a Syslog Server for traffic events, navigate to
+Configuration → ASA Firepower Configuration → Policies → Actions Alerts
+and click the
+Create Alert
+drop-down menu and choose option
+Create Syslog Alert
+. For web interfaces, navigate to
+Policies → Actions Alerts
+. Enter the values for the Syslog server.
+Name
+: Specify the name which uniquely identifies the Syslog server.
+Host
+: Specify the IP address/hostname of Syslog server.
+Port
+: Specify the port number of Syslog server.
+Facility
+: Select any facility that is configured on your Syslog server.
+Severity
+: Select any Severity that is configured on your Syslog server.
+Tag
+: Specify tag name that you want to appear with the Syslog message.
+Step 2: Enable external logging for Connection Events
+Connection Events are generated when traffic hits an access rule with logging enabled. In order to enable the external logging for connection events, navigate to
+ASDM Configuration → ASA Firepower Configuration → Policies → Access Control Policy
+. For web interfaces, navigate to
+Policies → Access Control Policy
+. Edit the
+access rule
+and navigate to
+logging
+option.
+Select the logging option either
+log at Beginning and End of Connection or log at End of Connection
+. Navigate to
+Send Connection Events to
+option and specify where to send events.
+In order to send events to an external
+Syslog
+server, select Syslog, and then select a Syslog alert response from the drop-down list. Optionally, you can add a Syslog alert response by clicking the add icon.
+Step 3: Enable external logging for Intrusion Events
+Intrusion events are generated when a signature (snort rules) matches some malicious traffic. In order to enable the external logging for intrusion events, navigate to
+ASDM Configuration → ASA Firepower Configuration → Policies → Intrusion Policy → Intrusion Policy
+. For web interfaces, navigate to
+Policies → Intrusion Policy → Intrusion Policy
+. Either create a new Intrusion policy or edit an existing one. Navigate to
+Advanced Setting → External Responses
+.
+In order to send intrusion events to an external Syslog server, select option
+Enabled
+in
+Syslog Alerting
+then click the
+Edit
+option.
+Logging Host
+: Specify the IP address/hostname of Syslog server.
+Facility
+: Select any facility that is configured on your Syslog server.
+Severity
+: Select any Severity that is configured on your Syslog server.
+Configuring the Syslog Service on SonicWall devices
+To configure the Syslog service on SonicWall devices, follow the steps below:
+Login to the SonicWall device as an
+administrator
+.
+Navigate to
+Log → Automation
+, and scroll down to
+Syslog Servers
+.
+Click on the
+Add
+button.
+Use a web browser to connect to the SonicWall management interface and login with your username and password.
+Click on the Log button on the left menu. This will open a tabbed window in the main display.
+Click on the
+Log Settings
+tab.
+Under
+Sending the Log
+, enter the IP address of the machine running the Cloud Agent into the field
+Syslog Server 1
+. If you are listening on a port other than 514, enter that value in the field
+Syslog server port 1
+.
+Under
+Automation
+, set the Syslog format to
+Enhanced Syslog
+.
+Under
+Categories
+→ Log, check all the types of events that you would like to receive Syslog messages for.
+Click on the Update button.
+For SonicOS 6.5 and above:
+Login to the SonicWall device as an administrator.
+Click on Manage tab and expand Log Settings> SYSLOG
+Click Add under Syslog Servers.
+From the Add Syslog Server window, enter the IP address or host name of the Log360 Cloud Agent server.
+Enter the port number and set the Server Type to Syslog.
+Set the Syslog format to Enhanced Syslog.
+Click OK to configure.
+A reboot of the SonicWall may be required for the new settings to take effect.
+Configuring the Syslog Service on Juniper devices
+To configure the Syslog service in your Juniper devices, follow the steps below:
+Login to the Juniper device as an
+administrator
+.
+Navigate to the
+Configure
+tab.
+Expand
+CLI Tools
+on the left pane, click on
+CLI editor
+in the subtree, and navigate to
+syslog
+under
+system
+.
+Insert the host node along with the required values such as the hostname, severity, facility and log prefix.
+Click on
+Commit
+to save the changes. To view the changes, click on the
+CLI viewer
+.
+Once you have completed the configuration steps, the logs from your Juniper device will be automatically forwarded to the Log360 Cloud Agent server.
+Configuring the Syslog Service on PaloAlto devices
+To configure the Syslog service in your Palo Alto devices, follow the steps below:
+Login to the Palo Alto device as an
+administrator
+.
+Navigate to
+Device → Server Profiles → Syslog
+to configure a Syslog server profile.
+Configure Syslog forwarding for Traffic, Threat, and WildFire Submission logs. First, navigate to
+Objects → Log Forwarding
+, and click on
+Add
+to create a log forwarding profile.
+Assign the log forwarding profile to security rules.
+Configure Syslog forwarding for System, Config, HIP match, and Correlation logs.
+Click on
+Commit
+for the changes to take effect.
+Source
+:
+https://www.paloaltonetworks.com/documentation/70/pan-os/pan-os/monitoring/configure-syslog-monitoring.html
+For version 7.1 and above:
+Login to the Palo Alto device as an
+administrator
+.
+Configure a Syslog server profile for the Log360 Cloud Agent server
+Select
+Device → Server Profiles → Syslog
+.
+Click
+Add
+and provide a name for the profile.
+If the firewall has more than one virtual system (vsys), select the Location (vsys or Shared) where this profile is available.
+For the Log360 Cloud Agent server, click
+Add
+and enter the requested information.
+Click
+OK
+.
+Configure syslog forwarding for Traffic, Threat, and WildFire Submission logs.
+Create a log forwarding profile.
+Select
+Objects → Log Forwarding
+, click
+Add
+, and enter a Name to identify the profile.
+For each log type and each severity level or WildFire verdict, select Log360 Cloud Agent's Syslog server profile and click OK.
+Assign the log forwarding profile to security rules.
+Configure syslog forwarding for System, Config, HIP Match, and Correlation logs.
+Select
+Device → Log Settings
+.
+For System and Correlation logs, click each Severity level, select Log360 Cloud Agent's syslog server profile, and click
+OK
+.
+For Config, HIP Match, and Correlation logs, edit the section, select Log360 Cloud Agent's syslog server profile, and click
+OK
+Click
+Commit
+to save your changes.
+Source
+:
+https://docs.paloaltonetworks.com/pan-os/7-1/pan-os-admin/monitoring/configure-syslog-monitoring
+Once you have completed the configuration steps, the logs from your Palo Alto device will be automatically forwarded to the Log360 Cloud Agent server.
+Configuring the Syslog Service on Fortinet devices
+To configure the Syslog service in your Fortinet devices (FortiManager 5.0.7 and above) follow the steps below:
+Login to the Fortinet device as an
+administrator
+.
+Define the Syslog Servers either through the GUI
+System Settings → Advanced → Syslog Server
+or with CLI commands:
+config system syslog
+edit <server name>
+set ip <Syslog server IP>
+end
+Enable sending FortiManager local logs to the Log360 Cloud Agent server via CLI.
+config system locallog syslogd setting
+set syslog-name < Remote syslog server name, defined at previous step>
+set severity <emergency | alert | critical | error | warning | notification | information | debug> (Least severity level to log)
+set status <enable | disable>
+set csv Whether to enable CSV.
+set facility Which facility for remote syslog.
+set port Port that server listens at.
+end
+Once you have completed the configuration steps, the logs from your Fortinet device will be automatically forwarded to the Log360 Cloud Agent server.
+For more details and for other versions, refer source:
+http://kb.fortinet.com/kb/documentLink.do?externalID=FD35387
+Configuring the Syslog Service on Check Point devices
+To configure the Syslog service in your Check Point devices, follow the steps below:
+Login to the Check Point device as an
+administrator
+.
+To override the lock, click on the
+lock icon
+on the top-left corner of the screen.
+Click
+Yes
+on the confirmation pop-up that appears.
+Navigate to
+System Management → System Logging
+.
+Under the
+Remote System Logging
+section, click
+Add
+.
+In the
+Add Remote Server Logging Entry
+window, enter the
+IP address of the remote server
+(Log360 Cloud Agent server).
+From the
+Priority drop-down
+, select the severity level of the logs to be sent to the remote server.
+Click
+OK
+.
+Configuring the Syslog Service on NetScreen devices
+The Syslog service in your NetScreen devices, can be configured in two ways:
+Enabling Syslog Messages using the NetScreen Device:
+Login to the NetScreen GUI.
+Navigate to
+Configuration → Report Settings → Syslog
+.
+Check the
+Enable Syslog Messages
+check-box.
+Select the
+Trust Interface as Source IP
+and enable the
+Include Traffic Log
+option.
+Enter the
+IP address of the Log360 Cloud Agent server
+and
+Syslog port (514)
+in the given boxes. All other fields will have default values.
+Click
+Apply
+to save the changes.
+Enabling Syslog Messages the CLI Console:
+Execute the following commands:
+Netscreen → set syslog config <ip address> facilitates local0 local0
+Netscreen → set syslog config <ip address> port 514
+Netscreen → set syslog config <ip address> log all
+Netscreen → set syslog enable
+Configuring the Syslog Service on WatchGuard devices
+To configure the Syslog service in your
+WatchGuard
+devices, follow the steps below:
+Login to the WatchGuard device as an
+administrator
+.
+Navigate to
+System → Logging → Syslog
+.
+Enable the
+Send log messages to the syslog server at this IP address
+checkbox.
+Type the Log360 Cloud Agent server's IP address in the box provided for IP address.
+Select
+514
+in the box provided for
+Port
+.
+Select
+Syslog
+from the
+Log Format
+drop-down list.
+If you want to include date and time in the log message details, enable the
+Time stamp
+checkbox.
+If you want to add serial numbers in log message details, enable
+Serial number of the device
+checkbox.
+Select a syslog facility for each type of log message in the
+Syslog settings
+section drop-down list.
+For high-priority syslog messages, such as alarms, select
+Local0.
+To assign priorities for other types of log messages select Local1 -
+Local7.
+To not send details for a message type, select
+NONE.
+Note
+: Lower numbers have greater priority.
+Click
+SAVE
+Configuring the Syslog Service on Sophos devices
+To configure the Syslog service in your
+Sophos
+devices, follow the steps below:
+Enabling Sophos-UTM Syslog:
+Login to Sophos UTM as administrator.
+Navigate to
+Logging & Reporting → Log Settings → Remote Syslog Server
+Enable
+Syslog Server Status
+Configure the syslog server by filling the following details
+Name: < Any >
+Server: < Log360 Cloud Agent server IP Address >
+Port: < 513 >
+Navigate to
+Remote Syslog
+→ select the logs that has to be sent to the Log360 Cloud Agent server.
+Click on
+Apply
+Enabling Sophos-XG Syslog:
+Login to Sophos-XG as administrator.
+Navigate to
+System → System Services → Log Settings → Syslog Servers → Add
+Configure the syslog server by filling the following details
+Name: < Any >
+Server: < Log360 Cloud Agent server IP Address >
+Port: < 513 >
+Facility: < DAEMON >
+Severity: < INFORMATION >
+Format: < Standard Format >
+Click on
+Save
+Navigate to
+System → System Services → Log Settings →
+select the logs that has to be sent to the Log360 Cloud Agent Server.
+Configuring the Syslog Service on Barracuda devices
+The Syslog service in your
+Bararacuda
+devices, can be configured by following these five steps:
+Enable the Syslog Service
+Navigate to
+CONFIGURATION → Full Configuration → Box → Infrastructure Services → Syslog Streaming
+.
+Click on
+Lock
+.
+Enable the Syslog service.
+Click
+Send Changes
+and
+Activate
+.
+Configure Logdata Filters
+Navigate to
+CONFIGURATION → Full Configuration → Box → Infrastructure Services → Syslog Streaming
+.
+From the menu select
+Logdata Filters
+.
+Click on
+Configuration Mode → Switch to Advanced View → Lock
+Click on + icon to add a new entry.
+Enter a descriptive name in the
+Filters
+and click
+OK
+.
+In the
+Data Selection
+table, add the log files to be streamed. (e.g. Fatal_log, Firewall_Audit_Log, Panic_log)
+In the
+Affected Box Logdata
+section, define what kind of box logs are to be affected by the Syslog daemon from the
+Data Selection list
+.
+In the
+Affected Service Logdata
+section, define what kind of logs created by services are to be affected by the Syslog daemon from the Data Selection list.
+Click on
+Send Changes
+and
+Activate
+.
+Configure Logstream Destinations
+Navigate to
+CONFIGURATION → Full Configuration → Box → Infrastructure Services → Syslog Streaming
+.
+From the menu select
+Logstream Destinations
+.
+Expand the
+Configuration Mode → Switch to Advanced View > Lock
+.
+Click on + icon to add a new entry.
+Enter a descriptive name and click
+OK
+.
+In the Destinations window select the
+Remote Loghost
+.
+Enter the Log360 Cloud Agent server IP address as destination IP address in the
+Loghost IP
+address field.
+Enter the destination port for delivering syslog message as
+513, 514
+.
+Enter the destination protocol as
+UDP
+.
+Click
+OK
+Click on
+Send Changes
+and
+Activate
+.
+Disable
+Log Data Tagging
+Configure Logdata Streams
+Navigate to
+CONFIGURATION → Full Configuration → Box → Infrastructure Services → Syslog Streaming
+.
+From the menu, select
+Logdata Streams
+.
+Expand the
+Configuration Mode
+menu and select
+Switch to Advanced View
+.
+Click the + icon to add a new entry.
+Enter a descriptive name and click
+OK
+.
+Configure Active Stream, Log Destinations and Log Filters settings.
+Click on
+Send Changes
+and
+Activate
+.
+Configuring the Syslog Service on Barracuda Web Application Firewall
+The Barracuda web application can be configured by following these steps:
+Navigate to ADVANCED > Export Logs > Add Export Log Server
+In the Add Export Log Server, enter the following details, and click OK
+Name: Enter a name for the Log360 Cloud Agent Server
+IP Address or Hostname: Enter the IP address or the hostname of the Log360 Cloud Agent server
+Port: Enter the port associated with the IP address of the Log360 Cloud Agent server (513,514)
+Log Timestamp and Hostname: Enable to send log with date and time of the event
+Configuring the Syslog Service on Barracuda Email Security Gateway
+The Barracuda email security gateway application can be configured by following these steps:
+To configure the email Syslog, using the Barracuda Email Security Gateway Web interface, navigate to the
+ADVANCED → Advanced Networking
+Enter the IP address of the Log360 Cloud Agent server to which syslog data related to mail flow should be sent.
+Specify the protocol TCP or UDP, and also port (513,514) over which syslog data should be transmitted.
+Configuring the Syslog Service on Huawei Firewall devices
+To configure the Syslog service in your Huawei firewall devices, follow the steps below:
+Login to the Huawei firewall device.
+Navigate to
+System view → Log monitoring → Firewall log stream
+To export traffic monitoring logs to Log360 Cloud Agent server, enter the following details in the space provided:
+Info-center loghost <Log360 Cloud Agent server IP address> 514 facility <facility>
+Exit the configuration mode.
+Configuring the Syslog Service on Meraki devices
+To configure the Syslog service in your Meraki devices, follow the steps below:
+Login to the Meraki device as an
+administrator
+.
+From the dashboard, navigate to
+Network-wide → Configure → General
+.
+Click on the
+Add a syslog server
+link. In the given fields enter the
+Log360 Cloud Agent server IP address
+and
+UDP port number
+.
+Define the roles so that data can be sent to the server.
+Note
+: If the
+Flows
+role is enabled on a Meraki security appliance then logging for individual firewall rules can be enabled/disabled. This can be done by navigating to the
+Security appliance → Configure → Firewall
+and editing the
+Logging column
+.
+Click
+Save
+.
+Configuring the Syslog Service on pfSense devices
+Login to the pfSense device.
+Navigate to
+Status → System logs → Settings
+.
+Enable
+Remote Logging
+.
+Specify the
+IP address
+and
+port
+of the Log360 Cloud Agent server.
+Check all the
+Remote Syslog Contents
+.
+Click
+Save
+.
+Configuring the Syslog Service on H3C devices
+Login to the H3C security device as an
+administrator
+.
+Navigate to System view mode.
+Enable the Info cente check box.
+Configure an output rule for the host:
+info-center source {<module-name>|default} {console|monitor|logbuffer|logfile|loghost} {deny|level <severity>}
+Specify a log host and configure the below parameters:
+info-center loghost {<agent_server_IP>} [port <port_number>][facility <local-number>]
+Now you have successfully configured the H3C security device.
+Configuration steps for Syslog forwarding from F5 devices to Log360 Cloud Agent
+To forward system logs:
+Login into "Configuration Utility."
+Navigate to
+System → Logs → Configuration → Remote Logging
+.
+Enter the remote IP. The remote IP in this case would be Log360 Cloud Agent server's IP address.
+Enter the remote port number. The default remote port for Log360 Cloud Agent is 514.
+Click on "Add".
+Click on "Update".
+To forwarding event logs. (Ex: Firewall Events)
+Create management port destination
+Login to "Configuration Utility".
+Navigate to System → Logs → Configuration → Log Destinations.
+Click on "Create."
+Enter a name for the log destination.
+To specify the log type, click on "management port".
+Enter the IP address of the Log360 Cloud Agent server.
+Enter the listening port of the Log360 Cloud Agent server. The default listening port is 514.
+For protocol, select the UDP protocol.
+Click on "Finish".
+Create a formatted remote syslog destination.
+Now navigate to
+System → Logs → Configuration → Log Destinations
+.
+Click on "Create".
+Enter a name for the log destination.
+To specify the log type, select remote syslog.
+Under syslog settings, set the
+syslog format
+as "syslog" and select the
+forward to management
+Port as the syslog destination.
+Click on "Finish".
+Create a log publisher to forward the logs.
+Navigate to
+System → Logs → Configuration → Log Publishers
+.
+Click on "Create".
+Enter a name for the log publisher configuration.
+In the
+available
+list, click the previously configured
+remote syslog destination
+name and move it to the
+selected
+list.
+Click on "Finish".
+Create a logging profile for virtual servers
+Navigate to
+Security > Event Logs > Logging Profiles
+.
+Click on "Create".
+Enter a
+profile name
+for the logging profile.
+Then enable the
+network firewall
+by clicking on the checkbox.
+Under the network firewall settings, enter the publisher. Enter the
+previously configured Syslog publisher
+.
+Under log rule matches, click on "Accept, Drop, and Reject." (
+Note
+: If you do not want any logs, you can disable it).
+Leave other options in default. (Note: Storage Format should be "none")
+Then click on "Create".
+Apply Logging Profile to corresponding Virtual Server
+Now navigate to
+Local Traffic → Virtual Servers
+Select your
+virtual server
+to which you want to apply logging profile
+On the top, tap on the security tab and click on the policy.
+Go to Network Firewall.
+Set Enforcement:
+Enabled
+, and select your network firewall policy.
+Under Log Profile, Enable the log profile and select previously configured logging profile.
+Then click on Update.
+Adding the Windows Firewall to Log360 Cloud
+To monitor the Windows Firewall logs, you need to initially add the Windows host from which the Firewall logs are to be collected.
+For Log360 Cloud Agent to collect Windows Firewall logs, you must modify the local audit policy of the Windows host and enable all firewall related events. To do this, follow the below procedure:
+Open the command prompt.
+Execute the following commands to enable logging of all firewall-related events:
+auditpol.exe /set /category:"Policy Change" /subcategory:"MPSSVC rule-level policy change" /success:enable /failure:enable
+auditpol.exe /set /category:"Policy Change" /subcategory:"Filtering Platform policy change" /success:enable /failure:enable
+auditpol.exe /set /category:"Logon/Logoff" /subcategory:"IPsec Main Mode" /success:enable /failure:enable
+auditpol.exe /set /category:"Logon/Logoff" /subcategory:"IPsec Quick Mode" /success:enable /failure:enable
+auditpol.exe /set /category:"Logon/Logoff" /subcategory:"IPsec Extended Mode" /success:enable /failure:enable
+auditpol.exe /set /category:"System" /subcategory:"IPsec Driver" /success:enable /failure:enable
+auditpol.exe /set /category:"System" /subcategory:"Other system events" /success:enable /failure:enable
+auditpol.exe /set /category:"Object Access" /subcategory:"Filtering Platform packet drop" /success:enable /failure:enable
+auditpol.exe /set /category:"Object Access" /subcategory:"Filtering Platform connection" /success:enable /failure:enable
+Restart the host (or) force a manual refresh by using the following command:
+gpupdate /force
+Configuring the Syslog Service on Cyberoam devices
+To configure the Syslog service in your
+Cyberoam
+devices, follow the steps below:
+Enabling Cyberoam Syslog:
+Login to Cyberoam as administrator.
+Navigate to
+Logs & Reports > Configuration > Syslog Server > Syslog Servers > Add
+Configure the syslog server by filling the following details
+Name: < any >
+Server: < Log360 Cloud Agent server IP Address >
+Port: < 513 >
+Facility: < DAEMON >
+Severity: < INFORMATION >
+Format: < Cyberoam Standard Format >
+Click on
+Save
+Navigate to
+Logs & Reports > Configuration > Log Settings
+> select the logs that has to be sent to the Log360 Cloud Agent server.
+Configuring the Syslog Service on Dell Switches
+For Log360 Cloud Agent server to collect logs from Dell switches, logging has to be enabled on the switch.
+Logging can be enabled in Dell switches by entering the following commands in the command prompt.
+Command
+Parameters
+console# configure
+Enter configuration mode.
+console(conf)# logging <agent _server_IP>
+Set IP address or hostname identifying the external syslog server to send the log output. (Optional) UDP and TCP port designation can be entered as well.
+Note
+: For more information, kindly refer to the documentation of your Dell switch.
+Configuring the Syslog Service on Forcepoint Switches
+For Log360 Cloud Agent server to collect logs from Forcepoint devices, log forwarding has to be enabled in the Forcepoint NGFW Security Management Center.
+From the Security Management Console go to
+Configuration > Network Elements > Servers > Log Server
+Right-click on Log Server and select Properties. The Log Server - Properties pop-up will open.
+Click on Add. The following fields have to be filled with the information below.
+Enter the hostname or IP address of the Log360 Cloud Agent server.
+Enter port numbers 513 for TCP and 514 for UDP.
+Select the CEF format in log format.
+Select the Log Forwarding tab and click on OK.
+Configuration the Syslog service on Stormshield devices
+To enable log collection from Stormshield devices, follow the below steps:
+Login to the firewall.
+Click on the
+Configuration
+tab.
+Click on the
+Notification
+button. Select
+Enable
+to start the Syslog service.
+In the
+Destination
+field, enter the IP address of Log360 Cloud Agent server.
+Click
+Save
+.
+Â© 2025 Zoho Corporation Pvt. Ltd. All rights reserved.

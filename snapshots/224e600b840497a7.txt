@@ -1,0 +1,326 @@
+Overview
+Demo
+Pricing
+Support
+Sign Up
+Login
+Help Document
+Overview
+Setting up
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Subscription
+Prerequisites
+Service Level Agreement (SLA)
+Amazon Web Services (AWS)
+Microsoft 365 Auto Configuration
+Microsoft 365 Manual Configuration
+Dashboard
+Reports
+Available Reports
+Manage Predefined Reports
+Manage Report Views
+Custom Reports
+Types of Report Views
+Report Exporting
+Schedule exports
+Other report options
+LDAP events
+Advanced Active Directory reports
+User Work Hours
+Account lockout analyzer
+Compliance Reports
+Search
+Search
+Search tool
+Save searches
+Share searches
+Export searches
+Add or remove fields from the search results
+Tagging tool
+Cloud correlation
+Understanding correlation
+Generating correlation reports
+Managing correlation rules
+UEBA
+Overview
+What is UEBA
+Architecture
+Training phase of the Anomaly models
+Data sources
+Anomaly rules of UEBA
+List of anomaly rules
+Working with anomaly rules - view, manage and customize rules
+Investigating anomalies
+Dashboards
+Adding users and entities to watchlists
+Anomaly reports and alerts
+Zia Insights
+Overview
+Using Zia Insights
+Setting up Zia Insights
+Invoking Zia Insights
+Alerts
+Creating alert profiles
+View log alerts
+Ticketing tool configuration
+Manage profiles
+Threat investigation
+Incident Workbench
+Overview
+Access
+User analytics
+Process Analytics
+Advanced Threat Analytics
+Incident building
+Device summary
+Incident management
+Incident management
+Configuration settings
+Devices
+Applications
+Overview
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+AD Audit Plus
+Print Server
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro
+Manage Cloud Sources
+Vulnerability data
+vCenter
+Threat management solutions
+Threat Source
+File Monitoring
+File Integrity Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Windows File Cluster
+NetApp Server
+QNAP NAS
+Import log data
+Admin settings
+Manage Agents
+Agent Settings
+Log Source Groups
+User management
+Accounts Management
+Configuring object level auditing
+Configuring audit policies
+Configuring Windows member server audit policies
+Technician audit
+Advanced Threat Analytics
+Bulk actions for Agents
+Privacy settings
+Notification settings
+Notification Templates
+Working Hour Settings
+Reload Archive Logs
+My account settings
+Product settings
+Log Collection Filter
+Custom log parsing
+License
+Storage Tiers
+Overview
+Configuring Storage Tiers
+Managing Storage Tiers
+Using Stats Analysis
+Cloud Storage Estimator
+Listener ports
+Log forwarding
+Developer space
+Custom Widgets
+Extension Profile Generation
+Extension Builder
+Marketplace
+Installing Extensions
+Compliance Extensions
+Nginx
+Veeam
+MariaDB
+Okta
+Dropbox
+MikroTik
+MongoDB
+Topsec
+Sangfor
+Ticketing tool integration
+Jira Service Desk
+ServiceDesk Plus
+Zendesk
+Cloud protection
+Cloud Protection in Log360 Cloud
+Gateway Cluster
+Gateway Server
+Prerequisites for Gateway Server configuration
+Installing Gateway Server
+Endpoint Configuration
+Certificate Authority Configuration
+Manage Certificate Trust Store
+Two-way SSL Support
+Manage Banned Applications
+Manage Sanctioned Applications
+Gateway Server Failover
+Application Insight
+User Access Insight
+Cloud Access Reports
+CASB application reports
+Shadow Cloud Application Reports
+Reports on Banned Cloud Applications
+File Upload Reports
+Threat Analytics in Cloud Protection
+Regenerate Access Key
+Troubleshooting gateway server errors
+API Support
+Teams
+Overview
+Managing Teams
+MSSP Edition
+Introduction
+MSSP Account Setup
+Dashboard
+Manage Customers
+Evaluation Customers
+Customer Portal
+Portal User Management
+Customer Portal MFA
+Centralized Technician audit
+My Account Settings
+Technician Management
+License
+Troubleshooting
+Overview
+WMI-based errors
+Encryption at Rest (EAR)
+Contact us
+Related Products
+Log360
+Comprehensive SIEM and UEBA
+Download
+|
+Demo
+AD360
+Integrated Identity & Access Management
+Download
+|
+Demo
+ADManager Plus
+Active Directory Management & Reporting
+Download
+|
+Demo
+ADAudit Plus
+Real-time Active Directory Auditing and UBA
+Download
+|
+Demo
+ADSelfService Plus
+Self-Service Password Management
+Download
+|
+Demo
+EventLog Analyzer
+Real-time Log Analysis & Reporting
+Download
+|
+Demo
+Exchange Reporter Plus
+Exchange Server Auditing & Reporting
+Download
+|
+Demo
+Print Server auditing
+Print Server auditing involves the systematic monitoring and logging of print-related activities within an organization. By meticulously tracking print jobs, user activity, and device interactions, organizations gain invaluable insights into potential vulnerabilities and threats. This proactive approach empowers businesses to safeguard sensitive information, detect unauthorized access, and ensure compliance with industry regulations.
+Prerequisites
+Ensure that Microsoft-Windows-PrintService/Admin and Microsoft-Windows-PrintService/Operational are configured on the device selected to be configured as a print server.
+Ensure that the
+Microsoft-Windows-PrintService/Admin
+and
+Microsoft-Windows-PrintService/Operational
+event source files are configured and enabled in
+Event Viewer
+under
+Applications and Service Logs > Microsoft > Windows > PrintService
+on the print server device.
+Ensure the following audit policy is configured to capture document names in the logs:
+Computer Configuration â Administrative Templates â Printers â Allow job name in event logs
+Alternatively, you can make the following registry edit:
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows NT\Printers]
+"ShowJobTitleInEventLogs" = dword:00000001
+Configuring Print Server
+Go to the
+Settings
+tab and select
+Log Source Configuration > Applications > Print Server > Add Print Server
+under the
+Configuration
+section
+Choose the desired print server and enter the credentials or use the default credentials.
+Note
+: Default credentials refer to either domain credentials or device-specific credentials. Ensure that credentials are available before proceeding.
+Select the appropriate agent for the print server.
+Click
+Select Printer(s)
+to display the printers associated with the server.
+Note:
+When printers are fetched but not configured, previously fetched printer details will be retained for one day. To update details, click
+Refresh
+to fetch the latest printer information.
+Pick the printers from the list for log collection and click
+Add
+to complete the configuration.
+Click
+Associated Printers
+to view and manage the printers linked to the selected print server for log collection using enable/disable actions.
+Note:
+It is not possible to disable all printers. Ensure that at least one printer remains enabled to maintain active monitoring and log collection functionality.
+Troubleshooting
+Printer details are not listed during configuration
+Credentials Verification
+Error message: Unable to fetch printers from the selected server: <server name>
+1. Reason: No Credentials Available
+Cause
+:
+There are no credentials available for the selected server or its associated domain.
+Solution
+:
+If default credentials are selected on the Print Server Configuration page, ensure that the device or domain is configured with valid credentials. Alternatively, you can manually enter the credentials on the Print Server Configuration page.
+2. Reason: Invalid Credentials
+Cause
+:
+The credentials provided are invalid. They may have been entered manually on the Print Server Configuration page or may be linked to the associated device or domain.
+Solution
+:
+Ensure that the correct credentials are entered on the Print Server Configuration page. If necessary, update the device credentials under Settings â Log Source Configurations â Device, or update the domain credentials under Settings â Admin â Account Settings â Configure Domains.
+3. Reason: Device Not Reachable
+Cause
+:
+The selected server cannot be reached using the chosen agent.
+Solution:
+Ensure that the selected agent and server are in the same domain. Use the ping command to verify the serverâs reachability and confirm that the internet connection is active.
+4. Reason: Document names are not logged in Event Viewer due to disabled audit policy
+Cause
+:
+This issue is due to a misconfiguration in the audit policy.
+Solution:
+To capture the document name in the event log, you must enable the audit policy at:
+Computer Configuration â Administrative Templates â Printers â Allow job name in event logs
+Alternatively, you can make the following registry edit:
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows NT\Printers]
+"ShowJobTitleInEventLogs" = dword:00000001
+Â© 2025 Zoho Corporation Pvt. Ltd. All rights reserved.

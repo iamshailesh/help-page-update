@@ -1,0 +1,363 @@
+Overview
+Demo
+Pricing
+Support
+Sign Up
+Login
+Help Document
+Overview
+Setting up
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Subscription
+Prerequisites
+Service Level Agreement (SLA)
+Amazon Web Services (AWS)
+Microsoft 365 Auto Configuration
+Microsoft 365 Manual Configuration
+Dashboard
+Reports
+Available Reports
+Manage Predefined Reports
+Manage Report Views
+Custom Reports
+Types of Report Views
+Report Exporting
+Schedule exports
+Other report options
+LDAP events
+Advanced Active Directory reports
+User Work Hours
+Account lockout analyzer
+Compliance Reports
+Search
+Search
+Search tool
+Save searches
+Share searches
+Export searches
+Add or remove fields from the search results
+Tagging tool
+Cloud correlation
+Understanding correlation
+Generating correlation reports
+Managing correlation rules
+UEBA
+Overview
+What is UEBA
+Architecture
+Training phase of the Anomaly models
+Data sources
+Anomaly rules of UEBA
+List of anomaly rules
+Working with anomaly rules - view, manage and customize rules
+Investigating anomalies
+Dashboards
+Adding users and entities to watchlists
+Anomaly reports and alerts
+Zia Insights
+Overview
+Using Zia Insights
+Setting up Zia Insights
+Invoking Zia Insights
+Alerts
+Creating alert profiles
+View log alerts
+Ticketing tool configuration
+Manage profiles
+Threat investigation
+Incident Workbench
+Overview
+Access
+User analytics
+Process Analytics
+Advanced Threat Analytics
+Incident building
+Device summary
+Incident management
+Incident management
+Configuration settings
+Devices
+Applications
+Overview
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+AD Audit Plus
+Print Server
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro
+Manage Cloud Sources
+Vulnerability data
+vCenter
+Threat management solutions
+Threat Source
+File Monitoring
+File Integrity Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Windows File Cluster
+NetApp Server
+QNAP NAS
+Import log data
+Admin settings
+Manage Agents
+Agent Settings
+Log Source Groups
+User management
+Accounts Management
+Configuring object level auditing
+Configuring audit policies
+Configuring Windows member server audit policies
+Technician audit
+Advanced Threat Analytics
+Bulk actions for Agents
+Privacy settings
+Notification settings
+Notification Templates
+Working Hour Settings
+Reload Archive Logs
+My account settings
+Product settings
+Log Collection Filter
+Custom log parsing
+License
+Storage Tiers
+Overview
+Configuring Storage Tiers
+Managing Storage Tiers
+Using Stats Analysis
+Cloud Storage Estimator
+Listener ports
+Log forwarding
+Developer space
+Custom Widgets
+Extension Profile Generation
+Extension Builder
+Marketplace
+Installing Extensions
+Compliance Extensions
+Nginx
+Veeam
+MariaDB
+Okta
+Dropbox
+MikroTik
+MongoDB
+Topsec
+Sangfor
+Ticketing tool integration
+Jira Service Desk
+ServiceDesk Plus
+Zendesk
+Cloud protection
+Cloud Protection in Log360 Cloud
+Gateway Cluster
+Gateway Server
+Prerequisites for Gateway Server configuration
+Installing Gateway Server
+Endpoint Configuration
+Certificate Authority Configuration
+Manage Certificate Trust Store
+Two-way SSL Support
+Manage Banned Applications
+Manage Sanctioned Applications
+Gateway Server Failover
+Application Insight
+User Access Insight
+Cloud Access Reports
+CASB application reports
+Shadow Cloud Application Reports
+Reports on Banned Cloud Applications
+File Upload Reports
+Threat Analytics in Cloud Protection
+Regenerate Access Key
+Troubleshooting gateway server errors
+API Support
+Teams
+Overview
+Managing Teams
+MSSP Edition
+Introduction
+MSSP Account Setup
+Dashboard
+Manage Customers
+Evaluation Customers
+Customer Portal
+Portal User Management
+Customer Portal MFA
+Centralized Technician audit
+My Account Settings
+Technician Management
+License
+Troubleshooting
+Overview
+WMI-based errors
+Encryption at Rest (EAR)
+Contact us
+Related Products
+Log360
+Comprehensive SIEM and UEBA
+Download
+|
+Demo
+AD360
+Integrated Identity & Access Management
+Download
+|
+Demo
+ADManager Plus
+Active Directory Management & Reporting
+Download
+|
+Demo
+ADAudit Plus
+Real-time Active Directory Auditing and UBA
+Download
+|
+Demo
+ADSelfService Plus
+Self-Service Password Management
+Download
+|
+Demo
+EventLog Analyzer
+Real-time Log Analysis & Reporting
+Download
+|
+Demo
+Exchange Reporter Plus
+Exchange Server Auditing & Reporting
+Download
+|
+Demo
+Log360 Cloud
+Marketplace
+Okta
+Okta overview
+Okta is a cloud-based Identity and Access Management (IAM) platform designed to secure user authentication and manage access to applications, devices, and APIs. It offers key features like Single Sign-On (SSO), Multi-Factor Authentication (MFA), lifecycle management, and directory integration, helping organizations streamline access control.
+Okta extension scope
+Okta extension allows users to add their Okta domains to collect Okta system logs to Log360 cloud. This extension provides features such as log collection, parsing, reporting, alerting, correlation, and advanced log search capabilities for monitoring web traffic and server performance.
+Audited Okta events
+Okta provides detailed logs for all actions that modify the Okta domain. These logs capture key system events, including changes to user accounts, groups, and applications.
+Major logged events
+User lifecycle management
+User creation, modification, and deletion
+Activation, deactivation, suspension, and unsuspension of user accounts
+Group management
+Creation and deletion of groups
+User assignments to and removals from groups
+Application management
+Creation, update, integration, and deletion of applications
+Assignment and removal of users from applications
+How to configure Okta log source in Log360 Cloud
+Navigate to
+Settings > Marketplace > Installed Extensions
+to view the installed Okta extension.
+Click
+Manage
+under configuration to open the
+Manage Configuration
+page.
+To configure the Okta log source, click
+Configure
+to open the configuration page. Then, navigate to
+Settings > Configurations > Log Source Configuration > Applications > Other Applications
+.
+In the
+Display Name
+field, enter a name for the Okta source in Log360 cloud
+In the
+Organization URL
+field, enter the Okta domain (eg: exampledomain.okta.com )
+Note
+: Please refer to
+this document
+to identify the Okta domain URL.
+In the
+Auth token
+field, add the auth token associated with your Okta account. The auth token must be created by an admin who has access to view the system logs.
+Note:
+Read-only administrator role is enough to fetch and display all the relevant Okta data in Log360 Cloud.
+Please refer to
+this document
+for the steps to create auth token in Okta
+Viewing Okta reports
+To view Okta reports, navigate to the
+Reports
+tab and select
+Okta for Log360 Cloud
+in the sub-tab.
+Log360 Cloud provides the following out-of-the-box reports:
+Okta Events
+All Events
+Important events (multi report mapping)
+Password Reset
+User Locked Out
+Privileged Application Access
+Request Blocked
+User Audit Reports
+User Authentication SSO
+Privileged Application Access
+User Locked Out
+Suspicious Activity
+Self Service Unlock
+User Session Start
+Password Reset
+Request Blocked
+User Management Reports
+User Account Created
+User Account Activated
+User Account Deactivated
+User Account Suspended
+User Account Unsuspended
+Configuration Reports
+User Added to an Application
+User Removed from an Application
+Username Changed
+User added to Group
+User removed from Group
+Application Events
+Application Created
+Application Updated
+Application Deactivated
+Application Activated
+Application Deactivated
+Okta correlation actions
+To view the Okta correlation actions, navigate to the
+Correlation
+tab ->
+Manage Rules
+.
+In the Manage Rules page, select
+Okta
+as the
+Rule Category
+to filter out the related correlation actions. You can select the actions and build custom rules.
+Okta Alerts
+To view the Alerts, navigate to the
+Alerts
+tab ->
+Manage Alert Profiles
+.
+In the
+Manage Alert Profiles
+page, select
+Custom Alert Profiles
+as the
+Alert Profile Type
+. Click the search icon and add Okta to filter out the alert criteria.
+Â© 2025 Zoho Corporation Pvt. Ltd. All rights reserved.

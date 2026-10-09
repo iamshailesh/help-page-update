@@ -1,0 +1,393 @@
+Overview
+Demo
+Pricing
+Support
+Sign Up
+Login
+Help Document
+Overview
+Setting up
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Subscription
+Prerequisites
+Service Level Agreement (SLA)
+Amazon Web Services (AWS)
+Microsoft 365 Auto Configuration
+Microsoft 365 Manual Configuration
+Dashboard
+Reports
+Available Reports
+Manage Predefined Reports
+Manage Report Views
+Custom Reports
+Types of Report Views
+Report Exporting
+Schedule exports
+Other report options
+LDAP events
+Advanced Active Directory reports
+User Work Hours
+Account lockout analyzer
+Compliance Reports
+Search
+Search
+Search tool
+Save searches
+Share searches
+Export searches
+Add or remove fields from the search results
+Tagging tool
+Cloud correlation
+Understanding correlation
+Generating correlation reports
+Managing correlation rules
+UEBA
+Overview
+What is UEBA
+Architecture
+Training phase of the Anomaly models
+Data sources
+Anomaly rules of UEBA
+List of anomaly rules
+Working with anomaly rules - view, manage and customize rules
+Investigating anomalies
+Dashboards
+Adding users and entities to watchlists
+Anomaly reports and alerts
+Zia Insights
+Overview
+Using Zia Insights
+Setting up Zia Insights
+Invoking Zia Insights
+Alerts
+Creating alert profiles
+View log alerts
+Ticketing tool configuration
+Manage profiles
+Threat investigation
+Incident Workbench
+Overview
+Access
+User analytics
+Process Analytics
+Advanced Threat Analytics
+Incident building
+Device summary
+Incident management
+Incident management
+Configuration settings
+Devices
+Applications
+Overview
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+AD Audit Plus
+Print Server
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro
+Manage Cloud Sources
+Vulnerability data
+vCenter
+Threat management solutions
+Threat Source
+File Monitoring
+File Integrity Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Windows File Cluster
+NetApp Server
+QNAP NAS
+Import log data
+Admin settings
+Manage Agents
+Agent Settings
+Log Source Groups
+User management
+Accounts Management
+Configuring object level auditing
+Configuring audit policies
+Configuring Windows member server audit policies
+Technician audit
+Advanced Threat Analytics
+Bulk actions for Agents
+Privacy settings
+Notification settings
+Notification Templates
+Working Hour Settings
+Reload Archive Logs
+My account settings
+Product settings
+Log Collection Filter
+Custom log parsing
+License
+Storage Tiers
+Overview
+Configuring Storage Tiers
+Managing Storage Tiers
+Using Stats Analysis
+Cloud Storage Estimator
+Listener ports
+Log forwarding
+Developer space
+Custom Widgets
+Extension Profile Generation
+Extension Builder
+Marketplace
+Installing Extensions
+Compliance Extensions
+Nginx
+Veeam
+MariaDB
+Okta
+Dropbox
+MikroTik
+MongoDB
+Topsec
+Sangfor
+Ticketing tool integration
+Jira Service Desk
+ServiceDesk Plus
+Zendesk
+Cloud protection
+Cloud Protection in Log360 Cloud
+Gateway Cluster
+Gateway Server
+Prerequisites for Gateway Server configuration
+Installing Gateway Server
+Endpoint Configuration
+Certificate Authority Configuration
+Manage Certificate Trust Store
+Two-way SSL Support
+Manage Banned Applications
+Manage Sanctioned Applications
+Gateway Server Failover
+Application Insight
+User Access Insight
+Cloud Access Reports
+CASB application reports
+Shadow Cloud Application Reports
+Reports on Banned Cloud Applications
+File Upload Reports
+Threat Analytics in Cloud Protection
+Regenerate Access Key
+Troubleshooting gateway server errors
+API Support
+Teams
+Overview
+Managing Teams
+MSSP Edition
+Introduction
+MSSP Account Setup
+Dashboard
+Manage Customers
+Evaluation Customers
+Customer Portal
+Portal User Management
+Customer Portal MFA
+Centralized Technician audit
+My Account Settings
+Technician Management
+License
+Troubleshooting
+Overview
+WMI-based errors
+Encryption at Rest (EAR)
+Contact us
+Related Products
+Log360
+Comprehensive SIEM and UEBA
+Download
+|
+Demo
+AD360
+Integrated Identity & Access Management
+Download
+|
+Demo
+ADManager Plus
+Active Directory Management & Reporting
+Download
+|
+Demo
+ADAudit Plus
+Real-time Active Directory Auditing and UBA
+Download
+|
+Demo
+ADSelfService Plus
+Self-Service Password Management
+Download
+|
+Demo
+EventLog Analyzer
+Real-time Log Analysis & Reporting
+Download
+|
+Demo
+Exchange Reporter Plus
+Exchange Server Auditing & Reporting
+Download
+|
+Demo
+Log360 Cloud
+Configuration settings
+File Monitoring
+File Integrity Monitoring
+File Integrity Monitoring
+File Integrity Monitoring is a feature that helps you monitor all changes (addition/deletion/modification) that are made to files and folders in Windows.
+Configuring File Integrity Monitoring
+Manage File Integrity Monitoring (FIM) Templates
+Configuring Bulk Integrity Monitoring
+Prerequisites for automatic configuration of FIM
+Steps for manual configuration of FIM
+Configuring File Integrity Monitoring
+By continuously monitoring who accesses and modifies files, FIM configuration helps organizations better secure sensitive information from theft, loss, and cyberattacks.
+To configure File Integrity Monitoring,
+Navigate to
+Settings > Configuration > File Integrity Monitoring
+Click the
+Add FIM
+button.
+Select the device where the files/folders are located, for which you want to enable FIM.
+To add a device from a particular domain, select the domain from
+Select Category
+field and then choose the required log sources.
+To add a device manually, click
+Configure Manually
+present on the top right corner of the "Select Log Source for FIM" popup.
+Select the agent with which the logs are to be fetched for the device.We can associate several devices and collect logs with the help of a single agent.
+Browse and select the files and folders you wish to monitor with FIM. Alternatively, you can enter the location of the files/ folders.
+To audit only a particular set of files/folders, click on the filter icon present on the right corner of any selected location. This will let you include or exclude particular file types for FIM.
+The Exclude Subfolders will let you exclude
+None of the subfolders
+All the Sub locations
+The selected sub locations
+Click
+Configure
+Note:
+Configuring FIM can result in an increase in log flow, potentially causing a spike in storage. Kindly configure it only for the files that require monitoring.
+To monitor removable storage, kindly install the agent for the device locally and configure FIM.
+Manage File Integrity Monitoring (FIM) Templates
+If the same file or folder needs to be monitored in multiple devices, then a template can be created and assigned to these devices. This will make it easier for the user to audit the same set of files or folders without selecting them all over again.
+To create a FIM template follow the steps below:
+Navigate to
+Settings > Configurations > File Integrity Monitoring > Manage File Integrity Monitoring Templates
+.
+Click
+Add FIM Template
+.
+Enter a name for the template and select the locations of the files and folders.
+Alternatively, you can enter the location of the files/folders. Also, the Import Locations can be used to import multiple locations.
+Click
+Configure
+.
+All the created templates are listed in a tabular column with an option to edit/delete them with the help of the
+Edit Template
+or
+Remove Template
+icon.
+Configuring Bulk Integrity Monitoring
+If the same files and folders located in multiple devices need to be added for monitoring, the Bulk File Monitoring feature can be used.
+Navigate to
+Settings > Configuration > File Integrity Monitoring
+Click the
+Add FIM
+button present on the top right corner.
+Select
+Configure Multiple Devices
+Pick the devices in which the files/folders are located, enter the correct credentials, and select the agent. Also, you can choose the template from the list of templates that are available.
+Click
+Configure
+.
+Prerequisites for automatic configuration of FIM
+The prerequisites required to configure FIM automatically with the use of an agent are listed below:
+The user who wants to configure FIM, needs to be a member of the Local Administrators Group for a workgroup or have the Administrative Privileges for a domain-based device in order to configure SACL and Local Security Policies.
+"
+Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings
+" should be enabled.
+This can be enabled by navigating to:Policy â Computer Configuration â Windows Settings â Security Settings â Local Policies â Security Options
+With regard to the policy, "
+Access this computer from the network
+", the user or the group they belong to should be added.
+This can be accomplished by navigating to: Policy â Computer ConfigurationâWindows Settings â Security Settings â Local Policies â User Rights Assignment.
+The following services and firewall rules must be enabled to access a remote machine:
+For Windows Version 6.0 or higher
+Services
+Function Discovery Resource Publication
+Function Discovery Provider Host
+Firewall inbound Rule
+File and Printer Sharing (SMB-In) (Local Port 445)
+File and Printer Sharing (NB-Session-In) (Local Port 139)
+File and Printer Sharing for Microsoft Networks in LAN Property should be enabled.
+Auditpol.exe must be available on machines running Windows version 6.0 or higher.
+Enable the SMB
+v2/v3
+Protocol.
+Note
+: For Windows Server 2003, Kindly follow the manual configuration steps.
+Follow the below command to verify that the agent can access the admin share path,
+$ net use * \\<Machine Name>\<Admin Share Path> /user:<Username> <Password>
+Example: net use * \\FileServer\c$\FIM /user:administrator ******
+Troubleshooting For Net use error:
+If Error 5 (Access to remote admin share path is denied) occurs,
+Cause:
+Credentials may be incorrect.
+Credentials with insufficient privileges.
+Using Administrative Credentials for Workgroup Devices prevents local accounts from accessing Administrative Shares through the network.
+Solution:
+Credentials with the privilege to access Administrative Shares for setting SACL and Local Security Policies.
+For Workgroup Devices, Set registry value for
+LocalAccountTokenFilterPolicy
+to 1.
+Registry Location:
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+If Error 53 (
+The Network Path was not found
+) occurs, enable the following services (Both Client and Server):
+DNS Client
+SSDP Discovery (Local UDP Port 1900)
+UPnP Device Host (Local TCP Port 2869)
+Steps for manual configuration of FIM
+The prerequisites required for manual FIM log collection is mentioned below:
+Please follow the steps below to enable the specified policies manually
+For Windows version 6.0 or higher:
+Execute the below command on the local computer with Administrator privileges.
+Command
+:
+auditpol.exe /set /subcategory:"File System,Handle Manipulation,File Share,Detailed File Share" /success:enable /failure:enable
+Using GPO:
+[ Policy ] â Computer Configuration â Windows Settings â Security Settings â Advanced Audit Policy Configuration â System Audit Policies - Local Group Policy Object â Object Access
+Enable the following policies, both Success and Failure.
+Audit File Share
+Audit File System
+Audit Handle Manipulation
+Audit Detailed File Share
+For Windows Server 2003:
+[ Policy ] â Computer Configuration â Windows Settings â Security Settings â Local Policies â Audit Policy â Audit Object Access (Success and Failure)
+Enable SACLs with the below permissions for file/folder:
+[File/Folder properties] -> Security -> Advanced -> Auditing
+Execute files/traverse folder
+Write data/create files
+Append data/create folders
+Write attributes
+Write extended attributes
+Delete subfolders and files
+Delete read permissions
+Change permissions
+Take ownership
+Â© 2025 Zoho Corporation Pvt. Ltd. All rights reserved.

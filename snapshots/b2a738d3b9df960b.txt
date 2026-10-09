@@ -1,0 +1,396 @@
+Overview
+Demo
+Pricing
+Support
+Sign Up
+Login
+Help Document
+Overview
+Setting up
+Account setup
+Starting Log360 Cloud
+Supported log sources
+Adding Syslog devices
+Subscription
+Prerequisites
+Service Level Agreement (SLA)
+Amazon Web Services (AWS)
+Microsoft 365 Auto Configuration
+Microsoft 365 Manual Configuration
+Dashboard
+Reports
+Available Reports
+Manage Predefined Reports
+Manage Report Views
+Custom Reports
+Types of Report Views
+Report Exporting
+Schedule exports
+Other report options
+LDAP events
+Advanced Active Directory reports
+User Work Hours
+Account lockout analyzer
+Compliance Reports
+Search
+Search
+Search tool
+Save searches
+Share searches
+Export searches
+Add or remove fields from the search results
+Tagging tool
+Cloud correlation
+Understanding correlation
+Generating correlation reports
+Managing correlation rules
+UEBA
+Overview
+What is UEBA
+Architecture
+Training phase of the Anomaly models
+Data sources
+Anomaly rules of UEBA
+List of anomaly rules
+Working with anomaly rules - view, manage and customize rules
+Investigating anomalies
+Dashboards
+Adding users and entities to watchlists
+Anomaly reports and alerts
+Zia Insights
+Overview
+Using Zia Insights
+Setting up Zia Insights
+Invoking Zia Insights
+Alerts
+Creating alert profiles
+View log alerts
+Ticketing tool configuration
+Manage profiles
+Threat investigation
+Incident Workbench
+Overview
+Access
+User analytics
+Process Analytics
+Advanced Threat Analytics
+Incident building
+Device summary
+Incident management
+Incident management
+Configuration settings
+Devices
+Applications
+Overview
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+AD Audit Plus
+Print Server
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro
+Manage Cloud Sources
+Vulnerability data
+vCenter
+Threat management solutions
+Threat Source
+File Monitoring
+File Integrity Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Windows File Cluster
+NetApp Server
+QNAP NAS
+Import log data
+Admin settings
+Manage Agents
+Agent Settings
+Log Source Groups
+User management
+Accounts Management
+Configuring object level auditing
+Configuring audit policies
+Configuring Windows member server audit policies
+Technician audit
+Advanced Threat Analytics
+Bulk actions for Agents
+Privacy settings
+Notification settings
+Notification Templates
+Working Hour Settings
+Reload Archive Logs
+My account settings
+Product settings
+Log Collection Filter
+Custom log parsing
+License
+Storage Tiers
+Overview
+Configuring Storage Tiers
+Managing Storage Tiers
+Using Stats Analysis
+Cloud Storage Estimator
+Listener ports
+Log forwarding
+Developer space
+Custom Widgets
+Extension Profile Generation
+Extension Builder
+Marketplace
+Installing Extensions
+Compliance Extensions
+Nginx
+Veeam
+MariaDB
+Okta
+Dropbox
+MikroTik
+MongoDB
+Topsec
+Sangfor
+Ticketing tool integration
+Jira Service Desk
+ServiceDesk Plus
+Zendesk
+Cloud protection
+Cloud Protection in Log360 Cloud
+Gateway Cluster
+Gateway Server
+Prerequisites for Gateway Server configuration
+Installing Gateway Server
+Endpoint Configuration
+Certificate Authority Configuration
+Manage Certificate Trust Store
+Two-way SSL Support
+Manage Banned Applications
+Manage Sanctioned Applications
+Gateway Server Failover
+Application Insight
+User Access Insight
+Cloud Access Reports
+CASB application reports
+Shadow Cloud Application Reports
+Reports on Banned Cloud Applications
+File Upload Reports
+Threat Analytics in Cloud Protection
+Regenerate Access Key
+Troubleshooting gateway server errors
+API Support
+Teams
+Overview
+Managing Teams
+MSSP Edition
+Introduction
+MSSP Account Setup
+Dashboard
+Manage Customers
+Evaluation Customers
+Customer Portal
+Portal User Management
+Customer Portal MFA
+Centralized Technician audit
+My Account Settings
+Technician Management
+License
+Troubleshooting
+Overview
+WMI-based errors
+Encryption at Rest (EAR)
+Contact us
+Related Products
+Log360
+Comprehensive SIEM and UEBA
+Download
+|
+Demo
+AD360
+Integrated Identity & Access Management
+Download
+|
+Demo
+ADManager Plus
+Active Directory Management & Reporting
+Download
+|
+Demo
+ADAudit Plus
+Real-time Active Directory Auditing and UBA
+Download
+|
+Demo
+ADSelfService Plus
+Self-Service Password Management
+Download
+|
+Demo
+EventLog Analyzer
+Real-time Log Analysis & Reporting
+Download
+|
+Demo
+Exchange Reporter Plus
+Exchange Server Auditing & Reporting
+Download
+|
+Demo
+Log360 Cloud
+Dashboard
+Dashboard
+Log360 Cloud has a customizable dashboard to enable you to fill it with information you often access. The dashboard consists of multiple tabs and each tab has numerous widgets. In addition to the defaultâEvents Overview and Network Overview tabs âyou can create tabs and add widgets of your choice. The default tabs can also be customized to suit your requirements.
+Note
+: The AD Overview tab and AD Summary tab in the dashboard allows users to view and filter Active Directory logs based on the domain. Selecting a domain filters the logs from the domain controllers configured for log collection under that domain.
+To customize the dashboard, you have the following options:
+Adding a new tab
+Adding a new widget
+Editing dashboards
+Reordering and resizing widgets
+Editing and deleting widgets
+Viewing the dashboard in full screen
+How to embed a dashboard
+To view a list of devices which are the log sources based on which the dashboard is populated, click
+Log Sources
+on the top-right corner of the dashboard.
+Adding a new tab
+To add a new tab to the dashboard,
+In the Log360 Cloud dashboard, click the
+icon on the top-right corner and select
+Add Tab
+.
+In the pop-up box that appears, you can see
+Two default tabsâEvents Overview and Network Overview.
+Add Custom Tab option
+Click
+Add Custom Tab
+and enter a name for the tab, before clicking
+Add
+.
+Navigate to the new tab and click
+Add Widget
+to start adding widgets of your choice.
+Adding a new widget
+To add a new widget,
+In Log360 Cloud's dashboard, navigate to the tab to which you want to add a new widget and click the
+icon on the top-right corner.
+Click
+Add Widget
+and in the pop-up box that appears, select the widget, widget type, chart type, chart color, and a display name for the widget.
+Once you've entered all the details, click
+Add
+.
+Pinning a report to the dashboard.
+You also have the option of
+pinning a report as a new widget
+. Any report can be pinned to the dashboard.
+To pin a report,
+Navigate to the report you want to pin to the dashboard.
+In the top-right corner of the report, click More and select
+Pin to Dashboard
+.
+Editing dashboards
+To delete tabs from the dashboard,
+In Log360 Cloud's dashboard, click the
+icon on the top-right corner and click Manage Tabs.
+In the dialog box that appears, click the
+icon corresponding to that tab that you want to delete.
+In the pop-up confirmation box, click
+Yes
+to complete deleting the tab.
+To edit the order of tabs in the dashboard,
+In Log 360 Cloud's dashboard, click the icon on the top-right corner and click
+Manage Tabs
+.
+To reorder the arrangement of tabs, click the
+icon and then drag and drop the tabs in the order of your choice.
+Reordering and resizing widgets
+To reorder the widgets in a tab,
+In Log360 Cloud's dashboard, navigate to the tab whose tabs you want to reorder and click the
+icon on the top-right corner and click
+Reorder Widgets
+.
+Click and drag the tabs to wherever you want to place them and drop them.
+You can also resize widgets by dragging them from their right-bottom corner and adjusting their sizes as required.
+Editing and deleting widgets
+To edit a widget in a tab,
+In Log360 Cloud dashboard, click the
+icon corresponding to the widget that you want to edit.
+Select
+Edit Widget
+, update the necessary information, and then click
+Update
+to complete editing the widget.
+To delete a widget from a tab,
+In Log360 Cloud dashboard, click the
+icon corresponding to the widget that you want to delete.
+Select
+Delete Widget
+and click
+Yes
+in the pop-up box that appears.
+Viewing the dashboard in full screen
+To view the dashboard in full screen,
+In Log360 Cloud's dashboard, click the
+icon on the top-right corner.
+In the full screen view, you can view a slideshow of the tabs by clicking the play icon next to the name of the tab.
+You can also switch to dark mode by clicking the toggle button at the top-right corner.
+To go back to the normal viewing mode, click the
+icon.
+Configuring the Embed Dashboard
+The Embed Dashboard enhances data sharing by enabling the creation of external share links for specific tabs or widgets. This allows precise and targeted data access within a dashboard, facilitating focused collaboration and streamlined decision-making across various platforms. The Embedded Dashboard feature allows users to create an External Share Link for a particular tab or a specific widget within the dashboard.
+To embed a dashboard,
+Go to the desired dashboard tab in Log360 Cloud, and click on the Settings icon.
+Select
+Embed Dashboard
+.
+Provide the
+Link Name
+and select the time range, refresh interval and the expiry period.
+Click
+Create Link
+.
+You can now copy and paste the provided HTML snippet into your webpage or use the provided URL for accessing this chart independently.
+To embed a widget,
+In Log360 Cloud dashboard, click the
+icon corresponding to the widget that you want to embed.
+Click on the
+Embed Widget
+option.
+Provide a unique
+Link Name
+.
+Choose the desired
+Time Range
+from the drop-down menu.
+Provide the
+Refresh Time
+(to be set between 60-1440 minutes) and
+Set Expiry
+(to be within 1-365 days) from the options provided in the drop-down menu.
+The embed widget link is now successfully created.
+NOTE:
+The embed widget will be automatically refreshed at the specified interval.
+The generated external share link is only valid till the expiry date.
+To manage embed links,
+In the Log360 Cloud dashboard, click the
+icon on the top-right corner and select
+Manage Embed Links
+.
+This will display a table containing all the Active Dashboard Links.
+To edit a specific link, locate the desired entry and click the
+Edit
+option associated with it.
+A window will appear allowing you to modify the properties of the chosen link. Make the necessary changes.
+Once finished, click
+Save
+to confirm the updated properties for the Active Dashboard Link.
+Â© 2025 Zoho Corporation Pvt. Ltd. All rights reserved.
