@@ -1,0 +1,52 @@
+name: Log360 help-doc change monitor
+
+on:
+  schedule:
+    - cron: "30 3 1 * *"  # Every Monday 03:30 UTC = 9:00 AM IST
+  workflow_dispatch:        # Lets you run it manually from the Actions tab
+    inputs:
+      since:
+        description: "List pages updated on or after (YYYY-MM-DD). Blank = use the date set in this file."
+        required: false
+
+permissions:
+  contents: write           # Needed to commit the updated snapshots
+
+concurrency:
+  group: helpdoc-monitor
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Check help docs and email changes
+        env:
+          CONNECT_WEBHOOK_URL: ${{ secrets.CONNECT_WEBHOOK_URL }}
+          # Email is optional: leave these secrets unset to post only to Zoho Connect
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          MAIL_TO:   ${{ secrets.MAIL_TO }}
+          # ▼ CHANGE THIS DATE EACH MONTH (format YYYY-MM-DD) ▼
+          SINCE_DATE: ${{ github.event.inputs.since || '2026-10-01' }}
+        run: python monitor.py
+
+      - name: Commit updated snapshots
+        run: |
+          git config user.name  "helpdoc-monitor"
+          git config user.email "helpdoc-monitor@users.noreply.github.com"
+          git add snapshots
+          git diff --cached --quiet || git commit -m "Help-doc snapshot $(date -u +%F)"
+          git push
