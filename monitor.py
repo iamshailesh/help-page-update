@@ -29,7 +29,7 @@ from bs4 import BeautifulSoup
 START_URLS = [u.strip() for u in os.getenv(
     "START_URLS",
     "https://www.manageengine.com/log-management/help/,"
-    "https://www.manageengine.com/cloud-log-management/help/",
+    
 ).split(",") if u.strip()]
 MAX_PAGES = int(os.getenv("MAX_PAGES", "1500"))
 REQUEST_DELAY = float(os.getenv("REQUEST_DELAY", "1.0"))  # seconds between requests
