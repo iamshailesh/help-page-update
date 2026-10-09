@@ -40,7 +40,7 @@ jobs:
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           MAIL_TO:   ${{ secrets.MAIL_TO }}
           # ▼ CHANGE THIS DATE EACH MONTH (format YYYY-MM-DD) ▼
-          SINCE_DATE: ${{ github.event.inputs.since || '2026-10-01' }}
+          SINCE_DATE: ${{ github.event.inputs.since || '2026-04-30' }}
         run: python monitor.py
 
       - name: Commit updated snapshots
