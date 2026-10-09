@@ -28,8 +28,7 @@ from bs4 import BeautifulSoup
 # ---------- Configuration (override via environment variables) ----------
 START_URLS = [u.strip() for u in os.getenv(
     "START_URLS",
-    "https://www.manageengine.com/log-management/help/,"
-    
+    "https://www.manageengine.com/log-management/help/",
 ).split(",") if u.strip()]
 MAX_PAGES = int(os.getenv("MAX_PAGES", "1500"))
 REQUEST_DELAY = float(os.getenv("REQUEST_DELAY", "1.0"))  # seconds between requests
@@ -188,8 +187,9 @@ def crawl():
     # Optional: extra known URLs (one per line) so pages no menu links to still get checked
     seed_file = Path("seed_urls.txt")
     if seed_file.exists():
-        queue.extend(normalize(u.strip()) for u in seed_file.read_text().splitlines()
-                     if u.strip() and not u.startswith("#"))
+        queue.extend(n for n in (normalize(u.strip()) for u in seed_file.read_text().splitlines()
+                                 if u.strip() and not u.startswith("#"))
+                     if in_scope(n))  # only URLs under START_URLS
     queue.extend(sitemap_urls())
 
     while queue and len(pages) < MAX_PAGES:
@@ -458,6 +458,35 @@ def post_to_connect(posts):
         time.sleep(1)
 
 
+# ---------- New-pages-only report ----------
+REPORT_MODE = os.getenv("REPORT_MODE", "new").strip().lower()  # "new" = only new pages, "all" = full report
+
+
+def build_new_only_posts(new, pages, total, baseline):
+    today = datetime.now(timezone.utc).strftime("%d %b %Y")
+    if baseline:
+        return [(f"Log360 help docs: tracking started ({total} pages)",
+                 f"Saved the list of {total} existing help pages. "
+                 f"From the next run, any newly added page will be posted here."
+                 f"<br><br>_Checked on {today}._")]
+
+    if not new:
+        return [(f"Log360 help docs: no new pages ({today})",
+                 f"No new help pages were added since the last run.<br><br>_{total} pages checked on {today}._")]
+
+    title = f"Log360 help docs: {len(new)} new page{'s' if len(new) != 1 else ''} added"
+    rows = []
+    for u in sorted(new):
+        d = parse_date(pages[u]["last_updated"])
+        date_txt = f" (last updated {d.strftime('%d %b %Y')})" if d else ""
+        rows.append(f"🆕 {connect_link(u)}{date_txt}")
+    rows += ["", f"_{total} pages checked on {today}._"]
+
+    chunks = [rows[i:i + MAX_LINES_PER_POST] for i in range(0, len(rows), MAX_LINES_PER_POST)]
+    return [(title if len(chunks) == 1 else f"{title} ({i}/{len(chunks)})", "<br>".join(c))
+            for i, c in enumerate(chunks, 1)]
+
+
 # ---------- Main ----------
 def main():
     print("Crawling help docs…")
@@ -472,6 +501,20 @@ def main():
     save_state(new_state, pages)
 
     print(f"Pages: {len(pages)} | changed {len(changed)} | new {len(new)} | removed {len(removed)}")
+
+    if REPORT_MODE == "new":
+        print(f"New pages since last run: {len(new)}")
+        for u in sorted(new)[:50]:
+            print(f"  new: {u}")
+        if baseline or new or SEND_IF_NO_CHANGES:
+            posts = build_new_only_posts(new, pages, len(pages), baseline)
+            if os.getenv("DRY_RUN", "false").lower() == "true":
+                Path("connect_preview.txt").write_text(
+                    "\n\n".join(f"{t}\n{m}" for t, m in posts), encoding="utf-8")
+                print(f"DRY_RUN: would post {len(posts)} message(s) (connect_preview.txt)")
+            else:
+                post_to_connect(posts)
+        return
 
     recent, undated = filter_by_date(pages)
     if recent is not None:
