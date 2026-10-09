@@ -69,6 +69,11 @@ def parse_date(text: str):
     return None
 
 
+PAGE_DATE_RE = re.compile(
+    r"last\s+updated\s*(?:on)?\s*:?\s*"
+    r"([A-Za-z]{3,9}\.? \d{1,2},? \d{4}|\d{1,2} [A-Za-z]{3,9}\.? \d{4}|"
+    r"\d{4}-\d{2}-\d{2}|\d{1,2}/\d{1,2}/\d{4})", re.I)
+
 session = requests.Session()
 session.headers.update(HEADERS)
 
@@ -104,6 +109,12 @@ def extract(page_html: str):
 
     links = [a["href"] for a in soup.find_all("a", href=True)]
 
+    # Read "Last updated on: May 02, 2026" from the WHOLE page first, wherever
+    # it sits (header, banner, title block), before any part is stripped out.
+    full_text = " ".join(soup.get_text(" ").split())
+    m = PAGE_DATE_RE.search(full_text)
+    page_date = m.group(1) if m else ""
+
     for tag in soup(["script", "style", "noscript", "nav", "header", "footer",
                      "form", "iframe", "svg"]):
         tag.decompose()
@@ -132,7 +143,43 @@ def extract(page_html: str):
             continue
         lines.append(line)
 
-    return "\n".join(lines), last_updated, links
+    return "\n".join(lines), page_date or last_updated, links
+
+
+def sitemap_urls():
+    """Find help pages listed in the site's sitemaps (catches pages no menu links to)."""
+    roots = {f"{urlparse(u).scheme}://{urlparse(u).netloc}" for u in START_URLS}
+    to_read, found, read = [], set(), set()
+    for root in roots:
+        status, robots = fetch(f"{root}/robots.txt")
+        to_read += [line.split(":", 1)[1].strip() for line in robots.splitlines()
+                    if line.lower().startswith("sitemap:")]
+        to_read.append(f"{root}/sitemap.xml")
+    for u in START_URLS:  # section-level sitemaps, if they exist
+        to_read.append(urljoin(u, "../sitemap.xml"))
+        to_read.append(urljoin(u, "sitemap.xml"))
+
+    while to_read and len(read) < 60:
+        sm = to_read.pop(0)
+        if sm in read:
+            continue
+        read.add(sm)
+        status, xml = fetch(sm)
+        time.sleep(REQUEST_DELAY)
+        if status != 200 or "<loc>" not in xml:
+            continue
+        for loc in re.findall(r"<loc>\s*(.*?)\s*</loc>", xml):
+            loc = html.unescape(loc)
+            if loc.endswith(".xml") or ".xml?" in loc:
+                # nested sitemap: only follow ones that could hold help pages
+                if any(k in loc for k in ("log-management", "sitemap_index", "sitemap-index")) or sm.endswith("robots.txt"):
+                    to_read.append(loc)
+            else:
+                n = normalize(loc)
+                if in_scope(n):
+                    found.add(n)
+    print(f"  sitemaps read: {len(read)} | help pages found in sitemaps: {len(found)}")
+    return found
 
 
 def crawl():
@@ -143,6 +190,7 @@ def crawl():
     if seed_file.exists():
         queue.extend(normalize(u.strip()) for u in seed_file.read_text().splitlines()
                      if u.strip() and not u.startswith("#"))
+    queue.extend(sitemap_urls())
 
     while queue and len(pages) < MAX_PAGES:
         url = queue.popleft()
@@ -260,9 +308,9 @@ def build_email(changed, new, removed, total, baseline, recent=None, undated=())
         subject = (f"[Log360 Help Docs] {len(changed)} changed, "
                    f"{len(new)} new, {len(removed)} removed ({today})")
     else:
-        subject = f"[Log360 Help Docs] No changes this week ({today})"
+        subject = f"[Log360 Help Docs] No changes since last run ({today})"
 
-    parts = [f"<h2>Log360 help-doc weekly check: {today}</h2>",
+    parts = [f"<h2>Log360 help-doc check: {today}</h2>",
              f"<p>{total} pages checked.</p>"]
 
     if recent is not None:
@@ -279,11 +327,11 @@ def build_email(changed, new, removed, total, baseline, recent=None, undated=())
         if undated:
             parts.append(f"<p><i>{len(undated)} pages had no readable 'Last updated' date "
                          "and were skipped by this filter.</i></p>")
-        parts.append("<hr><h3>Content changes since last week's run</h3>")
+        parts.append("<hr><h3>Content changes since last run's run</h3>")
 
     if baseline:
         parts.append("<p>This was the first run, so it saved a snapshot of every page. "
-                     "From next week you'll get the changes.</p>")
+                     "From the next run you will get the changes.</p>")
     else:
         if changed:
             parts.append(f"<h3>Changed ({len(changed)})</h3>")
@@ -316,7 +364,7 @@ def build_email(changed, new, removed, total, baseline, recent=None, undated=())
             parts += [f"<li>{esc(u)}</li>" for u in removed]
             parts.append("</ul>")
         if not (changed or new or removed):
-            parts.append("<p>No content changes since last week.</p>")
+            parts.append("<p>No content changes since last run.</p>")
 
     return subject, "\n".join(parts)
 
@@ -377,16 +425,16 @@ def build_connect_posts(changed, new, removed, total, baseline, recent=None, und
     elif baseline:
         title = f"Log360 help docs: baseline created ({total} pages)"
     else:
-        title = f"Log360 help docs: weekly check ({today})"
+        title = f"Log360 help docs: check ({today})"
 
     if not baseline and (changed or new or removed):
         lines.append("")
-        lines.append("*Content changes since last week*")
+        lines.append("*Content changes since last run*")
         lines += [f"✏️ {connect_link(c['url'])}" for c in changed]
         lines += [f"🆕 {connect_link(u)}" for u in new]
         lines += [f"🗑️ {page_label(u)}" for u in removed]
     elif baseline:
-        lines.append(f"First run: saved a snapshot of {total} pages. Changes will show from next week.")
+        lines.append(f"First run: saved a snapshot of {total} pages. Changes will show from the next run.")
 
     lines.append("")
     lines.append(f"_{total} pages checked on {today}._")
@@ -428,6 +476,8 @@ def main():
     recent, undated = filter_by_date(pages)
     if recent is not None:
         print(f"Updated on/after {SINCE_DATE}: {len(recent)} | no date found: {len(undated)}")
+        for u in undated[:15]:
+            print(f"  no date: {u}")
 
     if not (recent or baseline or changed or new or removed or SEND_IF_NO_CHANGES):
         return
