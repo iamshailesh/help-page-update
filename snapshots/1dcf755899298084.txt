@@ -1,0 +1,47 @@
+In this page
+Overview
+Steps to switch to scalable architecture
+Overview
+This section explains how to migrate from the existing
+High Availability (HA)
+setup to the new
+scalable architecture
+.
+In the HA setup, two servers are configured:
+Primary server
+Secondary/Standby server
+During migration, only the
+primary server
+will be retained, and the secondary server will be decommissioned.
+Steps to switch to scalable architecture
+Follow the steps below to switch to the scalable architecture.
+Stop the server
+Update wrapper.conf on the primary server
+Update Elasticsearch configuration
+Decommission the secondary server
+Configure scalable architecture
+Stop the service
+Shut down the application service on both the primary and secondary servers.
+Update wrapper.conf on the primary server
+Navigate to the configuration file:
+<Log360_Home>\server\conf\wrapper.conf
+On the primary server, remove the following
+lines:wrapper.java.additional.x+1=-DremoteIp=<Standby Server IP>
+wrapper.java.additional.x+2=-DlocalIp=<Primary Server IP>
+wrapper.java.additional.x+3=-DvirtualIp=<Virtual IP>
+NOTE
+The standby server configuration does not require any changes, as it will no longer be used in the scalability setup.
+Update Elasticsearch configuration
+Navigate to the configuration file:
+<Log360_Home>\ES\config\elasticsearch.yml
+If the following property exists, remove it. If not present, no action is required:
+node.max_local_storage_nodes: 2
+Decommission the secondary server
+The secondary (standby) server from the HA setup should now be decommissioned.
+Only the primary server will continue for migration into the scalability architecture.
+Configure scalable architecture
+After completing the configuration updates on the primary server, configure the
+scalable architecture.
+Read also
+This document explains how to migrate from a High Availability (HA) setup to scalable architecture. For related information, refer to the following articles:
+Configuring and managing Log Processors

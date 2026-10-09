@@ -1,0 +1,63 @@
+Installing a CA certificate
+When deep packet inspection is enabled on the gateway server, the server will sign the SSL certificates of all websites with Cloud Protection module's CA certificate. Thus, the endpoints must trust the CA certificate that is created in Cloud Protection module.
+To create a new CA certificate, follow the steps mentioned on
+this page
+.
+To assign a new CA certificate or modify the existing certificate, follow the steps on
+this page
+.
+To download a CA certificate that you have created, follow the steps given
+here
+.
+Once downloaded, the CA certificate can be installed on individual endpoints manually or on multiple endpoints via a GPO.
+Steps to install the CA certificate on individual endpoints manually:
+Double-click the downloaded CA certificate and click
+Install Certificate
+.
+In the
+Certificate Import Wizard
+window, choose
+Place all certificates in the following store
+and then choose
+Trusted Root Certification Authorities
+.
+Click
+Next
+.
+The endpoint will now trust the CA certificate you generated.
+Steps to install the CA certificate on multiple endpoints via a GPO:
+To install the certificate on all client devices, create a group policy in the domain controller in which end-user settings are configured.
+In the domain controller, navigate to
+Start > Administrative Tools > Group Policy Management
+.
+Right-click your domain and select
+Create A GPO In This Domain And Link It Here.
+Enter a suitable name for the
+GPO
+and click
+OK
+.
+Right-click the newly created
+GPO
+and click
+Edit
+. The
+Group Policy Management Editor
+opens.
+In the
+Computer Configuration
+, navigate to
+Policies > Windows Settings > Security Settings > Public Key Policies
+.
+Right-click
+Trusted Root Certification Authorities
+and select
+Import
+.
+Click
+Browse
+and select the generated CA certificate.
+Click
+Finish > OK
+.
+The client devices will now trust the CA certificate you generated.

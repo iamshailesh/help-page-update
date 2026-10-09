@@ -1,0 +1,4 @@
+Log360 Cloud offers real-time threat analytics for the traffic flowing through the gateway server. Since traffic from all the endpoints flows through the gateway server, an administrator can get the reputation score of each website visited by the users in their organization. This score is a good indicator to identify if a website is safe or malicious. In addition, they can also get information on app category to find out what sort of web applications their users visit, such as business applications or streaming services. This way, if an administrator wants to ban productivity killing applications or malicious websites, the threat analytics feature in the cloud protection module can give the required insights.
+Note
+Advanced threat analytics
+should be enabled for this feature to function.

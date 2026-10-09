@@ -1,0 +1,316 @@
+In this page
+Overview
+How it works?
+Use cases
+Prerequisite
+Creating Log Collection Failure Alert profiles
+Overview
+Log Collection Failure Alerts notify administrators when configured log sources or agents stop sending logs to Log360 Cloud. This helps detect potential issues early, preventing gaps in log data and ensuring continuous monitoring.
+Key features:
+Automated health checks - The system evaluates log collection status every 15 minutes.
+Profile-based monitoring - Create multiple alert profiles to independently monitor different log sources, agents, or device groups.
+Device and application monitoring - Tracks configured applications in addition to devices, providing visibility at both system and application levels.
+How it works?
+The alert monitors log ingestion from the selected log sources or agents. If logs are not received within the configured time interval, an email notification is sent to the specified recipients. You can customize the notification subject, recipients, and frequency.
+Alerts are generated under the following conditions:
+Log source not reachable/credential issue
+- When the platform is unable to establish communication with the configured log source due to network or authentication errors.
+No logs generated -
+When no logs are received from the selected source within the defined time threshold.
+Collection schedule delayed -
+When scheduled log collection exceeds the configured time interval.
+Agent stopped/communication delayed
+- When an agent stops functioning, fails to upgrade, or does not communicate with the product within the expected duration.
+This ensures administrators are promptly notified of log collection disruptions, enabling faster troubleshooting and uninterrupted visibility across monitored environments.
+Use cases
+1. Managing alerts during business and non-business hours
+In environments where support teams operate in shifts or follow defined working hours, time-based notification scheduling ensures alerts are delivered only when the appropriate team is available.
+For example, alerts can be restricted to working hours for internal IT teams, or sent during non-working hours to notify on-call staff. Custom schedules allow alignment with specific operational requirements.
+2. Ensuring persistent visibility for critical systems
+This setting sends notifications at predefined intervals for as long as the failure condition persists.
+For example, if the interval is configured as 30 minutes and a log collection failure occurs, the system sends a notification every 30 minutes until the issue is resolved.
+This option is suitable in environments where uninterrupted monitoring is critical, as repeated notifications ensure that unresolved issues remain visible and receive timely attention.
+3. Minimizing alert fatigue
+In environments with many monitored devices, sending only one notification per failure helps reduce unnecessary alert noise.
+This ensures administrators are informed of the issue without being overwhelmed by repeated reminders for the same incident
+Prerequisite
+Creating Log Collection Failure Alert profiles
+Log Collection Failure Alert profiles allow you to define the exact conditions under which an alert is triggered when log collection issues occur.
+The following sections explain how to create and configure alert profiles for Log Sources and Agents:
+Configuring alert profiles for Log Sources
+Configuring alert profiles for Agents
+Configuring alert profiles for Log Sources
+Log in to the product console.
+Navigate to the
+Settings
+tab and select
+Admin
+.
+Under
+Product Customization
+, click
+Log Collection Failure Alert.
+Figure 1: Navigating to Log Collection Failure Alert page
+Go to the
+Log Sources
+tab. Enter a unique name in the
+Profile Name
+field.
+Figure 2: Entering a profile name
+Click the
+icon next to
+Log Sources
+.
+Figure 3: Selecting log sources
+In the
+Select Log Sources
+window:
+Click
+Select All
+to monitor all available log sources.
+Figure 4: Selecting all log sources
+You can also select the checkbox next to a device group to select all log sources within that group.
+Figure 5: Selecting device groups
+To select specific devices, select a device group and then click the checkbox next to individual log source(s).
+Figure 6: Selecting log sources
+Use the
+Search log sources
+field to locate a specific log source if required.
+Figure 7: Using search log sources
+You can also click
+View
+to see the list of selected log sources before saving the profile.
+Figure 8: Viewing list of selected log sources
+Click
+Select
+to confirm the selection of the chosen log sources.
+Under
+Notification Frequency
+, choose one of the following:
+Notify once per failure
+- This setting will trigger a single notification for each distinct log collection failure event
+Figure 9: Choosing notification frequency
+Repeat mail every and specify the required time interval
+- This setting will trigger notifications at regular, predefined intervals as long as the failure condition persists.
+Enter the required time interval and select the time unit from the drop-down:
+Minute(s)
+Hour(s)
+Day(s)
+Figure 10: Choosing notification frequency
+Under
+Notification Template
+, select an existing template from the drop-down list.
+NOTE
+All notifications will be sent to the recipient address configured in the selected notification template.
+Figure 11: Selecting a notification template
+You can also click
++ Create New Template
+to create a new notification template.
+NOTE
+To learn how to create a notification template, refer to the
+Notification Template
+help page.
+Figure 12: Creating a new notification template
+Click
+Advanced Settings
+to configure when notifications should be sent.
+Figure 13: Configuring advanced settings
+Under
+Notify During
+, select one of the following options:
+All Hours
+- Notifications are sent at all times without any time restrictions.
+Working Hours
+- Notifications are sent only during the configured business hours.
+Non-Working Hours
+- Notifications are sent outside the configured business hours.
+Custom Hours -
+Notifications are sent only during the user-defined days and time ranges.
+NOTE
+To learn more about configuring working hour settings, refer to
+this
+page.
+Figure 14: Configuring advanced settings
+If you select
+Custom Hours
+, click the
+icon to configure the required days and time range.
+Figure 15: Configuring custom hours
+In the
+Custom Hours
+window:
+Select the checkbox next to required days from the
+Select Days
+drop-down.
+Figure 16: Selecting days
+Under
+Select Hours,
+choose the
+From
+and
+To
+time.
+Figure 17: Selecting hours
+Click the
+icon to add additional time ranges, allowing you to define multiple notification periods for the selected days.
+To remove a configured time range, click the
+icon next to the respective interval.
+Figure 18: Removing configured time range
+Click
+Save
+to confirm the custom schedule.
+Select the checkbox next to one or more of the following conditions to trigger alerts:
+Log source not reachable / Credential issue
+- Triggers an alert when the log source is unreachable or when log collection fails due to authentication or connectivity issues.
+Logs not generated for more than X minutes/hours
+- Triggers an alert when no logs are generated from the selected log source for longer than the specified time interval. This helps verify continuous log flow, especially for syslog and real-time log collection.
+Enter the required time interval and select the time unit from the drop-down
+Minute(s)
+or
+Hour(s)
+.
+Figure 19: Configuring notifications
+Log collection schedule is delayed more than X minutes/hours
+- Triggers an alert when the scheduled log collection exceeds the defined time threshold. This is applicable for scheduled log sources.
+Specify the delay duration and choose the time unit
+Minute(s)
+or
+Hour(s)
+from the drop-down list.
+Figure 20: Configuring notifications
+Click
+Save
+to create the alert profile.
+Configuring alert profiles for Agents
+Log in to the product console.
+Navigate to the
+Settings
+tab and select
+Admin
+.
+Under
+Product Customization,
+click
+Log Collection Failure Alert.
+Figure 21: Navigating to Log Collection Failure Alert page
+Go to the
+Agent
+tab. Enter a unique name in the
+Profile Name
+field.
+NOTE
+The Agent and Log Source profile can have the same name.
+Figure 22: Entering a profile name
+Click the
+icon next to
+Agents
+.
+Figure 23: Selecting agents
+In the
+Select Agents
+window:
+Select the checkbox next to the required agent(s).
+The
+Agent
+column displays the agent name.
+The
+IP Address
+column displays the agent's IP address.
+The
+Status
+column indicates the current communication state.
+Figure 24: Selecting agents
+Use the
+icon to quickly locate a specific agent, if required.
+Figure 25: Locating agents using search
+You can also click
+View
+to see the list of selected agents before saving the profile.
+Figure 26: Viewing selected agents
+Click
+Save
+to confirm the selection of the chosen agents.
+Under
+Notification Frequency
+, choose one of the following:
+Notify once per failure
+- This setting will trigger a single notification for each distinct agent failure event.
+Figure 27: Choosing notification frequency
+Repeat mail every and specify the required time interval
+- This setting will trigger notifications at regular, predefined intervals as long as the failure condition persists.
+Enter the required time interval and select the time unit from the drop-down:
+Minute(s)
+Hour(s)
+Day(s)
+Figure 28: Choosing notification frequency
+Under
+Notification Template
+, select an existing template from the drop-down list.
+NOTE
+All notifications will be sent to the recipient address configured in the selected notification template.
+Figure 29: Selecting a notification template
+You can also click
++ Create New Template
+to create a new notification template.
+NOTE
+To learn how to create a notification template, refer to the
+Notification Template
+help page.
+Figure 30: Creating a new notification template
+Click
+Advanced Settings
+to configure when notifications should be sent.
+Figure 31: Configuring advanced settings
+Under
+Notify During
+, select one of the following options:
+All Hours
+- Notifications are sent at all times without any time restrictions.
+Working Hours -
+Notifications are sent only during the configured business hours.
+Non-Working Hours
+- Notifications are sent outside the configured business hours.
+Custom Hours -
+Notifications are sent only during the user-defined days and time ranges.
+Figure 32: Configuring advanced settings
+If you select
+Custom Hours
+, click the
+icon to configure the required days and time range.
+Figure 33: Configuring custom hours
+In the
+Custom Hours
+window:
+Select the checkbox next to required days from the
+Select Days
+drop-down.
+Figure 34: Selecting days
+Under
+Select Hours
+, choose the
+From
+and
+To
+time.
+Figure 35: Selecting hours
+Click the
+icon to add additional time ranges, allowing you to define multiple notification periods for the selected days.
+To remove a configured time range, click the
+icon next to the respective interval.
+Figure 36: Removing configured time range
+Click
+Save
+to confirm the custom schedule.
+Select the checkbox next to one or more of the following conditions to trigger alerts:
+Agent is stopped / Upgrade failed
+- Triggers an alert when the agent service stops running or when an agent upgrade process fails.
+Agent communication is delayed
+- Triggers an alert when the agent does not communicate with the server for more than one hour.
+Figure 37: Configuring notifications
+Click
+Save
+to create the alert profile.
+Read also
+This page explained how to configure Log Collection Failure Alerts in Log360 Cloud to detect and resolve log collection issues across devices and applications with scheduled checks, customizable notifications, and multi-profile support. Refer to following pages to learn about related capabilities.
+Notification templates
+Working hour settings

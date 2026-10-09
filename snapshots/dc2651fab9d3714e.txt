@@ -1,0 +1,70 @@
+Log360 Cloud allows you to analyze and troubleshoot account lockouts effectively by tracking down the source of authentication failure in Active Directory (AD). It simplifies management by providing real-time alerts, identifying root causes, and enabling quick resolution.
+Account lockout analyzer report
+Account lockout analyzer is found under User Management in Active Directory. This report provides the following information for each account lockout event:
+Name of the user that got locked out.
+The machine from which the user got locked out.
+Time of lockout
+Previous login attempts of the user
+Details of Windows components like services, mapped drives, logon sessions, etc
+Simplify account lockout troubleshooting by quickly identifying the source of each incident.
+Track account lockout events
+Examine the account lockouts
+Pinpoint the source of account lockouts
+Troubleshooting
+Access is denied
+The RPC server is unavailable
+The network path was not found
+Overlapped I/O operation is in progress
+Access is denied
+Probable cause 1
+: This error occurs when incorrect login credentials are configured.
+Solution:
+Ensure to configure the correct domain name, username, and password for the device. For instance, if the domain name is TestDomain, and the username is admin, in the user name field, type TestDomain\admin.
+Despite the correct credentials, if you still face issues, troubleshoot using the following steps:
+Check if the user account is valid on the target machine by opening a Command Prompt and executing the following command:
+net use \\<monitored device name>\ADMIN$ /u:"<Domain Name\User Name>" "<password>"
+If this command shows errors, the provided user account is not valid on the target machine.
+Check if 'Remote DCOM' is enabled on the monitored workstation. If it is not enabled, enable it with the following steps:
+Select Start > Run.
+Type
+dcomcnfg
+in the text box and click
+OK
+.
+Select the Default Properties tab.
+Select the "Enable Distributed COM on this machine" checkbox.
+Click OK.
+To enable DCOM on Windows XP hosts:
+Select Start > Run.
+Type dcomcnfg in the text box and click OK.
+Click on Component Services > Computers > My Computer.
+Right-click and select Properties.
+Select the Default Properties tab.
+Select the "Enable Distributed COM on this machine" checkbox.
+Click OK.
+Probable cause 2
+: This error occurs when the user name provided does not have the necessary access privileges to perform the operation. It could also happen if the user does not belong to the Administrator group for this host machine.
+Solution:
+Try moving the user to the Administrator group of the workstation with an administrator account, preferably a Domain Administrator.
+The RPC server is unavailable
+Probable cause
+: This error occurs when the RPC service or Remote Desktop Service (RDP) is not running or if the device is not pingable.
+Solution:
+Check if the device is up and running and pingable.
+Check if the RPC and RDP services are running by:
+Select Start > Run.
+Type services.msc in the text box and click OK.
+Check if the RPC and RDP services are running. If not, start those services.
+The network path was not found
+Probable cause
+: The remote registry service may not be running or may be disabled.
+Solution:
+Check if the remote registry service is running.
+Navigate to Start > Run.
+Type services.msc in the text box and click OK.
+Check if the 'Remote Registry' is running; if not, start the service.
+Overlapped I/O operation is in progress
+Probable cause:
+This issue occurs if the username provided does not have the necessary access privileges to perform the operation. It could also happen if the user does not belong to the 'Administrator' group or the 'Remote Desktop Users' group for this host machine.
+Solution:
+Try moving the user to the 'Administrator' group and the 'Remote Desktop Users' group of the workstation.

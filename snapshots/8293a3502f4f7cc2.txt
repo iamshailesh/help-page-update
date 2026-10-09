@@ -1,0 +1,36 @@
+To configure the Syslog service on SonicWall devices, follow the steps below:
+Login to the Juniper device as an
+administrator
+.
+Navigate to the
+Configure
+tab.
+Expand
+CLI Tools
+on the left pane, click on
+CLI editor
+in the subtree, and navigate to
+syslog
+under
+system
+.
+For standard logs, insert the host node with the required values such as the host name, severity, facility and log prefix. Consider the following command:
+host ela-server{
+any any;
+port 513;
+}
+This will forward the log data in standard format. You can customize the syslog severity level by editing the command.
+For structured logs, mention 'structured-data' in the command line. Consider the following command.
+host ela-server{
+any any;
+port 513;
+structured-data;
+}
+This will forward the log data in a structured format.
+Click on
+Commit
+to save the changes. To view the changes, click on the
+CLI viewer
+.
+Note
+It is recommended to use structured logs

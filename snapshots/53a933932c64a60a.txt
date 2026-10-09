@@ -1,0 +1,36 @@
+Login as root user.
+Edit the
+syslog.conf
+file in the
+/etc
+directory as shown below.
+*.emerg;*.alert;*.crit;*.err;*.warning;*.notice;*.info;*.debug<tab-separation>@<ela_server_name>
+where
+<ela_server_name>
+is the name of the machine where EventLog Analyzer is running. Ensure that there is only a
+tab separation
+in between *.debug and @<
+ela_server_name
+>.
+Note
+For a Solaris device, it is enough to include *.debug<tab-separation>@<ela_server_name> in the
+syslog.conf
+file.;
+Save the configuration and exit the editor.
+Edit the
+services
+file in the
+/etc
+directory.
+Change the syslog service port number to
+514
+, which is one of the default listener of EventLog Analyzer. But if you choose a different port other than 514 then remember to enter that same port when adding the device in EventLog Analyzer.
+Start the syslog daemon on the OS with the appropriate command:
+(for HP-UX)
+/sbin/init.d/syslogd start
+(for Solaris)
+/etc/init.d/syslog start
+(for Solaris 10)
+svcadm -v restart svc:/system/system-log:default
+(for IBM AIX)
+startsrc -s syslogd

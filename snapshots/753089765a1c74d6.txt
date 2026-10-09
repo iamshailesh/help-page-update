@@ -1,0 +1,50 @@
+In this page
+Overview
+Steps to add a data source
+Overview
+This page explains how to add Microsoft 365 services as data sources in the product console after configuring a tenant. Once the tenant is configured, you can select the account and add any of the following services as data sources to enable log collection: Exchange Online, SharePoint Online, M365 General, and Exchange MailTrace.
+Steps to add a data source
+In your product console, navigate to the
+Settings
+tab.
+Under Log Configuration, select
+Manage Cloud Sources.
+Note
+For Log360 Cloud:
+Go to
+Settings > Admin > Account Settings
+.
+Move to the
+Configure Cloud Accounts
+tab and click on the
+Add Cloud Account
+button.
+Figure 1: Navigating to Manage Cloud Sources
+On the
+Manage Cloud Sources
+page, click
+Add Data Source
+in the top-right corner.
+NOTE
+Microsoft Entra ID will be added as a data source by default.
+Figure 2: Adding a data source
+In the
+Add Data Source
+window, select an account from the
+Select Account
+drop-down.
+Figure 3: Selecting an account
+From the
+Data Source Type
+drop-down, choose the Microsoft 365 service(s) you want to add.
+NOTE
+You can add one or more services at a time. The available options are: Microsoft Entra ID, Exchange Online, SharePoint Online, M365 General, and Exchange MailTrace.
+Figure 4: Selecting data source types
+Click
+Add
+to add the selected data sources.
+Figure 4: Selecting data source types
+Read also
+This page detailed how to add Microsoft 365 services as data sources in the product console after configuring a tenant. To learn more about related configurations, see the articles below:
+Managing Microsoft 365 accounts
+Managing cloud sources

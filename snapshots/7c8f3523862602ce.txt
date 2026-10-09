@@ -1,0 +1,26 @@
+The gateway server in Log360 Cloud encrypts and decrypts HTTPS (HTTP over SSL) traffic at the endpoints using public key encryption. To ensure there is no intrusion during transmission, the gateway server issues a signed digital certificate proving the authenticity of the packets to the endpoints.
+Steps to add and customize a new Certificate Authority (CA)
+Navigate to the
+Settings
+tab in Log360 Cloud.
+Expand the
+Cloud Protection Settings
+option and click on
+Certificate > Server CA Management
+.
+On the
+Configured Certificates Authority
+page, Click
++Add Certificate Authority
+button on the top right corner.
+In the
+Add CA Certificate
+page, enter a name for the certificate.
+Select the key size from the drop-down option. The available Key Sizes are 2048, 3072, and 4096.
+Select a
+Signature Algorithm
+of your choice from the drop-down menu. The certificate will be signed using this signature algorithm.
+Enter the number of Years and Months after which the certificate must expire.
+Click Generate.
+You can now view the generated CA certificate on the Configured Certificates Authority page. You can click on the download icon present next to the certificate to download it on your device.
+This certificate must be installed on all client machines to be trusted as the root authority. You can go ahead and install the certificates manually in all the client machines or you can use a GPO to install the certificate in multiple devices by following the steps in this page.

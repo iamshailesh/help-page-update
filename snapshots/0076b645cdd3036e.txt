@@ -1,0 +1,23 @@
+In this page
+Access
+Analysis
+The Incident workbench is the product's console that unifies analytics of the core entities such as users, processes, and threat sources.
+This feature facilitates users to add, compare, and analyze data with enriched integrations like UEBA and Advanced Threat Analytics.
+Utilize the contextual assesment with risk based profiling, conduct faster root cause analysis by probing the process trees, and minimize the overall time taken to investigate and resolve threats.
+Features:
+Here are the entities you can analyze using Incident Workbench:
+Users
+Analytics offered: ML-based user activity and risk score data compiled through UEBA integration from Log360's suite.
+Process
+Analytics offered: Process hunting tree with parent-child relationships and event timeline.
+Threat sources
+Analytics offered: Risk analysis from security vendors using Advanced Threat Analytics integration.
+Access and usability:
+Roles and restrictions:
+Operator and guest role members have no access to the Incident Workbench.
+Custom roles can be created to provide access to the Incident Workbench.
+Access:
+Incident workbench can be invoked from multiple dashboards of the product such as reports, log search, compliance, alerts, and more.
+Users can add upto 20 tabs in a single instance of the Incident Workbench and save it to an existing
+incident
+or create a new incident.

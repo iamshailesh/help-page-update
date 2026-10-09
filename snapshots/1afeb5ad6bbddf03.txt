@@ -1,0 +1,84 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the various WatchGuard reports available in the product console to help administrators monitor firewall activity, track user access, analyze traffic patterns, and detect security events across the network.
+Available Reports
+Report Group Name
+Report Name
+System Events
+Configuration Change
+System Status
+Services Start Failed
+Features Status
+License Status
+Clock Update
+IDS/IPS
+All Attacks
+Top Attacks based on Source
+Top Attacks based on Destination
+Attacks Trend
+Policy Management
+Policy Added
+Policy Deleted
+Policy Modified
+Account Management
+Admin Added
+Admin Deleted
+Admin Modified
+Failed Logon Reports
+Failed Logons
+Top Failed Logons from Source
+Top failure logons based on users
+Failed Logons Trend
+Logon Reports
+Logons
+Top logons based on user
+Logons Trend
+Top Successful Logons from Source
+Website Traffic Reports
+Website Traffic
+Top Website Traffic based on Source
+Top Website Traffic based on Destination
+Top Website Traffic based on Website
+Website Traffic Trend
+Denied Traffic Reports
+Top Denied Connections based on Destination
+Top Denied Connections based on Protocol
+Top Denied Connections based on Port
+Denied Connections
+Top Denied Connections based on Source
+Denied Connections Trend
+Allowed Traffic Reports
+Allowed Traffic
+Top Traffic based on Source
+Top Traffic based on Protocol
+Allowed Traffic Trend
+Top Traffic based on Destination
+Top Traffic based on Port
+Device Severity Reports
+Emergency Events
+Alert Events
+Critical Events
+Error Events
+Warning Events
+Notice Events
+Information Events
+Debug Events
+VPN Logon Reports
+VPN Logons
+VPN Logout
+VPN logon trend reports
+Failed VPN Logon Reports
+Failed VPN Logons
+VPN Failed logon trend reports
+WatchGuard Events
+All Events
+Important Events
+Read also
+This document elaborated the list of WatchGuard reports available in the product console and how they help monitor system health, security events, user activity, traffic behavior, and VPN access. Explore related report sections to gain deeper visibility into security events and operational trends.
+Barracuda reports
+Huawei reports
+NetScreen reports
+Checkpoint reports
+Arista reports

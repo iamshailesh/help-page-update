@@ -1,0 +1,92 @@
+In this page
+Overview
+Using License settings
+Extending trial
+Managing Licenses
+Overview
+This page provides an overview of license settings and storage allocation for MSSP users. Admins can allocate
+Search Storage
+and
+Archival Storage
+to customers, set retention periods, and monitor usage. This page also displays overall license details, such as allocated storage, license type, and expiry date. Additionally, it lists all customers along with their allocated storage, retention settings, and Advanced Threat Analytics status, enabling admins to manage storage distribution across customers efficiently.
+Using License settings
+Log into your Log360 Cloud account.
+Go to
+the Settings tab
+and select
+Admin
+.
+Navigate to
+Admin Settings
+and click
+License
+.
+Under the License pane, you can find key details about your MSSP account:
+Allocated Search Storage
+- Displays the total search storage purchased and allocated, along with its retention period.
+Allocated Archival Storage
+- Displays the total archival storage purchased and allocated, along with its retention period.
+License Type
+- Indicates the current license type, such as MSSP.
+Expires on
+- Shows when the license will expire.
+Figure 1: License overview
+Below this section, the
+License Summary
+table provides an overview of the number of Advanced Threat Analytics licenses purchased, the total number of customers, and the count of evaluation customers.
+Figure 2: License Summary
+Further down, the
+Customer Usage
+table lists all customers along with details such as customer name, search storage used and allocated, archival storage used and allocated, search and archival retention periods, and Advanced Threat Analytics (ATA) status.
+Figure 3: Customer Usage
+Extending trial
+To extend your trial period for an extra 15 days after your initial trial expiry,
+In the License page, click
+Extend Trial
+in the top right corner under the expiry date.
+In the pop-up that appears, write about your experience with Log360 Cloud in the description box.
+Click
+Send
+.
+NOTE
+If you require an additional extension, click Extend Trial again and share your experience. Our support team will contact you for further assistance.
+Managing Licenses
+To allocate storage and configure license settings for a customer:
+Go to the
+Customer Usage
+table on the
+License
+page.
+Identify the customer you want to manage and click
+Manage License
+in the corresponding row.
+Figure 4: Managing License
+In the
+Manage License
+pop-up window:
+Search Storage
+- Enter the amount of search storage to allocate.
+Archival Storage
+- Enter the amount of archival storage to allocate.
+Archival Retention
+- Specify how long logs should be retained in storage.
+Search Retention
+- Specify how long logs should remain searchable.
+Advanced Threat Analytics (ATA)
+- Enable or disable ATA for the customer.
+Figure 5: Configuring license settings
+Click
+Save
+to apply the changes.
+After admins allocate licenses and storage, customers can view their assigned resources under their
+License
+page. This page displays:
+Search Storage and Archival Storage
+- Displays the allocated storage capacity for search and archival logs, along with their respective retention periods.
+License Type
+- Displays the license type, such as MSSP Customer.
+Expiry Date
+- Shows the license expiration date.
+Feature allocation
+- Lists features such as Alert Profiles, Correlation Rules, and Advanced Threat Analytics, along with their allocated limits and their current usage.
+Figure 6: License page of the customer

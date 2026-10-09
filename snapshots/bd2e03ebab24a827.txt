@@ -1,0 +1,3 @@
+Warning
+This feature has been removed for Log360 Cloud agent users. This page is made available only for users who are still using EventLog Analyzer for log collection.
+This page displays the threat solutions along with the name of the host, type, family, and last message time.

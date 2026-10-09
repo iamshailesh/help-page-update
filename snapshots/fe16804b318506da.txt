@@ -1,0 +1,16 @@
+Overview
+Configuring the Syslog Service on a Mac OS devices
+Overview
+Log360 allows you to integrate Mac OS devices into your log management setup by configuring their syslog service to forward events to the EventLog Analyzer server. By updating the syslog configuration file and restarting the syslog service, logs from Mac OS devices can be securely transmitted to the server for centralized monitoring and analysis.
+This setup ensures that security events and system activity from Mac OS devices are captured in real time, enabling better visibility, incident investigation, and compliance reporting.
+Configuring the Syslog Service on a Mac OS devices
+Login as root user and edit the syslog.conf file in the /etc directory.
+Append *.*<tab>@<server_IP> at the end, where <server_IP> is the IP Address of the machine on which EventLog Analyzer is running.
+Note
+Ensure that the EventLog Analyzer server IP address is reachable from the MAC OS device.
+Save the file and exit the editor.
+Execute the below commands to restart the syslog device:
+$ sudo launchctl unload /System/Library/LaunchDaemons/com.apple.syslogd.plist
+$ sudo launchctl load /System/Library/LaunchDaemons/com.apple.syslogd.plist
+Note
+TLS option is not available for Syslog.

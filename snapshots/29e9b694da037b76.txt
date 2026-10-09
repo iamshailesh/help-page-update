@@ -1,0 +1,573 @@
+In this page
+Overview
+Pre-defined rules
+Overview
+Active Directory (AD) plays a central role in an organization's security posture, as it governs authentication and access to critical systems and resources. Effective AD security helps safeguard user credentials, applications, and confidential data against unauthorized access. Strengthening AD configurations reduces the risk of breaches and protects the business from potential damage caused by malicious actors.
+This page explains the
+pre-defined risk posture rules for Active Directory
+that the product uses to evaluate configurations and highlight potential vulnerabilities.
+Pre-defined rules
+The following are the key pre-defined rules used to assess Active Directory configurations and identify potential security risks.
+Minimum Password Length
+Password Complexity
+Users with old password
+Disable Guest Account
+Disable Inactive Users
+Disable Local Administrative Account
+Kerberos User Logon Restriction
+Maximum Lifetime for Kerberos Service Ticket
+Account Lockout Threshold
+Account Lockout Duration
+Session Timeout Duration
+User Password Expiry
+Admin Accounts with old password
+Built-in Domain Administrator Account Usage
+Built-in Domain Administrator Account with Old Password
+Disabled Admin Accounts
+Inactive Enabled Admin Account
+Password Never Expired Users
+Enforce Password History
+1. Minimum Password Length
+Description:
+This security rule determines the least number of characters that a password for a user account may contain. You can set a value between 1 to 14 characters, or you can establish that no password is required by setting the number of characters to 0.
+Default:
+7 on domain controllers.
+0 on stand-alone servers.
+Vulnerability:
+Minimum password length policy setting determines the least number of characters that can make up a password for a user account. Types of password attacks include dictionary attacks (which attempt to use common words and phrases) and brute force attacks (which try every possible combination of characters). Also, attackers sometimes try to obtain the account database so they can use tools to discover the accounts and passwords.
+Possible Values:
+User-specified number of characters between 0 and 14 (If the number of characters is set to 0, no password is required)
+Not defined
+Best Practice:
+Set minimum password length to at least a value of 8. In most environments, an eight-character password is recommended because it's long enough to provide adequate security and still short enough for users to remember easily. A minimum password length greater than 14 isn't supported at the moment. This value will help provide adequate defense against a brute force attack. Adding complexity requirements will help reduce the possibility of a dictionary attack. For more info, see Password must meet complexity requirements.
+Recommendation:
+Using GUI,
+On your Domain Controller, open the
+Start Menu
+and go to
+Administrative Tools
+, then select
+Group Policy Management
+.
+In the console tree, expand
+Forest
+and then
+Domains
+, and select the domain where you want to configure the account policies.
+Double-click the domain to view the Group Policy Objects (GPOs) linked to it.
+Right-click
+Default Domain Policy
+and select
+Edit
+. The
+Group Policy Editor
+console will open.
+In the editor, navigate to
+Computer Configuration â Policies â Windows Settings â Security Settings â Account Policies â Password Policy
+.
+Double-click
+Password Policy
+. To configure the minimum password length, right-click
+Minimum password length
+and select
+Properties
+, then define the desired policy setting.
+2. Password Complexity
+Description:
+This security rule determines if passwords meet the complexity requirements. If this policy is enabled, passwords meet the following requirements: Not contain the user's account name or a part of the user's full name that exceeds two consecutive characters.
+Be at least six characters in length
+Contain characters from three of the following categories:
+English uppercase characters (A through Z)
+English lowercase characters (a through z)
+Base 10 digits (0 through 9)
+Non-alphabetic characters (for example, !, $, #, %)
+Complexity requirements are enforced when passwords are changed or created.
+Default:
+Enabled on domain controllers. Disabled on stand-alone servers.
+Vulnerability:
+Passwords that contain only alphanumeric characters are easy to discover with several publicly available tools.
+Possible Values:
+Enabled
+Disabled
+Not defined
+Best Practice:
+Set
+Passwords must meet complexity requirements
+to Enabled. This policy setting, combined with a minimum password length of 8, ensures that there are at least 159,238,157,238,528 different possibilities for a single password. This setting makes a brute force attack difficult, but not impossible.
+Passwords may not contain the user's samAccountName (Account Name) value or entire displayName (Full Name value). Neither of these checks is case-sensitive.
+The password contains characters from three of the following categories:
+Uppercase letters of European languages (A through Z, with diacritic marks, Greek and Cyrillic characters)
+Lowercase letters of European languages (a through z, sharp-s, with diacritic marks, Greek and Cyrillic characters)
+Base 10 digits (0 through 9)
+Non-alphanumeric characters (special characters): (~!@#$%^&*_-+=`|\(){}[]:;"'<>,.?/) Currency symbols such as the Euro or British Pound aren't counted as special characters for this policy setting.
+Any Unicode character that's categorized as an alphabetic character but isn't uppercase or lowercase. This group includes Unicode characters from Asian languages.
+Short passwords that contain only alphanumeric characters are easy to compromise by using publicly available tools. To prevent this vulnerability, passwords should contain other characters and/or meet complexity requirements.
+Recommendation:
+Using GUI,
+Open the
+Start Menu
+, go to
+Administrative Tools
+, and select
+Group Policy Management
+.
+In the console tree, expand
+Forest
+and then
+Domains
+, and select the domain where you want to configure account policies.
+Double-click the domain to view the Group Policy Objects (GPOs) linked to it.
+Right-click
+Default Domain Policy
+and select
+Edit
+. The
+Group Policy Editor
+console will open.
+In the editor, navigate to
+Computer Configuration
+, then
+Policies
+, followed by
+Windows Settings â Security Settings â Account Policies â Password Policy
+.
+Double-click
+Password Policy
+. To configure the complexity requirement, right-click
+Password must meet complexity requirements
+, select
+Properties
+, and enable the policy.
+3. Users with old password
+Description:
+This security rule checks if all the users have changed their password over the past 90 days.
+Default:
+Enabled on domain controllers. Disabled on stand-alone servers.
+Vulnerability:
+The longer a password exists, the higher the likelihood that it will be compromised by a brute force attack, by an attacker gaining general knowledge about the user, or by the user sharing the password.
+Best Practice:
+Set maximum password age to a value between 30 and 90 days, depending on your environment. This way, an attacker has a limited amount of time to compromise a user's password and have access to your network resources.
+Recommendation:
+Using GUI,
+Open the
+Active Directory Users and Computers
+tool.
+In the directory tree, select the organizational unit (OU) that contains the account whose password you want to reset.
+Go to
+Accounts
+and select the account.
+Right-click the account name and choose
+Reset Password
+from the context menu.
+Enter the new password and click
+OK
+to apply the changes.
+Using Power Shell,
+Change a specified account password
+Set-ADAccountPassword -Identity
+-Reset -NewPassword (ConvertTo-SecureString -AsPlainText "<new password>" -Force)
+Set a password for an account using a distinguished name
+Set-ADAccountPassword -Identity 'CN=<Common Name>,OU=<Organizational Unit>,DC=<Domain Component>,DC=<Domain Component>' -Reset -NewPassword (ConvertTo-SecureString -AsPlainText "<new password>" -Force)
+4. Disable Guest Account
+Description:
+This security setting determines whether the Guest account is enabled or disabled. This account allows unauthenticated network users to gain access to the system by signing in as a Guest with no password. Unauthorized users can access any resources that are accessible to the Guest account over the network. This privilege means that any network shared folders with permissions that allow access to the Guest account, the Guests group, or the Everyone group will be accessible over the network. This accessibility can lead to the exposure or corruption of data.
+Default:
+Enabled on domain controllers. Disabled on stand-alone servers.
+Vulnerability:
+The default Guest account allows unauthenticated network users to sign in as a Guest with no password. These unauthorized users could access any resources that are accessible to the Guest account over the network. This capability means that any shared folders with permissions that allow access to the Guest account, the Guests group, or the Everyone group are accessible over the network, which could lead to the exposure or corruption of data.
+Possible Values:
+Enabled
+Disabled
+Not defined
+Best Practice:
+Set Guest account status to Disabled so that the built-in Guest account is no longer usable. All network users will have to authenticate before they can access shared resources on the system. If the Guest account is disabled and Network access: Sharing and security model for local accounts is set to Guest only, network logons, such as those logons performed by the SMB Service, will fail.
+Recommendation:
+Using GUI,
+Follow the below steps in GPO.
+Configure the policy value for Computer Configuration â Windows Settings â Security Settings â Local Policies â Security Options.
+Locate
+Accounts
+and set the
+Guest account
+status to
+Disabled
+.
+5. Disable Inactive Users
+Description:
+This security rule determines if all the inactive Active Directory users were disabled.
+Vulnerability:
+Active Directory has an account for every user. Over time, users leave the organization, and those user accounts may not get removed from Active Directory. Stale user accounts are a significant security issue, as former employees and external attackers could use those accounts to attack the organization. Stale accounts also use up space in the directory database that could be reclaimed.
+Best Practice:
+You should carry out regular checks to look for any user accounts that have not changed their passwords in the last three months, and then disable and remove those accounts from Active Directory. Users who are inactive for a period of 90 days need to be removed from the organization.
+Recommendation:
+Using GUI,
+Open the
+Active Directory Users and Computers
+tool.
+In the directory tree, select the organizational unit (OU) that contains the account you want to delete.
+Go to
+Accounts
+and select the account.
+Right-click the account name and choose
+Delete
+from the context menu.
+In the confirmation dialog box, click
+Yes
+to permanently delete the selected account.
+Using Power Shell,
+Remove a specified account
+Remove-ADUser -Identity <account name>
+Remove an account by distinguished name
+Remove-ADUser -Identity "CN=<Common Name>,OU=<Organizational Unit>,DC=<Domain Component>,DC=<Domain Component>"
+6. Disable Local Administrative Account
+Description:
+This security rule determines whether the local administrator account is enabled or disabled.
+Default:
+Disabled.
+Vulnerability:
+The built-in administrator account cannot be locked out no matter how many failed logons it accrues, making it a prime target for brute-force attacks that attempt to guess passwords.The account has a well-known Security Identifier (SID), and many non-Microsoft tools allow authentication by using only the SID rather than the account name. Therefore, even if you rename the Administrator account, an attacker could launch a brute-force attack by using the SID to log on.
+Possible Values:
+Enabled
+Disabled
+Best Practice:
+It is best practice that the local administrator account is disabled.
+Recommendation:
+Using GUI,
+Follow the below steps in GPO.
+In the Group Policy Editor, navigate to
+Computer Configuration â Windows Settings â Security Settings â Local Policies â Security Options
+.
+Locate
+Accounts and
+set
+Administrator account status
+to
+Disabled
+.
+7. Kerberos User Logon Restriction
+Description:
+This security rule determines if the Kerberos V5 Key Distribution Center (KDC) validates every request for a session ticket against the user rights policy of the user account. Validation of each request for a session ticket is optional because the extra step takes time and it may slow network access to services.
+Default:
+Enabled.
+Vulnerability:
+If you disable this policy setting, users could receive session tickets for services that they no longer have the right to use because the right was removed after they logged on.
+Possible Values:
+Enabled
+Disabled
+Not defined
+Best Practice:
+If this policy setting is disabled, users might be granted session tickets for services that they do not have the right to use. It is advisable to set Enforce user logon restrictions to Enabled.
+Recommendation:
+Follow the below steps in GPO.
+In the Group Policy Editor, navigate to
+Computer Configuration â Windows Settings â Security Settings â Account Policies â Kerberos Policy
+.
+Locate
+Enforce user logon restrictions
+and set it to
+Enabled
+.
+8. Maximum Lifetime for Kerberos Service Ticket
+Description:
+This security rule determines the maximum amount of time (in minutes) that a granted session ticket can be used to access a particular service. The setting must be greater than 10 minutes and less than or equal to the setting for the maximum lifetime for user ticket.
+Default:
+600 minutes (10 hours).
+Vulnerability:
+If you configure the value for the Maximum lifetime for service ticket setting too high, users might be able to access network resources outside their logon hours. In addition, users whose accounts have been disabled might be able to continue accessing network services by using valid service tickets that were issued before their account was disabled.
+Possible Values:
+A user-defined number of minutes from 10 through 99,999, or 0 (in which case service tickets don't expire).
+Not defined
+Best Practice:
+It's advisable to set "Maximum lifetime for service ticket" to 600 minutes.
+Recommendation:
+Follow the below steps in GPO.
+In the Group Policy Editor, navigate to
+Computer Configuration â Windows Settings â Security Settings â Account Policies â Kerberos Policy
+.
+Locate the
+Maximum lifetime for
+the
+service ticket
+and set it to
+600 minutes
+.
+9. Account Lockout Threshold
+Description:
+This security rule determines the number of failed logon attempts that causes a user account to be locked out. A locked-out account cannot be used until it is reset by an administrator or until the lockout duration for the account has expired. You can set a value between 0 and 999 failed logon attempts. If you set the value to 0, the account will never be locked out.
+Default: 0.
+Vulnerability:
+Brute force password attacks can be automated to try thousands or even millions of password combinations for any or all user accounts. Limiting the number of failed sign-ins that can be performed nearly eliminates the effectiveness of such attacks.
+Possible Values:
+A user-defined number from 0 through 999
+Not defined
+Best Practice:
+The threshold that you select is a balance between operational efficiency and security, and it depends on your organization's risk level. To allow for user error and to thwart brute force attacks, Windows security baselines recommend a value of 5 could be an acceptable starting point for your organization.
+Recommendation:
+From GUI
+Follow the below steps in GPO.
+In the Group Policy Editor, go to
+Computer Configuration â Windows Settings â Security Settings â Account Policies â Account Lockout Policy
+.
+Set the
+Account lockout threshold
+to
+5
+.
+10. Account Lockout Duration
+Description:
+This security rule checks the number of minutes a locked-out account remains locked out before automatically becoming unlocked. The available range is from 0 minutes through 99,999 minutes. If you set the account lockout duration to 0, the account will be locked out until an administrator explicitly unlocks it.
+Default:
+None, because this policy setting only has meaning when an account lockout threshold is specified.
+Vulnerability:
+A Denial-of-Service (DoS) condition can be created if an attacker abuses the account lockout threshold policy setting and repeatedly attempts to sign in with a specific account. After you configure the account lockout threshold policy setting, the account will be locked out after the specified number of failed attempts.
+Possible Values:
+A user-defined number of minutes from 0 through 99,999 (the Account lockout duration is set to 0, the account will remain locked until an administrator unlocks it manually.)
+Not defined
+Best Practice:
+It's advisable to set Account lockout duration to approximately 30 minutes.
+Recommendation:
+Using GUI,
+Follow the below steps in GPO.
+In the Group Policy Editor, navigate to
+Computer Configuration â Windows Settings â Security Settings â Account Policies â Account Lockout Policy
+.
+Set
+Account lockout duration
+to
+30 minutes
+.
+11. Session Timeout Duration
+Description:
+Windows notices inactivity of a logon session, and if the amount of inactive time exceeds the inactivity limit, then the screen saver will run, locking the session.
+Default:
+Not enforced.
+Vulnerability:
+Long session time out makes un-attended systems a potential end point for attackers. This policy setting helps you prevent unauthorized access to devices under your control when the currently signed-in user leaves without deliberately locking the desktop.
+Possible Values:
+The automatic lock of the device is set in elapsed seconds of inactivity, which can range from zero (0) to 599,940 seconds (166.65 hours).
+If the machine is locked after being set to zero (0) or has no value (blank), the policy setting is disabled, and a user sign-in session is never locked after any inactivity.
+Best Practice:
+Set the time for elapsed user-input inactivity based on the device's usage and location requirements. For example, if the device or device is in a public area, you might want to have the device automatically lock after a short period of inactivity to prevent unauthorized access. However, if the device is used by an individual or group of trusted individuals, such as in a restricted manufacturing area, automatically locking the device might hinder productivity. Setting the machine inactivity timeout seconds to 1000 is recommended.
+Recommendation:
+Follow the below steps in GPO.
+In the Group Policy Editor, navigate to
+Computer Configuration â Windows Settings â Security Settings â Local Policies â Security Options
+.
+Set
+Interactive logon: Machine inactivity limit
+to
+1000 seconds
+.
+12. User Password Expiry
+Description:
+This security rule determines the period of time (in days) that a password can be used before the system requires the user to change it. You can set passwords to expire after multiple days between 1 and 999, or you can specify that passwords never expire by setting the number of days to 0. If the maximum password age is between 1 and 999 days, the minimum password age must be less than the maximum password age. If the maximum password age is set to 0, the minimum password age can be any value between 0 and 998 days.
+Default: 42.
+Vulnerability:
+The longer a password exists, the higher the likelihood that it will be compromised by a brute force attack, by an attacker gaining general knowledge about the user, or by the user sharing the password. Configuring the maximum password age policy setting to 0 so that users are never required to change their passwords allows a compromised password to be used by the malicious user for as long as the valid user is authorized access.
+Possible Values:
+User-specified number of days between 0 and 999 (Set 0, so that users are never required to change their passwords)
+Not defined
+Best Practice:
+Set the maximum password age to 90 days, depending on your environment. This way, an attacker has a limited amount of time in which to compromise a user's password and have access to your network resources.
+Recommendation:
+Using GUI,
+Follow the below steps in GPO.
+In the Group Policy Editor, navigate to
+Computer Configuration â Policies â Windows Settings â Security Settings â Account Policies â Password Policy
+.
+Set
+Maximum password age
+to
+90 days
+.
+13. Admin Accounts with old password
+Description:
+This security rule checks if any admin accounts are with passwords that were last set more than 90 days.
+Vulnerability:
+The longer a password exists, the higher the likelihood that it will be compromised by a brute force attack, by an attacker gaining general knowledge about the Admin, or by the Admin sharing the password.
+Best Practice:
+Reset the password once every 90 days. Use the below steps to reset the password.
+Recommendation:
+Using GUI,
+Open the
+Active Directory Users and Computers
+tool.
+In the directory tree, select the organizational unit (OU) that contains the account for which you want to reset the password.
+Go to
+Accounts
+and select the account.
+Right-click the account name and choose
+Reset Password
+from the context menu.
+Enter the new password and click
+OK
+to apply the change.
+Using Power Shell,
+Change a specified account password
+Set-ADAccountPassword -Identity <account name> -Reset -NewPassword (ConvertTo-SecureString -AsPlainText "<new password>" -Force)
+Set a password for an account using a distinguished name
+Set-ADAccountPassword -Identity 'CN=<Common Name>,OU=<Organizational Unit>,DC=<Domain Component>,DC=<Domain Component>' -Reset -NewPassword (ConvertTo-SecureString -AsPlainText "<new password>" -Force)
+14. Built-in Domain Administrator Account Usage
+Description:
+This security rule determines if any built-in administrator accounts have been active over the last 14 days.
+Vulnerability:
+Active Directory has an Administrator account for several needs, but it should not be used regularly. If the administrator account is regularly used, it must be monitored. If any malicious activity is found, immediate action must be taken to prevent attackers from attacking the organization.
+Best Practice:
+You should carry out regular checks to look for any Administrator accounts that have been active within the last 2 weeks and ensure that the built-in Domain Administrator account is legitimate and accounted for. If not accounted for, a breach is likely to occur and should be investigated. Take action for those administrator accounts if any malicious activity is found.
+15. Built-in Domain Administrator Account with Old Password
+Description:
+This security rule determines the period of time (in days) that a password can be used before the system requires the built-in administrator user to change it. You can set passwords to expire after multiple days between 1 and 999, or you can specify that passwords never expire by setting the number of days to 0. If the maximum password age is between 1 and 999 days, the minimum password age must be less than the maximum password age. If the maximum password age is set to 0, the minimum password age can be any value between 0 and 998 days.
+Vulnerability:
+The longer a password exists, the higher the likelihood that it will be compromised by a brute force attack, by an attacker gaining general knowledge about the Administrator, or by the Administrator sharing the password.
+Best Practice:
+Reset the password once every 90 days.
+Recommendation:
+Using GUI,
+Open the
+Active Directory Users and Computers
+tool.
+In the directory tree, select the organizational unit (OU) that contains the account whose password you want to reset.
+Go to
+Accounts
+and select the account.
+Right-click the account name and choose
+Reset Password
+from the context menu.
+Enter the new password and click
+OK
+to apply the change.
+Using Power Shell,
+Change a specified account password
+Set-ADAccountPassword -Identity <account name> -Reset -NewPassword (ConvertTo-SecureString -AsPlainText "<new password>" -Force)
+Set a password for an account using a distinguished name
+Set-ADAccountPassword -Identity 'CN=<Common Name>,OU=<Organizational Unit>,DC=<Domain Component>,DC=<Domain Component>' -Reset -NewPassword (ConvertTo-SecureString -AsPlainText "<new password>" -Force)
+16. Disabled Admin Accounts
+Description:
+This security setting displays all the admin accounts that are disabled.
+Vulnerability:
+Admin user accounts which are disabled use up unwanted space in the directory database that could be removed from the database.
+Best Practice:
+You should carry out regular checks to look for privileged users who are all disabled and remove the disabled privilege users from Active Directory.
+Recommendation:
+Using GUI,
+Open the
+Active Directory Users and Computers
+tool.
+In the directory tree, select the organizational unit (OU) that contains the account you want to delete.
+Go to
+Accounts
+and select the account.
+Right-click the account name and choose
+Delete
+from the context menu.
+In the confirmation dialog box, click
+Yes
+to delete the account permanently.
+Using Power Shell,
+Remove a specified account
+Remove-ADUser -Identity <account name>
+Remove an account by distinguished name
+Remove-ADUser -Identity "CN=<Common Name>,OU=<Organizational Unit>,DC=<Domain Component>,DC=<Domain Component>"
+17. Inactive Enabled Admin Account
+Description:
+This security rule checks if all the enabled admin accounts are active over a specified time period.
+Vulnerability:
+Inactive admin accounts are a significant security issue, as former employees and external attackers could use those accounts to attack the organization. Inactive admin accounts also use up space in the directory database that could be reclaimed.
+Best Practice:
+You should carry out regular checks to look for any admin accounts that have not been active for 90 days and remove those Admin accounts from Active Directory.
+Recommendation:
+Using GUI,
+Open the
+Active Directory Users and Computers
+tool.
+In the directory tree, select the organizational unit (OU) that contains the account you want to delete.
+Go to
+Accounts
+and select the account.
+Right-click the account name and choose
+Delete
+from the context menu.
+In the confirmation dialog box, click
+Yes
+to delete the account permanently.
+Using Power Shell,
+Remove a specified account
+Remove-ADUser -Identity <account name>
+Remove an account by distinguished name
+Remove-ADUser -Identity "CN=<Common Name>,OU=<Organizational Unit>,DC=<Domain Component>,DC=<Domain Component>"
+18. Password Never Expired Users
+Description:
+This security rule checks if any users are configured with the
+Password Never Expires
+Option.
+Vulnerability:
+Enabling the "Password Never Expires" option could lead to being compromised by a brute force attack, by an attacker gaining general knowledge about the user, or by the user sharing the password.
+Possible Values:
+Enabled
+Disabled
+Best Practice:
+Disable the Password never expires option. It is best practice to uncheck the "Password never expires" check box while creating the user account.
+Recommendation:
+Using GUI,
+Open the
+Active Directory Users and Computers
+tool.
+In the directory tree, select the organizational unit (OU) containing the account you want to modify.
+Go to
+Accounts
+and select the account.
+Right-click the account name and choose
+Properties
+from the context menu.
+In the
+Account
+tab, under
+Account Options
+, uncheck the
+Password never expires
+checkbox.
+Using Power Shell,
+set-aduser <account name> -PasswordNeverExpires $false
+19. Enforce Password History
+Description
+This security rule checks if the active directory was configured to prevent password reuse.
+Vulnerability:
+If password changes are required but password reuse isn't prevented, the effectiveness of a good password policy is greatly reduced. If you specify a low number for this policy setting, users can use the same small number of passwords repeatedly.
+Possible Values:
+You can specify a number from 0 to 24
+Best Practice:
+Set Enforce password history to 24. This setting will help mitigate vulnerabilities that are caused by password reuse.
+Recommendation:
+Open the
+Start Menu
+, go to
+Administrative Tools
+, and select
+Group Policy Management
+.
+In the console tree, expand
+Forest
+and then
+Domains
+, and select the domain where you want to configure account policies.
+Double-click the domain to view the Group Policy Objects (GPOs) linked to it.
+Right-click
+Default Domain Policy
+and select
+Edit
+. The
+Group Policy Editor
+console will open.
+In the editor, navigate to
+Computer Configuration â Windows Settings â Security Settings â Account Policies â Password Policy
+.
+Double-click
+Password Policy
+, right-click
+Enforce Password History
+, select
+Properties
+, and define the desired policy setting.
+Read Also
+This section details the pre-defined rules for Active Directory, including descriptions, default values, vulnerabilities, best practices, and recommendations. For more information, see:
+SQL Server

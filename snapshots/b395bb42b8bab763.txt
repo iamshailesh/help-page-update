@@ -1,0 +1,646 @@
+Overview
+Log360 supports a comprehensive set of regulatory compliances to help organizations meet national, regional, and industry-specific requirements related to data security, privacy, and risk management. Many of these compliances are available as downloadable compliance extensions from the ManageEngine Marketplace.
+Below is the complete list of supported compliances, organized by category.
+Global
+COBIT 2019 (Available as extension on
+cloud
+)
+CSA CCM (Cloud Security Alliance Cloud Controls Matrix) (Available as extension on
+cloud
+)
+ISO 22301:2019 (Available as extension on
+cloud
+)
+ISO 27017:2015 (Available as extension on
+cloud
+)
+ISO 27018:2019 (Available as extension on
+cloud
+)
+ISO 27035 (Available as extension on
+cloud
+)
+ISO TS 27110:2021 (Available as extension on
+cloud
+)
+ISO 27701:2019 (Available as extension on
+cloud
+)
+SOC 1 (Available as extension on
+cloud
+)
+Industry
+21 CFR Part 11 â Electronic Records, Electronic Signatures (Available as extension on
+cloud
+)
+BSI 10012 (Available as extension on
+cloud
+)
+CQC Data Security Standards (Available as extension on
+cloud
+)
+GAMP 5 â Good Automated Manufacturing Practice (Available as extension on
+cloud
+)
+HITRUST CSF (Available as extension on
+cloud
+)
+HITRUST e1 Assessment (Available as extension on
+cloud
+)
+IEC 62443 (Available as extension on
+cloud
+)
+IMO MSC-FAL (Available as extension on
+cloud
+)
+PSD2 (Available as extension on
+cloud
+)
+Standard Framework for Education (Available as extension
+on-prem
+and
+cloud
+)
+SWIFT Customer Security Controls Framework (Available as extension on
+cloud
+)
+Trusted Partner Network (TPN) (Available as extension on
+cloud
+)
+US Government
+CIS Controls (Available as extension
+on-prem
+and
+cloud
+)
+CISA Zero Trust (Available as extension on
+cloud
+)
+CJIS Security Policy (Available as extension
+on-prem
+and
+cloud
+)
+CMMC v2 (Available as extension on
+cloud
+)
+COPPA (Available as extension on
+cloud
+)
+DFARS (Available as extension on
+cloud
+)
+DISA STIGs (Available as extension on
+cloud
+)
+FedRAMP (Available as extension on
+cloud
+)
+FFIEC Information Security Booklet (Available as extension on
+cloud
+)
+NIST 800-53 (Available as extension on
+cloud
+)
+NIST Privacy Framework (Available as extension on
+cloud
+)
+NIST RMF (Available as extension on
+cloud
+)
+NIST SP 800-82 (Available as extension on
+cloud
+)
+NIST SP 800-171 (Available as extension on
+cloud
+)
+NIST SSDF (Available as extension on
+cloud
+)
+SEC Cybersecurity Rules (Available as extension on
+cloud
+)
+TSA Security Directives (Available as extension on
+cloud
+)
+US States and Territories
+Colorado Privacy Act (CPA) (Available as extension on
+cloud
+)
+201 CMR 17.00 (Available as extension on
+cloud
+)
+23 NYCRR 500 (Available as extension on
+cloud
+)
+New York SHIELD Act (Available as extension on
+cloud
+)
+Asia-Pacific
+Australia
+APRA CPS 230 (Available as extension on
+cloud
+)
+APRA CPS 234 (Available as extension on
+cloud
+)
+Australian Government ISM (Available as extension on
+cloud
+)
+Essential Eight Maturity Model E8MM (Available as extension on
+cloud
+)
+Privacy Act Australia (Available as extension on
+cloud
+)
+AU SOCI (Available as extension on
+cloud
+)
+China
+Cybersecurity Law (CSL) (Available as extension on
+cloud
+)
+Data Security Law (DSL) (Available as extension on
+cloud
+)
+MLPS 2.0 (Available as extension on
+cloud
+)
+PIPL (Available as extension on
+cloud
+)
+India
+CERT-In (Available as extension on
+cloud
+)
+Digital Personal Data Protection Act (DPDP) (Available as extension
+on-prem
+and
+cloud
+)
+IRDAI Cyber (Available as extension on
+cloud
+)
+RBI Cyber Security Framework (Available as extension on
+cloud
+)
+RBI IT Framework (Available as extension on
+cloud
+)
+RBI IT Governance for NBFCs (Available as extension on
+cloud
+)
+SEBI CSCRF (Available as extension on
+cloud
+)
+Telecom Cyber Security (Available as extension on
+cloud
+)
+Japan
+APPI (Available as extension on
+cloud
+)
+South Korea
+K-ISMS (Available as extension on
+cloud
+)
+K-PIPA (Available as extension on
+cloud
+)
+Southeast Asia
+BNM RMiT (Available as extension on
+cloud
+)
+BSP Regulations (Available as extension on
+cloud
+)
+Indonesia PDP Law (Available as extension on
+cloud
+)
+Malaysia Cyber Security Act 2024 (Available as extension on
+cloud
+)
+Malaysia PDPA (Available as extension on
+cloud
+)
+MAS TRM 2021 Revision (Available as extension on
+cloud
+)
+SG CSA CCoP Compliance (Available as extension on
+cloud
+)
+Singapore PDPA (Available as extension on
+cloud
+)
+Thailand PDPA (Available as extension on
+cloud
+)
+Hong Kong
+HKMA C-RAF (Available as extension on
+cloud
+)
+PDPO (Available as extension on
+cloud
+)
+Vietnam
+Vietnam PDPD (Available as extension on
+cloud
+)
+Europe, Middle East, and Africa (EMEA)
+EU-Wide
+DORA (Available as extension
+on-prem
+and
+cloud
+)
+EU Cybersecurity Act (Available as extension on
+cloud
+)
+EU CRA (Available as extension
+on-prem
+and
+cloud
+)
+NIS2 Directive (Available as extension on
+cloud
+)
+Belgium
+CyberFundamentals (CyFun) (Available as extension on
+cloud
+)
+BE NIS2 Law (Available as extension on
+cloud
+)
+BE NIS2 RD (Available as extension on
+cloud
+)
+BE DPA 2018 (Available as extension on
+cloud
+)
+NBB IT Risk (Available as extension on
+cloud
+)
+FSMA Cyber (Available as extension on
+cloud
+)
+eHealth BE (Available as extension on
+cloud
+)
+BE Cert Law 2022 (Available as extension on
+cloud
+)
+BE ECA (Available as extension on
+cloud
+)
+BE CER (Available as extension on
+cloud
+)
+Netherlands
+Cbw (Available as extension on
+cloud
+)
+NEN 7510 (Available as extension on
+cloud
+)
+BIO2 (Available as extension on
+cloud
+)
+DNB GP IS (Available as extension on
+cloud
+)
+Wft IT (Available as extension on
+cloud
+)
+Wabvpz (Available as extension on
+cloud
+)
+UAVG (Available as extension on
+cloud
+)
+Wpg (Available as extension on
+cloud
+)
+Telecommunicatiewet (Available as extension on
+cloud
+)
+Germany
+BSI IT-Grundschutz (Available as extension on
+cloud
+)
+BSI-KritisV (Available as extension on
+cloud
+)
+BSI C5 (Available as extension on
+cloud
+)
+BAIT (Available as extension on
+cloud
+)
+VAIT (Available as extension on
+cloud
+)
+TKG / TDDDG (Available as extension on
+cloud
+)
+NIS2UmsuCG (Available as extension on
+cloud
+)
+KRITIS-DachG (Available as extension on
+cloud
+)
+B3S / Section 75c (Available as extension on
+cloud
+)
+IT-Sicherheitskatalog (Available as extension on
+cloud
+)
+KAIT / ZAIT (Available as extension on
+cloud
+)
+GwG (Available as extension on
+cloud
+)
+LkSG (Available as extension on
+cloud
+)
+Spain
+ENS Spain (Available as extension on
+cloud
+)
+LOPDGDD (Available as extension on
+cloud
+)
+BdE Circ. 2/2016 (Available as extension on
+cloud
+)
+TIBER-ES (Available as extension on
+cloud
+)
+CIP Law (Available as extension on
+cloud
+)
+INCIBE (Available as extension on
+cloud
+)
+LSSI (Available as extension on
+cloud
+)
+Spanish Trust Services Law (Available as extension on
+cloud
+)
+Switzerland
+FADP (Available as extension on
+cloud
+)
+ISA-CH (Available as extension on
+cloud
+)
+CSO-CH (Available as extension on
+cloud
+)
+FINMA 2023/1 (Available as extension on
+cloud
+)
+TCA-CH (Available as extension on
+cloud
+)
+FinMIA (Available as extension on
+cloud
+)
+IKT-Min-CH (Available as extension on
+cloud
+)
+OApEl (Available as extension on
+cloud
+)
+CySec Rail (Available as extension on
+cloud
+)
+EPRA/MedDO (Available as extension on
+cloud
+)
+TIBER-CH (Available as extension on
+cloud
+)
+France
+LIL-FR (Available as extension on
+cloud
+)
+LPM 2024-2030 (Available as extension on
+cloud
+)
+LPM/CIIP (Available as extension on
+cloud
+)
+SREN 2024 (Available as extension on
+cloud
+)
+HDS v2.0 (Available as extension on
+cloud
+)
+PGSSI-S (Available as extension on
+cloud
+)
+PASSI (Available as extension on
+cloud
+)
+SecNumCloud (Available as extension on
+cloud
+)
+ACPR (Available as extension on
+cloud
+)
+Italy
+Italian NIS2 Transposition (Available as extension on
+cloud
+)
+Perimetro-CIC (Available as extension on
+cloud
+)
+Italian Cybersecurity Law 90-2024 (Available as extension on
+cloud
+)
+Framework 2025 (Available as extension on
+cloud
+)
+Codice Privacy (Available as extension on
+cloud
+)
+TIBER-IT (Available as extension on
+cloud
+)
+Circ. 285/2013 (Available as extension on
+cloud
+)
+IVASS 38/2018 (Available as extension on
+cloud
+)
+AgID Cloud (Available as extension on
+cloud
+)
+Turkey
+KVKK (Available as extension on
+cloud
+)
+Cyber Law 7545 (Available as extension on
+cloud
+)
+BDDK IS (Available as extension on
+cloud
+)
+BTK (Available as extension on
+cloud
+)
+Presidential Information and Communication Security Guide (Available as extension on
+cloud
+)
+EPDK (Available as extension on
+cloud
+)
+Law 7518 (Available as extension on
+cloud
+)
+MASAK (Available as extension on
+cloud
+)
+Turkish Internet Publications Regulation (Available as extension on
+cloud
+)
+United Kingdom
+Data Protection Act 2018 (Available as extension on
+cloud
+)
+FCA Operational Resilience (Available as extension on
+cloud
+)
+NCSC UK (Available as extension on
+cloud
+)
+Middle East
+ADGM DPR (Available as extension on
+cloud
+)
+Bahrain PDPL (Available as extension on
+cloud
+)
+CBUAE Cybersecurity Standards (Available as extension on
+cloud
+)
+NCA (Available as extension
+on-prem
+and
+cloud
+)
+Qatar NIA (Available as extension on
+cloud
+)
+UAE PDPL (Available as extension on
+cloud
+)
+ADHICS v2.0 (Available as extension on
+cloud
+)
+NABIDH (Available as extension on
+cloud
+)
+DHA Regulation (Available as extension on
+cloud
+)
+DIFC DPL (Available as extension on
+cloud
+)
+DFSA Cyber (Available as extension on
+cloud
+)
+FSRA Cyber (Available as extension on
+cloud
+)
+DESC ISR (Available as extension on
+cloud
+)
+Cybercrime Law (Available as extension on
+cloud
+)
+DHCC HIPR (Available as extension on
+cloud
+)
+UAE AML (Available as extension on
+cloud
+)
+VARA Tech (Available as extension on
+cloud
+)
+CMA/SCA Crypto (Available as extension on
+cloud
+)
+Africa
+CBN RBCSF (Available as extension on
+cloud
+)
+Egypt PDPL (Available as extension on
+cloud
+)
+Ghana Cybersecurity Act (Available as extension on
+cloud
+)
+Ghana Data Protection Act (Available as extension on
+cloud
+)
+Kenya Data Protection Act (Available as extension on
+cloud
+)
+Rwanda Data Protection Law (Available as extension on
+cloud
+)
+North America
+OSFI B-13 (Available as extension on
+cloud
+)
+PHIPA (Available as extension on
+cloud
+)
+PIPEDA (Available as extension on
+cloud
+)
+South America
+PDPL-AR (Available as extension on
+cloud
+)
+ANAC CSA (Available as
+on-prem
+and
+cloud
+)
+ANATEL (Available as extension on
+cloud
+)
+ANVISA Guide No. 38/2020 (Available as extension on
+cloud
+)
+BACEN Resolution 4,893/2021 (Available as extension
+on-prem
+and
+cloud
+)
+PNCiber (Available as extension
+on-prem
+and
+cloud
+)
+SUSEP 683/2021 (Available as extension
+on-prem
+and
+cloud
+)
+PDPL-CO (Available as extension on
+cloud
+)
+SEPS (Available as extension on
+cloud
+)
+Read also
+This page introduced the compliance extensions available in the product. Refer to the below documents to learn more about the related capabilities.
+Installing Extensions
+Extension profile generator
+Extension builder

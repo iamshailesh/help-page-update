@@ -1,0 +1,80 @@
+To monitor your AWS environment, Log360 Cloud requires a valid IAM user with necessary permissions. The solution will use the designated IAM user to collect logs from your AWS environment.
+Pre- logging setup: Creating a new IAM user in the AWS console
+Creating a new IAM user in the AWS console
+An IAM user is an entity that you create in AWS to represent the person or service that uses it to interact with AWS
+To create a new IAM user, follow these steps.
+Log in to the AWS console
+Navigate to IAM:
+Go to
+AWS Services â Security, Identity and Compliance â IAM
+Create a new user:
+Select
+Users
+from the left pane and click on
+Create User
+Enter an appropriate
+User name
+and click
+Next
+Attach policies
+Click on
+Attach policies directly
+and then click on
+Create Policy
+A new tab named Create Policy will open. Select JSON
+Depending on your configuration needs, copy and paste the appropriate inline policies:
+Auto-configuration
+: For automatic CloudTrail configuration by Log360 Cloud, copy and paste the provided inline policy
+Manual configuration
+: For manual CloudTrail configuration, copy and paste the provided inline policy
+Log Forwarding Configuration
+: For adding an account for log forwarding, copy and paste the provided inline policy
+You can find the inline policy in the highlighted section of the image below.
+Click
+Next
+Fill in the
+Policy Name
+field and click
+Create Policy
+Return to the previous tab, refresh the policy table, select the newly created policy, and click
+Next
+Finalize the user creation:
+Verify the details and click
+Create user
+Create security credentials:
+Click on the created user
+Go to
+Security Credentials
+and click on
+Create access key
+under the
+Access keys
+section
+Choose
+Third-party service
+and check the confirmation box
+Click
+Next
+and then
+Create access key
+Download the
+.csv file
+to save the access key and secret access key
+The generated access key and secret key pair should be used inside Log360 Cloud to configure the AWS account.
+Enter AWS credentials in Log360 Cloud
+Go to the
+Log360 Cloud console
+.
+Click on Settings > Account Settings
+Click on Add Cloud Account
+Select the
+Cloud Type as AWS
+.
+Enter a
+Display name
+in the given box.
+Enter the
+Access Key ID
+and
+Secret Access Key of the IAM user
+in the given fields.

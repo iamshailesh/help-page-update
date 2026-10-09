@@ -1,0 +1,29 @@
+To configure the Syslog service in your Check Point devices, follow the steps below:
+Login to the Check Point device as an
+administrator
+.
+To override the lock, click on the
+lock icon
+on the top-left corner of the screen.
+Click
+Yes
+on the confirmation pop-up that appears.
+Navigate to
+System Management > System Logging
+.
+Under the
+Remote System Logging
+section, click
+Add
+.
+In the
+Add Remote Server Logging Entry
+window, enter the
+IP address of the remote server
+(EventLog Analyzer server).
+From the
+Priority drop-down
+, select the severity level of the logs to be sent to the remote server.
+Click
+OK
+.

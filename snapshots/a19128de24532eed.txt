@@ -1,0 +1,36 @@
+Overview
+All the live and searchable logs processed by EventLog Analyzer are stored in Elasticsearch (ES), an open-source search engine, also referred to as Search Node. The processing of logs and preparation for search is called indexing. All the indexed data are stored in Elasticsearch data search.
+From release 12040, EventLog Analyzer uses Elasticsearch version 5.6.4 to store all data. But soon this will be upgraded to ES version 6.5.4. ES has backward compatibility but only by one version; so all EventLog Analyzer installations pre Build 12040 need to be upgraded as they use ES version 2. This has raised a need to upgrade, or rather reindex, all older versions.
+Reindexing is the process of extracting data from the source index and feeding it into the destination index. Since ES 2 index is not compatible with ES 6.5.4, we are reindexing source index created in ES 2 (for versions before 12040) to destination index ES 5.6.4, so that it is compatible with ES 6.5.4.
+The steps to reindex are as follows:
+Note
+: All EventLog Analyzer installations post version 12040 needn't be reindexed as they already have the upgraded version.
+Prerequisites
+At least 20GB of disk space or a minimum of [1x largest index size] or [3x largest archive size] and 5 GB on the Elasticsearch node. Reindexing will fail if the disk space is lesser than the specs mentioned above and you will receive a
+notification as mentioned here
+.
+Data Upgrade (Reindexing)
+Data Upgrade (Reindexing) is a resource consuming process. Hence, it is better if the process is set to begin automatically during non-working hours. However, the user can force start at any time of the day if they don't mind high resource consumption.
+The different way to Reindex are as follows:
+Automatic Reindexing
+The Reindexing process will automatically be triggered based on non working hours. This will be will be identified by EventLog Analyzer from
+Working Hour Setting
+set previously by the user.
+Forced reindexing
+User can force Reindexing by clicking on the
+Start Now
+link in the following notification. By doing this, the Reindexing process will begin immediately.
+Upgrade Status
+COMPLETED
+The COMPLETED indices count will be shown in the notifications tab as shown in the image below. Here, 64/66 indicates COMPLETED COUNT/TOTAL COUNT, which means a total of 64 indices out of 66 has been successfully updated.
+FAILED
+The index upgrade sometimes fails, and these indices will be shown as FAILED indices in the notifications tab. These indices will automatically be updated after the current upgrading queue is completed. If not, it can also be triggered manually by clicking on the
+Take Action
+notification as shown in the image below.
+Sometimes, the failure can also be due to space constraints. If so, the following notification will pop up.
+By clicking on
+Take Action
+, user will be provided with two options: One, to retry Reindexing, or two, to skip those indices in case it is failing too many times. Skipping indices in this context mean the indices wont be reindexed/upgraded and those data will permanently be deleted as soon as the upgrade is complete. So, it is important that the user ensures that the skipped data isn't necessary.
+In case none of this works for you and you are concerned about data loss, reach out to EventLog Analyzer team at
+eventlog-support@manageengine.com
+.

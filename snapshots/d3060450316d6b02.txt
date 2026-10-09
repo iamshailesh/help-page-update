@@ -1,0 +1,92 @@
+In this page
+Overview
+Exporting the MSSQL certificate
+Importing the certificate into Log360's JRE
+Updating SQL configuration in Log360
+Overview
+In environments where Microsoft SQL Server is configured with **Force Encryption**, all client connections must use SSL/TLS to ensure secure communication. To connect successfully in this setup, Log360 must be able to verify and trust the SSL certificate used by the SQL Server instance.
+Log360 runs on Java and uses a built-in certificate repository called the cacerts file (Java's default truststore) to validate SSL certificates. If the SQL Server certificate is not present in this repository, the connection will fail due to certificate validation errors.
+To establish a secure connection, you must export the certificate from SQL Server and import it into the Log360 JRE's cacerts file before configuring the database connection. This document walks you through the required steps.
+If
+Force Encryption
+is enabled in the
+SQL Server Configuration Manager
+, the MSSQL certificate must be imported into the Log360's JRE.
+Follow the steps below to export the certificate from SQL Server and import it into the JRE.
+Figure 1: Force encryption enabled in SQL Server Configuration Manager
+Exporting the MSSQL certificate
+Open
+SQL Server Configuration Manager.
+Navigate to
+SQL Server Network Configuration
+, right-click
+Protocols
+for
+MSSQLSERVER
+, and click
+Properties
+.
+Open the
+Certificate
+tab and select the installed certificate from the dropdown.
+Click
+View
+to open the
+Certificate wizard.
+Go to the
+Details
+tab and select
+Copy to File.
+In the
+Certificate Export Wizard,
+choose to export the certificate without the private key.
+Select
+DER encoded binary X.509 (.CER)
+and complete the export.
+Figure 2: Exporting MSSQL certificate
+Importing the certificate into Log360's JRE
+Open command prompt in admin mode and navigate to
+<PRODUCT_HOME>/jre/bin/
+Run the following command:
+Copy
+keytool -import -alias <cert_name> -keystore ../lib/security/cacerts -file <path-to-certificate-file>
+Replace
+<cert_name>
+with the certificate name.
+Replace
+<path-to-certificate-file>
+with the path to the certificate file.
+When prompted, enter the password:
+changeit
+.
+Example:
+Ensure the file path is enclosed in double quotes.
+Copy
+keytool -import -alias certificate.crt -keystore ../lib/security/cacerts -file "C:\Users\test\Downloads\certificate.crt"
+Updating SQL configuration in Log360
+In the
+ChangeDBServer Configuration
+window, select
+SSL Connection
+.
+To migrate existing data, select
+Migrate Existing data
+.
+Click
+Test Connection
+to verify the setup.
+Click
+Configure DB
+to save the SQL Server configuration. The configuration process may take a few minutes.
+The product will restart automatically once the configuration is complete.
+Figure 3: DB configuration
+NOTE
+Import the certificate into the JRE cacerts file before opening the ChangeDBServer Configuration UI when Force Encryption is enabled.
+Figure 4: SSL certificate warning in ChangeDBServer configuration
+If the certificate is imported after the configuration pop-up appears, close and relaunch the ChangeDB Server Configuration.
+The following error will persist until the UI is restarted.
+Figure 5: PKIX error indicating an untrusted certificate
+Read also:
+This page explains how to enable secure MSSQL connections using SSL certificates. To learn more about related migrations, refer to:
+MySQL to MSSQL Migration
+Migrating data from MSSQL to PostgreSQL

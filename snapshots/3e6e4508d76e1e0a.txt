@@ -1,0 +1,82 @@
+Sangfor provides advanced network security solutions like NGAF (Next-Generation Application Firewall) and IAM (Internet Access Management) for traffic control, threat prevention, and user behavior monitoring. Monitoring Sangfor logs helps detect intrusions, policy violations, and anomalous user activities in real time. It ensures compliance, enhances visibility into network usage, and strengthens overall security posture.
+Sangfor extension scope
+The Sangfor extension for Log360Cloud enables integration of Sangfor logs into the Log360 Cloud ecosystem. This extension provides features such as log collection, parsing, reporting, and advanced log search capabilities.
+Configuring the Syslog Service on Sangfor devices
+To configure the Syslog service in your Sangfor NGAF devices, follow the steps below:
+For Sangfor NGAF (Next-Generation Application Firewall) version 6.5 and above:
+Access the Sangfor NGAF web interface.
+Open a web browser and navigate to the NGAF's management IP address. Log in using your administrator credentials.
+Navigate to
+System > Logging Options
+.
+Check all
+Syslog
+checkboxes under
+Log Location
+for the type of logs to be forwarded.
+In the
+Syslog Server
+tab, enter the
+IP address
+of the Log360 Cloud agent and 513 or 514 as the
+Port
+in the respective boxes.
+Click
+OK
+to apply changes.
+For Sangfor NGAF version 6.4 and below:
+Access the NGAF Web Interface.
+Open a web browser and navigate to the NGAF's management IP address. Log in using your administrator credentials.
+Navigate to
+System > Logging Options > Syslog
+.
+Check the
+Enable Syslog
+checkbox.
+Enter the
+IP address
+of the Log360 Cloud agent server and 513 or 514 as the
+Port
+in the respective boxes.
+Click
+OK
+to apply changes.
+For Sangfor IAM (Internet Access Management):
+Access the IAM Web Interface.
+Open a web browser and navigate to the IAM's management IP address. Log in using your administrator credentials.
+Navigate to
+System > General > Advanced > Syslog Server
+.
+Check the
+Enable Syslog Server
+checkbox.
+Enter the
+IP address
+of the Log360 Cloud agent and
+port 513 or 514
+in the format ipaddress:port (example: 10.10.10.1:514).
+Click
+Commit
+to apply changes.
+Configuring in Log360 Cloud
+In Log360 Cloud, the format of the logs collected from Sangfor devices will not be automatically identified.
+User must manually assign "Sangfor" as the log type. To implement this:
+Log into your Log360 Cloud console.
+Navigate to
+Settings â Configuration â Log Source Configuration â Devices â Syslog Devices
+.
+In the
+Syslog Devices
+page, select the devices and click the update icon
+This will open the
+Update Device
+window.
+Click the
+Log Source Type
+dropdown and select
+Sangfor Device
+.
+Viewing Sangfor reports
+To view Sangfor reports, navigate to
+Reports â Custom Reports â Sangfor
+.

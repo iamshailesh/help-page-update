@@ -1,0 +1,9 @@
+With this feature, you can get actionable insights into a user's access to cloud applications for all the configured gateway servers.
+Select a time period for which you want to view the data from the calendar in the top-right corner.
+By default, you will be able to view:
+Unique Actors Trend
+Top Actors by Requests Count
+Top Shadow Activity by Actors
+Top Actors Accessing banned apps
+Top Actors by Download Size
+Top Actors by Upload Size

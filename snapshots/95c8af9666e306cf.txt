@@ -1,0 +1,11 @@
+Login to the application or device which supports CEF log format.
+Go to syslog server configuration.
+In the field for Log Format, select
+CEF Format
+.
+In the Syslog Server IP address field, enter the
+<EventLog Analyzer IP
+address>
+.
+Enter the syslog port and save the configuration.
+To add CEF devices to EventLog Analyzer, click here.

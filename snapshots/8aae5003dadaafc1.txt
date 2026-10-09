@@ -1,0 +1,36 @@
+In this page
+Adding a report to the Favorites Section
+Adding a widget to the Dashboard
+If you have reports that you frequently refer to, these can either be added to the "Favorites" section or they can be pinned as a widget in the dashboard for quick access.
+Adding a report to the Favorites Section
+From the list of available reports, you can select up to 20 reports to be added to the
+Favorites
+section.
+To add reports to Favorites,
+Navigate to the required report.
+On the right top corner of the tab, click on
+More
+and select
+Add to Favorites
+.
+The selected report will be added to the Favorites section.
+This can now be accessed quickly by clicking on ''Favorites'' in the top right corner.
+Removing a report from the Favorites section,
+Navigate to the report which you want to remove from Favorites.
+On the right top corner of the tab, click
+More
+and select
+Remove from Favorites
+.
+Note
+While upgrading to the latest build of EventLog Analyzer, favorite reports in Builds 11212 and below will not be retained.
+Adding a widget to the Dashboard
+Any report of your choice can be pinned to the dashboard for a quick reference.
+To pin a report,
+Navigate to the report you want to pin to the dashboard.
+In the top-right corner of the report, click
+More
+and select
+Pin to Dashboard
+.
+This report will now get added as a widget in the dashboard.

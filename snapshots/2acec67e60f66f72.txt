@@ -1,0 +1,43 @@
+This procedure is applicable for EventLog Analyzer version 8.0 (Build 8010) onwards.
+How to find the build number?
+In the EventLog Analyzer web client, click "?" on the top right corner of the screen and click on
+About
+. You will find the build number mentioned below the build version.
+This is the build number of the currently installed EventLog Analyzer.
+Moving the EventLog Analyzer MS SQL database
+Stop the
+EventLog Analyzer Server/Service
+.
+Login to SQL Server database with system administrator permissions.
+Find the current location of the data file and log file for the database named 'eventlog' by using the following commands:
+Copy
+use eventlog
+go
+sp_helpfile
+go
+Detach the database by entering the following commands:
+Copy
+use master
+go
+sp_detach_db 'eventlog'
+go
+Copy the data file and the log file from the current location (
+<MSSQL Home>\DATA\eventlog.mdf and <MSSQL Home>\DATA\eventlog_log.ldf
+) to the new location (
+<New location>\eventlog.mdf and <New Location>\eventlog_log.ldf
+).
+Re-attach the database and point to the new location by using the following commands:
+Copy
+use master
+go
+sp_attach_db 'eventlog' , '<New Location>eventlog.mdf' , '<New Location>eventlog_log.ldf'
+go
+Verify the changed location by using the following commands:
+Copy
+use eventlog
+go
+sp_helpfile
+go
+Start the
+Eventlog Analyzer Server/Service
+.

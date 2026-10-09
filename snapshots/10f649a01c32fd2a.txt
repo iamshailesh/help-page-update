@@ -1,0 +1,57 @@
+In this page
+Overview
+Request URL
+Request Header
+Request Parameter
+API Response
+Executing the API using cURL
+Executing the API using Postman
+Overview
+The Get Log Sources API in Log360 allows you to fetch a list of all log sources configured in the product. You can use parameters such as
+from
+and
+to
+to define the range of log sources to be retrieved.
+Request URL
+GET http://hostname:8095/RestAPI/v1/meta/log_sources?from=1&to=10
+NOTE
+For the request URL, you can either use the IP address, or FQDN of the product server in place of hostname.
+Request Header
+Header name
+Value
+Mandatory
+Description
+Authorization
+Bearer {{AuthToken}}
+Yes
+Authtoken generated from API Settings page.
+e.g: Bearer mdrkoda0odmtmznloc00ndziltg0mgutmwzkztljmjvmzwmx
+Request Parameter
+Parameter name
+Default value
+Mandatory
+Description
+From
+1
+No
+Start value of the list
+To
+10
+No
+End value of the list
+Response
+The API response is a JSON object containing the list of devices.
+Parameter name
+Description
+devices
+JSON Array of devices
+Executing the API using
+cURL
+Sample request
+curl --location --request GET 'http://localhost:8095/RestAPI/v1/meta/log_sources' \ -H "Accept: application/json" -H "Authorization: Bearer mdrkoda0odmtmznloc00ndziltg0mgutmwzkztljmjvmzwmx " --data-raw '{ "from": 0, "to": 10 }'
+Sample response
+{ "devices": [ { "name": "tsi2k16adc", "ip_address": "202.0.112.248", "host_id": 3, "group": "WindowsGroup" }, { "name": "rog", "ip_address": "172.23.64.1", "host_id": 301, "group": "Windows Workstation" } ] }
+Executing the API using Postman
+Figure 1: Executing the API using Postman
+Read also
+This page explained how to retrieve the list of available log sources using EventLog Analyzer's REST API.

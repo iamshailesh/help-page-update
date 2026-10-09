@@ -1,0 +1,20 @@
+The Teams feature in Log360 Cloud aims to create a structured environment where multiple teams within an organization can operate securely and independently.
+It helps users with:
+1. Business Unit Structure:
+Teams feature a flat architecture, providing a simpler organizational structure compared to
+MSSPs
+. Each team operates as a separate entity within the organization.
+2. Account Creation and Conversion:
+Upon signup, account creation for teams is not visible in the UI. Users with the Standard/Professional plan can be converted into teams accounts
+via support request
+. Upon successful conversion, users are redirected to the 'Manage Team' home page. The 'Create Team' option is hidden once the maximum limit for team creation is reached.
+3. Space Switching Tab:
+Users can seamlessly switch between different teams using the space switching tab. Upon switching to a team account, users are redirected to the respective team's interface. Additionally, redirection to the Manage Team page can be achieved using the drop-down menu at the header.
+4. Data Segregation
+: It ensures enhanced security and organization allowing each team to integrate different ticketing tools, such as ServiceDesk Plus, AlarmsOne or Zendesk, based on their specific needs. Similarly, teams can configure separate S3 buckets for forwarding logs, offering unparalleled customization and scalability.
+5. User Management
+: Users can be added to each team through the User Management page in the Settings tab. Upon addition, users receive a confirmation email to access their account. They can be part of multiple teams concurrently.
+6. Licensing:
+Licensing for each team is handled individually, allowing for granular control over resources and costs. Each team's licensing needs to be managed separately, and different license plans can be assigned to each team. This flexibility allows organizations to tailor subscriptions based on specific team needs, optimizing costs. For instance, in the case of system admin and domain admin, where monitoring requirements differ, assigning a basic plan to system admin machines and a professional plan to domain admin machines can enhance cost efficiency. This customization isn't typically offered by MSSP plans, providing a valuable edge in optimizing resources without sacrificing functionality. Please refer to our
+help document
+for more details on licensing.

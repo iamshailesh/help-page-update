@@ -1,0 +1,49 @@
+The Advanced Threat Analytics feature gives valuable insights into the severity of threats using the reputation score for potentially malicious URLs, domains, and IP addresses. To utilize the Advanced Threat Analytics feature in the product, an add-on has to be purchased.
+Advanced Threat Analytics add-on purchase:
+To purchase the Advanced Threat Analytics add-on, please
+click here
+.
+After purchasing and applying the add-on license, go to
+Settings â Admin Settings â Managementâ Threat Feeds
+. The Advanced Threat Analytics tab will be present next to the STIX/TAXII Threat Feeds tab. Configure the respective feeds to access the threat analytics data.
+Overview
+Vendor support:
+The product supports the following vendors for the Advanced Threat Analytics data:
+Log360 Cloud Threat Analytics
+Default integration from Log360 Cloud suite. This can be accessed once the add-on is purchased.
+VirusTotal
+Third-party threat feed integration. This follows the Bring Your Own Key(BYOK) model. If you have bought VirusTotal access separately, you can use your API key and get the threat analytics information in the product.
+Access
+Here's how users can access the Adavanced Threat Analytics information for different usecases:
+For investigation
+: To investigate the external threat sources, the threat analytics information can be accessed through the External Threat report and the
+Incident Workbench
+.
+Detection
+: The
+Default Threat
+alert criteria detects interaction with external threat sources. Once the Advanced Threat Analytics add-on is applied, the alerts will be accurately fine tuned to reduce false positives.
+External Threat report
+Navigation: Product home >
+Reports
+> Select
+Threats
+from the drop-down in the top left corner >
+Threat Analytics > External Threat
+The
+External Threat
+report contains the information on the source of the threat, severity, reputation score, and more.
+View reports of
+Top Attacked Hosts
+and
+Threats by Category
+for the selected period.
+Click on URLs and IPs in the Threat Source column and select Go To
+Incident Workbench
+to get contextual risk data from the integrated threat feeds
+Alerts
+View the generated alerts on the Alerts summary page, and click on the
+Threat Analysis
+icon to open the
+Incident Workbench
+and analyze further.

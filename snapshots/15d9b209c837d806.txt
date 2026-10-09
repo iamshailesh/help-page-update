@@ -1,0 +1,30 @@
+Log360 Cloud provides you the option to monitor the sanctioned and banned applications usage in your organization. Sanctioned applications are applications that are trusted by your organization.
+In Log360 Cloud, you need to add trusted applications to the sanctioned applications list to ensure access continuity.
+How to add an application to the Sanctioned Application list in Log360 Cloud?
+Navigate to
+Settings > Configuration > Cloud Protection Settings > Cloud App Settings > Sanctioned Applications
+.
+On the Sanctioned Cloud Applications page, click
++Add Application
+.
+In the
+Cloud Apps Application Names
+text box, enter application names separated by a comma in the text box. (Example - manageengine.com, mail.zoho.com)
+To edit an application double click on the application name, make the changes and click
+Enter
+.
+Click on the
+Review
+button to start the review process. This process will query the information about the provided applications and will take some time for verification. To view the review status click on the
+Open Reviews
+button.
+Once the review is complete, click on
+Continue
+to view the category and reputation of the applications.
+Based on the category and reputation, you can retain or remove them.
+Click on
+Save Changes
+.
+Note
+If you want to remove a few application names from being added to the sanctioned list, select the application names and click the delete button.
+Please note that all the applications, whether checked or unchecked, will be added to the sanctioned list if you click Add All.

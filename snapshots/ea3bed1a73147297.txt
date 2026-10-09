@@ -1,0 +1,34 @@
+To configure the Syslog service in your
+Sophos
+devices, follow the steps below:
+Enabling Sophos-UTM Syslog:
+Login to Sophos UTM as administrator.
+Navigate to
+Logging & Reporting > Log Settings >Remote Syslog Server
+Enable
+Syslog Server Status
+Configure the syslog server by filling the following details
+Name: < Any >
+Server: < EventLog Analyzer server IP Address >
+Port: < 513 >
+Navigate to
+Remote Syslog >
+select the logs that has to be sent to the EventLog Analyzer server.
+Click on
+Apply
+Enabling Sophos-XG Syslog:
+Login to Sophos-XG as administrator.
+Navigate to
+System > System Services > Log Settings > Syslog Servers > Add
+Configure the syslog server by filling the following details
+Name: < Any >
+Server: < EventLog Analyzer server IP Address >
+Port: < 513 >
+Facility: < DAEMON >
+Severity: < INFORMATION >
+Format: < Standard Format >
+Click on
+Save
+Navigate to
+System > System Services > Log Settings
+> select the logs that has to be sent to the EventLog Analyzer Server.

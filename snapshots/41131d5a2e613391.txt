@@ -1,0 +1,35 @@
+To forward system events to ELA server:
+Go to Administration → System Settings → Event Forwarding.
+Select Forward System Events to a remote computer (via Syslog) in the SIEM section.
+Specify the following information and then click Save:
+Hostname <EventLog Analyzer IP>
+UDP port <default 514>
+Syslog Format <CEF>
+Syslog Facility
+To forward security events to ELA server:
+Go to Policies.
+Double-click the policy you want to use for computers to forward security events via the Deep Security Manager.
+Go to Settings > SIEM and select Forward Events To > Relay via the Manager for each applicable protection module.
+Specify the following information that is required for relaying events via the Deep Security Manager and then click Save:
+Hostname <EventLog Analyzer IP>
+UDP port <default 514>
+Syslog Format <CEF>
+Syslog Facility
+Once the threat source is added, EventLog Analyzer will start parsing the fields in the logs. This log data can now be viewed in the form of reports.
+In the EventLog Analyzer console, navigate to
+Settings > Log Source
+Configurations > Applications > Security Applications > Add Security
+Applications
+Select Add-on type as
+Trend Micro
+Expand the list by clicking the "
++
+" icon to add a new device.
+Choose from the drop-down menu to add Configured devices, Workgroup devices, domain devices, etc.
+To add new devices manually, click on
+Configure Manually
+and enter
+Log Source
+>Select and click on
+Add
+.

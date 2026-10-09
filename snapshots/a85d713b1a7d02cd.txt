@@ -1,0 +1,125 @@
+PAC files contain instructions directing web browsers to route HTTP, HTTPS, and FTP web traffic. PAC files are easy to create and maintain. They also customize web traffic according to your organization's requirements.
+Different ways in which PAC files can be employed
+PAC files can be created and deployed to:
+Route web traffic to the internet via precise proxy configurations or directly.
+Route specific web traffic requests with proxy exceptions.
+Set up proxy failover to ensure continuous access to the internet.
+Balance web traffic load across different proxy servers.
+How to create PAC files
+A PAC file primarily contains the JavaScript function FindProxyForURL with two parameters- URL and host. These parameters are used to determine that the proxy server is to be accessed by the browser and alternative proxy options. The URL will contain the full path being accessed. (For example, http://www.mydomain.com). The host parameter will contain the host name or IP address.
+Return statements specify the directions to web browsers regarding forwarding traffic to or bypassing a proxy. For example, return "PROXY proxy1.mydomain.com:8080;".
+Use arguments with comments to specify more specific details, like which hosts need to be directed to a proxy. For example, //Bypass proxy for internal hosts.
+Refer to the cases mentioned below to create or modify PAC files.
+Case 1
+: To route web traffic via a proxy server and establish a direct connection if the proxy server connection cannot be established:
+function FindProxyForURL (url, host)
+{
+return "PROXY proxy.mydomain.com:8200; DIRECT";
+}
+Case 2
+: To route intranet traffic (say intranet.mydomain.com) directly and other requests through a proxy server:
+function FindProxyForURL(url, host)
+{
+if (isPlainHostName(host) || dnsDomainIs(host, "intranet.mydomain.com"))
+return "DIRECT";
+else
+return "PROXY proxy.mydomain.com:8200; DIRECT";
+}
+Case 3
+: To set up a failover proxy server arrangement:
+function FindProxyForURL(url, host)
+{
+//
+//If they only have a specified host name, go directly.
+//
+if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com"))
+return "DIRECT";
+else if (shExpMatch(host, "*.com"))
+return "PROXY proxy2.mydomain.com:8200; " +
+"PROXY proxy4.mydomain.com:8200";
+else
+return "PROXY proxy3.mydomain.com:8200; " +
+"PROXY proxy4.mydomain.com:8200";
+}
+Case 4
+: To redirect specific IP addresses to a proxy server:
+Case 4: To redirect specific IP addresses to a proxy server:
+function FindProxyForURL(url, host)
+{
+if (myIpAddress() == "999.99.999.99") {
+return "PROXY proxy.mydomain.com:8200";
+}
+else {
+return "DIRECT";
+}
+}
+Case 5
+: To specify a proxy based on the communication protocol:
+function FindProxyForURL(url, host)
+{
+if (url.substring(0, 5) == "http:") {
+return "PROXY proxy1.mydomain.com:8200";
+}
+else if (url.substring(0, 4) == "ftp:") {
+return "PROXY proxy2.mydomain.com:8200";
+}
+else if (url.substring(0, 6) == "https:") {
+return "PROXY proxy3.mydomain.com:8200";
+}
+else {
+return "DIRECT";
+}
+}
+How to deploy PAC files
+PAC files can be configured manually in browser settings or automated using the Web-Proxy Auto Discovery (WPAD) protocol. The WPAD protocol uses DHCP or DNS to locate the PAC file. The browser used in endpoints searches for a web server on startup to find the PAC file's location. The web browser sends the local DHCP server a query to find the PAC file location. If the proxy auto discovery is not successful with DHCP, the browser then uses DNS to detect the PAC file location.
+Manual configuration of PAC files directly in web browsers
+Google Chrome, Internet Explorer, and Safari for Windows follow Windows proxy settings configuration if these are not explicitly set. To enter the PAC files manually, follow the steps below:
+Go to Start > Settings > Proxy.
+Turn off the Automatically detect settings option.
+Turn on the Use setup script and enter the PAC file address.
+Click Save.
+Follow the steps below to manually configure proxy settings for Firefox:
+In the browser, go to Tools > Options.
+Click Advanced. Select Settings under Connections.
+Select Auto-detect proxy settings for this network.
+Click OK.
+Manual configuration of a proxy is tedious for a large number of endpoints. The WPAD protocol is preferred to automate proxy settings.
+How to set up WPAD
+Setting up the WPAD protocol includes four steps: hosting the PAC file on a web server, setting up DHCP, configuring DNS settings, and enforcing Group Policy.
+Note
+Opera does not support WPAD protocol.
+1. Hosting PAC file on a web server
+After modifying the PAC file as desired, rename the file to ''wpad.dat''. Follow the steps below in the web server in which you wish to host the PAC file:
+Log on to the web server.
+Go to Control Panel > System and Security > Administrative Tools > Internet Information Services (IIS) Manager.
+Expand the Server Name and right-click the domain name. Select Properties.
+On the HTTP headers tab, click MIME types. Click New.
+Enter the information - Extension: .dat, MIME type: application/x-ns-proxy-autoconfig.
+Click OK.
+2. DHCP configuration
+Follow the steps below to ensure that the wpad.dat file is detected by the DHCP server.
+Go to Start > Administrative Programs > DHCP.
+Right-click the desired DHCP server from the list of DHCP servers in the console tree. Click Set Predefined Options and Add.
+Enter the following information - Name: WPAD, Code: 252, Data: String. Click OK.
+In the String field, enter the URL of the PAC file for example,
+http://webserver.domain.com/wpad.dat.
+Right-click Server Options. Select Configure Options. Ensure that Option 252 is selected.
+Once you've created the option 252 entry, follow the steps below to enable the DHCP scope option:
+Go to Start > Administrative Programs > DHCP.
+Right-click Scope Options. Click Configure Options. Select Advanced.
+In Vendor Class, select Standard Options.
+In Available Options, click 252 Proxy Autodiscovery option. Click OK.
+3. Configuring A record in the DNS server
+Go to Start > Programs > Administrative tools > DNS.
+Right-click on the desired forward lookup zone. Click New Host(A).
+Enter the information - Name: wpad, IP address: IP address of the web server hosting the PAC file. Click Create record.
+4. Web browser proxy configuration
+Use a Group Policy to push automatic proxy detection to all endpoints. Follow the steps below to configure a Group Policy:
+Open the Group Policy Management Console. Right-click Group Policy Objects. Click New.
+Enter the information say, Name: Proxy Autoconfiguration. Click OK.
+Right-click the Proxy Autoconfiguration. Click Edit.
+In the Group Policy Management Editor, go to User Configuration > Preferences > Control Panel Settings. Right-click Internet Settings and click New. Choose the preferred browser version from the drop-down list.
+In the Properties dialog box, go to the Connections tab and select LAN Settings.
+Check the Automatically detect settings box. Click OK.
+Click Apply and then OK to close the Properties dialog box.
+Link the Group Policy Object to the desired organizational unit in the domain to enforce the policy.

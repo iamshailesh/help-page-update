@@ -1,0 +1,16 @@
+The vCenter servers to be monitored by EventLog Analyzer can be managed in this section.
+Settings > Log Source Configuration > VM Management
+vCenter servers can be
+added
+and deleted. All the vCenter servers that are being monitored can also be viewed.
+View vCenter
+After you have added a vCenter server, you can view the added vCenter servers along with vCenter IP, log collection status, last message time, and next scan time.
+How to edit a vCenter server?
+To edit a vCenter server, hover your mouse over the vCenter and click the
+Edit
+icon that appears.
+You can modify the Device type, Protocol, Device name, port number, and more.
+How to delete a vCenter server?
+To delete a vCenter server, select the vCenter you want to delete and click the
+Delete
+icon.

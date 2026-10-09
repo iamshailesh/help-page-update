@@ -1,0 +1,22 @@
+Log360 Cloud generates trend reports to analyze network patterns. This depends on the working hours and non-working hours of each organization. You can configure the working hours in Log360 Cloud, so that it recognizes and generates trend reports for the configured time. You can also configure multiple working hour ranges.
+To configure working hours,
+In the
+Settings
+tab, go to
+Admin
+>
+Product Customization
+>
+Working Hour
+Settings.
+Configure your organization's working hours by selecting appropriate
+From
+and
+To
+values.
+To configure multiple time ranges, click the '+' icon and select the next working hour range.
+Once the necessary working hours have been selected, click
+Save
+.
+Note
+If two working hour ranges with overlapping hours are configured, Log360 Cloud will set the working hours as the entire range, from the least to the highest value. For example, if the configured time ranges are 8 to 12 and 5 to 11, the working hours will be set as 5 to 12.

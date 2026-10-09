@@ -1,0 +1,202 @@
+Automatic configuration
+Audit policies must be configured to ensure that events are logged whenever any activity occurs. On providing Domain Admin credentials, Log360 Cloud automatically configures the required audit policies for Active Directory auditing.
+Note
+Automatic audit policy configuration is not done without the users consent.
+To configure audit policy:
+Login to
+Log360 Cloud
+web console.
+Go to
+Reports → GPO Management → GPO History
+.
+In GPO History, click on
+Object level auditing and Audit policy needs to be configured to view related reports → Know More
+.
+In the
+Audit Policy needs to be configured to view related reports
+message, click on Configure.
+In the user consent warning, click
+Confirm
+to configure audit policy.
+You can also configure object level auditing with the following steps:
+Login to
+Log360 Cloud
+web console.
+Go to
+Domain Settings
+and click on
+Audit Policy: Configure
+.
+In the user consent warning, click
+Confirm
+to configure audit policy.
+Manual configuration
+Audit policies must be configured to ensure that events are logged whenever any activity occurs.
+Configuring advanced audit policies
+Advanced audit policies help administrators exercise granular control over which activities get recorded in the logs, helping reduce event noise.
+Note
+It is recommended that advanced audit policies are configured on domain controllers running on Windows Server 2008 and above.
+To configure:
+Login to a computer that has the
+Group Policy Management Console (GPMC)
+with
+Domain Admin credentials
+.
+Open
+GPMC
+.
+Right-click on
+Default Domain Controllers Policy
+and click
+Edit
+.
+In the Group Policy Management Editor, go to
+Computer Configuration â Policies â Windows Settings â Security Settings â Advanced Audit Policy Configuration â Audit Policy
+.
+Double-click on the relevant
+policy setting
+.
+Navigate to the right pane and right-click on the relevant
+Sub category
+.
+Click on
+Properties
+and select
+Success, Failure, or both
+; as directed in the table below.
+Category
+Sub Category
+Audit Events
+Account Logon
+Audit Kerberos Authentication Service
+Audit Other Account Logon Events
+Success and Failure
+Account Management
+Audit Computer Account Management
+Audit Distribution Group Management
+Audit Security Group Management
+Success
+Audit Application Group Management
+Audit Other Account Management Events
+Audit User Account Management
+Success and Failure
+Detailed Tracking
+Audit Process Creation
+Audit Process Termination
+Success
+Audit PNP Activity
+Success and Failure
+DS Access
+Audit Directory Service Access
+Audit Directory Service Changes
+Success
+Logon /Logoff
+Audit Logoff
+Success
+Audit Logon
+Audit Network Policy Server
+Audit Other Logon/Logoff Events
+Audit Special Logon
+Success and Failure
+Object Access
+Audit Other Object Access Events
+Success
+Audit Application Generated
+Audit Certification Services
+Audit Removable Storage
+Success and Failure
+Policy Change
+Audit Authentication Policy Change
+Audit Authorization Policy Change
+Success
+System
+Audit Security State Change
+Audit Security System Extension
+Success
+Audit System Integrity
+Success and Failure
+Image showing,
+Account Logon category â Audit Kerberos Authentication Service subcategory â Both Success and Failure configured
+.
+Enforcing advanced audit policies
+When using advanced audit policies, ensure that they are forced over legacy audit policies.
+Login to any computer that has the
+Group Policy Management Console (GPMC)
+, with
+Domain Admin credentials
+.
+Open
+GPMC
+.
+Right-click on
+Default Domain Controllers Policy
+and click
+Edit
+.
+In the
+Group Policy Management Editor
+, go to
+Computer Configuration â Policies â Windows Settings â Security Settings â Local Policies â Security Options
+.
+Navigate to the right pane, right-click on
+Audit: Force audit policy subcategory settings
+.
+Select
+Properties
+and click on
+Enable
+.
+Configuring legacy audit policies
+Advanced audit policies is not available in Windows Server 2003 and below and therefore, for these systems, you need to configure the legacy audit policies.
+Login to any computer that has the
+Group Policy Management Console (GPMC)
+, with
+Domain Admin credentials
+.
+Open
+GPMC
+.
+Right-click on
+Default Domain Controllers Policy
+and click
+Edit
+.
+In the
+Group Policy Management Editor
+, go to
+Computer Configuration â Policies â Windows Settings â Security Settings â Local Policies
+.
+Double-click on
+Audit Policy
+.
+Navigate to the right pane, right-click on the
+relevant policy
+.
+Select
+Properties
+and select
+Success, Failure, or both
+; as directed in the table below.
+Policy
+Policy Setting
+Audit account logon events
+Success and Failure
+Audit account management
+Success and Failure
+Audit directory service access
+Success
+Audit logon events
+Success and Failure
+Audit object access
+Success
+Audit policy change
+Success
+Audit process tracking
+Success
+Audit system events
+Success
+Image showing:
+Audit account logon events category â Both Success and Failure configured
+.
+Note
+To audit Group Policy Setting changes in Log360 Cloud, install the agent on the Primary Domain Controller (PDC) and ensure that the domain is associated with the installed agent.

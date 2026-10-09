@@ -1,0 +1,489 @@
+In this page
+Types of Widgets in EventLog Analyzer
+Dashboard Widget
+Custom Report Widget
+Incident Workbench Widget
+Adding a custom widget in EventLog Analyzer
+Installing the CLI for Zoho Extension Toolkit (ZET)
+Including Resources in Your Widget Project
+Validating and Packaging the Application
+Adding the Created Widget to EventLog Analyzer
+How to Include a Custom Widget in EventLog Analyzer
+Passing Log Data to Custom Widgets in Incident Workbench
+JS SDK
+Widgets in ManageEngine EventLog Analyzer are embeddable UI components that you can create on your own, using our
+JS Software Development Kit
+. These widgets can be used to perform certain functions that utilize data from third-party applications seamlessly.
+For example, with a custom widget in EventLog Analyzer, you can seamlessly integrate data from your EDR or email security solution into EventLog Analyzer, enabling you to monitor, analyze, and take necessary actionsâall from a single platform.
+Note
+Custom widgets can be created in
+all editions
+of EventLog Analyzer.
+You can create up to a maximum of
+200 widgets
+in EventLog Analyzer.
+Note
+These steps will be replaced by the widget list after you create your first widget. Refer to this image to follow the setup steps easily.
+Reference URLs
+:
+Node.js
+Zoho Extension Toolkit
+Types of Widgets in EventLog Analyzer
+Dashboard Widget
+Custom Report Widget
+Incident Workbench Widget
+Dashboard Widget
+You can build a custom widget for your dashboard in EventLog Analyzer. After creating the custom widget under
+Settings â Admin Settings â Developer Space â Custom Widgets
+, you can add it to your dashboard by using the
+Add Tab
+menu, where it will be listed in the dashboard settings.
+Note
+Only users with access to view or create widgets in a dashboard can view custom widgets.
+The user who have access to view or create widgets in dashboard can view the custom widgets.
+How to create a custom widget in Dashboard
+From the dropdown menu in the top right corner, choose
+Add widgets
+.
+Select the custom widget that you want to add to the dashboard, and then click
+Add
+.
+Custom Report Widget
+A widget can be added as a custom report in EventLog Analyzer. After creating the custom widget under
+Settings â Admin â Developer Space â Custom Widgets
+, you can add it as a custom report by navigating to
+Reports â Manage Custom Reports â Add Report
+, and then selecting the
+Report Type
+as
+Custom Widget
+.
+Note:
+Only users with access to view or create reports in custom reports can view custom widgets.
+How to create a custom widget in Custom Reports
+Click the
+Add Custom Report
+button.
+Click the
+Report type
+dropdown.
+In the Report Type dropdown, select
+Custom Widget
+.
+Under Custom Widgets, select the desired custom widget.
+Then, click
+Add
+to create the custom report with the custom widget.
+Incident Workbench Widget
+A widget can be added to the
+Incident Workbench
+in EventLog Analyzer. This can be done directly from the
+Custom Widgets
+tab in the
+Settings
+, allowing you to integrate the custom widget seamlessly into the Incident Workbench.
+Note:
+Only users with access to view incident workbench can view custom widgets.
+How to view a custom widget in Incident Workbench
+Select the field you need to analyze, then click Go to Incident Workbench.
+The available widgets for the selected fields, including any custom widgets, are displayed in tabs.
+Adding a custom widget in EventLog Analyzer
+A custom widget can be added to EventLog Analyzer using the Zoho Extension Toolkit (ZET).
+Create a custom widget using ZET
+ZET, or the Zoho Extension Toolkit, is a command-line interface (CLI) designed to help developers build and package custom widgets for ManageEngine EventLog Analyzer.
+A CLI is a text-based interface that allows users to interact with software by typing specific commands, receiving responses, and executing actions directly from the terminal or command prompt. While graphical user interfaces (GUIs) offer visual interaction, CLIs provide a simpler and more efficient way for developers to work, particularly when it comes to creating applications, managing software, or even building operating systems.
+Here's how you can build custom widgets using ZET and package and integrate these widgets with ManageEngine EventLog Analyzer for enhanced functionality.
+Install the necessary components
+Prerequisites
+Visit the official Node.js website:
+https://nodejs.org/en/download/
+Choose the appropriate version for your operating system (Windows, macOS, or Linux) and download the installer.
+Once the installation is complete, verify that
+Node.js
+and
+npm
+are correctly installed by running the following commands in your terminal:
+Check Node.js version
+Copy
+node -v
+This will return the installed version of Node.js, e.g., v14.18.1.
+Check npm version
+Copy
+npm -v
+This will return the installed version of npm, e.g., 6.14.12.
+If both commands return a version number, it means Node.js and npm have been successfully installed.
+Installing the CLI for Zoho Extension Toolkit (ZET)
+To install the Zoho Extension Toolkit (ZET) CLI, follow these steps:
+Install the ZET CLI package
+Run the following command to install the zapps CLI node package:
+Copy
+npm install -g zoho-extension-toolkit
+Verify the installation
+Once installed, run the following command to ensure that the installation was successful:
+Copy
+$ zet //
+If the installation is successful, help information related to the zet command will be displayed.
+Creating a New Project Using ZET
+Follow these steps to create a new project using the Zoho Extension Toolkit (ZET):
+Initialize a New Project
+Run the following command to create a new project:
+Copy
+zet init
+This command will display a list of available Zoho and ManageEngine services. Select the
+Log360 Cloud
+service for which you want to create a project template.
+Verify the Server Startup
+Once the project is created and the local development server starts running, verify its status by opening one of the following URLs in your browser:
+Manifest File:
+https://localhost:5000/plugin-manifest.json
+Widget Preview:
+https://localhost:5000/app/widget.html
+If these URLs load correctly, your project has been successfully created and the local server is running.
+Including Resources in Your Widget Project
+All necessary files required for rendering your custom widget are stored inside the "
+app
+" folder of your project.
+Starting the Server
+To run your app locally and test it in your sandbox instance, start a local HTTPS server using the following command:
+Copy
+$ zet run
+This will start the HTTPS server on your local machine at
+port 5000
+. Ensure that this port is not occupied by any other process before running the command.
+Verify the Server
+Once the server starts, open the following URL in your web browser to check if it is running successfully:
+https://127.0.0.1:5000/app/widget.html
+If the page loads correctly, your widget is now running in a local environment and is ready for testing.
+Validating and Packaging the Application
+Before uploading your application, it is essential to validate and package it correctly. Follow these steps:
+Validate the Application
+Run the following command to check for any issues in your app package:
+Copy
+$ zet validate
+This will scan your application for any violations. If issues are detected, they must be resolved before proceeding with the upload.
+Package the Application
+Once validation is successful, generate an uploadable ZIP file by running:
+Copy
+$ zet pack
+This will create a ZIP file inside the "
+dist
+" folder of your project directory. The packaged file can then be uploaded to
+EventLog Analyzer
+for deployment.
+Adding the Created Widget to EventLog Analyzer
+Follow these steps to add the custom widget to EventLog Analyzer:
+a) Navigate to Developer Space
+Go to
+Settings â Developer Space â Custom Widgets
+in EventLog Analyzer.
+b) Check Sample Widgets
+The
+Sample Widgets
+section takes you to pre-created widgets within EventLog Analyzer.
+These default widgets serve as examples, helping you understand how custom widgets can be designed and used.
+You can download and unzip the sample widgets, then open them in a code editor to see how they work.
+c) Create a New Widget
+To create a new widget, click on
+Create Custom Widget â Create Now
+.
+EventLog Analyzer also offers a list of available widgets that you can add by selecting the custom widget.
+d) Fill Out the Widget Creation Form
+In the
+Create Custom Widget Form
+:
+Provide the
+Widget Name
+and
+Description
+.
+Select the
+Widget Type
+from the following options:
+Dashboard Widget
+Custom Report Widget
+Incident Workbench Widget
+Choose the
+View Widget Location
+to determine where your custom widget will be placed within EventLog Analyzer.
+e) Custom Widget Creation Modes in EventLog Analyzer
+EventLog Analyzer supports
+two modes
+for custom widget creation:
+1. Development Mode
+In this mode, you can
+run and test
+your custom widget locally before deploying it.
+Start the widget by running:
+Copy
+$ zet run
+Add the URL (ex: https://localhost:5000/app/widget.html) of your widget to the
+Widget URL
+input field in EventLog Analyzer.
+Note
+Any changes made to the widget code
+automatically reflect
+in EventLog Analyzer (whether in the
+dashboard or custom report
+).
+Development Mode is
+not available for Incident Workbench Widgets
+, as field mapping is required in plugin-manifest.json.
+The custom widget in
+development mode is visible only to the developer
+and not to other users.
+2. Deployment Mode
+In
+deployment mode
+, you have two options to add the widget to EventLog Analyzer:
+a) Upload ZIP File (ZET Package)
+After developing the custom widget, package it using:
+Copy
+$ zet pack
+This creates a
+ZIP file
+inside the
+dist
+folder of your project.
+Upload this ZIP file to EventLog Analyzer to deploy the widget.
+b) External URL Embedding
+Instead of using ZET, you can embed
+any external URL
+as a widget inside EventLog Analyzer.
+This option allows seamless integration of third-party dashboards or web apps.
+How to Include a Custom Widget in EventLog Analyzer
+Custom widgets can be added to the following sections of EventLog Analyzer:
+Dashboard
+Custom Reports
+Incident Workbench
+Adding a Custom Widget to the Dashboard
+After creating an
+HTML page
+for the custom widget, add the following configuration to the
+plugin-manifest.json
+file inside the widgets list:
+Copy
+{
+"location": "dashboard",
+"url": "/app/widget.html",
+"name": "Sample Eventlog Analyzer widget",
+}
+This will ensure that the widget appears on the
+EventLog Analyzer dashboard
+.
+Adding a Custom Widget to Custom Reports
+For adding a custom widget to
+Custom Reports
+, add the following configuration to the
+plugin-manifest.json
+file inside the widgets list:
+Copy
+{
+"location": "reports",
+"url": "/app/widget.html",
+"name": "Sample EventLog Analyzer widget",
+}
+This allows the widget to be used as a
+custom report widget
+.
+Adding a Custom Widget to the Incident Workbench
+For including a custom widget in
+Incident Workbench
+, use the configuration below:
+Copy
+{
+"location": "incident-workbench",
+"url": "/app/incident-workbench.html",
+"name": "Security Analysis",
+"options": {
+"fieldName":"FILEHASH"
+}
+}
+This ensures the widget is integrated with the
+Incident Workbench
+for real-time incident analysis.
+Important
+Modifying and uploading the name attribute for a custom widget after it has been added will result in the removal of the widget from its mapped module (Dashboard, Reports or Incident Workbench).
+Following are the locations allowed in EventLog Analyzer:
+"dashboard"
+"reports"
+"incident-workbench"
+Adding a custom widget in Incident Workbench differs from other modules as it requires mapping specific fields to the widget. When adding a widget to the Incident Workbench, you must specify
+options
+where the
+fieldName
+will be mapped with the custom widget.
+Here are some of the important fields.
+HOSTNAME â
+Device name (source of data/log collection)
+USERNAME â
+User associated with the data/log
+IPADDRESS â
+Captured IP in the data/log
+FILENAME â
+Name of the file in the data/log
+PROCESSNAME â
+Name of the process in the data/log
+FILEHASH â
+Hash of the file in the data/log
+EMAIL â
+User email captured in the data/log
+DOMAINNAME â
+AD domain name captured in the data/log
+PORT â
+Port associated with the entity in the data/log
+PROTOCOL â
+Protocol associated with the entity in the data/log
+Passing Log Data to Custom Widgets in Incident Workbench
+When a field associated with
+Incident Workbench
+is clicked, the
+log data
+corresponding to that row will be passed from the table data to the
+Custom Widget
+.
+Example Log Data Structure:
+{
+"logUUID": 430453503444,
+"HOSTNAME": "EVENT-TEST",
+"USERNAME": "admin",
+...
+}
+How to edit Custom Widgets
+Go to Settings -> Admin -> Developer Space -> Custom Widgets
+In the Manage Custom Widgets table, click on edit icon to edit the Custom Widget
+When editing a custom widget, certain changes can affect its associations with other modules.
+To Retain Associations:
+The
+Widget Name
+must remain the same.
+For
+ZIP uploads
+, the name inside plugin-manifest.json is used.
+For
+Development Mode or External Hosting
+, the Widget Name entered in the form is used.
+You can safely update the
+widget URL
+or
+ZIP contents
+as long as the widget name remains unchanged.
+Note
+The widget name serves as the primary key for maintaining associations.
+Associations Will Be Removed If:
+The
+Widget Type
+is changed or removed.
+A new ZIP is uploaded with a
+different widget name
+in plugin-manifest.json.
+The widget source is changed between:
+ZIP â Development Mode / External Hosting
+Development Mode / External Hosting â ZIP
+â Only if the widget name (in the form or ZIP) is also changed.
+Note
+To avoid breaking associations, keep both the
+Widget Source
+and
+Widget Name
+unchanged when making edits.
+How to delete Custom Widgets
+Navigate to
+Settings â Admin â Developer Space â Custom Widgets.
+In the
+Manage Custom Widgets
+table, click the
+delete
+icon to remove the custom widget.
+JS SDK:
+JS SDK provides a set of JavaScript functions to integrate
+EventLog Analyzer
+functionalities into your custom widget. These APIs enable seamless interaction between your widget and the platform.
+Widget usage:
+Note
+The service name LOGS360CLOUD is used for both EventLog Analyzer and Log360 Cloud.
+LOGS360CLOUD.init()
+This function acts as a foundational call to establish a connection between the custom widget and the product. Other JS APIs will be defined only when the initialization is completed.
+Returns
+promise
+Copy
+LOGS360CLOUD.init().then(function (res) {
+console.log(res);
+});
+LOGS360CLOUD.get(options)
+Fetch the product data, such as meta data, or any input data in the custom widget, from the product server. Note that only
+Logs360 APIs
+can be invoked using this function.
+Copy
+var options ={url:"/api/v2/log-types"};
+LOGS360CLOUD.get(options).then(function(response) {
+console.log(response);
+}).catch(function(response) {
+console.log(response);
+});
+LOGS360CLOUD.add(options)
+Note
+Please ensure that only api/v2 APIs are used.
+Add data to the server from the custom widget.Note that only
+Logs360 APIs
+can be invoked using this function.
+Copy
+var options ={url:"/api/v2/search", params:{query:query, start_time:startTime, end_time:endTime, from: '1', limit:'1000', log_types:[logtype]}};
+LOGS360CLOUD.add(options).then(function(response) {
+console.log(response);
+}).catch(function(response) {
+console.log(response);
+});
+LOGS360CLOUD.showLoader(opts)
+The function is used to display a loading indicator on the widget window. This helps improve user experience by visually indicating that a process is in progress, such as data fetching, API calls, or background computations.
+Copy
+LOGS360CLOUD.showLoader(opts).then(function(response) {
+console.log(response);
+}).catch(function(response) {
+console.log(response);
+});
+LOGS360CLOUD.hideLoder(opts)
+The function is used to remove or hide the loading indicator from the widget window. It is typically called after a process, such as data retrieval or API execution, has been completed.
+Copy
+LOGS360CLOUD.hideLoder(opts).then(function(response) {
+console.log(response);
+}).catch(function(response) {
+console.log(response);
+});
+LOGS360CLOUD.showNotification(opts)
+The function is used to display a top notification in the widget. This notification can be utilised to inform users about important updates, alerts, or process statuses.
+Copy
+var opts = { type: "success" , message: "message shown successfully",autoClose:true,duration:2000};
+LOGS360CLOUD.showNotification(opts).then(function(response) {
+console.log(response);
+}).catch(function(response) {
+console.log(response);
+});
+LOGS360CLOUD.HideNotification(opts)
+The function is used to hide or remove the top notification from the widget window. This can be useful when you need to manually dismiss a notification before its auto-dismissal time or when clearing notifications based on user interactions.
+Copy
+LOGS360CLOUD.hideLoader(opts).then(function(response) {
+console.log(response);
+}).catch(function(response) {
+console.log(response);
+})
+LOGS360CLOUD.getConnections()
+Fetches the details of all successfully installed API applications.
+Copy
+LOGS360CLOUD.getConnections().then( function(res){
+console.log(res);
+});
+LOGS360CLOUD.invokeUrl()
+The function is used to fetch data from integrated third-party applications by making API calls. This function supports multiple configuration options, such as URL, HTTP method, headers, parameters, and payload, allowing seamless interaction with external services.
+Copy
+let headers = [{ "headerName": "accept", "headerValue": "application/vnd.atlas.2023-01-01+json"}];
+let params = [{"bodyParamName": "path", "bodyParamValue": "/dharun_test/sub folder/_ My Paper doc.paper" }];
+var opts = {
+url: "https://cloud.mongodb.com/api/atlas/v2/groups?envelope=false&includeCount=true&itemsPerPage=100&pageNum=1&pretty=false",
+method : "GET",
+connectionLinkName: "mongotest",
+headers : headers,
+params: params
+};
+LOGS360CLOUD.invokeUrl(opts).then( function(res){
+console.log(res);
+});

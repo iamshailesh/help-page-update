@@ -1,0 +1,45 @@
+The Extension Profile Generator creates extension profiles, which serve as the foundational building blocks of an extension. Using the Extension Profile Generator, you can incorporate Log360Cloud's capabilitiesâsuch as log formats, parser rules, alert profiles, correlation rules, custom widgets, applications, and web tabsâinto an extension profile. These profiles can then be utilised to build fully functional extensions seamlessly.
+How to Create an Extension Profile
+Go to
+Settings -> Admin -> Marketplace -> Extension Profiles
+.
+Only custom profiles created by the userâsuch as custom reports, alert profiles, correlation rules, and other custom-created profilesâwill be listed in the Extension Profile section.
+Choose profiles from different modules, such as
+Log Formats, Custom Widgets,
+etc., and click on
+Create Extension Profile
+.
+Once the extension profile is created,
+Download
+it and upload it in the
+Extension Builder
+to create the extension.
+How to Edit an Extension Profile
+Go to
+Settings -> Admin -> Marketplace -> Extension Profiles
+.
+Click on the
+edit icon
+[
+] in the
+Manage Extension Profiles
+table to modify the existing profile.
+How to Delete an Extension Profile
+Go to
+Settings -> Admin -> Marketplace -> Extension Profiles
+.
+Click on the
+delete icon
+[
+] in the
+Manage Extension Profiles
+table to remove the extension profile.
+My Extensions
+All extensions created by you will be listed on this page. Here, you can view details such as the
+status of the extension
+and other relevant information.
+To create a new extension, click on
+Create Extension
+from the
+My Extensions
+page.

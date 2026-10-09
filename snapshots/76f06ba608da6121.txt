@@ -1,0 +1,120 @@
+In this page
+Overview
+Viewing and managing Zia Agents
+Tracking Agent activity in Technician Audit
+Overview
+This section outlines the steps required to make
+Zia Agents
+available in Log360 Cloud. It covers how to access the
+Zia Agents
+page, enable or disable agents, manage user access for each agent, and keep the agent list up to date by syncing changes from Zoho Agent Studio.
+Viewing and managing Zia Agents
+Log in to the product console.
+Navigate to the
+Settings
+tab and select
+Admin
+.
+Under
+Zia
+, select
+Configuration
+.
+Figure 1: Zia Configuration page
+On the
+Zia
+page, enable the
+Ask Zia
+toggle.
+Figure 2: Enabling Ask Zia
+Click
+View Agents
+to open the Zia Agents page. Alternatively, click the
+Zia Agents
+in the top-right corner of the same page.
+Figure 3: Viewing Zia agents
+If no agents are available, click
+Build Agents
+to open
+Zoho Agent Studio.
+If agents have already been configured, click
+Manage Agents
+in the top-right corner to view and manage them.
+Note
+: The Prebuilt agents appear in the Zia Agents page only when the Agents are Hired from the Zia Agents Store. Learn how to Hire Agents
+here
+.
+If agents are already available, they are listed in a table in the
+Zia Agents
+page with the following details:
+Agent Name
+- the name of the agent as configured in Zoho Agent Studio.
+Agent Description
+- a brief summary of the agent's purpose.
+Associated Users
+- the roles or users who have access to the agent. Displays
+All Users
+if no restrictions have been applied.
+Created Time
+- the date and time the agent was added.
+Modified Time
+Figure 4: Viewing Zia agents
+Click the
+icon at the top-left of the list to search for an agent by name.
+Figure 5: Locating agents
+To enable an agent, click the
+icon in the
+Actions
+column, or select the agent checkbox and
+click at the top of the list.
+To disable an agent, click the
+icon in the
+Actions
+column, or select the agent checkbox and click
+at the top of the list.
+To ensure the agent list reflects the latest updates from
+Zoho Agent Studio
+, use the
+option at the top-right of the list. The most recent sync time is displayed when you hover over it.
+Figure 6: Syncing agents
+To view or edit an agent, click the
+icon in the
+Actions
+column to open the agent in
+Zoho Agent Studio
+.
+Figure 7: Viewing/editing an agent
+To configure access for an agent, click the
+Associated Users
+next to the required agent.
+Figure 8: Viewing associated users
+A panel opens displaying available roles, including
+Administrators
+and
+Operators
+, along with their respective users. Use the
+Search
+field within the panel to find a specific user.
+Figure 9: Viewing associated users
+Select the roles or users who should have access to the agent. Use
+Select All
+to grant access to all users.
+Figure 10: Selecting all users
+Click
+Save
+to apply the changes.
+NOTE
+Ensure to select at least one user before saving.
+Tracking Agent activity in Technician Audit
+All actions performed via Agents are logged in the Technician Audit section under Settings > Admin Settings > Technicians and Roles. This ensures full visibility and accountability for any operations initiated through the Agents.
+Figure 11: Agents activity audit
+Each audit entry records the timestamp, username, module, operation, action type, and the initiating source. Actions triggered through the Agents will display
+Zia Agents (Agent ID)
+in the
+Initiated By
+column, making it easy to distinguish Agent initiated operations from manual ones.
+NOTE
+If an AI Agent adds an Incident, the Technician Audit will log an entry with the operation âCreate Incidentâ, action âAdditionâ, and Initiated By âZia Agents (Agent ID - 97452722XX)â â providing a clear record of the action's source.
+Read also
+This page explains how to configure and manage Zia Agents in Log360 Cloud. To learn more about related features, refer to:
+Creating custom agents in Agent Studio

@@ -1,0 +1,9 @@
+To configure the Syslog service in your Huawei firewall devices, follow the steps below:
+Login to the Huawei firewall device.
+Navigate to
+System view > Log monitoring > Firewall log stream
+To export traffic monitoring logs to EventLog Analyzer server, enter the following details in the space provided:
+Info-center loghost <EventLog Analyzer server IP address> 514 facility <facility>
+Exit the
+configuration
+mode.

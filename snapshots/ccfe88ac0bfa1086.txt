@@ -1,0 +1,29 @@
+In this page
+Overview
+Available Reports
+Overview
+This page provides a consolidated view of file monitoring reports available in the product. These reports help track critical file system activities, including file creation, modification, deletion, access attempts, permission changes, and failed operations, enabling administrators to detect suspicious behavior and maintain operational integrity across servers.
+Available Reports
+Report group name
+Report name
+File Monitoring
+File Created
+File Deleted
+File Modified
+File Renamed
+File Read Access
+Failed Attempt To Read File
+Failed Attempt To Write File
+Failed Attempt To Delete File
+File Permission Changes
+All File or Folder Changes
+Summary based on Servers
+File Moved
+Changes based on servers
+Read also
+This page outlined the file monitoring reports supported by the product for tracking file system activity across servers. Explore related report sections to gain deeper visibility into security events and operational trends.
+Isilon reports
+NetApp reports
+QNAP NAS reports
+Synology NAS reports
+Windowscluster reports

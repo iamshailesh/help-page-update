@@ -1,0 +1,82 @@
+In this page
+Overview
+Common issues and solutions
+Overview
+This page provides troubleshooting guidance for common issues encountered while configuring
+or managing Failover Cluster in ManageEngine Log360. Learn how to resolve problems such as
+Virtual IP binding errors, access mode configuration failures, module failover issues,
+inactive processors, missing logs, and health check errors.
+Common issues and solutions
+1. The Virtual IP/Hostname is not binding to the secondary server. Why?
+Run the product with
+Administrator privileges
+.
+Ensure that no other service is already bound to the Virtual IP.
+Verify that firewall or antivirus software is not blocking the Virtual IP binding.
+If servers are on different subnets, make sure the different subnet option was selected
+during configuration.
+2. The Failover Cluster shows Common Access Mode has not been configured. What should I do?
+Refer to this section to configure access mode and choose one of the following:
+Virtual IP/Hostname (Active-Passive):
+Enter the Virtual IP.
+Access Gateway Cluster (Active-Active):
+Ensure an Access Gateway Cluster is
+already configured.
+Save the configuration and verify the status again.
+3. My module, such as Archive or Correlation Engine, does not failover. Why?
+Failover is supported only if the role is assigned to two or more Log Processors.
+Check
+Log Processors â Associated Roles
+to confirm the role is assigned to multiple
+processors.
+Ensure the role status toggle is
+enabled
+on all assigned processors.
+4. The web console is not reachable after failover. What could be wrong?
+Confirm that the
+Virtual Hostname or IP
+resolves correctly to the active node.
+If using
+HTTPS
+, ensure SSL certificates are valid and enabled on all nodes.
+Verify that the
+Access URL port (Load Balancer port)
+is not blocked by firewall rules.
+5. Failover shows processors as Inactive even though they are running. Why?
+The secondary Log Processor may not be reachable on the
+cluster port (default: 7800)
+.
+Check for
+network or firewall restrictions
+preventing cluster communication.
+Ensure the
+product version
+on all nodes matches the primary server.
+6. After enabling failover, some logs are missing during switchover. Why?
+Confirm that
+module-based failover
+is enabled for critical roles (Processing Engine,
+Archive, Forwarding).
+Without redundancy, log loss may occur during failover.
+Verify that
+shared storage
+is configured for archive and Elasticsearch data.
+7. Failover health check shows errors. How do I fix them?
+On the
+Failover page
+, click
+More Details
+for the affected role.
+If no active processors are listed:
+Restart the
+Log Processor service
+on secondary nodes.
+Check
+database connectivity
+and
+cluster port communication
+.
+If processors are active but showing errors:
+Review the
+product logs
+for specific module failures.

@@ -1,0 +1,1240 @@
+In this page
+Overview
+Use cases
+Pre-requisites
+Configuring SentinelOne integration via Connections
+Supported SOAR functionalities
+Overview
+SentinelOne is an endpoint protection platform for XDR that delivers behavioral threat detection, autonomous response, device control, and real-time visibility across endpoints. It continuously monitors processes, files, network connections, and system activity to detect ransomware, exploits, fileless attacks, and advanced persistent threats.
+SentinelOne operates directly at the endpoint level and serves as a frontline defense against malware and post-exploitation activity. If high-severity alerts, suspicious processes, or active threats are not addressed immediately, attackers can escalate privileges, move laterally, or disrupt business operations. Rapid containment and remediation at the endpoint layer is therefore critical.
+By integrating SentinelOne with ManageEngine Log360 Cloud, security teams can not only detect and correlate endpoint threats centrally but also execute automated SOAR actions directly from incident workflows, enabling immediate containment and controlled remediation without switching consoles.
+Use cases
+Automatically mitigate detected threats
+When Log360 Cloud correlates suspicious endpoint activity, such as abnormal process execution combined with lateral authentication attempts, it can automatically trigger the Mitigate Threat action in SentinelOne.
+This enables immediate containment measures, such as killing malicious processes, quarantining files, and isolating the threat at the endpoint level. Instead of waiting for manual analyst intervention, the response is executed as part of a predefined playbook, reducing dwell time and limiting blast radius.
+For example: If a ransomware-like pattern is detected across multiple endpoints, Log360 Cloud can automatically initiate mitigation actions while simultaneously updating the threat status and recording analyst notes for audit tracking.
+Similarly, you can automate actions such as:
+Initiate endpoint scans or run remote scripts using
+initiateEndpointScan
+or
+runRemoteScript
+to investigate suspicious activity and collect forensic evidence remotely.
+Enable, disable, or update detection rules and IOCs using
+createIOC, updateDetectionRules, enableDetectionRules,
+and
+disableDetectionRules
+to dynamically adjust security controls in response to emerging threats.
+Pre-requisites
+Before creating a connection for a pre-defined service, ensure that the corresponding integration/extension is
+installed
+in Log360 Cloud.
+Only after installing the extension, the service will appear in the Connections page for connection setup.
+Configuring SentinelOne integration via Connections
+To enable communication between Log360 Cloud and SentinelOne, a connection must be configured.
+Log in to the product console.
+Navigate to the
+Settings
+tab and select
+Admin
+.
+Under
+Integrations
+, select
+Connections
+.
+Figure 1: Accessing connections
+From the list of available integrations, select
+SentinelOne.
+Figure 2: Selecting SentinelOne
+In the window that opens, click
+Create Connection.
+Figure 3: Creating a connection
+In the
+Create Connection - SentinelOne
+window, provide the following details:
+Authentication Type:
+This is preselected as API Key based on the integration.
+Connection Name:
+Enter a name to identify the connection.
+Instance URL:
+Enter the URL of your SentinelOne management console
+NOTE
+The API Token can be generated from the SentinelOne Management Console. To generate the API token:
+Log in to the
+SentinelOne management console
+.
+Navigate to
+My Profile
+.
+From the
+Actions
+dropdown, select
+Regenerate API Token
+to generate a new API token.
+API Token:
+Enter the API token generated from the SentinelOne console.
+Figure 4: Configuring connection details
+Click
+Authorize and Save
+to complete authentication and create the connection.
+Supported SOAR functionalities
+The SentinelOne extension provides custom functions that enable playbooks to interact with SentinelOne APIs. These functions can be used to manage agents, investigate threats, control detection rules, handle IOCs, and perform automated response actions.
+NOTE
+For parameters that include a Map parameter structure and description, refer to the URL provided alongside the parameter to view the complete structure and field-level details.
+The URL (for example, https://<your_mgmt_url>/api-doc/overview) refers to the SentinelOne API documentation, where:
+<your_mgmt_url> should be replaced with your SentinelOne Management Console URL.
+Detailed information about supported keys, filters, and their formats is available.
+1. sentinelone_broadCastMessage
+Broadcasts a message to multiple agents or groups.
+Parameter
+Param Type
+Param Description
+Mandatory
+Map parameter structure and description
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=agent-actions&api=broadcast-message
+message
+String
+The message to broadcast to agents.
+Yes
+filterMap
+String
+JSON string with filter criteria: accountIds, computerName, osTypes, groupIds, siteIds, agentVersions, machineTypes, networkStatuses, and other agent-level filters.
+No
+https://<your_mgmt_url>/api-doc/overview
+2. sentinelone_connectAgent
+Reconnects one or more agents to the network.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=agent-actions&api=connect-to-network
+agentIds
+List
+A list of agent IDs to reconnect to the network. Run the list-agents command to get agent IDs.
+Yes
+filterMap
+String
+JSON string with filter criteria: accountIds, osTypes, groupIds, networkStatuses, siteIds, and other agent-level filters.
+https://<your_mgmt_url>/api-doc/overview
+No
+3. sentinelone_createDetectionRule
+Creates a new STAR (custom) detection rule.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=custom-detection-rule&api=create-rule
+name
+String
+Name of the detection rule.
+Yes
+description
+String
+Description of the detection rule.
+No
+expirationMode
+String
+Defines rule expiration mode. Possible values: Temporary, Permanent.
+Yes
+severity
+String
+Severity level associated with the rule (e.g., Low, Medium, High, Critical).
+Yes
+queryType
+String
+Specifies the rule query type (e.g., events, processes).
+Yes
+status
+String
+Status of the STAR rule. Possible values: Activating, Active, Deleted, Deleting, Disabled, Disabling, Draft.
+Yes
+queryConfig
+Map
+Map containing the query configuration: query (the PowerQuery string) and queryLang (enum: 1.0 or 2.0).
+Yes
+correlationParams
+Map
+Map containing correlation parameters: entity (enum), matchInOrder (boolean), subQueries (object[]), matchesRequired (integer), windowMinutes (enum).
+No
+filterMap
+String
+JSON string with filter criteria: accountIds, groupIds, siteIds, tenant.
+https://<your_mgmt_url>/api-doc/overview
+No
+4. sentinelone_createIOC
+Creates a Threat Intelligence indicator (IOC).
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=threat-intelligence&api=create-iocs
+source
+String
+The source of the identified Threat Intelligence indicator.
+Yes
+type
+String
+Type of Threat Intelligence indicator (DNS, IPV4, IPV6, MD5, SHA1, SHA256, URL).
+Yes
+value
+String
+The value of the Threat Intelligence indicator (e.g., hash, domain, or IP).
+Yes
+method
+String
+The comparison method used to trigger the event. Possible value: EQUALS.
+Yes
+name
+String
+Name of the Threat Intelligence indicator.
+Yes
+validUntil
+String
+Expiration date for the Threat Intelligence indicator.
+Yes
+description
+String
+Description of the Threat Intelligence indicator.
+No
+accountIds
+List
+Comma-separated list of Account IDs associated with the IOC.
+No
+filterMap
+String
+JSON string with filter criteria: accountIds, groupIds, siteIds, tenant.
+https://<your_mgmt_url>/api-doc/overview
+No
+5. sentinelone_createPowerQuery
+Creates a Power Query for advanced event analysis.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=deep-visibility&api=%5Bdeprecated%5D-create-a-power-query-and-get-queryid
+query
+String
+Custom search query defining event filtering criteria.
+Yes
+fromDate
+String
+Start date/time to filter events created after this timestamp.
+Yes
+toDate
+String
+End date/time to filter events created before or at this timestamp.
+Yes
+limit
+String
+Maximum number of results to return (1â100000).
+No
+filterMap
+String
+JSON string with filter criteria: accountIds, siteIds.
+https://<your_mgmt_url>/api-doc/overview
+No
+6. sentinelone_createQuery
+Creates a Deep Visibility query for event investigation.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=deep-visibility&api=%5Bdeprecated%5D-cancel-running-query
+query
+String
+The query string for which to return matching events.
+Yes
+fromDate
+String
+Query start date/time (ISO 8601 format), limited to 93 days ago.
+Yes
+toDate
+String
+Query end date/time (ISO 8601 format).
+Yes
+filterMap
+String
+JSON string with filter criteria: accountIds, siteIds, queryType, isVerbose, timeFrame.
+https://<your_mgmt_url>/api-doc/overview
+No
+7. sentinelone_createWhiteListItem
+Creates a whitelist exclusion item in SentinelOne.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=exclusions-and-blocklist&api=create-exclusion
+exclusionType
+String
+Exclusion item type: file_type, path, white_hash, certificate, or browser.
+Yes
+osType
+String
+Operating system type; required for hash exclusions (windows, windows_legacy, macos, linux).
+Yes
+description
+String
+Description for the whitelist item.
+Yes
+exclusionValue
+String
+Value of the exclusion item to be added.
+No
+exclusionMode
+String
+Exclusion mode for path exclusions (suppress, disable_in_process_monitor_deep, disable_in_process_monitor, disable_all_monitors, disable_all_monitors_deep).
+No
+pathExclusionType
+String
+Excluded path type for a path exclusion.
+No
+filterMap
+String
+JSON string with filter criteria: accountIds, groupIds, siteIds, tenant.
+https://<your_mgmt_url>/api-doc/overview
+No
+8. sentinelone_deleteDetectionRule
+Deletes one or more detection rules.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=custom-detection-rule&api=delete-rules
+ruleIds
+List
+Comma-separated list of STAR rule IDs to delete.
+Yes
+filterMap
+String
+JSON string with filter criteria: accountIds, siteIds, groupIds, status, statuses, severities, expirationMode, ids, name__contains, sources, mitreTactics.
+https://<your_mgmt_url>/api-doc/overview
+No
+9. sentinelone_deleteGroup
+Deletes a specified group.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=groups&api=delete-group
+groupId
+List
+ID of the group to delete.
+Yes
+10. sentinelone_deleteIOC
+Deletes one or more Threat Intelligence indicators (IOCs).
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=threat-intelligence&api=delete-iocs
+accountIds
+List
+List of account IDs to filter by.
+Yes
+uuids
+List
+UUIDs of the Threat Intelligence indicators to delete.
+Yes
+filterMap
+String
+JSON string with filter criteria: batchId, type, value, source, creationTime/updatedAt/uploadTime ranges, name__contains, externalId, siteIds, tenant, threatActors__in, uuids.
+https://<your_mgmt_url>/api-doc/overview
+No
+11. sentinelone_disableDetectionRules
+Disables one or more detection rules.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=custom-detection-rule&api=disable-rules
+ruleIds
+List
+Comma-separated list of STAR detection rule IDs to disable.
+Yes
+filterMap
+String
+JSON string with filter criteria: accountIds, siteIds, groupIds, status, statuses, severities, expirationMode, ids, name__contains, sources, mitreTactics.
+https://<your_mgmt_url>/api-doc/overview
+No
+12. sentinelone_disconnectAgent
+Disconnects one or more agents from the network.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=agent-actions&api=disconnect-from-network
+agentIds
+List
+Comma-separated list of agent IDs to disconnect from the network.
+Yes
+filterMap
+String
+JSON string with filter criteria: accountIds, osTypes, groupIds, networkStatuses, siteIds, and other agent-level filters.
+https://<your_mgmt_url>/api-doc/overview
+No
+13. sentinelone_enableDetectionRules
+Enables one or more detection rules.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=custom-detection-rule&api=activate-rules
+ruleIds
+List
+Comma-separated list of STAR rule IDs to enable.
+Yes
+filterMap
+String
+JSON string with filter criteria: accountIds, siteIds, groupIds, status, statuses, severities, expirationMode, ids, name__contains, sources, mitreTactics.
+https://<your_mgmt_url>/api-doc/overview
+No
+14. sentinelone_expireSite
+Expires a specified site.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=sites&api=expire-site
+siteId
+String
+A valid site ID to expire.
+Yes
+15. sentinelone_getAccounts
+Retrieves account details for one or more accounts.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=accounts&api=get-accounts
+accountIds
+List
+Can filter on one account ID. If not provided, retrieves details from all accounts.
+Yes
+limit
+Int
+Limit the number of results returned.
+No
+cursor
+String
+Cursor for pagination to retrieve the next set of results.
+No
+16. sentinelone_getActivities
+Retrieves audit and system activity logs with filtering support.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=activities&api=get-activities
+filterMap
+String
+JSON string with filter criteria: accountIds, activityTypes, activityUuids, agentIds, alertIds, createdAt ranges, groupIds, ids, ruleIds, siteIds, threatIds, userEmails, userIds, sortBy, sortOrder, limit, skip, cursor, includeHidden, countOnly, skipCount.
+https://<your_mgmt_url>/api-doc/overview
+No
+17. sentinelone_getAgents
+Retrieves detailed information about one or more agents.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=agents&api=get-agents
+agentIds
+List
+A comma-separated list of agent IDs.
+Yes
+filterMap
+String
+JSON string with filter criteria: accountIds, osTypes, machineTypes, networkStatuses, agentVersions, computerName, groupIds, siteIds, infected, isActive, isDecommissioned, isUpToDate, threatContentHash, createdAt/updatedAt/lastActiveDate ranges, cloud provider filters, Kubernetes filters, and more.
+https://<your_mgmt_url>/api-doc/overview
+No
+18. sentinelone_getAlerts
+Retrieves security alerts with filtering and pagination support.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=alerts&api=get-alerts
+filterMap
+String
+JSON string with filter criteria: accountIds, ids, severity, incidentStatus, analystVerdict, createdAt/reportedAt ranges, osType, ruleName__contains, siteIds, groupIds, scopes, machineType, sourceProcess filters, k8s filters, container filters, query, sortBy, limit, skip, cursor.
+https://<your_mgmt_url>/api-doc/overview
+No
+19. sentinelone_getBlockList
+Retrieves the list of blocked items (hashes, paths, certificates).
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=exclusions-and-blocklist&api=get-blocklist
+filterMap
+String
+JSON string with filter criteria: accountIds, type, types, osTypes, source, ids, imported, includeChildren, includeParents, recommendations, createdAt/updatedAt ranges, groupIds, siteIds, query, user__contains, value, value__contains, sortBy, sortOrder, limit, skip, cursor.
+https://<your_mgmt_url>/api-doc/overview
+No
+20. sentinelone_getDetectionRules
+Retrieves detection rules with filtering and pagination support.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=custom-detection-rule&api=get-rules
+filterMap
+String
+JSON string with filter criteria: accountIds, ids, status, statuses, severities, queryType, scopeLevel, scopes, expirationMode, expired, filterBy, groupIds, siteIds, name__contains, nameSubstring, creator__contains, description__contains, mitreTactics, sources, platformRuleIds, reachedLimit, sortBy, limit, skip, cursor.
+https://<your_mgmt_url>/api-doc/overview
+No
+21. sentinelone_getDVQueryStatus
+Retrieves the execution status of a Deep Visibility query.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=deep-visibility&api=%5Bdeprecated%5D-get-query-status
+queryId
+String
+Query ID returned when creating a query under Create Query (e.g., q1xx2xx3).
+Yes
+22. sentinelone_getEvents
+Retrieves events for a previously created Deep Visibility query.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=threats&api=get-events
+queryId
+String
+Query ID returned when creating a query under Create Query (e.g., q1xx2xx3).
+Yes
+filterMap
+String
+JSON string with filter criteria: cursor, limit, skip, sortBy, sortOrder, subQuery.
+https://<your_mgmt_url>/api-doc/overview
+No
+23. sentinelone_getGroups
+Retrieves a list of groups with filtering support.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=groups&api=get-groups
+filterMap
+String
+JSON string with filter criteria: accountIds, groupIds, id, isDefault, name, type, types, query, rank, siteIds, updatedAt ranges, sortBy, sortOrder, limit, skip, cursor, countOnly, skipCount.
+https://<your_mgmt_url>/api-doc/overview
+No
+24. sentinelone_getInstalledApplications
+Retrieves installed applications on specified agents.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=marketplace&api=get-installed-applications
+agentIds
+List
+A comma-separated list of agent IDs.
+Yes
+filterMap
+String
+JSON string with filter criteria: accountIds, groupIds, siteIds, tenant.
+https://<your_mgmt_url>/api-doc/overview
+No
+25. sentinelone_getIOC
+Retrieves Threat Intelligence indicators (IOCs) with filtering support.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=threat-intelligence&api=get-iocs
+accountIds
+List
+List of account IDs to filter by.
+Yes
+filterMap
+String
+JSON string with filter criteria: type, value, source, batchId, severity, creationTime/updatedAt/uploadTime ranges, name__contains, creator__contains, description__contains, externalId, siteIds, tenant, threatActors__in, malwareNames__in, labels__in, campaignNames__in, uuids, sortBy, limit, skip, cursor.
+https://<your_mgmt_url>/api-doc/overview
+No
+26. sentinelone_getRemoteScriptTaskResults
+Retrieves download results for completed remote script tasks.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=remoteops-scripts&api=get-script-results
+taskIds
+List
+A list of task IDs to get a download link for.
+Yes
+computerName
+List
+A list of partial or whole computer names which ran the scripts.
+No
+filterMap
+String
+JSON string with filter criteria: accountIds.
+https://<your_mgmt_url>/api-doc/overview
+No
+27. sentinelone_getRemoteScriptTaskStatus
+Retrieves the execution status of remote script tasks.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=remoteops-scripts&api=get-remote-scripts-tasks-status
+taskIds
+String
+List of specific task IDs to fetch status for.
+No
+filterMap
+String
+JSON string with filter criteria: accountIds, status, type, types, parentTaskId, parentTaskId__in, computerName__contains, description__contains, detailedStatus__contains, initiatedBy__contains, ids, groupIds, siteIds, createdAt/updatedAt ranges, query, sortBy, limit, skip, cursor, countOnly, skipCount.
+https://<your_mgmt_url>/api-doc/overview
+No
+28. sentinelone_getServiceUsers
+Retrieves service user accounts with optional filtering.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=service-users&api=get-service-users
+accountIds
+List
+A comma-separated list of account IDs to filter by.
+No
+roleIds
+List
+A comma-separated list of RBAC role IDs to filter by.
+No
+ids
+List
+A comma-separated list of service user IDs to filter by.
+No
+siteIds
+List
+A comma-separated list of site IDs to filter by.
+No
+limit
+Int
+Maximum number of service users to return. Default is 20.
+No
+cursor
+String
+Cursor for pagination to retrieve the next set of results.
+No
+29. sentinelone_getThreatNotes
+Retrieves analyst notes associated with a specific threat.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=threat-notes&api=get-threat-notes
+threatId
+String
+A threat ID to retrieve notes for.
+Yes
+limit
+Int
+Maximum number of results to return. Default is 20.
+No
+cursor
+String
+Cursor for pagination to retrieve the next set of results.
+No
+30. sentinelone_getThreats
+Retrieves threats with extensive filtering and pagination support.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=threats&api=get-threats
+filterMap
+String
+JSON string with filter criteria: accountIds, agentIds, confidenceLevels, analystVerdicts, mitigationStatuses, incidentStatuses, osTypes, contentHashes, classifications, engines, initiatedBy, createdAt/updatedAt ranges, groupIds, siteIds, query, sortBy, limit, skip, cursor, and more.
+https://<your_mgmt_url>/api-doc/overview
+No
+31. sentinelone_getWhitelist
+Retrieves the list of whitelist (allowlist) exclusion items.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=exclusions-v2.1&api=get-exclusions
+filterMap
+String
+JSON string with filter criteria: accountIds, osTypes, exclusionType, groupIds, siteIds, and agent-level filters such as computerName, machineTypes, agentVersions.
+https://<your_mgmt_url>/api-doc/overview
+No
+32. sentinelone_initiateEndpointScan
+Initiates an on-demand security scan on one or more endpoints.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=agent-actions&api=initiate-scan
+filterMap
+String
+JSON string with filter criteria: accountIds, ids, computerName, osTypes, groupIds, siteIds, and other agent-level filters.
+https://<your_mgmt_url>/api-doc/overview
+No
+33. sentinelone_markAsThreat
+Marks a suspicious item as a confirmed threat.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=threats&api=mark-as-threat-(deep-visibility)
+storyLine
+String
+Storyline or context associated with marking the threat.
+Yes
+agentId
+String
+Agent ID to mark as a threat.
+Yes
+status
+String
+Status to assign to the threat.
+Yes
+initiatedBy
+String
+Name of the user initiating this action.
+No
+34. sentinelone_mitigateThreat
+Performs a mitigation action on one or more threats.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=threats&api=mitigate-threats
+action
+String
+Mitigation action to perform. Possible values: kill, quarantine, un-quarantine, remediate, rollback-remediation.
+Yes
+threatIds
+List
+A comma-separated list of threat IDs to mitigate.
+Yes
+filterMap
+String
+JSON string with filter criteria: accountIds, mitigationStatuses, confidenceLevels, analystVerdicts, incidentStatuses, osTypes, agentIds, groupIds, siteIds, and other threat-level filters.
+https://<your_mgmt_url>/api-doc/overview
+No
+35. sentinelone_moveAgent
+Moves one or more agents to a different group.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=groups&api=move-agents
+groupId
+String
+ID of the group to move the agent to.
+Yes
+filterMap
+String
+JSON string with filter criteria: accountIds, ids, computerName, osTypes, groupIds, siteIds, agentVersions, machineTypes, and other agent-level filters.
+https://<your_mgmt_url>/api-doc/overview
+No
+36. sentinelone_reactivateSite
+Reactivates an expired or inactive site.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=sites&api=reactivate-site
+siteId
+String
+ID of the site to reactivate.
+Yes
+filterMap
+String
+JSON string with filter criteria: expiration (new expiration date for the site), unlimited (boolean â if false an expiration must be supplied).
+https://<your_mgmt_url>/api-doc/overview
+No
+37. sentinelone_removeItemFromWhiteList
+Removes a specified item from the whitelist.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=exclusions-and-blocklist&api=delete-exclusions
+exclusionId
+String
+An exclusion ID to be removed from the whitelist.
+Yes
+type
+String
+The exclusion type to be removed.
+No
+38. sentinelone_runRemoteScript
+Executes a remote script on specified agents.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=remoteops-scripts&api=run-remote-script
+accountIds
+List
+A comma-separated list of account IDs.
+Yes
+agentIds
+List
+A comma-separated list of agent IDs on which the script should run.
+Yes
+scriptId
+String
+Script ID to execute.
+Yes
+outputDestination
+String
+Output destination. Possible values: DataSetCloud, Local, None, SentinelCloud.
+Yes
+taskDescription
+String
+Description of the task.
+Yes
+outputDirectory
+String
+Output directory to save script results.
+No
+filterMap
+String
+JSON string with filter criteria: inputParams, scriptRuntimeTimeoutSeconds, requiresApproval, outputFilePaths, password, singularityxdrUrl, singularityxdrKeyword, destinationProfileId, and agent-level filters such as accountIds, osTypes, groupIds, siteIds.
+https://<your_mgmt_url>/api-doc/overview
+No
+39. sentinelone_shutdownAgent
+Sends a shutdown command to one or more agents.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=agent-actions&api=shutdown
+filterMap
+String
+JSON string with filter criteria: accountIds, ids, computerName, osTypes, groupIds, siteIds, agentVersions, machineTypes, networkStatuses, and other agent-level filters.
+https://<your_mgmt_url>/api-doc/overview
+No
+40. sentinelone_uninstallAgent
+Sends an uninstall command to one or more agents.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=agent-actions&api=uninstall
+filterMap
+String
+JSON string with filter criteria: accountIds, ids, computerName, osTypes, groupIds, siteIds, agentVersions, machineTypes, and other agent-level filters.
+https://<your_mgmt_url>/api-doc/overview
+No
+41. sentinelone_updateAlertStatus
+Updates the incident status of one or more alerts.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=alerts&api=update-threat-incident
+alertIds
+List
+A comma-separated list of alert IDs to update.
+Yes
+incidentStatus
+String
+Incident status to update. Possible values: in_progress, resolved, unresolved.
+Yes
+filterMap
+String
+JSON string with filter criteria: accountIds, severity, incidentStatus, osType, ruleName__contains, siteIds, groupIds, analystVerdict, sourceProcess filters, k8s filters, reportedAt/createdAt ranges, query, limit.
+https://<your_mgmt_url>/api-doc/overview
+No
+42. sentinelone_updateAlertVerdict
+Updates the analyst verdict for one or more alerts.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=alerts&api=update-alert-analyst-verdict
+alertIds
+List
+A comma-separated list of alert IDs.
+Yes
+verdict
+String
+Analyst verdict. Possible values: undefined, true_positive, false_positive, suspicious.
+Yes
+filterMap
+String
+JSON string with filter criteria: accountIds, severity, incidentStatus, analystVerdict, osType, ruleName__contains, siteIds, groupIds, reportedAt/createdAt ranges, query, limit.
+https://<your_mgmt_url>/api-doc/overview
+No
+43. sentinelone_updateDetectionRules
+Updates an existing detection rule configuration.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=custom-detection-rule&api=activate-rules
+ruleId
+String
+A rule ID to update.
+Yes
+name
+String
+Name of the detection rule.
+Yes
+expirationMode
+String
+Defines rule expiration mode. Possible values: Temporary, Permanent.
+Yes
+severity
+String
+Severity of the detection rule. Possible values: Low, Medium, High, Critical.
+Yes
+queryType
+String
+Type of query used in the detection rule (e.g., KQL, SQL).
+Yes
+status
+String
+Status of the detection rule. Possible values: Active, Inactive.
+Yes
+dataMap
+String
+Map of required data parameters for the rule update.
+Yes
+filterMap
+String
+JSON string with filter criteria: accountIds, siteIds, groupIds, status, statuses, severities, expirationMode, ids, name__contains, sources, mitreTactics.
+https://<your_mgmt_url>/api-doc/overview
+No
+44. sentinelone_updateThreatAnalystVerdict
+Updates the analyst verdict and incident status for one or more threats.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=threats&api=update-threat-analyst-verdict
+threatIds
+List
+A comma-separated list of threat IDs.
+Yes
+incidentStatus
+String
+Incident status to assign to the threat.
+Yes
+analystVerdict
+String
+Analyst verdict for the threat.
+No
+filterMap
+String
+JSON string with filter criteria: accountIds, agentIds, mitigationStatuses, confidenceLevels, analystVerdicts, incidentStatuses, osTypes, classifications, engines, groupIds, siteIds, and other threat-level filters.
+https://<your_mgmt_url>/api-doc/overview
+No
+45. sentinelone_updateThreatStatus
+Updates the status of one or more threats.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+https://<your_mgmt_url>/api-doc/api-details?category=threats&api=updated-threat-incident
+threatIds
+List
+A list of threat IDs whose status is to be updated.
+Yes
+threatStatus
+String
+Status to be applied to the specified threats.
+Yes
+46. sentinelone_writeThreatNote
+Adds an analyst note to one or more threats.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured SentinelOne connection used for authentication and API access.
+Yes
+Reference
+threatIds
+List
+A list of threat IDs to which the note will be added.
+Yes
+note
+String
+Text of the threat note.
+Yes
+Read also
+This page explains how to integrate SentinelOne and use SOAR actions for endpoint threat response. For more information on related integration features, refer to:
+Veeam
+Okta

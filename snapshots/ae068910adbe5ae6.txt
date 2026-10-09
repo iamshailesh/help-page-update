@@ -1,0 +1,73 @@
+Eventlog Analyzer
+The below licensing details are applicable only for EventLog Analyzer.
+License Details
+Unlike some of our competitors, who charge based on log volume processed, ManageEngine EventLog Analyzer offers a simple licensing model. Licensing is based on the license model and the number of log sources. The product has just one edition, Professional edition. The license models are, Perpetual (Standard) and Annual Subscription Model (ASM).
+The solution is licensed based on the number of log sources, endpoints and cloud accounts.
+Available Editions
+Professional:
+The Professional edition is designed for businesses of all sizes, whether operating from a single site or across multiple geographical locations. It enables monitoring from 10 to unlimited hosts and applications, while supporting high log reception rates that scale with your infrastructure.
+Advantages of ManageEngine Licensing
+Licensing is simple, cost-conscious, and based on the number of devices or applications to be monitored. There are no restrictions on deployment models, allowing you to scale seamlessly as your monitoring needs grow.
+License Models
+Perpetual model
+In this model, the licensing is perpetual and a nominal amount is charged as Annual Maintenance and Support (AMS) fee to provide the maintenance, support, and updates.
+Annual Subscription model
+In this model, the license is valid for one year and after that the license expires. To continue the license should be renewed every year. Annual Maintenance and Support (AMS) fee is included in the subscription price and not charged separately.
+How to choose the license
+Decide upon the number of log sources, endpoints and cloud accounts to be monitored.
+Choose Perpetual model for a license with no expiry and choose Annual Subscription Model for low entry cost.
+Steps to apply the license
+Click on the ? icon on the top right corner of the UI and select License.
+The License Details pop-up appears.
+Browse for the required license file and click on Upgrade.
+Upgrade from evaluator to purchased license
+Before upgrading the current license, ensure that you save the new license file from ZOHO Corp. on the machine in which EventLog Analyzer is installed.
+After you log in to EventLog Analyzer, click the Upgrade License link present in the top-right corner of the UI.
+Browse for the new license file and select it.
+Click Upgrade to apply the new license file.
+Note
+The new license will be applied with immediate effect. You do not have to shutdown and restart the server after the license is applied.
+Display license details
+The License window that opens up displays the license information for the current EventLog Analyzer installation. It displays the following information:
+Type of license applied - Free or Professional
+Number of days remaining for the license to expire
+Number of devices currently configured
+Maximum number of devices that you are allowed to manage
+Log360
+The below licensing details are applicable only for Log360.
+Licensing
+Log360 can be downloaded and used for a 30-day trial period, with full access to all the components along with technical support . Once the 30-day trial ends, you have to purchase and apply the license to continue enjoying the full benefits of the product.
+The product comes in a single edition viz., Professional edition.
+The solution is licensed based on the number of Domain controllers, log sources, File servers, endpoints, and cloud accounts .
+After the purchase, you can apply the license file to the product using the License link available in the top right corner of the Log360 Web portal.
+Note
+With Log360, it is always pay only for what you use. You can choose to buy the license only for the component that you need.
+To get a customized price quote for Log360,
+Click here
+.
+Contact our support team log360-support@manageengine.com for any further queries.
+Applying License:
+Click the
+License link
+available in the top right corner of the Log360 client. This opens the License details window.
+Use the
+Browse
+button to select the license file received from ManageEngine.
+Click on the
+Apply
+button to apply the license.
+License limitations in bin setup environments
+In bin setup environments,
+AD authentication technicians are not supported
+. As a result, products that do not support
+custom Product Technician licenses
+, such as
+ADManager Plus
+and
+M365 Manager Plus
+, cannot have licenses applied through the
+Custom Admin Technician
+.
+To clearly indicate such scenarios, the
+License page displays specific error messages
+that identify the exact reason for a license application failure. This helps administrators quickly determine whether the failure is caused by unsupported technician types or product-specific licensing limitations.

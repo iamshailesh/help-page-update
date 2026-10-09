@@ -1,0 +1,173 @@
+All the devices added to EventLog Analyzer for monitoring can be viewed under
+Settings > Configuration > Manage Devices
+.
+Note
+When you rename an AD device in domain, the device name automatically gets renamed in device management too.
+In this page, you can find three tabs:
+Windows Devices, Syslog Devices
+and
+Other Devices
+. Under Windows Devices, you can use the
+Select Category
+drop-down menu to select a domain or workgroup.
+Devices are displayed with the following icons:
+Search, Enable, Disable, Filter Change Monitor time interval
+, and
+Delete
+. The
+Filter
+option lets you choose the devices for reports by their status (enabled/disabled), state (active/inactive/decommissioned) and device group.
+The table displays the following columns:
+Checkbox against all devices
+Actions
+: Configure event source file and Update icons.
+Device Name
+Device IP address
+Last Message Time
+Device Group
+Next Scan On
+: Shows when the next scan is scheduled. The Scan Now link against each device will scan the device instantly.
+Monitoring Interval
+: The period for collection of logs.
+IP refresh
+: Status of automatic IP refresh
+Status
+: Status of log collection.
+Quick Links
+Configuring Auto Log Forward for Unix machines
+Configure domains and workgroups
+Manage Device Groups
+Manage Devices
+How to add a device?
+Refer to
+Add Device
+.
+How to delete a device?
+Go to
+Settings > Configuration > Manage Devices.
+Select the appropriate tab from
+Windows Devices, Syslog Devices, Other Devices.
+Select the checkbox(es) against the respective device(s).
+Click the
+delete
+icon in the action menu.
+Click
+Yes
+in the delete confirmation pop-up.
+How to disable/enable a device?
+Navigate to
+Settings > Configuration > Manage Devices.
+Select the appropriate tab from
+Windows Devices, Syslog Devices, Other Devices.
+Select the device(s) by selecting the respective check box(es).
+Click the disable or enable icons in the action menu.
+How to change the monitoring interval?
+To change the monitoring interval for multiple devices in bulk, follow the given steps.
+Navigate to
+Settings > Configuration > Manage Devices > Windows Devices
+Select the device(s) by selecting the respective check box(es).
+Click the
+Change monitor interval
+icon in the action menu.
+In the box that opens, select the time interval in minutes as needed.
+Click
+Update.
+To change the monitoring interval for individual devices, follow the given steps.
+Navigate to
+Settings > Log Source Configuration > Manage Devices
+.
+In the
+Windows Devices
+tab, click the
+Edit
+icon beside the corresponding device.
+Select the required
+Log Collection Mode
+â either
+Realtime
+or
+Scheduled
+with the desired time interval.
+Enter the required credentials.
+Click
+Update
+to save the changes.
+Note
+When EventLog Analyzer is installed on a Linux server, the log collection interval cannot be modified in bulk, and the
+Change Monitor Interval
+icon will not appear on the Device Management page. However, you can change the log collection mode for individual devices using the above
+steps
+.
+Note
+You can select multiple devices and configure them for either
+Real-time log collection
+or
+Scheduled collection with a specific monitoring interval
+.
+Log360 Cloud\EventLog Analyzer lets you collect logs from up to 25 devices in real-time per agent.
+How to update a device's configuration?
+Go to
+Settings > Configuration > Manage Devices > Windows Devices.
+Click the edit icon for the device. For
+Syslog Devices
+and
+Other Devices
+, hover over the device for edit icon to appear.
+This opens the Update Device box where you can edit Device Type, Display Name, and Log Collection Mode.
+You should be able to refresh the IP from the console without specifying the new IP manually
+You can manually change the IP too in case there are any issues with the auto updation. You can go back to auto IP updation easily from the console
+Note
+The
+Log Collection Mode
+can be configured either for real-time log collection or for scheduled collection with monitoring interval.
+Click AD details to view object GUID - The unique identifier for a Domain object.
+Click
+Advanced
+to edit Encoding Type and Time zone.
+Click
+Update
+.
+Note
+Auto IP updation schedule will be disabled for devices which have manual IP selected.
+How to configure event source files in a device?
+Go to
+Settings > Configuration > Manage Devices > Windows.
+Click the
+Configure Event Source Files
+icon for the device.
+In the
+Event source files
+dialog box, select the type(s) of event source files.
+Click
+Configure
+.
+Note:
+The registry is accessed for configuring event source files. Modifications to a registry entry will reflect only when reloaded. This feature supports Windows XP Pro and above.
+How to Bulk update credentials
+Go to
+Settings > Devices > Windows devices > click on the â® icon > Select credentials
+Update your
+user name
+and
+password
+. Click on
+Save
+How to bulk refresh IP
+Go to
+Settings > Devices > Windows devices > click on the â® icon > select Refresh IP
+Enable/Disable button: When 'Enable IP address automatically' is checked, automatic IP refresh will be enabled for the devices. If it is unchecked, automatic IP refresh will be disabled.
+Enable/Disable button will not show the status of automatic IP refresh of selected device.
+By switching to Enable option and clicking on the save button, IP refresh will be performed on selected devices.
+Configure Auto Log Forward for Unix devices
+Go to
+Settings > Configuration > Manage Devices > Syslog Devices.
+Select the Unix device by ticking the checkbox.
+Click
+Configure Auto Log Forward
+in the Actions menu.
+Enter the root login credentials for the Unix device and SSH port number.
+For configuring syslog forwarding , enter the IP address of the EventLog Analyzer server.
+Select the protocol â TCP/UDP.
+Specify the Syslog Port number. Note that the default port numbers are 513 and 514 for UDP and 514 for TCP.
+Click
+Verify & Update.

@@ -1,0 +1,6 @@
+Log360 Cloud is a cloud-based SIEM and log management solution that collects, analyzes, and stores log data from on-premises and cloud environments.
+Benefits of employing Log360 Cloud
+After the log collection agent is installed and the devices are configured, the logs are stored and managed on a secured cloud platform.
+IT storage spending decreases as all log data is stored on a cloud platform.
+A speedy forensic and root cause analysis can be performed with Log360 Cloud's best-in-class log search engine.
+IT compliance requirements can easily be met with audit reports that tell you who did what, when, and from where.

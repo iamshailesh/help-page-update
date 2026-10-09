@@ -1,0 +1,48 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the reports available for IIS FTP servers in the product console. These reports help administrators monitor FTP logon activities, track file uploads and downloads, analyze command execution and transfer errors, and gain visibility into user behavior and FTP service usage for operational and security auditing.
+Available Reports
+Report group name
+Report name
+IIS FTP Events
+All Events
+Important Events
+FTP Server Reports
+Logons
+Failed Logons
+Login Attempts
+File downloads
+File uploads
+Disconnects
+File Transfer Aborts
+File Deletions
+Make Directories
+Remove Directories
+Rename Operations
+List Directory Contents
+Password Changes
+Bad Sequence of Commands
+Successful Commands
+Command Syntax Errors
+Transfer Incomplete due to insufficient space
+Security Data Exchange
+Top File Types Downloaded
+FTP service report
+Top File Types Uploaded
+Top Users
+Top Clients
+FTP Server
+FTP Source Port
+Top Methods
+Top Status
+FTP Reports Overview
+FTP Events Summary
+Read also
+This document elaborated the IIS FTP reports available in the product console and their role in monitoring file transfer activities, user access, and FTP server operations. Explore related report sections to gain deeper visibility into security events and operational trends.
+IIS W3C Web reports
+MSSQL reports
+MySQL reports
+Oracle reports
+PGSQL reports

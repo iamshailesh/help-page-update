@@ -1,0 +1,10 @@
+The vulnerability scanners to be monitored by EventLog Analyzer can be managed in this section. Vulnerability scanners can be added, deleted, and all the vulnerability scanners that are being monitored can be viewed.
+Settings > Log Source Configuration > Applications
+How to add a vulnerability scanner?
+To add a vulnerability scanner, click the Import Vulnerability Data button.
+View Vulnerability Imports
+After you import a vulnerability log, the vulnerability scanners will be displayed along with the name of the scanner, type, last import time, and status.
+How to delete a Vulnerability Scanner?
+To delete a threat solution, select the vulnerability scanner you want to delete and click the
+Delete
+icon.

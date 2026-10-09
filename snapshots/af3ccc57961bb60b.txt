@@ -1,0 +1,170 @@
+In this page
+Logging setup: Amazon CloudTrail Logs
+Logging setup: Amazon S3 server access logs
+Logging setup: Amazon ELB access logs
+Enable/disable cloud source
+Delete a cloud source
+Salesforce
+Logging setup: Amazon CloudTrail Logs
+CloudTrail is an API log monitoring web service offered by AWS. It enables AWS customers to record API calls and sends these log files to Amazon S3 buckets for storage. The service provides details of API activity such as the identity of the API caller, the time of the API call, the source IP address of the API caller, the requests made and response elements returned by the AWS service. In addition, it captures a few non-API events (AWS service events and AWS console sign-in events).
+CloudTrail can also be configured to publish a notification for every log file that is delivered, allowing users to take action upon log file delivery.
+Note
+Ensure at least one AWS Cloud Account is configured on Log360Cloud. Follow the steps
+here
+to configure the AWS cloud account.
+(I) Enable CloudTrail
+Login to the AWS console.
+Go to
+AWS Services â Management Tools â CloudTrail
+.
+Choose
+trail log bucket
+.
+Click
+Add new trail
+II) Add the created Cloudtrail's trail log bucket as a data source in Log360 Cloud
+Login to the
+Log360 Cloud console
+.
+Go to
+Settings > Configuration > Manage Cloud Sources
+and click on
+Add Data Source
+.
+Select
+CloudTrail
+from the
+Data source drop-down
+menu.
+Choose the
+Log Fetch Mode, AWS region, the Trail and log bucket
+.
+Click
+Configure
+.
+Logging Setup: Amazon S3 server access logs
+What is S3 server access logging?
+Requests to access S3 bucket can be tracked via access logging. Each access log record provides details about a single access request, such as the requester, bucket name, request time, request action, response status, and error code, if any. This access log information can be useful in identifying the nature of traffic.
+Follow the below given steps to add Amazon S3 server access logs as a data source in Cloud Security Plus.
+Note
+Ensure at least one AWS Cloud Account is configured on Log360Cloud. Follow the steps
+here
+to configure the AWS cloud account.
+Login to the Log360 Cloud console.
+Go to
+Settings > Configuration > Manage Cloud Sources
+and click
+on Add Data Source
+.
+Select
+S3 Server Access Logs
+from the
+Data source drop-down
+menu.
+Select the
+S3 Bucket
+for which you want to enable access logging.
+Click Click Configure..
+Logging setup: Amazon ELB access logs
+Elastic Load Balancer access logs capture information about requests made to load balancers and can be used to analyze traffic patterns and troubleshoot issues. These logs contain details such as the time the request was received, the client's IP address, latencies, request paths, and server responses.
+Follow the below given steps to add Amazon ELB access logs as a data source in Cloud Security Plus.
+Note
+Ensure at least one AWS Cloud Account is configured on Log360Cloud. Follow the steps
+here
+to configure the AWS cloud account.
+Login to the Log360 Cloud console.
+Go to
+Settings > Configuration > Manage Cloud Sources
+.
+Click on
+Add DataSources
+.
+Add DataSources pop-up will be displayed.
+Select
+ELB Access Logs
+from the Data source drop-down menu.
+Select the desired Region.
+Select the Classic, Network and Application Load Balancer for which you want to enable access logging.
+Click
+Configure
+.
+Enable/disable cloud source
+Enabling a cloud source:
+To enable a cloud source in Log360 Cloud,
+Go to Configuration Settings → Manage Cloud Sources → AWS/Microsoft 365 Tab
+Click icon
+located under the
+Actions
+column for the data source you want to enable.
+The data source will be enabled.
+Disabling a cloud source:
+To disable a cloud source in Log360 Cloud,
+Go to Configuration Settings → Manage Cloud Sources → AWS/Microsoft 365 Tab
+Click icon
+located under the Actions column for the data source you want to disable.
+The data source will be disabled.
+Delete a cloud source
+For AWS:
+To delete a cloud source in Log360 Cloud,
+Click delete icon
+located under the
+Actions
+column for that particular data source.
+The data source will be deleted.
+For Microsoft 365:
+You cannot delete a particular data source of a M365 tenant. You can only delete the entire Microsoft 365 tenant in Log360 Cloud. To stop monitoring a specific log source,
+Go to
+Admin → Account Settings → Configure Cloud Accounts
+.
+Salesforce
+Log360 Cloud monitors Salesforce user activity by automatically collecting and analyzing event log files. By analyzing Salesforce user activity, you can detect potential security threats, monitor logons, and search activities; and receive alerts on suspicious behavior for enhanced data protection and compliance.
+Setting Up a Connected App with Permissions in Salesforce
+Begin by logging in to your Salesforce account, ensuring that the user account used has
+API Enabled
+.
+Note:
+It's important to have the Salesforce
+Event Monitoring
+add-on license for fetching and analyzing Salesforce logs in Log360 Cloud.
+If using a non-admin user, ensure the following permissions are enabled:
+View event log files (for collecting event logs)
+View setup and configuration (for collecting audit logs)
+View role and role hierarchy (for collecting audit logs)
+To create a Connected App with permissions:
+Navigate to
+Setup â Build â Create â Apps â Connected Apps
+.
+Click on
+New
+and provide the
+Connected App Name, Contact Email,
+and
+Callback URL
+.
+Enable
+OAuth Settings
+and grant full access.
+Click
+Save
+. The Connected App will be created, and you can continue to view the
+Consumer Key
+and
+Consumer Secret
+.
+Navigate to
+Setup â Administer â Manage Apps â Connected Apps
+.
+Click on the newly created Connected App. Under OAuth Policies, relax
+IP restrictions.
+Click
+Save
+.
+To obtain the Salesforce client URL:
+Go to the Salesforce login page and copy the URL from your browser's address bar.
+Paste the URL in the Login URL field(e.g., https://testingtech-ap48.my.salesforce.com).
+Entering Salesforce credentials in the Log360 Cloud console:
+Go to Settings > Admin > Account Settings.
+Move to the Configure Cloud Accounts tab and click on the Add Cloud Account button.
+From the Add New Cloud Account page, select the Salesforce Cloud Type from the dropdown box.
+Enter a display name.
+Input the username, password, client ID (Consumer Key), and client secret (Consumer Secret), along with the Login URL, to enable Log360 Cloud to start collecting logs.

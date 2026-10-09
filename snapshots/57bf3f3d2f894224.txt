@@ -1,0 +1,59 @@
+In this page
+Overview
+Steps to configure custom compliance reports
+Overview
+This page details how to configure custom compliance reports to meet specific regulatory and organizational requirements. By creating a new compliance mandate, selecting relevant data sources, and mapping appropriate reports, you can generate structured audit data tailored to your compliance needs. These reports support internal audits, demonstrate adherence to standards, and simplify compliance reporting.
+Steps to configure custom compliance reports
+In your Log360 account, navigate to the
+Compliance
+tab.
+In the top-right corner, click
+Manage Compliance
+.
+NOTE
+You can also configure pre-defined compliance mandates source by clicking the
+Configure Source
+option in the Compliance tab.
+Figure 1: Configuring custom compliance reports
+Click
+Create New Compliance
+.
+Figure 2: Configuring custom compliance reports
+In the
+Add Compliance
+page, enter a name for the compliance mandate in the
+Compliance Name
+field and click the
+icon to save it.
+Figure 3: Naming compliance mandate
+Click
+Description
+to add details about the compliance mandate, and click
+OK
+to save.
+Figure 4: Adding a description for the compliance
+Under
+Select Source
+, click the relevant device tab.
+Figure 5: Selecting a source
+Click
+Advanced Configuration
+to select a specific product.
+NOTE
+Currently, advanced configurations are available only in Log360 for File Audit and M365 tabs.
+Figure 6: Advanced Configuration settings
+Click
+Save
+to confirm your selection. This will display the corresponding set of available reports and devices.
+Figure 7: Advanced Configuration settings
+Select
+sources
+based on your requirement.
+Click
+Save
+to finalize the custom compliance configuration.
+Figure 8: Configuring custom compliance reports
+Read also
+This page elaborated on configuring custom compliance reports. To manage and schedule compliance reporting, refer to the following articles:
+Managing compliance regulations
+Scheduling compliance reports

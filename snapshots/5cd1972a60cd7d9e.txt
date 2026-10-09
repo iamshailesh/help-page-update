@@ -1,0 +1,8 @@
+This module lets you manage the applications being monitored by EventLog Analyzer. Applications such as IIS Servers, Vulnerability Scanners, and Security Applications can be added, deleted, and viewed.
+Extensions
+Applications that are integrated as extensions can be found under the Other Applications tab. Currently, the following application extensions are available for EventLog Analyzer:
+Veeam
+Dropbox
+Bitdefender
+Okta
+CrowdStrike

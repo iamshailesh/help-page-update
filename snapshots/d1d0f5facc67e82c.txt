@@ -1,0 +1,233 @@
+This page describes the various steps involved in managing technicians in Log360 Cloud MSSP.
+To manage technicians in Log360 Cloud MSSP, navigate to
+Settings â Admin â Admin Settings â Technician Management
+.
+Adding a new technician
+Enabling/Disabling an existing technician
+Unconfirmed technician
+Requested technician
+Adding a new technician
+To add a technician in Log360 Cloud MSSP,
+Click on
+Add New Technician
+located at the top-right corner.
+The
+Technician Management
+page will be displayed.
+Enter the
+Email
+address.
+Choose the
+Access Role
+from the drop-down list.
+You can click
+MSSP Admin
+- Administrators will have all the privileges.
+Click
+Add
+.
+You can choose
+MSSP Operator
+- Operators, unlike administrators, have privilege only over the associated customers and their customer's data.
+Use
+Select Customers
+to add Customers from the drop-down menu.
+Click on
+Add
+.
+An invitation to join will be sent to this email address.
+Enabling/Disabling an existing technician
+Disabling a technician:
+Click
+located under the
+Action
+column for that particular technician.
+A Confirm Action dialog box will be displayed, click
+Yes
+.
+The technician will be disabled.
+To disable multiple technicians in Log360 Cloud,
+Click on the checkbox for each technician.
+Click on
+Manage
+located above the
+Action
+column and click on
+Disable
+from the drop-down list.
+The selected technicians will be disabled.
+To disable all the technicians in Log360 Cloud,
+Click on the checkbox located below the search icon next to the
+Action
+column. All the technicians will be selected.
+Click on
+Manage
+located above the
+Action
+column and click on
+Disable
+from the drop-down list. All technicians will be disabled.
+Viewing disabled technicians:
+To view disabled technicians go to
+Category
+located at the top-left corner in the
+Technician Management
+page and select
+Disabled technicians
+from the drop-down list. All the disabled technicians will be displayed.
+Enabling a technician:
+Click
+located under the
+Action
+column for that particular technician.
+A
+Confirm Action
+dialog box will be displayed, click
+Yes
+.
+The technician will be enabled.
+To enable multiple technicians in Log360 Cloud,
+Click on the checkbox for each technician.
+Click on
+Manage
+located above the
+Action
+column and click on
+Enable
+from the drop-down list.
+The selected technicians will be enabled.
+To enable all the technicians in Log360 Cloud,
+Click on the checkbox located below the search icon next to the
+Action
+column. All the technicians will be selected.
+Click on
+Manage
+located above the
+Action
+column and click on
+Enable
+from the drop-down list.
+All the technicians will be enabled.
+Viewing enabled technicians:
+To view enabled technicians, go to
+Category
+located at the top-left corner in the Technician management page and select Enabled technicians from the drop-down list. All the enabled technicians will be displayed.
+Re-inviting a technician or deleting invitations
+To re-invite or delete a technician's invitation in Log360 Cloud, go to
+Category
+located at the top-left corner in the
+Technician Management
+page and select
+Unconfirmed Technicians
+from the drop-down list. All the unconfirmed technicians will be displayed.
+Re-invite a technician:
+Click re-invite
+located under the
+Action
+column for that particular technician.
+A
+Confirm Action
+dialog box will be displayed, click
+Yes
+.
+The technician will be re-invited.
+To re-invite multiple technicians in Log360 Cloud MSSP,
+Click on the checkbox for each technician.
+Click on
+Manage
+located above the
+Action
+column and click on
+Re-invite Technician
+from the drop-down list.
+The selected technicians will be re-invited.
+To re-invite all the technicians in Log360 Cloud MSSP,
+Click on the checkbox located below the search icon next to the
+Action
+column. All the technicians will be selected.
+Click on
+Manage
+located above the
+Action
+column and click on
+Re-invite Technician
+from the drop-down list.
+All the technicians will be re-invited.
+Delete a technician's invitation:
+Click delete icon
+located under the Action column for that particular technician.
+A
+Confirm Action
+dialog box will be displayed, click
+Yes
+.
+The technicianr's invitation will be deleted.
+To delete invitations sent to multiple technicians in Log360 Cloud,
+Click on the checkbox for each technician.
+Click on
+Manage
+located above the
+Action
+column and click on
+Delete Invitation
+from the drop-down list.
+Invitations sent to the selected technicians will be deleted.
+To delete invitations sent to all the technicians in Log360 Cloud,
+Click on the checkbox located below the search icon next to the
+Action
+column. All the technicians will be selected.
+Click on
+Manage
+located above the
+Action
+column and click on
+Delete Invitation
+from the drop-down list.
+Invitations sent to all the technicians will be deleted.
+Accepting and rejecting technician requests
+To accept or delete a technician's request in Log360 Cloud, go to Category located at the top-left corner in the Technician management page and select Requested technicians from the drop-down list. All the requested technicians will be displayed.
+Accept a technician's request:
+Click on the accept request
+located under the
+Action
+column for that particular technician.
+In the
+Add Technician
+dialog box displayed, enter the
+Email
+address.
+Choose the
+Access Role
+from the drop-down list.
+Click on
+Save
+.
+The technician's request will be accepted and the technician will be added.
+Reject a technician's request:
+Click the reject request icon
+located under the
+Action
+column for that particular technician.
+The technician's request will be rejected.
+To reject requests sent by multiple technicians in Log360 Cloud MSSP,
+Click on the checkbox for each technician.
+Click on
+Manage
+located above the
+Action
+column and click on
+Reject request
+from the drop-down list.
+Requests sent by the selected technicians will be rejected.
+To reject requests sent by all the technicians in Log360 Cloud MSSP,
+Click on the checkbox located below the search icon next to the
+Action
+column. All the technicians will be selected.
+Click on
+Manage
+located above the
+Action
+column and click on
+Reject request
+from the drop-down list.
+Requests sent by all the technicians will be rejected.

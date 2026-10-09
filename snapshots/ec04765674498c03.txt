@@ -1,0 +1,31 @@
+Log360 Cloud allows you to track all file upload requests made by client devices to the server network. You can keep track of all successful and failed file upload requests to detect malicious web activity and data thefts.
+How to view file upload details in Log360 Cloud?
+Navigate to
+Reports
+and select the
+Cloud Protection
+from the
+Devices
+drop-down menu.
+Under Cloud Protection, go to the File Upload tab.
+Log360 offers the following out-of-the-box reports to provide visibility into file upload activities in your environment:
+All Upload Requests
+: Lists all the client devices involved in file uploads.
+SharePoint/OneDrive Upload Requests
+: Lists all the file upload requests made from SharePoint or OneDrive.
+Office 365/ Microsoft365 Upload Requests
+: Lists all the files upload requests made to Office 365 application suite, which includes OneDrive, SharePoint, Outlook, Word, Excel, PowerPoint, Power Apps, Stream, Forms, and Planner.
+Zoho App Upload Requests
+: Lists all file upload requests made to Zoho applications.
+Google Apps Upload Requests
+: Lists all file upload requests made to Google applications.
+Dropbox Upload Requests
+: Lists all file upload requests made to Dropbox.
+Box Upload Requests
+: Lists all file upload requests made to Box.
+Yahoo Upload Requests
+: Lists all file upload requests made to Yahoo applications.
+Multipart Upload Requests
+: Lists all the file upload requests made as multipart HTTP requests. A multipart HTTP request enables files to be sent as a single body by an HTTP client to an HTTP server.
+Note
+File upload requests made from personal O365 accounts won't be reported under file upload reports by the solution as they use a different API. File upload requests made to Dropbox desktop applications won't be reported as they use certificate pinning, which doesn't support deep packet inspection by the gateway servers.

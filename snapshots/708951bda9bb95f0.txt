@@ -1,0 +1,23 @@
+In this page
+How to whitelist a new source?
+Threat Alerting
+To switch between the two threat storage (in-memory threat storage and disk-based threat storage) available in EventLog Analyzer, please follow the steps given below.
+Note
+In-memory threat store requirements
+: The in-memory threat storage requires a minimum of 2 GB RAM to be allocated to EventLog Analyzer; of which at least 512 MB should be available for use.
+Switching to in-memory threat storage is not possible in 32-bit systems.
+Go to
+Settings → Admin Settings → Management → Threat Feeds
+.
+Under Threat Feeds sub section, click on
+Settings icon
+on the top right corner.
+Choose between
+Disk based Threat Storage
+and
+In-Memory Threat Storage
+. You can also set a
+Minimum reputation score
+for trustworthiness of IPs and URLs. Click on
+Save
+.

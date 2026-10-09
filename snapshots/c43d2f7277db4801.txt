@@ -1,0 +1,18 @@
+EventLog Analyzer analyses data from vulnerability scanners and provides insights to help
+identify vulnerabilities within the network. For this you need to export data from the
+respective vulnerability scanners and then import it to EventLog Analyzer. You can export
+the data by following the steps given fbelow:
+Go to the Scans menu in the dashboard.
+Right-click the scan report that you need to export.
+Select Download from the Quick Actions menu.
+Select Download Format as Extensible Markup Language(XML).
+Once you have exported the data from the corresponding scanners, you need to import the log
+data to the EventLog Analyzer server.
+Adding vulnerability scanners to EventLog Analyzer
+To monitor vulnerability scanner data in EventLog Analyzer, you need to import the
+corresponding log data to the EventLog Analyzer server. You can import log data by
+navigating to Settings > Vulnerability Data Analysis > Import.
+Enter the vulnerability scanner's name.
+Choose the vulnerability scanner's application type.
+Specify the location of the log file which has to be imported.
+Click on Import.

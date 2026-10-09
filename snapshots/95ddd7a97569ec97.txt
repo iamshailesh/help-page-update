@@ -1,0 +1,201 @@
+In this page
+Server hardware requirements
+Infrastructure best practices
+VM infrastructure
+CPU & RAM
+Disk
+Web browsers
+Databases
+Windows Agent Requirements
+Operating systems
+Installation server
+This section lists the minimum system requirements for installing and working with EventLog Analyzer.
+Server hardware requirements
+Component
+Minimum
+Recommended
+Processor cores
+12 cores
+24 cores
+RAM
+32 GB
+48 GB
+IOPS
+750
+>5000
+Disk space
+1.2 TB (SSD)
+2.5 TB (SSD)
+NOTE
+A dedicated server is recommended. Disk space mentioned above does not include archive storage.
+Single node capacity:
+A single node can handle up to 250 GB/day of log flow or manage up to 2 TB of search data.
+What if log flow > 250 GB/day or search data > 2 TB?
+If the combined log flow exceeds 250 GB/day or search data exceeds 2TB, implementing the Scalability Architecture is recommended.
+Additional log processors can be added to scale the product horizontally.
+Scalability architecture benefits
+Feature
+Description
+Scalable architecture
+Additional processors can be added to handle high log flow.
+High availability
+Logs continue to be collected and forwarded even if a processor fails.
+Centralized search
+Logs collected across processors can be searched from any processor.
+Customization
+Processors can be assigned specific roles or tasks.
+Agent requirements
+Agent log flow
+CPU cores
+RAM
+Free disk space
+Architecture
+â¤ 25 GB/day
+4
+4 GB
+20 GB
+32/64 bit
+â¤ 125 GB/day
+6
+4 GB
+20 GB
+32/64 bit
+â¤ 250 GB/day
+12
+4 GB
+20 GB
+32/64 bit
+NOTE
+For offline log collection, add 1 GB to the maximum agent data directory size.
+Database support
+Bundled database
+Type
+Database
+Default bundled database
+PostgreSQL
+Supported external databases
+Database type
+Supported versions
+PostgreSQL
+Version 10 - 14
+Microsoft SQL Server
+2012 and above
+Hardware requirements for external database
+Component
+Requirement
+CPU
+6 cores
+RAM
+8-12 GB
+Disk space
+50-100 GB
+Disk type
+SSD
+Infrastructure best practices
+Allocate 100 percent RAM/CPU:
+Allocate 100 percent RAM/CPU to the virtual machine running Log360. Sharing memory/CPU with other virtual machines on the same host may result in RAM/CPU starvation and negatively impact Log360's performance.
+Use Thick Provisioning:
+Employ thick provisioning, as thin provisioning increases I/O latency. In VMware environments, select
+Thick provisioned, Eagerly Zeroed
+, since lazily zeroed disks offer lower performance.
+Disable VM Snapshots:
+Enabling VM snapshots is not recommended as the host duplicates data across multiple blocks, increasing reads and writes, which results in higher I/O latency and degraded performance.
+CPU & RAM Utilization
+CPU Threshold: Server CPU utilization should always be maintained below
+85%
+to ensure optimal performance.
+Elasticsearch RAM Allocation: At least
+50%
+of server RAM should remain free for off-heap utilization by Elasticsearch for optimal performance.
+Disk & Storage Configuration
+Recommended Storage Type: Disk latency greatly affects Log360 performance.
+Direct-attached storage (DAS)
+is recommended (near-zero latency). Enterprise SANs can also be used if they are faster than standard SSDs.
+Supported Drives: Local and remote (NAS) drives are supported for storing live search indexes and archive data.
+Avoid Blob Storage for Indexes: Search indices require fast random access. This is
+not possible
+with blob storage-type data stores such as S3 and Azure Blob storage.
+Cluster / Shared Storage Impact: When running on shared storage (SAN/vSAN/Shared SSD), disk performance can be affected by load from other VMs ("noisy neighbors"). This causes fluctuating IOPS and high latency. We recommend using
+dedicated disks
+or
+guaranteed IOPS
+.
+Operating Systems
+Production
+Windows:
+Server 2025, 2022, 2019, 2016, 2012 R2, 2012
+Linux:
+Ubuntu 14+, Red Hat 7+, CentOS 7+
+Evaluation
+Windows:
+Windows 8 & above OR Server 2012
+Linux:
+Ubuntu 14+, CentOS 7+, Red Hat 7+, OpenSUSE 15+
+To estimate the storage and node requirements for your deployment, refer to the
+Log360 SIEM sizing calculator
+page.
+Eventlog Analyzer on Windows v/s Linux
+The below table lists all the differences of the Eventlog Analyzer instance when installed in Windows and Linux.
+Feature
+Windows
+Linux
+Domain and workgroup discovery
+Available
+N/A
+Device discovery
+Available
+N/A
+Windows devices and Windows application log collection
+Agentless, agent-based and third party syslog forwarders supported
+Agent-based and third party syslog forwarders supported
+Auto Push and Upgrade Windows agent
+Available
+N/A
+IIS Sites discovery and configuration
+Available
+N/A
+Note: IIS log collection is supported via import
+SQL Server as back-end database
+Available
+N/A
+MS SQL discovery and configuration
+Available
+N/A
+Note: MS SQL log collection is supported via Windows agent
+MySQL discovery and configuration
+Available
+MySQL discovery is supported only for Linux devices. MySQL log collection from Windows machines can be done via import.
+Workflow
+All actions are available
+Windows environment-related actions, such as process actions, service actions, AD actions, and Windows actions, are not available.
+AD user login
+Available
+N/A
+Smart Card Login & Configuration
+Available
+N/A
+Installation server
+SIEM solutions are resource-intensive. It is recommended to provide a dedicated server for their optimal performance.
+Eventlog Analyzer uses Elasticsearch. Elasticsearch process is expected to utilize off-heap memory for better performance. Off-heap memory is maintained by the operating system and will free up when necessary.
+Quick Links
+How toâs
+Knowledge base
+Troubleshooting
+How toâs
+How can I view archived audit reports and manage archive settings using ADManager Plus?
+Unable to apply the license file in ADManager Plus
+ADManager Plus upgrade failure
+The file may be corrupted or check for the available disk space
+Unable to start ADManager Plus
+Knowledge base
+How can I view archived audit reports and manage archive settings using ADManager Plus?
+Unable to apply the license file in ADManager Plus
+ADManager Plus upgrade failure
+The file may be corrupted or check for the available disk space
+Unable to start ADManager Plus
+Troubleshooting
+How can I view archived audit reports and manage archive settings using ADManager Plus?
+Unable to apply the license file in ADManager Plus
+ADManager Plus upgrade failure
+The file may be corrupted or check for the available disk space
+Unable to start ADManager Plus

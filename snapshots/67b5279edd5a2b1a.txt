@@ -1,0 +1,8 @@
+Log360 Cloud allows you to refine your search results by adding or removing certain fields since they may or may not be useful to you. To add or remove fields from the search results, follow the steps given below.
+Once you have obtained the result for a search, you will see the option
+Add/Remove Fields
+. Click on it.
+In the window that pops-up, you can select the fields that you want to be displayed in the search result by ticking the corresponding boxes. Similarly, you can remove fields from being displayed in the search result by leaving the corresponding boxes unticked.
+Click
+Save
+to save your preferences.

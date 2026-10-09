@@ -1,0 +1,29 @@
+You can change the following settings of Log360 from this tab.
+Connection Type
+Security Hardening
+General
+Connection Type
+Choose your connection type. You can choose to use either http or https.
+Specify the port number of your choice after choosing they type of connection.
+Default ports
+- HTTP : 8095, HTTPS : 8458.
+To enable LDAP SSL, mark the check-box against the
+Enable LDAP SSL
+field.
+Click
+Save
+to store the configured settings.
+General
+Be alerted when the available disk space falls below a pre-defined level (1 GB, 2 GB or 5 GB), by selecting the appropriate value from the drop-down box.
+Select the
+Session Expiry Time
+, which is the time for which a user session would last, from the drop-down box.
+Select the level of logs that is to be collected by the product. The default working mode for Log360 is
+Normal
+with minimal set of debugging information. Select
+Debug
+to collect detailed log reports.
+Enable or disable collection of anonymous usage statistics gathering to be sent to us.
+Click
+Save
+to store the configured settings.

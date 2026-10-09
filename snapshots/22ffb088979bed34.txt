@@ -1,0 +1,153 @@
+EventLog Analyzer provides a wide range of options to contact the support team, make feature requests, ask for a personalized demo, get online training, and more.
+To go to the Support page, click the Support tab on the menu bar. The different channels through which you can reach out to us will be listed here. You can also click on the links below to reach our support team.
+Request type
+Link
+Description
+Technical Assistance
+Mail Us
+Click this
+link
+or click '
+Mail Us
+' in the Support Page of EventLog Analyzer. Fill in the required fields with a detailed description of the problem that you encountered. Click on Submit.
+Technical Assistance
+EventLog Analyzer Training
+Click this
+link
+or click '
+Training & Certification
+' in the Support Page of EventLog Analyzer to take up a course and equip yourself with the knowledge required to work with EventLog Analyzer.
+Create Log - Support Information Files
+Go to 'Support Info' in the support page of EventLog Analyzer to create a support information file.
+It can be done automatically if you click the '
+Auto
+' option.
+To do it manually, click the '
+Manual
+' option. A set of instructions along with an upload link will be presented to you.
+Note
+: Click
+here
+to know more about Support Information Files.
+Online Store - Get a Price Quote
+Price Quote
+Click this
+link
+or click '
+Get Quote
+' under Online Store in the Support Page of EventLog Analyzer to get a personalized quote that best suits your requirements.
+Online Store - Purchasing the product
+Buy Now
+Click this
+link
+or click '
+Buy Now'/'Pricing
+' under Online Store in the Support Page of EventLog Analyzer.
+New feature requests
+Feature requests
+If you'd like to see new features in the upcoming releases of EventLog Analyzer, click this
+link
+to give us your suggestions.
+Configuration videos
+How-To-Videos
+Click this
+link
+or click '
+How-Tos
+' under Watch Video in the support page of EventLog Analyzer.
+Under the '
+How to
+' section, there are videos on configuring EventLog Analyzer for different use cases.
+Feature videos
+Feature-Videos
+Click this
+link
+or click '
+How-Tos
+' under Watch Video in the support page of EventLog Analyzer.
+Under the '
+Features
+' section, there are videos on different features of EventLog Analyzer.
+Knowledge Base
+Documents
+Click this
+link
+or click '
+Documents
+' under Knowledge Base in the Support Page of the EventLog Analyzer solution to understand how to deploy, configure, and generate reports using EventLog Analyzer.
+Knowledge Base FAQ
+FAQ
+Click this
+link
+or click '
+FAQ
+' under Knowledge Base in the support page of EventLog Analyzer to view answers to frequently asked questions.
+Knowledge Base Case Studies
+Case Studies
+Click this
+link
+or click '
+Case Studies
+' under Knowledge Base in the support page of EventLog Analyzer.
+This page has case studies on how EventLog Analyzer has helped customers fulfill their requirements under different circumstances.
+Contact our support team
+Contact Us:
+Toll Free Number:
+US
++1 844 649 7766
+UK
++44 800 028 6590
+Australia
++1 800 631 268
+China
++86 400 660 8680
+International
++1 925 9249500
+Direct Dialing Number
++1 408 352 9254
+Mail us at:
+eventlog-support@manageengine.com
+Live Chat with the support team
+Live Chat
+Click this
+link
+or click '
+Live Chat
+' in the Support Page of EventLog Analyzer for a live chat with the support team.
+Request a personalized Demo
+Schedule Demo
+Click this
+link
+or click '
+Personalized Demo
+' in the Support Page of EventLog Analyzer to schedule a personalized demo.
+Note
+: Personalized demos are available only during the free trial period.
+Talk To Us
+Click '
+Talk To Us
+' in the Support Page of EventLog Analyzer to directly talk with the Support team.
+Note
+: This feature is available only for users with access to premium support.
+Free Online Training
+Click the '
+Events
+' Tab in the support page of EventLog Analyzer to sign up for upcoming webinars, seminars and workshops. You can also watch videos of completed webinars, seminars and workshops under 'Completed Events' in the Events Tab.
+User Forums
+EventLog Analyzer User forums
+Click this
+link
+or click '
+View All
+' under '
+Recent Forum Posts
+' in the Support Page of EventLog Analyzer. In this forum you can post your queries, interact with other EventLog Analyzer users and also get answers from out support team.
+Announcements
+EventLog Analyzer Announcements
+Click this
+link
+or click '
+View All
+' under '
+Announcements
+' in the support page of the EventLog Analyzer solution to go to the EventLog Analyzer user forum announcements page for the latest announcements and updates.

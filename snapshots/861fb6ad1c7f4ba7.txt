@@ -1,0 +1,26 @@
+To configure the Syslog service in your Malwarebytes devices, follow the steps below:
+Log into the
+Management
+console of the Malwarebytes device.
+Move to the
+Admin
+pane and open the
+Syslog
+Settings
+tab.
+Click
+Change
+and tick the
+Enable Syslog
+check box.
+To export traffic monitoring logs to EventLog Analyzer server, enter the following
+details in the space provided:
+Address <EventLog Analyzer server IP address>
+Port <513/514>
+Protocol
+Payload format <CEF>
+Click
+OK
+to save.
+Note
+At the moment, only the Malwarebytes Management Console (MBMC) is supported.

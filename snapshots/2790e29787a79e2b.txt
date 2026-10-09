@@ -1,0 +1,24 @@
+Login to the FireEye device as an
+administrato
+r.
+Navigate to
+Settings > Notifications
+, select
+rsyslog
+and the
+Event type
+.
+Click
+Add Rsyslog Server
+.
+In the dialog box that opens, enter the
+EventLog Analyzer
+server
+IP address
+in the given field. Choose
+UDP
+as the protocol and the format as
+CEF
+(default).
+Click
+Save.

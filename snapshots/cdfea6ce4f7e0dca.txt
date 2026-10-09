@@ -1,0 +1,55 @@
+In this page
+Pre-requisites
+The
+Log360 agent
+collects log data from devices and forwards it to the Log360 server for centralized monitoring and analysis.
+The agent is required in the following scenarios:
+To monitor files on
+Windows file servers
+.
+When there are
+RPC connectivity issues
+between the log source and the product console's server.
+Windows agent installation
+is mandatory to collect Windows event logs when the product console's server is deployed on
+Linux
+.
+The agent can be deployed on devices using multiple methods:
+Using the product console
+- Direct installation from the product interface.
+Using Group Policy Objects (GPOs)
+- Automates agent installation across multiple Windows devices in Active Directory.
+Using SCCM or similar software deployment tools
+- Supports silent installation for Windows and Linux devices.
+Using Endpoint Central
+- Create and deploy a software package for bulk agent installation.
+NOTE
+Silent installation allows the agent to be installed in the background without displaying any installation prompts or dialogs. This is especially useful when deploying the agent on multiple devices or using software deployment tools like SCCM, GPO, or Endpoint Central.
+Manual installation
+- For single devices or cases where automated deployment is not possible.
+Pre-requisites
+Before installing the Log360 agent, ensure that the target devices meet the following requirements:
+Supported Operating Systems:
+Windows Client OS:
+Windows XP and later
+Windows Server OS:
+Windows Server 2003 and later
+Linux OS:
+RedHat (RHEL), SuSE, Fedora, CentOS, Ubuntu, Debian
+User Privileges:
+Windows devices:
+The installation account must have
+administrator privileges
+.
+Linux devices:
+The user must have
+sudo
+or root access.
+NOTE
+For additional information on the prerequisites and requirements for Windows agent installation, refer to
+this
+help document.
+Read also
+This document explained how and when to install the agent, along with supported deployment methods and pre-requisites. To learn how to install and manage agents, refer to the following documents:
+Agent installation
+Managing agents

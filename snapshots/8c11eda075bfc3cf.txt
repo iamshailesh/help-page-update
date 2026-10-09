@@ -1,0 +1,170 @@
+This page elaborates the steps to manage the threat sources of EventLog Analyzer.
+Enabling or disabling the default threat server
+Adding TAXII server
+Editing TAXII server configuration
+Deleting TAXII server
+Managing TAXII feeds
+Advanced threat analytics
+Enabling or disabling the default threat server
+What is the default threat server?
+EventLog Analyzer collects threat information from various STIX/TAXII based threat feeds such as
+Firehol, PhishTank, ThreatFox, AlienVault OTX
+and
+Cyware
+on a daily basis. The threat information (malicious IPs, URLs, and domain names) is processed and stored on the ManageEngine cloud server. EventLog Analyzer securely connects to the cloud service and downloads the threat feed everyday. Using this information, it detects and raises an alert immediately when malicious sources interact with your enterprise network.
+How to enable or disable the default threat server?
+Go to
+Settings > Threat Management > STIX/TAXII Threat Feeds
+.
+Click the enable/disable icon under
+Actions
+to enable/disable the default server.
+Note
+You cannot edit or delete the default server.
+By default, the default threat server is disabled when Advanced Threat Analytics (ATA) is enabled as ATA has a much larger and more accurate threat data set. If required, you can override this by enabling the default threat server again. When default threat server is enabled, if a particular threat source is not flagged by ATA, EventLog Analyzer will check in default threat server's threat database and flag the threat source accordingly.
+How to add a new STIX/TAXII server?
+Go to
+Settings > Threat Management > STIX/TAXII Threat Feeds
+.
+Click
+Add New Server
+.
+Find the "
+Add New Server
+" button located on the top right corner.
+In the
+Add Server
+box,
+For a
+Custom STIX/TAXII Server
+, enter the
+Display Name, URL, Username, Password
+and choose the
+STIX/TAXII Version
+of the server.
+Choose the STIX/TAXII version of the custom server that is to be configured
+For
+Quick-Deploy Servers
+, choose a STIX/TAXII server from drop-down, enter the
+Credentials (Username or API key or Client ID, Password or Secret key)
+as required for the corresponding server. URL and Display name are both automatically assigned by EventLog Analyzer for Quick- Deploy Servers.
+Choose a
+Quick Deploy Server
+from the options presented in the drop down box.
+In the
+Poll From
+section, specify the start date from when the feeds should be collected.
+In the Schedule drop down list, select the schedule frequency and the time for syncing data from the TAXII server.
+To save the server configuration, click
+Add Server.
+How to edit TAXII server configuration?
+Go to
+Settings > Threat Management
+.
+Click the
+edit icon
+against the server.
+The edit option
+is present under the Actions column for each server.
+You can make the required changes such as the schedule to sync data from the TAXII server.
+To save the changes made, click the
+Update Server
+button.
+How to delete TAXII server?
+To delete an existing TAXII server,
+Go to
+Settings > Threat Management
+.
+Click the
+delete icon
+corresponding to the server to be deleted.
+The delete option
+is present under the Actions column for each server.
+Click
+Yes
+in the delete confirmation pop up box.
+How to manage TAXII server feed?
+Go to
+Settings > Threat Management > STIX/TAXII feeds
+.
+Click
+Manage Feeds
+corresponding to the server to be managed.
+The
+Manage Feeds
+option can be found within the dedicated column for each server.
+Click the enable/disable icon under
+Actions
+to enable/disable polling for the corresponding feed. Click
+Yes
+in the pop-up to confirm.
+Click
+Poll now
+poll the feed immediately.
+Quick-Deploy STIX/TAXII Servers
+Follow the instructions above to integrate Quick-Deploy STIX/TAXII threat intelligence feeds with EventLog Analyzer. You may need to contact your vendor directly to obtain the credentials for configuration.
+AlienVault OTX
+Learn more about
+Alienvault OTX API
+. Sign up to receive API key.
+Cyware Threat Intelligence
+Learn more about
+CywareThreatIntelFeeds
+. To receive credentials, signup
+here
+.
+IBM X-Force
+Learn more about
+IBM X-Force Integration
+. To purchase, please
+click here
+.
+Kaspersky Threat Intelligence
+Learn more about
+Kaspersky Threat Feeds
+. To purchase, please
+click here
+.
+PulseDive Threat Intelligence
+Learn more about
+PulseDive
+. To purchase, please
+click here
+.
+Sectrio Threat Intelligence
+Learn more about
+Sectrio
+. To purchase, please
+click here
+.
+SecAlliance- ThreatMatch Intelligence
+Learn more about
+ThreatMatch
+. To purchase, please
+click here
+.
+STIX/TAXII versions of the Quick-Deploy Servers supported in EventLog Analyzer:
+S.no
+SERVER NAME
+STIX/TAXII VERSION
+1
+AlienVault OTX
+1.x
+2
+Cyware Threat Intelligence
+2.1
+3
+IBM X-Force
+2.0
+4
+Kaspersky Threat Intelligence
+2.1
+5
+Pulsedive Threat Intelligence
+2.1
+6
+Sectrio Threat Intelligence
+2.1
+7
+SecAlliance-ThreatMatch Intelligence
+2.1

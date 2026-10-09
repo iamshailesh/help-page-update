@@ -1,0 +1,22 @@
+Log360 Cloud allows you to save a set of search parameters such as the query, selected devices, log types, fields, etc., in case you might need to run the same search later. To save a set of search parameters, follow the steps given below.
+Run a search with the required parameters. Once you have obtained the result for the search, you will see the option
+Save As
+.
+Click on
+Save As
+and then
+Save search
+.
+Now you will be prompted to provide a name for the search result. Enter a suitable name and click
+Save
+.
+After your search parameters have been successfully saved, If you ever need to reuse the same parameters for a future search, simply follow these steps:
+Click on "More" to reveal a dropdown menu.
+Select "Saved Search."
+Pick the saved search containing the desired parameters.
+If you require an exact time range, you can utilize the "Select query with date" option.
+Note
+Under saved searches, a maximum of 20 searches can be saved.
+Search History
+Search requests will be saved in your browser's local storage and displayed as a 'Search History' list. This list can contain up to 50 entries. When the limit is reached, older entries will be deleted to accommodate new ones. If you perform a search with the same criteria as an existing entry in the search history, the new query will replace the previous one.
+Search requests are saved in local storage and can be accessed in the 'Search History' under the 'More' dropdown.

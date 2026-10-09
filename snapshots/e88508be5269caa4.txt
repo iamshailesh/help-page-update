@@ -1,0 +1,86 @@
+Configuring the Syslog Service on Arista Switches
+Reports for Arista Devices
+Configuring the Syslog Service on Arista Switches
+Login to the Arista Switch
+Go to the
+config
+mode.
+Configure the Switch as below to send the logs to the Eventlog Analyzer Server
+Arista#
+config terminal
+Arista(config)#
+logging host < Eventlog_Server_Ip > < port_number > protocol [tcp/udp]
+Arista(config)#
+logging trap information
+Arista(config)#
+copy running-config startup-config
+To configure command executed logs:
+Arista (config)#
+aaa accounting commands all console start-stop logging
+Arista (config)#
+aaa accounting commands all default start-stop logging
+Arista (config)#
+aaa accounting exec console start-stop logging
+Arista (config)#
+aaa accounting exec default start-stop logging
+Arista (config)#
+copy running-config startup-config
+To configure logon logs:
+Arista (config)#
+aaa authentication policy on-success log
+Arista (config)#
+aaa authentication policy on-failure log
+Arista (config)#
+copy running-config startup-config
+Arista Events
+All Events
+Important Events
+Logon Reports
+Successful Logon
+Top Source
+Top Users
+Logoff Events
+Top Source
+Top Users
+Successful Logons Trend
+Failed Logon Reports
+Failed Logons
+Top Source
+Top Users
+Failed Logons Trend
+Allowed Traffic
+Allowed Traffic
+Top Source
+Top Destination
+Top Protocol
+Top Port
+Allowed Traffic Trend
+Denied Connections
+Denied Connections
+Top Source
+Top Destination
+Top Protocol
+Top Port
+Denied Connections Trend
+Interface Status
+Interface Up
+Interface Down
+System Events
+Configuration Changes
+Configuration Errors
+System Reboot
+Clock Update
+Command Executed
+Fan Status
+Power Status
+Temperature Status
+Package Status
+Severity Reports
+Emergency Events
+Alert Events
+Critical Events
+Error Events
+Warning Events
+Notice Events
+Information Events
+Debug Events

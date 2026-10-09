@@ -1,0 +1,32 @@
+A banned application refers to any web application or website that poses a threat to the enterprise environment or has a low domain reputation. In such instances, these harmful applications can be added to the list of banned applications for enhanced security.
+Consider a malicious application using clever tactics to infiltrate the network, posing a risk of harm through unauthorized access or potential malware. In response, the application can be banned to safeguard network integrity and prevent security breaches. With Log360 Cloud, you can add web applications to the list of
+Banned Applications
+to block access.
+Steps to add a web application to the banned list
+Navigate to
+Settings > Configuration > Cloud Protection Settings > Cloud App Settings > Banned Applications
+.
+On the Banned Cloud Applications page, click
++Add Application
+.
+Enter application names separated by a comma in the text box. (Example - ransomeware.com, demo.malware.com, mail.phishing.com)
+To edit an application double click on the application name, make the changes and click Enter.
+Click on the
+Review
+button to start the review process. This process will query the information about the provided applications and will take some time for verification. To view the review status click on the
+Open Reviews
+button.
+Once the review is complete, click on
+Continue
+to view the category and reputation of the applications.
+Based on the category and reputation, you can retain or remove them.
+Click on
+Save Changes
+.
+After completing the steps, when the end user accesses the banned websites, the page will indicate the successful blocking of the web application.
+Note
+Delete all application names that you don't want to add before clicking
+Add all
+. When you click
+Add all
+, both the checked and unchecked application names will be added.

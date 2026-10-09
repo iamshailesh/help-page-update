@@ -1,0 +1,23 @@
+In this page
+Overview
+Available Reports
+Overview
+This page lists the CEF format reports available in the product to help monitor events across different severity levels and track the top events based on their class ID or name. These reports assist administrators in analyzing high, medium, and low severity events and identifying the most frequent or critical occurrences in the environment.
+Available Reports
+Report group name
+Report name
+CEF Format Reports
+CEF Format Overview
+Very High Severity Events
+High Severity Events
+Medium Severity Events
+Low Severity Events
+Top Events Based on Event Class ID
+Top Events Based on Event Name
+Read also
+This page detailed the CEF format reports supported by the product for monitoring event severity and identifying top occurrences. Explore related report sections to gain deeper visibility into critical events and operational trends.
+FireEye reports
+Malwarebytes reports
+McAfee reports
+Symantec DLP reports
+Threat analytics reports

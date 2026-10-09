@@ -1,0 +1,92 @@
+Configure the list of Windows servers to be audited
+Open Active Directory Users and Computers.
+Right-click the domain and select New > Group.
+In the New object - Group window that opens, type in âLog360CloudMSâ as the Group name, check Group scope: Domain Local and Group type: Security. Click OK.
+Right-click the newly created group and select Properties > Members > Add. Add all the Windows servers that you want to audit as a member of this group. Click OK.
+Using domain admin credentials, log in to any computer that has the Group Policy Management Console (GPMC) on it.
+Note
+The GPMC will not be installed on workstations and/or enabled on member servers by default, so we recommend configuring audit policies on Windows domain controllers. Otherwise follow the steps in this page to install GPMC on your desired member server or workstation.
+Go to Start > Windows Administrative Tools > Group Policy Management.
+In the GPMC, right-click the domain in which you want to configure the Group Policy. Select Create a GPO and Link it here. In the New GPO window that opens, type in âLog360CloudMSPolicyâ and click OK.
+Select the Log360CloudMSPolicy GPO. Under Security Filtering, select Authenticated Users. Click Remove. In the Group Policy Management window that opens, select OK.
+Select the Log360CloudMSPolicy GPO. Under Security Filtering, click Add and choose the security group Log360CloudMS created previously. Click OK.
+Installing the Group Policy Management Console (GPMC)
+The GPMC must be installed on the machine used to run Log360 Cloud. Install GPMC in the machine running Log360 Cloud using the steps below:
+For Windows Server 2012 and above
+Go to Start > Control Panel, and select Turn Windows features on and off under Programs.
+In the Add Roles and Feature Wizard window that opens, select Features.
+Check Group Policy Management, and click Next.
+Click Install.
+For Windows Server 2008 and 2008 R2
+Go to Start > Control Panel, and select Turn Windows features on and off under Programs.
+In the Server manager window, select Features > Add Features.
+Check Group Policy Management, and click Next.
+Click Install.
+Configure advanced audit policies
+Advanced audit policies help administrators exercise granular control over which activities get recorded in the logs, helping reduce event noise. We recommend configuring advanced audit policies on Windows Server 2008 and above.
+Log in to any computer that has the GPMC with Domain Admin credentials. Open the GPMC, then right-click Log360CloudMSPolicy and select Edit.
+In the Group Policy Management Editor, go to Computer Configuration â Policies â Windows Settings â Security Settings â Advanced Audit Policy Configuration â Audit Policy. Double-click on the relevant policy setting.
+Navigate to the right pane and right-click on the relevant Subcategory. Select Properties, then choose Success, Failure, or both, as directed in the table below.
+Category
+Sub Category
+Audit Events
+Account Management
+Audit Computer Account Management
+Audit Distribution Group Management
+Audit Security Group Management
+Audit User Account Management
+Success
+Success and Failure
+Detailed Tracking
+Audit Process Creation
+Audit Process Termination
+Success
+DS Access
+Audit Directory Service Changes
+Audit Directory Service Access
+Success
+Logon/Logoff
+Audit Logon
+Audit Network Policy Server
+Audit Other Logon/Logoff Events
+Audit Logoff
+Success and Failure
+Success
+Object Access
+Audit File System
+Audit Handle Manipulation
+Audit File Share
+Success and Failure
+Policy Change
+Audit Authentication Policy Change
+Audit Authorization Policy Change
+Success
+System
+Audit Security State Change
+Success
+Force advanced audit policies
+When using advanced audit policies, ensure that they are forced over legacy audit policies.
+Log in to any computer that has the GPMC with Domain Admin credentials. Open the GPMC, right-click Log360CloudMSPolicy, then select Edit.
+In the Group Policy Management Editor, go to Computer Configuration â Policies â Windows Settings â Security Settings â Local Policies â Security Options.
+Navigate to the right pane, then right-click Audit: Force audit policy subcategory settings. Select Properties, then Enable.
+Configure legacy audit policies
+Due to the unavailability of advanced audit policies in Windows Server 2003 and earlier versions, legacy audit policies need to be configured for these types of servers.
+Log in to any computer that has the GPMC with Domain Admin credentials. Open the GPMC, right-click Log360CloudMSPolicy, then select Edit.
+In the Group Policy Management Editor, go to Computer Configuration â Policies â Windows Settings â Security Settings â Local Policies, and double-click Audit Policy.
+Navigate to the right pane and right-click on the relevant policy. Select Properties, then choose Success, Failure, or both, as directed in the table below:
+Category
+Audit Events
+Account Logon
+Success and Failure
+Audit Logon/Logoff
+Success and Failure
+Account Management
+Success
+Directory Service Access
+Success
+Process Tracking
+Success
+Object Access
+Success
+System Events
+Success

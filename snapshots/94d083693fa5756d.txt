@@ -1,0 +1,20 @@
+User Work Hours report is found under User Logon Reports in Active Directory. In order to access the report, the user has to enable the report. Refer to the image below
+Track user work hours
+Effortlessly monitor employee productivity with Log360 Cloud. Track work hours and activity with ease for efficient time management and performance assessment.
+Ensure accurate time tracking:
+Efficiently calculate your team's billable hours by analyzing their clock-in and clock-out times across customized time periods.
+Monitor employee workstations:
+Track employee workstation activities, including logon/logoff, screensaver usage, console locking/unlocking, and remote session connections/disconnections.
+Audit remote and on-site user activities:
+Conduct comprehensive audits of both remote and on-site users to monitor employee productivity and ensure optimal performance during business hours.
+Generate detailed working hours reports:
+Produce daily and weekly reports detailing employee active and idle times, providing valuable insights into their work patterns.
+Boost efficiency with centralized work hours monitoring
+Track work hours
+Click on Total Hours to view daily view
+To see a weekly overview of login events, select 'Weekly View'
+Note
+UserWorkHours report will be available for Standard, Professional, MSSPClient, MSSPEvalClient, ZohoOneTrial and ZohoOne plans.
+User Work Hours report will be based on the product time Zone.
+The data for the User Work Hours report will be updated every 3 hours once the report is enabled.
+Search and storage retention for user work hours is always 30 days, regardless of your configured storage settings.

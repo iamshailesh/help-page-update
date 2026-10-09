@@ -1,0 +1,27 @@
+The product allows you to personalize the appearance of the reports page as required. You can customize the arrangement of reports and report groups.
+Customizing the arrangement of reports and report groups
+To customize the arrangement of reports and report groups, follow the steps given below.
+Open the product and click on the
+Reports
+tab.
+Click on
+Manage Reports
+at the bottom of the left panel. Then, click on
+Manage Predefined Reports
+at the top right corner.
+Select the required log source by clicking on the corresponding tab.
+The arrangement of the sub-categories of the log sources, as seen on the top bar of the reports page, will be displayed. For example, when
+Devices
+is chosen as the log source, the top bar will display the first few devices and the rest is displayed in a drop-down list. You can choose to have your most-used devices displayed first in the top bar to ensure easy access.
+To change the order of devices, hover the mouse pointer on the space to the left of the device name. A
+icon will appear.
+Use the
+icon to drag and drop the devices in the required order.
+You can also enable or disable reports by clicking on the toggle button under the
+Enable/Disable Format
+column corresponding to the required device.
+Similarly, you can also rearrange the reports inside each report group by clicking on the report group and following the steps mentioned above.
+The below function is supported only in the On-Premise version of the product:
+If no devices are configured in a category, you can disable it from the reports page using the "
+Disable Category
+" button available in the top right corner.

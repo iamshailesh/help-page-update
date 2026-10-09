@@ -1,0 +1,53 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the reports available for IBM DB2 databases in the product console. These reports help track database events, monitor schema and data changes, audit user queries, observe connection activities, and review database server operations for compliance, security, and operational analysis.
+Available Reports
+Report group name
+Report name
+DB2 Events
+All Events
+Important Events
+DDL Auditing Report
+Created Databases
+Dropped Databases
+Altered Databases
+Created Tables
+Dropped Tables
+Altered Tables
+Created Schemas
+Dropped Schemas
+Altered Schemas
+Created Views
+Dropped Views
+Altered Views
+Created Index
+Dropped Index
+Altered Index
+Created Triggers
+Dropped Triggers
+Altered Triggers
+DML Auditing Report
+Select Statement
+Insert Statement
+Delete Statement
+Update Statement
+Call Statement
+Database Connection Auditing
+Connection Established
+Connection Terminated
+Database Server Reports
+Diagnostic Log Overview
+Audit Log Overview
+Database Started
+Database Stopped
+DB Configuration Changes
+DBM Configuration Changes
+Read also
+This document elaborated the IBM DB2 reports available in the product console and their role in auditing database activity and monitoring server operations. Explore related report sections to gain deeper visibility into security events and operational trends.
+DHCP Linux reports
+DHCP Windows reports
+ERP reports
+IIS W3C FTP reports
+IIS W3C Web reports

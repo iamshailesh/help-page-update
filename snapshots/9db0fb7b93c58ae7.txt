@@ -1,0 +1,52 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the various Arista reports available in the product console to help administrators monitor device health, track user access, analyze allowed and denied traffic, and review configuration and system events across the network.
+Available Reports
+Report Group Name
+Report Name
+Logon Reports
+Logons
+Logoff
+Logons Trend
+Failed Logon Reports
+Failed Logons
+Failed Logons Trend
+Allowed Traffic Reports
+Allowed Traffic
+Allowed Traffic Trend
+Denied Traffic Reports
+Denied Connections
+Denied Connections Trend
+Interface Status
+Interface Up
+Interface Down
+System Events
+Configuration Change
+System Reboot
+Command executed
+Configuration Errors
+Fan Status
+Power Status
+Temperature Status
+Package Status
+Device Severity Reports
+Emergency Events
+Alert Events
+Critical Events
+Error Events
+Warning Events
+Notice Events
+Information Events
+Debug Events
+Arista Events
+All Events
+Important Events
+Read also
+This document elaborated the list of Arista reports available in the product console and how they help monitor system operations, traffic activity, user access, and device health. Explore related report sections to gain deeper visibility into security events and operational trends.
+HP reports
+pfSense reports
+F5 reports
+Firepower reports
+H3C reports

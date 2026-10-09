@@ -1,0 +1,80 @@
+In this page
+Highlights of Rule Library
+Architecture
+Log360's
+Rule Library
+is a centralized, cloud-delivered repository of security threat detection rules. It is designed to enhance Log360's ability to identify potential security threats. The rules within Log360's Rule Library are primarily based on two standards:
+MITRE ATT&CKÂ® framework: The rules are directly mapped to tactics and techniques used by adversaries, allowing security teams to understand the context of an attack and anticipate the attacker's next move.
+Sigma rules: These are generic, open-source yet credible rules written in standardized format converted to Log360's query structure.
+By leveraging a cloud-delivered rule library, security teams can receive up-to-date detection logic automatically without having to write or manually update every rule, thus staying ahead of emerging threats.
+NOTE
+Explore in depth the functionalities of Log360's
+rule library
+and its
+Security Intelligence Pack
+.
+Highlights of Log360's Rule Library:
+Over 2,000 predefined threat detection rules to spot insider threat, external threats, malware, APTs and more.
+Rules are categorized based on the log sources they are associated with for easier implementation.
+Rules are also mapped to relevant MITRE ATT&CKÂ® threat modelling framework.
+Option to automatically install new threat detection rules based on your security policies. This ensures your systems are immediately protected against the latest threats and attacks as soon as a new rule is released.
+Architecture
+The cloud delivered system of Log360, hosts the detection rules uploaded by ManageEngine. The rules are then delivered to the Log360 server.
+Please note that the Log360 server should have an active internet connection for uninterrupted update of the detection rules.
+For offline or air-gapped environments
+, rule updates can be applied by downloading the latest Rule Library package and configuring the system to use it locally.
+Once the rules are updated, the Available Rules tab in the solution's console lets you install and configure them.
+Our solution also provides auto-installation option which updates the rules in your environment as the rule gets pushed to the Rule Library by ManageEngine team.
+This guide explores how you can selectively install rules or configure auto-updates of rules.
+Understanding Rule Library
+In the
+central view
+of the Rule Library, rule attributes are displayed in a table. Columns represent different fields, and additional columns can be added or removed to customize the view. The Rule Library is divided into two tabs:
+Available Rules
+and
+Installed Rules
+.
+Key aspects of the Rule Library include:
+MITRE ATT&CKÂ® Mapping
+: Each rule is aligned with tactics and techniques from the MITRE ATT&CKÂ® framework, offering better visibility into adversarial behaviors.
+Severity classification
+: Rules are assigned severity levels to help users prioritize detections and response actions effectively.
+Common components:
+These components are present in both the
+Available Rules
+and
+Installed Rules
+tabs.
+Component
+Details
+Rule Name
+The name of the rule for identification.
+Severity
+Shows the rule's criticality level, such as Attention, Critical, or Trouble.
+MITRE ATT&CKÂ® Mapping
+Displays the associated MITRE ATT&CKÂ® tactic and techniques.
+Tags
+Lists related tags such as data source and data component associated with the rule.
+Rule Type
+Specifies whether the rule is Standard, Anomaly, or Advanced.
+Created Time
+The date and time when the rule was first added.
+Last Modified Time
+The date and time when the rule was last modified.
+Description
+Provides a detailed summary of what the rule detects, including its purpose and author information.
+Components specific to the Installed Rules table
+Field
+Details
+Execution Interval
+Defines how criteria matching occurs.
+Continuous
+: Matches incoming logs and raises detection directly if they match.
+Intelligent
+: Runs the criteria on indexed logs and raises detection if matched from indexed logs.
+Created By
+Indicates the source of the rule. In this case, all rules are created by Log360.
+Read also
+This page introduced the Rule Library, its role in enhancing threat detection and architecture. To learn how to manage and configure these rules in your environment, refer to:
+Installing Rules
+Configuring Auto-Install Settings

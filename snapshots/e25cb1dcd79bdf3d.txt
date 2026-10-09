@@ -1,0 +1,39 @@
+Login to the Symantec Endpoint Protection device as an
+administrator
+.
+Navigate to
+Admin
+>
+Servers
+. Select the local site
+or remote site from which log data must be exported.
+Click
+Configure External Logging.
+In the
+General
+tab, from the
+Update
+Frequency
+list, choose how often log data should be sent to the file.
+In the
+Master Logging Server
+list, select the management server to
+which the logs should be sent.
+Check the
+Enable Transmission of Logs to a Syslog Server
+option.
+Enter the following details in the given fields.
+Syslog Server
+- Enter the EventLog Analyzer IP address or domain
+name .
+Destination Port
+- Select the protocol to use and enter the
+destination port that the Syslog server should use to listen for Syslog
+messages.
+Log Facility
+- Enter the number of the log facility that you
+want the Syslog configuration file to use. Valid values range from 0 to 23.
+Alternatively, you could use the default.
+Click
+OK
+.

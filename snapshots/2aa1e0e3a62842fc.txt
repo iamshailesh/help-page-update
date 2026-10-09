@@ -1,0 +1,403 @@
+Overview
+Configuring the Syslog Service on a UNIX devices
+Unix Event Reports
+Overview
+Log360 enables you to configure the Syslog service on UNIX devices to forward logs to the EventLog Analyzer server for centralized monitoring. Once configured, the solution helps you track system activities, user logons and logoffs, failed authentication attempts, account changes, removable disk usage, FTP operations, system events, and more. With a wide range of prebuilt UNIX-specific reports, Log360 helps administrators detect anomalies, investigate incidents, and ensure compliance.
+Configuring the Syslog Service on a UNIX devices
+Steps to configure log forwarding manually
+Note
+Please take a note of the default port numbers used for the different protocols.
+Default port number & protocol used
+513 & 514 UDP
+514 TCP
+513 TLS
+To find the Syslog service used, use the below command
+ps aux | grep syslog
+As a result, this will return the current running Syslog service.
+Follow the steps below to configure log forwarding to EventLog Analyzer server based on the Syslog Service used.
+Add the required entries in the configuration file based on protocol. Restart the syslog daemon service to apply the changes
+syslogd
+File path: /etc/syslog.conf
+UDP:
+*.*<space/tab>@<eventloganalyzer_server_name>:<port_no>
+rsyslogd
+File path: /etc/rsyslog.conf
+UDP:
+*.*<space/tab>@<eventloganalyzer_server_name>:<port_no>
+TCP:
+*.*<space/tab>@@<eventloganalyzer_server_name>:<port_no>
+TLS:
+Note
+Please check the
+prerequisites
+before appending the entries mentioned
+$DefaultNetstreamDriverCAFile <CACertificate>
+$ActionSendStreamDriver gtls
+$ActionSendStreamDriverMode 1
+$ActionSendStreamDriverAuthMode x509/name
+$ActionSendStreamDriverPermittedPeer <commonname>
+*.*<space/tab>@@<eventloganalyzer_server_name>:<port_no>
+syslog-ng
+File path: /etc/syslog-ng/syslog-ng.conf
+<source_name> can be found from existing configuration of source with system(); and internal(); calls in the syslog-ng.conf file
+For ex: Here the <source_name> should be "
+s_src
+"
+source s_src {
+system();
+internal();
+};
+UDP:
+destination d_eventloganalyzer { network(<eventloganalyzer_server_name> port(<port>) transport("udp")); }; log { source(<source_name>); destination(d_eventloganalyzer); };
+TCP:
+destination d_eventloganalyzer { network(<eventloganalyzer_server_name> port(<port>) transport("tcp")); }; log { source(<source_name>); destination(d_eventloganalyzer); };
+TLS:
+Note
+Please check the
+prerequisites
+before appending the entries mentioned
+destination d_eventloganalyzer { network(<eventloganalyzer_server_name> port(<port>) transport("tls") tls(key-file("/path/to/private.key") cert-file("/path/to/certificate.crt") ca-dir("/path/to/ca/directory"))); }; log { source(<source_name>); destination(d_eventloganalyzer); };
+Save the configuration and
+restart
+the Syslog daemon using the below command
+service <syslog/rsyslog/syslog-ng> restart
+or
+systemctl restart <syslog/rsyslog/syslog-ng>
+Note
+The above configuration will only enable forwarding the machine logs to the EventLog Analyzer server.
+To configure auto log forwarding from EventLogAnalyzer server using sudo or non sudo user,
+refer here
+.
+Prerequisites:
+Enable HTTPS and configure a valid certificate in server.xml.
+Click here
+to know how to configure a valid SSL certificate.
+Only pfx format is supported for storing certificate, if you use keystore format, please convert it to pfx.
+Using self-signed certificates:
+After applying a self-signed certificate, a file named
+ca.crt
+will be created in the location
+<EventLogAnalyzer_Home>/Certificates
+.
+Use this file as the root certificate while configuring log forwarding in clients.
+Using other certificates:
+For configuring log forwarding, get the root certificate from the certificate vendor.
+Note
+If you want to use a different port other than the default ports as specified above, please specify it in the port management settings.
+The CommonName should be the same value as given in the certificate file.
+Forwarding application/audit logs to the EventLog Analyzer Server
+If any particular applications' logs or audit logs needs to be forwarded, then the following configurations needs to be done in Linux devices under
+rsyslog.conf
+(or)
+syslog.conf
+Under the MODULES section, check whether the "$ModLoad imfile" is included. (This module "imfile" converts any input text file into a syslog message,which can then be forwarded to the EventLog Analyzer Server.)
+The following directives contain the details of the external log file:
+$InputFileName
+<Monitored_File_Absolute_Path>
+$InputFileStateFile
+<State_Filename>
+$InputFileSeverity
+<Severity >
+$InputFileFacility
+<Facility >
+$InputRunFileMonitor
+To forward the logs we must provide this line:
+<Facility>.<Severity> @Host-Ip:Port
+Example:
+$InputFileName /var/log/sample.log
+$InputFileStateFile sample
+$InputFileSeverity info
+$InputFileFacility local6
+local6.info @eventloganalyzer-Server:514
+Here
+/var/log/sample.log
+is the external file to be forwarded.
+Note
+These instructions can be applied to all Linux devices.
+Please use a unique
+<State_Filename>
+for different
+<Monitored_File_Absolute_Path>
+.
+When forwarding audit logs, sometimes default policies in Red Hat systems with Security enhancement (SElinux) won't allow the audit logs to be read. Refer
+troubleshooting tips
+.
+Syntax for Installing Packages:
+For CentOS/RHEL:
+yum install <package_name>
+For Ubuntu:
+apt-get install <package_name>
+For other Linux distros kindly refer the official website for package installation.
+Important Note:
+The below privileges are specific to an individual user.
+Auto Log Forwarding Privileges for Sudo and Non-Sudo User:
+Granting privileges to the rsyslog.conf [or] syslog.conf file.
+setfacl -m u:<username>:rw /etc/rsyslog.conf [or] /etc/syslog.conf
+Example:
+syslog.conf:
+setfacl -m u:
+testuser
+:rw /etc/syslog.conf
+rsyslog.conf:
+setfacl -m u:
+testuser
+:rw /etc/rsyslog.conf
+Please follow the instructions below to give restart privilege for the syslog/rsyslog service for non-sudo user:
+Use the root user for configuring the privileges.
+Please execute the below command:
+visudo -f /etc/sudoers.d/<username>
+Add the below line to the sudoers file:
+<username> ALL=NOPASSWD: /usr/sbin/service <syslog/rsyslog> restart
+Example:
+visudo -f /etc/sudoers.d/testuser
+testuser ALL=NOPASSWD: /usr/sbin/service rsyslog restart
+To verify, follow the below command
+cat /etc/sudoers.d/<username>
+Example
+: cat /etc/sudoers.d/testuser
+Expected Output:
+testuser ALL=NOPASSWD: /usr/sbin/service rsyslog restart
+Note
+The acl package must be installed. Before that the filesystem is mounted with the acl support. For more details, kindly refer the official documentation [
+ref
+].
+Unix Event Reports
+EventLog Analyzer has a wide range of out-of-the-box reports and alert profiles for Unix devices. With these you can audit system events such as package installs and updates, track important events such as low disk space, and more. You can also audit critical events based on device, alert type, or severity. Apart from critical events, you can also track other events on your Unix systems such as cron jobs, session connections and disconnections, deactivated services, and more.
+Unix Logon Reports
+A record of different logon types specific to Unix devices such as SU, SSH, and FTP logons will be available here. In addition, the top logon reports classify these logons based on users, devices, remote devices, and method of logon. The logon trend report gives real-time insights on the general trend detected in Unix logons. This can help detect sharp deviations in general trend which could be indicative of malicious activity.
+User Logons
+SU Logons
+SSH Logons
+FTP or SFTP Logons
+Logons Overview
+Top logons based on users
+Top logons based on devices
+Top logons based on remote devices
+Top Unix Logon Method
+Logon Trend
+Unix Logoff Reports
+A record of different logoffs specific to Unix devices such as SU, SSH, FTP, and user logoffs will be available here. The Logoffs overview report gives real-time insights on the general trend.
+User Logoffs
+SU Logoffs
+SSH Logoffs
+FTP or SFTP Logoffs
+Logoffs Overview
+Unix Failed Logon Reports
+This report group can help in the monitoring of failed logons in any Unix device. The top failed reports based on users, devices, and remote devices will help identify an unusual number of logon failures which could be indicative of an attack. In addition, devices with repeated logon failures will be listed separately.
+User Failed Logons
+SU Failed Logons
+SSH Failed Logons
+FTP or SFTP Failed Logons
+Failed Logons Overview
+Top failed logons based on users
+Top failed logons based on devices
+Top Failed logons based on remote devices
+Top failed logon methods
+Failed Logon Trend
+Repeated authentication failures
+Invalid user login attempts
+Unsuccessful logon failures with long password
+Repeated login failures based on remote devices
+Repeated authentication failures based on remote devices
+Unix User Account Management
+This report group can help monitor critical changes to user accounts, groups, and passwords such as creations, deletions, modification of groups, user accounts, and passwords.
+Added user accounts
+Deleted user accounts
+Renamed user accounts
+Groups added
+Groups deleted
+Groups renamed
+Password Changes
+Failed password changes
+Failed user additions
+Top Unix Account Management Events
+Unix Removable Disk Auditing
+These reports can help track removable disk activity in Unix devices.
+USB Plugged In
+USB Plugged Out
+SUDO Commands
+The reports in this group can help ensure that security privileges of the super user are not misused.
+SUDO command executions
+Failed SUDO command executions
+Top SUDO command executions
+Top Failed SUDO command executions
+Trend report
+The reports in this group give an overview of the trend in activity in Unix devices.
+Weekly Report
+Hourly Report
+Unix Mail Server Reports
+These reports help in monitoring Unix mail servers. The 'Top' reports give the usage statistics of Unix mail servers. Reports to monitor mailbox usage, general trends, mail deliveries and the execution of commands are also available in this report group.
+Mails Sent Overview
+Mails Received Overview
+Top mails sent based on senders
+Top mails sent based on remote device
+Top mails received from remote devices
+Top Sender Domain
+Top Recipient Domain
+Trend report on mails sent
+Trend report on mails received
+Top mails rejected based on sender
+Top receivers who rejected the mails
+Top mail rejection errors
+Top Rejected Domains
+Mails rejected Overview
+Mailbox Unavailable
+Insufficient Storage
+Bad Sequence of Commands
+Bad Email Address
+Non existent email address on remote side
+Top Mail Errors
+Top mail errors based on senders
+Failed Mail Deliveries
+Unix Threats
+The reports in this group and their corresponding alert profiles help discover and mitigate some of the threats common to Unix devices.
+Reverse Lookup Errors
+Bad DeviceConfig Errors
+Bad ISP Errors
+Invalid connection remote device
+Denial of Service Attack
+Unix NFS Events
+These reports help monitor the storage of file in remote systems using the Network File Share (NFS) protocol.
+Successful NFS mounts
+Refused NFS Mounts
+Denied NFS mounts based on users
+Top Successful NFS mounts based on remote device
+Top Refused NFS mounts based on remote devices
+Unix Other Events
+This report group contains reports to monitor Unix events such as timed out or denied connections, failed updates, name and address mismatch errors for devices, and more. This group also contains reports to monitor cron jobs or the scheduling of commands to be executed later.
+Cron Jobs
+Cron Edit
+Cron Job Started
+Cron Job Terminated
+Connection aborted by a software
+Receive identification string
+Session Connected
+Session Disconnected
+Deactivated services
+Unsupported Protocol Version
+Timeout While Logging
+Failed Updates
+Device Name Mismatch Error
+Device Address Mismatch Error
+Top cron jobs based on users
+Unix FTP Server Reports
+This report group has a range of reports to monitor the usage of the File Transfer Protocol (FTP) in Unix devices. Monitoring this protocol is crucial for data security.
+File downloads
+File Uploads
+Data transfer stall timeouts
+Login Timeouts
+Session idle timeouts
+No transfer timeouts
+Connection timeouts
+FTP Reports Overview
+Top FTP operations based on user
+Top FTP operations based on remote device
+Unix System Events
+Crucial Unix system events such as Yum installs, stopping and restarting of the Syslog service, system shutdowns, and low disk space can be monitored with these reports.
+Syslog service stopped
+Syslog service restarted
+Low Diskspace
+System Shutdown
+Yum installs
+Yum updates
+Yum Uninstalls
+Unix Severity Reports
+This report group classifies and presents Unix events in eight different levels of severity. This classification can help prioritize events and alerts.
+Emergency Events
+Alert Events
+Critical Events
+Error Events
+Warning Events
+Notice Events
+Information Events
+Debug Events
+Unix Critical Reports
+This report group helps analyze critical events further based on the level, event, device, and also the general trends.
+Criticality level of events
+Critical reports based on event
+Critical events based on device
+Critical events based on remote device
+Critical events Trend
+Critical events Overview
+VMWare Logons/Logoff
+This report group helps in the monitoring of logons/logoffs of the virtual machines installed in Unix devices. The reports in this group categorize the events based on the type, status, and the number of events.
+User Logons
+SU Logons
+SSH Logons
+SFTP Logons
+Logons Overview
+Top logons based on user
+Top logons based on remote devices
+Failed Logon
+Failed SU Logon
+Failed SSH Logon
+Failed FTP or SFTP Logon
+Failed Logon Overview
+Top failed logons based on users
+Top failed logon based on remote devices
+User Logoff
+SU Logoff
+SSH Logoff
+SFTP Logoff
+Logoff Overview
+VMWare System Events
+The reports in this group deal with monitoring system events in the virtual machines installed in Unix devices. Creation and modification of user accounts, logging activity, disk space availability, and password changes can be tracked with these reports.
+User Account Added
+User Account Deleted
+User Account Renamed
+Group Added
+Group Deleted
+Groups Renamed
+Password Changes
+Password Change Failed
+User Addition Failed
+Syslog Service Stopped
+Syslog Service Restarted
+Low Diskspace
+System Shutdown
+VMWare Server Events
+Critical events specific to VMs such as creation, deletion, and the modification of VMs and guest logins can be monitored with these reports.
+Guest Login on VM
+VM Created
+VM Deleted
+VM State Changes
+Top VM Changes
+VM Events Overview
+AS400 Reports
+This report group contains reports to monitor changes in AS400 devices. All critical system changes, logon events, hardware errors, configuration changes and more can be tracked with this report.
+Logons
+Failed Logons
+Logoff
+Failed Authorization
+Authority changes
+User Profile changes
+Objects deleted
+Job changes
+Ownership changes
+Logon failure due to invalid passwords
+System value changes report
+Successful Job Start
+Successful Job End
+Job Logs
+Device Configuration
+System time changes
+Subsystem varied off workstation
+ASP storage threshold reached
+ASP storage limit exceeded
+Disk Unit Errors
+Expired system IDs report
+Unable to write audit record
+Disabled user profiles due to maximum number of sign-on attempts
+Report on weak battery
+Report on battery failures
+System password bypass period ended
+Storage directory threshold reached
+Report on serious storage conditions
+Report on battery cache expiry
+Report on i5 grace period expiry
+Temporary IO Processor errors
+System Processor Failure
+Hardware Errors
+Top logons based on users
+Top failed logons based on users
+Top jobs based on users

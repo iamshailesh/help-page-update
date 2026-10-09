@@ -1,0 +1,68 @@
+In this page
+Overview
+Request URL
+Request Header
+Request Parameters
+API Response
+Executing the API using cURL
+Executing the API using Postman
+Overview
+This API allows you to retrieve metadata about all alert profiles configured in ManageEngine Log360. The data returned can help in filtering alert search requests.
+Request URL
+POST http://hostname:8095/RestAPI/v1/meta/alert_profiles
+NOTE
+For the request URL, you can either use the IP address, or FQDN of the product server in place of hostname.
+Request Header
+Header name
+Value
+Mandatory
+Description
+Authorization
+Bearer {{AuthToken}}
+Yes
+Authtoken generated from API Settings page.
+e.g:
+Bearer
+mdrkodg0odmtmznlocg0ndziltg0mgftmwzkztsjmjvdzwmx
+Request Parameters
+The request must be sent in JSON format in the body of the request. The following parameters can be included:
+Parameter name
+Default value
+Mandatory
+Type
+Description
+type
+all
+No
+JSONArray
+List of alert profile types
+severity
+all
+No
+JSONArray
+List of severity
+status
+all
+No
+JSONArray
+List of status
+Response
+The API returns a JSON object containing the following information:
+Parameter name
+Description
+Number of Records
+The count of records in the fetched response data
+Profile Based Alerts
+JSON Array of profile based alerts
+Correlation Alert Profiles
+JSON Array of correlation alert profiles
+Executing the API using
+cURL
+Sample request
+curl --location --request POST 'http://localhost:8095/RestAPI/v1/meta/alert_profiles' \ -H "Accept: application/json" -H "Authorization: Bearer mdrkoda0odmtmznloc00ndziltg0mgutmwzkztljmjvmzwmx "
+Sample response
+{ "Number of Records": 4, "Profile Based Alerts": [ { "Alert Id": 1001, "Alert profile name": "Alert Profile 1", "Type": "Predefined", "Status": "enabled", "Severity": "critical", "Notifications": ["SMS"] }, { "Alert Id": 1003, "Alert Profile Name": "Alert Profile 2", "Type": "Custom", "Status": "enabled", "Severity": "critical", "Notifications": ["Email"] }], "Correlation Alert Profiles": [ { "Alert profile name": "Rule 1", "Alert Id": 1234, "Type": "Correlation", "Status": "enabled", "Severity": "critical", "Notifications": [] }, { "Alert profile name": "Rule 2", "Alert Id": 1235, "Type": "Correlation Profile", "Status": "enabled", "Severity": "critical", "Notifications": [] } ... ] }
+Executing the API using Postman
+Figure 1: Executing the API using Postman
+Read also
+This page explained how to fetch alert profiles using API.

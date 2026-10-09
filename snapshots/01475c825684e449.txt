@@ -1,0 +1,20 @@
+In this page
+Key functionalities
+Log360 Cloud provides centralized visibility into user activities, administrative actions, and security events across Microsoft 365. It collects audit logs from services such as Microsoft Entra ID, Exchange Online, SharePoint Online, M365 General (including Teams, OneDrive, and other M365 services), and Exchange MailTrace, consolidating them into a single platform for monitoring, analysis, and compliance.
+Organizations can monitor critical activities such as user sign-ins, mailbox access, file sharing, and collaboration. Reports provide insights from all Microsoft 365 sources, including Entra ID, Exchange Online, SharePoint, OneDrive, and Microsoft Teams, covering mailbox traffic, spam and malware incidents, inactive users, and soon-to-expire licenses, etc. The product console also offers compliance reports for these services to help organizations meet regulatory standards such as HIPAA, SOX, and PCI-DSS.
+Administrators can also configure alerts to receive notifications about important activities, define which mailboxes to monitor for unusual behavior, and get detailed information on the actions triggering each alert. By combining reporting, alerting, and management into a unified workflow, the product helps organizations maintain security, simplify investigations, and ensure compliance across their Microsoft 365 environment.
+Key functionalities
+Track critical activity:
+Gain visibility into user sign-ins, mailbox access, file sharing, and collaboration across Microsoft 365 services to monitor day-to-day operations.
+Detect suspicious behavior:
+Identify unusual patterns such as Login from an anonymized IP address, role changes, or unauthorized changes to mailbox permissions.
+Strengthen compliance posture:
+Securely retain audit logs and generate detailed reports to support compliance with IT regulations and standards.
+Accelerate incident analysis: Use consolidated logs, reports, and real-time alerts to analyze and respond to incidents.
+Object synchronization and filtering:
+Sync Active Directory objects such as users, groups, and service principals using object filters. The synced data show details of the entity (user or service principal) that initiated the action in the Incident Workbench and used in the Rules module for log enrichment.
+Read also
+This document explains managing, reporting, and alerting for Microsoft 365 tenants using the product console. To set up and manage Microsoft 365 tenants, see the articles below:
+Tenant configuration
+Adding data source
+Managing M365 accounts

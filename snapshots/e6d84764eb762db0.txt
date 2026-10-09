@@ -1,0 +1,38 @@
+In this page
+Overview
+Available Reports
+Overview
+This page presents a curated list of SAP-related reports that help administrators monitor authentication activities, user account management actions, configuration changes, system events, and security incidents. These reports enable effective auditing, operational monitoring, and identification of critical and high-risk events across SAP environments.
+Available Reports
+Report group name
+Report name
+Sap events
+All Events
+Important Events
+Logon reports
+Logons
+Failed Logons
+Logoff
+User account management
+User Locked
+User Unlocked
+User Created
+User Deleted
+Password Changes
+Configuration reports
+Configuration Change
+System events
+Logs Deleted
+Service Status
+Attack reports
+Attack
+Device severity reports
+Noncritical
+Severe
+Critical
+Very Critical
+Read also
+This page listed the available SAP reports supported by the product to help track authentication activity, system changes, and security events. Explore other related report categories to gain deeper visibility into application, system, and security operations across the environment.
+Sysmon reports
+Terminal reports
+AWS reports

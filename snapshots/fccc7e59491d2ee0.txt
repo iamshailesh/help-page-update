@@ -1,0 +1,64 @@
+In this page
+Overview
+Key findings from the investigation
+Investigation results
+Overview
+The Investigation Agent in Log360 uses a suite of internal AI-driven functions to analyze alerts, identify relevant entities and indicators, and correlate the sequence of events leading to an incident. Based on the alert type and available context, the agent selectively invokes the most relevant functions needed to complete the investigation, ensuring the results are accurate, comprehensive, and aligned with the nature of the alert.
+Key findings from the investigation
+1. Identify entities involved in the alert
+The agent begins by identifying the key entities present in the alert, such as users, IP addresses, domains, hosts, and processes. This forms the foundation of the investigation and helps the AI determine what data to correlate next.
+2. Check reputation and risk factors from security tools
+To understand whether the entities represent a threat, the Investigation Agent queries the integrated security and threat intelligence tools. It retrieves reputation scores, known vulnerabilities, and global risk indicators to assess whether an IP or domain is malicious.
+The following threat intelligence sources used by the Investigation Agent if they are configured, and integrated with the product console.
+a) VirusTotal
+VirusTotal is a third-party threat intelligence service that can be integrated using the Bring Your Own Key (BYOK) model. If you have a VirusTotal subscription and configure your API key, the Investigation Agent uses it to gather:
+Detection score: Number of security vendors that flagged the entity as malicious.
+Tags: Threat labels indicating known malware families, suspicious activity types, or potential risks.
+The entities analyzed are IPs, domains, and URLs.
+b) Log360's Advanced Threat Analytics (ATA)
+ATA is product's built-in threat intelligence engine that assigns a reputation score to entities based on global threat intelligence. The Investigation Agent uses this reputation score to understand whether an IP, domain, or URL is trusted or malicious. It provides a reputation score ranging from 0 to 100, helping analysts quickly assess risk and threat severity. The entities analyzed are IPs, domains, and URLs.
+c) UEBA (User and Entity Behavior Analytics)
+UEBA analyzes user and host behavior to detect anomalies that may indicate compromise. The Investigation Agent uses UEBA risk insights to evaluate whether an involved user or host exhibits unusual or risky behavioral patterns.
+UEBA provides risk scores for users and hosts, anomaly indicators such as unusual logon times or abnormal access activity, and behavioral deviations that may suggest account compromise or insider threats. The entities analyzed are users, and hosts.
+d) Endpoint Central:
+Endpoint Central is an endpoint management and security solution that can be integrated with the product console. The Investigation Agent uses Endpoint Central to assess the security posture and vulnerability status of endpoints involved in an alert.
+3. Discover related alerts and behavior patterns
+The agent analyzes whether the same entities appear in other alert profiles. This helps identify repeated suspicious activity, behavioral anomalies, or recurring patterns across multiple alerts.
+4. Retrieve related alerts for timeline construction
+If the alert has related events, the agent gathers them to build a sequential view. This helps analysts understand how the activity evolved before and after the primary alert and whether it is part of a broader attack sequence.
+5. Collect related raw logs for deeper context
+When required, the agent searches through raw log data to fill gaps not covered in alert metadata. It formulates targeted queries internally to extract logs relevant to the investigation, allowing deeper analysis of user behavior, authentication failures, process executions, or network activity.
+6. Seek user confirmation
+In certain cases where relevant alerts or alert profiles associated with a specific entity are not found within the selected time range, or when logs required for a particular query are unavailable, the Investigation Agent may pause and request confirmation from the analyst.
+This confirmation helps determine whether the investigation should extend the time range, continue with alternative data, or proceed based on the information collected so far.
+7. Provide actionable recommendations and highlight future risks
+At the end of the investigation, the agent presents its findings along with recommended actions to help analysts determine the next steps. It also highlights possible future risks associated with the detected behavior, giving analysts additional context for proactive mitigation.
+Investigation results
+Once the Investigation Agent completes its analysis, it generates a detailed investigation report summarizing the alert, the sequence of events, affected entities, and recommended actions. The investigation result includes the following key sections.
+1. Investigation summary
+The report begins with a brief narrative that highlights the overall activity detected during the investigation. This summary helps analysts understand the high-level context of the alert before reviewing the detailed findings.
+2. Attack chain reconstruction
+The Investigation Agent reconstructs the sequence of events associated with the alert and displays them in chronological order. Each entry shows:
+Time of occurrence
+Event description
+Mapped MITRE ATT&CKÂ® technique
+Linked event details
+This reconstruction helps analysts clearly understand how the activity began, escalated, and progressed across systems or users.
+3. Possible affected entities
+The agent lists the users, hosts, IP addresses, and other entities that may have been impacted by the activity. This section helps analysts quickly identify the scope of the compromise.
+4. Actionable recommendations
+Based on the findings, the Investigation Agent provides actionable remediation recommendations such as:
+Blocking malicious domains or IP addresses
+Isolating affected hosts
+Resetting credentials
+Checking for persistence
+Removing suspicious files or processes
+These actions help analysts respond quickly and contain potential threats.
+5. Possible future risks
+The agent identifies potential follow-up risks based on attacker behavior patterns and maps them to relevant MITRE ATT&CKÂ® tactics .This helps analysts anticipate what an attacker may attempt next.
+6. Supporting event evidence
+The Investigation Agent includes raw event information, based on the type of alert and the availability of supporting logs. These event details are displayed exactly as received from the log source and may include user attributes, host information, process metadata, logon details, and other system-level fields relevant to the activity.
+Read also:
+This page explained how the Investigation Agent analyzes alerts, correlates entities and events, and generates investigation results. To leverage the capabilities of Investigation Agent, refer to the following articles:
+Setting up Investigation Agent
+Invoking Investigation Agent

@@ -1,0 +1,33 @@
+In this page
+What is the MITRE ATT&CK framework?
+Pre-configurations required for integration
+EventLog Analyzer helps spot adversaries, classify attacks, and single out attack tactics and techniques by integrating the MITRE ATT&CK framework to robustly monitor network security.
+What is the MITRE ATT&CK framework?
+The MITRE ATT&CK framework is a matrix of attack tactics mapped with various attack techniques that are constantly updated to serve as the attack encyclopedia for IT security professionals all across the globe.
+The tactics signify the objectives of an attacker such as:
+Initial Access
+Execution
+Persistence
+Privilege Escalation
+Defense Evasion
+Credential Access
+Discovery
+Lateral Movement
+Collection
+Command and Control
+Exfiltration
+Impact
+Various attack techniques such as account manipulation, access token manipulation, and brute force to name a few are associated with the tactics to help identify adverse events and anomalies. The framework is adopted globally to facilitate easier communication among cyber security enthusiasts about the latest attack patterns.
+Pre-configurations required for integrating MITRE ATT&CK framework in EventLog Analyzer
+Closely monitoring and tracking network events is of paramount importance to detect adversaries. You need to enable the advanced audit policy settings given under the following categories in your network to cohesively gain insights from the framework:
+Account Logon
+Account Management
+Directory Service Access
+Logon/Logoff Events
+Object Access
+Policy Change
+Privilege Use
+Detailed Tracking
+System Events
+App Locker Auditing
+Windows Defender Attack Surface Reduction

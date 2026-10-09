@@ -1,0 +1,2278 @@
+{
+  "https://www.manageengine.com/log-management/help/": {
+    "hash": "3033c6220623afa481c983ed2affe3c7c6ca6bd3efd7433938a0b292c711e423",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/active-directory/account-lockout-analyzer-cloud.html": {
+    "hash": "55d8347a2df7bca7b734f13f12dc2d781a2ff87245cca120d0822c0ce9f21c7e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/active-directory/ldap-events.html": {
+    "hash": "5028dff669991210f0215bfddde6d45e6b320669cf20034561c1739421b75189",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/active-directory/user-work-hours-cloud.html": {
+    "hash": "13381d6701c8fd889c20ab420f8a2e3fbdbd8f8af35a662b371eaeae76d5d393",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/account-management.html": {
+    "hash": "9b280a139fee5cb22db00a9cd4a09149a664b6ca0f3b0e432fa59ae3bebf0798",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/administration.html": {
+    "hash": "b94c106b7e123ef88e06dcf74df1990896718e9e8cf0038cc46de19c50e71dd1",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/agent-admin-settings/agent-installation.html": {
+    "hash": "894e1547b21fe84f8df0381e3867e17ad6106b0c94e897740f5c83b9d844e53e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/agent-admin-settings/agent-settings.html": {
+    "hash": "5e7af42f97e08e2146d63812155088f04b91a0341979b8339e94339a62558481",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/agent-admin-settings/cloud-agent-settings.html": {
+    "hash": "3cd0dca81e72a16c7ac797a843643c59e6f1e7328b8a6b3513d1e9f8d4e6d302",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/agent-admin-settings/manage-agents.html": {
+    "hash": "769322457905343aa3eef94566a942ad4ed327860ad124768176771f9f68c004",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/agent-admin-settings/managing-agents.html": {
+    "hash": "23737d6bcad753b8417ac10af7c91a295a9ad2ac93adc0292e2673437efc38c3",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/agent-admin-settings/overview.html": {
+    "hash": "daa50187fa830a81f74b49a23f8ae81e8bc7a95157e769969c159007c92efa64",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/archival.html": {
+    "hash": "674c950a6e91a3aea6e752559946a026d713e697d41dde325cbcafa635b9a673",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/auto-update.html": {
+    "hash": "98782fd7f62986fa910de0742b28a7397627a815f80defe5b4537ce7b6285594",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-agent-bulk-action.html": {
+    "hash": "2b72d0f0fbc6aa4aed8c17a6847cdf555e1bf54815f4257584b1100d780019ae",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-agent-configuration.html": {
+    "hash": "667bdfe7892642e68baf640fa86f92329ba094368cb5c33e7e42afa2a3be7ae9",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-audit-policy-configuration.html": {
+    "hash": "c47dd83272352e1a199c470f9bfa946561397c9506b131d17cbb36f6059daa7a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-configuring-windows-member-server-audit-policies.html": {
+    "hash": "dc0248a0342891cd6bcd5de3bf89f711da2b1d934b24c73af87a59353c014c57",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-custom-log-parsing.html": {
+    "hash": "ba6d8b2ecdfbc59b8eb2112c702ea64dba11cd12e3076bd6147eafd8b4055549",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-license.html": {
+    "hash": "fdaca23e5c5696540adc465d809eac90414ef929c85534872dd77d775c2a3f2d",
+    "last_updated": "May 12, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-log-collection-failure-alerts.html": {
+    "hash": "7049b32dc37b2fcc7398c924c4ad0f0303516bccd5302bc33366a0d73178e74b",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-log-collection-filter.html": {
+    "hash": "18bbeeb72ede3c60571f689c2130bc6ef825a1036e6d4e22faa6f531d966f644",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-my-account.html": {
+    "hash": "e2539632592dcc6accc8c23692d0095dfe44c2f106a0635cd55d3d75c30a41b4",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-notification-settings.html": {
+    "hash": "155cea5c10ad479fa4021c0be3f9a2bf6c849c485c8a4ac8744ebf26c1e6c386",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-notification-templates.html": {
+    "hash": "6cac1a2f8febdd3deea2f341e1b7ea31de1db599b32a9133dc9f289a603dff88",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-object-level-audit-configuration.html": {
+    "hash": "c0886bb5d6b54ffa0309ffe110f2705dc4734bb954ccbfe5156bc3c1ed9ee95f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-privacy-settings.html": {
+    "hash": "f31414711251903f8c5f284d0c6ac9832cba2f035c4fadbe398d42ae5d34498c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-reload-archive-logs.html": {
+    "hash": "1861d6d294395d4ad8e92a15954983c57322e3879c5ec7a5c5bd707957c5e821",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-report-personalization.html": {
+    "hash": "6d29a69698948dcccdb12b9ed056ca2bc8f1c46316074029a76fc57b7eb537f6",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-stats-analysis.html": {
+    "hash": "0eaecd2518cfc58c8357f036afef8800ed1e3d280c0894efd46de1f1510dcb9a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-storage-estimator.html": {
+    "hash": "8c2c0c60bff7279c989564851c89de61913cb5495ea32078f882447377d06124",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-storage-tier.html": {
+    "hash": "cdadcf04c193f9421ac624b2d04b747a5c1adf8421ab1eb46d06f872ac9bfd90",
+    "last_updated": "May 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-storage-tier/configuring-storage-tiers.html": {
+    "hash": "06ae5029efee34f08cf3e0dcaeb2494d8cfec019ee2a57f2e93db3e40057898f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-storage-tier/managing-storage-tiers.html": {
+    "hash": "fde93ba3a8c25b7e8fb462d6cd19dfb866ca3b2d26e32547c06ba2b39a4d7399",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-technician-audit-configuration.html": {
+    "hash": "202c4587ec7ea575826d3aa39f8c8de15ad9540b0984381f092c703dc932aa91",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/cloud-user-management.html": {
+    "hash": "79d97d064a9a0903eb97974d993bba8c017a2dacc429c503a7dd2d1bf13b4394",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/custom-log-format.html": {
+    "hash": "e4a6a6aa651d416b0c0d4fc04830377aa89b5668acf22ec48e74793a69fb26fb",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/device-group-management.html": {
+    "hash": "f4414791e6d03d81c700971699c211d94cb0f2dc9c4804bd69390365f1d48167",
+    "last_updated": "July 13, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/log-collection-alerts.html": {
+    "hash": "bbe1d5c0729746b0a3aa3957d44cd190411964a935022959c6a3d1736a4fd613",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/log-collection-filter.html": {
+    "hash": "2aaeca3914f28a778fb6d521e9837567ff71b3da89277c666abd2ee61dd01b6a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/manage-technicians/adding-technicians.html": {
+    "hash": "23ccadcfc8dc78de6328619730402006b680683ac645d7586dd61fa6d166349a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/manage-technicians/creating-and-managing-roles.html": {
+    "hash": "502e392b5b78e04b35848ed8ae413d778a4b82838ed799993f8d2f7624c6eda7",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/manage-technicians/managing-technicians.html": {
+    "hash": "30a242aa4971a4eeedae33ebffa7c6a4f7571b042513759d2dbdee7768dc119b",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/manage-technicians/overview.html": {
+    "hash": "ffc7867e9415f3ea749458bfef71faae8c8f5a5fc6d52959d1a5f50cd2029ae6",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/privacy-settings.html": {
+    "hash": "81b3d8a5f814a0bc8869009c59c06d55bab9b2bf6b114cc236ed6f1e31b5ccfd",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/product-settings.html": {
+    "hash": "f4c10297bf51383d6212cb24238aacb258fb9de7cbfa29fc2fb111f7896d7b44",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/profiles.html": {
+    "hash": "6caad602a3998f15d69851de996dd536a14a2ca851fc37c3cd928e2993c7bfec",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/retention-settings.html": {
+    "hash": "369c2cb58990d9568ed0d8722613d627f18617b78f4596afde8ae95b8b9b9c8d",
+    "last_updated": "December 30, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/tags.html": {
+    "hash": "13d4312735aa1d79ff98167a0bbedc7f203054d5d61cd2e157d35ec9f3cff421",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin-settings/working-hour-settings.html": {
+    "hash": "ae14b13b6b19fa734245dd91e208a5925d651e8b1d2a8482c76a20a09e3c923e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin/admin-settings.html": {
+    "hash": "b94c106b7e123ef88e06dcf74df1990896718e9e8cf0038cc46de19c50e71dd1",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin/administration/auto-backup-update.html": {
+    "hash": "2a2f819b40a9457e4b4835751b2ce7962ad9bd703b2263020754a43c0402c935",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin/data-synchronization.html": {
+    "hash": "d349b999c414a39850f1788a3595d28348f4668a9fd31b80258abdf273cd10c1",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/admin/personalize.html": {
+    "hash": "fd8c6202e3deafb2704550c5d8ae9c59d6d8667f6d02e9bb552fb4f1554dfbb7",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/": {
+    "hash": "004a66efea08bd837a0fac4fe151cf78a45c41cafddba6457c000f63cbd7e777",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/asynchronous-alert.html": {
+    "hash": "568f937f200658b14cf4dd2873867dc4f566e229c0ae507b35cac497fe4e05b5",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/asynchronous-search.html": {
+    "hash": "3f392aeb3c54c0c421e7ccf8396b3121a7135bab0d20ee49c5fea37ce68badb8",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/cloud-v1.html": {
+    "hash": "5814f380d715654c1cf8b3f22e58eb99d5dcd1f2271337625db05c9972d21bc6",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/cloud-v2.html": {
+    "hash": "ddb4c66211630fe204e4b0d77ffa11c248d9e9ea518c7b34b3ca4c0ecb85aae4",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/disable-device.html": {
+    "hash": "3b37085d4d7c1755d7f3709532e5a693a60ad004410f120c0e2bd7583f439cd4",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/disable-ticket-notification.html": {
+    "hash": "71a9c84ffd074939f724f197ca9e0e28b317574f0ba2383d709805e18e95659a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/execute-workflow.html": {
+    "hash": "d981fc97248c530066013d1ca97d305fecc2f0c6d99d3343b718cbe868f7cba6",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/export-incident.html": {
+    "hash": "089f5ca9abf176db217bfa0cf5ce081d5e3cefeef4d00511c0bb468277ab102b",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/get-alert-profiles.html": {
+    "hash": "22bf6343ae9260dc0a07acb2ea428fb65b1d2fef6583005a08441732c9f5b0c4",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/get-log-fields.html": {
+    "hash": "1fc6fd300fb22c5f719ffe52c3c0067ef3e0a6deae1a0db81ccbac966ad8849f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/get-log-sources.html": {
+    "hash": "5dd7f8b3f907743322e7a3c98e7c0692e8ee374b7d00380526347863e34540ed",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/get-log-types.html": {
+    "hash": "3b38c9c8aa19fd85c9f70be678e515f441f3c033d3f6ec46c0a8e8438e5c8628",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/get-product-details.html": {
+    "hash": "9f778f76e3d33b9df1e5f47672af4cf46cce6829586de3346f562ac56313e964",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/index.html": {
+    "hash": "004a66efea08bd837a0fac4fe151cf78a45c41cafddba6457c000f63cbd7e777",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/jobs-endpoint.html": {
+    "hash": "7223a76fd4cd7447b436cc0eb4f1c743b9be7cacbcf898d9303f90727537b249",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/jobs-result-endpoint.html": {
+    "hash": "8cfcae7b0eec1d7f21286cc86d8c4e7562ce8c812ae4dca90c738bda5709cee0",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/synchronous-alert.html": {
+    "hash": "12c1e573efe31dc674e8f48d13a8bf853341366b0b4ffba9ad8c96d9c5444fb6",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/synchronous-search.html": {
+    "hash": "4dfad04f6cda5278b6a4a9da1d6fd8f4fd968241288a6dab0a158d62cbcdc395",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/update-incident.html": {
+    "hash": "7a0c4016d9ee6bf173720ede20e8d1e4af5ad7f6481407a2e5117b8c19cfb185",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/api-settings/v2.html": {
+    "hash": "e8308019a66d1e3cc7701af0d097966749016dd3646c1c3bfb295342643da994",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-contact-us.html": {
+    "hash": "9048d889419468eac1f84386bc077bf954139e1b499c4b09d27ad04d360af5e5",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-encryption-at-rest.html": {
+    "hash": "fc9c2305be2c044df0a2a0ff99452c7731727d3ee7dd68ba0b55edf638e04e52",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/about.html": {
+    "hash": "f61de9dc180c926f529ef0df5531530bccf3b3a885cfa1ac387f10607cd1dd98",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/dashboard/application-insight.html": {
+    "hash": "529d915f2799645abe2f0a899717248e4268242ba71a731fbc6f8d343c19505c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/dashboard/cloud-banned-application-insight.html": {
+    "hash": "2e7aa3a8a7f9a854c7f4b92b6cd18660859013b9046900cc5e04ba60f62e31a4",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/dashboard/cloud-global-insight.html": {
+    "hash": "7a1ac1b556c536cb933a979f338886a40df2d7eb345be777da3bd257fb9776a2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/dashboard/user-access-insight.html": {
+    "hash": "8f4fbbc6a984afe3b4e89b836339f5dba6483a474811ae7c1b6cf0373922c6d9",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/reports/access-reports.html": {
+    "hash": "d5656d2e22edd46e817d657dd0f26521a18c7d929c9726e304314ea317cf23ec",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/reports/banned-application.html": {
+    "hash": "88b3017d67f5831d29ebf9857d55be44fa6ee2f183269a9121a2187ff9e54e0c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/reports/casb-application.html": {
+    "hash": "7c364fa24026c9baa43ae7ef042d1bc4e1a4674d0c0cadd81c47e9c5b5411f30",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/reports/file-upload.html": {
+    "hash": "52772f6cebc7c7fa184cc73368cbe5632aea69cb527ad9527f205159f2da5109",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/reports/shadow-application.html": {
+    "hash": "4a589aa11280d0022c053ebb810fb0ee4c2fef5f9bf452f2947f81f725be86e4",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/reports/threat-analytics.html": {
+    "hash": "ad7d1c2c1dfc81fa7dfba47c1819fe593d916212c873f9d19894a7bc3283ecc5",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/setting-up/authorized-applications.html": {
+    "hash": "bd149e12878b12999360e3629dd8232fa02a069d0c611bc690195b2f33d17f94",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/setting-up/banned-applications.html": {
+    "hash": "aaf5d911415a625d423510bfd6b520208e112b38d953afa01553ebaa00ace92a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/setting-up/certificate-authority-configuration.html": {
+    "hash": "ce68bf8bce50a9f8fe1dee67ade374fe1e6d291bd2e2621e28f8ef09b455c89c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/setting-up/certificate-trust-store.html": {
+    "hash": "66387068d39f18c175e4061ed44dbeb6efefd6c95a60afc769ea5184839100b0",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/setting-up/configure-gateway-cluster.html": {
+    "hash": "f0287addec3eca355255634beff5183bb82b4262c0bfc4a2c1a5f3312b0c9b48",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/setting-up/configure-gateway-server.html": {
+    "hash": "a4a1050a3a479f3ced87161f164f1358a38dee26f192ac7ad347b17f197d136d",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/setting-up/configuring-two-way-ssl-enabled-web-applications.html": {
+    "hash": "f9e071894a2c58d98fb28b4f3d356f22ae959e8a36388fb7f513d0c64fd80266",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/setting-up/endpoint-configuration.html": {
+    "hash": "58cfb86d979ec5b75562c532cc7e15242ad279691e72344a8819d81a497647e5",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/setting-up/gateway-server-failover-measures.html": {
+    "hash": "c2c46ee60790feb5bf558f338eaa1628482e1f24ebfcd0c7c32596279c8e1f14",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/setting-up/install-gateway-server.html": {
+    "hash": "aaf2e7cc07fea11ed656d0ff743ea42c3b050c527bd99089d2367296f7b0ad6e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/setting-up/prerequisites-for-gateway-server-configuration.html": {
+    "hash": "1aedf0705d65c9e775631d80f0a75b2384bbdf2007016b0914ffa686c22f4d1c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/setting-up/regenerate-and-update-access-key.html": {
+    "hash": "ab1b6987ea2dbf355887a7f7c59abca45daac609e115fb9ab6f0018d85065be3",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/cloud-protection/setting-up/troubleshooting-gateway-server-errors.html": {
+    "hash": "f24903f67c5b5ec8e9e69486c0b53fb22a7cb29eca6422d1cd43e62992094679",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/configuration-settings/cloud-sources.html": {
+    "hash": "7e650729bc7d04732ba16bac0de3bf97e771ea1c0752bd22ccce520dc371f3e2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/configuration-settings/m365/cloud-adding-a-data-source.html": {
+    "hash": "5a2ddac9bf502b214ece048b18f9ee0527e0b03d55b62a86dde78bfb612637e3",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/configuration-settings/m365/cloud-configuring-and-managing.html": {
+    "hash": "0f8bb42cef0c00d2df21093b9d918d0529714c6dfe8731882ad079ef65c0dedd",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/configuration-settings/m365/cloud-m365-reports.html": {
+    "hash": "55216959bb91d43611d82ad613188058707af784c9f65e87cb439545f1d085c8",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/configuration-settings/m365/cloud-object-filter.html": {
+    "hash": "9391c520ef1668529bd7179d1cfbd4e144f2d882e019dfac2f7f54536d7ffb2c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/configuration-settings/m365/cloud-overview.html": {
+    "hash": "2f28198b6c95b167d8f5932d78e0c4e4967522046f4e98ed47b5278e62229998",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/configuration-settings/m365/cloud-troubleshooting-m365.html": {
+    "hash": "d8b3fda854943678d3ff4e30d962172495f59ceab44c2e06232a076c972fd5eb",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/connections/creating-a-connection.html": {
+    "hash": "48ec2c798183c0640b4c7b8707c6a772c08dad1b06b61c1accc6f8ee67f36ffd",
+    "last_updated": "April 22, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/connections/creating-a-custom-service.html": {
+    "hash": "c9769d67d411350c0235a746f1df38768c7221ca742d9939a521d714beb21b6b",
+    "last_updated": "April 22, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/connections/creating-connections-for-pre-defined-applications.html": {
+    "hash": "78c44cbf8d6cdcd6120a7a765498a0d6dc120685790490d6b677a0ce1ccbd209",
+    "last_updated": "April 22, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/connections/invoking-connections.html": {
+    "hash": "62d89943ec75db0e9f29f0681e161f650d9389108f72661f3fdd8f35e8128b74",
+    "last_updated": "April 22, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/connections/managing-custom-connections.html": {
+    "hash": "00a38cbe533dc3e9e9cdfaa633a5318124fb70aa9b624ddc3e73a24a912c3eb3",
+    "last_updated": "April 22, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/connections/overview.html": {
+    "hash": "ac3b95aaadb0d420e20053479542b5724c3d68e87e76be5fd0f1a2650b4f2933",
+    "last_updated": "April 22, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/adding-other-devices/file-monitoring.html": {
+    "hash": "d6eb40628c53b054c63cbabda576f55b78d286da330d1ae88e7ee9ab8067ad03",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/adding-syslog-devices.html": {
+    "hash": "b54b4c5dd15e8963955eb7ba279b20440359daee935b5e338091700d49964d6f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/applications/cef-devices.html": {
+    "hash": "d6e83b1a0dd29cef0b89e5e405482cbe5a1b2e3b8d0ba1b5bdc222f2b5ae0dd9",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/applications/printer-server.html": {
+    "hash": "240d280d041feb43ac6a3e6533df62824ee454255b645ddc958ba9725201a361",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/applications/syslog-application.html": {
+    "hash": "bc6b87e1fbd05ac1c9eb896dd62839c08cdec4471649472d21f7b53bbec833ff",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/applications/sysmon-application.html": {
+    "hash": "ff24e5c0d6a42d3c36c25ef4255e7393e50eee4fdda7b7c2c97453b8261e6826",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/applications/terminal-server.html": {
+    "hash": "d35be6e4e5e82a5c1bee7768bb1a199b2ef71186ebbdda6eedcc05301684c7f4",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/cloud-adding-ad-audit-plus.html": {
+    "hash": "57181c2035f1356ee0765cdf30b31f378f874bfddc378a1558bd935a0214ca12",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/cloud-adding-exchange-reporter-plus.html": {
+    "hash": "d025d45d1d65ea2de11365a5daf81a53f870492abc009fb733b2d52522e5dee7",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/cloud-adding-password-manager-pro.html": {
+    "hash": "00c901c5a885d9458b1e43dfa8a51050740b741fa5322ca51a2a56c61899a553",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/cloud-application-log-support.html": {
+    "hash": "d278117644c1a30a8990b9d41653eb693fb7aee76331b0d8a8c1df495e9138f6",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/cloud-import-log-data.html": {
+    "hash": "29ff0305ad6448427eef582392f95ff86f1c4efb4cb5a0c5ef9177757ffa81e5",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/cloud-log-forwarding.html": {
+    "hash": "de556732182980a0dddee985a309ad0cd9534024ef4cbf62e1c685f28c411795",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/cloud-log-source-group-management.html": {
+    "hash": "3c021ef8f9ec78bde844d49da967a56bf733b6f80d878a57ba7ada2e9801b8d8",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/cloud-sources/aws.html": {
+    "hash": "d6b178fb2c5bed6c29b24a54b449cab546c8d1e2aaa8dec209ec7d045e702a13",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/cloud-sources/m365/adding-a-data-source.html": {
+    "hash": "d43747e012087454957d1c7b7ce2e4ce2fd45f02cbf13c74c2933ba7bc58361b",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/cloud-sources/m365/configuring-and-managing.html": {
+    "hash": "58a5c3e70727665d4f9b6c5d7484262423372829d854a7c3e2f7637cd4d1e915",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/cloud-sources/m365/m365-reports.html": {
+    "hash": "551360669619f05dcf0151129768009acf76ce51116bbcbd0fa01f62ba1db334",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/cloud-sources/m365/overview.html": {
+    "hash": "60391b6384d694bcb8ef8d6d5bc849fb36fdd26e3d4b5ab59a4d1ddea5f95f5e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/cloud-sources/m365/troubleshooting-m365.html": {
+    "hash": "5b4d0b438e4f2fd6c176a258f2304dc08341ad86b3b187d545a7c9c68fc05638",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/cloud-sources/manage-cloud-sources.html": {
+    "hash": "796d29196a478595c0a1f82c95ff2f3de0c56877a0d9b5881cf041639ac67fbd",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/cloud-sources/salesforce.html": {
+    "hash": "1586601f26e3a5fc7adba50b4b9630a2db95f327d511e9d97233902f6b2f3362",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/database/mysql-server.html": {
+    "hash": "f40ca5d8ddce0b0381439e70221bfffae653407d0e0afe4286c95bd9b9956265",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/database/oracle-server.html": {
+    "hash": "247e408f6eb1c5905cb27d8950130f41660ef922e3d1d3abe193f88299ba84e2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/database/sql-server.html": {
+    "hash": "8936b4d98231c6d5cf4a90088ed88fc8db7f29ca2b72e3e1d40ab196256cbe0c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/endpoint-security-solutions/fireeye-devices.html": {
+    "hash": "4d26db70e9fa7cfed3e1fffba9d25bcf45b37709a302b745e46ad3b141fdacc5",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/endpoint-security-solutions/malwarebytes-devices.html": {
+    "hash": "d63c5b98d46cb2569050c1bb9b1374beddf1a0138814b29e052b8f78a9cc5b48",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/endpoint-security-solutions/mcafee-devices.html": {
+    "hash": "d8a3e036207286d35a8c6fbf0ede0ba901bcc79ed9c78316b4899abd2372eccc",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/endpoint-security-solutions/symantec-dlp.html": {
+    "hash": "b7fee51c6fe3c61f29a8df7fb79c6b7004925a77ea6788fdd356f9e9b3e3acf3",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/endpoint-security-solutions/symantec-endpoint-protection.html": {
+    "hash": "921a167e68af76f5ae25434190ec050a655ef03da2d3fd57d84c122f3e95bfbf",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/endpoint-security-solutions/trend-micro.html": {
+    "hash": "b91e2ab5df32d6572398138506203ec67e82a755c0293d1fbaa57d4e3d8ccecf",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/hypervisor/vcenter.html": {
+    "hash": "492c421336d82d47a4e9cfe8b707b07aab6d984b60d8af9877d959907fa3d628",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/hypervisor/vmware.html": {
+    "hash": "3c14bd02290347c6d3074f8b2161bc57286538d2d922b3a8bdf3f55c498e4e4e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/import-logs.html": {
+    "hash": "4a3abd56a04bd8ce71c48f85c67850e555a1ab4a7141bac172db40834de2992e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/linux-unix-systems/mac-os.html": {
+    "hash": "f38f5ccc866d76fdb71a5e5e9d8fd74fa99f2f5126273d1ead355b653ee5d8bf",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/linux-unix-systems/unix.html": {
+    "hash": "f48aa002ea3c9964b257dd3f8432d27441d22a9d96a0a8fb4df2ba6f5aeb293e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/manageengine-applications.html": {
+    "hash": "af9f78415e4c68370e4159ec35f0dab341330cad912fbd66d5c302ea7fb3f745",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/arista-switches.html": {
+    "hash": "95e6f7b5056e84df0e169ac4215a8062fbfcec8015ea7cac7940105cdb173813",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/barracuda-devices.html": {
+    "hash": "d0e9d9453c6abac8c92993621f655c7c7a73445bb8c485a596485876d3be6a93",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/checkpoint-devices.html": {
+    "hash": "7a8aa25277ff29d33acddd32de599208aac318924c82b5bc18bf652d44dabe7d",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/cisco-devices.html": {
+    "hash": "84767d75b9d5eafd135b8acc44734f806fed13b8328ef4148945239e41e1a65f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/cisco-firepower-devices.html": {
+    "hash": "6daf8553b71cd354e1ec4c16232273a8bbd159987788eeb306d242ae5b97326e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/cisco-switches.html": {
+    "hash": "a27e8228a2a8921a2cd1790042d1d33b9508e7f54e3403e763eaf647ad326c14",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/dell.html": {
+    "hash": "38580ecd63970c1fa33ab2bf6e7250cba815809bab60c5c4f1d4bd95c9f665d2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/f5-devices.html": {
+    "hash": "d0d3b1347539198bb702c853f7041595dff49dcc9440fe65fc38794778e576b0",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/forcepoint.html": {
+    "hash": "8be1f74e3ecbe5e415ee5eefa833ec8060b9b96d2169e8b4f98f4fb4d91a3b89",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/fortinet-devices.html": {
+    "hash": "66853f66c2d24630afb94e0a6eb8eaa784f90f319e6465fa8264733baf5ad30a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/h3c-devices.html": {
+    "hash": "4390dea7a0ef46c2b786145a963a0ef2f7f2e618d8a087a4abedb92cbe69781a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/hp-ux-solaris-aix-device.html": {
+    "hash": "e01b6acda9280d098b8df31a99b5aea473ee744170c07ead38670e22c5844ec5",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/huawei-firewall.html": {
+    "hash": "74d75bfc4d0847be85cda4e3bba2a8151f63ca1cbbeb3ceac9b274d3f9377f55",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/juniper-devices.html": {
+    "hash": "587e9b815febf1783205592ad3e617e427cdeedbb75ed8994a817b9cf51f5428",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/meraki-devices.html": {
+    "hash": "0cefb4d6288163df6aab2bb64c5915f18ac44528efff470e471d55f8100a39ac",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/netscreen-devices.html": {
+    "hash": "8d75278109d35eecd76e7c039cda6081144f7e0bb9c0f259e0c9a0d5ca02cac7",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/paloalto-devices.html": {
+    "hash": "aa552671662adb13d501d0d7679264f2c455c06f5f852be34cf1d6dfb6e61db7",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/pfsense-devices.html": {
+    "hash": "06e99daf474d7943cebadfa2dbd3935206538ed7557fed77eae2b78a32154ab3",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/sangfor.html": {
+    "hash": "4b76bc229c0ae6003da850733880abadbde468b5ed6ddf215ef4fe3096014520",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/scaler-nss.html": {
+    "hash": "dd32a38ff25c5d937931afec97f86ffcbb479a077c3ae41be6db31ac83d64eb2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/sonicwall-devices.html": {
+    "hash": "325226f7d83abaa5f3616886309c63ad4c745cd3e3e17be0193d29a14f0ebe7a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/sophos-cyberoam-devices.html": {
+    "hash": "911f3a9144a746995b1cf1c36f186fb01633db503f4846864d182db082f21f90",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/stackato.html": {
+    "hash": "3f96f4eb95e00acab3b6ef46b929133b39ba10f4300c8e3c9bb9ab6a376ff562",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/stormshield-devices.html": {
+    "hash": "1a07a67c4b5db02606fcae89ccc47c14f30bb9d774bbd10c4d712a6bfdef266e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/topsec.html": {
+    "hash": "e3cfea0ca978759dbe78edc89ca09450e8f8ebfc78f2ea6ad3729a35b25debea",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/network-devices/watchguard-devices.html": {
+    "hash": "13d8260fe66120ac66e4280aceb953459863b518cce2c52041f74417692646c3",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/other-devices/adding-other-devices.html": {
+    "hash": "ff7305431aa9435cebfa5583f9a333be56c1a5e5021fed4ef9f46ada89cfcdbc",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/other-devices/ibm-as400.html": {
+    "hash": "3ff5be24540788349790fa3799942a2e0b49183a63bfe407b42fda16726a0de3",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/overview.html": {
+    "hash": "02a4ab993fa4d20f8854a5de4a6967dda6be399f45e4ef93e05387b3a91639e0",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/vulnerability-scanner/nessus.html": {
+    "hash": "a81c7dafa2456eea9fe816dd8e0153b6b3c158e10e6add93408437dc1257ffec",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/vulnerability-scanner/nexpose.html": {
+    "hash": "cfaa6831ebeb927cea06b35ca497ecdf67e596f9dd2259fc8c6e479f4b63e8eb",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/vulnerability-scanner/nmap.html": {
+    "hash": "6b40424a16739d91fb282ccdd98a433c7210b661bef3a26d7c5f4e13217df2f0",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/vulnerability-scanner/open-vas.html": {
+    "hash": "3622dc18a127ec5de7641bf7322c01613798e6cd673945da5470ae2236ae8b6d",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/vulnerability-scanner/qualys.html": {
+    "hash": "d62222c46f544cf0e386ed1a95e0279b9cbe8ea5271a1b733b1d108c17680a82",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/web-servers/iis-server.html": {
+    "hash": "853220b5b125c36571a40a76f89c0642c255ff6cd5fd590129e506d27cdf5aeb",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/windows/add-aws-ec2-windows-instance.html": {
+    "hash": "236550f25507c5e28046416b1a2d22680134de2e65b9eea08247f60da217fe96",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/windows/add-windows-devices.html": {
+    "hash": "92b7105cbd96b5c73234bb3f36fe413501f0992836758ad5e5f6fcf4cadfc802",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/windows/architecture.html": {
+    "hash": "19a7d71a516c6e1ee0d6ce0f4b1619cbb12e0253ba0f980ca533a389068b2a50",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/windows/configuring-out-of-box-reports.html": {
+    "hash": "df766bba4b4cd5f36d4692d27b1f3ecbd0db595675e612fc63526b428b99edab",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/windows/overview.html": {
+    "hash": "4173a01366cef83b29b1ed38ffbf0d75726ce0926b8829946d77ca456b31804d",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/data-source-configuration/windows/prerequisites.html": {
+    "hash": "7659acf38b3b227d213fd9011c1306acfc70cd63a7f4c66dc2ddbd1f49da9693",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/developer-space/cloud-custom-widgets.html": {
+    "hash": "ad53b6b99e1b0081ce70c03080c700dc87595f40755ded7f661d658728e95b7e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/developer-space/custom-widgets.html": {
+    "hash": "f923f28b77f6ff729d9c130ebcb678d0aa63d735b89e1ad57e75ccb8a4a2233a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/developer-space/extension-builder.html": {
+    "hash": "1d72927ad9ad3435fc30e30f2d8c3b62012c6ad23e7dcb88930b3d0fbf6062f7",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/developer-space/extension-profile-generator.html": {
+    "hash": "142275681f2b030ed00ab9287d1262dd519f373149a35034b4b0843d22a039a1",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/faq-troubleshooting/faq.html": {
+    "hash": "a2e53ae99889e6a34c925f40151b78f125a5e8220c79f8c7d4c238ab0114ca47",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/faq-troubleshooting/tips.html": {
+    "hash": "3a46ba9293e0aff57a414dacd010a050d8118bb009a7a5345ba88e4bc8143582",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/file-integrity-monitoring/cloud-fim.html": {
+    "hash": "fafec0d349e5d25c95d10a4c23d9bd3a43b066a99ca9d97e11efefd28cf40faa",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/file-integrity-monitoring/emc-isilon-fim-cloud.html": {
+    "hash": "95f10a55c3b5d9d511d79ed0696ad8a9e0334d30117bed100cf4d876a1424f09",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/file-integrity-monitoring/emc-server-fim-cloud.html": {
+    "hash": "fbf0decc3d091177de6924c93761f0a133d9e0d175ffb3f80c829586c75d6f44",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/file-integrity-monitoring/netapp-server-fim-cloud.html": {
+    "hash": "1ea7e52118453a02284042e0389b1380df1c4f0972581db873d1b857f80f298e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/file-integrity-monitoring/qnap-nas-fim-cloud.html": {
+    "hash": "4e2f31e7ae86e093070fe03b093ba200f9c1437862d46c0189db342c797fc480",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/file-integrity-monitoring/synology-nas-fim-cloud.html": {
+    "hash": "f90ae4bb20aae1626a0e49f738cb558d34d107086337d344f3618395b4ba0d6c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/file-integrity-monitoring/windows-file-cluster-fim-cloud.html": {
+    "hash": "64b3084bc64d1a296d8d6faaa308fe46f34899a4dda27b54779f85e9721ac7f2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/agent-administration.html": {
+    "hash": "4fc4e5626b87d79c38e10e5cf5f2f4984f7b1405578011f735961b8cd99147f4",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/agent-administration/database-access.html": {
+    "hash": "278419d1bb4815718369528a80595588f329d44cfb1a63def67724d68a2771aa",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/agent-administration/install-ela-as-a-service.html": {
+    "hash": "d020a5ad4e275c89d2221c3bed3193b347bcfdb3dd0915b7fa367d66055836b6",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/agent-administration/log-level-settings.html": {
+    "hash": "3618be650295e5059b7b1fe4a8e226407b6e02e4248061fb11fc9fdd8f07cebd",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/database-settings/auto-backup.html": {
+    "hash": "2a2f819b40a9457e4b4835751b2ce7962ad9bd703b2263020754a43c0402c935",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/database-settings/migration.html": {
+    "hash": "289fc09c110072fb04f18fd740b5ceec5cc2a820b06fca0651bfb4dcb279d4a3",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/database-settings/overview.html": {
+    "hash": "5a6e56a7379db140d566b044b6aa0010cba365ebe836816deea5244837613e16",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/log-forwarding.html": {
+    "hash": "7c9b0f495c20293db7a00adf48c410e031f0b12a96bb591195c35766e2e5606a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/product-settings.html": {
+    "hash": "1231de2af862cd89fb2fb197e6cc4f2def2b98b3815019139f9fe4d076d0a6c2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/product-settings/overview.html": {
+    "hash": "cfd9a0dc4901314cc5e12eed4bed48f18ea47a70bacc1a483fa12456d2276c14",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/product-settings/security-hardening.html": {
+    "hash": "57f4d3cf32a40030951d93e6ad50b4b1c4d43cc183e0baf786382f047d5c616e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/ssl/log360-ssl-configuration.html": {
+    "hash": "5a1642500ffd9c0a4b506696c5b9df4a1f2e64829ef4824da2840a1642637072",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/ssl/server-settings.html": {
+    "hash": "d11fc8f7e05a483a76ad23c181cb2abba24d30f6817343dc4b61a06d4b0ea7cc",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/ssl/ssl-support-details.html": {
+    "hash": "b536f28c59381ee46da333c915906b35422edc682570556d00032ae014ea04c5",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/system-settings.html": {
+    "hash": "a05a8e235d0275aead6e96b9ff13ab1df319f4befd44b312bb5d907a737a7f79",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/system-settings/connection-settings.html": {
+    "hash": "b3a013e69d744d7810b4bccb4eee31b6a5b34963e601c6a7cdd4d0636edb1f75",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/system-settings/notification-settings.html": {
+    "hash": "9dda9c1ea2ff4cfdf1ddbf5e76982bf88bdcb9d53d733507bf0f574b4108317f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/system-settings/rebranding.html": {
+    "hash": "08e5316cc1728742abef34b18b623a4eecbc3dc3ee4a425932a86fdf6e4deedf",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/system-settings/system-diagnostics.html": {
+    "hash": "4deccf843e5870db6fe3ea39a73d8147ca251a30c3cbdda5a75bebf239d9ce5a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/system-settings/system-info.html": {
+    "hash": "f412882cce97a93916d7ae3607d4ef1d8492b6fcd15acdb6da7fe8c036f267a6",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/system-settings/system-resource-calculator.html": {
+    "hash": "fa7b3fa8d1c01faff1a15d7a99bd30045b5535f04969a31df3f233213697644e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/general-settings/system-settings/system-utilization.html": {
+    "hash": "873f977f28c4466d1f01f999890cee2504617ac72fa41493831582402d665017",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/getting-started/database-backup.html": {
+    "hash": "2a2f819b40a9457e4b4835751b2ce7962ad9bd703b2263020754a43c0402c935",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/index.html": {
+    "hash": "3033c6220623afa481c983ed2affe3c7c6ca6bd3efd7433938a0b292c711e423",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/bitdefender.html": {
+    "hash": "bc223ef9b8d9a93dad818343311ece89bc08cec1d50e81229c376169d5e34ada",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/compliance-extensions.html": {
+    "hash": "8d24049e94585c23123841a08df6083a6fe97692071bb59dcd33d1250598a33c",
+    "last_updated": "April 16, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/crowdstrike.html": {
+    "hash": "4d32858528b81b3e30e864c9cb4dc7915e79eccd832e405c0b9e2e4b0039d44f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/dropbox.html": {
+    "hash": "f1d6c1aae41e8f04a8d0738c16435b8968641020694fc1c0a8b7594a0744a5ec",
+    "last_updated": ""
+  },
+  "https://www.manageengine.com/log-management/help/integrations/extensions.html": {
+    "hash": "2dd5a6439fb565bc3dcb0f0f693793eaff9306dfc8ff478920153b409a81e8d7",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/extensions/compliance-extensions.html": {
+    "hash": "a95b6857282fe2540d12ad0bfa84c576c97de2f3090aac26677a9f66858211fb",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/extensions/installing-extensions.html": {
+    "hash": "043b96c79cce133b095d901e63dd78c22b2c501e7b57afc18430b467e105702f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/extensions/mikrotik.html": {
+    "hash": "967d0051257a84aa17d2dbf62fdcd6d6f381ddd8aa5c3a191acc2477c73949b1",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/extensions/okta.html": {
+    "hash": "5dc4138d64ca55e4da7b8e8dcd0376d1802d475f64fca5c82ef946656a52e698",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/extensions/veeam.html": {
+    "hash": "fedc89c853091ca00a80c7efef989d02b8a05016a1b1b9e4d134855c63de6d13",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/installing-extensions.html": {
+    "hash": "f59d51fa471f298958ce0d6ecf44d588cade27147447863899e4f70fa14085c2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/mariadb.html": {
+    "hash": "26d3080449af68b2c4214dbe4da4ac07097270ed600fbdfe8596c22715a64f6f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/mikro-tik.html": {
+    "hash": "7ad4399a299e32d3a994524ab4f888a6d00fbc39366dc240296325c849492b90",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/mongo-db.html": {
+    "hash": "0fe8bd91a28d7fb687dbc2fd5350e701b86d5a62f5713614041aa334eadc87e9",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/nginx.html": {
+    "hash": "eaee24dbc41b6f12049f50dcce9d815f44b213b4d53742b3e08302f1ce9ac1ca",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/okta.html": {
+    "hash": "3bba241c72d9263825b5e19658bac7bae620dea80dbd8e786bcb705b79e7db66",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/sangfor.html": {
+    "hash": "8991e601fb6915a9d7390b4d6723559b2bc667ac7dd0a278e49e7cbd76867850",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/sentinel-one.html": {
+    "hash": "9265cc06a8b49140cda5df452c86bf5d674eb92cfd07d4c5324a01d8ec1f256e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/sophos-central.html": {
+    "hash": "8f7aedb6eb68674ebe562867c4f7af6a9109ced84f95b1a0647ea1597f1a148f",
+    "last_updated": "April 01, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/topsec.html": {
+    "hash": "7bc85d98c665bdc48ae8abe6c3b97ad578d52a71683c270e9b1acadcca22186c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/veeam.html": {
+    "hash": "b4f3a8c1a3e2a961283eb1640d7d936525155392a67a91d945bc1952ae5d208d",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/integrations/virustotal.html": {
+    "hash": "54ccf25abe9e68c153a8465e6c0299f77e74d3d0239c558bbc99811d1701abd4",
+    "last_updated": "April 30, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/log360-cloud-overview.html": {
+    "hash": "7ff14a458979718132f7ae07a4b24be1b4c9dc57d5caeaf80042fe86c68d3636",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/logon-settings/domains-workgroups.html": {
+    "hash": "6d19f720dfc576bbc30599ee47ddc5b5b6dfdeaf81ce577c5e922b84a13199d2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/logon-settings/general.html": {
+    "hash": "e23bd0a243ca3ef7a493f9b2c7fedc2cfafec743352b569d95092a697d0d8a62",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/logon-settings/ip-restrictions.html": {
+    "hash": "a057831524e2e15c02be061ab25aa26d8dd69c58bb4a07044453a654586a13da",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/logon-settings/ntlmv2-sso-configuration.html": {
+    "hash": "fef607d59cb38123fc0a3ec8fd8dc5eb34f7e2916e7e3549443e7b7925ba372a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/logon-settings/report-profiles.html": {
+    "hash": "a90e33aea7defc60454d5f9a4e1dcf6561f8071648f5a6599648e5e706c462e5",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/logon-settings/reset-account-settings.html": {
+    "hash": "35c7ff879242174c1ddf2791bdfd4660316e925780d5e23bcda1f180106e4d8b",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/logon-settings/single-sign-on.html": {
+    "hash": "eae0f2636ca714eba303f36d50cdf6e56c9b94e6efd43746dc5ce52f3128e80c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/logon-settings/smart-card-authentication.html": {
+    "hash": "070e6bac2cce1bc17043973ca5e5db15d128cf718bcf8cc761540bd1bc5f0e12",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/logon-settings/two-factor-authentication.html": {
+    "hash": "a986c1f580f4824d8be7809f40bfb61d3f3e429e677b779c5321cf816ae51c50",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/logon-settings/working-hour-settings.html": {
+    "hash": "43eaf3e74344f9003aefb52458318f12c9b958d0bc8fbeff50d41a601ff1c18d",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/migration/configuring-mssql-force-encryption.html": {
+    "hash": "3125c60454ac3107c0ae7eef4d62b25e70b4c43e1bc9fe96a7cdac8b81220895",
+    "last_updated": "June 13, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/migration/migrating-configurations-from-eventloganalyzer-to-unified-log360.html": {
+    "hash": "fd641a8e0f2dd3aea88a7a6977215849ed587b0f3af96f39f6556fb2ce294679",
+    "last_updated": "March 25, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/migration/migrating-configurations-from-standalone-log360-to-unified-log360.html": {
+    "hash": "d8599fa6015db3eddab40cfe140508fd4ba706ee512aeb634f12331e933055cc",
+    "last_updated": "March 25, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/migration/migrating-different-directory-in-same-server.html": {
+    "hash": "fb890fc51bf3c712dc72f68ada8b92b260dd98aed778bba23b98406f62a7c012",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/migration/mssql-to-postgresql-migration.html": {
+    "hash": "9cfc5ad58c872f51357dbe12cbf53eb16739c31c1bd81b715fbf601e9fcf39eb",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/migration/mysql-to-mssql-migration.html": {
+    "hash": "16ba24f52e4698ff8096a3e40bf14abe0cac4d0afda58c574bd3857884a3a0b3",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/migration/postgresql-to-mssql-migration.html": {
+    "hash": "6f3ecb45cfdb073f5a33cf7824ad239b0c72fb00d55892a0dc6e37b537b15584",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/migration/scalability-migration-guide.html": {
+    "hash": "11dc51d15c6943d02c1c01caf4886754711c89a8c24490e19b6b4f5b37714ed1",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/account-settings-audit-cloud.html": {
+    "hash": "234724e17107212b4223854e4e2dbdeecfdcdc4e4be04c8c4cae02caa751f04b",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/auto-upgrade.html": {
+    "hash": "1d258be735f544b0e7fa6d02fc09b1fce704174881eab32cf48ff9cc72ce9e9e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/centralized-technician-audit-cloud.html": {
+    "hash": "6beaf34ecf6d36aa2bd81ebc8feb2037b7257547f9fb169619813c2a261dd939",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/cloud-dashboard.html": {
+    "hash": "b081bd5ac141375f22188ac2a53a543817f3545565146299cae4fd91506ffd2f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/cloud-introduction.html": {
+    "hash": "5d9b9ff2017913ce59e3c7121b11a24cac64707869ce3e29e39d5e58d0941848",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/cloud-license.html": {
+    "hash": "efc7520e2096ceb534244f17a91f9a3991446c90040f562dff6074b861b1183c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/cloud-mssp-account-setup.html": {
+    "hash": "d6967bb24fc45e85c3fa00f8ee805ba7d4cad033db8334d42a744acdf97bd88f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/customer-management.html": {
+    "hash": "7c6c9669bd60c820299c6980850c9f93cfbd76e53745d4545c145f7d45a9b9f8",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/customers-portal-cloud.html": {
+    "hash": "43506009f100224e32f6a2a90dc293fc9eeb70fb2932545207c29ace51ab4f8d",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/customers-portal-mfa-cloud.html": {
+    "hash": "1b46a7df92385a222e66d5043902b0d5c48b666e0d42e8bf57b9287109be6d89",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/evaluation-customers-cloud.html": {
+    "hash": "32974ae62172c148d1a6cb02c17f879ed00b67b9fb2892ebe8e6ddebc8c6299c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/license-management.html": {
+    "hash": "cdb0b81d567864716396b0002bedceb4ccd96ebec7087fb7320d8a8f816e0f87",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/manage-customers-cloud.html": {
+    "hash": "8626b47c11eca265f83113eaff9b2e452e29231dcce7228d88348972c37f5cce",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/mssp-installation-and-setup.html": {
+    "hash": "280d30f3598fd6c108acd03687fba684b61b8cc9403bdb4c9dc6edf092beaaa8",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/overview.html": {
+    "hash": "7e943f4f5a9f0b834e6002fb57db7925fb4cee1b3164c29dd88fc490ed12c396",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/portal-user-management-cloud.html": {
+    "hash": "9b4658dfa0f75fa5400879aa455f738398eec15c6f9caf4911fec2400d7345a3",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/reverse-proxy.html": {
+    "hash": "453ee7589ee84ed510ff2d9e4481a98875be978c3062e247b280333f839f995d",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/technician-management-cloud.html": {
+    "hash": "8320108bdd941745d213d912381e07a4aac65410e6a13a2b8dd09d7f21384915",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/mssp-edition/technician-management.html": {
+    "hash": "2b5cd90187346903978170a4aefaa6afe340b515b0b118f1c03afc5dba8fb3e5",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/overview/get-started.html": {
+    "hash": "cb2d001b903b83289a5c620fbc17d6025832a02e2a96e8c6f328c9c2dbad0bf9",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/overview/log360-licensing.html": {
+    "hash": "08dcce0aeb176c88ed30fb3b8ab6dd2a0f370b484867517a68a4beea9f857be8",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/scalability/log-processor/configuring-log-processors.html": {
+    "hash": "42870d0fca5b7fcc72d4a06f2c44566ee3d4a7666edcf3db309834e898d57510",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/scalability/log-processor/managing-log-processors.html": {
+    "hash": "43c1e2c62a6a01d4f2c562ef37805246a885cbbd74b1a44af8b348b10c65de70",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/scalability/log-processor/overview.html": {
+    "hash": "2fc7b1050d7cc058badc0e5c10bec9ea46ea06ecbe553392f5607335258e8ac5",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/scalability/log-processor/troubleshooting-tips.html": {
+    "hash": "8cefc92ce4d9eed041b53ee6595e171f8b0c8b8305752ccb2155bcd995b2813b",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/search-engine/elastic.html": {
+    "hash": "1a3757bb1c8d4d72de17d55667adf040da4d62f94871865e7a76638e1a10a375",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/search-results.html": {
+    "hash": "b70316cb885b39ddd3b1de7c428e8b2cce144e39e25d5a8c28ecacd85ee65d2c",
+    "last_updated": ""
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/amazon-web-services.html": {
+    "hash": "26af1aaf0ca9701d7f0b2b37864282050ef37c7e88ae35ee8c4f89a439e95af7",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/cloud-account-setup.html": {
+    "hash": "f584690ec85b463a03dc82601d9751757ed026897f1d0a6fb87a2d38147d781c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/cloud-ca-certificate-configuration.html": {
+    "hash": "295d71622bf53451ac5901d6bd9e162cac74e30e103f7c7b74b1e274f4001adc",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/cloud-gateway-server-configuration.html": {
+    "hash": "79c17141bbefa7d3c22a76706decdc2cf4eac1ff3dc2df23736b0bba1046e9c2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/cloud-pac-files.html": {
+    "hash": "a010fb8c9f1ba0d6c86e92f6149b3ad1b02db061e37fc0b7186df6e1cb2fc5f2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/cloud-prerequisites.html": {
+    "hash": "7a32e1a578f13d1147a03a7de242046616074711bb8b52f695372e1992bec1c0",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/cloud-service-level-agreement.html": {
+    "hash": "5368138fe6267e90a65e5d53bbc0e8dab07d17a8b7612d27c9ecb19ba5bfc9f8",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/cloud-subscription.html": {
+    "hash": "75f4ca1739c4c5ca0ae94f65bcc80eb2152db8e9070df08465dfc7d7d55e5fee",
+    "last_updated": "May 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/enterprise-essentials/acess-gateway-cluster/configuring-access-gateway-cluster.html": {
+    "hash": "d271b280fed9fddd297a047e7acd63e7b64215c745b6b6ff5d2469231a6c6151",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/enterprise-essentials/acess-gateway-cluster/managing-access-gateway-cluster.html": {
+    "hash": "db97945eb2318c58ef2b31273dde9911f22972c48b23d464aa5f703f74146498",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/enterprise-essentials/acess-gateway-cluster/overview.html": {
+    "hash": "571b499d0c2c67f41916ef6416951eeea3b4d4277fe1c00b2b9d6113aa15491f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/enterprise-essentials/acess-gateway-cluster/troubleshooting-tips.html": {
+    "hash": "a8bdc8f4d933b523baf4980ae6bf26cfbbdd176a88c2d96f73f35761078aff60",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/enterprise-essentials/failover-cluster/configuring-failover-cluster.html": {
+    "hash": "d4af70f9d20285484d29d6ef35563fb961919e41b791bd6e9e566bf20a054e3c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/enterprise-essentials/failover-cluster/managing-failover-cluster.html": {
+    "hash": "3ba717ea66685bae81e05efb9eec9ac9c13507be684985d0b71e95d0972ff84f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/enterprise-essentials/failover-cluster/overview.html": {
+    "hash": "dde7880bae656e755a63cf1e418e340089f8317a1228a6122f2e7a144a6aa958",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/enterprise-essentials/failover-cluster/troubleshooting-tips.html": {
+    "hash": "e7981f8b7ccd1e84d193af1edf94e9ef8cd0e4cc92d3a8141e5a31900fe303ac",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/essential-configurations/reverse-proxy/managing-reverse-proxy.html": {
+    "hash": "6da0569cdcee6e2d96c3c5083316796d2ece1548d28f9f3e7aecd519ec6c8979",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/essential-configurations/reverse-proxy/overview.html": {
+    "hash": "753c115ab27415156e9aebbbd913602ed0e4e1d1fd24dfe96a3e71dfb2ba5147",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/increasing-product-memory.html": {
+    "hash": "b5db7e8a4dc29c9de4614bba7037eb7df9b2a919fc40c41268bbe1137f281ccb",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/installation/accessing-log360.html": {
+    "hash": "cff1eb1cb97b68a4bb96a0b8ba2f0bbf93d7fa76bd8948e3aa84b96516a90578",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/installation/installation-uninstallation.html": {
+    "hash": "b0e4f4b6a11665b6e41f45eafdbbb64d320a08fd519b63c0202129a1b9b6e050",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/installation/starting-stopping-log360.html": {
+    "hash": "333aa7a5f2c045c9a1819b257356f4f4163ee631fdba287123293ef4833ff73a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/log360-components/additional-configurations.html": {
+    "hash": "fa089d887d7ccfc4308da8602b0423faeb534bcfa86ec77120d1befeb0afbb87",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/log360-components/downloading-and-installing-components.html": {
+    "hash": "e5316d627e9e81656030be2e5cfc0d48b8808b386e6b2678e3411488791909bb",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/log360-components/integrating-the-components.html": {
+    "hash": "eb1542b5368dea4978f2c56bedd87265388dd0410cda707dd6879454b220e2a3",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/log360-components/navigating-across-components.html": {
+    "hash": "6d3ca91326551450f3f6271ca5a81ca63cd462835acb00f1e9a512b3d96c7258",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/log360-components/overview.html": {
+    "hash": "374a242eeba72c88f5cb2b15413a74e9feafad026320dc14d24f44b76e712d9a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/prerequisites/port-requirements.html": {
+    "hash": "4987191b097e7af24256193090c166a913e8f82cfafac2401f068dd54527aaca",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/prerequisites/system-requirements.html": {
+    "hash": "406b16cab8f1e1935e2cf8456f432ae66ba0ab16e959a28d31108bd3f1b4f9ef",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/setting-up/starting-cloud.html": {
+    "hash": "06e00a8e926a706c4c5272f20bd1891bb36fc97f6b732763b17503a620c2d334",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/adding-custom-threat-sources.html": {
+    "hash": "fdf43ab711455264d413d31f273ec488caacc2d5e49a529df690487e25ca16e9",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/cloud-adding-cef-format.html": {
+    "hash": "5e9767fc2cd9c01a395b872cc17090ce24dc776ee138f2d2cc4b1441977c8bc5",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/cloud-adding-fireeye.html": {
+    "hash": "dfdfafb9c2fda5fbf8a58768774815f54c8a595b1d004b31e4aba6490971add4",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/cloud-adding-itom-solutions.html": {
+    "hash": "9ca5f9057538b7543a1563a829d75b78d7fa03dc7e327ddc75d991546c7a35b3",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/cloud-adding-malwarebytes.html": {
+    "hash": "6ec65490920804b0f2eb324e43b4b2c494b30d70c477eca3a72c081f7e0952ef",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/cloud-adding-mcafee.html": {
+    "hash": "8cd1108d5734be7742d0908921f73cd07dfba80cc5a343473f62e2a96c8b1d05",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/cloud-adding-oracle-server.html": {
+    "hash": "dc924eda690cb850dc33151cf15d7a7a0d6c88ec4d45e6cb45943b363ea65796",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/cloud-adding-print-server.html": {
+    "hash": "dbd0aee44aaa82c7d0cfbede4c24958d31362aa42caab660fbe129896dab0cc2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/cloud-adding-sql-server.html": {
+    "hash": "4605157d94c21154717d7b2b8d53fe1287f9008a725b33f2e99e85bb600f39e2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/cloud-adding-symantec-dlp.html": {
+    "hash": "1c53285f78242bea91f9f6bc0f4e6959d3e4cd0f1accc14a6daaa139405677d0",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/cloud-adding-symantec-endpoint.html": {
+    "hash": "d686e55741f954738480da5d2e1be675efe834e8cbe7da5ab8c561826ee2aeb8",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/cloud-adding-syslog-application.html": {
+    "hash": "2ca8a470253a71ea49766e8e95cf2dc793348eef1c3b82b19d212cbcd730b6a2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/cloud-adding-sysmon-application.html": {
+    "hash": "fb21e6b0cc8b5ef9d964c6b2a5c7c7a2519c8203221f0c1806b9d724a341318f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/cloud-adding-terminal-servers.html": {
+    "hash": "d19c67c04958be0479c032ada5450eaeea11a913448ef9a5722b678bfd5cb555",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/cloud-adding-trend-micro.html": {
+    "hash": "b875f29b3636d19b098da9240b66203dd3b23ab3bb4315cf0cbef331dad77525",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/configure-external-manageengine-applications.html": {
+    "hash": "a447bdd11edc687865a606c8fc793b6e580b7a76bc4dde56e8ec003f72974979",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/device-auto-allocation/auto-allocation-configuration.html": {
+    "hash": "450747fdd9ee9e76bbb33c4271e5019e0d5baf0f473c59f10fdde915396aa216",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/device-auto-allocation/check-unallocated-device-status.html": {
+    "hash": "a2276c906e67562fb7c3ddf05c84286b198f0bbd23b830d79fb501630c2ca37a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/device-auto-allocation/configuring-auto-allocation-policies.html": {
+    "hash": "1635368fd1f2ed33ac2c4faae87e0f33f600e16e812fbc6c95ccb979af87f03b",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/device-auto-allocation/overview.html": {
+    "hash": "8b20d4d8d7a3dfbf339cd73d30fb5d959670695989d5072ca25c330d4310663f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/device-auto-allocation/sync-settings.html": {
+    "hash": "d349b999c414a39850f1788a3595d28348f4668a9fd31b80258abdf273cd10c1",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/device-auto-allocation/troubleshooting-ou-loading-connectivity.html": {
+    "hash": "04bb00add56c67da9b97d0f2ebbe4958a767a19ef3756fb68185da9528648ca7",
+    "last_updated": "March 27, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/device-management-cloud.html": {
+    "hash": "d23519a72d5c8cf784550fa6d3ae0afea568e73bac30af0bd9b822269f2450f1",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/device-management.html": {
+    "hash": "6ed5f39ed0f7d3cc77bc00852d6932ba4e7a35e53f1a46e3704031ac88ccd987",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/manage-applications.html": {
+    "hash": "c91fec3a1bf2ba36b560596b693f8262d669e637524b9ec4e3e12d8177ffc91a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/configurations/manage-security-applications.html": {
+    "hash": "3c7c65665c385048330402774127abe1658d1b5c55a58c38cc61b4d4a2a472a6",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/settings/overview.html": {
+    "hash": "c3add6acd568a004b922eaa3fb1e31f8ec5300a84e8b5a6571f3f6d06f4ff224",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/soar/custom-functions/create-custom-functions.html": {
+    "hash": "eb0791e4a5c38db04e0cad412a9f55a0a016899a63b7b23864a658dac7eb8a82",
+    "last_updated": "April 03, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/soar/custom-functions/custom-functions-overview.html": {
+    "hash": "ee7ccf4bcb6161956a9bba3aa6e195c522b66a0445e3a4f90e769ec105fda2fa",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/soar/custom-functions/function-syntax-references.html": {
+    "hash": "9e11ddb20e8c6f3136ca9759228b0f4e47050b3eb24b2dc1edb460a5fb867ba8",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/soar/custom-functions/functions-library.html": {
+    "hash": "7acf8e25ed59ff775dd5aa12795becade85948cd2b40f0cadef194f2d6992e8f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/soar/custom-functions/manage-custom-functions.html": {
+    "hash": "3b95c168e040aa9080c8ffeee0be4610046e3755071a6732505c91e97741aab2",
+    "last_updated": "April 03, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/soar/custom-functions/using-execute-api.html": {
+    "hash": "e82ed45491e02b1effe2ee8caa7fa8629ac481a61c04ef00d48e59e6f5dad21e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/soar/playbooks/building-a-playbook.html": {
+    "hash": "0527c60b428cdcfce53e9973a0c16a4610b07726dcb840882d31c7f1add7c6a7",
+    "last_updated": "May 02, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/soar/playbooks/create-a-playbook.html": {
+    "hash": "be5f1673c5bca4ee25be058a1c44a6d2a0888fea1042e29ce6144f57ab306a3a",
+    "last_updated": "April 02, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/soar/playbooks/installing-a-playbook-from-library.html": {
+    "hash": "a4acdc2b4f25025a593265e1123925d9f7ad52a8c2aca4822ed6c363c4236b71",
+    "last_updated": "May 02, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/soar/playbooks/manage-playbooks.html": {
+    "hash": "e6bd3ecc8a876e4bb51e2c95bd11572d2347253f2ce41d6ef2cf0f6a924321af",
+    "last_updated": "April 02, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/soar/playbooks/playbook-library.html": {
+    "hash": "8988d03b021a535b3149652924ebb9bcb69e3833a904971b6b3776e4cec28c6b",
+    "last_updated": "May 02, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/soar/playbooks/playbooks-overview.html": {
+    "hash": "9e4be56bd521d2fdef74cb633490d0217170185628e475b813a687cb7bc4b2a7",
+    "last_updated": "May 02, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/soar/playbooks/understanding-playbook-payloads.html": {
+    "hash": "bda97a363af226e4fbef6f2d88e45859877339ab6a4c35d7bb543bcdf1be8546",
+    "last_updated": "May 02, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/soar/playbooks/understanding-playbook-states.html": {
+    "hash": "277980da4496ec1d70ac2524b5117be07d180362102211ac6ab464765538b60a",
+    "last_updated": "May 02, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/system-settings/listener-ports/snmp-traps.html": {
+    "hash": "355885a1e73de6af70c7940ba82640280a2b27c5cf0892a4f3b6144fa72396c2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/system-settings/listener-ports/syslog.html": {
+    "hash": "7287ac3c7b11c76537390e82dc037ca5b60d4ef35a57f820e6bb916c54d083f7",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/teams/cloud-overview.html": {
+    "hash": "d82c321be37ae8b74ec5a4116e64b2116e492f03378b8087e6a063da1ccf7920",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/teams/managing-teams-cloud.html": {
+    "hash": "977ed4854c33784cb96a9f45c3b3725b919f6ef983a3708a7ea38b6b52957264",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/teams/troubleshooting-teams-cloud.html": {
+    "hash": "e246b6ea135570af28d3da574e81121e32619aa2f6969271be94d296b0a16ae9",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/technical-support/contact-support.html": {
+    "hash": "d864a57688d54f249310312afc9120ec72f995cf8df071a3f830c313c7d1feac",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/technical-support/create-sif.html": {
+    "hash": "8e314c08af34a5fab2a3e244f56961f3856d85607ca34136d3365010ec0c8219",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/technical-support/overview.html": {
+    "hash": "38605a3516c15478308293234a41cad711baa07c39f04ea22713c0cc8a2c6e7f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/ad-object-filter/accessing-and-applying-ad-object-filtering-in-log360.html": {
+    "hash": "bd35b9f27018d4ac540f276da42e45d1765363b6cb7b98e976aa249481c5dac1",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/ad-object-filter/overview.html": {
+    "hash": "3149bad4ecbbbf311d90af1ca804eadf43dd126dae4f67479b4d81c33b275d31",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/advanced-threat-analytics/overview.html": {
+    "hash": "086e15663b1c33e8682438bdb7723cf4f722b788f56c347092e7137810249977",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/advanced-threat-analytics/threat-analytics-log360-cloud.html": {
+    "hash": "35944b344c6c8577ad155d097484b05c40c917eabef08af255feb8232f96526a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/advanced-threat-analytics/virus-total.html": {
+    "hash": "25b72924d3cbc6eb0a1379831cf8a3e4e5afff9a168c6e94465e347342ecf933",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/constella-intelligence.html": {
+    "hash": "4505705f44b80425f13af5e9f40c626c7d49172a7c089b66a9143eb5aaf5e1ed",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/manage-vulnerability-data.html": {
+    "hash": "4953972f18a7e2b323342a56a52cf5d0045e593d902665a1415275d072b2d064",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/mitre-attack-framework.html": {
+    "hash": "05149282855b417cf84fc3c924e1eba9ad5c3040b99685d88812268175109353",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/rule-library/auto-install-settings.html": {
+    "hash": "e6c05128725879b694cdc30161de8b2bf1de68ab64580302157abad3a4409838",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/rule-library/cloud-auto-install-settings.html": {
+    "hash": "c5d60e3b26c45f307bdc060666e17f79990e33bf0bd3a7c3544530a500800cb2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/rule-library/cloud-installing-rules.html": {
+    "hash": "77c0af15ef446e146edd61512bceca44ed60dc0f3f2b8254d25d64243d98fecf",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/rule-library/cloud-overview.html": {
+    "hash": "41a1071ded720b5bda61bb530423d183f414ca0deccb3eed645991e5e1045e5c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/rule-library/configuring-rule-update-settings.html": {
+    "hash": "b4a94764c874be5f9bb64292061fe3dda8aadc8015a33fa8893edccf195680ee",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/rule-library/installing-rules.html": {
+    "hash": "c198fd19c2828b898d041200de087779748dc7e439dc49651bd8b675836038af",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/rule-library/overview.html": {
+    "hash": "4cf67f0c005e7f326044d94de4d885896828a234b1cc4d0fa261986ef4c729d1",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/rule-management/creating-custom-rules.html": {
+    "hash": "28a45f4fc8e71aa7d4e891e1ac0b13cec065e9188bc442847403fd72b36c938d",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/rule-management/managing-rules.html": {
+    "hash": "2782ae1f83c91214fe3eeb38f5f6708b9721c15251ae0ab075d8c903bc78f04a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/rule-management/overview.html": {
+    "hash": "b13d871eb5c8fbd676ee2b51ec9c118520c0dc65de71394fa7c12018663e5f7a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/rule-management/query-grammar.html": {
+    "hash": "8d2dd76f26809171468b9a59c5ab1c87596d8672619d9fb0023660214454dec8",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/rule-management/scheduled-detection-reports.html": {
+    "hash": "18931090497676dd5fec87a46c0c1adc13413b334390fdd72cdece0693bc4a82",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/rule-management/understanding-rules.html": {
+    "hash": "8eb43bb770eb26eb17c84e6ac0bd2fd2b9247e22465feeb72275976fc3030efe",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/security-dashboard/overview.html": {
+    "hash": "80dd44617cd54dde892d30e90af9d2ccdfa479ed9735c728c152bb1885ed8672",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/security-dashboard/widgets.html": {
+    "hash": "dc8d4cbe45a28a2f7e7b24f5c189ff38feb2cde81bdc6abeae8f1c0aa41596ba",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/switching-threat-stores.html": {
+    "hash": "59c992d6d5e1c294c88264949779379c3af8ed7a8275e5ff97c8faa94b3423d1",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/threat-import.html": {
+    "hash": "c8dea9e1d5baeec5afa56f47db2be3ee06bee20bde18b10466a93411678c6caf",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/threat-whitelisting.html": {
+    "hash": "7f46d8716280f53db7048679d56599baa734e6708e51c581b1225d202d37255b",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-detection/vm-management.html": {
+    "hash": "6fec42d6a949686f427c80d8a9313f2865203237632fd77046ebe35849adf6ba",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/cloud-invoking-investigation-agent.html": {
+    "hash": "9e69c4b016ac4f0b713c6ab45c9441383ee685fbaf36aaed918753dd330df8a4",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/cloud-invoking-zia-insights.html": {
+    "hash": "e74c4d6ab4fc5a0095af65f4868b18bf38cf891a8813942e4d5eb757f05bbee9",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/cloud-setting-up-investigation-agent.html": {
+    "hash": "ac59933bb842d772db1379ff86371771db7fe2e97f4f03c30350b835e7f63f74",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/cloud-setting-up-zia-insights.html": {
+    "hash": "3615be9ef85ec92acea50a682ddd67a36e24b08640f29eb718e56adb421698ef",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/cloud-threat-source.html": {
+    "hash": "4be7953187d381a6854df0623bd50b2d8a4d828bd8575a79c7da411a2b6814d1",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/cloud-using-investigation-agent.html": {
+    "hash": "0bf4fce36e82919f421486704829c716b052fc9071e44b121f926d9e3b55a7e3",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/cloud-using-zia-insights.html": {
+    "hash": "8c4ae2c5e166c2daffbdba963d9ddaed6dcfce0f9aec45d1529c2ea16aca09ae",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/cloud-zia-insights.html": {
+    "hash": "a057b6a4747f802fe070563f5cac807546c3844fdbf55411043e02af7370f48b",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/incident-workbench.html": {
+    "hash": "d6ae907c9e2da0dfad1366eb19f1f391e15e7b7099c7c0a7e4d3c1fdc5134438",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/incident-workbench/access.html": {
+    "hash": "edbd19d2859eb681d0d516001a9922e6f33fba061e6e3963c03f0ddb176d1af8",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/incident-workbench/advanced-threat-analytics.html": {
+    "hash": "fdbda749160e2fd1f957a419480792d14ece0e6bd64e1ed71659f62582bf7ce2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/incident-workbench/incident-building.html": {
+    "hash": "23ade1f89e45694c8512596b92699386763ed8ef73db1d13e666a35be90ebf7a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/incident-workbench/process-analytics.html": {
+    "hash": "ec200ef9a7b9b3994dde5241faf6c8b91f16f7fe5f0ef1f80f69758189ed575f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/incident-workbench/user-analytics.html": {
+    "hash": "52efabb8a46d6ef6138ddc743199a01b6374822aed6cd13460267522d98c0306",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/overview.html": {
+    "hash": "f626367fbd287267aa3ce58e2de7ee4e6325cc37bc7c24ea5ce1ff7f12ff8613",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/zia-insights/invoking-investigation-agent.html": {
+    "hash": "0efa96d0a4b4c97348deb21fe919a87f6a47c6aca6bef52b1fa56d13cfddd8eb",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/zia-insights/invoking-zia-insights.html": {
+    "hash": "12bfec9dfd70f01d65cbe69f3976b3dc3d9b6fc9d084085e3787ec412aae6700",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/zia-insights/overview.html": {
+    "hash": "43fe48485a4e6f5befb380f43f6f51868c83c567da025001a9f75389a40545ed",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/zia-insights/setting-up-investigation-agent.html": {
+    "hash": "a856db47a8737353f721f93d750d766b95679698fec0bcd9b22eb2e7f4ae1a9a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/zia-insights/setting-up-zia-insights.html": {
+    "hash": "1cf4845cc3e5f157bacae532cb4c32cc2e74b2efc8c248127d2e65e4f92eaa58",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/zia-insights/using-investigation-agent.html": {
+    "hash": "37c1cff606a88e23e4f4ad51ce0e7a455f8bb4fab98ed6daa1be995ab0f8abb6",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-investigation/zia-insights/using-zia-insights.html": {
+    "hash": "746a8e8bd46bbc1452672406b11e13507532ae10cf4602bd6ae6dae2686bb55d",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-response/cloud-ticketing-tool-configuration.html": {
+    "hash": "482ccba716b9d75bd1ea195bd796d8281ee2c60970a9aa0086b54271386e37db",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-response/incident-management/create-assign-workflow.html": {
+    "hash": "97ec881dc1d65335d6fc3779c4ac4d7278da76795cf57704f5f50db4d5aa5993",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-response/incident-management/playbook-management/create-a-playbook.html": {
+    "hash": "58ba62614dfd92d41ce954574950e83183acbfd842589bbd27e6f09c1b02ccdf",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-response/incident-management/playbook-management/manage-playbooks.html": {
+    "hash": "4583d268359510b0f400a18170607a7351f665a8cde6d6abb57e4e4bbbe13493",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-response/incident-management/playbook-management/overview.html": {
+    "hash": "4f321ba322ee6e2ccb2889dd45e9a582b1efe76b45434ad8238393c124c8c6ef",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-response/incident-management/playbook-management/prerequisites.html": {
+    "hash": "a188010107504623468b7facebaa72774aa30427af7a35c2d385f58ce0e4c86e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-response/incident-management/playbook-management/update-playbook-credentials.html": {
+    "hash": "c23d10c801b0157042c3ce010c3a1430b62f61a2f6c9ab9ce1196397b1b92757",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-response/incident-management/ticketing-tool-configuration.html": {
+    "hash": "fedebbce234186e6fa00feebf36504fc3f64ad61538b977ba98481f54c4457d8",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-response/ticketing-tool-integration/jira-service-desk-od.html": {
+    "hash": "e49e6667f954bb1941235a80b5a791e05ed8014815c81511bc4a1d1616b4f445",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-response/ticketing-tool-integration/servicedesk-plus.html": {
+    "hash": "90cbbd582e45aef6a658714103ddbc1506883ad375b003fa9f7278448c21af38",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/threat-intelligence-and-analytics/threat-response/ticketing-tool-integration/zendesk.html": {
+    "hash": "0814e4ba2c9af5b95f4822b0d4a93b307bb69434923bdc08695bb8d3224e7ff2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/title.html": {
+    "hash": "3033c6220623afa481c983ed2affe3c7c6ca6bd3efd7433938a0b292c711e423",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/troubleshooting/wmi-based-errors.html": {
+    "hash": "ad908965daf40f619ecca945b0f7ec387df5d5399f3b1364b85d5a5e210c266d",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/user-entity-behavior-analytics/cloud-anomaly-rules.html": {
+    "hash": "acf5aa33844c1c5fcdf9e54641134adba354a25b37b283cb2d45e43da3678388",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/user-entity-behavior-analytics/cloud-dashboards.html": {
+    "hash": "5e1f567e34ff12f9a344f7c55f919364917a4b204c72a36231123b3b31cd14cd",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/user-entity-behavior-analytics/cloud-data-sources.html": {
+    "hash": "a5551893cc9dd7b74cf4a746a97142f36e1be3d94c84df5768c9e3b0462e42c5",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/user-entity-behavior-analytics/cloud-manage-anomaly-rules.html": {
+    "hash": "d1199870d316a31b817b8370a45d52ea36d0cf5f926926936e1f28e96c549ddb",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/user-entity-behavior-analytics/cloud-reports-alerts.html": {
+    "hash": "1425665899f637c18cd67c9ba7592e56bd4970b1bab1f743e1eb65d2312d7326",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/user-entity-behavior-analytics/cloud-training-phase.html": {
+    "hash": "c98967e9be25a81805877c091dc74e5603bab38429e9e86f8923d77fcde27597",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/user-entity-behavior-analytics/cloud-ueba-architecture.html": {
+    "hash": "8626d9100637270fe259d91ba235673ca233028a099c54efbfffa535e7173047",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/user-entity-behavior-analytics/cloud-ueba-overview.html": {
+    "hash": "565d51bf56332565152ce7a85ac6223a664cd2c435ca05c5055efdff66537564",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/user-entity-behavior-analytics/cloud-watchlists.html": {
+    "hash": "8982a617836e1e22840c069a2962c158e64e6b7239fe9611aaea0e74f6aeb6d2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/welcome/release-notes.html": {
+    "hash": "7b3d4722a511cf3145df421256af9a1a2efd93d1314699508e60d3166e006feb",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/whats-new-in-log360.html": {
+    "hash": "7b3d4722a511cf3145df421256af9a1a2efd93d1314699508e60d3166e006feb",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/alerts/alert-notifications-and-remediations.html": {
+    "hash": "ee37a63c921f8118874f54e869909f7388fcadf1f0c758eca6b73db6cc30909c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/alerts/create-alert-profile.html": {
+    "hash": "0ebee7b0d7f450befcd4c83ebd5ac26a29a641bb69a723cc3fe718affc77052d",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/alerts/manage-alert-profiles.html": {
+    "hash": "5843a421abce3ef0753a97e1736827c79909159c9622b38bb05f8ddd3362e9d4",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/alerts/overview.html": {
+    "hash": "29612ebc9e14e5b803cb940eb962ba08a9ac4acdc3b73dba134a508531e415a5",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/alerts/view-log-alerts.html": {
+    "hash": "fced23396a4a8138279a2b7026660b22e8214e83ff96ebb899dee4eafe1d252f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/compliance/configuring-custom-compliance-reports.html": {
+    "hash": "74d3cad7400df01bd69834fc0e51288a526033a279a710822fba1ae05be3ef0b",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/compliance/configuring-predefined-compliance-reports.html": {
+    "hash": "5d022826d3373bb014b6a62bb8a963df3de026b4d4639400de2f7db06c9981c3",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/compliance/managing-compliance-regulations.html": {
+    "hash": "cf30e6ae3318ac700890151bf907f923193c7b4c03341e3977dbc9056636ca75",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/compliance/managing-compliance-schedulers.html": {
+    "hash": "3bfe84b9fb2a2525b9690018a3c06d39be857114de312e84ce8a7b47df3c1202",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/compliance/overview.html": {
+    "hash": "73d79e1a10f7fa3f64d2ce3ac1367e9f74393e046d03e31a470fe2a37654a35a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/compliance/risk-posture/active-directory.html": {
+    "hash": "541f928192593ba4d579c5608410ce6a7c959b862b633cf51c02bcc34663ffe0",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/compliance/risk-posture/overview.html": {
+    "hash": "8e081100808b04f927b4766e41c56f160d2c0edb9d60bc77f58910431e93d1ee",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/compliance/risk-posture/risk-analysis.html": {
+    "hash": "f9e4c7044c8762b5f7571df03116f9d46a57722373148eb9b9ec3e5235f9960a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/compliance/risk-posture/sql-server.html": {
+    "hash": "279024801980de9b787d1ccb0e861bcf715047d08c14210e8e14a1c17d4a2f0e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/compliance/scheduling-compliance-reports.html": {
+    "hash": "3abccbb325b69f68a3e94fbba7401443595bcedc2d324d9f6fe9f28de1469a0a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/compliance/troubleshooting-tips.html": {
+    "hash": "be4aa07780cee9667275907df9b3534f2c119669f32da7e1175a2ca77e7dfb1f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/compliance/viewing-and-managing-compliance-reports.html": {
+    "hash": "7a7424c63ca6d0699fbf3ec83900d4952df17c9901718008c6246d90f2acc5f1",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/dashboard/cloud-customized-view.html": {
+    "hash": "fb2754a6fdb7eb717a66024dfb89c83920b1a4b2852f27c73b3cae9f305140ca",
+    "last_updated": "December 30, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/dashboard/customized-view.html": {
+    "hash": "c76e9ca6ba7ed407c69279899805033a75ef1ba2e4dc6a13d05c06aeb32798d5",
+    "last_updated": "December 30, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/dashboard/customized-view/embed-dashboard.html": {
+    "hash": "a0b6864eeebc9dafc617c13cf00999dc6484c0d5a086a883f69b60a6635dbd37",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/dashboard/customized-view/log-sources.html": {
+    "hash": "b7237f294b7d5b315d6a56f193dd1d64bdd18cb9278221cb04e454374701dc8a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/dashboard/log-sources.html": {
+    "hash": "f3a5b899a0374b42a9ef08bb09992b6e3272bda386ce2625de48fab24a844773",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/dashboard/overview.html": {
+    "hash": "e16d7463b22c16e4d9031e594b4e8a3dc9d2fd69faf2bd8c717442eb59bc740f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/dashboard/predefined-tabs-views.html": {
+    "hash": "33c650d4583283bcaa8d999f54ec119d83e64a6133562db539444430f99e7f1a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-active-directory-reports.html": {
+    "hash": "ffe10698e03a1ba3a113f23872c55e641a297b54a59e1b879bab7fceb313a4af",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-apache-reports.html": {
+    "hash": "e2907570be36d29ab39b398e1e3b167b788453ef97d5547f0a3a46de4783f315",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-arista-reports.html": {
+    "hash": "45ffe788ea9a26ec926f656a4b24220f7a8fbb9595ec17590048684103bac8bd",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-aws-reports.html": {
+    "hash": "24fd3dfc4b9dc96f8fbf305ca4e01937a563c33ee007745c40a78a5d811f44a7",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-barracuda-reports.html": {
+    "hash": "2bf9ed5b98b4f343f67bae9124e228d333ce67e4c02670f215486e1c6c95bded",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-cef-format-reports.html": {
+    "hash": "bcbdca80962b0ab840eaa4c4618488d5759a20f43f51e900a797130b62e452ad",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-checkpoint-reports.html": {
+    "hash": "790b6d0683a63024e6f5db2ce5bc3c524e542a890ced334efc52d398f561b49d",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-cisco-reports.html": {
+    "hash": "3191ece3ebdc19d31f93415cff5be7bd960b1d5adf41ea7d60d73e368159ad73",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-dell-reports.html": {
+    "hash": "7bfec756f0d707fa8c1cc842384f9b72034e6ccbd1c5182814c6f54c69d28061",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-dhcp-linux-reports.html": {
+    "hash": "bdb26f26157ec40e10e5f9ff09cc4928e23536d8643443afc13c4d8de10c5393",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-dhcp-windows-reports.html": {
+    "hash": "1080c84067ce4eba31b8e1eef200104afe24b98b4b28f82c8b660f8fa779daa3",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-emc-server-reports.html": {
+    "hash": "4e00596aa6017e03298fccb51cbf95f928cc199e78e253c3b78774e09668dd43",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-erp-reports.html": {
+    "hash": "7bbf6887201e60a5aa5d35c7ea967427e36fd4fa85a1b4261216ed6baee13b67",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-f5-reports.html": {
+    "hash": "260057c1693897949e2c7c81e388d3397b4e08bc3d941e1a46d4ce3afe8e7e15",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-file-monitoring-reports.html": {
+    "hash": "864a2a34a24795225b746d8dd50506d998fc199b26e7ff3773a803cb7680d874",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-fireeye-reports.html": {
+    "hash": "5c2a3f6dd4911871ed7225bc986d7e706647974429e2d212a6a814e70226d486",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-firepower-reports.html": {
+    "hash": "c6e3d58d6d464ad7f0b4a08868dd7ffcb64a80f63ee1ffe2825297b74bd1e282",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-forcepoint-reports.html": {
+    "hash": "2abecba356cb28c97237aeed91c604473bbeef4b3b3430ef71deed05bfa56795",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-fortinet-reports.html": {
+    "hash": "369baf83e4b899e2f5e3892cdbcc31985bf1213e2025fd70c4abe689540fe0cf",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-h3c-reports.html": {
+    "hash": "9d003bac1eb78b642534c8d272d2c57717da71c853ed1ee1027ef0562f609afd",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-hp-reports.html": {
+    "hash": "347e1fdc158e532ab0c342e271889e25d01dff168480b2b544a63bee067da803",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-huawei-reports.html": {
+    "hash": "d13705a2817d96319012c1aa496b02cb156365456bf64a9fdd3c1f2ff57cc416",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-hyper-v-reports.html": {
+    "hash": "b05490f0f6226a5142f7105c21f60431c101fa569d843d37778f473f8f99b820",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-ibm-db2-reports.html": {
+    "hash": "86d0310af8668d31c7e8477b854596d46b6ea380298a987130b72fc8ca2c7d6c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-iis-w3c-ftp-reports.html": {
+    "hash": "1637a36752289385347937ea9205caf0f58bf6769793df3af0aa9add7f319760",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-iis-w3c-web-reports.html": {
+    "hash": "483a222ca66f3fd50b2925a07168b99ea62e9d4e81aa26574ac071ffb3e02c1b",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-isilon-reports.html": {
+    "hash": "58e02e73b678176c79e62b0f555ddf89aa7558ebef6acfca4cf973befb02786e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-juniper-reports.html": {
+    "hash": "c0c7cf9492aec822a33e2fd5d1c8f962388711f3eeb1d81c52c5e81f5f9e2d3e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-malwarebytes-reports.html": {
+    "hash": "ca80505c4db193ed94f8f9f6d5dc343df9f9056bca0bd5a7017418ca2c86e32b",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-mcafee-reports.html": {
+    "hash": "4468e19df8f24ab6989733ed69fe6a69be5d18a1f3be61d4bcb2032cc667295e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-meraki-reports.html": {
+    "hash": "cb019c5a0d730a162a64e807b8cd847acdaf2a44f9b0e70abad81a2a507c2c15",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-mssql-reports.html": {
+    "hash": "ac8ebc91bda9745f19b8fc85394f556ec742e6f3a098e78ad78c8712875b72d0",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-mysql-reports.html": {
+    "hash": "ffbb5bbbd46e56556124d79a8133f7ac872af07c70298287776afeca742ac2c6",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-netapp-reports.html": {
+    "hash": "f6d3ef0684d601eda6d3ed0fa38861650951dc0baae7201074799d5203452d80",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-netscreen-reports.html": {
+    "hash": "484129aaccd7ea45bfe3c6d97cde00e9dd88add6f4a87d8b80cc0f51181caaef",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-oracle-reports.html": {
+    "hash": "6d100ec16cf22d679f77511c6f631a4ac4433aed8f05d1b5ace8949ca43c3fce",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-paloalto-reports.html": {
+    "hash": "acdf0af69346abb206ac2b74e2fd248ab505fdf8172542b78ac1dd715afb2427",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-pfsense-reports.html": {
+    "hash": "f211c4a308faefb81f29e3f0dba8eed94d5a848c11389547bf9cb973bed22d16",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-pgsql-reports.html": {
+    "hash": "baedf459cc038ba53e5135661b5b754778f9d00d89c21970f9c7f672468fce0e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-printer-reports.html": {
+    "hash": "282d3e5b24de3c9757c1c157b3e9ee0f540c6831c5fb25b7bcf848962fdef943",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-qnap-nas-reports.html": {
+    "hash": "fd14b480f85896fc9b620426b62662c22c64dc3efd37a27c2a72a579a2c51479",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-reports-overview.html": {
+    "hash": "3d472812ea826d3287759639424a4349a25b19e6dfcb0ce8d4866859f2dc6c69",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-salesforce-reports.html": {
+    "hash": "9f1562fb4940c52e7df512fd2e9b01e00340fcc5b5519c5bd5812860b60db3c7",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-sap-reports.html": {
+    "hash": "641a2b5fbedc66057902c7fc5d3e3efd11e524d0bb2a8a680e4f48489ccfe497",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-sonicwall-reports.html": {
+    "hash": "7741a526efab54b924e819b19b5f3ef67d0b95bd2b7c849f5aaf6abc69a58d38",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-sophos-reports.html": {
+    "hash": "ef6262d92ab0b05b47baecedc70633319ff97ee7de7b36ce0d9eab631ddf3176",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-stromshield-reports.html": {
+    "hash": "9897cbd33a7678c4b28fd61eee3f2c85f43340f1ba06fec710d48a68f897231a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-symantec-dlp-reports.html": {
+    "hash": "28553a562a1b74197eb27c4006fd824590877d5caf9e797df19a8fd3b7654a0f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-synology-nas-reports.html": {
+    "hash": "ee4124960d8334a2f779b2c96754ff7331aa7482351541666154e0da3fc192b1",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-sysmon-reports.html": {
+    "hash": "5522bb8c54ffce6a2fe642523d9d10213c149a79de22eb087b920b2437f7e235",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-terminal-reports.html": {
+    "hash": "71d39a0948898efe97cc7d6b7abd788604cdfdd5d045db7ff82eca112d589a38",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-threat-analytics-reports.html": {
+    "hash": "b32097556eb1d9f9a2316a5a89ef7c44ec3334e8c69832197a8a35f2fe51c740",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-trend-micro-reports.html": {
+    "hash": "67af0a6630498bf280fc9f7275c0eca177de1d6cfc9087e4164533686c189be4",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-unix-reports.html": {
+    "hash": "bb0373cd1f14bb0e08a97586679373b9f58f1b5eab5a5af43099f296fba68723",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-vmware-esxi-reports.html": {
+    "hash": "8ad4806a9781820fa64b7a39de7b3e53c024fa75ca4f7a63a019ebf1f313b407",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-watchguard-reports.html": {
+    "hash": "d8272a2d9718c5b8f0efa91f654a419f5d87f4e711fbf34150d829a94ba7069c",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-windows-reports.html": {
+    "hash": "e6de3dc148bac54df699e403b8c3c3fba2f7ad567eeebd4b8df9bd09b10be51e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/cloud-windowscluster-reports.html": {
+    "hash": "d41d3547d14ed2b55f44bc6da5f7427098ef0c5a58e0e3d57086851e88ff39c2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/custom-reports.html": {
+    "hash": "405777e7ef528d069c4b637dde1934ba920e8a4bd1b523c24496a6d65c371299",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/managing-predefined-reports.html": {
+    "hash": "f3d664f4ffaa5eeb2c48f0d6022f30567610da06509814b14883e4c6fab39479",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/managing-report-views.html": {
+    "hash": "40346163d69f760d6c682c1f1d2ae2fabb6644dd747c0f867e59991bc82b7a38",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/mark-report-as-favourite.html": {
+    "hash": "c024b613057bc15d4514063ea2804eda05ac7132e91105f37aef2fd406dc4350",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/overview.html": {
+    "hash": "6a56dacf96afee7bb16d257ddfea99555ca78913eefbe7a2f7a63e9ee4789e14",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/personalize-reports.html": {
+    "hash": "e68e1fda74ea940bbc974f412da799f55d729de22728ffa06df4767d66e4be02",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/report-export-customization.html": {
+    "hash": "39b7ee4f6963f63c4b9b009bf9fb5c7252c3f17b2a140f40bcecd6917f297788",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/schedule-exports.html": {
+    "hash": "5fa396d8cd9aa1a2369fd469813c9e53e5b4a21291faab8d60fba1876bf3565f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/schedule-reports.html": {
+    "hash": "1e43f465b8b9695063e1952fa8247e9e942985157d2228caa7bca9684474d69f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/reports/session-activity-reports.html": {
+    "hash": "14ca29b37b4c0c873bf9850829d74a3b1e25415682f51fd2c76354f89d89365f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/search/cloud-add-or-remove-fields-from-the-search-result.html": {
+    "hash": "bd036763da3500bf6fe41a35bf6168c5629b039f8a934dffbe4df52518974709",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/search/cloud-export-search.html": {
+    "hash": "d9279c1476f701532109c5b8c4564d2fb9d23d39c8aa2eb0db473a840d44f6a2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/search/cloud-formatted-view.html": {
+    "hash": "5e75677a56f3551cba132960cbd02b89426eca1fd7e6b67b6f116553ac4fc0df",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/search/cloud-save-searches.html": {
+    "hash": "64327fb88405f6794ff25f264a1cf440f9cffc3148ae86982241d7fa33dc974a",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/search/cloud-search-tool.html": {
+    "hash": "63529d77782e5567eee09ebbc9253c4b781f3aa7bc93e63ae77f9086dc2d6cea",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/search/cloud-search.html": {
+    "hash": "4909c8746dc632d50dccbea1f9efcc7b1e2621840b93a2dc32c516808e6db14f",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/search/cloud-share-search.html": {
+    "hash": "a3367b7dd27329eb1d917c6c009e9cdd035a85fb459ad8dbd722e2ce226f9365",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/search/cloud-tagging-tool.html": {
+    "hash": "c4ce9234d160e8b9abbc06567333d8be8b7f29a9b69e8ff806d09031f4c6b6a2",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/search/forensic-search.html": {
+    "hash": "0f8fc8ac83d610fc77640cd2f7d915603cabd1704a284ea787d9b65d81483a7d",
+    "last_updated": "June 13, 2026"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/search/how-to-extract-new-fields.html": {
+    "hash": "f55f397a2cf1e027bdc88355b64cd9c8b97f239b40a0b54a34e8cd54e67120c6",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/search/how-to-search-logs.html": {
+    "hash": "fe90bf7250434321c5130241d78119573a56ed461132c04b498bd81295630316",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/search/how-to-tag-fields.html": {
+    "hash": "018672aa2709a6d1427f30a650399c41c53237e1d58e7d06eb6c391f755c775e",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/standard-options/device-summary.html": {
+    "hash": "197016ea2b292b66923e3c9aaf63af67899323749b611a703f6db3ab6b49a936",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/standard-options/global-search.html": {
+    "hash": "deab4786736e2783ca8c3dd67a416e14e2b8d9371506101e442c1e8cf5c10ca8",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/user-interface/cloud-device-summary.html": {
+    "hash": "fc02a0a3f6349b2fcb5010ff9b01ba055119cafa1a25b999160e7d352091f615",
+    "last_updated": "August 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/user-interface/log-receiver.html": {
+    "hash": "a3e517ad896c278b39e26b345ee4c43eeddb15f3b86f6f6897e7581e05710237",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/user-interface/notification.html": {
+    "hash": "534d75ed0cce5ff36ed67f485f4720b90218ff291498a45f03ab221719fcb711",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/user-interface/personalize.html": {
+    "hash": "fd8c6202e3deafb2704550c5d8ae9c59d6d8667f6d02e9bb552fb4f1554dfbb7",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/user-interface/quick-add.html": {
+    "hash": "a12374bda91e596a4993c43fe8152f8a5cf6d9afb08b5ed6b13283bfb1e39349",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/working-with-log360/user-interface/tabs.html": {
+    "hash": "5d58e3a718a5560af15169ed36f45b55b7dc59e0eb988799092241bdf1d9be19",
+    "last_updated": "September 12, 2025"
+  },
+  "https://www.manageengine.com/log-management/help/zia/cloud-agent-studio.html": {
+    "hash": "f42864f1d7e53c77a9bde2eebb3d282abe45676fa75f135b1ffbf6551a81f177",
+    "last_updated": ""
+  },
+  "https://www.manageengine.com/log-management/help/zia/cloud-agent-studio/configuring-zia-agents.html": {
+    "hash": "793375eaf84fde3d143cae612eef27532d09a397b18620558db5a552b61a8287",
+    "last_updated": ""
+  },
+  "https://www.manageengine.com/log-management/help/zia/cloud-agent-studio/creating-custom-agents.html": {
+    "hash": "4b775a64d90889b00523dc22062f8443c80ce1f29a00a2a6fcbd6993100d1144",
+    "last_updated": ""
+  },
+  "https://www.manageengine.com/log-management/help/zia/cloud-ai-configurations.html": {
+    "hash": "05937bf57b5c8ae747361d87b808704175320abe5aef09e115f31b09753f8024",
+    "last_updated": ""
+  },
+  "https://www.manageengine.com/log-management/help/zia/cloud-ask-zia.html": {
+    "hash": "d7cbef1946e011aa9af0b2967e327e0c719811ad502fb672c5ebfd0d2ab6c1e5",
+    "last_updated": ""
+  },
+  "https://www.manageengine.com/log-management/help/zia/cloud-ask-zia/using-ask-zia.html": {
+    "hash": "d1779c4477161b560a9dade9e5fded272037d74a84b6ffb21fe4f0359c7dac95",
+    "last_updated": ""
+  },
+  "https://www.manageengine.com/log-management/help/zia/cloud-zia-overview.html": {
+    "hash": "8a27f40e1ad49d91b0ee29bd31107052e63e786ed5fff5cf30c3260f9fcec72a",
+    "last_updated": ""
+  },
+  "https://www.manageengine.com/log-management/help/zia/cloud-zoho-mcp-integration.html": {
+    "hash": "15891eb301475e9e7eccb1a697bf7a17a9737a8c4b22c41fb582655cf5d868f1",
+    "last_updated": "April 24, 2025"
+  }
+}

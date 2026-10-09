@@ -1,0 +1,17 @@
+Log360 Cloud's Cloud Protection gateway server monitors web traffic to and from endpoints; data is sent to the Log360 Cloud server, which is then analyzed and presented in the form of intuitive dashboards. Log360 Cloud's Cloud Protection component offers built-in measures to prevent gateway server failure in the following scenarios:
+Low disk space in the gateway server
+: When free space in the server is lower than 2GB, auditing of web requests will be stopped to allow uninterrupted functioning of the gateway server.
+Communication failure between the Log360 Cloud server and gateway server
+: When the Log360 Cloud server is unable to communicate with the gateway server, the gateway server will still function to allow uninterrupted internet access. The audit data however, will be reflected in the reports and dashboard only after communication has been reestablished.
+Note
+Updates to the gateway server configuration will be synced continuously even if event data collection is temporarily suspended due to low gateway server disk space.
+How to prevent gateway server failure
+Gateway servers can be configured to prevent interruptions in access to the internet. When setting up proxy servers, you can configure Proxy Auto-Configuration (PAC) files out of the various methods used to route web traffic. Find more details on configuring PAC files
+here
+.
+Recommended practices for preventing gateway server failure
+Set up at least three or more gateway servers to ensure uninterrupted internet access.
+When configuring the PAC file, ensure that intranet traffic is set up differently than the web request passing through the internet.
+Ensure that all endpoints have the PAC file setup enforced properly through Group Policy.
+Ensure that only browsers that support PAC file configuration are used in endpoints.
+While scheduling gateway server or Log360 Cloud server maintenance, ensure that you have another gateway server available for failover.

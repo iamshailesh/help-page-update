@@ -1,0 +1,62 @@
+In this page
+Overview
+Common Issues and Solutions
+Overview
+This page outlines common issues that may occur while configuring or managing the Access
+Gateway Cluster in ManageEngine Log360, along with their causes and solutions.
+Common Issues and Solutions
+1. Version mismatch between Access Gateway Cluster instances
+Cause:
+Configuration failed due to different build versions of the
+Access Gateway Cluster instances being used for the same product.
+Solution:
+Ensure both instances of ManageEngine Access Gateway Cluster
+are running the same version.
+2. Access URL mismatch
+Cause:
+Configuration failed because different Access URLs were used for
+two Access Gateway Cluster instances linked to the same product.
+Solution:
+Configure both instances of ManageEngine Access Gateway
+Cluster with the same Access URL.
+3. Communication error
+Cause:
+A communication failure occurred between the product server and
+the Access Gateway Cluster.
+Solution:
+Verify and re-enter the Server Host Name, Protocol, and Port.
+Also ensure the product server is running.
+4. Maximum permissible Access Gateway Cluster nodes reached
+Cause:
+More Access Gateway Cluster instances were added than the
+product allows.
+Solution:
+Limit the number of Access Gateway Cluster instances to the
+maximum permitted by the product, which is 10.
+5. Invalid Access Key
+Cause:
+The access key is invalid due to an error during copy-paste or
+because it has been regenerated.
+Solution:
+Copy and paste the access key correctly from the product, and
+always use the latest regenerated key.
+6. Another instance or update manager is running
+Cause:
+Another instance of the Access Gateway Cluster application or
+its update manager is already open.
+Solution:
+Close any running instances of the Access Gateway Cluster GUI
+or Update Manager, then try again.
+7. Virtual IP is not supported
+Cause:
+The Server Host Name entered is a Virtual IP address, which is
+not supported.
+Solution:
+Use the primary server's host name or IP address instead of a
+Virtual IP.
+Read also
+This document explained common troubleshooting issues related to the Access Gateway Cluster.
+To learn more about configuring and managing these components, refer to the following
+articles:
+Configuring Access Gateway Cluster
+Managing Access Gateway Cluster

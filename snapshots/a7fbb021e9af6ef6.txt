@@ -1,0 +1,57 @@
+In this page
+Actions Supported
+Steps to Integrate EventLog Analyzer with Jira Service Desk On-Demand
+Jira Service Desk On-Demand is a cloud-based help desk software that, when integrated with EventLog Analyzer, enables IT and security teams to track, analyze, and manage security incidents efficientlyâwithout leaving the Jira Service Desk interface. This seamless integration enhances your workflow and enables faster incident response.
+Actions Supported
+Two-way synchronization
+Run workflow
+Disable log collection
+Disable ticketing tool notification
+Export incident
+Before you begin:
+Download and install ManageEngine EventLog Analyzer if you haven't deployed it yet.
+If you're an existing user, ensure that EventLog Analyzer is updated to its latest version. The integration with Jira Service Desk On-Demand is supported from build number 12550 and above.
+Steps to Integrate EventLog Analyzer with Jira Service Desk On-Demand
+Log in to
+Jira
+as an
+admin.
+Download the
+EventLog Analyzer application
+from the Atlassian Marketplace.
+In the top navigation bar, under the
+Apps
+drop-down, click
+EventLog Analyzer
+.
+On the page that opens, click the
+Integrate Now!
+button.
+Enter the
+URL of the server
+where EventLog Analyzer is running in the respective URL field.
+Open EventLog Analyzer and generate an
+AuthToken
+using these
+steps
+with the following scopes:
+"alertprofiles.read, devices.update, incidents.export.create, incidents.export.read, incidents.update, product.details.read, ticketingtool.configuration.read, ticketnotification.update, workflows.execute, workflows.read".
+Copy the
+AuthToken
+and navigate back to Jira to paste the copied AuthToken in the
+AuthToken
+field and click
+Next
+.
+EventLog Analyzer will be successfully configured. You can edit the configuration settings later if needed.
+Admins will have access to the configuration page by default. Associated users will only have access to the
+Tickets
+window.
+To associate users, open the
+Associate Users
+tab in the configuration section and select the users.
+Note
+Alert-specific operations will only be available in tickets raised from EventLog Analyzer build number 12550 and above.
+Please refer to this
+link
+for more details on the EventLog Analyzer app for Jira Service Desk On-Demand.

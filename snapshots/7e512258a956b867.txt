@@ -1,0 +1,91 @@
+In this page
+Overview
+Functionalities of APIs
+Steps to generate AuthToken
+NOTICE
+V1 APIs are deprecated. No new authentication tokens can be created for V1 APIs. Support for V1 APIs will continue until September 2026. We recommend migrating to V2 APIs.
+Overview
+ManageEngine Log360 provides REST Application Programming Interfaces (API) to enable seamless integration of its log management features with other applications. The API enables you to access the product from other applications and perform necessary log monitoring and analysis with ease.
+NOTE
+Tokens have admin access and can access all device data without any limitations.
+Functionalities of APIs
+API
+Function
+Get log sources
+To get the list of log sources available in the product.
+Get log fields
+To get the list of parsed log fields from the processed logs.
+Get log types
+To get the list of all log types available in the product.
+Synchronous search
+To perform search in the product. All search results are obtained by the server before they are returned to the user.
+Asynchronous search
+The Search is performed in the background and the user is provided with a request ID. The status of the request can be monitored using the Jobs endpoint.
+Jobs endpoint
+To fetch or delete the status of all the running, failed or completed Asynchronous search, alert tasks.
+Jobs Result endpoint
+To fetch the search, alert results of the completed Asynchronous search tasks.
+Get alert profiles
+To get the list of all alert profiles available in the product.
+Synchronous alerts
+To get alerts data in product.
+All alert results are obtained by the server before they are returned to the user.
+Asynchronous alerts
+The alert data retrieval is performed in the background and the user is provided with a request ID. The status of the request can be monitored using the Jobs endpoint.
+Get Product Details
+To get the product details.
+Disable Device
+To disable a log source.
+Sync Incident Status/Severity using Ticket
+To update an incident's status/severity based on the created ticket.
+Export Incident using Ticket
+To export an incident from a created ticket.
+Disable Ticket Notification
+To disable alert profile notification for ticketing tool connections.
+Execute Workflow
+To execute a predefined workflow.
+Steps to generate AuthToken
+To access APIs, you must generate an AuthToken. Follow these steps:
+Login to the web console as an administrator.
+Navigate to
+Settings
+tab. Under
+Admin Settings
+, select
+API Settings.
+Figure 1: Navigating to API Settings
+In the
+API Settings
+window, click
+Create New AuthToken
+in the top-right corner.
+Figure 2: Creating a new AuthToken
+In the Generate AuthToken tab:
+Click the
+icon next to
+Scopes
+.
+Figure 3: Selecting scopes
+In the
+Select Scopes
+window, choose the APIs that the token should have access to by selecting the checkboxes next to the required scopes.
+NOTE
+Scopes define the APIs that can be accessed using the generated AuthToken. You can choose one or more APIs to be part of a scope.
+Figure 4: Selecting scopes
+Click
+OK
+to confirm your selection.
+Figure 5: Selecting scopes
+Set an expiry time for the AuthToken by clicking the
+icon and selecting one of the predefined options, such as Never Expires, Today, Next 7 Days, Next 30 Days.
+Figure 6: Setting expiry time
+You can also choose a Custom Date and Time using the calendar and time picker.
+Figure 7: Setting expiry time
+Click
+Create
+to generate the token.
+Figure 8: Generating an AuthToken
+NOTE
+Ensure that you copy the generated AuthToken immediately for integration with external applications. Since tokens cannot be retrieved once created, they can only be regenerated if required.
+Read also
+This page explained the available REST APIs in the product and steps to generate authentication tokens for external integrations.

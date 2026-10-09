@@ -1,0 +1,163 @@
+Log360 Cloud simplifies EMC server auditing and helps ensure security, compliance and operational integrity.
+Audited events
+Log360 Cloud audits both success and failure attempts for the following file activities:
+Create
+Read
+Modify
+Write
+Delete
+Change file permissions
+Required privileges
+For effective EMC CIFS server auditing with Log360 Cloud, the user configured in the domain must have either admin privileges or be granted the minimum privileges outlined below:
+Read and Write privileges for the EMC Registry Editor.
+Read privileges on the EMC audit log share path. Refer to these
+steps
+to update the shared path.
+Read and Write permissions to enable automatic configuration of the SACL for auditing on the specified shares.
+Configuring EMC server auditing in Log360Cloud
+To configure EMC server auditing in Log360 Cloud, follow these steps for EMC server auditing:
+Navigate to
+Settings > Configuration > File Integrity Monitoring > EMC Server
+.
+If the server is domain-configured, select the EMC Server from the list of discovered devices; otherwise, choose the Configure Manually option and enter the server name.
+Provide the correct credentials and select an appropriate agent.
+Verify the provided credentials to enable location browsing. Ensure proper validation for secure connections and accurate monitoring of file activities within EMC locations.
+Navigate through directories, selecting specific files and folders for monitoring. Alternatively, manually enter the path to the desired files/folders.
+Use the filter to selectively include/exclude specific file types, and then further refine by excluding certain sublocations within the main directory, or all sublocations within the main directory.
+To enable automatic configuration of object-level auditing by Log360 Cloud, select the checkbox for "
+Set necessary object-level auditing on selected shares
+" and then click the
+Configure
+button to initiate the configuration process.
+Configuring audit policies
+To configure audit policies on your EMC storage devices, follow these steps:
+Install the
+CIFS Management MMC Snap-in
+on any domain server and open it.
+Right-click
+Data Mover Management
+and select
+Data Mover
+.
+Navigate to
+Data Mover Management > Data Mover Security Settings > Audit Policy
+.
+Enable
+Audit Object Access
+for both Success and Failure events.
+Click
+OK
+.
+Configuring Eventlog settings for EMC server auditing
+Configuring Eventlog settings for EMC server auditing involves adjusting the default Eventlog size, set to 512KB, to prevent event overwriting. To modify the log size, follow these steps:
+1. Creating a shared folder:
+Create a new volume in the EMC file system: Navigate to
+Storage > File > File Systems tab > Create a new file system
+.
+Establish a hidden share in that volume: Navigate to
+Storage > File > SMB Shares > Create share
+. Copy its local path, obtainable under
+Computer Management console > System Tools > Shared Folders > Shares >
+right-click the hidden share
+> Properties > Folder path
+.
+2. Updating Eventlog location in registry:
+Open the Registry Editor by going to
+Run > regedit > File > Connect Network Registry >
+type the EMC CIFS server's name.
+Navigate to
+HKEY_LOCAL_MACHINE > System > CurrentControlSet > Services > Eventlog > Security > Security
+.
+Set the local path of the hidden share as the key name under
+File > [Local Path of the Audit Log]
+. This updates the default location of the Eventlog file.
+3. Adjusting Event Viewer settings:
+Open
+Event Viewer
+by going to
+Run > eventvwr >
+right-click
+Event Viewer > Connect to Another Computer >
+type the target EMC CIFS server's name.
+Navigate to
+Security Log >
+right-click
+Properties >
+select
+Do not overwrite events
+.
+4. Configuring archive settings in registry:
+Continue in the Registry Editor (
+Run > regedit > File > Connect Network Registry >
+type the target EMC CIFS server's name).
+Navigate to
+HKEY_LOCAL_MACHINE > System > CurrentControlSet > Services > Eventlog > Security > Security
+.
+Set the following values for the archive settings:
+AutoArchiveEnabled: 1
+AutoArchiveTriggerPolicySize: 512MB
+AutoArchiveRetentionPolicySize: 10GB
+Manual SACL configuration for EMC server auditing
+For manual SACL configuration in EMC server auditing, follow these steps:
+Right-click the target share and select
+Properties
+. Navigate to the
+Security tab
+.
+Click on
+Advanced
+and proceed to the
+Auditing
+tab.
+Add the following entries for the
+Everyone
+group.
+To audit
+Principal
+Event type
+Accesses
+Applies to
+File and folder changes
+Everyone
+Success and failure
+Create Files / Write Data
+Create Folders / Append Data
+Write Attributes
+Write Extended Attributes
+Delete Subfolders and Files
+Delete
+This folder, subfolders, and files
+Folder permission changes
+Everyone
+Success and failure
+Change Permissions
+This folder and subfolders
+File read
+Everyone
+Success and failure
+List Folder / Read Data
+Files only
+File read failure
+Everyone
+Failure
+List Folder / Read Data
+This folder and subfolders
+Troubleshooting EMC server Auditing:
+Target server not listed during configuration
+Error message
+: No EMC Server(s) found.
+Cause
+: The server is not added to the domain.
+Solution:
+Ensure the correct domain is selected.
+Click the refresh option in the 'Select Server' modal to reload computer objects.
+Verify that the Active Directory computer object has the Operating System named EMC.
+Credentials verification
+Error message
+: Error message: Connection failed for {server name} due to Invalid Credentials
+Cause: Incorrect credentials.
+Solution: Provide credentials with appropriate privileges.
+SyncSourceFiles Failure
+Error message : The system cannot find the file specified
+Cause: Unable to find the registry path.
+Solution: Check registry path availability in HKEY_LOCAL_MACHINE > System > CurrentControlSet > Services > Eventlog > Security > Security.

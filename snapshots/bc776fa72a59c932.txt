@@ -1,0 +1,118 @@
+Overview
+Configuring Oracle server in Log360
+Overview
+Log360 enables you to add Oracle servers as log sources to capture and audit database activity across Windows and Unix platforms. By configuring audit parameters and log sources, you can monitor user actions, DDL, and DML statements for better visibility. This ensures centralized auditing, improved security, and compliance reporting.
+Configuring Oracle server in Log360
+Navigate to
+Settings > Log Source Configuration > Database Audit
+.
+Next, select the
+Oracle
+tab.
+Click on
++ Add oracle server
+if no oracle servers are configured.
+Expand the list by clicking the
+"+"
+icon to add a new device
+Choose from the drop-down menu to add Configured devices, Workgroup devices, domain devices, etc.
+To add new devices manually, click on
+Configure Manually
+and enter
+Log Source
+.
+If the device type is Unix, check the
+Add as Syslog device
+box. If the device type is Windows, enter
+Username > Password > Verify Credentials
+and click on
+Select
+.
+Based on your selected device type, choose between
+Windows
+and
+Unix
+platform options. If you have configured the log sources manually, the platforms will be automatically updated.
+Click on
+Add
+to add the log source.
+Oracle Server Configuration
+Oracle server - Windows platform
+Oracle server - Linux platform
+Reference:
+http://download.oracle.com/docs/cd/B28359_01/network.111/b28531/auditing.htm#CEGBIIJD
+For Oracle server installed in Windows platform
+Connect to SQL *Plus using the sqlplus command.
+Execute the command given below to check whether the audit_trail is set to OS or not.
+Show parameter AUDIT_TRAIL;
+Change audit parameters using the below command:
+Show parameter AUDIT_TRAIL;ALTER SYSTEM SET AUDIT_TRAIL=OS SCOPE=SPFILE;
+Restart the Oracle server to let the changes take effect.
+To disable AUDIT_TRAIL
+ALTER SYSTEM SET audit_trail = NONE SCOPE=SPFILE;
+For Oracle Server installed in Unix platform
+Execute the command given below to check whether the audit_trail is set to OS or not.
+Show parameter AUDIT_TRAIL;
+Change audit parameters using the below command:
+ALTER SYSTEM SET AUDIT_TRAIL=OS SCOPE=SPFILE;
+To enable Oracle syslog auditing, follow the procedure given below:
+Manually add and set the
+AUDIT_SYSLOG_LEVEL
+parameter in the initialization parameter file, initsid.ora.
+The
+AUDIT_SYSLOG_LEVEL
+parameter is set to specify a facility and priority in the format AUDIT_SYSLOG_LEVEL=facility.priority.
+facility
+: Describes the part of the operating system that is logging the message. Accepted values are user, local0âlocal7, syslog, daemon, kern, mail, auth, lpr, news, uucp, and cron.
+The local0âlocal7 values are predefined tags that enable you to sort the syslog message into categories. These categories can be log files or other destinations that the syslog utility can access. To find more information about these types of tags, refer to the syslog utility MAN page.
+priority
+: Defines the severity of the message. Accepted values are notice, info, debug, warning, err, crit, alert, and emerg.
+The syslog daemon compares the value assigned to the facility argument of the
+AUDIT_SYSLOG_LEVEL
+parameter with the
+syslog.conf
+file to determine where to log information.
+For example
+,the following statement identifies the facility as local1 with a priority level of warning:
+AUDIT_SYSLOG_LEVEL
+=local1.warning
+See Oracle Database Reference for more information about AUDIT_SYSLOG_LEVEL.
+Log in to the machine that contains the syslog configuration file, /etc/syslog.conf, with the superuser (root) privilege.
+Add the audit file destination to the syslog configuration file
+/etc/syslog.conf.
+For example: assuming you had set the AUDIT_SYSLOG_LEVEL to local1.warning, enter the following:
+local1.warning /var/log/audit.log
+This setting logs all warning messages to the
+/var/log/audit.log
+file.
+Restart the syslog logger:
+$/etc/rc.d/init.d/syslog restart
+Now, all audit records will be captured in the file /var/log/audit.log through the syslog daemon.
+Restart the Oracle server so that the changes take effect.
+Note
+When logged in as SYSDBA/SYSOPER, Oracle database provides limited information on database activity monitoring. Hence, to get the complete audit trail activities of Oracle database, we suggest that you log in as a user with privilege other than SYSDBA/SYSOPER.
+Auditing statements
+DDL
+You can audit DDL activities of a selected user in the database.
+To enable auditing of all privileges of users:
+AUDIT ALL PRIVILEGES by user_name; (or)
+AUDIT CREATE TABLE by user_name;
+To enable auditing of specific privileges:
+AUDIT CREATE TABLE by user_name;
+Add your required auditing option near "CREATE TABLE".
+Restart the Oracle server to let the changes take effect.
+Note
+To check the audit options that are enabled under any user, execute the statement given below.
+SELECT user_name, audit_option, success, failure FROM DBA_STMT_AUDIT_OPTS;
+DML
+This auditing enables you to audit specific statements on a particular object. It always applies to all users of the database.
+AUDIT SELECT, INSERT, UPDATE, DELETE on table_name
+You can also add your required auditing option(s) here.
+The following statement specifies default auditing options for objects that might be created in the future:
+AUDIT SELECT, INSERT, UPDATE, DELETE on DEFAULT;
+Restart the Oracle server to let the changes take effect.
+Note
+To check the audit options that are enabled under any object, simply execute the below statement.
+SELECT OWNER, OBJECT_NAME, OBJECT_TYPE, INS, UPD, DEL FROM DBA_OBJ_AUDIT_OPTS;
+To disable audit option, use NOAUDIT instead of AUDIT in same statement.
+Details about the audit options are available here.

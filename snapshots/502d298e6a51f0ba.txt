@@ -1,0 +1,57 @@
+Note
+Ensure Log360 Cloud agent is installed on at least one Windows device in your network. To configure the agent, follow the steps provided
+here
+.
+Log into your
+Log360 Cloud dashboard
+.
+Navigate to
+Settings -> Configuration Settings -> Log source configuration -> Applications
+tab.
+From the right panel, click on the
+General Application
+s tab to view the list of applications being monitored.
+To add a new application, click on
+Add General Applications
+.
+Select
+Terminal
+from the
+Application Type
+drop down box.
+Expand the list by clicking the "+" icon to add a new device.
+Choose from the drop-down menu to add Configured devices, Workgroup devices, domain devices, etc.
+To add new devices manually, click on
+Configure Manually
+and enter
+Log Source
+.
+If the device type is syslog, check the
+Add as Syslog device
+box. If the device type is Windows, enter
+Username > Password > Verify Credentials
+.
+Select an agent from the drop-down list and click
+Select
+.
+Click
+Add
+, and the application will now be added for monitoring.
+Terminal Server Configuration
+Open
+Event Viewer > Application and Service Logs > Microsoft > Windows > TerminalServices-Gateway > Operational
+. Now, right click and select
+Enable Log
+. This will enable logging for the corresponding Gateway or Operational processes. The logs can be viewed in Event Viewer.
+Note
+If the terminal server device is a 64-bit Windows OS machine (i.e., Windows Vista and above), carry out the following registry configuration:
+Open the registry editor
+regedit
+of the Terminal Server machine in the Command Line Window.
+Navigate to
+Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\eventlog\
+To create a new key, right click on log360cloud, click new > key. You can name the key as
+Microsoft-Windows-TerminalServices-Gateway/Operational
+.
+This will convert the log type to Administrative thus enabling you to perform searches and generate reports out of these logs.
+The above configuration is not required for 32-bit Windows OS versions.

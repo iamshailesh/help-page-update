@@ -1,0 +1,21 @@
+In this page
+Overview
+List of system settings
+Overview
+The system settings page provides all the essential configurations required to set up and manage the product effectively. These settings allow administrators to define how the product communicates with other systems, how alerts and notifications are sent, and how the overall console is customized and maintained.
+Using system settings, you can:
+Configure notification settings to define how and where alerts are delivered.
+Manage connection settings to establish secure communication with external components such as databases and mail servers.
+Apply re-branding options to customize the look and feel of the product to match your organizationâs identity.
+Run system diagnostics to troubleshoot issues and monitor product health.
+Configure listener ports to manage log collection and ensure the product receives data seamlessly.
+Together, these configurations help ensure reliability, customization, and effective monitoring of your log management environment.
+List of system settings:
+Notification settings
+Connection settings
+Re-branding
+System diagnostics
+Listener ports
+Read also
+This page outlined the different system settings available for setup and management. For more details, see related topics like configuring notification settings, setting up connection settings, or managing listener ports.
+Admin settings

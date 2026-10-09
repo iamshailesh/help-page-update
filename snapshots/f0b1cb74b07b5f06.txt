@@ -1,0 +1,9 @@
+Categorizing banned applications such as malware and spam sites helps in ensuring safe web traffic throughout the organization.
+Follow the steps in
+this page
+to add new web applications to the banned list.
+Once new applications are added to the banned list page, you can get a quick snapshot on the users who try to access the banned applications in your network.
+You will be able to view the following:
+Number of Banned Apps and Access Attempts
+Top Attempted Banned Apps
+Top Actors Accessing Banned Apps

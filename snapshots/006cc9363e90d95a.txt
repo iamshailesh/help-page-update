@@ -1,0 +1,157 @@
+In this page
+Overview
+Python scripting reference
+Deluge scripting reference
+Overview
+This page provides a comprehensive reference for writing custom functions in the product console using Python and Deluge scripting languages. It explains the required function structure, supported data types, input and output handling mechanisms, and logging capabilities available within the execution environment. The document also includes practical examples, default templates, and quick reference tables to help you build, test, and debug custom functions efficiently.
+Python scripting reference
+This section provides the Python scripting reference for writing custom functions in Log360 Cloud. Python functions run on the Zoho Hyper Functions (FaaS) platform using the
+BasicIO
+function type.
+NOTE
+Python is available in two versions:
+2.7.15
+and
+3.9.16
+.
+Python functions support only
+String
+as the return type. Map return type is Deluge-only.
+Python input parameters support only
+String
+data type.
+Function Signature
+Every Python custom function must define a runner function with two parameters:
+Parameter
+Description
+context
+Provides access to platform SDK features such as logging.
+basicIO
+Provides methods to read input parameters and write output data.
+Copy
+def runner(context, basicIO):
+# Your function logic here
+name = basicIO.getParameter("name")
+basicIO.write("Hello " + name)
+Default Code Template
+When you create a new Python function, the editor pre-fills the following starter code:
+Copy
+def runner(context, basicIO):
+context.log.INFO("Test Log")
+basicIO.write("Hello")
+BasicIO Methods
+The basicIO object provides two methods to interact with input and output:
+Method
+Syntax
+Description
+getParameter
+basicIO.getParameter(key)
+Retrieves the value of the input parameter identified by key. The key must match a parameter name defined in the function configuration. Returns a string value.
+write
+basicIO.write(data)
+Writes data to the function output. This is what the function returns as its result. The data must be a string.
+Sample: Reading input and writing output
+Copy
+def runner(context, basicIO):
+name = basicIO.getParameter("name")
+basicIO.write("Hello " + name + "...!!!")
+Context Object â Logging
+The context object provides access to platform-level logging. Use context.log to write debug/trace entries during function execution. Logs are visible in the execution output panel under the
+Logs
+tab.
+Method
+Syntax
+Description
+ALL
+context.log.ALL(logData)
+Logs an entry with level ALL
+CONFIG
+context.log.CONFIG(logData)
+Logs an entry with level CONFIG
+FINE
+context.log.FINE(logData)
+Logs an entry with level FINE
+FINER
+context.log.FINER(logData)
+Logs an entry with level FINER
+FINEST
+context.log.FINEST(logData)
+Logs an entry with level FINEST
+INFO
+context.log.INFO(logData)
+Logs an entry with level INFO
+SEVERE
+context.log.SEVERE(logData)
+Logs an entry with level SEVERE
+WARNING
+context.log.WARNING(logData)
+Logs an entry with level WARNING
+Sample: Using log levels
+Copy
+def runner(context, basicIO):
+context.log.INFO("Function execution started")
+context.log.WARNING("This is a warning message")
+context.log.SEVERE("This is an error message")
+name = basicIO.getParameter("name")
+context.log.FINE("Received parameter: " + name)
+basicIO.write("Done")
+Complete Example â Python Custom Function
+The following example demonstrates a complete Python function that reads two input parameters, logs the execution progress, and writes a formatted output:
+Copy
+def runner(context, basicIO):
+# Log the start of execution
+context.log.INFO("Function execution started")
+# Read input parameters
+alert_id = basicIO.getParameter("alert_id")
+severity = basicIO.getParameter("severity")
+context.log.FINE("Processing alert: " + alert_id)
+context.log.FINE("Severity level: " + severity)
+# Build output
+result = "Alert " + alert_id + " with severity " + severity + " processed successfully"
+# Write output
+basicIO.write(result)
+context.log.INFO("Function execution completed")
+NOTE (Python-specific)
+The input parameters (alert_id, severity) must be defined in the function configuration before execution.
+When testing, provide sample values for each parameter in the Execute panel.
+Logs appear in the
+Logs
+tab of the execution output, while the result of basicIO.write() appears in the
+Output
+tab.
+Quick Reference Card â Python
+What
+How
+Define a function
+def runner(context, basicIO):
+Read an input parameter
+basicIO.getParameter("param_name")
+Write output
+basicIO.write("output string")
+Log an info message
+context.log.INFO("message")
+Log a warning
+context.log.WARNING("message")
+Log an error
+context.log.SEVERE("message")
+Deluge scripting reference
+Deluge is a scripting language developed by Zoho. It is one of the two supported languages for writing custom functions in Log360 Cloud.
+For complete Deluge scripting syntax, built-in functions, data types, and examples, refer to the official Zoho Deluge documentation:
+Deluge Help Documentation:
+https://www.zoho.com/deluge/help/
+NOTE
+Deluge supports both
+String
+and
+Map
+return types.
+Deluge supports multiple input data types:
+String, Connection, Int, Bool, List, Map, Collection
+.
+Read also
+This document elaborated on the syntax, structure, and execution flow of Python and Deluge-based custom functions, along with input handling and logging mechanisms. Explore other related sections to understand how to create, manage, and integrate custom functions within your automation workflows.
+Custom Functions Overview
+Functions Library
+Create custom functions
+Manage functions
+Execute API

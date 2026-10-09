@@ -1,0 +1,89 @@
+Automatic Syslog Device Addition
+Prerequisite
+: Click
+here
+to configure the syslog services on your device.
+When syslogs are forwarded to the product installed server (applicable for on-oprem) or agent installed machine (applicable for on-prem and on-demand), syslog devices can be added automatically. This capability is particularly useful for adding multiple syslog devices without requiring manual involvement.
+How it works:
+When a syslog packet reaches the EventLog Analyzer server, it attempts to determine the source IP address and resolve it to a corresponding name.
+If resolution is successful : The syslog device will be added with a resolved hostname.
+If resolution is unsuccessful : The syslog device will be added using the IP address.
+Note
+Make sure that the default ports : UDP- 513,514 , TCP- 514 are open in inbound rules of the firewall.
+To configure the TLS ports, click here.
+If the source IP address or resolved hostname already exists in the database, incoming logs will be associated with that device.
+Manual Syslog Device Addition
+In the
+Manage Devices
+page, navigate to the
+Syslog Devices
+tab and click on the
++Add Device(s)
+button.
+Enter the device name or IP address in the
+Device(s)
+field and click on the
+Add
+button. Follow the steps below to discover and add the Syslog devices in your network automatically:
+Click on the
+Discover & Add
+link in the
+Add Syslog Devices
+window. You can discover the Syslog devices in your network based on the
+IP range
+(Start IP to End IP) or
+CIDR
+.
+Enter the
+Start IP
+and
+End IP
+or the
+CIDR
+range in order to discover the Syslog devices and click on
+Next
+.
+Pick the
+SNMP credentials
+to automatically discover the Syslog devices in your network. By default, the public SNMP credentials can be used to scan the Syslog devices in your network.
+You may also add an SNMP credential by clicking on the
++Add Credential
+button. Once you pick the SNMP credential, click on the
+Scan
+button to automatically discover the Syslog devices in the specified IP or CIDR range.
+Select the device(s) by clicking on the respective checkbox(es). You can easily search for a device using the search box or by filtering based on the Device Type and Vendor.
+Click on the
+Add Device(s)
+button to add the devices for monitoring.
+Once a Unix device has been added, you will be prompted to Configure Auto Log Forward.
+Note
+Refer
+here
+to configure Auto Log forwarding manually for other devices.
+Relay Server Configuration
+Usecase:
+Multiple syslog devices deliver packets to a single central syslog server, which then forwards them to the EventLog Analyzer server.
+How it works:
+Prerequisite:
+Forwarded syslogs should adhere to standard RFC 3164 and the corresponding Relay server configuration must be enabled in EventLog Analyzer.
+Sample Log
+- <34>Oct 18 22:00:15 rootmachine su: 'su root' failed for test on /dev/pts/
+Note
+The hostname (
+rootmachine
+) is parsed from the syslog packet and the syslog device is added with the hostname.
+If the hostname is already present in the database, then the logs will be mapped to that device.
+The syslog device can be Unix, Cisco, Fortinet, Palto Alto,etc.
+DHCP Configuration
+Usecase:
+When the IP addresses of syslog devices change frequently due to DHCP, a new device is added with a new IP address whenever the IP changes and if the name cannot be resolved.
+How it works:
+Prerequisite:
+Forwarded syslogs from all the syslog devices to Eventlog Analyzer should adhere to standard RFC 3164 and the corresponding DHCP configuration must be enabled in EventLog Analyzer.
+Sample Log
+- <34>Oct 18 22:00:15 rootmachine su: 'su root' failed for test on /dev/pts/8
+Note
+The hostname(
+rootmachine
+) is parsed from the syslog packet and the syslog device is added with the hostname.
+If the hostname is already present in the database, then the logs will be mapped to the respective device.

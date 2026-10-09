@@ -1,0 +1,74 @@
+In this page
+About Access Gateway Cluster
+Use Cases
+Architecture
+About Access Gateway Cluster
+The
+Access Gateway Cluster
+is a critical component in ManageEngine Log360
+that ensures secure and reliable log collection from external sources. Acting as an
+intermediary and functioning as a reverse proxy, the Access Gateway Cluster receives logs
+from agents, devices, or remote systems and forwards them to internal Log Processors while
+concealing internal server details from untrusted networks. It is typically deployed in a
+Demilitarized Zone (DMZ)
+, a perimeter network segment that separates the
+trusted internal network from untrusted external sources. Deploying the Access Gateway
+Cluster in the DMZ improves overall network security by preventing direct exposure of
+internal servers to the internet.
+In addition to securing log collection, Access Gateway Cluster instances enhance system
+reliability through
+load balancing and high availability
+. Multiple Access
+Gateway Cluster instances can distribute incoming log traffic evenly, preventing congestion,
+and provide automatic failover if one gateway becomes unavailable. This setup ensures
+uninterrupted log collection and supports deployments across distributed or hybrid
+environments.
+Use cases
+High availability for continuous log collection
+Enterprises with thousands of devices and agents can overwhelm a single gateway, leading to
+delays or dropped logs.
+With Access Gateway Cluster
+Log traffic is evenly distributed across multiple Access Gateway Cluster instances,
+optimizing throughput, preventing bottlenecks, and ensuring timely delivery of logs to Log
+Processors.
+Secure log collection from remote offices
+A global enterprise with multiple branch offices and remote sites generates logs from
+firewalls, servers, and endpoints. Directly exposing internal Log Processors could reveal
+sensitive network details.
+With Access Gateway Cluster
+The Access Gateway Cluster, typically deployed in a
+Demilitarized Zone
+(DMZ)
+, functions as a proxy that securely receives logs from remote sites and
+forwards them to internal Log Processors. This ensures log integrity while reducing exposure
+of internal servers to untrusted networks.
+Architecture
+1. Log collection
+Logs are collected from source devices using agents. These agents continuously collect logs
+and send them to the Access Gateway Cluster. This setup enables real-time, distributed log
+collection across multiple geographic or network zones.
+2. Routing through DMZ
+Access Gateway Clusters are placed in the
+Demilitarized Zone (DMZ)
+to serve
+as a secure entry point. As the first point of contact for external sources (such as remote
+agents or users), they enhance network security by:
+Concealing the actual location and identity of the internal server when accessed
+remotely over the internet.
+Receiving incoming requests from external sources and securely forwarding them to
+internal Log Processors, which remain inaccessible from outside the network.
+Returning responses from the internal systems back to the user, with the user
+interacting only with the Access Gateway Cluster throughout the session.
+3. Sending to Log Processor Cluster
+Once logs are received at the Access Gateway Cluster, they are securely sent to the Log
+Processor cluster.
+NOTE:
+Access Gateway Cluster do not store or process log
+data. They are responsible for securely forwarding logs between external sources and
+internal systems.
+Read also
+This document outlined about the Access Gateway Cluster, pre-requisites, and its
+architecture. To learn how to configure and manage these components effectively, refer to
+the following articles:
+Configuring Access Gateway Cluster
+Managing Access Gateway Cluster

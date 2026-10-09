@@ -1,0 +1,34 @@
+In this page
+Overview
+Available Reports
+Overview
+Windows Cluster reports under File Integrity Monitoring provide centralized visibility into file and folder activities across Windows failover cluster nodes. These reports help administrators monitor integrity-related events such as file creation, modification, deletion, access attempts, permission changes, and ownership updates within clustered environments.
+By correlating activities across cluster nodes and shared storage, these reports support compliance auditing, forensic investigations, and detection of unauthorized or suspicious changes in Windows Cluster infrastructures.
+Available Reports
+Report group name
+Report name
+File Integrity Monitoring (Windows Cluster)
+Summary based on users
+Summary based on servers
+All file or folder changes
+File created
+File modified
+File deleted
+File moved
+File renamed
+File copy and paste
+File read access
+File permission changes
+Folder owner changed
+Failed attempt to read file
+Failed attempt to write file
+Failed attempt to delete file
+Changes based on users
+Changes based on servers
+Read also
+This document elaborated the Windows Cluster-specific File Integrity Monitoring reports used to track and audit file and folder activities across clustered Windows environments. Explore related report sections to gain deeper visibility into security events and operational trends.
+Windows reports
+Unix reports
+Cisco reports
+Sonicwall reports
+Fortinet reports

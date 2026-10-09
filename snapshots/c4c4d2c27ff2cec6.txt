@@ -1,0 +1,21 @@
+Acronym for Secure Socket Layer, SSL is an encryption technology to secure the data exchange between a website and its visitor's web browser. Normally, when a user communicates with a website, say submits his credit card information, the data travels to the server as plain text, which is susceptible to data theft!
+On the other hand if this data is encrypted, then no eavesdropper can read it! Thus, it's really very important to secure a website with SSL!
+Certificates and Certifying Authority (CA)
+SSL Certificate:
+This is a digital identity of a company, which ensures that a visitor is talking only to its intended website and whatever data he submitted to the site is encoded and reach only the intended site. This system is analogous to banks recognizing their customers by their signatures. In this case, the browsers (thereby the end-users) are programmed to trust these CA presented certificates.
+Certifying Authority:
+Regulatory organizations, who, with the help of standard policies, issue certificates to a domain, declaring them trustworthy. Every certificate they generate is unique to the company they are certifying, which makes identification easy.
+CAs secure all necessary information about a company before issuing a certificate for it and also keep updating it in their records, which adds to the trustworthiness.
+Some of the popular CAs are Verisign, Comodo & GoDaddy etc.
+Keystore
+Keystore is specifically designed to store various kinds of encryption information.
+CSR
+In order for a CA to generate an SSL certificate for a company, it first collects the information about the company and other identifiers such as public key (digital signature), and then binds them all with its certificate (which could be a piece of encrypted token or something similar). In doing so, it generates a unique identifier for the company.
+Thus every certificate issuance process begins with a "certificate request" from the company. CAs refer to this process as "Certificate Signing Request". The CAs accept the company information and digital signatures in a special form of file - the ".csr" file.
+The Usual SSL Issuance Process
+It involves 3 steps:
+First you generate a CSR and submit it to CA.
+CA binds this CSR with its digital signatures and returns it.
+Now, you bind all this with your company domain.
+To enable SSL for Log360
+For detailed instructions on how to enable SSL for Log360.

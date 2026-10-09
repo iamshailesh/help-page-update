@@ -1,0 +1,48 @@
+To configure the Syslog service in your
+WatchGuard
+devices, follow the steps below:
+Login to the WatchGuard device as an
+administrator
+.
+Navigate to
+System> Logging> Syslog
+.
+Enable the
+Send log messages to the syslog server at this IP address
+checkbox.
+Type the
+EventLog Analyzer server's IP address
+in the box provided for
+IP address
+.
+Select
+514
+in the box provided for
+Port
+.
+Select
+Syslog
+from the
+Log Format
+drop-down list.
+If you want to include date and time in the log message details, enable the
+Time stamp
+checkbox.
+If you want to add serial numbers in log message details, enable
+Serial number of the device
+checkbox.
+Select a syslog facility for each type of log message in the
+Syslog settings
+section drop-down list.
+For high-priority syslog messages, such as alarms, select
+Local0
+.
+To assign priorities for other types of log messages select
+Local1 - Local7
+.
+To not send details for a message type, select
+NONE
+.
+Note: Lower numbers have greater priority.
+Click
+SAVE

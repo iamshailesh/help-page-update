@@ -1,0 +1,28 @@
+In this page
+Overview
+Available Reports
+Overview
+Synology NAS File Monitoring reports provide visibility into file and folder activities occurring within monitored Synology NAS systems. These reports help administrators track integrity-related actions such as file creation, modification, deletion, access events, permission changes, and movement operations.
+By presenting activity details based on servers, these reports support auditing, troubleshooting, and detection of unauthorized or unexpected changes within Synology NAS storage environments.
+Available Reports
+Report group name
+Report name
+File Monitoring (Synology NAS)
+Summary based on servers
+All file or folder changes
+File created
+File modified
+File deleted
+File moved
+File renamed
+File copy and paste
+File read access
+File permission changes
+Changes based on servers
+Read also
+This document elaborated the File Monitoring reports available for Synology NAS environments to help track and audit file and folder activities. Explore related report sections to gain deeper visibility into security events and operational trends.
+Windowscluster reports
+Windows reports
+Unix reports
+Cisco reports
+Sonicwall reports

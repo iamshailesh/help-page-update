@@ -1,0 +1,29 @@
+The Syslog service in your NetScreen devices, can be configured in two ways:
+Enabling Syslog Messages using the NetScreen Device:
+Login to the NetScreen GUI.
+Navigate to
+Configuration> Report Settings> Syslog
+.
+Check the
+Enable Syslog Messages
+check-box.
+Select the
+Trust Interface as Source IP
+and enable the
+Include Traffic Log
+option.
+Enter the
+IP address of the Eventlog Analyzer server
+and
+Syslog port (514)
+in the given boxes. All other fields will have default values.
+Click
+Apply
+to save the changes.
+Enabling Syslog Messages the CLI Console
+:
+Copy
+Netscreen > set syslog config <ip address> facilitates local0 local0
+Netscreen > set syslog config <ip address> port 514
+Netscreen > set syslog config <ip address> log all
+Netscreen > set syslog enable

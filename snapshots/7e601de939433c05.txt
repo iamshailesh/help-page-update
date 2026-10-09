@@ -1,0 +1,526 @@
+Log360 Cloud helps you collect and analyze logs from different sources such as servers, network devices, and applications. The solution provides actionable intelligence that helps security teams stay on top of security threats in the organization.
+This solution provides you with the capability to import log files. The supported log formats include Windows and syslog device formats, application log formats and archived files log formats.
+Supported log formats
+IIS Web logs (logs collected via agent is not supported)
+IIS FTP logs
+Apache
+DHCP Windows
+DHCP Linux
+IBM AS400
+IBM Maximo
+SAP erp audit logs
+Syslog
+Mssql server logs
+Db2 Logs
+Mysql
+PGSQL
+Custom log format (custom application logs can be imported)
+Steps to import log files
+Navigate to the
+Import Configuration
+page using any one of the following menu options:
+Settings â Configuration Settings â Log Source Configuration â Import Logs
+Home â Log Sources â Applications â Import Logs
+Importing log files from different locations
+Log360 Cloud allows you to import logs:
+By uploading log files
+From devices using agents
+From internet facing FTP/SFTP servers
+From cloud storage
+Note
+Only 512 MB can be imported at once using the
+Upload File
+and
+From Cloud
+options
+The storage consumed may differ from the imported file due to the storage of parsed logs, which could result in additional storage usage.
+Log file import by uploading a log file
+With this option, you can import log files from any device that has access to Log360 Cloud.
+Note
+Log import cannot be scheduled to run at regular time intervals.
+From the
+Select File(s)
+option, select
+Upload File
+.
+Click on
+Browse
+to select the necessary file(s) from your local device.
+If you know the log format of the log file, select the log format from the given drop-down. If you do not know the log format select
+Automatically Identify
+.
+Click the
++ button
+and
+OK
+to select the device that the log file is associated to. You can also enter the name of the device or select the device from the pop-up that appears.
+Click
+Import
+.
+Log file import from devices using agents
+Log360 Cloud uses agents to import log files from devices using the below protocols:
+SMB-Windows
+SFTP
+Importing log files from a device in Log360 Cloud needs authentication. This authentication can be achieved in two ways:
+Username and password
+SSH private key file sharing (Specific to SFTP protocol)
+Authentication type: Password
+From the
+Select File(s)
+option, select
+From Device
+.
+Enter the server name from which you wish to import the log file.
+Select the desired agent to perform this log collection. Choose
+Automatically Assign
+to let Log360 Cloud assign an appropriate agent.
+Choose the required protocol (
+SMB-Windows or SFTP
+) and enter the port number.
+Provide the
+Username
+and
+Password
+. For
+SFTP
+, set
+Authentication Type
+to Password.
+Click
+Browse
+and select the desired files. To add files manually, click the
+Add Files Manually
+option in the top right corner. Click
+OK
+.
+Browse and select the
+Associated Device
+.
+You can choose to schedule the log import at specific time intervals.
+Authentication type: SFTP-based SSH private key file sharing
+Select
+From Device
+from the
+Select Files
+options listed.
+Enter the server name from which you wish to import the log file.
+Select the desired agent to perform this log collection. Choose Automatically Assign to let Log360 Cloud assign an appropriate agent.
+Choose
+SFTP
+as the protocol and enter the port number. (Default port value is 22)
+Provide the username and choose
+Key File
+as the
+Authentication Type
+.
+Note
+Log360 Cloud supports OpenSSH key file format only.
+Browse and select the key file from the device. You can refer to this
+link
+to learn how to generate a key file with ssh-keygen, a standard component of Secure Shell protocol.
+If the key file is passphrase protected, select the
+Use Passphrase
+checkbox and enter the phrase in the field below.
+Browse and select the
+Associated Device
+.
+If you would like to automate a log file import at regular time intervals, enable the
+Schedule Log Import
+option.
+Additionally, you can build a
+Filename Pattern
+for the imported log files using the time format options given. The name of the file stored at the specified time will be updated in accordance to the file name pattern.
+Click on
+Import
+to save the configuration.
+Importing logs from internet-facing FTP/SFTP servers:
+To import logs from internet facing FTP or SFTP servers,
+Select
+From Cloud
+from the
+Select File(s)
+options listed.
+Select
+FTP/SFTP Server
+from the
+File Location
+options
+Enter the server name for log file import.
+Select the protocol (
+FTP or SFTP
+) and enter the port number.
+Provide credentials:
+FTP: Username and password
+SFTP: Username and password, or key file and passphrase
+Select the file from the server and click "
+OK
+".
+Select the
+Associated Log Source
+.
+To automate import, enable "Schedule Log Import".
+Additionally, create a Filename Pattern using the time format options. The file name will update based on the pattern.
+Click "Import" to save.
+Log file import from cloud storage
+To import logs from AWS S3 buckets, you first need to create an IAM user with access to the S3 bucket(s).
+To configure AWS S3 buckets for importing logs,
+In the
+"From Cloud"
+tab, select
+"AWS S3 Bucket"
+from
+"File Location"
+and click the displayed link to configure the AWS account.
+You'll be redirected to the AWS configurations page.
+Enter the
+Display Name, Access Key
+, and
+Secret Key
+of the AWS account and click
+Add
+.
+After adding the AWS account, it will appear in the
+"From Cloud"
+tab's drop-down list.
+From the drop-down list, select the AWS account.
+Click
+Browse
+and select desired files to be imported. Click
+OK
+.
+Browse and select the
+Associated Log Source
+.
+To automate log file imports at regular intervals, enable
+"Schedule Log Import"
+.
+Additionally, you can build a
+Filename Pattern
+for the imported log files using the time format options given. The name of the file stored at the specified time will be updated in accordance with the file name pattern.
+Click on
+Import
+to save the configuration.
+Steps to create specific naming conventions for files
+Identify the log writing pattern from your application's log folder or from your application's configurations.
+In Log360 Cloud, navigate to
+Settings â Log Source Configuration â Import Logs â + Import logs â From Device\From Cloud
+and fill in the required details.
+Browse the files and select the log file for which the log collection schedule has to be configured.
+The selected log file's naming should follow a pattern (date, time, or any pattern according to your needs) which will be replicated in the subsequent files created by the product.
+After selecting the log file, check the
+Schedule log import
+box as well as the
+Specify filename pattern
+.
+Click
+Advanced Options
+. There will be a text box for every file which has been selected for the scheduled pattern import respectively.
+In the text box, input the filename pattern such that it matches the file name.
+For example, consider an application which writes logs on a date-based schedule. Lets take the file name generated on Nov 22, 2023, as LOG_22_11_2023. Here the first part, "LOG_", will remain constant, and the latter part, i.e. the date "22_11_2023" changes daily. Keeping this in mind, select the pattern as "LOG_${DD}_${MM}_${YYYY}" from the drop down menus.
+When naming files, include the file extension in the specified pattern. For example, if your file is named catalina_log_2024_03_04.txt, the pattern should be catalina_log_${YYYY}_${MM}_${DD}.txt
+The drop down menu will provide multiple options to choose from, as shown in the image below.
+MySQL Logs
+Log360 Cloud supports only error logs and general logs from MySQL. MySQL logon failures are taken into account from MySQL general query logs.
+To enable logging in MySQL,
+Open the
+my.cnf
+file (in case of Linux) or my.ini file (in case of Windows) and add the below entries to the file.
+For
+error logs
+: log_error=<error-log-file-name>
+For
+general logs
+:
+>= v5.1.29: general_log_file=<general-log-file-name> general_log=1 (or) ON
+< v5.1.29: log=<log-file-name>
+Restart the MySQL instance for the changes to take effect.
+To import MySQL logs in Log360 Cloud,
+You can import MySQL log files from
+devices
+,
+internet-facing FTP/SFTP servers
+,
+cloud storage
+or choose to
+upload them
+.
+To import MySQL log files, you need to manually choose the log format. Once you've selected the right file, select
+MySQL Logs
+from the
+Log Format
+drop-down list in the
+Selected File(s)
+section.
+Click
+Import
+to initiate the log importing process.
+PostgreSQL Logs
+Log format of PostgreSQL logs is determined by log_line_prefix parameter, set in postgresql.conf file.
+The default format of PostgreSQL logs is '%m [%p] ' which logs a time stamp and the process ID.
+Copy
+log_line_prefix = '%m [%p] '
+This format is supported by default in Log360 Cloud
+Importing additional fields in Log360 Cloud
+If the user wants to add additional fields, log_line_prefix parameter in the postgresql.conf file must be changed.
+The log_line_prefix parameter must follow the format(key- value pair) given below in the postgresql.conf file.
+log_line_prefix format:
+log_line_prefix = 'time_stamp=%m or %t process_id=%p application_name=%a database_name=%d connection_from_with_port=%r connection_from=%h session_id=%c transaction_id=%x user_name=%u command_tag=%i sql_state_code=%e session_start_time=%s '
+log_line_prefix Parameter
+Key
+Value
+Time stamp with milliseconds or time stamp without milliseconds
+time_stamp
+%m or %t
+Process ID
+process_id
+%p
+Application name
+application_name
+%a
+Database name
+database_name
+%d
+Remote host name or IP address, and remote port
+connection_from_with_port
+%r
+Remote host name or IP address
+connection_from
+%h
+Session ID
+session_id
+%c
+Transaction ID
+transaction_id
+%x
+User name
+user_name
+%u
+Command tag: type of session's current command
+command_tag
+%i
+SQLSTATE error code
+sql_state_code
+%e
+Process start time stamp
+session_start_time
+%s
+SAP ERP Audit Logs
+To add the SAP ERP application for monitoring, the audit logs have to be enabled.
+To enable the SAP ERP audit logs:
+To the DEFAULT.PFL file in the location <SAP_installed path>\sys\profile, add
+rsau/enable = 1
+rsau/local/file = <log location>/audit_00
+Note
+The user should have permission to read this audit file while importing.
+DHCP Logs
+Log360 Cloud can read and report on DHCP server software for Windows and Linux systems. It provides various reports that simplifies network administration.
+For Windows:
+Note
+Once you share the DHCP log location in Windows (i.e. %windir%\System32\Dhcp), you can automatically use this UNC path to fetch and import logs to Log360 Cloud on a daily basis.
+To configure, follow these steps:
+Share the DHCP log folder.
+Open Log360 Cloud and go to
+Settings â Import Log â + Import Log â Upload File\From Device\From Cloud â
+browse the file and select
+DHCP Windows Log
+from the
+Log Format
+.
+To learn how to import log files from different locations, refer here.
+For Linux:
+The default DHCP log location in Linux is "var/log/syslog" OR "var/log/messages" (for older versions).
+If DHCP server logs are not available on the above files, please follow below steps. To store the DHCP server logs alone in a separate file, an admin would have to make changes to the following configuration files:
+/etc/dhcp/dhcpd.conf- DHCP Server configuration file
+/etc/rsyslog.conf- rsyslog configuration file
+Lookup the value of "log-facility" in the dhcpd.conf file.
+Lookup the log file path corresponding to the log-facility identified in the previous step in the ryslog.conf file. That is the DHCP server log file path.
+To configure DHCP in Log360 Cloud, follow these steps:
+Share the DHCP log folder.
+Open Log360 Cloud and go to 'Settings' tab > Import Log > Upload File\From Device\From Cloud > browse the file.
+To learn how to import log files from different locations, refer here.
+DB2 Audit Logs
+Db2 database systems allow auditing at both the instance and database levels. The db2audit tool is used to configure the auditing process. The tool can also be used to archive and extract audit logs, from both instance and database levels. The audit facility can be configured by following these six steps.
+Configuring db2audit data path, archive path, and scope.
+Creating an audit policy for database auditing.
+Assigning the audit policy to the database.
+Archiving the active logs.
+Extracting the archived logs.
+Importing the logs to Log360 Cloud
+Log360 Cloud also supports diagnostic logs. Click here to learn how to generate the diagnostic logs report.
+1. Configuring db2audit data path, archive path, and scope
+The
+configure
+parameter modifies the db2audit.cfg configuration file in the instance's security subdirectory. All updates to this file will occur even when the instance is stopped. Updates occurring when the instance is active will dynamically affect the auditing being done by the Db2 instance. To know more about all possible actions on the configuration file, refer source
+Open DB2 Command Line Processor with administrator privilege.
+Run the following command:
+Copy
+db2audit configure datapath
+"
+C:\IBM\DB2\DataPath
+"
+archivepath
+"
+C:\IBM\DB2\ArchivePath
+"
+Note
+Replace the given paths with the paths of your choice for data path and archive path respectively.
+Run the following command:
+Copy
+db2audit configure scope
+all
+status
+both
+error type
+normal
+Note
+Replace the given parameters with the parameters of your choice.
+Run the following command:
+Copy
+db2audit start
+Now the logs will be generated for the DB2 instance in the given data path.
+2. Creating an audit policy for database auditing
+Open DB2 Command Line Processor with administrator privilege.
+Run the following command to connect to a database:
+Copy
+db2 connect to
+your_database
+Note
+Replace your_database with the database name of your choice.
+Run the following command to create an audit policy for the database:
+Copy
+db2 create audit policy
+policy_name
+categories
+all
+status
+both
+error type
+audit
+Note
+Replace policy_name with the policy name of your choice. Replace the given parameters with the command parameters of your choice. To know more on the allowed command parameters, refer to the source.
+Run the following command to commit:
+Copy
+db2 commit
+Now the audit policy has been created.
+3. Assigning the audit policy to the database
+Open DB2 Command Line Processor with administrator privilege.
+Run the following command to assign a policy to the database:
+Copy
+db2 audit database using policy
+policy_name
+Note
+Replace policy_name with the name of the audit policy that you created.
+Run the following command to commit:
+Copy
+db2 commit
+Now the created audit policy is assigned to the database.
+4. Archiving the active logs
+You can archive the active logs from both instance and database. The logs will be archived to the archive path that you configured in the first step.
+Open DB2 Command Line Processor with administrator privilege.
+Run the following command to archive the active database logs:
+Copy
+db2audit archive database
+your_database
+Note
+Replace your_database with the name of the database.
+Run the following command to archive active instance logs:
+Copy
+db2audit archive
+Now the logs will be archived to a new file with a timestamp appended to the filename. An example of the filename is given below.
+Instance Log file
+: db2audit.instance.log.0.20060418235612
+Database Log file
+: db2audit.db.your_database.log.0.20060418235612
+Both files have to be extracted into a human-readable format to be imported into Log360 Cloud.
+5. Extracting the archived logs
+Open DB2 Command Line Processor with administrator privilege.
+Run the following command to extract the archived instance logs:
+db2audit extract file
+C:/IBM/DB2/instancelog.txt
+from files
+db2audit.instance.log.0.20060418235612
+Note
+Replace the instancelog with the filename of your choice. Replace db2audit.instance.log.0.20060418235612 with the filename of the archived instance logs.
+Run the following command to extract archived database logs:
+db2audit extract file
+C:/IBM/DB2/databaselog.txt
+from files
+db2audit.db.your_database.log.0.20060418235612
+Note
+Replace databaselog with the filename of your choice. Replace db2audit.db.your_database.log.0.20060418235612 with the filename of the archived database logs.
+Both files will be extracted to the given archive path and can be imported into Log360 Cloud.
+6. Importing the logs to Log360 Cloud
+Now you will have to import the extracted database and instance log files into Log360 Cloud. Here is a comprehensive guide on how to import log files in
+Log360 Cloud
+.
+Diagnostic Logs
+Log360 Cloud also provides a report for diagnostic logs. To generate the diagnostic logs report, follow the given steps.
+Run the following command to find the location of the diagnostic log file.
+Copy
+db2 get dbm cfg | findstr DIAGPATH
+or
+Copy
+db2 get dbm cfg | grep DIAGPATH
+or
+Copy
+db2 get dbm cfg
+Note
+The path corresponding to
+Current member resolved DIAGPATH
+is the path to the diagnostic log file.
+Navigate to the specified path and import the file named db2diag.txt to Log360 Cloud
+Here is a comprehensive guide on
+how to import log files
+in Log360 Cloud
+Import Troubleshooting tips
+To troubleshoot Import failures, follow these steps:
+To resolve issues with local imports, please enable cross-site cookies in your browser settings. This is necessary because we utilize an internal cross-domain for local imports. To enable cross-site cookies, follow these steps:
+Open your browser settings.
+Navigate to the privacy or security section.
+Locate the cookies settings.
+Enable cross-site cookies for this site or allow all cookies
+Ensure that the credentials used are valid and have the necessary permissions.
+Confirm the accessibility of the server from which the file is being imported.
+Check the existence and accessibility of the specified file.
+Check if the chosen log file format matches the selected format from the drop-down menu.
+Ensure the imported log file is not empty.
+Check the available storage in your Log360 Cloud account to accommodate the imported logs.
+Verify that the necessary subscription plan has been purchased.
+Configure proper policies when importing from AWS buckets
+List of imported log files
+You can view a list of all imported log files in your Log360 Cloud installation. This is the default page that appears when the import log option is selected. This page provides details of the imported log file including filename, device, monitoring interval, time taken to import the log file, log format, and size of the log file.
+Apache Overview Dashboard: Parsing Additional fields by modifying the log format
+The Combined Log Format is one of the log formats commonly used with Apache logs.
+The Combined Log format is:
+Copy
+%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\"
+While importing the log files in the Combined log format, the log files will not include the values for the fields response time and bytes received.
+The following widgets in the Apache Overview dashboard can display their values accurately only if the
+response time
+and
+bytes received
+fields are parsed.
+Bytes Transferred
+Top 20 Slowest URLs
+Web Activity Trend
+Top 10 Slowest Servers
+In order to parse these additional fields, the log format has to be modified. The values for the additional fields can be obtained once the logs are configured with the parameters "%{ms}T" and "%I".
+Log360 Cloudr can parse the modified log format by default.
+The modified log format containing the parameters for response time and bytes received is:
+Copy
+%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\" %{ms}T %I
+%{ms}T - time taken to serve the request (in milliseconds) %I - bytes received, including headers
+Note
+Requires modlog_io to be enabled
+https://httpd.apache.org/docs/2.4/mod/mod_logio.html
+The modified log has 2 directives in addition to the commonly used Combined Log Format. These directives are present at the end of the format; therefore, the combined log format will continue to be parsed as it was parsed in the previous versions.
+Procedure to change the Apache log format
+Note
+The configuration files by default are located at /etc/apache2/ in Debian/Ubuntu/Linux Mint or, /etc/httpd/conf on Red Hat/Fedora/CentOS
+Define a new log format and assign a label to it.
+Copy
+LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\" %{ms}T %I" modified
+The label can be used to reference the new format string as the customLog directive.
+CustomLog logs/access.log modified
+The new format will go into effect when the webserver is restarted.
+After the log files have been imported, the updated Apache Overview dashboard has been displayed below:

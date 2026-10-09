@@ -1,0 +1,156 @@
+Keep the ports
+446-449, 8470-8476, 9470-9476
+open in EventLog Analyzer to receive IBM AS/400 machine logs.
+In the Manage Devices page, navigate to the Other Devices tab and click on the
+Add Device(s)
+button. This will open the
+Add Device(s)
+window.
+Choose the
+Device type
+as
+IBM AS/400
+.
+Use the
+Device Name
+box to type a single device name, or a list of device names separated by commas.
+Specify the
+Monitor Interval
+to configure the frequency at which EventLog Analyzer should fetch logs from the IBM AS/400 machines. The default (and minimum) monitor interval is 10 minutes.
+Enter credentials (
+Login Name
+and
+Password
+) with an authority level of 50. Verify the details using the
+Verify Credential
+link beside the password text.
+Select the
+Date Format
+and the
+Delimiter
+. This is the date format used in the logs that will be collected from the IBM AS/400 devices.
+Click
+Add and Close
+to add this device and return to the list of device monitored, or click
+Add
+to add this device and continue adding more devices.
+To import SSL certificate, follow the steps below:
+Save the SSL certificate in the location
+C:\test.cer
+In the command prompt navigate to <installation folder
+Run the command
+keytool -importcert -alias myprivateroot -keystore ..\lib\security\cacerts -file C:\test.cer
+Now provide the password when prompted. The default password is
+Changeit
+To trust the certificate press
+Y
+Restart the EventLog Analyzer server. The certificate will be successfully added.
+IBM AS/400
+IBM AS/400 historic log collection
+EventLog Analyzer now allows you to collect logs according to the time period for IBM AS/400 devices. To collect logs according to time:
+Click the
+historic log collection
+icon that is next to the
+Device
+option.
+Next, under the
+Collect Logs from last
+option, select the number of hours/days/weeks/months for which you would like to collect the logs.
+Click on
+Apply
+.
+Note
+The credentials provided must have an
+authority level
+of
+50
+. Otherwise, EventLog Analyzer will not be able to login to fetch History logs from these devices.
+Configuration to receive logs
+For analyzing journal logs of IBM AS400/iSeries devices, you need to enable auditing in those systems.
+To enable auditing for AS400/iSeries journal logs you have to:
+Create a journal receiver
+.
+Attach the journal receiver to a journal
+.
+Specify the audit logs that are to be stored in the journal receiver
+.
+Once the journal receiver is created and the logs specified are collected in it, EventLog Analyzer will fetch those logs for monitoring, report generation and alert notification.
+Note
+For setting up Security auditing in AS 400/iSeries machines, you must have the
+*AUDIT
+special authority.
+Create a journal receiver
+You can create a journal receiver in a library of your choice by using the following command:
+Copy
+CRTJRNRCV JRNRCV(JRNLIB/AUDRCV0001) + THRESHOLD(100000) AUT(*EXCLUDE) + TEXT('Auditing Journal Receiver')
+Note
+This example uses a library called
+JRNLIB
+for journal receivers.
+Place the journal receiver in any library of your choice. Ensure that it is not placed in the QSYS library, which is a system library.
+Enter a name for the journal receiver.
+When you want the naming convention to be applied to naming all journal receivers, use the *GEN option.
+Specify an appropriate threshold level that suits your system size and activity. The size you choose should be based on the number of transactions on your system and the number of actions you choose to audit. For system change journal management support, the threshold must be at least 5000KB.
+To limit access to the information stored in the journal, specify *EXCLUDE on the AUT parameter.
+Attach the journal receiver to a journal
+Create the QSYS/QAUDJRN journal by using the following command:
+Copy
+CCRTJRN JRN(QSYS/QAUDJRN)+
+JRNRCV(JRNLIB/AUDRCV0001)+
+MNGRCV(*SYSTEM) DLTRCV(*NO)+
+AUT(*EXCLUDE) TEXT('Auditing Journal')
+The journal name
+QSYS/QAUDJRN
+must be used.
+Note
+To create this journal you must have the authority to add objects to QSYS.
+Specify the journal receiver name that you created, using the
+JRNRCV
+parameter.
+Specify
+*EXCLUDE
+on the
+AUT
+parameter to limit access to the information stored in the journal.
+(*SYSTEM)
+is passed as the parameter for Manage Receiver
+(MNGRCV)
+. Thus when the attached journal receiver reaches its threshold size, the system itself detaches this receiver and creates and attaches a new journal receiver.
+Avoid detaching receivers and creating & attaching new receivers manually, using the
+CHGJRN
+command.
+To retain the detached journal receivers, specify
+(*NO)
+as the value for
+DLTRCV
+. This will prevent the automatic deletion of detached receivers by the system.
+QAUDJRN
+receivers are your security audit trail. Hence, ensure that they are adequately archived.
+Specify the logs that are to be captured by the journal receiver
+Use the following command to specify the logs that are to be stored in the journal receiver created:
+Copy
+CHGSECAUD QAUDCTL(*ALL) QAUDLVL(*ALL)
+To specify which actions are to be logged into the audit journal for all the users on the system, you need to set the audit level to the
+QAUDLVL
+system value using the
+WRKSYSVAL
+command.
+If you want to set action and object auditing for specific users, use the
+CHGUSRAUD
+command.
+You can also set object auditing for specific objects as per your requirement, using the
+CHGOBJAUD
+and
+CHGDLOAUD
+commands.
+Setting the
+QAUDENDACN
+system value helps you determine the systems action when it is unable to write an entry to the audit journal.
+With the
+QAUDFRCLVL
+system value parameters, you can control the transfer of audit records from memory to auxiliary storage.
+To start auditing set the
+QAUDCTL
+system value to any value other than
+*NONE.
+Once this security auditing set up is completed, EventLog Analyzer will automatically fetch the logs collected in the journal receiver of the AS400/iSeries device that is added for monitoring. If the AS400/iSeries machine is not added to EventLog Analyzer server, add the device to begin collecting its logs.

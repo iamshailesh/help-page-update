@@ -1,0 +1,39 @@
+In this page
+Overview
+Request URL
+Request Header
+Response
+Executing the API using cURL
+Executing the API using Postman
+Overview
+The API returns the product details of ManageEngine Log360.
+Request URL
+GET http://hostname:8095/RestAPI/v1/product/details
+NOTE
+For the request URL, you can either use the IP address, or FQDN of the product server in place of hostname.
+Request Header
+Header name
+Value
+Mandatory
+Description
+Authorization
+Bearer {{AuthToken}}
+Yes
+AuthToken generated from the API Settings page.
+e.g., Bearer abcd1234xyz
+Response
+The response will be a JSON object containing details about the product's instance.
+Parameter name
+Description
+os_type
+Returns the product's instance type
+Executing the API using cURL
+Sample request
+curl --location 'http://localhost:8095/RestAPI/v1/product/details' \
+--header 'Authorization: Bearer abcd1234xyz'
+Sample response
+{"os_type":"windows"}
+Executing the API using Postman
+Figure 1: Executing the API using Postman
+Read also
+This page explained how to retrieve the product details using EventLog Analyzer's REST API.

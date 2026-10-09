@@ -1,0 +1,47 @@
+Context
+Signing up for Log360 Cloud
+Signing in to Log360 Cloud
+Signing up for Log360 Cloud
+You can create a Log360 Cloud account for free by visiting the Log360 Cloud website. (No credit card details required)
+To
+sign-up
+for Log360 Cloud,
+Click the
+Sign Up
+button in the top right corner of the web page.
+Enter Your
+Business Email
+and
+Password
+in the given fields.
+Enter a password.
+Password cannot be the same as your username.
+Password should contain both uppercase and lowercase characters.
+Password should contain at least 1 numeric character.
+Password length should not be greater than 60 characters.
+Password length should not be less than 8 characters.
+Select the checkbox to agree to the
+Terms of Service
+and
+Privacy Policy
+.
+Click the
+Sign Up
+button.
+Your Log360 Cloud account will be created.
+You can also use the other signup options provided on the page.
+Note
+Data center will be automatically selected based on the user location during signup. (Available data centers for Log360 Cloud are US, EU, AU, IN, JP, CA, UK, UAE)
+Signing in to Log360 Cloud
+You can
+sign in
+or log into your Log360 Cloud account by clicking the Sign In button available in the Log360 Cloud website.
+Enter the
+Business Email ID
+with which you have registered.
+Enter your
+password
+.
+Click
+Sign in
+.

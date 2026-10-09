@@ -1,0 +1,58 @@
+In this page
+Overview
+Available Reports
+Overview
+This page lists the VMware ESXi reports available in the product for monitoring user logon and logoff activity, hypervisor events, system-level changes, and virtual machine operations. These reports help administrators track authentication behavior, identify configuration changes, and monitor VM lifecycle events across the virtual infrastructure.
+Available Reports
+Report group name
+Report name
+VMWare Logons/Logoff
+User Logons
+SU Logons
+SSH logons
+FTP/SFTP Logons
+Logons Overview
+Top logons based on user
+Top logons based on remote devices
+User Failed Logons
+SU Failed Logons
+Failed SSH Logons
+FTP/SFTP Failed Logon
+Failed Logons Overview
+Top failure logons based on users
+Top failure logons based on remote devices
+User Logoff
+SU Logoff
+SSH Logoff
+FTP/SFTP Logoff
+Logoff
+Hypervisor Events
+All Events
+Important Events
+VMWare System Events
+Users Added
+Users Deleted
+Users Renamed
+Group Added
+Group Deleted
+Group Renamed
+Password Changes
+Password Changes Failed
+Failed user additions
+Syslog Stopped
+Syslog Restarted
+Low Diskspace
+System ShutDown
+VMWare Server Events
+Guest Login on VM
+VM Created
+VM Deleted
+VM State Changes
+Top VM Changes
+VM Events Overview
+Read also
+This page outlined the VMware reports supported by the product for monitoring authentication activity, system events, and virtual machine operations. Explore related report sections to gain deeper visibility into security events and operational trends.
+Hyper-V reports
+File Monitoring reports
+EMC server reports
+Isilon reports

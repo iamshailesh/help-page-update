@@ -1,0 +1,31 @@
+In this page
+Overview
+Available Reports
+Overview
+This page provides a consolidated view of printer-related reports that help administrators track printing activities, document status changes, user actions, and printer performance trends. These reports enable effective auditing, troubleshooting of failed print jobs, and visibility into overall printer usage within the network.
+Available Reports
+Report group name
+Report name
+Printer events
+All Events
+Important Events
+Printer auditing
+Documents Printed
+Deleted documents
+Timed out documents
+Moved Documents
+Resumed Documents
+Paused documents
+Corrupted documents
+Documents priority changes
+Insufficient Privilege to Print Documents
+Top printed documents based on users
+Printer Activity trend
+Failed Printer Activity Trend
+printer usage
+Read also
+This page listed the available printer reports supported by the product to help monitor printer activities and document handling events. Explore other related report categories to gain deeper visibility into system, security, and application activity across the environment.
+SAP reports
+Sysmon reports
+Terminal reports
+AWS reports

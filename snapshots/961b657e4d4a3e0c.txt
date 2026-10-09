@@ -1,0 +1,307 @@
+In this page
+Overview
+Dropbox extension scope
+Pre-requisites
+Audited Dropbox events
+Configuring Dropbox integration
+Configuring Dropbox in Log360 Cloud
+Accessing Dropbox reports
+Configuring Dropbox alerts
+Searching Dropbox Logs
+Overview
+Dropbox is a cloud-based file storage and collaboration platform that enables users to securely store, sync, and share files across multiple devices. It provides businesses and individuals with easy access to files from anywhere, ensuring seamless collaboration and data protection.
+Dropbox extension scope
+The Dropbox Audit Log Monitoring Extension empowers organizations to monitor continuously and analyze Dropbox audit logs, ensuring comprehensive visibility into critical activities. By capturing and evaluating events such as user actions, access patterns, and security changes, this extension helps mitigate risks, ensure compliance, and enhance operational efficiency. It enables organizations to detect unusual login attempts, identify potential insider threats, and stay ahead of evolving security challenges.
+Pre-requisites
+Before creating a connection for a pre-defined service, ensure that the corresponding integration/extension is
+installed
+in Log360 Cloud.
+Only after installing the extension, the service will appear in the
+Connections
+page for connection setup.
+Audited Dropbox events
+Security events
+Ransomware and admin alerts
+Authentications and sessions
+Passwords and TFA
+Encryption and key management
+File and folder events
+File and folder operations
+File request and transfer events
+Integrations and apps
+Integrations and apps events
+Members and groups
+Invite link and add-on activity
+Member management activity
+Group management activity
+Device management
+Device link and status Changes
+Legal holds
+Legal hold events
+Reports management
+Report management activity
+Sharing
+Shared folder and content actions
+Link actions
+Showcase
+Showcase management activity
+Team policies
+Web session policy
+Password and TFA policy
+Sharing and smart sync policy
+Showcase and signature policy
+Member and team policy
+Third party policy
+File/folder and backup policy
+Governance policy
+Team profile
+Data residency migration
+Team profile customization actions
+Signatures
+Signature management Activity
+Trusted teams
+Enterprise management activity
+Team merge request activity
+Configuring Dropbox integration
+Setting up a Dropbox account and application
+Sign in to your Dropbox account and navigate to the
+Dropbox Developers Console
+.
+Click
+Create New App
+and select
+Scoped Access
+.
+Choose
+Full Dropbox Access
+as the access type.
+Figure 1: Selecting Full Dropbox Access
+Provide a name for your app, agree to the Dropbox terms and conditions, and then click
+Create App
+.
+Once the app is created, the
+App Settings
+page will be displayed.
+Figure 2: Dropbox app settings page
+Navigate to the
+Permissions
+tab, scroll down, and enable
+team_data.member
+and
+events.read
+permissions.
+Figure 3: Enabling permissions in the Permissions tab
+Click
+Submit
+to complete the Dropbox app configuration.
+Figure 4: Copying Client ID and Client Secret from the Settings tab
+From the
+Settings
+tab, copy the
+Client ID
+and
+Client Secret
+values from the
+App ID
+and
+App Secret
+fields. These will be needed later while configuring Dropbox in Log360 Cloud.
+Configuring Dropbox in Log360 Cloud
+To enable communication between Log360 Cloud and Dropbox, configure a connection. You can do this from the
+Connections
+page or while adding Dropbox as a
+log source
+.
+Create a connection from the Connections page
+Log in to the product console.
+Go to
+Settings
+tab and select
+Admin
+.
+Under
+Integrations
+, click
+Connections
+.
+Figure 5: Navigating to Connections page
+In the
+Connections
+page, select
+Dropbox Application
+.
+Figure 6: Selecting Dropbox Application
+In the
+Dropbox Application
+window, click
++ Create Connection
+.
+Figure 7: Creating a new connection
+Enter the following details:
+Field
+Description
+Authentication Type
+OAuth2 (pre-selected)
+Connection Name
+Enter a name (e.g., Dropbox).
+Client ID
+A unique identifier for your app, found in the
+App ID
+field under the
+Settings
+tab of your app in the Dropbox Developer Console.
+Client Secret
+A confidential key used to authenticate your app, found in the
+App Secret
+field under the
+Settings
+tab of your app in the Dropbox Developer Console.
+Scopes
+team_data.member, events.read, members.read, files.metadata.read, sharing.read, sessions.list
+Note
+Refer to
+this
+section to learn how to copy Client ID and Client Secret values.
+Figure 8: Entering connection details
+Click
+Authorize and Save
+.
+Configuring Dropbox as a log source
+To begin collecting Dropbox audit logs in Log360 Cloud, configure the Dropbox log source as follows:
+Log in to the product console.
+Navigate to
+Settings
+tab and select
+Admin
+.
+Under
+Marketplace
+, select
+Installed Extensions
+to view the installed Dropbox extension.
+Figure 9: Viewing Installed Extensions
+Click
+Manage
+under
+Configuration
+to open the
+Manage Configuration
+page.
+Figure 10: Managing the Dropbox extension
+Click
+Configure
+to open the configuration page.
+Figure 11: Opening the configuration page
+In the
+Log Source Type
+dropdown, select
+Dropbox Application
+.
+Figure 12: Selecting the log source type
+In the
+Name
+field, enter a name for the Dropbox source.
+Figure 13: Entering a name for the Dropbox source
+From the
+Connection
+dropdown, choose one of the following:
+Select an existing connection, if one has already been created.
+Figure 14: Selecting an existing connection
+Click
++ Create Connection
+to create a new connection.
+Figure 15: Creating a new connection
+In the
+Create Connection - Dropbox
+window, provide the following details:
+Field
+Description
+Authentication Type
+OAuth2 (pre-selected).
+Connection Name
+Enter a name to identify the connection (e.g., Dropbox).
+Client ID
+A unique identifier for your app, found in the
+App ID
+field under the
+Settings
+tab of your app in the Dropbox Developer Console.
+Client Secret
+A confidential key used to authenticate your app, found in the
+App Secret
+field under the
+Settings
+tab of your app in the Dropbox Developer Console.
+Scopes
+team_data.member, events.read, members.read, files.metadata.read, sharing.read, sessions.list
+Note
+Refer to
+this
+section to learn how to copy Client ID and Client Secret values.
+Figure 16: Entering connection details
+Click
+Authorize and Save
+to complete authentication and create the connection.
+In the
+Application
+page, click
+Add
+to configure Dropbox as a log source.
+Accessing Dropbox reports
+Navigate to
+Reports
+→
+Custom Reports
+→
+Dropbox
+to view Dropbox-related reports.
+Figure 17: Viewing Dropbox reports
+Configuring Dropbox alerts
+After configuring the log source, go to
+Settings
+→
+Marketplace
+→
+Installed Extensions
+.
+Click
+Manage
+under the Dropbox extension to open the
+Manage Configuration
+page.
+Figure 18: Managing configuration
+Click
+Enable
+next to
+Alert Profiles
+to open the
+Alerts
+tab. Browse the available Dropbox alert profiles and enable the required ones.
+Figure 19: Enabling Dropbox alert profiles
+Alternatively, go to the
+Alerts
+tab, select
+Extensions
+under
+Alert Profile Source
+, and choose
+Dropbox
+under
+Extension Name
+.
+Enable the required alert profiles.
+Searching Dropbox Logs
+To search for Dropbox logs, select
+Dropbox
+under
+Extensions Group
+as the log source.
+Figure 20: Selecting Log source
+Alternatively, filter logs by selecting
+Dropbox
+as the log type.
+Figure 21: Filtering logs
+Read also
+This page explains how to integrate Dropbox with Log360 Cloud for audit log monitoring, reporting, and alerting. To learn more about related configurations and integrations, refer to:
+Okta
+SentinelOne

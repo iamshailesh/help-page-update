@@ -1,0 +1,78 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the various NetScreen reports available in the product console to help administrators monitor firewall health, track user and administrative actions, analyze allowed and denied traffic, and detect security threats across the network.
+Available Reports
+Report Group Name
+Report Name
+System Events
+Clock Update
+Temperature Status
+Power Supply
+Fan Status
+Battery Status
+License Status
+Device Severity Reports
+Warning Events
+Emergency Events
+Alert Events
+Critical Events
+Error Events
+Notice Events
+Debug Events
+Information Events
+Firewall Security Reports
+Antivirus Reports
+Anti-spam Reports
+Web Filter
+Policy Management
+Policy Added
+Policy Deleted
+Policy Modified
+Enabled Policy
+Disabled Policy
+Account Management
+Admin Added
+Admin Deleted
+Admin Modified
+Failed Logon Reports
+Failed Logons
+Top Failed Logons from Source
+Top failure logons based on users
+Failed Logons Trend
+Logon Reports
+Logons
+Top logons based on user
+Logons Trend
+Top Successful Logons from Source
+Denied Traffic Reports
+Denied Connections
+Top Denied Connections based on Source
+Top Denied Connections based on Protocol
+Top Denied Connections based on Port
+Denied Connections Trend
+Top Denied Connections based on Destination
+IDS/IPS
+Attacks Trend
+Possible Attacks
+Critical Attacks
+Top Attacks based on Source
+Top Attacks based on Destination
+Allowed Traffic Reports
+Top Traffic based on Port
+Allowed Traffic Trend
+Top Traffic based on Destination
+Top Traffic based on Protocol
+Allowed Traffic
+Top Traffic based on Source
+NetScreen Events
+All Events
+Important Events
+Read also
+This document elaborated the list of NetScreen reports available in the product console and how they help monitor system events, security incidents, traffic behavior, and access activities. Explore related report sections to gain deeper visibility into security events and operational trends.
+Checkpoint reports
+Arista reports
+HP reports
+pfSense reports
+F5 reports

@@ -1,0 +1,6 @@
+Navigate to Edit NSS Feed in the console and specify the following details:
+Navigate to Edit NSS Feed in the console and specify the following details:
+Enter the EventLog Analyzer server IP address in the field SIEM IP address.
+Enter 514 as the SIEM TCP Port. If you have changed the default TCP port, then specify the changed port number here.
+Select the Field Output Type as Tab-separated.
+Append <96> at the start of the Feed Output Format before "%s... which specifies to EventLog Analyzer that the log messages must be processed.

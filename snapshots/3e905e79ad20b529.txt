@@ -1,0 +1,1108 @@
+In this page
+Pre-requisites
+Configuring VirusTotal integration via Connections
+Supported SOAR functionalities
+Pre-requisites
+Before creating a connection for a pre-defined service, ensure that the corresponding integration/extension is installed in Log360 Cloud.
+Only after installing the extension, the service will appear in the Connections page for connection setup.
+Configuring VirusTotal integration via Connections
+To enable communication between Log360 Cloud and VirusTotal, a connection must be configured.
+Log in to the product console.
+Navigate to the
+Settings
+tab and select
+Admin
+.
+Under
+Integrations
+, select
+Connections
+.
+Image: Accessing connections
+From the list of available integrations, select
+VirusTotal.
+In the window that opens, click
+Create Connection
+.
+In the
+Create Connection - VirusTotal
+window, provide the following details:
+Authentication Type:
+This is preselected based on the integration.
+Connection Name
+: Enter a name to identify the connection.
+API Key:
+Enter the API Key generated from the VirusTotal portal.
+NOTE
+For detailed steps on generating API key, refer to this document.
+Under
+Select Scope(s)
+, choose the required scope. You can also use the search bar to locate the required scope.
+Click
+Authorize and Save
+to complete authentication and create the connection.
+For the functions listed below, access to the Premium API is required:
+virustotal_downloadedFilesFromDomain
+virustotal_downloadedFilesFromIP
+virustotal_downloadedFilesFromUrl
+virustotal_getScreenshotDetails
+virustotal_listCAARecords
+virustotal_listCName
+virustotal_listCollectionsFromThreatActors
+virustotal_listCommunicatingFilesFromUrl
+virustotal_listContactedDomainFromUrl
+virustotal_listContactedIPFromUrl
+virustotal_listMxRecordsForDomain
+virustotal_listNsRecords
+virustotal_listRedirectingUrlsTo
+virustotal_listRelatedDomainsFromThreatActors
+virustotal_listRelatedFilesFromThreatActors
+virustotal_listRelatedIPAddressesFromThreatActors
+virustotal_listRelatedUrls
+virustotal_listSoaRecordsForDomain
+virustotal_listUrlsFromDomain
+virustotal_listUrlsFromIP
+Supported SOAR functionalities
+The VirusTotal extension provides custom functions that enable playbooks to interact with VirusTotal APIs. These functions can be used to retrieve threat intelligence, analyze files, URLs, domains, and IP addresses, and enrich incidents with reputation and relationship data.
+1. virustotal_domainReputation
+Retrieves a reputation report for a given domain to determine whether it is malicious or suspicious.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection used for authentication and API access.
+Yes
+domain
+String
+Domain name to check.
+Yes
+Reference link:
+https://docs.virustotal.com/reference/domain-info
+2. virustotal_ downloadedFilesFromDomain
+Retrieves files that were downloaded from URLs associated with the given domain. This functionality is available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+domain
+String
+Domain name to check.
+Yes
+limit
+Int
+Maximum number of related objects to retrieve.
+No
+cursor
+String
+Pagination token to retrieve the next set of results.
+No
+Reference link:
+https://docs.virustotal.com/reference/domain-downloaded_files
+3. virustotal_downloadedFilesFromIP
+Retrieves files downloaded from URLs associated with a given IP address. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+ip
+String
+IP address to check.
+Yes
+limit
+Int
+Maximum number of related objects to retrieve.
+No
+cursor
+String
+Pagination token for fetching next results.
+No
+Reference link:
+https://docs.virustotal.com/reference/ip-downloaded_files
+4. virustotal_downloadedFilesFromUrl
+Retrieves files downloaded from a specific URL. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+url
+String
+URL to check.
+Yes
+limit
+Int
+Maximum number of related objects to retrieve.
+No
+cursor
+String
+Pagination token for next results.
+No
+Reference link:
+https://docs.virustotal.com/reference/url-downloaded_files
+5. virustotal_fileReputation
+Retrieves a reputation report for a given file hash.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+fileHash
+String
+File hash (MD5, SHA1, or SHA256).
+Yes
+Reference link:
+https://docs.virustotal.com/reference/file-info
+6. virustotal_fileOrUrlAnalysis
+Retrieves analysis results for a file or URL using the analysis ID.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+id
+String
+Analysis ID from file or URL scan.
+Yes
+Reference link:
+https://docs.virustotal.com/reference/analysis
+7. virustotal_getFileReport
+Retrieves behavioral relationship details for a given file hash.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+fileHash
+String
+File hash (MD5, SHA1, or SHA256).
+Yes
+Reference link:
+https://docs.virustotal.com/reference/file-all-behaviours-summary
+8. virustotal_getScreenshotDetails
+Retrieves sandbox screenshots for a file execution. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+fileHash
+String
+File hash to query.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/screenshots
+9. virustotal_getVendorAnalysis
+Retrieves analysis details from a specific vendor.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+vendor
+String
+Vendor name.
+Yes
+indicatorType
+String
+Type of indicator (ip, domain, filehash, url).
+Yes
+indicatorValue
+String
+Value of the indicator.
+Yes
+Reference link:
+https://docs.virustotal.com/reference/ip-info
+10. virustotal_ipReputation
+Retrieves a reputation report for a given IP address.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+ip
+String
+IP address to check.
+Yes
+overridePrivateLookup
+Bool
+Enables lookup for private IPs even if disabled at integration level.
+No
+Reference link:
+https://docs.virustotal.com/reference/ip-info
+11. virustotal_listCAARecords
+Retrieves the list of CAA records associated with a domain. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection used for authentication and API access.
+Yes
+domain
+String
+Domain name to check.
+Yes
+limit
+Int
+Maximum number of related objects to retrieve.
+No
+cursor
+String
+Pagination token for retrieving the next set of results.
+No
+Reference link:
+https://docs.virustotal.com/reference/caa_records
+12. virustotal_listCName
+Retrieves the list of CNAME records associated with a domain. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+domain
+String
+Domain name to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/cname_records
+13. virustotal_listCollectionsFromURL
+Retrieves all VirusTotal collections where the specified URL is present.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+url
+String
+URL to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/urls-object-collections
+14. virustotal_listCollectionsForDomain
+Retrieves all VirusTotal collections where the specified domain is present.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+domain
+String
+Domain name to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/domains-object-collections
+15. virustotal_listCollectionsForIP
+Retrieves all VirusTotal collections where the specified IP address is present.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+ip
+String
+IP address to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/ip-object-collections
+16. virustotal_listCollectionsFromThreatActors
+Retrieves collections associated with a given threat actor. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+id
+String
+Threat actor ID.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/threat-actors-object-collections
+17. virustotal_listCommunicatingFilesFromDomain
+Retrieves files that have communicated with the specified domain.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+domain
+String
+Domain name to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/domain-communicating_files
+18. virustotal_listCommunicatingFilesFromIP
+Retrieves files that have communicated with the specified IP address.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+ip
+String
+IP address to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/ip-communicating_files
+19. virustotal_listCommunicatingFilesFromUrl
+Retrieves files that communicate with the specified URL. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+url
+String
+URL to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/urls-communicating_files
+20. virustotal_listContactedDomainFromUrl
+Retrieves domains contacted by the specified URL. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+url
+String
+URL to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/url-contacted_domains
+21. virustotal_listContactedIPFromUrl
+Retrieves IP addresses contacted by the specified URL. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+url
+String
+URL to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/url-contacted_ips
+22. virustotal_listHistoricalSSLCertificatesFromDomain
+Retrieves historical SSL certificates associated with a domain.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+domain
+String
+Domain name to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/domain-historical_ssl_certificates
+23. virustotal_listHistoricalSSLCertificatesFromIP
+Retrieves historical SSL certificates associated with an IP address.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+ip
+String
+IP address to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/ip-historical_ssl_certificates
+24. virustotal_listHistoricalWhoisForDomain
+Retrieves historical WHOIS records for a domain.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+domain
+String
+Domain name to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/domain-historical_whois
+25. virustotal_listHistoricalWhoisForIP
+Retrieves historical WHOIS records for an IP address.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+ip
+String
+IP address to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/ip-historical_whois
+26. virustotal_listLastServingIPsFromURL
+Retrieves the last known IP address that served the given URL.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+url
+String
+URL to check.
+Yes
+Reference link:
+https://docs.virustotal.com/reference/url-last_serving_ip_address
+27. virustotal_listMxRecordsForDomain
+Retrieves MX records associated with a domain. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+domain
+String
+Domain name to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/mx_records
+28. virustotal_listNetworkLocation
+Retrieves network location details of a URL.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+url
+String
+URL to check.
+Yes
+Reference link:
+https://docs.virustotal.com/reference/url-network_location
+29. virustotal_listNSRecords
+Retrieves NS records associated with a domain. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+domain
+String
+Domain name to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/ns_records
+30. virustotal_listParentDomain
+Retrieves parent domain details.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+domain
+String
+Domain name to check.
+Yes
+Reference link:
+https://docs.virustotal.com/reference/parent
+31. virustotal_listRedirectingUrlsTo
+Retrieves the list of URLs that the given URL redirects to. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection used for authentication and API access.
+Yes
+url
+String
+URL to check.
+Yes
+limit
+Int
+Maximum number of related objects to retrieve.
+No
+cursor
+String
+Pagination token for retrieving the next set of results.
+No
+Reference link:
+https://docs.virustotal.com/reference/url-redirects_to
+32. virustotal_listReferrerFilesFromDomain
+Retrieves files that contain references to the specified domain.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+domain
+String
+Domain name to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/domain-referrer_files
+33. virustotal_listReferrerFilesFromIP
+Retrieves files that contain references to the specified IP address.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+ip
+String
+IP address to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/ip-referrer_files
+34. virustotal_listRelatedDomainsFromThreatActors
+Retrieves domains related to the specified threat actor. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+id
+String
+Threat actor ID to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/related_domains
+35. virustotal_listRelatedFilesFromThreatActors
+Retrieves files related to the specified threat actor. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+id
+String
+Threat actor ID to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/related_files
+36. virustotal_listRelatedIPAddressesFromThreatActors
+Retrieves IP addresses related to the specified threat actor. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+id
+String
+Threat actor ID to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/file-object-related-threat-actors
+37. virustotal_listRelatedUrls
+Retrieves URLs related to the specified threat actor. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+id
+String
+Threat actor ID to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/related_urls
+38. virustotal_listResolutionFromDomain
+Retrieves past and current IP resolutions for the specified domain.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+domain
+String
+Domain name to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/domain-resolutions
+39. virustotal_listResolutionFromIP
+Retrieves past and current domain resolutions for the specified IP address.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+ip
+String
+IP address to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/ip-resolutions
+40. virustotal_listSiblingsFromDomain
+Retrieves sibling subdomains at the same level for the specified domain.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+domain
+String
+Domain name to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/siblings
+41. virustotal_listSoaRecordsForDomain
+Retrieves SOA records associated with the specified domain. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+domain
+String
+Domain name to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/soa_records
+42. virustotal_listUrlsFromDomain
+Retrieves URLs associated with the specified domain. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+domain
+String
+Domain name to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/domain-urls
+43. virustotal_listUrlsFromIP
+Retrieves URLs associated with the specified IP address. Available only for Premium API users.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+ip
+String
+IP address to check.
+Yes
+limit
+Int
+Maximum number of results.
+No
+cursor
+String
+Pagination token.
+No
+Reference link:
+https://docs.virustotal.com/reference/ip-urls
+44. virustotal_scanURL
+Submits a URL for scanning and returns the analysis ID.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+url
+String
+URL to scan.
+Yes
+Reference link:
+https://docs.virustotal.com/reference/scan-url
+45. virustotal_urlReputation
+Retrieves a reputation report for the specified URL.
+Parameter
+Parameter type
+Param description
+Mandatory
+connectionName
+Connection
+Name of the pre-configured VirusTotal connection.
+Yes
+url
+String
+URL to check.
+Yes
+Reference link:
+https://docs.virustotal.com/reference/url-info
+46. virustotal_calculateRiskScore
+Calculates a risk score based on VirusTotal response data for an indicator.
+Parameter
+Parameter type
+Param description
+Mandatory
+VTResponse
+Map
+Response obtained from VirusTotal reputation functions.
+Yes
+maliciousThreshold
+Int
+Minimum number of detections required to classify as malicious.
+No
+suspiciousThreshold
+Int
+Minimum number of detections required to classify as suspicious.
+No
+trustedVendorsList
+List
+List of trusted vendors for evaluation.
+No
+trustedVendorsThreshold
+Int
+Minimum number of trusted vendor detections required.
+No
+crowdsourcedYaraRulesThreshold
+Int
+Threshold for YARA rule matches.
+No
+sigmaIDSThreshold
+Int
+Threshold for Sigma/IDS matches.
+No
+domainPopularityRanking
+Int
+Threshold for domain popularity ranking.
+No

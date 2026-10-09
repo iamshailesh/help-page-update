@@ -1,0 +1,101 @@
+In this page
+Overview
+Request URL
+Request Header
+Request Parameters
+API Response
+Executing the API using cURL
+Executing the API using Postman
+Overview
+The Asynchronous Alerts API in ManageEngine Log360 allows you to run alert search requests in the background. Using this API, you can monitor the progress of a search job and retrieve results as they become available.
+Steps to execute an asynchronous alert query
+Send a request with the required metadata and asynchronous parameters.
+The server responds with a request ID, and the search runs in a background thread.
+You can check the jobâs status through the Jobs endpoint.
+Once the job completes, fetch the results using the jobs/results endpoint.
+Search results remain available for 24 hours, after which they are deleted by the cleanup thread.
+Synchronous Alerts
+Asynchronous Alerts
+It retrieves data within the retention period.
+The response time taken is based on data fetched.
+It retrieves large amount of data based on the given criteria.
+The response will be a request ID and the search is performed in background thread
+In order to acquire the next set of results, keep requesting with the next cursor.
+Once the job is done, in order to acquire the next result page, search with the next page_no using the job results endpoint.
+Response is valid only for 5 minutes.
+Response will be valid upto 24 hours.
+Request URL
+POST http://hostname:8095/RestAPI/v1/alerts/async
+NOTE
+For the request URL, you can either use the IP address, or FQDN of the product server in place of hostname.
+Request Header
+Header name
+Value
+Mandatory
+Description
+Authorization
+Bearer {{AuthToken}}
+Yes
+AuthToken generated from API Settings page.
+e.g:
+Bearer
+nzxcvda0odmtmznloc00ndziltg0mgutmwzkhtljmjvmzbyt
+Request Parameters
+The request needs to be sent in the body of the request using JSON format. And should contain following key/value parameters
+Parameter name
+Default value
+Mandatory
+Type
+Description
+query
+*
+No
+String
+Start value of the list
+alert_profiles
+all
+No
+JSONArray
+List of alert profiles
+severity
+all
+No
+JSONArray
+List of severity
+status
+all
+No
+JSONArray
+List of status
+from
+current time - 24 hours
+No
+Long
+Start time for search in Unix milliseconds
+to
+current time
+No
+Long
+End time for search in Unix milliseconds
+NOTE
+Quotes i.e ( " ") in query string must be escaped. If query in product console's search page is REMOTE_INTERFACE = "switch 1", then for Rest Api the query parameter should be written as "REMOTE_INTERFACE = \"switch 1\""
+Response
+The response will be a JSON object which will contain the following key/value pairs
+Parameter name
+Description
+hits
+JSON object which contain search hits for the request
+Contains following fields
+hits: List of alert hits
+hits_count_in_current_page: Hits count in current alert hit response
+Executing the API using
+cURL
+1. Search request with query
+Sample request
+curl --location --request POST 'http://localhost:8400/RestAPI/v1/alerts/async' \ -H "Accept: application/json" -H "Authorization: Bearer mdrkoda0odmtmznloc00ndziltg0mgutmwzkztljmjvmzwmx " --data-raw '{ "query": "EVENTID = 16384 AND USERNAME = mhtoc", "alert_profiles": [1, 2, 601], "severity": ["CRITICAL"], "status": ["OPEN"], "from": 1643480792000, "to": 1643480479500 }'
+Sample response
+{ "message": "Request submitted", "request_id": "AX6qKwX7hJby8kAkaqDG", "status": 200 }
+Executing the API using Postman
+Figure 1: Executing the API using Postman
+Read also
+This page explained how to execute asynchronous alert search requests in Log360.

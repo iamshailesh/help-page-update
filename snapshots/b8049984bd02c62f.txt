@@ -1,0 +1,15 @@
+Log360 Cloud helps you gain actionable insights on the applications used in your organization. Here is how you can access the analytical reports on usage of applications in Log360 Cloud.
+Navigate to
+Reports
+and select the
+Cloud Protection
+from the
+Devices
+drop-down menu.
+Under Cloud Protection, go to the
+Application Insight
+tab. The LHS pane lists the available analytical reports.
+Cloud Apps Accessed
+: List of all cloud applications accessed through the configured Cloud Protection.
+HTTP Cloud Apps Accessed
+: Lists all the HTTP cloud applications accessed by client devices.

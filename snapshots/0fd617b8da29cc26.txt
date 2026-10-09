@@ -1,0 +1,95 @@
+Log360 supports SSL connection to ensure security of data transferred between the browser and the Log360 server.
+Steps to apply SSL certificate and enable HTTPS
+Letâs see how to generate and apply a SSL certificate for LOg360 and its integrated components.
+Navigate to
+Admin → General Settings → SSL Certification Tool
+.
+If you donât have a SSL certificate, select the Generate Certificate option and follow the steps
+here
+.
+If you already have a SSL certificate, select the Apply Certificate option and follow the steps
+here
+.
+Note
+SHA256 with RSA algorithm is currently supported for the SSL certificates.
+Apply Certificate
+Note
+This option is available only in Log360.
+If you already have a SSL certificate, follow the steps listed below to apply it.
+In the
+Apply Certificate
+to drop-down, select the component for which you want to apply the SSL certificate.
+Choose an
+Upload Option
+based on the certificate file type.
+ZIP upload:
+If your CA has sent you a ZIP file, then select ZIP Upload, and upload the file.
+If your CA has sent you individual certificate filesâuser, intermediary, and root certificates, then you can put all these certificate files in a ZIP file and upload it.
+Individual Certificates:
+If your CA has sent you just one certificate file (PFX or PEM format), then select Individual Certificates, and upload the file.
+If your CA has sent the certificate content, then paste the content in a text editor and save it as a CER, CRT, or PEM format, and upload the file.
+Certificate Content:
+If your CA has sent just the certificate content, then choose Certificate Content option, and paste the entire content.
+If the certificate file requires a password, then enter it in the
+Certificate Password
+field. Or, if the certificate contains a password-protected private key, enter the password in the
+Private Key Passphrase
+field.
+Note
+Only Triple DES encrypted private keys are currently supported.
+Click
+Apply.
+Finally, restart Log360.
+Generate Certificate
+In the
+Common Name field
+, enter the name of the server.
+Example:
+For the URL
+https://servername:9251
+, the common name is
+servername.
+In the
+SAN Names
+field, specify the additional hostnames (e.g., sites, IP addresses, common names) that must be protected by the certificate.
+In the
+Organizational Unit
+field, enter the departmentâs name which you want to be displayed in the certificate.
+In the
+Organization
+field, enter the legal name of your organization.
+In the
+City
+field, enter the name of the city as provided in your organizationâs registered address.
+In the
+State/Province
+field, enter the name of the state or province as provided in your organizationâs registered address.
+In the
+Country Code
+field, enter the two letter code of the country where your organization is located.
+In the
+Password
+field, enter a password that consists of at least 6 characters to secure the keystore.
+In the
+Validity (In Days)
+field, specify the number of days for which the SSL certificate will be considered valid.
+Note
+When no value is entered, the certificate will be considered to be valid for 90 days.
+In the
+Public Key Length (In Bits)
+field, specify the size of the public key.
+Note
+The default value is 2048 bits and its value can only be incremented in multiples of 64.
+After all values have been entered, you can select either of these two options:
+Generate CSR
+This method allows you to generate the CSR file and submit it to your CA. Using this file, your CA will generate a custom certificate for your server.
+Click
+Download CSR
+or manually get it by going to the
+<Install_dir>\Certificates
+folder.
+Once you have received the certificate files from your CA, follow the steps listed under
+Apply Certificate
+to apply the SSL certificate.
+Apply Self-signed Certificate
+This option allows you to create a self-signed certificate and apply it instantly in the product. However, self-signed SSL certificates come with a drawback. Anyone accessing the product secured with a self-signed SSL certificate will be shown a warning telling them that the website is not trusted, which may cause concern.

@@ -1,0 +1,77 @@
+In this page
+Overview
+Available Reports
+Overview
+This page lists all
+PostgreSQL (PGSQL) reports
+supported by the product. These reports help administrators audit database changes, track user logons, monitor DDL and DML activity, review administrative actions, and analyze server health and security events.
+Available Reports
+Report group name
+Report name
+PGSQL events
+All Events
+Important Events
+DDL auditing report
+Created Databases
+Altered Databases
+Dropped Databases
+Created Tables
+Altered Tables
+Dropped Tables
+Created Views
+Altered Views
+Dropped Views
+Created Index
+Altered Index
+Dropped Index
+Created Triggers
+Altered Triggers
+Dropped Triggers
+Created Schemas
+Altered Schemas
+Dropped Schemas
+DDL Events Summary
+Logon reports
+Successful Logins
+Failed Logins
+DML auditing report
+Updated Tables
+Deleted Tables
+Inserted Tables
+Selected Tables
+Truncated Tables
+Execute Statements
+Prepare Statements
+DML Events Summary
+Auditing account management
+User Created
+User Altered
+User Dropped
+DataBase Role Created
+DataBase Role Altered
+DataBase Role Dropped
+Permission Granted
+Permission Revoked
+Password Changes
+Database administrative statements reports
+Show and Set Statements
+Database Maintenance Statements
+Utility Statements
+PGSQL server events
+Server Startup/Shutdown Events
+PGSQL overview
+DDL Events Summary
+DML Events Summary
+Check Points
+Server Status
+PGSQL Logon Logoff Events
+Successful Logins
+PGSQL Shutdown Events
+PGSQL Security Events
+PGSQL Read Write Trend
+Read also
+This document outlined the PostgreSQL reports available in the product. Explore other database and server monitoring reports to gain comprehensive visibility into your infrastructure.
+Printer reports
+SAP reports
+Sysmon reports
+Terminal reports

@@ -1,0 +1,59 @@
+In this page
+Overview
+Request URL
+Request Header
+Request Parameters
+API Response
+Executing the API using cURL
+Executing the API using Postman
+Overview
+The Results API in ManageEngine Log360 retrieves the results of background search or alert tasks submitted via the Asynchronous Search API or Asynchronous alerts API.
+Request URL
+GET http://localhost:8095/RestAPI/v1/jobs/results
+NOTE
+For the request URL, you can either use the IP address, or FQDN of the product server in place of localhost.
+Request Header
+Header name
+Value
+Mandatory
+Authorization
+Bearer {{AuthToken}}
+Yes
+Request Parameters
+Parameter name
+Mandatory
+Type
+Description
+request_id
+Yes
+String
+request_id of the async search task returned by async endpoint
+page_no
+No
+Int
+if provided fetched particular page number of the result-set
+Response
+The response is a JSON object containing the following key/value pairs
+Parameter name
+Description
+next_page
+Next page number of the result set
+results
+JSON object which contain search hits for the request
+Contains following fields
+hits: List of search hits
+hits_count_in_current_page: Hits count in current search response
+Executing the API using
+cURL
+1. Get results of asynchronous search
+Sample request
+curl --location --request GET 'http://localhost:8095/RestAPI/v1/jobs/results?request_id=AYVTeCb0wPH5eWuO5jkC' \ -H "Accept: application/json" -H "Authorization: Bearer mdrkoda0odmtmznloc00ndziltg0mgutmwzkztljmjvmzwmx "
+Sample response:
+{ "next_page": 5, "results": { "hits": [{ "COMMON_SEVERITY": "INFORMATION", "IS_THROWAWAY": true, "HOSTNAME": "lix", "APPID": 2, "FORMATID": 302, "RAWLOG": "roy.sulivan /event/emberAPI/ELANotificationActions \"https://eventlog.lo [16/Jun/2020:21:13:21 +0530] 15 142 200 \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0\"", "TIME": "1643531422443", "IMPORTED_TIME": 1643531420365, "Url": "https://eventlog.logme.cn/event/index2.do?url=collectorSettings&tab=system&sel=1\"", "IPAddress1": "10.128.156.152", "HOSTID": 601, "IPAddress2": "10.128.156.152" }, { "COMMON_SEVERITY": "INFORMATION", "IS_THROWAWAY": true, "HOSTNAME": "lix", "APPID": 2, "FORMATID": 302, "RAWLOG": "roy.sulivan /event/emberAPI/ELANotificationActions \"https://eventlog.logme.cn/event/index2.do?url=collectorSettings&tab=system&sel=1\" 10.128.156.152 10.128.156.152 POST [16/Jun/2020:21:13:27 +0530] 15 142 200 \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0\"", "TIME": "1643531422446", "IMPORTED_TIME": 1643531420365, "Url": "https://eventlog.logme.cn/event/index2.do?url=collectorSettings&tab=system&sel=1\"", "IPAddress1": "10.128.156.152", "HOSTID": 601, "IPAddress2": "10.128.156.152" }], "hits_count_in_current_page": 2 }, "status": 200 }
+Executing the API using Postman
+1. Get results of asynchronous search
+Figure 1: Get results of asynchronous search
+2. Get particular page of results of asynchronous search
+Figure 2: Get particular page of results of asynchronous search
+Read also
+This page explained how to fetch search results for asynchronous jobs using REST API.

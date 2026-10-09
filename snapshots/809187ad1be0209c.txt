@@ -1,0 +1,80 @@
+Log360 Cloud's custom log parsing enables users to extract additional fields from logs by defining parser rules. This feature also allows the creation of custom log formats and the definition of parser rules for the newly created formats.
+Creating custom log formats
+Navigate to
+Settings â Admin â Product Customization â Custom Log Format
+.
+To create a new format, click
+Add Log Format
+.
+A dialog box will appear; enter the new custom format name in the
+Format Name
+text box.
+This will create a new log format based on the syslog type. File import type is also supported.
+After creating the custom log format, a confirmation box will appear, providing options to create parser rules for the newly created format or navigate to "Manage Parser Rules" for creating new parser rules.
+The newly created 'Syslog' based format can be assigned to any syslog devices. This can be achieved by navigating to
+Settings â Configuration â Devices â Syslog devices
+. Click 'Update' for the desired device, and under 'Device Type', select the newly created format.
+The newly created "File Import" based format can be assigned during file import.
+Creating parser rules for log formats
+To create a parser rule, click on
+Add Parser Rule.
+There are three methods available to extract the field: Regex, Delimiter, and JSON.
+Paste the log, click
+Save Changes
+, and select the field values to be extracted.
+Provide a rule name and field name for the parser rule.
+Utilize the 'Auto Identify' icon to recognize common fields and choose from appropriate working fields.
+By clicking
+Add Open Attribute
+, you can enter both the field name and its value, making it easier for future searches.
+A regular expression (regex) pattern will be generated, and this pattern is used to extract the field from the log.
+The option
+Choose Another Pattern
+shows a different pattern generated to extract the given field.
+Specify "apply this pattern only when" criteria for when to apply this parser rule.
+Verify whether the generated pattern is extracting the field correctly by clicking
+Validate this pattern
+.
+Clicking
+Validate this pattern
+opens a new window to verify the generated pattern with the recently collected 50 logs, matching it. If the pattern does not match, the logs will be categorized as unmatched. If the pattern proves ineffective, select a different pattern by clicking
+Choose another pattern
+and attempt to validate the pattern.
+Click
+Save Rule
+to save the rule.
+Fields can also be extracted by changing the method to
+Delimiter
+. Users can specify the delimiter between each word, such as space, comma, tab, pipe, or enter a custom delimiter to extract the fields. It's important to note that custom delimiters should be entered as symbols and not words. If the extracted fields work well for the log, users can provide a field name and save the rule.
+For
+JSON format logs
+, users can extract fields by specifying the
+JSON path
+to target specific fields in the log. Each field is defined by assigning a field name and mapping it to its corresponding JSON path. It's important to note that the JSON path should accurately reference the key or nested structure within the JSON log.
+JSON field extraction can be configured
+only for the File Import custom log format
+. Users can create JSON extraction rules in the following two ways:
+With a Sample Log:
+Provide a valid JSON log.
+Select the required fields from the JSON tree.
+Assign field names for the corresponding JSON paths.
+Without a Sample Log:
+Manually specify the JSON path to target specific fields.
+Ensure the JSON path matches the log structure.
+Once validated, these rules will successfully extract and map values to their corresponding fields during log processing.
+View the fields and open attributes associated with a specific parser rule, along with the option to disable or enable that rule. Edit the parser rule as needed and delete it if necessary.
+To add a parser rule for the predefined format, navigate to
+Settings > Custom Log Format > Predefined log format
+.
+Extracting fields by creating custom parser rules from the search tab
+Extract additional fields directly from the search tab. Locate the
+Create Additional Fields icon
+on the right side of each log and click it.
+The details of the log are displayed, and then select
+Extract Additional Fields
+.
+Follow the steps mentioned in the above section for creating a parser rule.
+The created parser rule can be viewed from the settings page.
+Note
+Fields can be extracted using two ways for both predefined and custom formats: via search and via settings.
+Limitations include a maximum of 10 custom formats and 1000 custom fields.

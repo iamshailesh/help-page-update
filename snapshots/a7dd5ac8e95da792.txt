@@ -1,0 +1,74 @@
+EventLog Analyzer allows you to migrate the existing EventLog Analyzer data available in the PGSQL database to the MS SQL database.
+This procedure is applicable only if you are already using the EventLog Analyzer with PGSQL and you want to change the database to MS SQL.
+Note
+Before making changes to the database with the changeDBServer.bat file, it's crucial to ensure that the product is fully operational. Once confirmed, proceed to shut down the product. Once the product has successfully stopped, run the changeDBServer.bat file.
+Note
+Re-registering the Managed Server after the database has been changed:
+When the Managed Server is installed, it is registered with Admin Server as Managed Server with PGSQL.
+If the database of the Managed Server is changed from PGSQL to MS SQL, the database of the Admin server also needs to be changed from PGSQL to MS SQL.
+Then, the managed server has to be re-registered with the Admin Server with the help of <EventLog Analyzer Home>/troubleshooting/registerWithAdminServer.bat file (or registerWithAdminServer.sh file)
+After changing the database, when the Managed Server is started as a service. There will not be any prompt to re-register. The user has to ensure that the Managed Server is re-registered with the Admin Server.
+If the user is migrating a distributed setup, the user needs to migrate the entire distributed setup to MSSQL. All Managed servers along with the admin server should be migrated to MSSQL.
+If you want to configure MS SQL for a fresh installation of the EventLog Analyzer server, please refer to the
+Configuring MS SQL Database
+page and follow the procedure given there.
+The steps to migrate and run the EventLog Analyzer server with SQL SERVER as the database is given below:
+Navigate to
+Settings â Database Settings â Database Backup
+.
+Use the Backup Now option to backup the data available in the PGSQL database and wait till the data backup is completed. By default, the backup file will be stored under <EventLog Analyzer Home>/Backup directory with the file name 'ELA_Backup_YYYY_MM_DD_HH_MM_SS.ezip'.
+From the installed MS SQL SERVER, copy the files bcp.exe and bcp.rll to <EventLog Analyzer Home>/bin folder.
+Note
+If you are copying the above files from SQL server (Version 2012 and above) and EventLog Analyzer is installed in another machine, please install the SQL native client as per the SQL version and CPU type of the EventLog Analyzer machine.
+For MSSQL version 2012, install the native client and for the remaining versions of MSSQL, install the ODBC driver (links given below).
+MSSQL 2012
+https://www.microsoft.com/en-us/download/confirmation.aspx?id=50402
+MSSQL 2014
+https://www.microsoft.com/en-us/download/details.aspx?id=36434
+MSSQL 2016
+https://www.microsoft.com/en-us/download/details.aspx?id=50420
+MSSQL 2017
+https://www.microsoft.com/en-us/download/details.aspx?id=53339
+MSSQL 2019
+64bit link:
+https://go.microsoft.com/fwlink/?linkid=2137027
+32bit link:
+https://go.microsoft.com/fwlink/?linkid=2137028
+MSSQL 2022
+64bit link:
+https://go.microsoft.com/fwlink/?linkid=2266640
+32bit link:
+https://go.microsoft.com/fwlink/?linkid=2266742
+Invoke the
+<EventLog Analyzer Home>/tools/changeDBServer.bat
+in command prompt to configure the MS SQL SERVER credentials like ServerName, Port, User Name and Password.
+Database Setup Wizard
+pops-up.
+In the wizard screen, select
+Server Type
+as SQL Server. Available SQL Server Instances are listed in a combo box. Enter the Device Name and Port of the SQL Server from the instances.
+Select the authentication type using the "
+Connect Using
+:" option.
+The options are:
+Windows Authentication
+SQL Server Authentication
+Note
+Ensure that both EventLog Analyzer Server and MS SQL Server are in the same domain and logged in with the same Domain Administrator credentials.
+Windows Authentication
+For
+EventLog Analyzer version 8.0 (Build 8010) onwards
+,
+SQL Server Authentication
+For SQL Server Authentication, enter the
+User Name
+and
+Password
+.
+Click the
+Test Connection
+button to verify the correctness of the credentials. If the test fails, recheck and enter the correct credentials.
+Click the
+Configure DB
+button to save the SQL Server configuration. Note that configuring the settings of the SQL Server database may take a few minutes.
+The product will start automatically after the configuration is complete.

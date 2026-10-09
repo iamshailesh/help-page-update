@@ -1,0 +1,192 @@
+In this page
+Dashboard Tab
+Log Sources Tab
+Date and Time
+Settings Icon
+Reports Tab
+Compliance Tab
+Search Tab
+Correlation Tab
+Alerts Tab
+Settings Tab
+Add Tab
+EventLog Analyzer's user interface tabs help you navigate to different sections of the product. The tabs include:
+Dashboard tab
+The Dashboard tab contains multiple dashboards that give you insights into important network activities. The below dashboards are present by default when you click on the Dashboard tab:
+Events Overview
+Network Overview
+Incident Overview
+Events Overview
+This tab presents a high-level overview of security events by generating graphical reports such as
+Logs Trend, Syslog Severity Events, Windows Severity Events, and Recent Alerts
+. These reports are generated for events that occur in a specific time frame (
+which can be customized
+). Hovering your mouse pointer over the charts or graphs will give you information about the
+Event Count
+of a particular device, its
+IP address
+, and the
+Severity
+of the event (Information, Notice, Debug, Warning, Alert, Error, Critical, and Emergency).
+Network Overview
+This tab gives you information about network traffic in your environment. It provides details on the traffic trend, allowed and denied network connections, and more to help you track events of interest.
+Incident Overview
+This tab helps you effortlessly manage the security incidents detected. The dashboard gives you the count of all, active, unassigned and overdue incidents. It also provides the
+mean time to resolve
+. The dashboard provides insights such as:
+Overdue incidents's age.
+Personalized incident dashboard where the user can view the incidents assigned to them and their age.
+Top 5 incident handlers.
+The status and severity of the incidents detected.
+Trend graph for the incidents created and resolved.
+User-specific mean time to resolve the incidents.
+Note
+mean time to resolve refers to the average time taken to resolve an incident.
+The Dashboard tab also contains the Log Sources, date and time selection, and settings icons.
+Log Sources tab
+When you click on the Log Sources tab, three tabs are displayed:
+Devices
+Applications
+File Integrity Monitoring
+Devices
+The Devices section displays the entire list of systems (Windows, Linux, IBM AS/400, HP-UX, etc.) and devices (routers, switches, etc.), from which EventLog Analyzer is collecting logs. The device list displayed is categorized based on the
+Device group
+selected from the drop-down list (default: All Groups). You can add a new device (
++Device
+), or add and schedule new reports (
++Schedule
+) from this section. You can
+search
+for a particular device based on its IP Address or Device Name,
+delete
+a device or set of devices, and
+disable/enable
+log collection from a particular device or set of devices.
+The device list table displays details like device type, event summary (error, warning, failure, others), connection status of the device, time when the last log message was fetched, and device group to which the device belongs. Moving the mouse over any device brings up some options:
+View the last 10 events collected from a particular device.
+Update the device details.
+Ping the device.
+Enable/disable log collection from the device.
+You can even customize the columns you would like to display in the device table by clicking the column selector icon or increase the number of devices that are displayed per page (from a minimum of 5 devices per page to a maximum of 200 devices per page). Using the drop down menu, you can list out only the Active devices or Enabled devices and have the option to exclude synced devices from Active Directory Audit Plus.
+Scheduled Reports
+EventLog Analyzer lets you schedule report generation, export, and redistribution over email.
+Go to
+Dashboards → View All Devices
+.
+To schedule a report, click
+Schedule Reports
+on the top right corner of the page.
+Click on the
++Create New Schedule
+button on the page. This will open the
+Create New Schedule
+page.
+In the
+Create New Schedule
+window,
+Schedule Name:
+Enter the name of the Schedule.
+Select Log Sources:
+Add the Log Sources for which the schedule is for with the help of the + button.
+Schedule Frequency:
+Specify the frequency at which reports need to be exported. The frequency can be 'Only Once', 'Hourly', 'Daily', 'Weekly', or 'Monthly'.
+Export Time Range:
+Select the time range for which the report needs to be created and later exported along with the timing.
+Report Format:
+Choose the file format in which the report needs to be exported i.e. PDF or CSV.
+Email Address:
+Configure the email address to which the reports need to be sent.
+Email Subject:
+Enter the subject of the mail that contains the exported reports.
+Once you've entered the necessary details for the schedule, click
+Save
+to complete creating the report schedule.
+You can also export the reports in PDF or CSV format with the
+Export as
+option. These generated reports will include device details such as the display name, IP address, total count, last message time, next scan time, and device status.
+Applications
+The Applications section provides an overview pie-chart (which can be drilled down to raw log information) and lists the devices from which application logs for IIS W3C Web Servers, IIS W3C FTP Servers, MS SQL Servers, Oracle Live Audit, DHCP Windows/Linux Servers, Apache Web Servers or Print Servers, have been received or imported into EventLog Analyzer. The device list displayed is categorized based on
+Application Type
+selected from the drop-down list. Applications logs can be imported into EventLog Analyzer by selecting
++Import
+from the
+Actions
+drop-down list.
+The application device list displays details like device name, application type, total events, recent records, time imported, start time and end time. Click on the device name or the corresponding section in the pie chart to get the complete overview of the application event data, and generate corresponding reports. You can even customize the columns you would like to display in the application device table by clicking the column selector icon.
+File Integrity Monitoring
+The File Integrity Monitoring dashboard gives information about changes made to files and folders of Windows, Linux, and Unix machines. It tabulates and reports on the files and folders
+created, deleted, modified, and renamed
+. It also displays changes made to file and folder permissions.
+At the top of this dashboard, you can find the Manage
+File Integrity Monitoring
+tab which allows you to add, delete, and manage devices for File Integrity Monitoring. The
+FIM Alert
+tab allows you to configure alerts for anomalous file and folder modifications. The
+FIM Scheduled Reports
+tab helps you view and export scheduled reports.
+Date and time
+You can generate and view all the audit reports for the required time frame using the date and time box provided.
+Settings icon
+The settings icon displays multiple options to customize all dashboards by adding, managing, and ordering the widgets and tabs that are displayed. You can also refresh the changes made to the time frame in the product using the
+Refresh Interval
+option.
+Reports tab
+This tab displays a dashboard that contains reports for
+all events
+taking place in your network. At the top left corner, you can find a drop-down menu that allows you to choose and view reports based on
+Devices, Applications, File Monitoring, Threats, Vulnerability
+, and
+Virtual Machines
+. You can also view
+Custom Reports, User Based Reports
+, and
+Top and Trend
+reports by clicking on the required option from this drop-down menu. The
+Export As
+drop-down menu enables you to export reports in either the CSV or PDF formats. You can schedule reports by clicking on the
++Add
+option present in the
+Schedule Reports
+tab.
+On the left pane, you can find multiple pre-defined reports that are automatically generated when log sources are added to EventLog Analyzer. You can also create custom reports by clicking on the
+Manage Reports
+tab present at the lower-left corner of the screen. The
+Scheduled Reports
+tab allows you to view existing scheduled reports and export them as and when needed.
+Compliance tab
+The Compliance tab provides the set of canned reports as required by various compliance policies, namely, FISMA, PCI-DSS, SOX, HIPAA, GLBA, GPG, and ISO 27001:2013. The
++Add
+option allows you to create and select the reports required for a new compliance policy of your choice. The
+Edit
+option allows you to customize the reports available under each compliance policy.
+Search tab
+The Search tab provides two options to search the raw logs:
+Basic Search
+or
+Advanced Search
+. The search result is displayed in the lower half of the page and the final search result can be saved as a report (in PDF or CSV format) and can also be scheduled to be generated at predefined intervals and be automatically mailed to a set of configured users.
+You can use Basic search if you are interested in manually constructing the search query. Here you can use phrase search, Boolean search, grouped search, and wild-card search to build your search query. You can use Advanced search to interactively build complex search queries easily with field value pairs and relational operators. New fields can be extracted from the search result and regular expression (regex) patterns can be constructed to easily identify, parse and index these fields in new logs received by EventLog Analyzer.
+Correlation tab
+The Correlation engine analyzes logs collected from different parts of the network and generates alerts for suspicious patterns of events. The dashboard, by default, displays the report on
+Recent Incidents
+. You can create and modify correlation rules by clicking on the Manage Rules tab present in the dashboard.
+Alerts tab
+This tab displays the number of
+Active Alerts
+in the dashboard along with their severities. You can view tabulated information about the alerts, their time of generation, the status, and their corresponding response workflow (if configured) in the dashboard.
+Settings tab
+This section allows you to configure EventLog Analyzer as per your requirements. It has three sub-sections as given below:
+Configuration Settings
+This section allows you to Manage Devices, Device Groups, Application Sources, Import Log Data, Threat Sources, File Integrity Monitoring, Vulnerability Data, FIM Templates, and vCenter. You can also configure threat management and log forwarding from this section.
+Admin Settings
+This section allows you to perform various administrative activities by managing Alert Profiles, Archives, Technicians and Roles, DB Retention Settings, Log Collection Filters, Working Hour Settings, Product Settings, Log Collection Failure Alerts, Dashboard profiles, Privacy Settings, Logon Settings, Domain and Workgroups, Report Profiles, Resource Grouping, Custom Log Parsers, Tags, and Log360 Cloud platform.
+System Settings
+This section can allow you to configure various settings including Notification Settings, System Diagnostics, Database Access, Re-branding, NT Service, Connection Settings, and Listener Ports.
+Add tab
+This tab allows you to easily add log sources from
+Devices and Applications
+. It also has the provision to let you import logs from other sources. You can add
+Alert Profiles, Log Filters
+and create custom
+Reports
+from this tab.

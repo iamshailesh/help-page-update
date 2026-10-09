@@ -1,0 +1,1294 @@
+General
+Where do I find the log files to send to Log360 Support?
+For Build 8010 onwards
+The log files are located in the <EventLogAnalyzer_Home>logs directory. Typically when you run into a problem, you will be asked to send the
+serverout.txt
+file from this directory to Log360 Support.
+For Build 8000 or earlier
+The log files are located in the <EventLogAnalyzer_Home>server/default/log directory. Typically when you run into a problem, you will be asked to send the
+serverout.txt
+file from this directory to Log360 Support.
+I find that Log360 keeps crashing or all of a sudden stops collecting logs. What could be the reason?
+The inbuilt PostgreSQL/MySQL database of Log360 could get corrupted if other processes are accessing these directories at the same time. So exclude ManageEngine installation folder from
+Anti-virus scans
+Automatic backup softwares
+Snapshots in case of VMware installation
+Ensure that no snap shots are taken if the product is running on a VM.
+How to create SIF (Support Information File) and send it to ManageEngine when you are not able to perform the same from the Web client?
+The SIF will help us to analyze the issue you have come across and propose a solution for the same.
+If you are unable to create a SIF from the Web client UI,
+For Build 8010 onwards
+You can zip the files under '
+logs
+' folder, located in C:/ManageEngine/Eventlog/logs (default path) and upload the zip file to the following ftp link: http://bonitas.zohocorp.com/upload/index.jsp?to=eventloganalyzer-support@manageengine.com
+For Build 8000 or earlier
+You can zip the files under '
+log
+' folder, located in C:/ManageEngineEventlog/server/default/log (default path) and upload the zip file to the following ftp link: http://bonitas.zohocorp.com/upload/index.jsp?to=eventloganalyzer-support@manageengine.com
+How to register dll when message files for event sources are unavailable?
+To register dll, follow the procedure given in the link below:
+http://ss64.com/nt/regsvr32.html
+How to register/unregister bundled postgres as a service?
+Why register/unregister bundled postgres as a service?
+Depending on your environment, you may occasionally experience challenges with starting Log360 due to a Postgres database startup failure. To avoid this, it is advisable that you register the database first, making it run in the background irrespective of the product's start up or shutdown.
+How to register/unregister bundled postgres as a service?
+To register bundled postgres as a service:
+For Build 12440 onwards
+Execute the following command in the Elevated Command Prompt Window within "<Log360 Home>bin" directory.
+register_pgdbservice.bat "<Specify the name of the DB Service to be registered>"
+Stop the Log360 service/server and start it after the registered DB service is started.
+For Build 12440 or earlier
+Copy register_pgdbservice.bat from "<Log360 Home\tools\postgres\bin" and paste it in "<Log360 Home\bin" directory
+Execute the following command in the Elevated Command Prompt Window within <Log360 Home>bin directory.
+register_pgdbservice.bat "<Specify the name of the DB Service to be registered>"
+Stop the Log360 service/server and start it after the registered DB service is started.
+Should you no longer wish to be in charge of the database, you may opt to unregister, which will cause the product to start and stop the database, along with its own start and stop.
+To unregister the bundled postgres service:
+For Build 12440 onwards
+Execute the following command in the Elevated Command Prompt Window within the <Log360 Home>bin directory.
+unregister_pgdbservice.bat "<Specify the name of the DB Service to be unregistered>"
+For Build 12440 or earlier
+Copy unregister_pgdbservice.bat from "<Log360 Home\tools\postgres\bin" and paste it in "<Log360 Home\bin"
+Execute the following command in the Elevated Command Prompt Window within the <Log360 Home>bin directory.
+unregister_pgdbservice.bat "<Specify the name of the DB Service to be unregistered>"
+Installation
+Log360 displays "Enter a proper ManageEngine license file" during installation
+This can happen under two instances:
+Case 1
+: Your system date is set to a future or past date. In this case, uninstall Log360, reset the system date to the current date and time, and re-install Log360.
+Case 2
+: You may have provided an incorrect or corrupted license file. Verify that you have applied the license file obtained from ZOHO Corp. If neither is the reason, or you are still getting this error, contact
+licensing@manageengine.com
+Binding Log360 server (IP binding) to a specific interface.
+For Build 8010 onwards
+To bind Log360 server to a specific interface, follow the procedure given below:
+For Log360 running as application
+:
+Shutdown Log360
+Open the
+run.bat
+file which is under
+<Log360 Home>bin
+directory and go to "
+RESTART Command block
+", uncomment the below RESTART command line and replace <ip-address> with
+the IP address to which you want to bind the application, comment the existing RESTART command line and save the file.
+Copy
+rem
+%JAVA% %JAVA_OPTS% -cp "%CLASS_PATH%" com.adventnet.mfw.Starter %SAFE_START% -c default -b
+<ip-address>
+to
+Copy
+%JAVA% %JAVA_OPTS% -cp "%CLASS_PATH%" com.adventnet.mfw.Starter %SAFE_START% -c default -b
+<ip-address>
+Copy
+%JAVA% %JAVA_OPTS% -cp "%CLASS_PATH%" com.adventnet.mfw.Starter %SAFE_START%
+to
+Copy
+rem
+%JAVA% %JAVA_OPTS% -cp "%CLASS_PATH%" com.adventnet.mfw.Starter %SAFE_START%
+Open
+setcommonenv.bat
+file which is under
+<Log360 Home>bin
+directory and go to "
+JAVA_OPTS Setting command Block
+", uncomment the below JAVA_OPTS setting command line
+and replace <ip-address> with the IP address to which you want to bind the application and comment the existing JAVA_OPTS setting command.
+Copy
+rem
+set JAVA_OPTS=-Djava.library.path=..lib;..libnative -DpdfReport=false -Duser.country=US -Duser.language=en -DminDiskSpace=5 -Xms128m -Xmx512m -Dspecific.bind.address=
+<ip-address>
+to
+Copy
+set JAVA_OPTS=-Djava.library.path=..lib;..libnative -DpdfReport=false -Duser.country=US -Duser.language=en -DminDiskSpace=5 -Xms128m -Xmx512m -Dspecific.bind.address=
+<ip-address>
+Copy
+set JAVA_OPTS=-Djava.library.path=..lib;..libnative -DpdfReport=false -Duser.country=US -Duser.language=en -DminDiskSpace=5 -Xms256m -Xmx1024m
+to
+Copy
+rem
+set JAVA_OPTS=-Djava.library.path=..lib;..libnative -DpdfReport=false -Duser.country=US -Duser.language=en -DminDiskSpace=5 -Xms256m -Xmx1024m
+Save the file
+Open the
+database_param.conf
+file which is under
+<Log360 Home>conf
+directory and replace
+localdevice
+in
+url
+tag with the
+<binding IP address>
+to which you want to bind the application and save the file.
+Copy
+url=jdbc:postgresql://
+localdevice
+:33336/eventlog?stringtype=unspecified
+to
+url=jdbc:postgresql://
+<binding IP address>
+:33336/eventlog?stringtype=unspecified
+Open the
+postgresql.conf
+file which is under
+<Log360 Home>pgsqldata
+directory and uncomment the line '
+#listen_addresses = 'localdevice'
+' in the
+CONNECTIONS AND AUTHENTICATION
+section and replace the
+'localdevice'
+with the
+'<binding IP address>'
+to which you want to bind the application and save the file.
+Copy
+#------------------------------------------------------------------------------
+# CONNECTIONS AND AUTHENTICATION
+#------------------------------------------------------------------------------
+# - Connection Settings -
+#listen_addresses = 'localdevice' # what IP address(es) to listen on;
+# comma-separated list of addresses;
+# defaults to 'localdevice'; use '*' for all
+# (change requires restart)
+to
+#------------------------------------------------------------------------------
+# CONNECTIONS AND AUTHENTICATION
+#------------------------------------------------------------------------------
+# - Connection Settings -
+listen_addresses = <binding IP address> # what IP address(es) to listen on;
+# comma-separated list of addresses;
+# defaults to 'localdevice'; use '*' for all
+# (change requires restart)
+Open the
+pg_hba.conf
+file which is under
+<Log360 Home>pgsqldata
+directory and add the line
+device all all <binding IP address in IPv4 format>/32 trust
+after the line
+device all all 127.0.0.1/32 trust
+and save the file.
+# TYPE DATABASE USER ADDRESS METHOD
+# IPv4 local connections:
+device all all 127.0.0.1/32 trust
+# IPv6 local connections:
+device all all ::1/128 trust
+to
+# TYPE DATABASE USER ADDRESS METHOD
+# IPv4 local connections:
+device all all 127.0.0.1/32 trust
+device all all <binding IP address in IPv4 format>/32 trust
+# IPv6 local connections:
+device all all ::1/128 trust
+Restart Log360
+For Log360 running as service
+:
+Before proceeding further, stop the Log360 service and make sure that
+'SysEvtCol.exe','Postgres.exe' and 'java.exe' are not running
+.
+There are 7 files that must be modified for IP binding.
+Note
+data-doc-rid="255l9469213c93f3f4d8cb899c7bf8471fb58">Before editing the files ensure that you have a backup copy of the files.
+Assume xxx.xxx.xxx.xxx is the IP address you wish to bind with Log360.
+File 1)
+<ELA home>\bin\setCommonEnv.bat
+Search for line
+set JAVA_OPTS=-Djava.library.path=..\lib;..\lib\native -Duser.country=US -Duser.language=en -Xms256m -Xmx1024m
+Append -
+Dspecific.bind.address= xxx.xxx.xxx.xxx
+to the line. It will now look as:
+set JAVA_OPTS=-Djava.library.path=..\lib;..\lib\native -Duser.country=US -Duser.language=en -Xms256m -Xmx1024m -Dspecific.bind.address= xxx.xxx.xxx.xxx
+File 2)
+<ELA home>\bin\runSEC.bat
+Search for line
+"%SERVER_HOME%\bin\SysEvtCol.exe" -port 513 %syslogPort% -dbhome "%dbhome%" -ELAhome "%serverHome%" -loglevel 2 %RelayIP% %IPadd% %IgnoreHost% %IPadd% %*
+Add
+-bindip xxx.xxx.xxx.xxx
+to the line, so that it looks like
+"%SERVER_HOME%\bin\SysEvtCol.exe" -bindip xxx.xxx.xxx.xxx -port 513 %syslogPort% -dbhome "%dbhome%" -ELAhome "%serverHome%" -loglevel 2 %RelayIP% %IPadd% %IgnoreHost% %IPadd% %*
+File 3)
+<ELA home>\server\conf\wrapper.conf
+Search for line
+#wrapper.app.parameter.1=com.adventnet.mfw.Starter
+Remove the # from the line, it should now look like
+wrapper.app.parameter.1=com.adventnet.mfw.Starter
+The next line from current position should be
+#wrapper.app.parameter.2=-L../lib/AdventNetDeploymentSystem.jar
+. Add the following two lines after this line, one after the other.
+wrapper.app.parameter.2=-b xxx.xxx.xxx.xxx
+wrapper.app.parameter.3=-Dspecific.bind.address= xxx.xxx.xxx.xxx
+The block should now look like this :-
+wrapper.app.parameter.1=com.adventnet.mfw.Starter
+#wrapper.app.parameter.2=-L../lib/AdventNetDeploymentSystem.jar
+wrapper.app.parameter.2=-b xxx.xxx.xxx.xxx
+wrapper.app.parameter.3=-Dspecific.bind.address= xxx.xxx.xxx.xxx
+File 4)
+<ELA home>\conf\server.xml
+Search for the following block:
+<Connector SSLEnabled="false" URIEncoding="UTF-8" acceptCount="100" address="0.0.0.0" clientAuth="false" compressableMimeType="text/html,text/xml" compression="force" compressionMinSize="1024" connectionTimeout="20000" disableUploadTimeout="true" enableLookups="false" maxSpareThreads="75" maxThreads="150" minSpareThreads="25" name="WebServer" noCompressionUserAgents="gozilla, traviata" port="8095" protocol="HTTP/1.1" scheme="http" secure="false"/>
+Replace
+address="0.0.0.0"
+with
+address="xxx.xxx.xxx.xxx"
+It should now look like the following
+<Connector SSLEnabled="false" URIEncoding="UTF-8" acceptCount="100" address="xxx.xxx.xxx.xxx" clientAuth="false" compressableMimeType="text/html,text/xml" compression="force"
+compressionMinSize="1024" connectionTimeout="20000" disableUploadTimeout="true" enableLookups="false" maxSpareThreads="75" maxThreads="150" minSpareThreads="25"
+name="WebServer" noCompressionUserAgents="gozilla, traviata" port="8095" protocol="HTTP/1.1" scheme="http" secure="false"/>
+File 5)
+<ELA home>\conf\database_params.conf
+Search for the line
+url=jdbc:postgresql://127.0.0.1:33335/eventlog?stringtype=unspecified
+Replace the
+127.0.0.1
+with your
+xxx.xxx.xxx.xxx
+, the line should now look like
+url=jdbc:postgresql://xxx.xxx.xxx.xxx:33335/eventlog?stringtype=unspecified
+File 6)
+<ELA home>\pgsql\data\postgresql.conf
+Search for the line
+#listen_addresses = 'localhost'
+Remove the
+#
+from the line.
+Replace the
+'localhost'
+with
+'xxx.xxx.xxx.xxx'
+, the line should now look like
+listen_addresses = 'xxx.xxx.xxx.xxx'
+File 7)
+<ELA home>\pgsql\data\pg_hba.conf
+Search for the following block
+IPv4 local connections:
+host all all 127.0.0.1/32 trust
+We need to replicate the
+host all all 127.0.0.1/32 trust
+line with the new IP address in place of 127.0.0.1 and add it after that line. For replication, please copy this line itself and paste
+it in next line and then edit out the IP address.
+It should look like this
+IPv4 local connections:
+host all all 127.0.0.1/32 trust
+host all all xxx.xxx.xxx.xxx/32 trust
+Start Log360 and check <ELA home>\logs\wrapper.log for the current status.
+Log360 displays "java.lang.Error: Probable fatal error: No fonts found"
+ELA employs the Dejavu-seriff font, which is preinstalled on Windows OS, when exporting reports. However, this font is not preinstalled for some Linux distributions. An error occurs in these cases.
+In such cases, install the font manually based on the distribution. The command required is listed below:
+Case 1 : RHEL/CentOS
+Copy
+sudo yum install fontconfig dejavu-sans-fonts dejavu-serif-fonts
+Case 2 : Ubuntu/Debian
+Copy
+sudo apt install fonts-dejavu fontconfig
+Case 3 : SLES
+Copy
+sudo zypper install dejavu-fonts fontconfig
+Startup and Shut Down
+MySQL-related errors on Windows machines
+Probable cause:
+An instance of MySQL is already running on this machine.
+Solution:
+Shut down all instances of MySQL and then start the Log360 server.
+Probable cause:
+Port 33335 is not free
+Solution:
+Kill the other application running on port 33335. If you cannot free this port, then
+change the MySQL port
+used in Log360.
+Log360 displays "Port 8095 needed by Log360 is being used by another application. Please free the port and restart Log360" when trying to start the server
+Probable cause:
+The default web server port used by Log360 is not free.
+Solution:
+Kill the other application running on port 8095. Carry out the following steps.
+Stop the Log360 service
+Open
+wrapper.conf
+which is available under
+<Log360 Home>server/conf
+folder.
+Append the below line under
+# Java Additional Parameters
+section,
+wrapper.java.additional.21=-Djava.net.preferIPv4Stack=true
+Before adding
+:
+wrapper.java.additional.20=-Dorg.tanukisoftware.wrapper.WrapperManager.mbean=false
+After adding
+:
+wrapper.java.additional.20=-Dorg.tanukisoftware.wrapper.WrapperManager.mbean=false
+wrapper.java.additional.21=-Djava.net.preferIPv4Stack=true
+Start Log360 service
+If you cannot free this port, then
+change the web server port
+used in Log360.
+Log360 displays "Can't Bind to Port <Port Number>" when logging into the UI.
+Probable cause:
+The
+syslog listener port
+of Log360 is not free.
+Solution:
+Check for the process that is occupying the
+syslog listener port
+, using
+netstat -anp -pudp
+. And if possible, try to free up this port.
+If you have started the server in UNIX machines, please ensure that you start the server as a
+root
+user.
+or, configure Log360 to listen to a
+different syslog listener port
+and ensure that all your configured devices send their syslog to the newly configured syslog listener port of EventLog
+Analyzer
+Start up and shut down batch files not working on Distributed Edition when taking backup.
+Probable cause:
+Path names given incorrectly.
+Solution:
+Download the "
+Automated.zip
+" and extract the files "startELAservice.bat"and "stopELAservice.bat" to <ELA home>//bin/ folder.
+Create a Windows schedule as per your requirement and ensure that the path should be <ELA Home>//bin folder.
+If you would like to have the files to a different folder, you need to edit the downloaded files and give the absolute path as below: < eg. is the application is installed on e:\ >
+e:\ManageEngine\EventLog\bin\wrapper.exe -p ..\server\conf\wrapper.conf ---> to stop the Log360 service.
+e:\ManageEngine\EventLog\bin\wrapper.exe -t ..\server\conf\wrapper.conf ---> to start the Log360 service.
+Note
+The script will work only if the application is started as a service.
+Log360 displays "Couldn't start elasticsearch at port 9300".
+Probable cause:
+requiretty is not disabled
+Solution:
+To disable requiretty, please replace
+requiretty
+with
+!requiretty
+in the
+etc/sudoers
+file.
+Note
+Elasticsearch uses multiple thread pools for different types of operations. It is important for new threads to be created whenever necessary. Please make sure that the number of threads that an elasticsearch user can create is at least 4096 by setting ulimit -u 4096 as root before starting Elasticsearch or by adding
+elasticsearch - nproc 4096
+in /etc/security/limits.conf.
+Service pack
+How to upgrade your service pack if failure is due to lack of permission?
+Navigate to <PRODUCT_HOME>\bin and invoke StartDB.bat as administrator. If you see access denied error, Execute setAppPermission.bat and wait for its completion.
+Note
+Log360 directory permissions will be modified on executing the setAppPermission.bat as mentioned in this document
+here
+.
+Troubleshooting PPM backup and failure cases
+Note
+: Backup will be done only for the instances with PGSQL or MSSQL database. PPM backup feature is not available for MySQL database.
+If the database size exceeds 10GB, the auto-backup won't work and the user will be notified to backup manually before proceeding with the upgrade.
+For PGSQL database, backup will be done only if there is enough free space available in the Log360 installed drive. Incase of MSSQL database, the backed up data will be stored in the default backup folder configured for MSSQL. The availability of free space will be checked before backup operation and if enough space is not available, the user will be notified. Users can either clear-up enough space for auto-backup or they can proceed to back up manually.
+For PGSQL database, only two PPM backups will be maintained and older backups will be deleted upon rotation.
+For MSSQL database, backups won't be deleted automatically. Users will have to manually clear them.
+Incase of upgrade failure, the backups can be used to restore the last known working state of the instance. Please contact support for the restoration process.
+Configuration
+While adding device for monitoring, the 'Verify Login' action throws RPC server unavailable error
+The probable reason and the remedial action is:
+Probable cause:
+The device machine RPC (Remote Procedure Call) port is blocked by any other Firewall.
+Solution:
+Unblock the RPC ports in the Firewall.
+While adding device for monitoring, the 'Verify Login' action throws 'Access Denied' error.
+The probable reasons and the remedial actions are:
+Probable cause:
+The device machine is not reachable from Log360 machine.
+Solution:
+Check the network connectivity between device machine and Log360 machine, by using PING command.
+Probable cause:
+The device machine running a System Firewall and REMOTEADMIN service is disabled.
+Solution:
+Check whether System Firewall is running in the device. If System Firewall is running, execute the following command in the command prompt window of the device machine:
+netsh firewall set service type=REMOTEADMIN mode=ENABLE profile=all
+When WBEM test is carried out. it fails and shows error message with code 80041010 in Windows Server 2003.
+The probable reasons and the remedial actions are:
+Probable cause:
+By default, WMI component is not installed in Windows 2003 Server
+Solution:
+Win32_Product class is not installed by default on Windows Server 2003. To add the class, follow the procedure given below:
+In Add or Remove Programs, click
+Add/Remove Windows Components
+.
+In the Windows Components Wizard, select
+Management and Monitoring Tools
+, then click
+Details
+.
+In the Management and Monitoring Tools dialog box, select
+WMI Windows Installer Provider
+and then click
+OK
+.
+Click
+Next
+.
+How to enable Object Access logging in Linux OS?
+The probable reasons and the remedial actions are:
+Probable cause:
+The object access log is not enabled in Linux OS.
+Solution:
+Steps to enable object access in Linux OS, is given below:
+In the file
+/etc/xinted.d/wu-ftpd
+, edit the server arguments as mentioned below:
+server_args = -i -o -L
+What are commands to start and stop Syslog Deamon in Solaris 10?
+The probable reasons and the remedial actions are:
+Probable cause:
+Unable to start or stop Syslog Daemon in Solaris 10
+Solution:
+In Solaris 10, the commands to stop and start the syslogd daemon are:
+# svcadm disable svc:/system/system-log:default
+# svcadm enable svc:/system/system-log:default
+In Solaris 10, to restart the syslogd daemon and force it to reread
+/etc/syslog.conf
+:
+# svcadm refresh svc:/system/system-log:default
+(or)
+# svcadm -v restart svc:/system/system-log:default
+While configuring incident management, I am facing SSL Connection error.
+This error can occur if the ticketing tool server's HTTPS certificate is not included in Log360's JRE certificate store. To import the certificate to Log360's JRE certificate store, follow the steps below:
+Place the server's certificate in your browser's certificate store by allowing trust when your browser throws up the error saying that the certificate is not trusted.
+Export the certificate as a binary DER file from your browser.
+For Firefox, you can do this by following the steps below:
+Click the lock symbol next to the URL and click
+More Information
+.
+Select the Security tab, click
+View certificate
+, and click the
+Details
+tab.
+Select the certificate and click
+Export
+. Select a location in your local machine and save the certificate.
+For IE,
+Internet Options > Content > Certificates > Personal > Export
+For Chrome,
+Settings > Show Advanced Settings > Manage Certificates
+Use the keytool utility to import the certificate into Log360's JRE certificate store. The command should be executed from <Log360 Home>/jre/bin.
+Copy
+keytool -import -alias ticketingtool -keystore <Eventlog Analzyer Home>/jre/lib/security/cacerts -file path-to-certificate-file
+Enter the keystore password. Note that the default password is
+changeit
+.
+While configuring Log360 with JIRA On-Premise, the 'Test and Save' action throws Captcha Verification failed error.
+If you are facing problems while configuring Log360 with JIRA On-Premise even after entering the valid credentials, please follow the steps below:
+Go to the ticketing tool instance and try logging in to your account.
+Enter the valid credentials and complete the captcha verification.
+You can now try configuring Log360 with JIRA On-Premise again. The
+Test and Save
+action will complete successfully without any errors.
+Help link:
+https://developer.atlassian.com/cloud/jira/software/basic-auth-for-rest-apis/#captcha
+Steps to edit maximum attempts or disable captcha:
+Login to your JIRA On-Premise account.
+In the top right corner, select
+Administration
+and go to
+System > General Configuration > Edit Settings
+.
+Go to the
+Maximum Authentication Attempts Allowed
+field and enter the desired value. When you exceed this limit, you have to login to your JIRA On-Premise account with captcha verification again. Otherwise, you won't be able to configure Log360 with JIRA On-Premise even with valid credentials.
+If you leave this field blank, captcha will be disabled. You can attempt to integrate Log360 with JIRA On-Premise even after multiple authentication failures.
+File Integrity Monitoring (FIM) troubleshooting
+Try the following troubleshooting, if username is enabled for a particular folder.
+Note
+The following GUI is for the SACL entry in folder properties.
+Port management error codes
+The following are some of the common errors, its causes and
+the possible solution to resolve the condition. Feel free to contact our support team for any information.
+Port already used by some other application
+Cause
+: Cannot use the specified port because it is already used by some other application.
+Solution
+: This can be solved either by changing the port in the specified application or by using a new port.
+If you use a new port, make sure to change the ports in the forwarding device either manually or using auto log forwarding configuration.
+TLS not configured
+Cause
+: HTTPS not configured to support TLS encrypted logs.
+Solution
+: Configure the server to use either a self-signed certificate or a valid PFX certificate.
+For more details visit
+Connection settings.
+PFX not configured
+Cause
+: HTTPS is configured, but the type of certificate is not supported.
+Solution 1
+: If no valid certificate is used, it's recommended to use SelfSignedCertificate.
+To find the type of certificate used,
+Open Conf/Server.xml file check for connector tag.
+Check the extention for the attribute keystoreFile.
+Solution 2
+: If valid KeyStore certificate is used, execute the following command in the
+<Log360 home>/jre/bin
+terminal.
+keytool -importkeystore -srckeystore <certificate path> -destkeystore server.pfx -deststoretype PKCS12 -deststorepass <password> -srcalias tomcat -destalias tomcat
+For more details visit
+Connection settings.
+External error
+Cause
+: Unknown external issue.
+Solution
+: please contact
+Log360 Technical Support
+The event source file(s) configuration throws the "Unable to discover files" error.
+Possible remedial actions include:
+Check the credentials of the machine.
+Check the connectivity of the device.
+Ensure that the remote registry service is not disabled.
+The user should have admin privileges.
+The open keys and keys with sub-keys cannot be deleted.
+How to change PostgreSQL superuser password
+Execute the
+changeDBPassword.bat/sh
+file located in <Log360 Home>/bin.
+Windows:
+changeDBPassword.bat -U postgres -p <old_password> -P <new_password>
+Linux:
+changeDBPassword.sh -U postgres -p <old_password> -P <new_password>
+Handling duplicated Windows devices
+Problem statement:
+Some Windows devices appear duplicated due to a user interface issue identified as ELA 12260.
+Action taken:
+Local collector association:
+Duplicated devices with the oldest log collection timestamps will be deleted if they are linked to a local collector.
+Remote collector association with shorter last message time:
+Duplicated devices with the oldest log collection timestamps will be disabled if:
+They are linked to a remote collector.
+The difference between the current date and the last message time is less than the retention period.
+Remote collector association with longer last message time:
+Duplicated devices with the oldest log collection timestamps will be deleted if:
+They are associated with a remote collector.
+The difference between the current date and the last message time exceeds the retention period.
+Profile remapping:
+If any of the deleted or disabled devices were previously configured under the following profiles: Application, Import, Alert, Report, Log Collection Filter, Syslog Forwarder, Agent, they will be remapped to ensure continued functionality.
+Action required by the customer:
+Device reconfiguration:
+For configurations pertaining to device groups, log collection failure alerts, compliance and custom log parser, please reconfigure the respective device. The erroneous device may have been mistakenly configured due to the UI issue mentioned above.
+When forwarding audit logs, sometimes default policies in Red Hat systems with Security enhancement (SElinux) won't allow the audit logs to be read.
+Issue
+: When SELinux (Security Enhancement) is enabled, some default policies prevent audit logs from Red Hat Linux systems from being read during the forwarding process.
+Solution
+: The audit logs can be forwarded by adding "active=yes" in etc/audisp/plugins.d/syslog.conf or create the file in etc/audit/plugins.d/syslog.conf for CentOS/RHEL v8 and later with the below entries:
+Copy
+active = yes
+direction = out
+path = builtin_syslog
+type = builtin
+args = LOG_INFO
+format = string
+Note
+: This will forward the audit logs to the syslog service.
+Log Forwarding via Syslog Service
+should be enabled to receive the logs in Log360 server.
+How to add an organization-wide proxy certificate in Log360?
+Ensure that you have the proxy certificate file available before running the command.
+Use the keytool utility to import the proxy certificate into Log360's JRE certificate store. The command should be executed from <Log360 Home>/jre/bin.
+Copy
+keytool -import -alias ticketingtool -keystore <Log360 Home>/jre/lib/security/cacerts -file path-to-certificate-file
+Enter the
+keystore
+password. Note that the default password is
+changeit
+.
+Error statuses in File Integrity Monitoring (FIM).
+Permission denied
+Causes
+Credentials may be incorrect.
+Credentials with insufficient privileges.
+There might be a temp folder available with insufficient privileges for the user.
+The user does not have privileges for agent folder.
+Solutions
+Credentials can be checked by accessing the SSH terminal.
+Credentials with the privilege to start, stop, and restart the audit daemon, and also transfer files to the Linux device are necessary.
+Setting Privilege for temp if available.
+Copy
+setfacl -R -m u:<username>:rwx /opt/ManageEngine/temp
+Setting Privileges for the agent folder.
+Copy
+setfacl -R -m u:<username>:rwx /opt/ManageEngine/EventLogAnalyzer_Agent
+For CentOS/RHEL v8 and later/Ubuntu/openSUSE/Debian/Fedora:
+Copy
+setfacl -m u:<username>:w /etc/audit/plugins.d/elafim.conf
+For CentOS/RHEL v6 to v7.9:
+Copy
+setfacl -m u:<username>:w /etc/audisp/plugins.d/elafim.conf
+Audit service unavailable
+Cause
+The audit daemon service is not present in the selected Linux device.
+Solution
+The audit daemon package must be installed along with Audisp.
+Access restriction from SELinux
+Cause
+SELinux hinders the running of the audit process.
+Solutions
+SELinux's presence could be checked using
+getenforce
+command.
+Configure SELinux in permissive mode. After changing it to the permissive mode, navigate to
+Manage Agent
+page and click on
+Reinstall
+to reinstall the agent.
+Agent upgrade failure
+Causes
+No connectivity with the agent during product upgrade.
+Incorrect credentials.
+Solutions
+Manually install the agent by navigating to the
+Manage Agent
+page.
+To install agent:
+Windows device:
+Run the EventLogAgent.msi.
+Linux device:
+Execute
+chmod +x EventLogAgent.bin
+, then run EventLogAgent.bin.
+Agent Installation Failed
+Causes
+Machine may be in the offline mode.
+Machine may not exist.
+Network path may not be reachable.
+Solutions
+To confirm if the device exists, it could be pinged.
+Manually install the agent by navigating to the
+Manage Agent
+page.
+Agent Installation on Incompatible Platform
+Causes
+The agent is installed on a host which has neither a Linux nor a Windows OS.
+Solutions
+Supported Linux distributions are CentOS, Debian, Fedora, openSUSE, Red Hat, and Ubuntu.
+Windows versions greater than 5.2 (Windows Server 2003) are supported.
+ACL Package is not installed
+Cause:
+The acl package is not present in the selected Linux device.
+Solution:
+The acl package must be installed.
+Agent could not be connected using SSH
+Causes:
+Due to the missing SSH Algorithm.
+Insufficient privileges for the "/opt/ManageEngine"
+Solutions:
+Ensure that any of the SSH Algorithms are present in the "
+/etc/ssh/sshd_config
+"
+file
+.
+Setting privilege for the "
+/opt/ManageEngine
+"
+How to check if Immutable Rule is enabled in auditd?
+Execute the following command to verify that the immutable rule is enabled:
+Copy
+auditctl -s
+If "enabled 2" is present in the configuration, it indicates that the immutable rule is active. This setting will prevent the Linux agent from applying any newly configured audit rules to monitor the locations specified in Log360.
+Solution:
+Run the below command to locate the immutable rule (-e 2)
+Copy
+grep -rniw -e '-e' /etc/audit/
+and comment out or remove the configuration from the relevant file.
+Reboot the machine to apply the updated configuration.
+To confirm that the immutable rule is no longer active, run the below command and check that "enabled 1" is present in the configuration.
+Copy
+auditctl -s
+Log Receiver
+What should I do if the network capture driver is not available?
+Network capture drivers are files that allow Log360 to capture and process incoming network logs from various sources. These include files such as
+npf.sys, Packet.dll,
+and
+wpcap.dll
+. These files must be stored in the Windows System Directories to ensure they are accessible to any application that requires them.
+If the network capture driver is unavailable, you should move the files from the
+Log360
+installation directory to the Windows System Directories. To do so, follow the steps below.
+Steps to move network capture driver files to Windows system directories
+Navigate to <EventLogAnalyzer_Installation_Directory>\bin directory.
+Open command prompt with admin privileges and execute "register-driver.exe ..\lib\native".
+Check the output in the console to ensure that the files are copied successfully.
+In case of failure, proceed with the manual procedure, given below.
+Steps to copy network capture driver files manually
+Copy the npf.sys, wpcap.dll and Packet.dll files from <EventLogAnalyzer_Installation_Directory>\lib\native folder.
+Paste the files in the following folders:
+npf.sys to C:\Windows\system32\drivers\
+wpcap.dll, Packet.dll to C:\Windows\system32\
+Finally, open and refresh the Log Receiver window in Log360.
+Note
+: These steps are applicable only if Log360 is installed on Windows.
+Auto Log Forwarding
+Permission Denied
+Causes:
+Insufficient privileges for the rsyslog.conf or syslog.conf file.
+Solutions:
+Setting privilege for rsyslog.conf or syslog.conf
+file
+.
+Log Collection and Reporting
+I've added a device, but Log360 is not collecting event logs from it
+Probable cause:
+The device machine is not reachable from the Log360 server machine
+Solution:
+Check if the device machine responds to a ping command. If it does not, then the machine is not reachable. The device machine has to be reachable from the Log360 server in order to collect event logs.
+Probable cause:
+You do not have administrative rights on the device machine
+Solution:
+Edit the device's details, and enter the Administrator login credentials of the device machine. Click
+Verify Login
+to see if the login was successful.
+Error Code 0x251C
+Probable cause:
+The device was added when importing application logs associated with it. In this case, only the specified application logs are collected from the device, and the device type is listed as unknown.
+Solution:
+Click on the update icon next to the device name.
+Select the appropriate device type.
+Provide any other required information for the selected device type.
+Click on update.
+I get an Access Denied error for a device when I click on "Verify Login" but I have given the correct login credentials
+Probable cause:
+There may be other reasons for the Access Denied error.
+Solution:
+Refer the Cause and Solution for the Error Code you got during Verify login.
+Error Code 00x80070005, 5
+Scanning of the Windows workstation failed due to one of the following reasons:
+The login name and password provided for scanning is invalid in the workstation.
+Solution:
+Check if the login name and password are entered correctly.
+Remote DCOM option is disabled in the remote workstation
+Solution:
+Check if Remote DCOM is enabled in the remote workstation. If not enabled, then enable the same in the following way:
+Select
+Start > Run.
+Type dcomcnfg in the text box and click
+OK.
+Select the
+Default Properties
+tab.
+Select the
+Enable Distributed COM
+in this machine checkbox.
+Click
+OK.
+To enable DCOM on Windows XP devices:
+Select
+Start > Run
+Type dcomcnfg in the text box and click
+OK
+Click on
+Component Services > Computers > My Computer
+Right-click and select
+Properties
+Select the
+Default Properties
+tab
+Select the
+Enable Distributed COM in this machine
+checkbox
+Click
+OK
+User account is invalid in the target machine.
+Check if the user account is valid in the target machine by opening a command prompt and executing the following commands:
+Copy
+net use \<RemoteComputerName>C$ /u:<DomainNameUserName> "<password>"
+net use \<RemoteComputerName>ADMIN$ /u:<DomainNameUserName> "<password>"
+If these commands show any errors, the provided user account is not valid on the target machine.
+Error Code 0x80041003
+The user name provided for scanning does not have sufficient access privileges to perform the scanning operation. This user may not belong to the Administrator group for this device machine.
+Solution:
+Move the user to the Administrator Group of the workstation or scan the machine using an administrator (preferably a Domain Administrator) account.
+Error Code 0x800706ba
+A firewall is configured on the remote computer. Such exceptions mostly occur in Windows XP (SP 2), when the default Windows firewall is enabled.
+Solution:
+Disable the default Firewall in the Windows XP machine:
+Select
+Start > Run
+Type Firewall.cpl and click
+OK
+In the
+General
+tab, click
+Off
+Click
+OK
+If the firewall cannot be disabled, launch Remote Administration for administrators on the remote machine by executing the following command:
+Copy
+netsh firewall set service RemoteAdmin
+After scanning, you can disable Remote Administration using the following command:
+Copy
+netsh firewall set service RemoteAdmin disable
+Error Code 0x80040154
+WMI is not available in the remote windows workstation. This happens in Windows NT. Such error codes might also occur in higher versions of Windows if the WMI Components are not registered properly.
+Solution:
+Install WMI core in the remote workstation.
+WMI Components are not registered.
+Solution:
+Register the WMI DLL files by executing the following command in the command prompt: winmgmt /RegServer
+Error Code 0x80080005
+There is some internal execution failure in the WMI service (winmgmt.exe) running in the device machine. The last update of the WMI Repository in that workstation could have failed.
+Solution:
+Restart the WMI Service in the remote workstation:
+Select
+Start > Run
+Type Services.msc and click
+OK
+In the Services window that opens, select
+Windows Management Instrumentation
+service.
+Right-click and select
+Restart
+Error Code 1722, 1726, 1753, 1825
+Probable cause
+: The device machine RPC (Remote Procedure Call) port is blocked by another firewall.
+Solution
+: Unblock the RPC ports in the firewall.
+For any other error codes, refer the
+MSDN knowledge base
+.
+I have added an Custom alert profile and enabled it. But the alert is not generated in Log360 even though the event has occurred in the device machine
+Probable cause:
+The alert criteria have not been defined properly
+Solution:
+Please ensure that the required fields in the
+Add Alert Profile
+screen have been given properly.Check if the e-mail address provided is correct. Ensure that the
+Mail server
+has been configured correctly.
+When I create a Custom Report, I am not getting the report with the configured message in the Message Filter
+Probable cause:
+The message filters have not been defined properly
+Solution:
+When you are entering the string in the
+Message Filters
+for matching with the log message, ensure you copy/enter the exact string as shown in the Windows Event Viewer.
+e.g.,
+Logon Name:John
+MS SQL server for Log360 stopped
+Probable cause:
+The transaction logs of MS SQL could be full
+Solution:
+If the Log360 MS SQL database transaction logs are full, shrink the same with the procedure given below:
+Stop the
+Log360 Server/Service
+(Check the Log360 server machine's Task Manager to ensure that the processes '
+SysEvtCol.exe
+', '
+Java.exe
+' are not running).
+Connect MS SQL client (using
+Microsoft SQL Server Management Studio
+) and execute the below query:
+sp_dboption 'eventlog', 'trunc. log on chkpt.', 'true'
+To execute the query, select and highlight the above command and press
+F5
+key.
+After executing the above command, select and highlight the below command and press
+F5
+key to execute it.
+DBCC SHRINKDATABASE (eventlog)
+Note
+: This process will take some time, based on the Log360 database size.
+Start the
+Log360
+.
+I successfully configured Oracle device(s), still cannot view the data
+If Oracle device is Windows, open Event viewer in that machine and check for Oracle source logs under Application type. If Linux, check the appropriate log file to which you are writing Oracle logs. If the Oracle logs are available
+in the specified file, still Log360 is not collecting the logs, contact
+Log360 Support
+.
+The user name provided for scanning does not have sufficient access privileges to perform the scanning operation. Probably, this user does not belong to the Administrator group for this device machine
+The Syslog host is not added automatically to Log360/the Syslog reception has suddenly stopped
+Check Log360's live
+Syslog Viewer
+for incoming Syslog packets.
+If you are able to view the logs, it means that the packets are reaching the machine, but not to Log360. You need to check your Windows firewall or Linux IP tables.
+If you are not able to view the logs in the Syslog viewer, then check if the Log360 server is reachable. This can be done in the following ways:
+Ping the server.
+For TCP, you can try the command
+telnet <ela_server_name> <port_no>
+where 514 is the default TCP port.
+tcpdump
+Copy
+tcpdump -n dst <ela_server_name> and dst port <port_no>
+If reachable, it means there was some issue with the configuration. If not reachable, then you are facing a network issue.
+Log360 agent management
+If you have trouble installing the agent using the Log360 console, GPOs or software installation tools, you can try to install the agent manually. Here the the steps for
+manual agent installation
+.
+Agents are not reachable from the Log360 server
+If an agent is installed manually without credentials or if the agent credentials are updated incorrectly, it leads to the "Agent not reachable from server" status (see screenshot below).
+In such a state, the following actions performed on the agent will not reflect immediately.
+Force restart agent
+Stopping agent
+Updating device IP and credentials
+Adding, deleting, enabling or disabling Device/LogCollection Filter/FIM
+Updating FIM template
+Updating monitoring interval
+Note
+This icon does not hinder the log collection process, logs will be collected regardless of the presence of this icon.
+Furthermore, actions such as starting and uninstalling the agent must be manually executed, as they cannot be performed through the UI due to invalid credentials.
+If the cloud icon, indicating that the agent is unreachable from the server, is to be hidden or if real-time actions are required, please make sure to update the credentials accurately.
+Agent not communicating is displayed as the agent status
+"Agent not communicating" is the agent status that appears if there has been a prolonged time of no communication between the agent and the server.
+In such a state, the following actions should be performed:
+Ensure the Log360 server is accessible from the agent device.
+Verify if the latest server details are updated in the registry [Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\ZOHO Corp\EventLogAnalyzer\ServerInfo]
+Check if any antivirus or firewall is blocking the communication between the server and agent. If so, provide an exclusion for Log360 agent from AntiVirus.
+Ensure the Log360 Agent service is running, and start it if necessary.
+Note
+Contact support if the issue persists even after following the above steps.
+How to update ServerInfo in an Log360 agent after server migration?
+Steps to update ServerInfo in an Log360 agent after server migration
+Windows Agent
+Open
+Registry Editor
+and navigate to Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\ZOHO Corp\EventLogAnalyzer\
+Select
+ServerInfo
+and enter the new
+SeverIPAddress
+and
+ServerName
+in the corresponding fields.
+Finally, restart the Log360 agent to establish connection with the new server.
+Linux Agent
+Open the /opt/ManageEngine/EventLogAnalyzer_Agent/conf/serverDetails file.
+Update the new SERVER_NAME and SERVER_IPADDRESS in the corresponding fields.
+Finally, restart the Log360 agent to establish connection with the new server.
+Performance
+For troubleshooting, please follow the steps below:
+Check if other applications are blocking the CPU cycle for Log360.
+If a virtual machine is used, check for over provisioning or if snapshots are affecting the performance.
+If the log flow rate is high, please check our
+tuning guide
+.
+Unable to fetch data from Log360 during migration
+Ensure that sufficient CPU and memory resources are available on the machine.
+Verify that the system meets the recommended hardware requirements. Refer to
+this
+page for detailed resource specifications and sizing guidelines.
+Retry the migration process after ensuring adequate system capacity.
+Error messages while adding STIX/TAXII servers to Log360
+While I was trying to add a STIX/TAXII server to Log360, I got the following error messages. What do they mean?
+This feature has been disabled for Online Demo!
+This error message pops up when the feature you tried to use is not available in the online demo version of Log360. To try out that feature, download the free version of Log360.
+Connection failed. Please try configuring proxy server.
+This error message can be caused because of different reasons. It might be due to network issues, proxy related issues, bad requests in the network, or if the URL is unable to locate a STIX/TAXII server.
+Failed to connect to the URL.
+This error message denotes that the URL entered is malformed.
+Authorization failed.
+This error message signifies that the credentials entered are wrong.
+SSL Troubleshooting steps
+Certificate name mismatch
+Description:
+This error occurs when the common name of the SSL Certificate doesn't exactly match the hostname of the server in which the Log360 is installed.
+Solution:
+Please get a new SSL certificate for the current hostname of the server in which Log360 is installed.
+Invalid Certificate
+Description:
+This error occurs when the SSL certificate you have configured with Log360 is invalid. A certificate can become invalid if it has expired or other reasons.
+Solution:
+Please configure EvnetLog analyzer to use a valid SSL certificate.
+Certificate is not trusted by JVM
+Description:
+This exception occurs when you configure a SMTP mail server or a web server with SSL in Log360, and the server uses a self-signed certificate. The Java Runtime Environment used in Log360 will not trust self-signed certificates unless it is explicitly imported.
+Solution:
+You need to import the self-signed certificates used by the server in the JRE package used by Log360. Follow the steps given below:
+Step 1: Download the certificate
+For SMTP servers:
+Note
+To download the certificate used by SMTP server, you must have OpenSSL installed. You can download it from here.
+Open the command prompt and change to the bin folder in the OpenSSL installed location.
+Now run the following command,
+Copy
+openssl.exe s_client -connect SMTPServer: Portno -starttls smtp > certificatename.cer
+For example, openssl.exe s_client -connect smtp.gmail.com:587 -starttls smtp > gmailcert.cer
+For Web Servers:
+Open the web URL in a browser.
+Click the padlock icon on the address bar.
+Click More Information. This opens the Certificate Viewer window showing the certificate used by that web server.
+Click View Certificate.
+When the Certificate window showing Certificate Information Authority opens, click the Details tab.
+Click Copy to File.
+In the Certificate Export Wizard that opens, click Next.
+Select the format as DRE encoded binary X.509 (.CER) and click Next.
+Enter the path where you wish to save the file and click Finish.
+Step 2: Import the certificates in JRE package of Log360.
+Open a command prompt and change to the \jre\bin folder. For example: C:\ManageEngine\EventLogAnalyzer\jre\bin.
+Run the following command,
+Copy
+Keytool -importcert -alias myprivateroot -keystore ..\lib\security\cacerts -file
+For example: Keytool -importcert -alias myprivateroot -keystore ..\lib\security\cacerts -file C:\smtpcert.cer
+Enter changeit when prompted for a password.
+Enter y when prompted Yes or No.
+Close the command prompt and restart Log360.
+Threat Intelligence Troubleshooting Tips
+IP Geolocation data store corruption
+This may happen when the product is shutdowns while the data store is updating and there is no backup available.
+Troubleshooting steps:
+This is a rare scenario and it happens only when the product shuts down abruptly during the first ever download of IP geolocation data.
+There is no need for a troubleshoot as Log360 will automatically download the data in the next schedule. Please note that the IP geolocation data gets automatically updated daily at 21:00 hours.
+IP Geolocation data update failure
+This occurs when there is no internet connection on Log360 server or if the server is unreachable.
+Troubleshooting steps:
+Make sure you have a working internet connection.
+Whitelist the following in your firewall:
+https://creator.zoho.com/
+https://creatorapp.zohopublic.com/
+Log360 Cloud threat feed server is unavailable
+This may happen when the product is unable to connect to the Log360 Cloud feeds server.
+Case 1: Access is Blocked under firewall
+Probable cause
+: The access to Log360 Cloud feeds server may be blocked under the firewall.
+Solution
+:
+Review the firewall settings and look for any rules that might block the access.
+If you find any blocking rules, create a new rule that allows the traffic to the Log360Cloud feeds server.
+Save the new rule and update the firewall with the new settings.
+Case 2: Unable to resolve DNS
+Probable cause
+: The machine could not resolve the domain using its DNS resolver.
+Solution
+:
+Check the DNS settings on the machine on which the product is running. Ensure that the DNS server settings are correct and that the machine is able to communicate with the DNS server.
+Try to resolve the domain name using a command line tool such as
+nslookup
+or
+dig
+to confirm that the DNS resolution is failing.
+Check if there are any firewalls or security settings that may be blocking DNS traffic.
+If using a proxy server resolves the DNS of the host involved, configure the proxy server in the product connection settings.
+If none of the above works and the issue persists, contact our
+Technical Support team
+.
+License file not found
+If the license file cannot be accessed in the following page
+https://licensing.manageengine.com
+, kindly contact
+eventlog-support@manageengine.com
+Update Access Key(Log360 Cloud Threat Analytics)
+This can happen if the access key gets invalidated.
+To regenerate the access key, please follow the below steps:
+Login to https://log360feeds.manageengine.com/
+Click on Regenerate Key.
+In the product, go to Settings > Admin Settings > Threat Feeds > Advanced Threat Analytics > Log360 Cloud Threat Analytics and add the new key.
+VirusTotal API Quota Limit Exceeded
+This happens when you exceed one of your quotas (per minute, per day or per month). Daily quotas are reset every day at 00:00 UTC.
+Troubleshooting steps:
+Sign in into
+VirusTotal
+Account.
+Find your API quota under Profile â API Key â API Consumption for last 30 days (Check API limit for the day)
+Internal Server Error
+There may be various reasons for receiving this error.
+The request has been submitted to VirusTotal and there are server-side internal issues.
+The request has been submitted to Log360 Cloud Threat Analytics, and there are server-side internal issues.
+Customers are advised to retry in a while, and if the same error is encountered, kindly contact "
+eventlog-support@manageengine.com
+"
+Default Threat Sync Failure
+This occurs when Log360 server faces network connectivity issues.
+Troubleshooting steps:
+Make sure you have a working internet connection.
+Whitelist the following in your firewall:
+https://creator.zoho.com/
+https://creatorapp.zohopublic.com/
+Time zone
+What to do if Daylight Savings Time(DST) is practiced in your region, but the product is not DST updated?
+This occurs, when the JRE present in the product is not updated of the changes.
+Download Java SE TZUpdater from the official Oracle site. link "
+https://www.oracle.com/java/technologies/javase-tzupdater-downloads.html
+"
+Take back up of <Log360_HOME>\jre
+After downloading, extract and copy the file tzupdater.jar to <Log360 HOME>\jre\bin
+Stop Log360 Service.
+Open Command Prompt as Administrator, navigate to <Log360 HOME>\jre\bin.
+Execute the following command
+"java -jar tzupdater.jar -l <please select the latest time zone updater link from
+https://data.iana.org/time-zones/releases/
+>"
+For example
+Copy
+java -jar tzupdater.jar -l
+https://data.iana.org/time-zones/releases/tzdata2023c.tar.gz
+Note
+Incase customer environment is restricted from Online access follow 6.1 and 6.2.
+6.1: please select the latest time zone updater link from
+https://data.iana.org/time-zones/releases/
+and download the latest timezone zip in tar.gz format.
+6.2 Execute the following command "java -jar tzupdater.jar -l file:downloaded_timezone_data_zip.tar.gz"
+For example
+Copy
+java -jar tzupdater.jar -l file:"C:/ManageEngine/EventLog/jre/tzdata2023c.tar.gz"
+Start Log360 Service
+Search Engine - Elasticsearch
+Data path not accessible
+What is Elasticsearch data path?
+Elasticsearch writes the data you index to indices, and data streams to a data directory which is available in
+elasticsearch.yml
+. Search and indexing will not work if the data path is not accessible.
+If the data path is not accessible to write, the following notification will be shown.
+Troubleshooting steps
+Open
+elasticsearch.yml
+file,search for
+path.data
+and find its value.
+elasticsearch.yml
+file can be found in
+<Installation Dir>/Log360/ES/config/elasticsearch.yml
+Make sure that both read and write permissions are enabled for the service account running Log360.
+If the path is a network location, then ensure connectivity and that the network path is accessible from the machine running Log360. Verify that there are no latency issues between the server and remote data path.
+If there is a need to change the data path of Elasticsearch, kindly follow this
+guide
+.
+Device Auto Allocation
+Failed to disable Auto Allocation.
+Issue Description:
+Failed to disable Auto Allocation.
+Possible Causes:
+Unable to update the database values due to environment issues.
+Resolution:
+Try again after sometime.
+Failed to enable Auto Allocation.
+Issue Description:
+Failed to enable Auto Allocation.
+Possible Causes:
+Unable to update the database values due to environment issues.
+Resolution:
+Try again after sometime.
+Failed to enable Auto Allocation Policies.
+Issue Description:
+Failed to enable Auto Allocation Policies.
+Possible Causes:
+Unable to update the database values due to environment issues.
+Resolution:
+Try again after sometime.
+Failed to disable Auto Allocation Policies.
+Issue Description:
+Failed to disable Auto Allocation Policies.
+Possible Causes:
+Unable to update the database values due to environment issues.
+Resolution:
+Try again after sometime.
+Failed to update Auto Allocation Policy.
+Issue Description:
+Failed to update Auto Allocation Policy.
+Possible Causes:
+Unable to update the database values due to environment issues.
+Resolution:
+Try again after sometime.
+Failed to update sync settings.
+Issue Description:
+Failed to update Auto Allocation Policy.
+Possible Causes:
+Unable to update the database values due to environment issues.
+Unable to communicate with ADAudit Plus.
+ADAudit Plus server may down.
+Resolution:
+Check ADAudit Plus Server status and Communication. If those are correct, Try again after sometime it may be an environment issue.
+Log360 Integration
+Server is down. Make sure the component's server is up and running.
+This error occurs when the component you are trying to integrate is not running. Ensure that the component you are trying to integrate with Log360 is installed and running. If not, navigate to Start â All Programs â Click XYZ â Click Start XYZ, where XYZ represents the component's name.
+Incompatible component. Please check whether the component's version is compatible with Log360.
+This error occurs when the version of the component you are trying to integrate is either lower or higher than the version supported by your Log360 instance. Update either the component or Log360 to a compatible or latest version.
+Super Admin credentials are required for components installed on a remote host.
+When you try to integrate a component installed on a remote host, you must provide the Super Admin credentials of the installed component. Please enter the Super Admin credentials to proceed with the integration.
+Incorrect Server Details
+The server details you have entered either belongs to a different component or are invalid. Ensure that the values entered belongs to the selected component and try again.
+Please try after updating the component settings in Log360.
+To resolve this issue, follow the steps listed below: Navigate to
+Settings --> Log360 Integration.
+You will see two tabs, each representing a Log360 component.
+Click on the component that needs to be fixed.
+Enter the Server Name or IP address and port number of the server where the component is running.
+Select the connection protocol from the drop-down menu.
+Click
+Update Settings
+.
+Communication Failure
+Ensure that the product has a valid SSL certificate and that SSL 3.0 is disabled. If the issue persists, contact
+log360-support@manageengine.com
+.
+Communication failure. Please verify the port and protocol.
+To resolve this issue:
+Ensure that the component you are trying to integrate is up and running.
+Ensure that the firewall is not blocking the required port.
+Ensure that you have selected the correct protocol for the component.
+If the issue persists, contact
+log360-support@manageengine.com
+.
+Invalid Component Details
+This error occurs when multiple instances of the same component are installed in your environment, and you try to integrate a second instance with Log360.
+To integrate the second component, follow the steps listed below:
+Navigate to
+Settings --> Log360 Integration
+.
+Select the component you want to integrate with Log360.
+To add the new component, remove the existing one by clicking on
+Remove
+, then click
+OK
+.
+Enter the Server Name or IP address and port number of the new component.
+Click
+Integrate Now
+.
+Invalid Server URL
+Check the server URL that you have entered.
+Enter the Server Name or IP address and port number of the server where the component is running.
+Select the connection protocol from the drop-down menu.
+Click
+Integrate Now.
+MSSP Edition
+Customer management in MSSP edition
+Failed to connect to the component. Please verify the server name, port, and protocol.
+Make sure the server IP, port and protocol are valid and reachable from Log360 MSSP and vice versa.
+The default admin password for this customer has not changed.
+Make sure the default admin password of the customer is changed before integration.
+The default admin password should not be used for integration. Please change the password and try again.
+Make sure the default admin password of the customer is changed before integration.
+This customer already exists. Please enter a unique name.
+When a duplicate customer name is used, it throws this error.
+The provided server details are currently mapped to another customer. Please update the server information for the corresponding customer.
+When duplicate build details are entered, it throws this error.
+Version mismatch: The customer server is using a version that is newer than the one supported by the MSSP console.
+When customer build version is higher than the MSSP build version.
+Version mismatch: The customer server is using an older version. Please upgrade it to ensure compatibility with the MSSP console.
+When customer build version is lower than the MSSP build version.
+Customer integration is not supported if the customer has any Log360 components integrated in their setup.
+When any child component is integrated with Log360, this error is thrown. Remove all components to integrate Log360 with Log360 MSSP
+Component is down. Make sure the component is up and running.
+If the customer instance is unreachable, it throws this error.
+Invalid Component Details
+Make sure the server IP, port and protocol are correct.
+The server details you entered do not match with this component.
+Ensure that Log360 product is used for integration.
+Details of primary processor should be used for integration.
+If a processor is integrated, enter the details of Primary Processor.
+The server details you entered do not match with this component.
+Ensure that Log360 product is used for integration.
+Details of primary processor should be used for integration.
+If a processor is integrated, enter the details of Primary Processor.
+License management in MSSP edition
+Unable to reach customer
+If the customer instance is unreachable, it throws this error.
+Unable to allocate or update the resource. Resource limit has been exceeded.
+If the selected number of components is higher than the available count.
+MSSP license required instead of standalone license.
+MSSP license should be used.
+Reverse proxy in MSSP edition
+Port (port number) is already in use
+This happens when the specified port is already in use. To avoid this error, ensure that the given port is available.
+ELA to Log360 Conversion in MSSP edition
+MSSP conversion is supported only for the Log360 product.
+Start the EventLog Analyzer product.
+Log in as an Admin user.
+Select
+Upgrade to Log360
+from the top-right corner and follow the on-screen instructions.
+After a successful upgrade, convert the Log360 instance to MSSP by following the steps in
+MSSP installation and setup
+.

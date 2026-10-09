@@ -1,0 +1,137 @@
+In this page
+Overview
+Interaction modes in Ask Zia
+Built-in agents
+Use cases
+Prerequisites
+How it works?
+Overview
+Ask Zia
+is a conversational interface in Log360 Cloud that enables security teams to ask questions in natural language about
+logs
+,
+alerts
+, and
+search
+activity. It is available within
+Ask Zia
+and comprises multiple AI-powered agents, each designed to handle specific functional areas such as
+log search
+,
+alert management
+, and
+technician operations.
+Zia interprets user input, converts it into a query, executes it against the relevant data, and returns the results. These agents interpret user instructions and execute the required tasks.
+Instead of manually navigating across multiple interfaces or constructing complex queries, users can interact with
+Ask Zia
+to retrieve logs, access alert details, and obtain technician audit information.
+Log360 Cloud includes a set of prebuilt agents that are ready for immediate use. In addition, administrators can create and deploy custom agents using Zoho Agent Studio to support organization-specific workflows and requirements.
+Interaction modes in Ask Zia
+Ask Zia provides two modes of interaction within the chat interface:
+Ask Zia
+and
+Zia Agents
+.
+Ask Zia
+Ask Zia is the default conversational assistant. It is designed to handle general queries across logs, alerts, and other data.
+Interprets natural language queries
+Automatically determines the required action
+Suitable for exploratory searches and quick insights
+Zia Agents
+Zia Agents are specialized assistants designed to perform specific tasks within the product.
+Each agent handles a defined function, such as log search, alert management, or technician audit.
+Executes actions based on predefined instructions and configured tools.
+Includes prebuilt agents and custom agents created using Zoho Agent Studio.
+When to use
+Use Ask Zia for general queries or when the required action is not clearly defined.
+Use Zia Agents when performing specific tasks using a dedicated agent.
+Built-in agents
+The following agents are included in Log360 Cloud and are available to enable from the
+Zia Agents
+page. No additional configuration is required to use them. Enable an agent and it will appear in
+Ask Zia
+for the users you assign it to.
+Agent
+What it does
+User Activity Review Agent
+Compiles a comprehensive record of any user's logon, authentication, and access activity over a specified period for audits and investigation.
+Alert Correlation Agent
+Correlates alerts over time by linking shared entities such as users and hosts to reconstruct a probable attack chain, enriched with MITRE ATT&CK stage mapping and confidence indicators.
+Use cases
+The following examples show specific tasks you can complete using Zia Agents, along with the exact type of query you would use.
+1) Investigating a suspicious login
+When an alert indicates unusual logon activity, you can investigate the event with Ask Zia:
+Retrieve raw logs:
+"Fetch all logs containing eventid 4624 from host Server2k19"
+List related alerts:
+"List alerts containing user jsmith that occurred today"
+Check associated alert profiles:
+"List all alert profiles containing user jsmith"
+Log search and alert retrieval are handled within the same
+Ask Zia
+session, allowing you to complete the investigation without navigating away from the interface.
+2) Searching logs for a specific event type
+To find specific log events without constructing a structured query, you can interact directly with the Search Assistant:
+"Fetch all logs containing Windows logon type"
+"Fetch logs containing eventid 4625 from host DC-Primary"
+The agent translates your request into a structured query and returns the relevant results directly in the chat.
+3) Reviewing alert profiles for a specific entity
+Before creating a new alert profile, you may want to review existing profiles associated with a specific user or host:
+"List all available alert profiles containing user john.doe"
+"List alerts containing host Server2k19 from the past 7 days"
+The agent retrieves the relevant profiles and alerts. You can continue the conversation to explore related entities or refine your results.
+4) Retrieving technician audit logs
+To review recent actions performed by a technician, you can query directly instead of navigating to audit reports:
+"Get me technician audit logs"
+The
+Technician Manager
+retrieves the relevant audit records and displays them within the chat interface.
+Prerequisites
+Before managing or using Zia Agents in Log360 Cloud, ensure the following requirements are met:
+Ask Zia must be enabled -
+Zia Agents are part of Ask Zia. If Ask Zia is disabled, the Zia Agents page will display a warning and all agent controls will remain inactive.
+Administrator role - Ask Zia
+, the default assistant, is available to
+Administrators
+,
+Operators
+, and
+Guests
+when enabled. However,
+Zia configuration settings
+are accessible only to
+Administrators
+.
+Custom Zia Agents
+created through
+Zoho Agent Studio
+are managed from the
+Zia Agents
+page by
+Administrators
+. Operators can interact with the agents assigned to them within the chat interface, but they do not have access to the
+Zia Agents
+settings page.
+Note
+Ask Zia can be enabled to interact with agents without an AI provider configured in Log360 Cloud. However, the ability to query Logs, Alerts and Technician Audit data via the Ask Zia function requires an AI provider to be configured.
+How it works?
+When a user submits a query to a Zia Agent through Ask Zia, the agent processes the request in three stages before returning a response or executing an action.
+1) Query interpretation
+If no agent is selected
+(Ask Zia mode),
+the system interprets the query and determines the appropriate action automatically.
+If a specific agent is selected
+(Zia Agents mode)
+, the query is processed based on the agent's defined role and instructions that defines how requests are interpreted and what actions are permitted.
+If an AI provider is configured, the query is interpreted using the configured AI model. If AI is not configured, only supported agent-based actions are executed.
+If a query falls outside the supported scope, a message is returned indicating the limitation, and the user can refine the query or select a different agent.
+2) Data retrieval
+To generate a response, the request retrieves data using:
+Tools
+: APIs that enable data retrieval or actions, such as fetching logs, retrieving alert details, or accessing audit records
+For prebuilt agents, these tools are preconfigured and integrated with Log360 Cloud. For custom agents, tools are defined in Zoho Agent Studio.
+3) Response/ Action
+The agent returns a structured response, executes the requested action, or both. Each response is labeled with the agent's name, ensuring clarity when multiple agents are in use within a session. In certain cases, an agent may request additional input before completing an action. For example, a log search agent may ask the user to specify a log type when a device has more than one available.
+Read also
+This page explains the capabilities and working of Ask Zia in Log360 Cloud. To learn more about related configurations and usage, refer to:
+Using Ask Zia

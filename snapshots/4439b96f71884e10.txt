@@ -1,0 +1,63 @@
+New features
+Re-engineered detection architecture
+Centralized detection console:
+Manage detection rules across MITRE, UEBA, correlation, and threat intelligence engines from a single unified interface.
+Security analytics dashboard:
+Monitor rule coverage, alert trends, detection health, and top threats in one place.
+Multi-mode rule creation:
+Build standard, anomaly, and advanced rules to cover a wide range of security scenarios.
+Object-level filtering:
+Scope detection rules by users, groups, and OUs to cut down false positives and alert fatigue.
+Tuning insights:
+Optimize rule performance through insights into hit frequencies, alert volumes, and suppression opportunities.
+Cloud-delivered content:
+2,000+ prebuilt rules mapped to MITRE ATT&CKÂ®, anomaly detections, correlation logic, and threat intelligence use cases.
+Correlation engine:
+Perform complex, flexible aggregated queries for sophisticated attack pattern detection.
+Microsoft 365 support
+New log source:
+Collect logs from Microsoft 365 environments natively.
+Predefined reports:
+200+ built-in reports for Entra ID, Exchange Online, Sharepoint, OneDrive, and Teams.
+Security rules:
+51 pre-defined Microsoft 365 detection rules.
+Object filter support:
+Apply identity-based filters to predefined rules to reduce noise.
+Scalable architecture
+The solution will now support multi-tier or n-tier architecture where the log processors will handle specific capabilities of product easing the scalability and improving performance metrics.
+Horizontal scaling:
+Add log processor nodes to handle increased workloads with improved resilience and performance.
+High availability:
+Prevent single points of failure with role-based distribution across correlation, search, and alerting engines.
+Secure collection:
+Supports agent-based syslog collection with https encryption for secure data transfer.
+Playbook recommendations
+Intelligent playbook suggestions based on event type and past executions.
+Enhancements
+Rule
+notifications
+:
+Configure alert profiles to send notifications to all admins or specific recipients.
+RSA SecurID REST API support:
+Adds rest api-based integration for RSA SecureID (recommended over sdk-based integration).
+Reverse proxy enhancement:
+Now enabled only when at least one component is integrated.
+Faster alert processing:
+Optimized the alert engineâs criteria-matching logic to handle high log volumes more efficiently.
+LDAP SSL:
+Included as a part of the solution's security hardening score calculation.
+Login page customization:
+Option to hide the âforgot passwordâ link.
+Product notifications:
+Alerts for the solution's startup, AMS expiry, and version upgrades.
+SSL settings:
+New dedicated tab in connection settings for easier configuration.
+Compliance reports:
+Added support for NIS2 and FADP compliance frameworks.
+UI changes
+Integration settings:
+Reorganized under a dedicated advanced configuration tab for easier navigation.
+Session activity reports:
+Now integrated within the reports module for unified reporting.
+Browser title & Favicon rebranding:
+Customize product appearance to match your organization.

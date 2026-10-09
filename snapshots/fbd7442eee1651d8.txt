@@ -1,0 +1,36 @@
+In this page
+Overview
+Available Reports
+Overview
+View Trend Micro reports that provide insights into security events, user activity, policy changes, logon attempts, and threat detection across malware, firewall, intrusion prevention, and application control.
+Available Reports
+Report group name
+Report name
+Trend Micro Events
+All Events
+Important Events
+Logon Reports
+Logons
+Failed Logons
+Policy Management Report
+Policy Added
+Policy Deleted
+Policy Modified
+User Account Management
+Users Added
+Users Deleted
+Users Modified
+Security Reports
+Anti-Malware Event
+Web Reputation Event
+Application Control Event
+Integrity Monitoring Event
+Firewall Event
+Intrusion Prevention Event
+Log Inspection Event
+Read also
+This page outlined the Trend Micro reports supported by the product for monitoring security events, user activity, and policy changes. Explore other related report sections to gain deeper visibility into threat detection and analytics.
+VMware ESXi reports
+Hyper-V reports
+File Monitoring reports
+EMC server reports

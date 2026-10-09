@@ -1,0 +1,78 @@
+Print Server auditing involves the systematic monitoring and logging of print-related activities within an organization. By meticulously tracking print jobs, user activity, and device interactions, organizations gain invaluable insights into potential vulnerabilities and threats. This proactive approach empowers businesses to safeguard sensitive information, detect unauthorized access, and ensure compliance with industry regulations.
+Prerequisites
+Ensure that Microsoft-Windows-PrintService/Admin and Microsoft-Windows-PrintService/Operational are configured on the device selected to be configured as a print server.
+Ensure that the
+Microsoft-Windows-PrintService/Admin
+and
+Microsoft-Windows-PrintService/Operational
+event source files are configured and enabled in
+Event Viewer
+under
+Applications and Service Logs > Microsoft > Windows > PrintService
+on the print server device.
+Ensure the following audit policy is configured to capture document names in the logs:
+Computer Configuration â Administrative Templates â Printers â Allow job name in event logs
+Alternatively, you can make the following registry edit:
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows NT\Printers]
+"ShowJobTitleInEventLogs" = dword:00000001
+Configuring Print Server
+Go to the
+Settings
+tab and select
+Log Source Configuration > Applications > Print Server > Add Print Server
+under the
+Configuration
+section
+Choose the desired print server and enter the credentials or use the default credentials.
+Note
+Default credentials refer to either domain credentials or device-specific credentials. Ensure that credentials are available before proceeding.
+Select the appropriate agent for the print server.
+Click
+Select Printer(s)
+to display the printers associated with the server.
+Note
+When printers are fetched but not configured, previously fetched printer details will be retained for one day. To update details, click
+Refresh
+to fetch the latest printer information.
+Pick the printers from the list for log collection and click
+Add
+to complete the configuration.
+Click
+Associated Printers
+to view and manage the printers linked to the selected print server for log collection using enable/disable actions.
+Note
+It is not possible to disable all printers. Ensure that at least one printer remains enabled to maintain active monitoring and log collection functionality.
+Troubleshooting
+Printer details are not listed during configuration
+Credentials Verification
+Error message: Unable to fetch printers from the selected server: <server name>
+1. Reason: No Credentials Available
+Cause
+:
+There are no credentials available for the selected server or its associated domain.
+Solution
+:
+If default credentials are selected on the Print Server Configuration page, ensure that the device or domain is configured with valid credentials. Alternatively, you can manually enter the credentials on the Print Server Configuration page.
+2. Reason: Invalid Credentials
+Cause
+:
+The credentials provided are invalid. They may have been entered manually on the Print Server Configuration page or may be linked to the associated device or domain.
+Solution
+:
+Ensure that the correct credentials are entered on the Print Server Configuration page. If necessary, update the device credentials under Settings â Log Source Configurations â Device, or update the domain credentials under Settings â Admin â Account Settings â Configure Domains.
+3. Reason: Device Not Reachable
+Cause
+:
+The selected server cannot be reached using the chosen agent.
+Solution:
+Ensure that the selected agent and server are in the same domain. Use the ping command to verify the serverâs reachability and confirm that the internet connection is active.
+4. Reason: Document names are not logged in Event Viewer due to disabled audit policy
+Cause
+:
+This issue is due to a misconfiguration in the audit policy.
+Solution:
+To capture the document name in the event log, you must enable the audit policy at:
+Computer Configuration â Administrative Templates â Printers â Allow job name in event logs
+Alternatively, you can make the following registry edit:
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows NT\Printers]
+"ShowJobTitleInEventLogs" = dword:00000001

@@ -1,0 +1,345 @@
+In this page
+Overview
+Custom Create a Playbook
+Reset Playbook
+List of Playbook blocks
+Overview
+This document guides you through the steps to build custom playbooks using predefined logic blocks. These workflows automate security responses, ranging from system actions to AD user operations, helping you mitigate incidents more efficiently.
+Creating a custom playbook
+Steps to create a playbook
+In the product console, navigate to the
+Alerts
+tab. Click on the
+More tools
+icon present at the top-right corner of the page as highlighted in the below image.
+Image 1: More tools icon in the Alerts tab
+Click on
+Playbook
+to open the
+Manage Playbook
+page.
+Click on the
++Create Playbook
+button.
+Image 2: Create Playbook button via the Alerts tab
+Enter a name for the playbook in the
+Playbook Name
+field.
+Image 3: Playbook name field during playbook creation
+Click on
+Description
+(optional) beside the
+Playbook Name
+field to enter an appropriate description for the playbook. Click on
+OK
+.
+On the left pane, there are components provided for different event categories. Click on the respective drop-down icons in order to expand the actions. Create a playbook by dragging and dropping the playbook blocks from the left pane into the space provided. Ensure that these blocks are logically arranged to execute an event in your infrastructure.
+Image 4: Playbook blocks arrangement during playbook creation
+The moment you finish the drag and drop action, an
+Edit
+pop-up appears with fields to configure that specific playbook block further. The fields to edit the playbook blocks vary from one block to another. After editing as per your requirements, click on
+OK
+. You can always come back and edit these blocks by clicking on the edit icon
+visible on the blocks in the drag and drop area.
+Image 5: Playbook blocks details during playbook creation
+You can include multiple blocks in one playbook. Once you are done with the workflow design of your playbook, click on
+Save
+.
+Image 6: Save a playbook after playbook creation
+The playbook is saved instantly, and you will be taken back to the
+Manage Playbook
+tab with your newly created playbook listed under the playbooks list.
+Reset playbook
+In case you wish to reset the configurations set in the playbook creation up until now, click on the
+Clear Playbook
+button as highlighted in the below image.
+Image 7: Clear playbook option during playbook creation
+A
+Confirm Action
+pop-up appears. Click on
+Continue
+.
+All the configurations set in the playbook until then are cleared instantly, and you can see that the workspace becomes empty again.
+List of playbook blocks
+The product contains multiple playbook blocks to help you configure the playbooks to perform the required actions. The logic blocks are categorized under different sections.
+The list of playbook blocks and the details to be specified while configuring playbooks using them are given below:
+Component
+Logic blocks
+Details to be specified
+Logic Actions
+Decision
+Allows you to branch the playbook based on the status of the previous action.
+Optional description
+Time Delay
+Allows you to introduce a time delay in the execution of the playbook.
+The time delay in seconds.
+Network actions
+Ping Device
+Allows you to ping a device within your network to check connectivity
+The name of the device to be pinged.
+Number of echo request messages to be sent.
+Size of the packet to be sent.
+Timeout for the action.
+Number of action retries within the specified time.
+Trace Route
+Allows you to run a trace route function to a device in your network to identify the path.
+The name of the device you wish to trace the route to.
+The maximum number of Hops.
+Timeout for the action.
+Process actions
+Test Process
+Allows you to test whether a process is running on a device.
+The name of the device on which you want to test the process.
+The process you want to test.
+ExecutablePath and CommandLine to execute the process.
+Start Process
+Allows you to start a process on a device
+The name of the device on which you want to start a process.
+The process working directory.
+The command to start the process.
+Stop Process
+Allows you to stop a process on a device.
+The name of the device on which you want to stop the process.
+The process you want to stop.
+ExecutablePath and CommandLine to execute the process.
+Service actions
+Test Service
+Allows you to test whether a service is running on a device.
+The name of the device on which you want to test the service.
+The service you want to test
+Start Service
+Allows you to start a service on a device.
+The name of the device on which you wish to start a service.
+The service to be started.
+Stop Service
+Allows you to stop a service on a device.
+The name of the device on which you wish to stop a service.
+The service to be stopped
+Windows actions
+Log Off
+Allows you to log off from the currently active session on a device.
+The name of the device you want to log off from.
+Select whether you'd like to force this action.
+Shut Down System
+Allows you to shut down a Windows device.
+The name of the device to be shut down.
+Select whether you'd like to force this action.
+Restart System
+Allows you to restart a Windows device.
+The name of the device to be restarted.
+Select whether you'd like to force this action.
+Execute Windows Script
+Allows you to execute a specified script file on a Windows device.
+The name of the device on which you want to execute the script file.
+The type of script file.
+Upload the script file to be executed.
+Arguments to the script, if any.
+You can separate multiple arguments using commas.
+Timeout for the action.
+The working directory for the script's execution.
+Disable USB
+Allows you to disable the USB port on a device.
+The name of the device on which you want to disable the USB port.
+Linux actions
+Shut Down Linux
+Allows you to shut down a Linux device.
+The name of the device to be shut down.
+Select whether you'd like to force this action.
+Restart Linux
+Allows you to restart a Linux device.
+The name of the device to be restarted.
+Select whether you'd like to force this action.
+Execute Linux Script
+Allows you to execute a specified script file on a Linux device.
+The name of the device on which you want to execute the script file.
+The type of script file.
+Upload the script file to be executed.
+Arguments to the script, if any.
+You can separate multiple arguments using commas.
+Timeout for the action.
+The working directory for the script's execution.
+Notification actions
+Send Pop-Up Message
+Allows you to display a pop-up message on a device.
+The name of the device on which you want to display the message.
+The message to be displayed.
+Send Email
+Allows you to send an email message.
+The recipient's email address.
+The email subject and body.
+Send SMS
+Allows you to send an SMS message.
+The recipient's mobile number.
+The SMS content.
+Send SNMP Trap
+Allows you to send SNMP traps to the required destination.
+Enterprise OID.
+SNMP Manager.
+Message content.
+Active Directory actions
+Disable User
+Allows you to disable a user's account.
+The name of the user account you want to disable.
+Delete User
+Allows you to delete a user account.
+The name of the user account you want to delete.
+Disable Computer
+Allows you to disable a computer account.
+The name of the computer account you want to disable
+Firewall Actions
+Cisco ASA Deny Inbound Rule
+Allows you to add an deny inbound rule.
+The name of the firewall device.
+The Interface name.
+Source address.
+Destination address.
+Cisco ASA Deny Outbound Rule
+Allows you to add an deny outbound rule.
+The name of the firewall device.
+The Interface name.
+Source address.
+Destination address.
+Fortigate Deny Access Rule
+Allows you to add an deny access rule.
+Name of the firewall device. Source address.
+Destination address.
+Name of the source interface.
+Name of the destination interface.
+PaloAlto Deny Access Rule
+Allows you to add an deny access rule.
+Name of the firewall device. Source address.
+Destination address.
+Name of the source zone.
+Name of the destination zone.
+Type of Rule (Universal, Intrazone or Interzone).
+SophosXG Deny Access Rule
+Allows you to add an deny access rule.
+Name of the firewall device.
+Source address.
+Destination address.
+SophosXG Update Deny Access Rule
+Allows you to update an deny access rule.
+The name of the firewall device.
+The rule name.
+Source address.
+Destination address.
+Barracuda CloudGen Deny Access Rule
+Allows you to add an deny access rule.
+Name of the firewall device.
+Source address.
+Destination address.
+Name of the source interface.
+Name of the destination interface.
+Type of Rule (Inbound or Outbound).
+Miscellaneous actions
+Write to File
+Allows you to write a message to a file
+The name of the device on which the file is located.
+The file name.
+The absolute file path.
+The text to be written to the file.
+Select whether you would like to append to or overwrite a file if it already exists.
+CSV Lookup
+Allows you to search for values within a CSV file.
+Upload the CSV file to perform by clicking on "Browse".
+Specify the header or column number.
+Select the field to be matched.
+Forward Logs
+Allows you to forward logs to the required destination.
+Name of the destination server.
+The protocol to be used.
+Port number and standard.
+HTTP Request
+Allows you to send an HTTP request to a URL.
+The URL to which you want to send an HTTP request to.
+Specify the Method you want to use (Get or Post).
+Add the required headers.
+Add the required parameters.
+ADManager Plus actions
+Disable User
+Allows you to disable a user account
+The name of the block.
+The action to be performed (here, Disable User).
+A brief description for this block to record its purpose in the playbook.
+The username of the user account you want to disable.
+Delete User
+Allows you to delete a user account
+The name of the block.
+The action to be performed (here, Delete User).
+A brief description for this block to record its purpose in the playbook.
+The username of the user account you want to delete.
+Disable Computer
+Allows you to disable a computer account.
+The name of the block.
+The action to be performed (here, Disable Computer).
+A brief description for this block to record its purpose in the workflow.
+The device name of the computer account you want to disable.
+Reset user password
+Allows the user to reset their password
+The name of the block.
+The action to be performed (here, Reset user password).
+A brief description for this block to record its purpose in the playbook.
+The username of the user account you want to reset the password.
+The type of password that you want: Random or Custom.
+Add user to group
+Allows you to add a user to a particular group
+The name of the block.
+The action to be performed (here, Add user to group).
+A brief description for this block to record its purpose in the playbook.
+The username of the user account you want to add to the group.
+The name of the group you want to add the user.
+Remove user from group
+Allows you to remove a user from a particular group
+The name of the block.
+The action to be performed(here, Remove user from group).
+A brief description for this block to record its purpose in the playbook.
+The username of the user account you want to remove from the group.
+The name of the group that you want to remove the user from, or remove the user from all the groups that are available.
+Enable user
+Allows you to enable a disabled user account
+The name of the block.
+The action to be performed(here, Enable user).
+A brief description for this block to record its purpose in the playbook.
+The username of the user account you want to enable.
+Unlock user
+Allows you to unlock a locked user account
+The name of the block.
+The action to be performed(here, Unlock user).
+A brief description for logic block to record its purpose in the playbook.
+The username of the user account you want to unlock.
+Update user
+Allows you to update an attribute of a user
+The name of the block.
+The action to be performed(here, Update user).
+A brief description for this block to record its purpose in the playbook.
+The username of the user account you want to update.
+The attribute that you want to update in the user account's data.
+The value of the attribute that needs to be updated.
+Delete Computer
+Allows you to delete a computer account
+The name of the block.
+The action to be performed(here, Delete Computer).
+A brief description for this block to record its purpose in the playbook.
+The device name of the computer account you want to delete.
+Enable computer
+Allows you to enable a disabled computer account
+The name of the block.
+The action to be performed(here, Enable Computer).
+A brief description for this block to record its purpose in the playbook.
+The device name of the computer account you want to enable.
+Endpoint Central actions
+Install Patch
+Allows you to install a patch on a specific device for a detected vulnerability.
+The name of the block.
+Name/IP of the destination device to install patch.
+Name of the deployment configuration.
+Description for the deployment configuration.
+Vulnerability identifier will be extracted from alert criteria.
+Deployment policy to be applied.
+Approve Patch
+Allows you to approve patches for the detected vulnerability.
+The name of the block Vulnerability identifier will be extracted from alert criteria.
+Read also
+This document covered how to create custom playbooks, including workflow components and supported actions. For related capabilities that enhance security orchestration and automation, refer to:
+Manage playbooks
+Update playbook credentials

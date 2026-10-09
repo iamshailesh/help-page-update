@@ -1,0 +1,28 @@
+In this page
+Overview
+Supported Compliance Extensions
+Overview
+Compliance Extensions provide predefined support to help you adhere to industry standards and regulatory requirements. Below are the compliance extensions available for EventLog Analyzer.
+Supported Compliance Extensions
+DORA (Digital Operational Resilience Act)
+DORA is an EU regulation designed to enhance the financial sectorâs ability to withstand cyber threats by establishing strict ICT risk management, incident reporting, and resilience testing requirements. To download the DORA extensions, visit
+marketplace
+.
+DPDP (Digital Personal Data Protection Act)
+The DPDP Act is India's comprehensive data protection law that governs the processing of personal data, ensuring user rights, lawful data handling, and corporate accountability. To download the DPDP extensions, visit
+marketplace
+.
+CJIS (Criminal Justice Information Services)
+The CJIS Security Policy sets standards for protecting sensitive law enforcement data in the U.S., ensuring strict access control, encryption, and auditing requirements for agencies and service providers. To download the CJIS extensions, visit
+marketplace
+.
+CIS (Center for Internet Security Controls)
+CIS Controls are a set of best practices and security guidelines designed to help organizations protect against cyber threats by implementing essential security measures and system hardening techniques. To download the CIS extensions, visit
+marketplace
+.
+Standard Framework for Education
+The Standard Framework for Education provides guidelines and best practices for educational institutions to ensure compliance with relevant regulations and standards. To download the Standard Framework for Education extensions, visit
+marketplace
+.
+Related resources
+How to install an extension

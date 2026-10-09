@@ -1,0 +1,54 @@
+Note
+Please refer to the Incident Workbench
+Overview page
+to learn about Incident Workbench. This page details on how to access the workbench in the product.
+Log fields you can click on to invoke the Incident Workbench:
+Users:
+Username
+Target User
+VPN UserName
+User Principal Name
+Destination User
+Sourceuser
+Subject Username
+Process:
+Process Id
+Parent Process ID
+Process GUID
+Parent Process GUID
+Process Name
+Parent Process Name
+Domain analysis:
+Domain
+URL Site
+IP Analysis:
+Source IP
+Client IP Address
+Server IP Address
+Address
+Destination IP
+Remote Ip
+Source Host Address
+NAT Source Address
+NAT Destination Address
+Destination IP
+Original Client IP
+IP Address
+Endpoint IP
+Private Ip
+Target Ip
+URL Analysis:
+Payload URL
+Object URL
+URL
+Invoking the Incident Workbench from different dashboards of the product:
+From Reports
+From Log Search
+From Alerts
+From Compliance dashboard
+From Correlation
+From Incident management console
+Note
+Minimize the tab to access Incident Workbench while you traverse through different pages in the product. As long as you don't close the workbench, the analysis will be available even if you log out of the product and login again. You can also
+save it to an existing incident
+or create a new one.

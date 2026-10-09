@@ -1,0 +1,62 @@
+Navigate to
+Admin â Administration â Auto Backup/Update â Auto Update.
+To
+enable
+auto update for a particular component, click on the
+icon located in the action column of the particular component.
+To
+disable
+auto update for a particular component, click on the
+icon located in the action column of the particular component.
+To edit the update scheduler for a particular component, click on the
+icon located in the action column of the component.
+In
+Check for Update
+option, select whether you want to check for updates daily, weekly, or monthly.
+Selecting the option
+Automatically Download and update Log360
+will download and install any available updates automatically.
+You can also choose to receive notifications about available updates by selecting the options under
+Notify me
+.
+When updates are available:
+Notifications will be sent when updates are available.
+After installing the update:
+Notifications will be sent after the updates have been downloaded and installed.
+Click
+Save
+.
+Furthermore, you can use the
+Update History
+link to view all the installed updates.
+Alternatively, you can also configure the auto update settings by following the steps listed below:
+Navigate to
+Support
+tab.
+Click on
+Check for updates
+box at the top right corner of the page.
+Click
+Settings
+link in the pop-up that appears, then click on
+Auto Update
+tab.
+Select the check box against
+Enable Auto Update
+to enable auto update.
+In
+Check for Update
+option, select whether you want to check for updates daily, weekly, or monthly.
+Selecting the option
+Automatically Download and update Log360
+will download and install any available updates automatically.
+You can also choose to receive notifications about available updates by selecting the options under
+Notify me
+.
+When updates are available:
+Notifications will be sent when updates are available.
+After installing the update:
+Notifications will be sent after the updates have been downloaded and installed.
+Click
+Save
+.

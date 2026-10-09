@@ -1,0 +1,31 @@
+Log360 is a unified SIEM solution that integrates multiple security and IT management components under a single console. It supports the integration of the following six components:
+Component
+Description
+ADAudit Plus
+ADAudit Plus is a real-time change auditing and user behavior analytics solution that helps keep your Active Directory, Azure AD, member servers, file servers, and workstations secure and compliant.
+ADManager Plus
+ADManager Plus is an enterprise Identity Governance and Administration (IGA) solution that comes with AD management, access certification, risk assessment, risk exposure management, identity life cycle management, workflow orchestration, and integration capabilities to streamline identity management effortlessly.
+DataSecurity Plus
+Provides data visibility and security through file server auditing, data discovery, and leak prevention. Monitors file integrity, reviews permissions, and blocks sensitive data leaks to meet compliance needs.
+Exchange Reporter Plus
+A comprehensive reporting, change auditing, and monitoring solution for Exchange Server, Exchange Online, and Skype for Business Server.
+Cloud Security Plus
+Provides complete visibility into AWS and Azure environments, with reports, search, and customizable alerts to monitor, analyze, and respond to cloud security events.
+PAM360
+A privileged access security solution that enables businesses to identify and prevent exploitation of any unmanaged, unmonitored, and unknown privileged access pathways to mission-critical assets.
+Integrating these components allows administrators to manage all modules from one platform, enable data synchronization across components, and streamline navigation between the modules.
+Key benefits of integration:
+1. Data synchronization across components
+When components are integrated, Log360 automatically synchronizes key configuration details across all modules. This eliminates the need to repeat the same setup steps multiple times and ensures consistency throughout the environment. Any update made in one component is reflected across all others.
+Two critical settings are synchronized:
+Domain settings:
+Adding or updating a domain in any component automatically applies the change to all others. Administrator credentials associated with the domain are also synchronized.
+Integration settings:
+These settings define how different components communicate with each other for features like single sign-on, domain sharing, and secure data exchange. Parameters such as hostnames, port numbers, and connection protocols must remain aligned across all components to ensure uninterrupted interaction. With integration, any updates made to these details on the Log360 Integration page are automatically applied to every component, eliminating the need for manual updates in multiple consoles.
+2. Unified access
+Integration enables administrators to access all components from a single Log360 console, eliminating the need to manage separate interfaces for each module. This provides a centralized point for navigation, making it easy to move between components without multiple logins or separate consoles.
+Integration also introduces options that centralize access, simplify authentication, and enable unified session and shutdown management across all components. These capabilities improve operational efficiency and ensure unified management of all components.
+Read also
+This page provided an overview of integration and its key benefits. To learn how to configure and use the integrated components, refer to the following articles:
+Downloading and installing components
+Integrating the components

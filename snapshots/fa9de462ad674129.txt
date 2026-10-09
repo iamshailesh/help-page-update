@@ -1,0 +1,12 @@
+EventLog Analyzer uses Jespa to provide NTLMv2 SSO. To enable NTLMv2 SSO in EventLog Analyzer, follow the steps listed below.
+NOTE
+To authenticate EventLog Analyzer using Windows built-in SSO, a Computer account must be created in Active Directory Domanin Services (AD DS). Only a Computer account can validate NTLM credentials with the NETLOGON service on AD DS domain controllers. The NETLOGON service will reject a regular User account
+The default package has a Jespa (third-party) limitation which supports
+unlimited users for 60 days and only 25 users after
+. If you want to continue using Jespa for NTLM authentication for unlimited users beyond 60 days, you will need to purchase it from IOPLEX.
+Download the
+latest Jespa JAR file
+.
+Add the downloaded file to the <EventLog Analyzer home>/lib folder. <EventLog Analyzer home> is the location where EventLog Analyzer is installed.
+Restart EventLog Analyzer for the changes to take effect.
+Please contact if you require any assistance in configuring NTLMv2 SSO for your users.

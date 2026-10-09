@@ -1,0 +1,95 @@
+In this page
+Overview
+Get alert profile details
+Disable alert profile notification
+Overview
+The Disable Ticket Notification API enables administrators to manage alert notifications sent to integrated ticketing tools.
+You can:
+Retrieve the alert profile details linked to a ticket
+Disable the ticket notification for a specific alert profile
+Get alert profile details
+This API allows you to fetch the details of the alert profile from which a particular ticket was generated.
+Request URL
+GET http://hostname:8095/RestAPI/v1/ticket/profile
+NOTE
+For the request URL, you can either use the IP address, or FQDN of the product server in place of hostname.
+Request Header
+Header name
+Value
+Mandatory
+Description
+Authorization
+Bearer {{AuthToken}}
+Yes
+AuthToken generated from the API Settings page.
+e.g., Bearer abcd1234xyz
+Request Parameters
+The request body must be sent in JSON format and include the following key/value parameters:
+Parameter Name
+Mandatory
+Type
+Description
+ticket_id
+Yes
+String
+ID of the ticket to retrieve alert profile details from.
+Response
+The response will be a JSON object with the following key/value pairs:
+Parameter name
+Description
+profile_name
+Name of the alert profile from where the ticket was raised.
+profile_id
+ID of the alert profile from where the ticket was raised.
+message
+Status of the alert profile details fetched from the ticket.
+Executing the API using cURL
+Sample request
+curl --location 'http://localhost:8095/RestAPI/v1/ticket/profile?ticket_id=33741' \
+--header 'Authorization: Bearer abcd1234xyz' \
+Sample response
+{"profile_name":"Alert 1","profile_id":1801,"message":"Alert Profile Name fetched successfully"}
+Executing the API using Postman
+Figure 1: Executing the API using Postman
+Disable alert profile notification
+This API allows you to disable the alert profile notification for a ticketing tool connection. Once disabled, alerts from this profile will not create new tickets in the connected ticketing tool.
+Request URL
+PUT http://hostname:8095/RestAPI/v1/ticket/profile/disable
+Request Header
+Header name
+Value
+Mandatory
+Description
+Authorization
+Bearer {{AuthToken}}
+Yes
+AuthToken generated from the API Settings page. e.g., Bearer abcd1234xyz
+Request Parameters
+Parameter Name
+Mandatory
+Type
+Description
+profile_id
+Yes
+String
+Profile ID of the alert profile to be disabled for the ticketing tool connection.
+Response
+The response will be a JSON object with the following key/value pair:
+Parameter name
+Description
+message
+Status of the disable alert profile notification.
+Executing the API using cURL
+Sample request
+curl --location --request PUT 'http://localhost:8095/RestAPI/v1/ticket/profile/disable' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer abcd1234xyz' \
+--data '{
+"profile_id":1801
+}'
+Sample response
+{"message":"Ticketing Tool notification for Alert 1 Alert Profile disabled in EventLog Analyzer successfully"}
+Executing the API using Postman
+Figure 2: Executing the API using Postman
+Read also
+This page explained how to retrieve alert profile details and disable ticketing notifications using REST APIs.

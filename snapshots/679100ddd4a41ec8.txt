@@ -1,0 +1,16 @@
+Steps
+Go to
+Settings â Domain and Accounts
+.
+Click the
+Reload Domain Objects
+icon for the required domain.
+In the pop-up, select
+Domain OUs
+and
+Domain Computers
+.
+Click
+Reload
+and wait for the domain sync to complete.
+Once the sync is complete, the domain will be reloaded with the updated objects, and the OUs should load correctly.

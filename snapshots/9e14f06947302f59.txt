@@ -1,0 +1,12 @@
+With this feature, you can get a quick snapshot of cloud application usage for all configured gateway servers in Log360 Cloud.
+To fetch server-specific data, select the particular server in the
+Gateway Server
+field on the top left-hand corner.
+By default, you will be able to view:
+Top Cloud Apps by Download Size
+Top Cloud Apps by Upload Size
+Top Cloud Apps by Request Count
+Top Actors by Download Size
+Top Actors by Upload Size
+Top Actors by Request Count
+You can also toggle between Previous Week and Previous Day data to compare the usage trends.

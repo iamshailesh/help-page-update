@@ -1,0 +1,93 @@
+In this page
+Overview
+Managing GDPR compliance checks
+Configuring password protection for exported reports
+Managing product usage statistics
+Overview
+Privacy Settings in ManageEngine Log360
+help you manage compliance and data protection within the product. Using these settings, you can:
+Manage GDPR compliance checks -
+This option enforces GDPR compliance at various levels within the product. It includes obtaining explicit user consent during integrations. Once GDPR is enabled, password protection for data exports will be mandated automatically and product usage statistics will be disabled.
+Configure password protection for exported reports -
+When turned on, reports sent via email or exported in PDF and CSV formats can be secured with a password. Reports that were already exported or redistributed before this setting was applied will remain unprotected.
+Manage product usage statistics -
+This setting allows the collection of non-confidential usage information, such as report usage patterns and device types added for monitoring. Passwords and other sensitive data are not collected.
+Note
+By default, GDPR compliance checks and password protection for exports are disabled, while product usage statistics is enabled.
+Managing GDPR compliance checks
+Log in to the
+product console.
+Go to the
+Settings
+tab, and under
+General
+, select
+Privacy Settings
+.
+Figure 1: Navigating to Privacy Settings
+In the
+Privacy Settings window
+, under
+GDPR compliance checks
+, choose
+Enable
+or
+Disable
+from the
+Status
+drop-down.
+Figure 2: Managing GDPR compliance checks
+Click
+Save
+to apply your changes.
+Note
+If you enable GDPR compliance checks, product usage statistics will be disabled automatically, and password protection will be enabled.
+Configuring password protection for exported reports
+In the
+Privacy Settings window
+, you can secure exported reports with password protection:
+From the
+Status drop-down
+, select
+Enable
+.
+Figure 3: Enabling password protection
+Enter a password in the
+Password
+and
+Confirm Password
+fields. This password will be required to open the exported or redistributed reports.
+Figure 4: Configuring password protection
+To turn it off, select
+Disable
+from the
+Status drop-down
+. Reports exported afterward will no longer be password protected.
+Click
+Save
+to apply your changes.
+Note
+Reports exported or redistributed before enabling this option will remain unprotected.
+Managing product usage statistics
+In the
+Privacy Settings window
+, you can manage the collection of product usage statistics.
+Figure 5: Enabling product usage statistics
+From the
+Status drop-down
+, select
+Enable
+to allow the collection of product usage statistics such as report access, device types added, and monitoring activity.
+To stop sharing this information, select
+Disable
+from the
+Status drop-down
+.
+Click
+Save
+to apply your changes.
+Figure 6: Saving applied changes
+Note
+Only non-sensitive product usage information is collected. Passwords and other sensitive data are not collected.
+Read also:
+This page explained how to manage GDPR compliance checks, configure password protection for exported reports, and manage product usage statistics.

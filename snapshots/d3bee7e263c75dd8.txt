@@ -1,0 +1,61 @@
+Log360 Cloud provides you with a handy
+Tagging
+tool that makes your log search simpler and more effective.
+The
+Tagging
+tool bookmarks your logs so that the next time you want to search for the same logs you can use the tag name rather than typing an entire search query. As search queries typically involve multiple criteria, the tagging feature saves a substantial amount of time and effort.
+For instance, suppose you want to view the logs concerning failed logins across different sources such as UNIX, Windows and Oracle application logs, you can associate all them to a tag. This tag can later return all specified logs instantly.
+You can easily add or edit the search criteria associated with a tag, enabling you to refine your search anytime.
+You can also add troubleshooting tips or notes along with your tag, which provides information to other users analyzing those logs.
+This section explains:
+How to create a tag
+How to edit a tag
+How to perform log search using a tag
+How to delete a tag
+Note
+Some of these features may not be available if you have not upgraded to the new Log360 Cloud Agent. Click
+here
+to download the new Log360 Cloud Agent.
+How to create a tag
+To create a tag, go to the
+Search
+tab and follow the steps given below:
+Specify all the search criteria that you wish to associate with your new tag. Click
+Search
+to obtain the search results.
+Hover the mouse pointer over any of the log entries in the list of results. Click on the
+Tag
+icon in the top right corner of the row.
+Fill the following details in the Assign Tag window that pops up:
+Provide a name for the tag.
+Select the tag criteria from the predefined list. This list is based on the fields available in the search result. If it does not have the field you are looking for, then add those fields to the search results using the column selector available at the top right corner of the log entries pane.
+Provide troubleshooting tips/notes for the tag, if any. They can help in analyzing and interpreting the tag results.
+Note
+The tag name and the notes added to the tag should contain only alphanumeric characters.
+Click on
+Add
+to save the tag.
+How to edit a tag
+To edit a tag, follow the steps given below.
+Go to the Tag search results page and click the Edit icon below the tag name.
+Now you can,
+Modify the tag criteria
+Add/delete the notes that were added
+Alternatively, you can edit a tag from the settings tab.
+Navigate to
+Settings → Admin → General → Tags
+.
+Click on the
+icon corresponding to the tag that you wish to edit.
+In the window that pops-up, make the required changes and click on
+Update
+.
+How to perform log search using a tag
+You can search for tags by their name prefixed with # in the search query text box.
+How to delete a tag
+To delete a tag follow the steps given below.
+Navigate to
+Settings → Admin → General → Tags → Edit/Delete
+.
+Click on the
+icon corresponding to the tag that you want to delete.

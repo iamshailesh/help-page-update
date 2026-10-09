@@ -1,0 +1,115 @@
+In this page
+Overview
+Request URL
+Request Header
+Request Parameters
+API Response
+Executing the API using cURL
+Executing the API using Postman
+Overview
+This API enables synchronous retrieval of alert data from ManageEngine Log360. When you initiate a synchronous alert query, the request is processed by the server.
+The total time taken for the process depends on the number of search results obtained.
+The following steps are involved to execute a synchronous alert query:
+Create an alert request with the required metadata.
+The server executes the request on the request thread and responds with the result.
+The server responds with a cursor when there are additional results beyond the predefined number that can be displayed in a single response.
+You can continue requesting with the next cursor to retrieve the remaining set of results.
+This process must be repeated until all alert hits are retrieved and the server no longer returns a cursor.
+NOTE
+Continue fetching results using the cursor until the server stops returning one. This indicates that all alert hits have been retrieved. The cursor will expire if unused for more than five minutes.
+Request URL
+POST http://hostname:8095/RestAPI/v1/alerts
+NOTE
+For the request URL, you can either use the IP address, or FQDN of the product server in place of hostname.
+Request Header
+Header name
+Value
+Mandatory
+Description
+Authorization
+Bearer {{AuthToken}}
+Yes
+AuthToken generated from API Settings page.
+e.g:
+Bearer
+nzxcvda0odmtmznloc00ndziltg0mgutmwzkhtljmjvmzbyt
+Request Parameters
+The request must be sent in JSON format in the body of the request and should contain the following key/value parameters.
+Parameter name
+Default value
+Mandatory
+Type
+Description
+query
+*
+No
+String
+Start value of the list
+alert_profiles
+all
+No
+JSONArray
+List of alert profiles
+severity
+all
+No
+JSONArray
+List of severity
+status
+all
+No
+JSONArray
+List of status
+from
+current time - 24 hours
+No
+Long
+Start time for search in Unix milliseconds
+to
+current time
+No
+Long
+End time for search in Unix milliseconds
+cursor
+-
+No
+String
+Cursor from next query
+NOTE
+When the cursor is passed, the other parameters are not required.
+Quotes i.e ( " ") in query string must be escaped. If query in the product console's search page is REMOTE_INTERFACE = "switch 1", then for Rest Api the query parameter should be written as "REMOTE_INTERFACE = \"switch 1\""
+Response
+The API returns a JSON object containing the following fields:
+Parameter name
+Description
+hits
+JSON object which contain alert hits for the request
+Contains following fields
+hits: List of alert hits
+hits_count_in_current_page: Hits count in current alert hit response
+Executing the API using
+cURL
+1. Search request with query
+Sample request
+curl --location --request POST 'http://localhost:8095/RestAPI/v1/alerts' \ -H "Accept: application/json" -H "Authorization: Bearer mdrkoda0odmtmznloc00ndziltg0mgutmwzkztljmjvmzwmx " --data-raw '{ "query": "EVENTID = 16384 AND USERNAME = mhtoc", "alert_profiles": [1, 2, 601], "severity": ["CRITICAL"], "status": ["OPEN"], "from": 1643480792000, "to": 1643480479500 }'
+Sample response
+{ "cursor": "DnF1ZXJ5VGhlbkZldGNoFwAAAAAAAARoFlloajVvRlN5UlQ2RGVTWlhPS2V1WHcAA", "hits": { "hits": [{ "COMMON_SEVERITY": "INFORMATION", "IS_THROWAWAY": true, "HOSTNAME": "lix", "APPID": 2, "FORMATID": 302, "RAWLOG": "roy.sulivan /event/emberAPI/ELANotificationActions \"https://eventlog.loin64; x64; rv:71.0) Gecko/20100101 Firefox/71.0\"", "TIME": "1643531422443", "IMPORTED_TIME": 1643531420365, "HOSTID": 601, "IPAddress2": "10.128.156.152", "Alert Profile": "Alert profile 1" }, { "COMMON_SEVERITY": "INFORMATION", "IS_THROWAWAY": true, "HOSTNAME": "lix", "APPID": 2, "FORMATID": 302, "RAWLOG": "roy.sulivan /event/emberAPI/ELANotificationActions \"https://eventlog.l 15 142 200 \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0\"", "TIME": "1643531422446", "IPAddress1": "10.128.156.152", "HOSTID": 601, "IPAddress2": "10.128.156.152", "Alert Profile": "Alert profile 1" }], "hits_count_in_current_page": 3 } }
+2. Search request with cursor
+Sample request
+curl --location --request POST 'http://localhost:8095/RestAPI/v1/alerts' \ -H "Accept: application/json" -H "Authorization: Bearer mdrkoda0odmtmznloc00ndziltg0mgutmwzkztljmjvmzwmx " --data-raw '{ "cursor": "DnF1ZXJ5VGhlbkZldGNoFwAAAAAAAARoFlloajVvRlN5UlQ2RGVTWlhPS2V1WHcAA" }'
+Sample response:
+{ "hits": { "hits": [{ "COMMON_SEVERITY": "INFORMATION", "IS_THROWAWAY": true, "HOSTNAME": "lix", "APPID": 2, "FORMATID": 302, "RAWLOG": "roy.sulivan /event/emberAPI/ELANotificationActions \"https://eventlog.loin64; x64; rv:71.0) Gecko/20100101 Firefox/71.0\"", "TIME": "1643531422443", "IMPORTED_TIME": 1643531420365, "HOSTID": 601, "IPAddress2": "10.128.156.152", "Alert Profile": "Alert profile 1" }, { "COMMON_SEVERITY": "INFORMATION", "IS_THROWAWAY": true, "HOSTNAME": "lix", "APPID": 2, "FORMATID": 302, "RAWLOG": "roy.sulivan /event/emberAPI/ELANotificationActions \"https://eventlog.l 15 142 200 \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0\"", "TIME": "1643531422446", "IPAddress1": "10.128.156.152", "HOSTID": 601, "IPAddress2": "10.128.156.152", "Alert Profile": "Alert profile 1" }], "hits_count_in_current_page": 3 } }
+3. Invalid Search query
+Sample request
+curl --location --request POST 'http://localhost:8095/RestAPI/v1/alerts' \ -H "Accept: application/json" -H "Authorization: Bearer mdrkoda0odmtmznloc00ndziltg0mgutmwzkztljmjvmzwmx " --data-raw '{ "query": "EVENTID := 16384 AND USERNAME <> mhtoc", "alert_profiles": [1, 2, 601], "severity": ["CRITICAL"], "status": ["OPEN"], "from": 1643480792000, "to": 1643480479500 }'
+Sample response:
+{ "ERROR": "SR007", "ERROR_DESCRIPTION": "QUERY NOT VALID", "ERRORS" : { "context": "Failed to build query", "cause": { "reason": "Encountered \" \":\" \": \"\" at line 1, column 159.\r\nWas expecting one of:\r\n ...\r\n \"+\" ...\r\n \"-\" ...\r\n ...\r\n \"(\" ...\r\n \"*\" ...\r\n ...\r\n ...\r\n ...\r\n ...\r\n ...\r\n \"[\" ...\r\n \"{\" ...\r\n ...\r\n ...\r\n ", "type": "ParseException" } } }
+Executing the API using Postman
+1. Search request with query
+Figure 1: Search request with query
+2. Search request with cursor
+Figure 2: Search request with cursor
+3. Invalid query
+Figure 3: Invalid query
+Read also:
+This page explained how to perform synchronous alert queries and retrieve alert data using REST API.

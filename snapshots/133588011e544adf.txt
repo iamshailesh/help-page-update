@@ -1,0 +1,133 @@
+In this page
+Overview
+Available Reports
+Overview
+This page lists the AWS reports available in the product to help monitor login behavior, authorization failures, IAM activity, network and VPC changes, S3 and file transfers, load balancer performance, Route53 configurations, and security token operations. These reports assist administrators in tracking successful and failed events, identifying configuration changes, auditing content access, and analyzing operational and security trends across AWS resources.
+Available Reports
+Report group name
+Report name
+User login activity
+Failed logins
+Successful logins
+Important events
+Failed unauthorized activity
+Error events
+Login failures
+Authorization failures
+IAM activity
+IAM errors
+IAM user activities
+IAM unauthorized activities
+IAM user report
+IAM group report
+IAM role report
+IAM policy report
+MFA report
+Access key report
+User activity
+Failed events by user
+User activity
+Network security groups
+Security group configuration changes
+Network ACL changes
+VPC activity
+VPC changes
+Network gateway changes
+VPC endpoint changes
+VPC route table changes
+VPC route changes
+Subnet changes
+S3 bucket activity
+All S3 bucket activity
+Modified buckets
+Deleted buckets
+Failed events
+WAF activity
+WAF error events
+WAF rule changes
+IP set configuration changes
+SQL injection matchset changes
+Web ACL configuration changes
+Security token service
+STS error events
+AssumeRole requests
+Federation token requests
+Session token requests
+AWS config activity
+AWS config errors
+Config rule changes
+Configuration reorder activity
+EC2 activity
+EC2 instance state changes
+Key pair activity
+Assigned addresses
+Unassigned addresses
+Network interface configuration changes
+Elastic IP address activity
+Auto Scaling activity
+Auto scaling error events
+Attached auto scaling instances
+Detached auto scaling instances
+Attached load balancers
+Detached load balancers
+ELB activity
+ELB error events
+Load balancer configuration changes
+RDS activity
+RDS error events
+DB security group configuration changes
+RDS instance activity
+DB cluster activity
+DB snapshot activity
+Route53 activity
+Failed Route53 events
+Route53 activity
+Hosted zone configuration changes
+Changed resource record sets
+Traffic policy configuration changes
+Traffic policy instance configuration changes
+Domain configuration changes
+S3 file changes audit
+All S3 requests
+Accessed files
+Deleted files
+Created or modified files
+S3 traffic analysis
+S3 traffic overview
+S3 requests by file
+S3 requests by IP
+S3 requests by requestor
+S3 requests by error codes
+S3 requests by methods
+Classic load balancer reports
+ELB traffic overview
+ELB latency overview
+Failed access requests
+All access requests
+Application load balancer reports
+ELB traffic overview
+ELB latency overview
+Failed access requests
+All access requests
+Network load balancer reports
+ELB traffic overview
+ELB latency overview
+All access requests
+AWS Overview
+Events by outcome
+Resources created
+Network and security events
+Events trend
+Created sources
+Events by name
+Authorization failures
+Messages by sources
+Failed activity by actions
+User activity
+Error events
+Read also
+This page detailed the AWS reports supported by the product for monitoring user logins, IAM and VPC changes, S3 and file activity, WAF events, EC2 and RDS activity, load balancers, Route53 configurations, and security token service operations. Explore related report sections to gain deeper visibility into AWS operational and security events.
+Salesforce reports
+CEF format reports
+FireEye reports
+Malwarebytes reports

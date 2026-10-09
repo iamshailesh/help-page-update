@@ -1,0 +1,20 @@
+Log360 Cloud supports the following applications for log collection and analysis.
+General Applications
+SQL Server
+Oracle Server
+Terminal Server
+Syslog Application
+Sysmon Application
+Password Manager Pro
+ITOM Solution
+Exchange Reporter Plus
+ADAudit Plus
+Print Server
+Security Applications
+Malwarebytes
+FireEye
+Symantec Endpoint Protection
+Symantec DLP
+CEF Format
+McAfee
+Trend Micro

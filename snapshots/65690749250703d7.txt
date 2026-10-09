@@ -1,0 +1,152 @@
+In this page
+Overview
+Available Reports
+Overview
+The Windows reports page provides a consolidated view of security, system, and operational events collected from Windows-based devices. These reports are grouped into logical categories such as logon activity, system events, threat detection, device auditing, policy enforcement, and application activity, enabling administrators to monitor user behavior, detect suspicious activities, and assess the overall security posture of the environment.
+Available Reports
+Report Category
+Report Name
+Logon Reports
+Interactive Logon
+Remote Interactive Logon
+Network Logon
+Terminal Server Reconnected
+Terminal Server Disconnected
+Logons Overview
+Privilege Assigned to New Logon
+Logon Attempt Using explicit Credentials
+Top Logons by User
+Top Logons by Host
+Top Logons by RemoteHost
+Top Logons by Domain
+Logons Trend
+User Logons
+Logon activity
+Remote desktop services activity
+Terminated users session
+Remote desktop gateway
+Radius logon history (NPS)
+Special groups have been assigned to a new logon.
+Device Severity Reports
+Success Events
+Information Events
+Failure Events
+Warning Events
+Error Events
+System Events
+Windows Time Change
+AD Backup Error
+GPO Queries - Failed
+Active Directory database corruptions
+Windows Updates Downloaded
+Windows Updates Detected
+Windows Updates Connectivity
+Windows Updates Availability
+Bad disk block
+Failed loading of Kernel driver
+Code Integrity Check
+Invalid image hash file
+Invalid page hash image file
+Hardisk failures
+Service Paused
+Low Disk Space
+Event Logger Started
+Threat Detection
+DoS Attack Subsided
+DoS Attack Entered Defensive Mode
+DoS Attacks
+Downgrade Attacks
+Replay Attack
+Terminal Server Attacks
+Terminal Server Exceeds Maximum Logon Attempts
+IP Conflicts
+User Account Locked Out Error
+Anti-Malwares Updated
+Anti-Malwares Spyware Removed
+Anti-Malwares Scan
+USB storage auditing
+USB all file or folder changes
+Removable device plug in
+Removable device plug out
+USB file read
+USB file modified
+USB file deleted
+Host Based Removable Disk Changes
+Removable Disk Changes Trend
+USB file created
+Top Users on Removable Disk Auditing
+External Device Recognized
+Device Disabled
+Device Enabled
+Installation Forbidden By GPO
+Previously Blocked Device Installed
+Network Policy Server
+Access granted to users
+Access denied to users
+Discarded requests for users
+Discarded accounting requests for users
+Locked users due to repeated logon failures
+NPS Unlocked user accounts
+Windows Individual User Action
+Domain Events
+Special groups assigned to new logon
+SID History added to account
+SID History added to account failed
+Kerberos policy changes
+Group Type Changes
+Special Groups Logon table modifications
+Program Inventory
+Software Installed
+Software Updated
+Failed software installations
+Failed software installations due to privilege mismatches
+Software Uninstalled
+Windows Updates - Installed
+Windows update process failed
+Failed hotpatching
+Update Packages Installed
+Non valid Windows license
+Failed Windows license activations
+Non activated windows products
+New Kernel Filter Driver
+Application Whitelisting
+Exe/Dll File Allowed to Run
+Exe/Dll Files Not Allowed to Run due to Enforced rules
+Exe/Dll File Not Allowed to Run
+MSI/Script File Allowed to Run
+MSI/Script Files Not Allowed to Run due to Enforced rules
+MSI/Script File Not Allowed to Run
+Software Restricted to Access Program
+DNS Server
+DNS Server Started
+DNS Server Shutdown
+DNS Server Zone Transfer Refused
+DNS Server Zone transfer bad responses
+Failed DNS Server Zone Transfers
+DNS Bad Zone Transfer Request
+Invalid Domain Name in Packet
+AD DNS Server
+DNS Server Error from AD
+DNS Server Waiting for AD
+DNS Server unable to open AD
+Failed DNS Server DS Zone Open
+Failed DNS Server DS Record Loads
+Threat Detection From Antivirus
+Threats Detections by ESET Endpoint Antivirus
+Threats Detections by Kaspersky
+Threats Detection by Microsoft Antimalware
+Threats Detection by Sophos Anti-Virus
+Threats Detection by Norton AntiVirus
+Infected files detected by Symantec Endpoint Protection
+Threat Detections by McAfee
+Defender Malware Detection
+Defender Real Time Protection Detection
+Windows Firewall Auditing
+Windows Firewall Rule Added
+Read also
+This page detailed the available Windows report categories and their purpose in monitoring authentication activity, system health, threat indicators, and compliance-related events across Windows systems. Explore related report sections to gain deeper insights into security incidents, user actions, and infrastructure changes.
+Unix reports
+Cisco reports
+Sonicwall reports
+Fortinet reports
+Juniper reports

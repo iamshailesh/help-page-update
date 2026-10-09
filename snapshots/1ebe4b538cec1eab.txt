@@ -1,0 +1,21 @@
+Log360 Cloud enforces protection of all web applications in your network. Web traffic to and from all the websites and web servers can be monitored easily using the Cloud Protection module.
+Log360 Cloud provides visibility and ensures security of your cloud platforms with its cloud access security broker (CASB) capability. The Cloud Protection module of Log360 Cloud monitors the traffic to and from your cloud environment and tracks activities of users to provide complete visibility.
+Using deep packet inspection, the Cloud Protection module will verify the integrity of all the transmitted packets in your network. Cloud Protection uses public key encryption and issues digital certificates to sign packets to packets using its own Certificate Authority to validate the authenticity of the packets at the endpoints.
+The Cloud Protection module helps you:
+Monitor the usage of cloud applications
+Get granular details on the number of applications used, total upload and download sizes of files, and top cloud applications based on high request count, upload size and download size. You can also gain actionable insights on top clients in your network based on their request count, upload size, and download size.
+Gain in-depth analytics on sanctioned and banned applications
+Depending on your enterprise's internal security policy you can mark cloud applications as sanctioned or banned.
+Sanctioned applications
+: Log360 Cloud lets you you constantly monitor the sanctioned applications for abnormal traffic to prevent DoS and Man-in-the-middle attacks.
+Banned applications
+: Log360 allows you to block untrusted applications in your network to make sure that you don't communicate with adversarial applications.
+Detect shadow applications easily and mitigate attacks
+Log360 Cloud can also detect shadow applications in your network. Shadow applications are applications that are neither sanctioned nor banned in your environment. However, these applications may be used by client machines without being authorized by the IT security teams. With Log360 Cloud's shadow application monitoring capability, you can identify malicious web applications and ban them.
+With Log360 Cloud, you can monitor web traffic generated from all websites. The solution provides dedicated reports for the following:
+SharePoint
+OneDrive
+Office 365/ Microsoft365 suite
+Dropbox
+Box
+Zoho, Google, and Yahoo applications

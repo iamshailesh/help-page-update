@@ -1,0 +1,132 @@
+MongoDB is a NoSQL, document-oriented database that stores data in flexible, JSON-like BSON format, enabling high scalability and performance. It supports powerful querying, indexing, and real-time analytics, making it ideal for modern applications. With features like replication, sharing, and built-in security, MongoDB is widely used for cloud-based and big data applications.
+MongoDB extension scope
+The MongoDB extension for Log360Cloud enables integration of MongoDB logs into the Log360 Cloud ecosystem. This extension provides features such as log collection, parsing, reporting, alerting, correlation, and advanced log search capabilities.
+Configure auditing in MongoDB server:
+Note
+This procedure has been added based on the official
+MongoDB configuration document
+. This extension supports MongoDB Enterprise Server Versions above 5.0
+1. Open the MongoDB configuration file
+Navigate to the bin folder of MongoDB and open the
+mongod.cfg
+configuration file using a text editor.
+2. Enable audit logging
+To enable auditing in Mongodb:
+Remove the '#' symbol before
+auditLog
+:
+Enter the destination, format, path of your audit-log file and filter:
+Save the file.
+Copy
+auditLog:
+destination: file
+format: JSON
+path: /var/log/mongodb/auditLog.json
+filter: '{ "param.command": { $nin: ["hello","isMaster","dbStats" ] } }'
+Note
+The params ("hello","isMaster","dbStats" ) are neglected in authCheck for better performance as they are Database Operation logs. Hence, it is recommended to add the filter.
+3. Enable authorization success auditing
+To generate DML audit logs, MongoDB must capture successful authorization events. By default, MongoDB only audits authorization failures. To enable auditing for successful authorization events, add:
+Copy
+setParameter:
+auditAuthorizationSuccess: true
+Note
+Enabling auditAuthorizationSuccess degrades the performance of MongoDB.
+4. Restart the MongoDB service
+After making the configuration changes, restart the MongoDB service for them to take effect. You can do this by opening the
+Services
+console and restarting the active
+MongoDB
+service. Alternatively, open command prompt as an administrator and execute the following commands:
+For Windows:
+net stop MongoDB
+net start MongoDB
+For Linux:
+service mongod stop
+service mongod start
+Configuring MongoDB in Log360 Cloud
+Note
+Refer to the Import Logs document for the step-by-step procedure.
+After installing the MongoDB extension in Log360 Cloud, configure the scheduled import for the
+auditLog
+file from the MongoDB server file path.
+Navigate to
+Settings â Configuration â Log Source Configuration â Import Logs â From Device
+Follow this step when Log Rotation is not configured:
+Import the current
+auditLog.json
+file (example: data/db/auditLog.json). Ensure that the correct file path is selected during configuration.
+Follow this step when Log Rotation is configured:
+Choose the rotated log file to import (example: audilLog.json.2025-03-18T04-55-18).
+Specify sthe file pattern of the rotated file in
+Advanced Settings
+.
+Sample pattern: auditLog.json.${yyyy}-${MM}-${dd}T${HH}-${mm}-${ss}
+Schedule the file import interval to align with MongoDBâs audit log rotation interval for better log synchronization. For example, if the audit log rotates every 10 minutes, set the file import to run at the same interval to ensure seamless synchronization.
+Note
+If log rotation has not been configured previously, refer to
+Rotate Log Files â MongoDB Manual v8.0
+to set it up, especially if you need to enable rotation for your audit log file.
+Audited events
+Here are the types of audited events captured from MongoDB in Log360 Cloud:
+Category
+Events
+DDL auditing
+Database created, Database dropped, Collection created, Collection dropped, Collection renamed, Index created, Index dropped, DDL summary
+DML auditing
+Select queries, Insert queries, Update queries, Delete queries, Aggregation queries, Meta data queries, DML summary
+Execution analysis
+Failed queries
+Auditing account management
+Role created, Role dropped, Role updated, Grant operations, Revoke operations, Password changed, User created, User dropped, User updated,
+Failed account management queries
+Logon events
+User logon, Failed user logon, User logoff, Logon/logoff trends
+Server events
+Startup, Shutdown
+Viewing MongoDB reports
+To view MongoDB reports, navigate to the
+Reports
+tab and select
+MongoDB
+from the
+Custom Reports
+sub-tab.
+Enable MongoDB correlation rules
+To view the correlation rules, navigate to the
+Correlation
+tab ->
+Manage Rules
+.
+In the Manage Rules page, select
+MongoDB
+as the
+Rule Category
+to filter out the related correlation rules. You can enable them manually by selecting the rule and clicking on
+Activate
+in the
+Rule Status
+column.
+Enabling MongoDB Alerts
+To view the Alerts, navigate to the
+Alerts
+tab ->
+Manage Alert Profiles
+.
+In the
+Manage Alert Profiles
+page, select
+Custom Alert Profiles
+as the
+Alert Profile Type
+. Click the search icon and add MongoDB to filter out the alert profile(s). Select the profile(s) and click the green check mark icon
+to enable the alert profile.
+To associate the log source, click the edit icon to open the
+Edit Alert Profile
+window. In the
+Log Source
+field, click the add button and select the configured log source for
+MongoDB
+. Click
+Update
+to save the changes.

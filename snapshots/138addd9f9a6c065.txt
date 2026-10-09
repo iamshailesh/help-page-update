@@ -1,0 +1,57 @@
+All ESX and ESXi devices run a syslog service (syslogd), which logs messages from the VMkernel and other system components to a file.
+To configure the syslog service on an ESX device:
+:
+Neither vSphere Client nor vicfg-syslog can be used to configure syslog behavior for an ESX device. To configure syslog for an ESX device, you must edit the
+/etc/syslog.conf file
+.
+To configure the syslog service on an ESXi device:
+On ESXi devices, you can use the vSphere Client or the vSphere CLI command vicfg-syslog to configure the following options:
+Log file path
+: Specifies a datastore path to the file where syslogd logs all messages.
+Remote host:
+Specifies a remote device to which syslog messages are forwarded. In order to receive the forwarded syslog messages, your remote host must have a syslog service installed.
+Remote port
+: Specifies the port used by the remote host to receive syslog messages.
+Configuration using vSphere CLI command
+: For more information on vicfg-syslog, refer the
+vSphere Command-Line Interface Installation and Reference Guide
+.
+Configuration using vSphere Client
+:
+In the vSphere Client inventory, click on the host.
+Click the
+Configuration
+tab.
+Click
+Advanced Settings
+under
+Software
+.
+Select
+Syslog
+in the tree control.
+In the
+Syslog.Local.DatastorePath
+text box, enter the datastore path to the file where syslog will log messages. If no path is specified, the default path is
+/var/log/messages
+.
+The datastore path format is [<datastorename>] </path/to/file> where the path is relative to the root of the volume backing the datastore.
+Example
+: The datastore path [storage1] var/log/messages maps to the path / vmfs/volumes/storage1/var/log/messages.
+In the
+Syslog.Remote.Devicename
+text box, enter the name of the remote host where syslog data will be forwarded. If no value is specified, no data is forwarded.
+In the
+Syslog.Remote.Port
+text box, enter the port on the remote host where syslog data will be forwarded. By default
+Syslog.Remote.Port
+is set to
+514
+, the default UDP port used by syslog. Changes to
+Syslog.Remote.Port
+only take effect if
+Syslog.Remote.Devicename
+is configured.
+Click
+OK
+.

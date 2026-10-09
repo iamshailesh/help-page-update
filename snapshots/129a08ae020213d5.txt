@@ -1,0 +1,69 @@
+EventLog Analyzer analyses data from vulnerability scanners and provides insights to help
+identify vulnerabilities within the network. For this you need to export data from the
+respective vulnerability scanners and then import it to EventLog Analyzer. You can export
+the data by following the steps below
+Select a scan under Scans Tab.
+In the upper-right corner, click Export
+From the drop-down box, select Nessus.
+Adding vulnerability scanners to EventLog Analyzer
+To monitor vulnerability scanner data in EventLog Analyzer, you need to import the
+corresponding log data to the EventLog Analyzer server. You can import log data by
+navigating to Settings > Vulnerability Data Analysis > Import.
+Enter the vulnerability scanner's name.
+Choose the vulnerability scanner's application type.
+Specify the location of the log file which has to be imported.
+Click on Import.
+Reports on Nessus vulnerability data
+The information on potential vulnerabilities in a network including credential failures,
+elevated privilege failures, registry access failures gathered from Nessus are provided as
+reports. The information in the reports is also presented in the graphical format for
+improved insights.
+Available reports:
+GHOST in Linux - This report lists any detected instance of the GHOST vulnerability in
+Linux.
+Shellshock Report - This report contains information on the detected instances of the
+Shellshock privilege escalation vulnerability in Linux systems in your network.
+Admin Discovery Report - An overview of all the admin accounts in a network will be
+available in this report.
+Top exploitable vulnerabilities - An overview of the vulnerabilities in your network
+that are most prone to attacks will be available here.
+Credential failures report - An account of all instances of credential failures in your
+network will be displayed here.
+Elevated privilege failures report - Failed attempts at privilege escalation will be
+displayed here.
+Registry access failures - Failed attempts at accessing the Windows Registry will be
+recorded here.
+Patch report - A report of all the patches applied in the device will be displayed.
+Overall Nessus report - An overview of events in Nessus vulnerabilty scanners in your
+network will be available here.
+Ensuring Compliance to regulatory mandates:
+EventLog Analyzer helps in complying with regulatory mandates such as the GDPR, PCI DSS and
+NIST. These regulations mandate that critical events in devices and applications that could
+potentially lead to a data breach need to be monitored. If any indication of a breach is
+detected, remediating action has to be taken to mitigate this risk. Information from
+vulnerability scanners like Nessus form a critical part of the data that needs to be
+monitored.
+For instance, the risk assessment (ID.RA) section of NIST compliance that states,
+"The organization understands the cybersecurity risk to organizational operations
+(including mission, functions, image, or reputation), organizational assets, and
+individuals. Threat and vulnerability information is received from information sharing
+forums and sources."
+The data from vulnerability scanners that can be used to ensure compliance to regulations are
+also categorized according to the device types, in EventLog Analyzer. The solution
+categorizes the reports as follows based on the devices' data that Nessus analyzes.
+Windows devices
+Unix devices
+Databases
+Cisco IOS
+Huawei
+Unix file contents
+IBM iSeries
+SonicWall, SonicOS
+Citrix XenServer
+VMware, nessus, and vSphere infrastructure
+Once the Nessus vulnerability scanner is added, this data from Nessus can be manually
+imported into EventLog Analyzer or automated imports can be scheduled. This data is then
+collated into comprehensive reports to comply with PCI DSS requirements.
+Denial of remote access software
+Denial of insecure communication
+Handling false positives

@@ -1,0 +1,139 @@
+Ports required for agentless communication
+PORTS
+INBOUND
+OUTBOUND
+SERVICE
+Additional Rights and Permissions
+TCP/135
+Windows Device
+EventLog Analyzer Server
+RPC
+UserGroups:
+Event Log Readers
+Distributed COM Users
+User Permissions:For root\cimv2 in WMI Properties:
+Enable Account
+Remote Enable
+Read Security.
+Firewall Permissions:Predefined Rule:Windows Management Instrumentation (WMI)
+TCP/139
+Windows Device
+EventLog Analyzer Server
+NetBIOS session RPC/NP
+TCP/445
+Windows Device
+EventLog Analyzer Server
+SMB RPC/NP
+Dynamic ranges of RPC ports - TCP/49152 to 65,535
+Windows Device
+EventLog Analyzer Server
+RPC randomly allocates high TCP ports for Windows Server 2008 and later versions, as well as for Windows Vista and subsequent versions
+Service account permissions
+Domain Setup
+Workgroup Setup
+Domain Setup
+For admin users
+In a domain setup, the domain admin privilege allows admins to collect logs in Windows devices.
+For non-admin users
+A service account has to be set up with the least privileges to collect logs in a domain setup. To create a service account with least privileges, follow the steps below.
+Step 1: Create a new user
+Log in to your domain controller with domain admin privileges.
+Open the Run command and type dsa.msc to open Active Directory Users and Computers.
+Right click on your domain â New â User.
+Step 2: Create a new domain level GPO and link the GPO
+Open the Run command in domain controller and type gpmc.msc to open Group Policy Management Console.
+Right click on the domain â Create a GPO in this domain and link it here.
+Name the GPO as "ELA GPO" and click OK.
+Step 3: Add user to Event Log Readers and Distributed COM user
+Open the Run command in domain controller and type gpedit.msc to open the Group Policy Management Console.
+Right click on the created GPO â Edit.
+In the Group Policy Management Editor, click on User Configuration âPreferences â Control Panel Settings â Local Users and Groups.
+Right click on Local Users and Groups â New â Local Group.
+Under group name, select Event Log Readers group â Add the current user â Add and select the created user.
+To add Distributed COM users, repeat step 5 by selecting Distributed COM Users group under group name.
+Note
+Event Log Readers
+: Members of this group are allowed to read event logs.
+Distributed COM Users
+: Members of this group are allowed to launch, activate, and use Distributed COM objects on the computer.
+Step 4: Enable WMI and Remote Event Log Management traffic through Firewall
+Open the Run command and type gpmc.msc to open the Group Policy Management Console.
+Right click on the GPO created â Edit.
+Select Computer configuration â Policies â Windows Settings â Security Settings â Windows Firewalls with Advanced Security â Inbound Rules.
+Right click on Inbound Rules â New Rule and select WMI in predefined field â select all rules â Allow connection.
+To allow Remote Event Log Management connection, repeat step 4 by selecting Remote Event Log Management in the predefined field.
+Note
+These rules open ports of the range, 49152 - 65535, that are exclusive for WMI communication and so these cannot be accessed by other applications.
+Step 5: Force the group policy
+Open command prompt and enter â
+gpupdate /force
+in the domain controller.
+Repeat the above step for all domain computers with admin privilege.
+Step 6: Grant necessary WMI permissions
+a. For Single Computer (Domain/Workgroup)
+Search Computer Management from Start menu and select Open as Administrator.
+Select Services and Applications â WMI controller
+Right click on WMI controller â Properties â Security tab â select Root\cimv2 in the namespace â Security.
+Add the non-admin user and provide permissions such as Enable account, Remote Enable, Read Security, and Execute Methods.
+Select Advanced â User name â Add â Applies to: This namespace and subnamespaces and click OK.
+Note
+Enable Account
+: Allows users to enable WMI account.
+Remote Enable
+: Allows users to enable remote access to WMI resources.
+Read Security
+: Allows users to read the security setting of WMI resources.
+Execute Method
+: Allows users to execute a method defined within WMI classes.
+These permissions are applied to the namespace and subnamespaces.
+b. For Multiple Domain Computers (Windows servers and workstations)
+Grant WMI Namespace Security Rights using GPO (PowerShell script)
+Make sure that the user has the privilege to run the script in the workstation. If not, please refer to the steps below to enable the privilege:
+In the Local Group Policy Editor,
+Navigate to Computer Configuration > Administrative Templates > Windows Components > Windows PowerShell.
+Double-click on the
+Turn on Script Execution
+option.
+Script download link
+Add the script WMIrights.ps1 file in the shared location in the domain.
+Right click on the created WMI NameSpace Security Rights GPO â Edit.
+Select PowerShell Scripts tab â Add.
+In the Add Script dialog box, click Browse and select the PowerShell script (WMIrights.ps1) file from the shared location and set the parameter as "domainname\username".
+Click OK to return to the Startup Properties dialog box â Apply â OK.
+Configuring Administrative Template Settings
+On the left pane of the Group Policy Management Editor, navigate to Computer Configuration Administrator Templates System.
+Under System, select Scripts.
+On the right pane of the GPO Editor, double-click on Run logon scripts synchronously, and enable it â Apply â OK.
+Enable Maximum wait time for Group Policy scripts and set the maximum time at 10 seconds.
+Navigate to Logon under System, on the right pane double-click Always wait for the network at startup and logon, and enable it â Apply â OK
+Navigate to Group Policy under System, on the right pane double-click Configure Group Policy slow link detection, and enable it â Apply â OK.
+Apply the GPO
+On the left pane of the Group Policy Management Editor, right-click the required GPO â Properties.
+Navigate to the Security tab and unselect the Apply Group Policy permissions for Authenticated Users â Add.
+In the dialog box that appears, click Object Types.
+Enter the names of the required computers and groups and click Check Names.
+Select the required computers and groups and click OK to return to the properties dialog box.
+In the Security tab, select "Apply Group Policy" permissions to the selected computers and groups â Apply â OK.
+Restart the computers and repeat Step 5 to activate the GPOs for granting WMI permissions.
+Note
+:
+After all the required devices are given WMI permissions, remove the script from Computer Configuration Policies Windows Settings Scripts (Startup/Shutdown) â Startup or the scripts will run every time during startup.
+Not applicable for Multiple workgroup devices.
+Workgroup Setup
+Step 1: Add user to EventLogReader and Distributed COM users
+Log in to your workgroup with admin privileges and open the Run command and type compmgmt.msc to open Computer Management â Local User and Group.
+Right click on user and add new user.
+Right click on Groups â Select distributed COM users â Properties â Add the created user.
+To add user in Event Log Reader group, repeat step 3 and select Event Log Reader group.
+Step 2: Grant necessary WMI permissions:
+Refer
+Step 6: Grant necessary WMI permissions
+.
+Step 3: Enable WMI and Remote Event Log Management traffic through Firewall
+Open the Run command and type wf.msc to open Windows Firewall with Advanced Security.
+Right-click on Inbound Rules â New Rule and select
+Windows Management Instrumentation
+in predefined field â select all rules â Allow connection
+To allow Remote Event Log Management connection, repeat step 2 by selecting
+Remote Event Log Management
+in the predefined field.

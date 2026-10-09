@@ -1,0 +1,5 @@
+To generate a report in EventLog Analyzer, create a report profile, using the following menu option:
+Settings tab > Admin Settings > Management > Report Profiles
+To create a report profile refer to the procedure given in the âHow to create custom reportsâ section.
+How to delete report profile?
+Delete the profile(s) by clicking on the delete icon.

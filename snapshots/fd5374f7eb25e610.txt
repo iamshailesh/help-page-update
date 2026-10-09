@@ -1,0 +1,46 @@
+This page lists the prerequisites to run the Gateway Server.
+In this page
+Required ports
+Required permissions
+Hardware requirements
+Operating system requirements
+URL whitelisting
+Required ports
+The Gateway Server requires the following ports to communicate with the cloud application server.
+Inbound ports
+Port Numbers
+Description
+8200 (TCP)
+This is the default listener port for Gateway Server's proxy unit.
+Note
+Port 8200 is subjective to change as per product configuration.
+Outbound ports
+Apart from the ports blocked due to specific reasons by the organization's policy, the Gateway Server does not require any additional outbound ports to be configured.
+Required permissions
+The following permissions needs to be enabled on the Windows devices for Gateway Server installation.
+Action
+Permissions
+Windows Gateway Server Installation
+User Permissions
+Enable read, write and modify files permissions for "C:\Program Files\ManageEngine\DataSecurity Plus - Cloud Protection Gateway"
+Hardware requirements
+This section gives you information about the hardware requirements for the Cloud Protection Gateway Server installation.
+For 64-bit machines
+Any 64-bit (x64) 6-core processor or above, with a minimum speed of 2.4 GHz
+RAM of 12 GB or more
+Minimum of 2 GB space on the installation drive
+Operating system requirements
+The Cloud Protection Gateway Server can be installed and run on the following 64-bit operating systems and versions:
+Windows
+Windows Server 2019
+Windows Server 2016
+Windows Server 2012
+Windows Server 2008
+Windows 11
+Windows 10
+Windows 8
+Windows 7
+Virtual machine environments
+Any 64-bit virtual machine environment including VMware and others.
+URL whitelisting
+No specific URLs require whitelisting. Please maintain unrestricted URL access, provided your firewall policies are already in place.

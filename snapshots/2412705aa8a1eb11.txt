@@ -1,0 +1,66 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the various reports available in the product console to help administrators monitor firewall operations, analyze allowed and denied traffic, track user logon activity, detect intrusion attempts, and review system and configuration events.
+Available Reports
+Report group name
+Report name
+Device Severity Reports
+Information Events
+Notice Events
+Critical Events
+Emergency Events
+Error Events
+Alert Events
+Warning Events
+Debug Events
+Allowed Traffic Reports
+Allowed Traffic
+Top Traffic based on Source
+Top Traffic based on Destination
+Top Traffic based on Protocol
+Top Traffic based on Port
+Allowed Traffic Trend
+Denied Traffic Reports
+Denied Connections
+Top Denied Connections based on Source
+Top Denied Connections based on Destination
+Top Denied Connections based on Protocol
+Top Denied Connections based on Port
+Denied Connections Trend
+IDS/IPS
+Possible Attacks
+Top Attacks based on Source
+Top Attacks based on Destination
+Top Attacks based on Protocol
+Top Attacks based on Port
+Attacks Trend
+Logon Reports
+Firewall Logons
+Top Successful Logons from Source
+Top logons based on user
+Logons Trend
+Logoff
+Failed Logon Reports
+Firewall Failed Logons
+Top Failed Logons from Source
+Top failure logons based on users
+Failed Logons Trend
+System Events
+System Start
+System Reboot
+System ShutDown
+Configuration Reports
+Interface Up
+Interface Down
+pfSense Events
+All Events
+Important Events
+Read also
+This document elaborated the list of firewall reports available in the product console and how they help monitor traffic activity, security threats, system operations, and user access. Explore related report sections to gain deeper visibility into security events and operational trends.
+F5 reports
+Firepower reports
+H3C reports
+Stromshield reports
+Forcepoint reports

@@ -1,0 +1,317 @@
+In this page
+Overview
+Accessing log sources
+Overview
+The Log Sources page provides a centralized view of all configured log sources in your environment. It helps you monitor the status, activity, and log collection details of every integrated source from a single interface.
+The Log Sources page includes the following sub-tabs:
+Devices - Displays on-premises systems and network devices configured for log collection.
+Applications - Lists configured application log sources and their log collection timelines.
+Cloud Sources - Shows integrated cloud platforms and their log retrieval details.
+File Integrity Monitoring (FIM) - Monitor all changes, such as creation, deletion, modification, permission changes, renaming made to files and folders in Windows and Linux systems.
+Accessing Log Sources
+Click
+Log Sources
+in the top-right corner of the dashboard. You can also click
+View All Devices
+to access
+Log Sources.
+Figure 1: Accessing Log Sources in the dashboard
+In the
+Log Sources
+page, four sub-tabs will appear:
+Devices
+Applications
+Cloud sources
+File Integrity Monitoring (FIM)
+Figure 2: Sub-tabs of Log Sources
+Devices
+Follow these steps to view and manage the devices configured for log collection:
+In the
+Device(s)
+tab. Use the filter drop-down at the top to choose one of the following options:
+All Devices:
+Displays all configured devices.
+Active Devices:
+Shows devices that are currently sending logs.
+Enabled Devices:
+Displays devices that are currently enabled for log collection.
+Figure 3: Selecting devices
+You can also select the checkbox
+Exclude Synced Devices
+to hide devices that are already synchronized with other Log360 components.
+NOTE
+Excluded Synced Devices is only applicable for Log360
+Figure 4: Excluding synced devices
+Click the
+icon to add or remove additional columns from the table view as needed.
+Select the checkbox next to the columns you want to add, and then click
+Apply
+to update the table view.
+Figure 5: Adding columns to the table
+The table includes the following fields:
+Device:
+Displays the name of the device or IP address.
+Event Count:
+Shows the total number of events received from the device. Click
+Show All
+view the following event details categorized by severity.
+Error:
+Indicates the number of error logs generated from the device.
+Failure:
+Displays the number of failure-related logs.
+Warning:
+Shows the count of warning-level logs from the device.
+Others:
+Displays the count of logs that do not fall under error, failure, or warning categories.
+NOTE
+Log severity levels vary based on the log source type. Common severity levels that may appear under Others include:
+Syslog severity levels: Emergency, Alert, Critical, Notice, Information, Debug
+Windows severity levels: Information and Success.
+Figure 6: Viewing events categorized by severity
+Last Message Time:
+Indicates the timestamp of the most recent log message received from the device.
+IP Address:
+Displays the IP address associated with the device.
+Device Type:
+Shows the operating system or type of device
+Last Scan On:
+Displays the date and time when the last device scan was performed.
+Next Scan On
+: Displays the scheduled time for the next scan, if applicable.
+Monitoring Interval:
+Indicates whether the device is monitored in real time or at specific intervals.
+Status:
+Displays the current state of log collection for each device.
+Click
+Show Name
+to view the device name.
+Figure 7: Viewing device name
+You can also click
+Show IP
+to display the device's IP address instead.
+Figure 8: Viewing IP
+You can also click
+Hide
+to remove the event count categorized by severity.
+Figure 9: Hiding event count categorized by severity
+Use the
+Search
+icon to locate a specific device by name quickly or IP address.
+Figure 10: Locating a specific device
+Hover next to the
+Last Message Time
+column to view the
+Last 10 Events
+option.
+Figure 11: Viewing last 10 events
+The
+Last 10 Events
+displays the ten most recent events received from the selected device.
+Figure 12: Viewing last 10 events
+In the
+Last 10 Events
+collected window, you can see event details such as,
+Time:
+Displays the exact timestamp when the event occurred.
+Event ID:
+Indicates the unique identifier assigned to the event.
+Source:
+Specifies the application or service that generated the event.
+Severity:
+Represents the criticality level of the event.
+Type:
+Denotes the category or classification of the event.
+Facility
+: Identifies the system process or component that produced the event.
+Message:
+Provides a brief description or summary of the event details.
+Click the icon to customize the view. Select the checkbox next to the fields you want to display and click Apply to update the table.
+Figure 13: Adding or removing columns
+To modify your list of devices, click
+Manage Devices
+to add, edit, or remove device configurations.
+Click the
+icon to refresh the device list and view the latest event and monitoring data.
+Figure 14: Refreshing log sources
+Click
+Export
+as to download the list of devices in
+CSV
+or
+PDF
+.
+Figure 15: Exporting devices
+When you select an option, the export will begin and the below pop-up appears.
+Click the
+icon to view the export history. Click
+Download
+to retrieve the exported file or
+Clear
+to delete it.
+Figure 16: Viewing export history
+Applications
+The Applications tab displays all configured application log sources. From this tab, you can view the import timeline for each application, including when log collection started, when it ended, and when the logs were last imported, along with the total log count.
+Follow these steps to view and manage the application log sources:
+Click the
+icon to narrow down the list of application log sources.
+You can filter by selecting
+Log Source Type
+or
+Log Source Group
+. By default, the filter is set to
+All
+, displaying every application log source.
+Figure 17: Filtering application log sources
+Select
+Clear Filter
+to reset the view.
+Figure 18: Clearing filters
+Use the
+icon to locate a specific application by the device name or IP.
+Figure 19: Locating an application
+Click
+Show IP
+to display the IP address associated with the device.
+Figure 20: Viewing IP associated with the device
+You can also click
+Show Name
+to display the name associated with the device.
+Figure 21: Viewing device name
+The table includes the following fields:
+Device:
+Displays the device name or IP address associated with the application.
+Log Source Type:
+Shows the type of application or log format configured for collection.
+Imported Time:
+Indicates when logs were last imported.
+Start Time:
+Displays when the log collection or import process began.
+End Time:
+Displays when the log collection or import process ended, if applicable.
+Total Count:
+Shows the total number of logs collected from the application.
+To modify your list of application log sources, click
+Manage Applications
+to add, edit, or remove configurations.
+Figure 22: Managing applications
+Click the
+icon to update the application list and view the most recent data.
+Figure 23: Reloading application data
+If applicable, click
+Import Logs
+to manually upload application log files.
+Figure 24: Importing logs
+Click the
+icon to add or remove columns from the table.
+Select the checkbox next to the fields you want to display and click
+Apply
+to update the table view.
+Figure 25: Adding or removing columns
+Click the value under
+Total Count
+to open the
+Application Event Details
+window and view the events collected for that application.
+Figure 26: Viewing application event details
+The Application Event Details window displays the following fields:
+Time:
+Shows the exact timestamp when the event occurred.
+Message:
+Provides a brief description or summary of the event content.
+Figure 27: Viewing application event details
+Click the
+icon to customize the event details table.
+Select the checkboxes for the fields you want to display and click
+Apply
+to update the view.
+Figure 28: Adding or removing columns
+In the
+Application Event Details
+window, Click
+Export
+as to download the event details in
+CSV
+or
+PDF
+format.
+Figure 29: Exporting event details
+After initiating an export, click the
+icon to view past exports.You can
+Download
+an exported file or click
+Clear
+to remove it from the history.
+Figure 30: Viewing report export history
+Click the
+icon to show a search field above the
+Message
+column for filtering events by message.
+Figure 31: Using search
+Click the
+icon to close the search field and click the
+icon to remove the applied search filter.
+To return to the previous window, click
+Close
+.
+Cloud sources
+The Cloud Sources tab displays all configured cloud-based log sources. From this tab, you can view details such as the data source, tenant name, log count, data fetch interval, last scan time, last message time, and the status of log collection.
+Follow these steps to view and manage cloud log sources:
+Use the
+icon to locate a specific cloud source by data source type.
+Figure 32: Locating cloud sources
+Click
+Manage Cloud Sources
+to add, edit, or remove cloud source configurations.
+Figure 33: Managing cloud sources
+Click the
+icon to add or remove columns from the table. Select the checkboxes for the fields you want to display and click
+Apply
+to update the table.
+Figure 34: Adding or removing columns
+Click the
+icon to reload the table.
+Figure 35: Refreshing the table
+The table includes the following fields:
+Data Source:
+Displays the cloud service or platform from which logs are collected.
+Name:
+Displays the tenant or integration associated with the cloud source.
+Count:
+Indicates the total number of logs collected.
+Data Fetch Interval:
+Displays how often logs are retrieved from the cloud source.
+Last Scan Time:
+Shows the most recent time the cloud source was scanned for logs.
+Last Message Time:
+Displays the timestamp of the most recent event received.
+Status:
+Indicates the status of log collection.
+Hover next to the
+Last Message Time
+value to access the
+Last 10 Events
+option and view the most recent events collected for that cloud source.
+Figure 36: Viewing last 10 events
+In the
+Last 10 Events
+window, click the
+icon to customize the fields shown in the event details table. Select the required checkboxes and click
+Apply
+to update the view.
+Figure 37: Adding or removing columns
+To return to the
+Cloud Sources
+tab, click
+Close
+.
+File Integrity Monitoring
+Click
+Select Devices
+redirects you to the File Monitoring page. Refer to
+this
+page for detailed steps on configuring and managing file monitoring.
+Figure 38: File integrity monitoring
+Read also
+This page explained how to monitor and manage configured log sources, including devices, applications, cloud integrations, and file integrity monitoring. For more information on related dashboard features, refer to:
+Dashboard overview
+Predefined tabs and widgets

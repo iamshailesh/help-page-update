@@ -1,0 +1,71 @@
+In this page
+Overview
+Pre-requisites
+Machine learning to detect anomalies
+Time anomaly
+Count anomaly
+Pattern anomaly
+Overview
+This page outlines the prerequisites for using UEBA in Log360 Cloud and explains how its machine learning models detect different types of anomalies. It also includes the conditions required for the activation of this feature and how time-based, count-based, and pattern-based anomaly detection models are trained and applied.
+Pre-requisites
+Please note that the UEBA capability of Log360 Cloud is available only for the
+Professional plan, Zoho One and MSSP
+users. If you are not using either of these plans, upgrade your instance to these plans.
+NOTE
+The machine learning model stops the intake of logs for analysis once the professional plan expires. All the trained data of the Time anomaly model will get deleted after 14 days post expiry of the plan and it will have to be re-trained again for anomaly detection once the plan is renewed.
+Machine learning to detect anomalies
+ManageEngine Log360 Cloud's UEBA uses unsupervised learning to detect anomalies. The training details for each type of anomaly detection method are as follows:
+NOTE
+During the initial training phase, the machine learning model may produce false positives as it is still in the process of learning baseline behavior patterns. Over time, as the model processes more data and refines its understanding, the accuracy of anomaly detection improves and false positives are reduced.
+Time-based anomalies:
+Time-based anomalies are unusual data points that deviate significantly from the expected behavior. These anomalies are identified by analyzing data collected over time and looking for deviations from the established trends or other temporal patterns.
+Here's a breakdown:
+Data Points:
+All logs that come in a span of 15 minutes will be considered as a data point. The UEBA module needs to be trained with
+one day's worth of data
+to understand and baseline the normal behavior of each user and entity with the actions associated with them.
+Normal Behavior:
+The normal, recurring patterns observed in the time series data
+Deviation:
+A data point or sequence of points that is noticeably different from this expected behavior.
+Anomalies that can be detected based on this method:
+Unusual login time, for instance. A user who usually logs in at 8 am suddenly logs in at 10 pm. Such deviations are flagged and notified as anomalies.
+Count-based anomalies:
+Count-based anomalies, also known as frequency-based anomalies, are anomalous data points that occur with an unusual frequency of events compared to the expected or normal count.
+Here's a breakdown:
+Data point:
+For count-based anomaly detection, the UEBA module requires 14 data points for training. In this instance, a single data point represents logs collected over a 1-hour period.
+Focus on how many:
+Instead of looking at the value of data points (like in time-based anomalies), the module looks at
+how often
+something happens within one datapoint.
+Unusual frequency:
+An anomaly is detected when the number of occurrences is significantly higher than what's typically observed.
+Anomalies that can be detected based on this method:
+Logon Failures, for instance. The usual amount of logon failures faced by a host may be 5-10. A sudden spike in this number could hint at anomalous behavior, eventually surfacing as an attack like Brute Force attack.
+Pattern-based anomalies:
+Pattern-based anomalies are deviations from established sequences of event occurrences.
+Unlike time and count anomalies which are focused on finding the anomalous data points based on the number of events that fall into a particular data point range, pattern-based anomalies involve a series of subsequent actions, as a whole.
+Here's a breakdown:
+Training phase:
+To detect, pattern-based anomalies, UEBA module of Log360 Cloud should be trained with minimum of 2,000 events or, data amounting to approximately 7 days, whichever condition is met first.
+Focus on Sequences:
+These anomalies aren't about individual data points being odd, but rather the probability of such sequences to occur is very less.
+Established Patterns:
+These are the normal, repeating sequences or structures learned from historical data. This could involve specific orderings of events, co-occurrences, or cyclical behaviors.
+Deviation in Sequence:
+An anomaly occurs when the observed sequence in the event has less probability to occur from these learned patterns.
+Anomalies that can be detected based on this method:
+Usual devices for logins, for instance. A user usually logs in with specific machine- Host1, Host2, Host3 for example. If the same user deviates from this usual pattern of behavior and logs in into Host4 machine, this will be detected as a pattern anomaly since the usual sequence of his actions have been disrupted. Anomaly is detected in case of a sudden spike in usage of device(s)/machine(s) too. Example, if Host3 is usually a lesser used machine and all of a sudden its usage increases noticeably, then that will be detected as an anomaly as well.
+NOTE
+In the cases of time and count anomaly detection there lies a limitation associated with the older logs. For instance, a scheduled job runs every hour to process events. If the job runs at 10:00 AM, it will fetch and process logs from the 8:00 AM to 9:00 AM window. Logs that arrive late (after processing for their corresponding time window has already started or completed) will be skipped and not processed. This will be seen in cases like:
+Agent was down/didn't have connectivity for some time, and so the logs were uploaded late.
+Storage is full, and logs get uploaded later when space becomes available.
+If the log collection interval is itself greater than 1 hour.
+If old logs are imported through the import flow.
+Limitation with working days configurations:
+If a user changes the working days configuration in the product with the UEBA feature already active, then all the previously trained models will be deleted by the ML model and the training has to be restarted again, post configuration. An error message pops-up like the below when such configuration changes are attempted:
+Read also
+This document elaborated the pre-requisites and the training phase of the anomaly models of Log360 Cloud's UEBA. For leveraging the capabilities of UEBA, refer the below articles:
+Anomaly rules in UEBA
+Investigating anomalies

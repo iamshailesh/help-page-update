@@ -1,0 +1,46 @@
+The Centralized Technician Audit provides a unified view of audit data for all users, including MSSP admins, operators, and customer portal users. It enables you to track and review the actions of MSSP admins and operators performed on customer accounts in a single location.
+Each audit log contains the following details:
+Technician's name
+Customer on which the action was performed
+Time of the action
+The module in which the action occurred (e.g., Alerts, Compliance, etc.)
+The message generated during the operation
+Note
+MSSP super admin and all other admins
+can view audit logs for all Customers and technicians while
+MSSP operators
+can view audit logs for their assigned Customers.
+Accessing the Technician Audit Dashboard
+Go to
+Settings
+Navigate to
+Admin-> Admin Settings-
+>
+Technician Audit
+.
+Adding or removing columns:
+Click the
+Add or Remove Columns
+button in the top-right corner of the dashboard.
+In the
+Select Columns
+dialog box, choose the columns you want to add or remove.
+To rearrange the columns, click and drag them from the right side of the dialog box.
+Searching for information:
+Click the
+Search
+button on the top-left corner of the dashboard.
+Once enabled, the columns in the dashboard becomes searchable .
+Auditing Specific Technicians or Customers
+Auditing technicians:
+Click the
+Select Technician
+button at the top of the dashboard.
+In the dialog box, choose the technicians or usernames you want to audit.
+Auditing customers:
+Click the
+Select Customers
+dropdown at the top of the dashboard.
+Select the customers whose actions you want to audit.
+Note
+The MSSP admin and operator 's actions will be audited with the customer name as "Log360 Cloud MSSP".

@@ -1,0 +1,131 @@
+Extensions are pre-built software components that can either add a set of custom features into Log360 Cloud or integrate other third-party applications into Log360 Cloud. Log360 Cloud's flexible platform enables it to address a wide-range of industry specific use cases.
+To help create new ManageEngine Log360 Cloud extensions, we have introduced
+Extension Profile Generator
+and
+Extension Builder
+. These capabilities allow developers to build powerful extensions and third-party integrations and publish them to the larger community of ManageEngine Log360 Cloud users through the ManageEngine Marketplace.
+Nature of Extensions
+The extensions you create fall into one of the following two categories:
+Native Extensions
+Third-Party Application Extensions
+Native Extensions
+Native extensions enhance ManageEngine Log360 Cloud's functionality by adding custom features to the system. These extensions can include one or more of the following components:
+Log Formats
+Reports
+Alert Profiles
+Security Rules
+Custom Widgets
+Web Tabs
+Applications
+Custom Functions
+Playbooks
+Connections
+For instance, if a Log360 Cloud customer requires out-of-the-box reports, alert profiles, and security rules for their organization, a developer can build native extensions and share them with the customer, saving them significant time on customization.
+Third-party Application Extensions
+Third-party application extensions enable users to integrate data from external security or business applications into Log360 Cloud. Customers can download the extension for the application they use in their organization from the Marketplace, install it, and utilize it seamlessly.
+To integrate data from third-party applications, users must first add applications. Once the data is integrated, they can create the following features:
+Log Formats
+Reports
+Alert Profiles
+Custom Widgets
+Web Tabs
+Applications
+Custom Functions
+Playbooks
+Connections
+Compliance
+Dashboard
+How to install extensions
+Installing an Extension from the Marketplace
+To install an extension from the Marketplace:
+Navigate to
+Settings â Admin â Marketplace â All Extensions
+.
+Browse the
+Marketplace
+, select the desired extension, and click
+Install
+.
+Your Log360 Cloud organization, where the extension will be installed, will be listed.
+Review the
+Terms and Conditions
+and agree to install the extension.
+Once you click
+Install
+, you will be redirected to
+Settings â Admin â Marketplace â Installed Extensions
+.
+Click
+Continue to Install
+to finalise the installation.
+Before installing, you can customize extension components such as reports, log formats, and other configurations using the
+Customize
+feature.
+Installing an Extension from a Private URL
+To install an extension shared privately by a developer or vendor:
+Click
+Install Private Extensions
+.
+Paste the
+Installation URL
+of the extension.
+Click
+Fetch Extension Details
+.
+Click
+Continue to Install
+after agreeing to the
+Terms and Conditions
+.
+Just like extensions from the Marketplace, private extensions can also be customized before installation.
+Updating an Extension
+If an update is available for an installed extension, an
+Update
+icon will appear in the
+Installed Extensions
+table.
+Click the
+Update
+icon to update the extension.
+Similar to installation, users can customize the components that need to be updated.
+Uninstalling an Extension
+To uninstall an extension:
+Click the
+Delete
+icon in the
+Manage Extensions
+table.
+When an extension is deleted, all configurations associated with it will also be removed.
+Modifying an Extension
+After an extension has been customized and installed, users can reinstall components that were not initially installed by clicking the
+Modify
+icon in the
+Manage Extensions
+table.
+Extension Details
+To view an extension's summary, usage statistics, installation history, and contents, click Details in the
+Manage Extensions
+table.
+Extension Configurations
+To configure applications or log sources for an extension:
+Click
+Manage
+in the
+Manage Extensions
+table.
+The configuration details window will open, allowing users to configure applications or log sources.
+Installation History
+To view the installation history of an extension, click the
+Installation History
+button.
+Troubleshooting Steps for Extension Installation Failure
+Step 1:
+Ensure that you have a stable internet connection.
+Step 2:
+Verify that the extension is compatible with your application's version.
+Step 3:
+Clear your browser cache and retry the installation.
+Step 4:
+Check the failure status in the Installation History for more details.
+Step 5:
+If the issue persists, contact our support team or the extension developer for further assistance.

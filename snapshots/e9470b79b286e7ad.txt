@@ -1,0 +1,71 @@
+The Log forwarding feature allows you to forward the logs collected from the configured sources to a designated cloud account.
+In this page
+Configure forwarding policy
+Edit forwarding policy
+Enable and disable forwarding policy
+Delete forwarding policy
+Note
+The logs will undergo compression prior to forwarding, with compression ratios ranging from 15% to 20% depending on the content of the logs.
+Configure forwarding policy:
+Go to
+Settings tab â Admin â
+under
+Data Storage â Log Forwarding
+.
+Click
+Configure Forwarding Policy
+.
+Enter a Policy Name and select the Cloud Account (or configure a Cloud Account by clicking on
+Configure Cloud Account
+), Bucket Name, Storage Class, and Encryption Type as required. Then click
+Configure
+.
+Once the Log Forwarding Policy is added successfully, the raw logs will be forwarded to the configured bucket in the path
+'Log360CloudLogs/<accountId>/RawLogs/year=<year>/month=<month>/day=<day>/hour=<hour>/min=<(mins in multiples of 5)>/<logZipName>'. (The folder path will be formed based on UTC timezone)
+Note
+The customer will be charged accordingly from the cloud source account side for performing the below option for this feature in Log360Cloud
+For AWS, operations includes s3:PutObject, s3:GetObject, s3:CreateBucket, and s3:ListBucket.
+Log360Cloud will not be responsible for the data stored in the Cloud Source Account.
+The bucket's
+lifecycle configuration
+can be established with a prefix that matches the provided file path pattern. Based on the specified requirements, Lifecycle rule can dictate actions for objects, including deletion or setting expiration dates.
+The forwarding history can be viewed by clicking
+Details
+near Forwarded Data Size.
+Edit forwarding policy:
+Click the
+Edit
+icon at the top-right of the policy details to edit the policy.
+Update the required values in the Edit page and click the
+Update
+button.
+The policy will be updated and the upcoming logs will be forwarding to the updated destination.
+Enable and disable forwarding policy:
+The toggle button near the Policy Name can be used to enable or disable the policy.
+Note
+Logs during this disabled period will not be forwarded again after enabling the policy.
+Enabled state
+Disabled state
+When you disable the Log Forwarding toggle, a confirmation pop-up is displayed.
+Click
+Yes
+to proceed.
+NOTE
+Log forwarding will be disabled. When the policy is re-enabled, any logs collected during the disabled period will not be forwarded.
+Delete forwarding policy:
+In the Log Forwarding Policy window, Click
+Delete
+to delete the policy.
+Note
+Deleting the policy won't delete the forwarded data in the cloud account.
+A confirmation pop-up will appear. Click
+Yes
+to delete the policy.
+Note
+This feature will be available for
+Free, Professional,
+and
+Enterprise
+users. Click
+here
+to know more on the licensing.

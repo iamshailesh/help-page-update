@@ -1,0 +1,15 @@
+Encryption serves as a critical component in safeguarding information, ensuring it is readable only by the intended recipient. This process involves transforming the original content into an unrecognizable format, thereby providing a protective measure against potential data theft.
+Encryption can be used in two situations:
+Encryption in Transit
+Encryption at Rest (EAR)
+Encryption in Transit
+: This refers to data encryption while the data is in transit, including communication from your browser to our web server or to third-party entities via integrations. This form of encryption guards your data against man-in-the-middle attacks.
+Encryption at Rest (EAR)
+: This pertains to data that is stored and not moving, for example, on a disk, in a database, or in another form of media. In addition to data encryption during transit, encrypting data while it is stored on our servers ensures an even higher level of security. EAR protects against potential data leaks resulting from server compromise or unauthorized access.
+Log360 Cloud employs the AES-256 algorithm for encryption at the application layer. This symmetric encryption algorithm uses 128-bit blocks and 256-bit keys. We utilize the Data Encryption Key (DEK) to transform data from plaintext to ciphertext, which is further safeguarded using the Key Encryption Key (KEK) - offering another level of security. These keys are generated and managed by our in-house Key Management Service (KMS).
+What data do we encrypt in Log360 Cloud?
+Log360 Cloud ensures the encryption of the following types of data:
+All the data in transit from service to agent is end-to-end encrypted. Further, the device data, network details and domain details sent from agent to service is also end-to-end encrypted.
+Sensitive data such as integration tokens, secret access tokens, and user authentication credentials are encrypted to maintain confidentiality and integrity.
+Full-disk encryption
+Beyond application-layer encryption, we also offer full-disk encryption in our data centers located in India (IN), Australia (AU) and Japan (JP) thereby providing a comprehensive security solution for your data.

@@ -1,0 +1,33 @@
+Log360 is a unified
+security information and event management (SIEM)
+solution from ManageEngine. It is designed to help enterprises secure their IT environment, meet compliance mandates, and gain visibility into potential threats. By combining log management, Active Directory auditing, cloud security, user behavior analytics, and more into a single platform, it empowers security teams to detect, investigate, and respond to threats faster.
+The product offers:
+Security event management
+: Collect, analyze, and monitor logs from servers, applications, firewalls, databases, and endpoints.
+Threat detection, investigation, and response (TDIR)
+: Detect anomalies and insider threats using machine learning and user/entity behavior analytics (UEBA).
+Active Directory auditing
+: Track changes and monitor logons to prevent unauthorized access.
+Cloud security monitoring
+: Gain visibility into cloud platforms like Microsoft 365, AWS, and Azure.
+Compliance reporting
+: Generate out-of-the-box reports to meet global compliance mandates like GDPR, HIPAA, PCI DSS, SOX, NIS2, DORA, and more.
+In short, Log360 provides end-to-end visibility across on-premises, cloud, and hybrid environments, making it an integral part of a modern security operations center (SOC).
+Why Log360?
+Choosing Log360 helps enterprises achieve both
+security efficiency
+and
+compliance readiness
+. Hereâs why organizations prefer Log360:
+Comprehensive security coverage
+Log360 combines multiple security solutions into one platformâcovering log management, Active Directory auditing, cloud monitoring, data access governance, and privileged access management.
+Faster threat detection and response
+With built-in analytics and UEBA, Log360 detects unusual user activities, insider threats, ransomware, and data exfiltration attempts in real time.
+Simplified compliance
+Log360 provides prebuilt compliance reports and alerting mechanisms, helping organizations stay compliant with international and industry-specific regulations.
+Centralized visibility
+Security teams can monitor their entire IT infrastructureâon-premises, cloud, and hybridâfrom a single console, reducing complexity.
+Scalability and flexibility
+Designed for organizations of all sizes, Log360 scales easily with business growth while offering flexible deployment options (on-premises or cloud).
+Cost-effective SIEM
+By consolidating multiple tools, Log360 reduces the need for separate point solutions, making it a cost-efficient option for enterprises.

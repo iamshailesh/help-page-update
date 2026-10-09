@@ -1,0 +1,148 @@
+Synology NAS serves as a network storage device, providing centralized file storage, data backup, and media server functions. It offers remote access, app support, and robust data security, catering to both home and business needs. Integrating Synology with Log360 Cloud extends functionality, offering enhanced security through real-time tracking and facilitating regulatory compliance with comprehensive monitoring.
+Supported DSM versions
+DSM 5.0 and above
+Audited events
+Log360 Cloud audits these file activities:
+Create
+Read
+Rename
+Write
+Delete
+Permission changes
+Note
+Files Copy-N-Pasted reports will only be available for events triggered through the Copy-Paste action in Synology File Station.
+Prerequisites
+Ensure the SSH service is activated on your system to enable secure communication.
+Enable the SMB service, Windows network discovery, and log transfer in Synology NAS by applying it in Synology NAS. This ensures seamless data sharing and uninterrupted log flow for analysis and reporting.
+Install the Log Center package to facilitate log management if the log sending section is not available..
+Select specific log categories and priorities for transfer to the syslog server. Avoid selecting System and Connection logs, as they won't appear in reports and may inflate cloud storage usage.
+To enable the transfer of the File Station Logs, go to
+File Station > Settings > General
+and select
+Enable File Station Log
+.
+Required privileges
+The user needs to belong to the administrators group to access the necessary settings and configure auto log forwarding effectively.
+Configuring Synology NAS in Log360 Cloud
+Follow these steps to configure Synology NAS in Log360 Cloud:
+Navigate to
+Settings > Configuration > File Integrity Monitoring > Synology NAS
+.
+Enter the name of the Synology server, along with the correct credentials and SSH port number. Select an appropriate agent.
+Verify the entered credentials.
+Configure Syslog forwarding settings to select the syslog port and protocol for log forwarding. Note that the default port and protocol values of the selected agent will be used by default.
+Browse and select the specific files and folders you want to monitor. Alternatively, you can manually enter the location of the files/folders.
+Use the Filter to:
+Include/exclude file types.
+Exclude sub-locations within the main location.
+Exclude all sub-locations within the main location.
+Click Configure to initiate the configuration process.
+Note
+Auto log forwarding is enabled by default during the device configuration process.
+In the event of a log forwarding configuration failure, please review troubleshooting tips. Utilize the
+Configure
+button displayed below to set up log forwarding.
+Ensure that the port, protocol, and agent selected are correct, then click
+Configure
+to enable automatic log forwarding.
+Note
+Changing the agent here will impact the device configuration.
+Manual log forwarding configuration:
+Follow these steps to configure log forwarding manually:
+Open the
+Log Center
+and navigate to
+Log Sending
+. If Log Sending is not available, proceed to install the Log Center package from the Package Center.
+Select
+Send logs to a syslog server
+.
+Provide the name of the target server (referring to the IP address of Log360 Cloud Agent) and the syslog port number that Log360 Cloud Agent is listening to.
+Set the log format to IETF (RFC 5424).
+Click
+Apply
+.
+Note
+For Log Filters, choose the desired category and priority of logs you want to send to the syslog server. Avoid selecting System and Connection logs to prevent them from affecting reports and increasing cloud storage usage.
+Make sure to enable transfer logs for the chosen services.
+Troubleshooting
+Credentials verification:
+Error message:
+Connection to <server name> failed due to incorrect server name or port values.
+Solution:
+This error may arise when the server name does not resolve to the server's IP address. To resolve this issue, ensure that a ping to the Synology server using its server name resolves to the correct IP address. If not, consider appending the DNS suffix in the Advanced TCP/IP settings or adding a host record in the DNS server, mapping the name to the Synology server's IP address. If there is still difficulty pinging the server, verify the internet connection.
+Additionally, confirm that the SSH port used for configuration matches the SSH port enabled on the Synology server. Check and adjust this setting in Control Panel > Terminal & SNMP > Terminal > Port.
+Browsing location:
+Error message
+: Connection failed due to Error code: 5 - Access is denied. Please check your settings or contact admin.
+Solution:
+This error may arise due to incorrect credentials or insufficient read access to the specified location. To address this, provide credentials with appropriate privileges.
+Autolog forwarding failure
+Error message:
+Auto log forwarding configuration for <server_name> failed.
+Solution:
+Ensure proper credentials with sudo access.
+Verify the installation of the log center package on the Synology server.
+Proceed to configure log forwarding using the 'configure' button for automated setup or choose manual configuration if preferred.
+Error message
+: Auto log forwarding configuration for <server_name> has failed because port <port>/<protocol> is not available in the selected agent.
+Solution:
+Check whether the port is enabled and listening on the selected agent.
+If the port is not enabled, activate it in the 'Listener Ports' section. Select the
+Configure
+button in the Synology tab to set up log forwarding. Verify that the chosen port, protocol, and agent are correct.
+Click
+Configure
+to enable automatic log forwarding.
+If the port is not listening, it may be in use by another service. In such cases, stop the conflicting service using the port.
+Choose an enabled port that is listening on the selected agent and click
+Configure
+for log forwarding.
+Error message:
+Auto log forwarding configuration for <server_name> has failed due to the unavailability of a port in the selected agent.
+Solution:
+Ensure that any configured ports for the selected agent are enabled, and attempt to configure log forwarding using the same ports for the Synology device.
+Verify if any port is actively listening in the selected agent, and endeavor to configure log forwarding using the identified port for the Synology device.
+If needed, create and configure a new port for the selected agent, and then attempt to configure log forwarding using the newly assigned port for the Synology device.
+Unable to check if the locations exist
+Error Message:
+Unable to check if the locations exist due to Invalid Credentials
+Solution:
+This error can occur when invalid credentials have been updated.To resolve this issue:
+Provide credentials with appropriate privileges
+Error Message:
+Unable to check if the locations exist due to Server being unreachable
+Solution:
+This error can occur when invalid credentials have been updated.To resolve this issue:
+Ensure that a ping to the Synology server using its server name resolves to the correct IP address.If necessary, consider appending the DNS suffix in the Advanced TCP/IP settings or adding a host record in the DNS server to map the name to the Synology server's IP address.
+If pinging the server still presents difficulties, verify the internet connection. Additionally, confirm that the SSH port used for configuration matches the SSH port enabled on the Synology server. You can check and adjust this setting in Control Panel > Terminal & SNMP > Terminal > Port.
+Logs not monitored
+If the device status displays
+Logs are not being monitored [Configure]
+after successful configuration and log collection, it could indicate scenarios where a different user from another organization has configured the Synology server, or the Syslog forwarding IP has been manually changed in the Synology server.
+Solution
+: Utilize the
+Configure
+button to set up log forwarding again.
+Note
+Synology server can forward logs to only one device at a time.
+No data received
+When encountering the issue of not receiving any data, please follow the steps below to diagnose and address the problem:
+Step 1: Verify Synology server syslog configuration
+Go to the Synology server settings: Log Center > Log Sending.
+Ensure that the syslog configuration settings are correctly configured.
+Step 2: Confirm log forwarding
+Install
+the ManageEngine free syslog forwarder tool.
+Stop the ManageEngine Log360Cloud Agent service.
+In the syslog forwarder tool:
+Add the IP address of the Synology server.
+Specify the syslog port (typically 514) to which the Synology server forwards logs.
+Click
+Start
+to initiate the reception of syslog data.
+Step 3: Check for data reception
+If no data appears:
+Recheck the syslog configuration on the Synology server.
+Verify the accessibility of the Synology server from the agent.
+If the issue persists, reach out to our support team at support@log360cloud.com for further assistance.

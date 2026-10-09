@@ -1,0 +1,115 @@
+In this page
+Overview
+Configuring Embed link for dashboard and widgets
+Managing embed links
+Overview
+The Embed link feature in Log360 allows you to generate secure, external share links for specific dashboard tabs or individual widgets. This enables controlled, read-only access to selected security data without requiring users to log in to the Log360 console.
+Each embed link can be configured with a specific time range, refresh interval, and expiry period to ensure controlled data access. Embed links can also be managed, edited, regenerated, or deleted at any time.
+This page explains how to configure embed links for dashboards and widgets, and how to manage existing embed links.
+Configuring Embed link for dashboard and widgets
+Embed a dashboard
+Embed a widget
+Embed a dashboard
+In the Dashboard, navigate to the tab you want to embed.
+In the top-right corner, click the
+icon and select
+Embed Dashboard
+.
+Figure 1: Navigating to Embed Dashboard
+Provide a unique
+Link Name
+.
+Select the desired
+Time Range
+from the drop-down menu.
+Configure the
+Refresh Time
+(60 - 1440 minutes) and
+Expiry
+(1 - 365 days) using the drop-down options.
+Figure 2: Creating an embed link
+Click
+Create Link
+to generate the embed link for the dashboard.
+Figure 3: Creating an embed link
+To regenerate the link, click
+Regenerate Embed URL
+.
+Embed a widget
+In the Dashboard, click the
+icon and select
+Embed Widget
+corresponding to the widget that you want to embed.
+Figure 4: Embedding a widget in the dashboard
+Provide a unique
+Link Name
+.
+Select the desired
+Time Range
+from the drop-down menu.
+Configure the
+Refresh Time
+(60 - 1440 minutes) and
+Expiry
+(1- 365 days) using the drop-down options.
+Figure 5: Configuring an Embed widget link
+Click
+Create Link
+to generate the embed widget link.
+Figure 6: Creating Embed widget links
+To regenerate the link, click Regenerate Embed URL.
+NOTE
+The embedded widget will refresh automatically at the specified interval.
+The generated external share link will remain valid only until the specified expiry date.
+Managing embed links
+To manage embed dashboard links,
+In the dashboard, click the
+icon on the top-right corner and select
+Manage Embed Links
+.
+Figure 7: Accessing Manage Embed Links
+A table will appear displaying all the
+Active Dashboard Links
+. Go to
+Embed Dashboard Links
+.
+Figure 8: Viewing Active Dashboard Links
+To edit a specific link, locate the desired entry and click the
+Edit
+option next to it.
+Figure 9: Editing Embed Widget Links
+A window will appear allowing you to modify the properties of the chosen link. Make the necessary changes.
+Figure 10: Configuring Edit Embed Link
+Once done, click
+Save
+to apply the updates to the Active Dashboard Link.
+To delete, select the checkbox next to the entry you want to remove and click the
+icon.
+Figure 11: Deleting an embed link
+In the confirmation pop-up, click
+Yes
+to delete the embed link from the list permanently.
+To regenerate the link, select the icon. In the window that opens, click
+Regenerate Embed URL
+to generate a new embed URL while retaining the existing configuration.
+Figure 12: Regenerating Embed URL
+To manage embed widget links,
+In the dashboard, click the
+icon on the top-right corner and select
+Manage Embed Links
+.
+Figure 13: Accessing Manage Embed Links
+A table will appear displaying all the
+Active Dashboard Links
+. Go to
+Embed Widget Links
+.
+NOTE
+Follow the instructions from
+this
+step to edit, delete, or regenerate the embed link for a widget.
+Figure 14: Viewing Active Dashboard Link
+Read also
+This page explained how to configure and manage embed links for dashboards and widgets to enable secure external sharing. For more information on related dashboard features, refer to:
+Dashboard overview
+Predefined tabs and widgets

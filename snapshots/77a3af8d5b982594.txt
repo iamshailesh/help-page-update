@@ -1,0 +1,426 @@
+Widgets in ManageEngine Log360 Cloud are embeddable UI components that you can create on your own, using our
+JS Software Development Kit
+. These widgets can be used to perform certain functions that utilize data from third-party applications seamlessly.
+For example, with a custom widget in Log360 Cloud, you can seamlessly integrate data from your EDR or email security solution into Log360 Cloud, enabling you to monitor, analyze, and take necessary actionsâall from a single platform.
+Note
+Custom widgets can be created in
+all
+editions of Log360 Cloud.
+Please refer to
+this page
+for the supported browser versions.
+You can create up to a maximum of
+200 widgets
+in Log360 Cloud.
+Types of Widgets in Log360 Cloud
+Dashboard Widget
+Custom Report Widget
+Web Tab Widget
+Incident Workbench Widget
+Dashboard Widget
+You can build a custom widget for your dashboard in Log360 Cloud. After creating the custom widget under
+Settings â Admin â Developer Space â Custom Widgets
+, you can add it to your dashboard by using the
+Add Tab
+menu, where it will be listed in the dashboard settings.
+How to create a custom widget in Dashboard
+Custom Report Widget
+A widget can be added as a custom report in Log360 Cloud. After creating the custom widget under
+Settings â Admin â Developer Space â Custom Widgets
+, you can add it as a custom report by navigating to
+Reports â Manage Custom Reports â Add Report
+, and then selecting the Report Type as Custom Widget.
+How to create a custom widget in Custom Reports
+Web Tab Widget
+A widget can be added as a web tab in Log360 Cloud. After creating the custom widget under
+Settings â Admin â Developer Space â Custom Widgets
+, you can add it as a web tab by clicking the ... icon, navigating to
+Preferences â Add New Web Tab
+, and selecting the custom widget to be added as a web tab.
+How to create a custom widget in Web tab
+Incident Workbench Widget
+A widget can be added to the
+Incident Workbench
+in Log360 Cloud. This can be done directly from the
+Custom Widgets
+tab in the
+Settings
+, allowing you to integrate the custom widget seamlessly into the Incident Workbench.
+How to create a custom widget in Incident Workbench
+Adding a custom widget in Log360 Cloud
+A custom widget can be added to Log360 Cloud using the Zoho Extension Toolkit (ZET).
+Create a custom widget using ZET
+ZET, or the Zoho Extension Toolkit, is a command-line interface (CLI) designed to help developers build and package custom widgets for ManageEngine Log360 Cloud.
+A CLI is a text-based interface that allows users to interact with software by typing specific commands, receiving responses, and executing actions directly from the terminal or command prompt. While graphical user interfaces (GUIs) offer visual interaction, CLIs provide a simpler and more efficient way for developers to work, particularly when it comes to creating applications, managing software, or even building operating systems.
+Here's how you can build custom widgets using ZET and package and integrate these widgets with ManageEngine Log360 Cloud for enhanced functionality.
+Install the necessary components
+Prerequisites
+Visit the official Node.js website:
+https://nodejs.org/en/download/
+Choose the appropriate version for your operating system (Windows, macOS, or Linux) and download the installer.
+Once the installation is complete, verify that
+Node.js
+and
+npm
+are correctly installed by running the following commands in your terminal:
+Check Node.js version
+node -v
+This will return the installed version of Node.js, e.g., v14.18.1.
+Check npm version
+npm -v
+This will return the installed version of npm, e.g., 6.14.12.
+If both commands return a version number, it means Node.js and npm have been successfully installed.
+Installing the CLI for Zoho Extension Toolkit (ZET)
+To install the Zoho Extension Toolkit (ZET) CLI, follow these steps:
+Install the ZET CLI package
+Run the following command to install the zapps CLI node package:
+npm install -g zoho-extension-toolkit
+Verify the installation
+Once installed, run the following command to ensure that the installation was successful:
+$ zet //
+If the installation is successful, help information related to the zet command will be displayed.
+Creating a New Project Using ZET
+Follow these steps to create a new project using the Zoho Extension Toolkit (ZET):
+Initialize a New Project
+Run the following command to create a new project:
+zet init
+This command will display a list of available Zoho and ManageEngine services. Select the appropriate service for which you want to create a project template.
+Verify the Server Startup
+Once the project is created and the local development server starts running, verify its status by opening one of the following URLs in your browser:
+Manifest File: http://localhost:5000/plugin-manifest.json
+Widget Preview: http://localhost:5000/app/widget.html
+If these URLs load correctly, your project has been successfully created and the local server is running.
+Including Resources in Your Widget Project
+All necessary files required for rendering your custom widget are stored inside the "
+app
+" folder of your project.
+Starting the Server
+To run your app locally and test it in your sandbox instance, start a local HTTP server using the following command:
+$ zet run
+This will start the HTTP server on your local machine at
+port 5000
+. Ensure that this port is not occupied by any other process before running the command.
+Verify the Server
+Once the server starts, open the following URL in your web browser to check if it is running successfully:
+http://127.0.0.1:5000/app/widget.html
+If the page loads correctly, your widget is now running in a local environment and is ready for testing.
+Validating and Packaging the Application
+Before uploading your application, it is essential to validate and package it correctly. Follow these steps:
+Validate the Application
+Run the following command to check for any issues in your app package:
+$ zet validate
+This will scan your application for any violations. If issues are detected, they must be resolved before proceeding with the upload.
+Package the Application
+Once validation is successful, generate an uploadable ZIP file by running:
+$ zet pack
+This will create a ZIP file inside the
+"dist"
+folder of your project directory. The packaged file can then be uploaded to
+Log360 Cloud
+for deployment.
+Adding the Created Widget to Log360 Cloud
+Follow these steps to add the custom widget to Log360 Cloud:
+a) Navigate to Developer Space
+Go to
+Settings â Developer Space â Custom Widgets
+in Log360 Cloud.
+b) Access Developer Documentation
+The
+Developer Documentation
+link provides detailed instructions on how to build a custom widget for Log360 Cloud. Refer to it for further information.
+c) Check Sample Widgets
+The
+Sample Widgets
+section takes you to pre-created widgets within Log360 Cloud.
+These default widgets serve as examples, helping you understand how custom widgets can be designed and used.
+You can download and unzip the sample widgets, then open them in a code editor to see how they work.
+d) Create a New Widget
+To create a new widget, click on
+Create Custom Widget â Create Now
+.
+Log360 Cloud also offers a list of available widgets that you can add by selecting the custom widget.
+e) Fill Out the Widget Creation Form
+In the
+Create Custom Widget Form
+:
+Provide the
+Widget Name
+and
+Description
+.
+Select the
+Widget Type
+from the following options:
+Dashboard Widget
+Custom Report Widget
+Incident Workbench Widget
+Web Tab Widget
+Choose the
+View Widget Location
+to determine where your custom widget will be placed within Log360 Cloud.
+f) Custom Widget Creation Modes in Log360 Cloud
+Log360 Cloud supports
+two modes
+for custom widget creation:
+1. Development Mode
+In this mode, you can
+run and test
+your custom widget locally before deploying it.
+Start the widget by running:
+$ zet run
+Add the URL (ex: http://localhost:5000/app/widget.html) of your widget to the
+Widget URL
+input field in Log360 Cloud.
+Note
+Any changes made to the widget code
+automatically reflect
+in Log360 Cloud (whether in the
+dashboard, web tab, or custom report
+).
+Development Mode is
+not available for Incident Workbench Widgets
+, as field mapping is required in plugin-manifest.json.
+The custom widget in
+development mode is visible only to the developer
+and not to other users.
+2. Deployment Mode
+a) Upload ZIP File (ZET Package)
+After developing the custom widget, package it using:
+$ zet pack
+This creates a
+ZIP file
+inside the
+dist
+folder of your project.
+Upload this ZIP file to Log360 Cloud to deploy the widget.
+b) External URL Embedding
+Instead of using ZET, you can embed
+any external URL
+as a widget inside Log360 Cloud.
+This option allows seamless integration of third-party dashboards or web apps.
+How to Include a Custom Widget in Log360 Cloud
+Custom widgets can be added to the following sections of Log360 Cloud:
+Dashboard
+Custom Reports
+Web Tabs
+Incident Workbench
+Adding a Custom Widget to the Dashboard
+After creating an
+HTML page
+for the custom widget, add the following configuration to the
+plugin-manifest.json
+file inside the widgets list:
+{
+"location": "dashboard",
+"url": "/app/widget.html",
+"name": "Sample Log360 Cloud widget",
+"display_name": "Sample Log360 Cloud widget"
+}
+This will ensure that the widget appears on the
+Log360 Cloud dashboard
+.
+Adding a Custom Widget to Custom Reports
+For adding a custom widget to
+Custom Reports
+, add the following configuration to the
+plugin-manifest.json
+file inside the widgets list:
+{
+"location": "custom_reports",
+"url": "/app/widget.html",
+"name": "Sample Log360 Cloud widget",
+"display_name": "Sample Log360 Cloud widget"
+}
+This allows the widget to be used as a
+custom report widget
+.
+Adding a Custom Widget to Web Tabs
+To include a custom widget as a
+Web Tab
+, add the following configuration to the plugin-manifest.json file inside the widgets list:
+{
+"location": "web_tab",
+"url": "/app/widget.html",
+"name": "Sample Log360 Cloud widget",
+"display_name": "Sample Log360 Cloud widget"
+}
+This enables users to access the widget as a
+web tab inside Log360 Cloud
+.
+Adding a Custom Widget to the Incident Workbench
+To include a custom widget as a
+Web Tab
+, add the following configuration to the plugin-manifest.json file inside the widgets list:
+{
+"location": "web_tab",
+"url": "/app/widget.html",
+"name": "Sample Log360 Cloud widget",
+"display_name": "Sample Log360 Cloud widget"
+}
+This enables users to access the widget as a
+web tab inside Log360 Cloud
+.
+Adding a Custom Widget to the Incident Workbench
+For including a custom widget in
+Incident Workbench
+, use the configuration below:
+{
+"location": "incident-workbench",
+"url": "/app/incident-workbench.html",
+"name": "Security Analysis",
+"display_name": "Security Analysis"
+"options": {
+"fieldName":"filehash"
+}
+}
+This ensures the widget is integrated with the
+Incident Workbench
+for real-time incident analysis.
+Important
+Modifying and uploading the name attribute for a custom widget after it has been added will result in the removal of the widget from its mapped module (Dashboard, Reports, Web Tab, or Incident Workbench).
+Following are the locations allowed in Log360Cloud:
+"dashboard"
+"custom_reports"
+"webtab"
+"incident-workbench"
+Adding a custom widget in Incident Workbench differs from other modules as it requires mapping specific fields to the widget. When adding a widget to the Incident Workbench, you must specify
+options
+where the
+fieldName
+will be mapped with the custom widget.
+Here are some of the important fields.
+HOSTNAME
+â Device name (source of data/log collection)
+USERNAME
+â User associated with the data/log
+IPADDRESS
+â Captured IP in the data/log
+FILENAME
+â Name of the file in the data/log
+PROCESSNAME
+â Name of the process in the data/log
+FILEHASH
+â Hash of the file in the data/log
+EMAIL
+â User email captured in the data/log
+DOMAINNAME
+â AD domain name captured in the data/log
+PORT
+â Port associated with the entity in the data/log
+PROTOCOL
+â Protocol associated with the entity in the data/log
+Passing Log Data to Custom Widgets in Incident Workbench
+When a field associated with
+Incident Workbench
+is clicked, the
+log data
+corresponding to that row will be passed from the table data to the
+Custom Widget
+.
+Example Log Data Structure:
+{
+"logUUID": 430453503444,
+"HOSTNAME": "EVENT-TEST",
+"USERNAME": "FELIX-9050",
+...
+}
+How to edit Custom Widgets
+Go to Settings -> Admin -> Developer Space -> Custom Widgets
+In the Manage Custom Widgets table, click on edit icon to edit the Custom Widget
+How to delete Custom Widgets
+Go to Settings -> Admin -> Developer Space -> Custom Widgets
+In the Manage Custom Widgets table, click on delete icon to edit the Custom Widget
+JS SDK:
+JS SDK provides a set of JavaScript functions to integrate
+Logs360Cloud
+functionalities into your custom widget. These APIs enable seamless interaction between your widget and the platform.
+Widget Usage:
+LOGS360CLOUD.init()
+This function acts as a foundational call to establish a connection between the custom widget and the product. Other JS APIs will be defined only when the initialization is completed.
+Returns
+promise
+Copy
+LOGS360CLOUD.init().then(function (res) {
+console.log(res);
+});
+LOGS360CLOUD.get(options)
+Fetch the product data, such as meta data, or any input data in the custom widget, from the product server. Note that only
+Logs360 APIs
+can be invoked using this function.
+Copy
+var options ={url:"/api/v1/meta/log_types"};
+LOGS360CLOUD.get(options).then(function(response) {
+console.log(response);
+}).catch(function(response) {
+console.log(response);
+});
+LOGS360CLOUD.add(options)
+Add data to the server from the custom widget.Note that only
+Logs360 APIs
+can be invoked using this function.
+Copy
+var options ={url:"/api/v1/search", params:{query:query,
+start_time:startTime, end_time:endTime, start_from: '1', limit:'1000', logtype:[logtype]}};
+LOGS360CLOUD.add(options).then(function(response) {
+console.log(response);
+}).catch(function(response) {
+console.log(response);
+});
+LOGS360CLOUD.showLoader(opts)
+The function is used to display a loading indicator on the widget window. This helps improve user experience by visually indicating that a process is in progress, such as data fetching, API calls, or background computations.
+Copy
+LOGS360CLOUD.showLoader(opts).then(function(response) {
+console.log(response);
+}).catch(function(response) {
+console.log(response);
+});
+LOGS360CLOUD.hideLoder(opts)
+The function is used to remove or hide the loading indicator from the widget window. It is typically called after a process, such as data retrieval or API execution, has been completed.
+Copy
+LOGS360CLOUD.hideLoder(opts).then(function(response) {
+console.log(response);
+}).catch(function(response) {
+console.log(response);
+});
+LOGS360CLOUD.showNotification(opts)
+The function is used to display a top notification in the widget. This notification can be utilised to inform users about important updates, alerts, or process statuses.
+Copy
+var opts = { type: "success" , message: "message shown successfully",autoClose:true,duration:2000};
+LOGS360CLOUD.showNotification(opts).then(function(response) {
+console.log(response);
+}).catch(function(response) {
+console.log(response);
+});
+LOGS360CLOUD.HideNotification(opts)
+The function is used to hide or remove the top notification from the widget window. This can be useful when you need to manually dismiss a notification before its auto-dismissal time or when clearing notifications based on user interactions.
+Copy
+LOGS360CLOUD.hideLoader(opts).then(function(response) {
+console.log(response);
+}).catch(function(response) {
+console.log(response);
+})
+LOGS360CLOUD.getConnections()
+Fetches the details of all successfully installed API applications.
+Copy
+LOGS360CLOUD.getConnections().then( function(res){
+console.log(res);
+});
+LOGS360CLOUD.invokeUrl()
+The function is used to fetch data from integrated third-party applications by making API calls. This function supports multiple configuration options, such as URL, HTTP method, headers, parameters, and payload, allowing seamless interaction with external services.
+Copy
+let headers = [{ "headerName": "accept", "headerValue":
+"application/vnd.atlas.2023-01-01+json"}];
+let params = [{"bodyParamName": "path", "bodyParamValue":
+"/dharun_test/sub folder/_ My Paper doc.paper" }];
+var opts = {
+url:
+"https://cloud.mongodb.com/api/atlas/v2/groups?envelope=false&
+includeCount=true&itemsPerPage=100&pageNum=1&pretty=false",
+method : "GET",
+connectionLinkName: "mongotest",
+headers : headers,
+params: params
+};
+LOGS360CLOUD.invokeUrl(opts).then( function(res){
+console.log(res);
+});

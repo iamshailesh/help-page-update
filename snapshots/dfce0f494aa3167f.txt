@@ -1,0 +1,40 @@
+In this page
+How to whitelist a new source?
+Threat Alerting
+Threat import lets you import threat feed data into EventLog Analyzer from CSV files. This will help users to add any third-party threat data easily, and EventLog Analyzer processes the threat feed data present in the files for threat alerting.
+Note
+The CSV files should contain the list of threat sources in the first column. Download
+sample
+CSV file.
+How to add files for Threat Import
+If you need to add Threat Sources for threat alerting, place the files in the <Dir>\EventLog Analyzer\data\za\threatfeeds\ThreatImport\
+Import
+folder.
+Files in the
+ThreatImport
+directory will be deleted once it is processed. If any files are not deleted, this may indicate that an exception has occurred. Check the log file for details and contact support at
+eventloganalyzer-support@manageengine.com
+for further assistance.
+Note
+If you need to remove any Threat Sources from flagging threat alerts, place the file containing the Threat Feeds to be removed in <Dir>\EventLog Analyzer\data\za\threatfeeds\ThreatImport\Delete folder.
+Scheduling Threat Import
+Scheduling helps users import Threat data from files at the specified location automatically on a daily basis. This ensures that threat feeds are consistently updated and stay current. A threat Import schedule can be enabled by changing the
+threat.import.schedule.enable
+property in
+<dir>\EventLog Analyzer\conf\EventLogAnalyzer\threat folder\threatstore.properties
+file from "false" to "true".
+A schedule will run everyday at 8:00 AM to process the files placed under respective
+ThreatImport
+folder.
+Users can disable the threat schedule by changing the value of
+threat.import.schedule.enable
+property key from
+<dir>\EventLog Analyzer\conf\EventLogAnalyzer\threat folder\threatstore.properties
+file back to "false".
+If the
+threat.import.schedule.enable
+property key value changes from "false" to "true", the product must be restarted.
+Restarting the product will trigger the threat import operation immediately instead of waiting for the 8.00 AM schedule.
+You can find entries related to the threat Import feature in the product log file by searching for
+ThreatImportHandler
+.

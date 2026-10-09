@@ -1,0 +1,64 @@
+To configure the Syslog service in your Palo Alto devices, follow the steps below:
+Login to the Palo Alto device as an
+administrator
+.
+Navigate to
+Device > Server Profiles > Syslog
+to configure a Syslog server profile.
+Configure Syslog forwarding for Traffic, Threat, and WildFire Submission logs. First, navigate to
+Objects > Log Forwarding
+, and click on
+Add
+to create a log forwarding profile.
+Assign the log forwarding profile to security rules.
+Configure Syslog forwarding for System, Config, HIP match, and Correlation logs.
+Click on
+Commit
+for the changes to take effect.
+For version 7.1 and above:
+Login to the Palo Alto device as an
+administrator
+.
+Configure a Syslog server profile for the EventLog Analyzer server
+Select
+Device > Server Profiles > Syslog
+.
+Click
+Add
+and provide a name for the profile.
+If the firewall has more than one virtual system (vsys), select the Location (vsys or Shared) where this profile is available.
+For the EventLog Analyzer server, click
+Add
+and enter the requested information.
+Click
+OK
+.
+Configure syslog forwarding for Traffic, Threat, and WildFire Submission logs.
+Create a log forwarding profile.
+Select
+Objects > Log Forwarding
+, click
+Add
+, and enter a Name to identify the profile.
+For each log type and each severity level or WildFire verdict, select EventLog Analyzer's Syslog server profile and click OK.
+Assign the log forwarding profile to security rules.
+Configure syslog forwarding for System, Config, HIP Match, and Correlation logs.
+Select
+Device > Log Settings
+.
+For System and Correlation logs, click each Severity level, select EventLog Analyzer's syslog server profile, and click
+OK
+.
+For Config, HIP Match, and Correlation logs, edit the section, select EventLog Analyzer's syslog server profile, and click
+OK
+.
+Click
+Commit
+to save your changes.
+Source:
+https://docs.paloaltonetworks.com/pan-os/7-1/pan-os-admin/monitoring/configure-syslog-monitoring
+Note
+It's recommended to use BSD format in syslog profiles.
+Once you have completed the configuration steps, the logs from your Palo Alto device will be automatically forwarded to the EventLog Analyzer server.
+Note
+Under "Syslog Server Profile" -> "Custom Logformat" all "Log Type" must be "default"

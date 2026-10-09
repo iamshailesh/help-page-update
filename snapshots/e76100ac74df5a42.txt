@@ -1,0 +1,108 @@
+In this page
+Use cases
+Pre-requisites
+Delegation and permission inheritance
+Centralized Technician Management (CTM) in Log360 enables users to manage technician roles and permissions for all integrated components from a single console. The supported integrations include:
+ADAudit Plus
+Cloud Security Plus
+Exchange Reporter Plus
+DataSecurity Plus
+Log360 UEBA
+ADManager Plus
+M365 Manager Plus
+NOTE
+To view and manage technicians and their roles centrally in Log360, all individual product instances must be integrated with Log360.
+When a user is configured as a technician, they are granted permissions to perform actions, access, and manage tabs of the product console and its components. A technician can be assigned to one or multiple domains, based on organizational requirements.
+The console provides three default technician roles as below.
+Admin
+- Complete control over the application.
+Operator
+- Limited privileges, allowing create and delete operations on assigned resources.
+Guest
+- Read-only access to assigned security resources (device groups).
+In addition to these roles, you can also create custom roles to assign more permissions to users.
+The CTM system of Log360 supports
+group-based delegation
+using Active Directory (AD) security groups or Organizational Units (OUs). This simplifies permission management for multiple users. When a user is added to or removed from an AD group or OU, the changes are automatically applied in the console.
+Use cases
+1. Unified access management
+Managing technicians separately in multiple product consoles can lead to inconsistent permissions and added overhead.
+By leveraging CTM:
+Access levels and permissions can be configured in Log360 and applied across all supported child components. This eliminates the need to log in to each component individually, ensuring uniform access control and reducing user complexity.
+2. Role assignment and granular control
+Assigning roles to each technician individually can be time-consuming in large environments, especially when different levels of access are required.
+By leveraging CTM:
+Roles can be assigned to Active Directory security groups or OUs in the console. Users who belong to these groups automatically inherit the assigned roles upon login. This not only simplifies delegation but also ensures granular control by allowing administrators to define precise permissions for multiple components, domains, and groups from a single console.
+3. Updating multiple technicians
+Making the same changes individually for each technician can be time-consuming, especially in large environments.
+By leveraging CTM:
+Users can update settings for multiple technicians at once from a single console. This centralization saves time, ensures consistency across accounts, and reduces the risk of manual errors.
+Pre-requisites
+Ensure the following before using CTM:
+All integrated components are updated to the required build versions or above:
+ADAudit Plus - 7009
+Cloud Security Plus - 4130
+Exchange Reporter Plus - 5615
+DataSecurity Plus - 6061
+Log360 UEBA - 4033
+M365 Manager Plus - 4502
+ADManager Plus - 7130
+PAM360 does not support this feature.
+In the limited versions of
+M365 Manager Plus, Exchange Reporter Plus
+, and Active Directory reporting component (Limited version of
+ADManager Plus
+), available for integration with Log360 only select roles such as
+Operator Extended, Log360User,
+and
+Super Admin Limited
+are available for assignment, respectively. To access additional roles and features, you need to upgrade to the full versions of these products:
+M365 Manager Plus
+Exchange Reporter Plus
+ADManager Plus
+The limited version of
+ADManager Plus
+restricts the number of technician accounts to
+25
+. To increase this limit, upgrading to the full version is required.
+Delegation and permission inheritance
+When technicians are created from a configured technician group (Security Group or OU), their permissions, roles, and delegations are inherited from that group.
+The following scenarios explain how inheritance works in group-based delegation.
+Editing a technician configured under a group/OU
+When a technician from a group/OU is edited, the user will be configured as an individual technician in Log360.
+Sync behavior with child components
+Group or Organizational Unit (OU) configurations for technicians in Log360 are not directly mirrored in the child components (CC). Instead, the synchronization works as follows:
+User already exists in the child component
+If a user already exists in the child component before logging into Log360, that user will be recognized in the child component as an individual technician.
+During synchronization, the existing individual technician in the child component is detected and reflected in Log360.
+User does not exist in the child component
+If the user does not exist in the child component before logging into Log360, the user will be configured under the assigned Group/OU in Log360.
+This configuration is then synced to the child component, but as an individual technician, not as part of the Group/OU.
+Groups and OUs are managed only within Log360 and are not synced with the child components.
+Technicians assigned to multiple groups
+If a user belongs to more than one group with different roles and delegations:
+In Log360 and ADManager Plus, the user inherits roles and delegations from all groups.
+In other components, only the configuration of the first group the user was added to is applied.
+Inheritance scenarios
+In each case, assume
+User 1
+is a member of
+Group 1.
+User 1 is already configured as a technician
+Outcome: If User 1 is already configured as a technician, only their individual roles are retained. Roles assigned through the group are not applied.
+User 1 is removed from Group 1
+Outcome: If User 1 is removed from Group 1 in Active Directory, they can log in only if they are directly configured as a technician. Any roles and delegations that were assigned through the group will no longer be available.
+Group 1 is disabled in the technicians list
+Outcome: User 1 is disabled.
+Group 1 is deleted from the technicians list
+Outcome: User 1 is deleted.
+Group 1 is deleted from Active Directory
+Outcome: User 1 can log in only if directly configured as a technician.
+User 1 is modified
+Outcome: User 1 is removed from the group and configured as an individual technician.
+NOTE
+In Log360 and ADManager Plus, any individual technician can be a part of multiple technician groups.
+Read also
+This document provides an overview of Centralized Technician Management, including its use cases and prerequisites. For more related functionalities, refer to the following articles:
+Adding technicians
+Managing technicians

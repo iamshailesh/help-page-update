@@ -1,0 +1,16 @@
+Shadow applications are neither allowed nor banned in your network. Using Log360 Cloud, you can keep track of all the activities carried out by shadow applications.
+Navigate to
+Reports
+and select the Cloud Protection from the
+Devices
+drop-down menu.
+Under Cloud Protection, go to the General tab.
+You can find the following reports on shadow cloud applications under the Shadow Cloud Apps report group:
+Recent Sanctioned Apps
+: Contains a lists all recently sanctioned cloud application requests.
+Recent Shadow App Requests
+: Contains a list of all shadow cloud application requests.
+Shadow App Discovery
+: Contains a list of all recently identified shadow web applications in your network.
+Top Actors For Shadow Apps
+: Contains a list of client devices that have the highest requests for shadow applications.

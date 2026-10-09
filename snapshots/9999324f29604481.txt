@@ -1,0 +1,22 @@
+In this page
+Overview
+Available Reports
+Overview
+This page lists the Symantec DLP reports available in the product to help monitor data loss prevention activity across the environment. These reports assist administrators in identifying top data senders and recipients, analyzing target systems and protocols, understanding data ownership, and assessing incident severity levels.
+Available Reports
+Report group name
+Report name
+Symantec DLP Reports
+Symantec DLP Reports Overview
+DLP Top Senders
+DLP Top Recipients
+DLP Top Target
+DLP Top Protocol
+DLP Top Data Owner
+DLP Top Severities
+Read also
+This page detailed the Symantec DLP reports supported by the product for monitoring data loss prevention incidents and analyzing data movement patterns. Explore related report sections to gain deeper visibility into sensitive data exposure and policy violations.
+Threat analytics reports
+Trend Micro reports
+VMware ESXi reports
+Hyper-V reports

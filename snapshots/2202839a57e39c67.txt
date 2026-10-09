@@ -1,0 +1,70 @@
+In this page
+Overview
+Request URL
+Request Header
+Request Parameters
+Response
+Executing the API using cURL
+Executing the API using Postman
+Overview
+The API allows you to update an incident's status or severity based on the ticket's status or severity.
+Request URL
+POST http://hostname:8095/RestAPI/v1/ticket/incident/update
+NOTE
+For the request URL, you can either use the IP address, or FQDN of the product server in place of hostname.
+Request Header
+Header name
+Value
+Mandatory
+Description
+Authorization
+Bearer {{AuthToken}}
+Yes
+AuthToken generated from the API Settings page.
+e.g., Bearer abcd1234xyz
+Request Parameters
+The request body must be sent in JSON format and include the following key/value parameters:
+Parameter Name
+Mandatory
+Type
+Description
+ticket_id
+Yes
+String
+ID of the ticket to update the status/severity for.
+changelog
+Yes
+JSONObject
+A JSONObject containing the ticket's updated filed STATUS (or) SEVERITY and its updated value.
+field
+Yes
+String
+Field of ticket that was updated.
+value
+Yes
+String
+New value of the ticket field which was updated.
+Response
+The response will be a JSON object with the following key/value pair:
+Parameter name
+Description
+message
+Result of the update incident request.
+Executing the API using cURL
+Sample request
+curl --location 'http://localhost:8095/RestAPI/v1/ticket/incident/update' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer abcd1234xyz' \
+--data '{
+"ticket_id": "33630",
+"changelog": {
+"field": "STATUS",
+"value": "Pending"
+}
+}'
+Sample response
+{"message":"Incident updated successfully"}
+Executing the API using Postman
+Figure 1: Executing the API using Postman
+Read also
+This page explained how to update incident status or severity automatically based on ticket updates using the REST API.

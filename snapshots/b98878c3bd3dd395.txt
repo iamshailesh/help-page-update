@@ -1,0 +1,193 @@
+In this page
+Overview
+Prerequisites
+Understanding the editor layout
+Playbook structure and components
+State categories and their usage
+Execution behavior and data context
+Save, validate, and test the playbook
+Best practices
+Overview
+Playbooks are automated workflows that enable threat response and define how Log360 Cloud responds to security events, performs enrichment tasks, or executes corrective actions. They eliminate manual intervention by chaining predefined actions, decision points, and business logic into a sequential or conditional flow.
+Log360 Cloud uses
+QNTRL Circuit
+as the execution engine for playbooks. QNTRL Circuit provides the visual designer, state management, and orchestration layer required to build scalable playbooks without having to write code. Each action in a playbook is represented as a configurable
+state
+, allowing users to visually construct logic flows that interact with other in-product modules and third-party integrations.
+A playbook contains:
+Defined
+Start
+and
+End
+states
+One or more
+states
+representing operations
+Execution paths
+that determine how logic flows between states
+Once saved, playbooks can be mapped to alert profiles for automated execution or invoked manually from alerts and incidents based on context.
+Once published, playbooks can be mapped to alert profiles for automated execution or invoked manually from alerts and incidents based on context.
+Prerequisites
+Licensing limits
+Please note that the playbook capability in Log360 Cloud is available only for
+Trial
+and
+Professional plans
+. If you are using a different plan, upgrade your subscription to access this feature.
+Understanding the editor layout
+Canvas
+A grid-based workspace used to design the playbook. All states, transitions, and execution paths are placed here. The canvas supports drag-and-drop state placement, zoom controls, and panning.
+Start and End states
+Every playbook begins at
+Start
+and terminates at
+End
+. Additional end states can be created using
+Success
+and
+Failure
+nodes when conditional termination is required.
+Category selector (Right panel)
+This panel displays available state categories based on your selection. Each category provides a set of prebuilt states:
+Category
+Purpose
+Flow Control
+Controls the direction and manner of execution (branching, waiting, success/failure handling, parallel execution).
+Functional
+Defines operational tasks including functions (Deluge and Python) and playbooks (also supports playbook inside another playbook.)
+Logs360Cloud
+Provides platform-specific actions to interact with Log360 Cloud modules such as alert management, incident management, log source management, service management, and endpoint actions such as
+execute script, restart machine, stop process,
+etc.
+Only categories applicable to the selected state are shown.
+Toolbar Located at the bottom of the canvas. Includes:
+Auto Arrange
+Change View
+Validate Graph
+Reset Changes
+Zoom in/Zoom out
+No playbook logic is stored until
+Save
+is executed.
+Playbook structure and components
+A playbook comprises three types of states:
+1. Entry state
+The predefined
+Start
+node
+Cannot be deleted
+No configuration required
+2. Operational states
+The core building blocks of the playbook. Each operational state performs a task, such as:
+Collecting log sources
+Enriching alert data
+Triggering a QNTRL Circuit
+Executing scripts
+Making decisions based on conditions
+Each operational state contains:
+A unique state name
+The selected action type
+Input parameters
+Optional output mappings
+3. Termination states
+End
+(default end state)
+Success
+and
+Failure
+states (optional)
+Termination states define how the playbook exits and whether subsequent triggers should be initiated.
+State categories and their usage
+There are three categories of states available:
+Flow Control states
+Functional states
+Log360 Cloud states
+Flow control states
+Used to shape the logical flow of execution.
+State
+Use case
+Pass
+Move input to the next state without modification.
+Branch
+Evaluate conditions and direct execution along different paths.
+Parallel
+Run states simultaneously when actions do not depend on each other.
+Wait
+Pause execution for a defined duration before proceeding.
+Batch
+Process groups of items as a set.
+Success / Failure
+Explicitly mark the end of the execution with a status output.
+Functional states
+Used to embed operational logic.
+Action
+Purpose
+Function
+Executes user-defined code using supported languages.
+Circuit
+Invokes another QNTRL Circuit, allowing reuse of logic and modular design.
+Log360 Cloud states
+Provide direct interaction with Log360 Cloud modules.
+Examples include:
+Get alerts
+- fetch platform alerts
+Get log sources
+- retrieve available log sources
+List incidents
+- obtain incident records to enrich data
+The list of available Logs360Cloud actions may evolve. Refer to the
+Understanding playbook states
+documentation for the latest action set.
+Adding and configuring actions
+Choose a category from the right panel.
+Select an action from the list.
+Select an existing state or drag a new one onto the canvas.
+Select the previous and next states after dragging and dropping the new state onto the canvas.
+Configure mandatory and optional inputs.
+Map output attributes if the next state depends on them.
+All state configurations must be saved before testing.
+Execution behavior and data context
+Execution begins at the
+Start
+state and proceeds along defined paths. Data context varies depending on how the playbook was triggered:
+Playbook type
+Data source
+Alert-based
+Uses data from the latest alert generated under the selected alert profile.
+Incident-based
+Uses contextual incident evidence.
+Log-based
+Uses available log fields selected or added during testing.
+Detection-based
+Uses data from the latest detection generated under the selected Security rule.
+A playbook can also be nested inside another playbook as a
+sub-playbook
+, allowing reuse of common playbooks across response strategies.
+Save, validate, and test the playbook
+Save
+stores configuration without execution.
+Save & Execute
+the playbook immediately using available context data.
+Operators with the necessary permissions can test and run playbooks from alerts and incidents.
+Validation ensures:
+No disconnected states
+A reachable end node
+All required parameters are configured
+Playbooks with validation failures cannot be saved.
+Best practices
+Use
+Branch
+and
+Parallel
+judiciously to avoid unnecessary complexity.
+Reuse sub-playbooks for common tasks such as IP enrichment, user validation, or isolation requests.
+Always validate before saving to confirm no orphan states exist.
+Keep termination states meaningful. Avoid ambiguous outcomes.
+Read also
+This document explained how to build a playbook in Log360 Cloud using the QNTRL Circuit editor, including the playbook structure, state categories, execution flow, and validation process. To understand related concepts further refer to the following pages:
+Playbooks Overview
+Playbook Library
+Create Playbooks
+Understanding playbook payloads
+Understanding playbook states
+Manage Playbooks

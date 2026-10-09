@@ -1,0 +1,76 @@
+Steps to create a SQL Server Audit Object manually
+Carry out the following steps to create a SQL Server Audit Object manually:
+Open MSSQL Server Management Studio and navigate to
+Object Explorer
+.
+In Object Explorer, expand the
+Security node
+.
+Right-click the
+Audits
+folder and choose
+New Audit
+. This opens the
+Create New Audit
+page.
+Enter a suitable name in the
+Audit Name
+field, select Application Log as the
+Audit Destination
+, keep other settings as default, and save.
+Right-click the newly created audit and select Enable Audit.
+Right-click the Server Audit Specification folder and choose New Server Audit Specification, which opens the Create Audit Specification window.
+Select the audit created in step 4 from the Audit field, add the listed audit action types under Audit action type, and click OK:
+SCHEMA_OBJECT_ACCESS_GROUP
+DATABASE_ROLE_MEMBER_CHANGE_GROUP
+SERVER_ROLE_MEMBER_CHANGE_GROUP
+FAILED_LOGIN_GROUP
+SUCCESSFUL_LOGIN_GROUP
+DATABASE_CHANGE_GROUP
+DATABASE_OBJECT_CHANGE_GROUP
+DATABASE_PRINCIPAL_CHANGE_GROUP
+SCHEMA_OBJECT_CHANGE_GROUP
+SERVER_PRINCIPAL_CHANGE_GROUP
+LOGIN_CHANGE_PASSWORD_GROUP
+SERVER_STATE_CHANGE_GROUP
+BACKUP_RESTORE_GROUP
+Right-click the created Audit Specification and click Enable Server Audit Specification.
+Note
+Audit events will be logged in the Windows Application Logs and collected by Log360Cloud.
+Steps to add a SQL Server
+To configure and monitor the logs of SQL Servers, follow the procedure below.
+Note
+Ensure Log360 Cloud agent is installed on at least one Windows device in your network. To configure the agent, follow the steps provided
+here
+.
+Navigate to
+Settings -> Configuration Settings -> Log source configuration -> Applications
+.
+From the right panel, click on the
+General Applications
+tab to view the list of applications being monitored.
+To add a new application, click on
+Add General Applications
+.
+Choose the Application Type as
+SQL Server
+.
+Expand the list by clicking the "+" icon to add a new device.
+Choose from the drop-down menu to add Configured devices, Workgroup devices, domain devices, etc.
+To add new devices manually, click on
+Configure Manually
+and enter
+Log Source
+.
+If the device type is syslog, check the
+Add as Syslog device
+box. If the device type is Windows, enter
+Username > Password > Verify Credentials
+.
+Select an agent from the drop-down list.
+Click on
+Select
+and
+Add
+to add the log source.
+The applications will now be added for monitoring.

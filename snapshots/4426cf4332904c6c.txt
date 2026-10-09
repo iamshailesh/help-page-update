@@ -1,0 +1,46 @@
+Storage Tiers let you control how long different types of logs remain in
+Search Storage
+(indexed, immediately queryable) before being moved to
+Archival Storage
+(compressed, long-term retention). By assigning log sources to different tiers with different retention windows, you can keep high-value logs searchable for longer while archiving routine data sooner â optimizing both search performance and storage cost.
+Every log ingested by Log360 Cloud lands first in Search Storage. A tier's retention period defines when a log moves to Archival Storage. Once archived, logs are no longer searchable until reloaded.
+Note
+Logs in Archival Storage must be reloaded into Search Storage before they can be searched or included in reports. Use
+Settings â Data Storage â Reload Archive Logs
+to do this.
+Tier types
+Default Storage Tier
+Log360 Cloud includes one pre-configured Default Tier that applies to all log sources not explicitly assigned to a custom tier. The Default Tier cannot be deleted. It uses the global Search Storage retention period visible on the License page.
+Custom Storage Tiers
+Custom tiers let you define a specific retention window for a named group of log sources. For example, you might keep Domain Controller logs searchable for 180 days for security investigations, while retaining high-volume endpoint logs for only 30 days to manage storage consumption.
+Tier limits by edition
+The number of custom tiers you can create depends on your edition:
+Edition
+Maximum storage tiers
+Free
+Default tier only â custom tiers not available
+Professional
+20
+Enterprise
+30
+For MSSP accounts, these limits apply independently per managed tenant.
+Prerequisites
+You must be on the
+Professional
+or
+Enterprise
+edition to create custom tiers.
+Log sources must be configured in Log360 Cloud before they can be assigned to a tier.
+Your account must have the
+Administrator
+role.
+Both Search Storage and Archival Storage must be allocated in your license (check the License page to confirm).
+Next steps
+Configuring Storage Tiers
+â create a custom tier and assign log sources to it.
+Managing Storage Tiers
+â edit retention periods, rename tiers, or delete tiers.
+Using Stats Analysis
+â analyze log volume trends to fine-tune your retention windows.
+Cloud Storage Estimator
+â estimate your storage requirements before purchasing.

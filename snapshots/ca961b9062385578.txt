@@ -1,0 +1,50 @@
+To configure the Syslog service on SonicWall devices, follow the steps below:
+Login to the SonicWall device as an
+administrator
+.
+Navigate to
+Log
+>
+Automation
+, and scroll down to
+Syslog Servers
+.
+Click on the
+Add
+button.
+Use a web browser to connect to the SonicWall management interface and login with your username and password.
+Click on the Log button on the left menu. This will open a tabbed window in the main display.
+Click on the
+Log Settings tab
+.
+Under
+Sending the Log
+, enter the IP address of the machine running the Kiwi Syslog Server into the field
+Syslog Server 1
+. If you are listening on a port other than 514, enter that value in the field
+Syslog server port 1
+.
+The Syslog ID must be
+firewall
+for the effective parsing of firewall logs.
+Under
+Automation
+, set the Syslog format to
+Enhanced Syslog
+.
+Under
+Categories
+> Log, check all the types of events that you would like to receive Syslog messages for.
+Click on the Update button.
+For SonicOS 6.5 and above:
+Login to the SonicWall device as an administrator.
+Click on Manage tab and expand Log Settings> SYSLOG
+Click Add under Syslog Servers.
+From the Add Syslog Server window, enter the IP address or host name of the Eventlog Analyzer server.
+Enter the port number and set the Server Type to Syslog.
+Set the Syslog format to Enhanced Syslog.
+The Syslog ID must be
+firewall
+for the effective parsing of firewall logs.
+Click OK to configure.
+A reboot of the SonicWall may be required for the new settings to take effect.

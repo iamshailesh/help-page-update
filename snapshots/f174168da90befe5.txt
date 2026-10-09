@@ -1,0 +1,125 @@
+To forward system logs:
+Login into Configuration Utility.
+Navigate to
+System > Logs > Configuration > Remote Logging
+.
+Enter the remote IP. The remote IP in this case would be EventLog Analyzer server's IP address.
+Enter the remote port number. The default remote port for EventLog Analyzer is 514.
+Click on
+Add
+.
+Click on
+Update
+.
+To forward event logs. (Ex: Firewall Events, Application Security Event)
+Create management port destination
+Login to Configuration Utility.
+Navigate to
+System > Logs > Configuration > Log Destinations
+.
+Click on
+Create
+.
+Enter a name for the log destination.
+To specify the log type, click
+management port
+.
+Enter the IP address of the EventLog Analyzer server.
+Enter the listening port of the EventLog Analyzer server. The default listening port is 514.
+For protocol, select the UDP protocol.
+Click on
+Finish
+.
+Create a formatted remote syslog destination.
+Now navigate to
+System > Logs > Configuration > Log Destinations
+.
+Click on
+Create
+.
+Enter a name for the log destination.
+To specify the log type, select remote syslog.
+Under syslog settings, set the
+syslog format
+as syslog and select the
+forward to management Port
+as the syslog destination.
+Click on
+Finish
+.
+Create a log publisher to forward the logs.
+Navigate to
+System > Logs > Configuration > Log Publishers
+.
+Click on
+Create
+.
+Enter a name for the log publisher configuration.
+In the
+available
+list, click the previously configured
+remote syslog destination
+name and move it to the
+selected
+list.
+Click on
+Finish
+.
+Create a logging profile for virtual servers.
+Navigate to
+Security > Event Logs > Logging Profiles
+.
+Click on
+Create
+.
+Enter a
+profile name
+for the logging profile.
+Then enable the
+Network Firewall
+or
+Application Security
+or
+Both
+by clicking on the checkbox.
+For network firewall event logging, follow the steps below
+Under the network firewall configuration, enter the publisher. Enter the
+previously configured Syslog publisher
+.
+Under log rule matches, click Accept, Drop, and Reject. (
+Note
+: If you do not want any logs, you can disable it).
+Leave other options in default. (
+Note
+: Storage Format should be none)
+For application security event logging, follow the below steps
+Under application security configuration, select storage destination as
+Remote Storage
+.
+Select logging format as
+Key-Value Pairs (Splunk)
+.
+Select the protocol as
+UDP
+or
+TCP
+.
+Enter Eventlog Analyzer server IP address and port (513/514) and click on
+Add
+.
+Then click on
+Create
+.
+Apply Logging Profile to corresponding Virtual Server
+Now navigate to
+Local Traffic > Virtual Servers
+Select your virtual server to which you want to apply logging profile.
+On the top, tap on the security tab and click on the policy.
+Go to Network Firewall.
+Set Enforcement:
+Enabled
+, and select your network firewall policy.
+Under log profile, enable the log profile and select the previously configured logging profile.
+Then click on
+Update
+.

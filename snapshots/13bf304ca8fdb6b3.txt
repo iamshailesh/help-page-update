@@ -1,0 +1,76 @@
+Note
+Ensure Log360 Cloud agent is installed on at least one Windows device in your network. To configure the agent, follow the steps provided
+here
+.
+Log into your
+Log360 Cloud dashboard
+.
+Navigate to
+Settings -> Configuration Settings -> Log source configuration -> Applications
+tab.
+From the right pane, click on the
+General Applications
+tab to view the list of applications being monitored.
+To add a new application, click on
+Add General Applications
+.
+Select
+ManageEngine ITOM solution
+from the
+Application Type
+drop down box.
+Expand the list by clicking the "
++
+" icon to add a new device.
+Choose from the drop-down menu to add Configured devices, Workgroup devices, domain devices, etc.
+To add new devices manually, click on
+Configure Manually
+and enter
+Log Source
+.
+Click on
+Select
+and
+Add
+to add the log source.
+Use the
+Select Agent
+dropdown to select the device that is the agent to which the logs will be forwarded.
+The applications will now be added for monitoring.
+Configuring ManageEngine OpManager
+The following are the steps to configure ManageEngine OpManager.
+Login to OpManager.
+Navigate to Settings -> Notifications.
+Click Add.
+Profile Type
+Select Syslog Profile and enter the following details.
+Destination Host - IP address or host name of the Log360 Cloud Agent server.
+Destination Port - Any port that the Log360 Cloud Agent server is listening to.
+Severity and Facility must be the default values i.e. $severity and kernel.
+For Log360 Cloud to parse logs from OpManager, the message variables in the syslog profile of OpManager should be entered in the following format:
+Mandatory message variables
+ALARM_MESSAGE:$message
+ALARM_ID:$alarmid
+ALARM_CODE:$alarmid
+Other important message variables
+ALARM_SOURCE:$displayName
+ALARM_CATEGORY:$category
+ALARM_SEVERITY:$stringseverity
+ALARM_TRIGGER_TIME:$strModTime
+ALARM_EVENT_TYPE:$eventType
+Entity: $entity
+Last Polled Value: $lastPolledValue
+Click Next.
+Criteria
+Click on the Criteria check-box.
+Enable the notification for all severities and click Next.
+Device Selection
+Select the By Device option and select all the devices listed under Remaining Devices and click Next.
+Schedule
+You don't have to configure anything in this section. Click Next.
+Preview
+Enter a profile name and click Save.
+Note
+If the same machine is running two or more ManageEngine products, ensure the following:
+The ports used by the products are unique.
+The Log360 Cloud port receiving logs from OpManager and Password Manager Pro is not used by other ManageEngine products.

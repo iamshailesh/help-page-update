@@ -1,0 +1,101 @@
+Overview
+This page explains how Log360 Cloud subscriptions are structured, what each edition includes, and how to scope the right plan for your environment.
+Log360 Cloud uses a
+infrastructure-based pricing model
+. Rather than fixed bundles, you select and license each component type independently based on the assets you need to monitor. Components can be adjusted and storage can be expanded at any time with add-ons.
+There are two product variants:
+Product
+Billing
+Best for
+Log360 Cloud
+Yearly
+Single-tenant deployments â enterprises managing their own environment.
+Log360 Cloud MSSP
+Yearly or Monthly
+Multi-tenant deployments â managed security service providers managing multiple customer environments.
+Components
+Log360 Cloud pricing is built around five purchasable components. You license each one based on the count of assets you want to monitor:
+Log Sources
+â distinct log-generating devices or applications sending data to Log360 Cloud.
+Domain Controllers
+â Windows domain controllers whose event logs are collected.
+File Servers
+â file servers monitored for access and change auditing.
+Cloud Accounts
+â cloud platform accounts (AWS, Azure, Google Cloud, etc.) integrated for log collection.
+Endpoints
+â end-user devices sending logs or telemetry.
+Each component is priced and scaled independently. You are not required to purchase all five â only the components relevant to your environment.
+Editions
+Log360 Cloud is available in three editions:
+Free
+,
+Professional
+, and
+Enterprise
+.
+Free
+Available for evaluation with limited component counts. Includes core log management capabilities but does not include advanced security features.
+Included: Store & Search, Auditing & Reporting, Compliance Reporting, Customizable Dashboards, Data Export (PDF, CSV).
+Not included: Advanced Threat Analytics, Alerting, Incident Management, Custom Reports, Log Collection Filter, User Work Hours, Log Forwarding, User Customizable Archival Retention, custom Storage Tiers.
+Professional
+Full SIEM capabilities for security teams. Includes all Free features plus:
+Advanced Threat Analytics
+Alerting â up to 200 alert profiles
+Incident Management
+Custom Reports
+Log Collection Filter
+User Work Hours
+Log Forwarding
+User Customizable Archival Retention
+Storage Tiers â up to 20
+Scheduled Exports â up to 20
+Detection Rules â 100 High Computation Rules (HCR) + 1,000 Non-HCR rules
+Enterprise
+Full SIEM plus SOAR, AI, and CASB capabilities. Includes all Professional features plus:
+SOAR â automated detection, investigation, and response workflows
+AI Investigation
+MCP Integration
+CASB Monitor
+Alert Profiles â up to 500
+Storage Tiers â up to 30
+Scheduled Exports â up to 50
+Detection Rules â 200 HCR + 2,000 Non-HCR rules
+Storage add-ons
+Storage can be expanded beyond your base plan allocation by purchasing add-ons. Add-ons are priced per GB per year (or per month for MSSP monthly billing).
+Log360 Cloud (yearly):
+Storage type
+Professional
+Enterprise
+Search Storage
+$10 / GB / year
+$13 / GB / year
+Archival Storage
+$0.25 / GB / year
+$0.25 / GB / year
+Log360 Cloud MSSP (monthly billing):
+Storage type
+MSSP Professional
+MSSP Enterprise
+Search Storage
+$1.00 / GB / month
+$1.30 / GB / month
+Archival Storage
+$0.03 / GB / month
+$0.03 / GB / month
+MSSP edition
+The MSSP edition is designed for managed security service providers operating multiple customer tenants from a single portal. It uses the same component-based model as Log360 Cloud, but pricing is slightly higher to account for multi-tenancy capabilities. Each tenant is licensed independently using the same component and edition structure.
+MSSP subscriptions can be billed yearly or monthly. Monthly billing is exclusive to the MSSP edition.
+For full details on managing tenants and MSSP-specific configuration, see the MSSP Edition section of this documentation.
+Free trial
+Log360 Cloud offers a 30-day free trial with full Enterprise access and no credit card required. Trial accounts can be upgraded to a paid subscription at any time from the License page.
+How to purchase or upgrade
+To purchase a new subscription or upgrade an existing one, click
+Upgrade
+on the License page (
+Settings â General â License
+). This opens the plan selector where you can choose components, quantities, and your edition, then request a quote. For assistance, contact our
+sales team
+at
+sales@manageengine.com
+.

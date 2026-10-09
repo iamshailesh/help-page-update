@@ -1,0 +1,139 @@
+In this page
+Overview
+Steps to manage Access Gateway
+Cluster
+Editing Third Party Access
+Gateway Cluster
+Deleting Access Gateway Cluster
+Overview
+This page explains how to manage Access Gateway Cluster by monitoring their health, checking
+for updates, downloading installers, regenerating access keys, editing configurations, or
+removing them when no longer required.
+Steps to manage Access Gateway Cluster
+In the
+Access Gateway Cluster
+page, click
+More Details
+next to the
+required server.
+Figure 1: Managing a Access Gateway Cluster
+In the panel that appears, you can view:
+Server Status:
+Indicates if the server is running or unable to
+communicate.
+Figure 2: Server Status of Access Gateway Cluster
+Last health check on / Next health check:
+Shows the schedule of
+health
+checks.
+Click
+Check now
+to run a health check.
+Figure 3: Health check of Access Gateway Cluster
+Build Number:
+Shows the installed version.
+Click
+Check for
+updates
+to verify if a newer version is available.
+Figure 4: Checking for updates in the Access Gateway
+Cluster
+Click
+Download
+to get the latest Access Gateway Cluster
+installer.
+Figure 5: Updating the Access Gateway Cluster
+NOTE:
+When you click
+Check for
+updates
+to verify updates, it may indicate that the
+application is
+already up to date if no newer version is available.
+Figure 6: Checking for updates in Access Gateway Cluster
+Access URL and Target URL:
+These fields display the connection
+endpoints used by the Access Gateway Cluster to handle traffic between users and
+internal systems.
+Access URL
+is the preferred external URL exposed to
+users. It is the
+address users enter in their browsers to access the application via the
+Access Gateway
+Cluster.
+Target URL
+is the internal server address to which the
+Access Gateway Cluster
+forwards incoming requests. It usually points to the primary server or
+internal
+application node that processes the actual requests.
+Figure 7: Viewing Access and Target URLs of Access Gateway Cluster
+Click
+Access Key
+to:
+View the current access key used to connect the Access Gateway Cluster with the
+product.
+Figure 8: Viewing Access Key
+Click
+Copy
+to copy the key and use it during setup.
+Figure 9: Extracting Access Key
+Click
+Regenerate Access Key
+to generate a new key.
+Figure 10: Regenerating Access Key
+NOTE:
+After regenerating the access key, you
+must
+update the key in the Access Gateway Cluster instance to maintain
+connectivity.
+Click
+Advanced settings
+to:
+disable outgoing health checks from the core
+server to the Access Gateway Cluster, if required.
+Figure 11: Configuring Advanced settings in Access Gateway Cluster
+Editing Third Party Access Gateway Cluster
+In the
+Access Gateway Cluster
+page, click the
+icon next to the
+desired server.
+Figure 12: Editing Access Gateway Cluster
+In the
+Configure Third Party Server
+popup, select the appropriate
+protocol (
+HTTP
+or
+HTTPS
+), enter the server name or IP address, and provide the port
+number.
+Click
+Save
+to apply the settings. The updated server configuration will be
+used by agents to communicate and upload logs to the configured Log Processors.
+Figure 13: Configuring Third Party Server
+NOTE:
+To retrieve the correct server URL and port, refer to
+the instructions shown under Third-Party Access Gateway Cluster Configuration Steps.
+Deleting Access Gateway Cluster
+In the
+Access Gateway Cluster
+page, click the
+icon next to the server you want to
+remove.
+Figure 14: Deleting an Access Gateway Cluster
+In the confirm deletion popup, click
+Confirm
+to delete the server.
+Figure 15: Deleting an Access Gateway Cluster
+NOTE:
+Once deleted, logs will no longer be forwarded through
+this server. You must reconfigure the source devices to use an alternate Access Gateway
+Cluster, if applicable.
+Read also
+This document explained how to manage Access Gateway Cluster in the product console. To
+leverage its capabilities effectively, refer to the following articles:
+Configuring Access Gateway Cluster
+Troubleshooting tips

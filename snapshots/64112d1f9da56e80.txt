@@ -1,0 +1,55 @@
+In this page
+Overview
+Using the execute API for Custom Functions
+Overview
+This page explains how to expose and execute deployed custom functions in the product console using REST APIs. It covers the asynchronous execution model, including how to trigger function execution, track progress using a job ID, and retrieve results upon completion. The document also outlines key requirements such as authentication headers, polling intervals, execution limitations, and steps to identify the function ID required for API calls. This enables seamless integration of external systems and scripts with custom automation workflows.
+Using the execute API for Custom Functions
+Log360 Cloud allows you to expose deployed custom functions as REST API endpoints. External systems, scripts, or integrations can invoke a function over HTTP without accessing the Log360 Cloud console.
+Function execution is
+asynchronous
+. It uses two APIs:
+Trigger Execution
+â Submits the function for execution and returns a job_id.
+Get Execution Status
+â Use the job_id to check the execution status and retrieve the output once complete.
+How It Works
+Call the
+Trigger Execution
+API with your function ID and input parameters. You receive a job_id immediately.
+Call the
+Get Execution Status
+API with the job_id to check if the function has finished.
+Repeat Step 2 at regular intervals (recommended: every 3 seconds) until the status is COMPLETED or FAILED.
+NOTE
+Only
+deployed
+functions can be exposed and executed via API.
+The account_id header must be included in every request.
+Execution results are available for
+5 minutes
+after completion. After that, the status is no longer retrievable.
+The logs array contents vary based on the scripting language (Python or Deluge) and the log statements used in the function code.
+Execution results are available for
+5 minutes
+after completion. After that, the API returns a
+404
+error.
+Recommended polling interval:
+3 seconds
+.
+Finding the Function ID
+The runnableId is required in the API URL. To find it:
+Navigate to
+Settings > Admin > Developer Space > Custom Functions
+.
+Click on the function you want to execute.
+In the browser address bar, the URL will contain the function ID. For example:https://log360cloud.manageengine.com/.../#/developer-space/custom-functions/
+5000000007029
+/...Here, 5000000007029 is the runnableId.
+Read also
+This document elaborated on executing custom functions via APIs, including asynchronous processing, job tracking, and result retrieval. Explore other related sections to learn how to create, deploy, and manage custom functions for integration and automation use cases.
+Custom Functions Overview
+Functions Library
+Create custom functions
+Manage functions
+Function syntax references

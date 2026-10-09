@@ -1,0 +1,40 @@
+To configure the Syslog service in your Fortinet devices follow the steps given below:
+Login to the Fortinet device as an
+administrator
+.
+Define the Syslog Servers. It can be defined in two different ways,
+Either through the GUI
+System Settings > Advanced > Syslog Server
+Configure the following settings and then select OK to create the syslog server.
+Name
+Enter a name for the syslog server.
+IP address (or FQDN)
+Enter the IP address or FQDN of the EventLog Analyzer.
+Syslog Server Port
+Enter the EventLog Analyzer's port number. The default port is 514.
+Or with
+CLI commands
+:
+Copy
+config system syslog
+edit "syslog server name"
+set ip "EventLog Analyzer IP Address"
+set port 514
+next
+end
+Use the following CLI commands to send Fortinet logs to the Eventlog Analyzer server.
+Copy
+config system locallog syslogd setting
+set severity debug
+set facility local7
+set status enable
+set syslog-name <syslog server name set in above step>
+end
+Severity
+and
+Facility
+can be changed as per the requirements.
+Once you have completed the configuration steps, the logs from your Fortinet device will be automatically forwarded to the EventLog Analyzer server.
+For more details refer the source:
+Link
+.

@@ -1,0 +1,62 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the various Forcepoint firewall reports supported by the product, enabling administrators to monitor firewall events, analyze traffic patterns, track user logon activities, and gain visibility into web, email, and intrusion-related security incidents. These reports also help assess system-level changes and device severity states, supporting effective security monitoring and troubleshooting.
+Available Reports
+Report group name
+Report name
+ForcePoint Events
+All Events
+Important Events
+ForcePoint Overview
+Firewall Overview
+SMC Audit Overview
+Web Security Overview
+Email Security Overview
+Logon Reports
+Firewall Logons
+Failed Logons
+Logoff
+Logons Overview
+Traffic Reports
+Allowed Traffic
+Denied Connections
+Traffic Overview
+Web Security Reports
+Security Content Accessed
+Unsafe Content Accessed
+Social Media Content Accessed
+Miscellaneous Content Accessed
+Web Security Traffic Reports
+Web Traffic Allowed
+Web Traffic Blocked
+Web Traffic Overview
+Email Security Reports
+Email Delivered
+Email Rejected
+Email Security Overview
+IDS/IPS
+Attack
+Attacks Trend
+System Events
+Command executed
+Configuration Change
+System Reboot
+System ShutDown
+Device Severity Reports
+Emergency Events
+Alert Events
+Critical Events
+Error Events
+Warning Events
+Notice Events
+Information Events
+Debug Events
+Read also
+This document elaborated on the Forcepoint firewall reports available in the product for monitoring security events, traffic activity, and system behavior. Explore other related reports to gain deeper visibility into your network security posture and operational events.
+Dell reports
+Apache reports
+IBM DB2 reports
+DHCP Linux reports
+DHCP Windows reports

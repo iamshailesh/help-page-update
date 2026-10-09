@@ -1,0 +1,21 @@
+The MSSP edition of Log360 Cloud enables Managed Security Service Providers to deploy Log360 Cloud to monitor their Customers across geographical locations. This edition comes with a centralized dashboard to manage Customers as well as separate dashboards for different Customers.
+A few highlights of the Log360 Cloud MSSP edition include:
+Centralizes log management
+Supports multiple Customers across different geographical locations
+Ensures secure data storage and transmission
+Exclusive segmented and secured view for various Customers of the MSSP.
+FAQs
+Who can use the MSSP edition?
+The MSSP edition can be used by Managed Security Service Providers to provide SIEM service for upto 50 Customers.
+Where are the collected logs stored?
+The collected logs are stored on the cloud in a data center as specified by your Location.
+How do I sign up for Log360 Cloud MSSP edition?
+You can sign up for Log360 Cloud MSSP
+here
+.
+Where can I check the pricing plans for Log360 Cloud MSSP edition?
+Please check our
+pricing page
+. You can also write to us
+support@log360cloud.com
+for quote.

@@ -1,0 +1,16 @@
+For EventLog Analyzer to collect logs from Forcepoint devices, log forwarding has to be enabled in the Forcepoint NGFW Security Management Center.
+From the Security Management Console go toConfiguration > Network Elements > Servers > Log Server
+Right-click on Log Server and select Properties. The Log Server - Properties pop-up will open.
+Click on Add. The following fields have to be filled with the information below.
+Enter the hostname or IP address of the EventLog Analyzer server.
+Enter port numbers 513 for TCP and 514 for UDP.
+Select the CEF format in log format.
+Select the Log Forwarding tab and click on OK.
+Forwarding Forcepoint Audit Logs.
+From the Security Management Console go toConfiguration > Network Elements > Servers > Log Server
+Right-click on Management Server and select Properties. The Log Server - Properties pop-up will open.
+Click on Add. The following fields have to be filled with the information below.
+Enter the hostname or IP address of the EventLog Analyzer server.
+Enter port numbers 513 for TCP and 514 for UDP.
+Select the CEF format in log format.
+Select Audit Forwarding and click on OK.

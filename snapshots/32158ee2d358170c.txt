@@ -1,0 +1,75 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the reports available for IIS web servers in the product console. These reports help administrators track web server activity, analyze top users and resources, monitor HTTP errors and access issues, and detect suspicious or malicious web requests for security and operational insights.
+Available Reports
+Report group name
+Report name
+IIS WebServer Events
+All Events
+Important Events
+WebServer Top Reports
+Top Users
+Top Methods
+Top Pages
+Top Queries
+Top Images
+Top File Types
+Top Visitors
+Top Browsers
+Top OS
+Top Status Codes
+Top Windows Errors
+Top Hosts
+Server Trend Report
+IIS Server Overview
+WebServer Error Reports
+Status Code Summary
+HTTP Status Success
+Failed User Authentication
+HTTP Bad Request
+HTTP Payment Required
+Site Access Denied
+Password Changes
+HTTP Request URI Too Large
+HTTP Request Entity Too Large
+HTTP Expectation Failed
+HTTP Unsupported Media Type
+HTTP Locked Error
+HTTP Bad Gateway
+IP Address Rejected
+Read Access Forbidden
+Write Access Forbidden
+Service Unavailable
+HTTP Gateway Timeout
+UNC Authorization Failed
+Denied direct request to Global
+IO Operation Aborted
+Web Server Restart
+Web Server Busy
+Redirection Reports
+Client Error Reports
+Server Error Reports
+Information Reports
+Success Reports
+WebServer Attack Reports
+SQL Injection
+Cross Site Scripting
+Possible Malicious URL Request
+Possible Malicious File Execution
+cmd.exe/root.exe Execution
+xp cmdshell execution
+Admin Resource Access
+Denied Directory listing
+DoS Attack
+Directory Traversal
+Spam Mail Header
+Attacks Events Summary
+Read also
+This document elaborated the IIS web server reports available in the product console and their relevance in monitoring traffic, errors, and attack attempts. Explore related report sections to gain deeper visibility into security events and operational trends.
+MSSQL reports
+MySQL reports
+Oracle reports
+PGSQL reports
+Printer reports

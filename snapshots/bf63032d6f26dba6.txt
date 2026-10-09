@@ -1,0 +1,156 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the reports available for SQL Server in the product console. These reports help administrators audit DDL and DML activities, monitor logon and authentication events, track configuration, permission, and security changes, analyze backup and restore operations, and maintain visibility into database integrity and compliance-related events.
+Available Reports
+Report group name
+Report name
+SQLServer Events
+All Events
+Important Events
+Read Trend
+Write Trend
+Event Trend
+DDL Auditing Report
+Created Databases
+Dropped Databases
+Altered Databases
+Created Tables
+Dropped Tables
+Altered Tables
+Created Views
+Dropped Views
+Altered Views
+Created Stored Procedures
+Dropped Stored Procedures
+Altered Stored Procedures
+Created Index
+Dropped Index
+Altered Index
+Created Triggers
+Dropped Triggers
+Altered Triggers
+Created Schemas
+Altered Schemas
+Dropped Schemas
+DDL Events Summary
+DML Auditing Report
+Selected Tables
+Inserted Tables
+Updated Tables
+Deleted Tables
+Execute Command
+Receive Command
+Check reference command executed
+Add job
+Update job
+Delete job
+DML Events Summary
+Logon Logout Events
+Logons
+Successful Trusted Logins
+Successful Non Trusted Logins
+Top logons based on user
+Top logons based on remote devices
+Logons Trend
+Logout Accounts
+Failed Logon Events
+Failed Logons
+Top failure logons based on users
+Top failure logons based on Remote devices
+Failed Logons Trend
+Startup Shutdown Events
+Server Startups
+Server shutdowns
+Status Reports
+Server Principal Changes
+Login Created
+Login Dropped
+Login Altered
+Logins Enabled
+Logins Disabled
+Created server roles
+Dropped server roles
+Altered server roles
+Credential Created
+Credential Dropped
+Credential Altered
+Database Principal Changes
+User Created
+User Dropped
+User Altered
+DataBase Role Created
+DataBase Role Dropped
+DataBase Role Altered
+Application Role Created
+Application Role Dropped
+Application Role Altered
+Password Changes
+All Password Changes
+Own Password Changes
+Failed Own password changes
+Password Changes
+Password Changes Failed
+Password Reset
+Password Reset Failed
+Own password resets
+Failed Own password resets
+Unlocked accounts
+Audit Changes
+Created Server Audits
+Dropped Server Audits
+Altered server audits
+Created Server Audit Specifications
+Dropped Server Audit Specifications
+Altered Server Audit Specifications
+Created Database Audit Specifications
+Dropped Database Audit Specifications
+Altered Database Audit Specifications
+Changed Audit Sessions
+Shutdown and Failure Audits
+Backup and Restore Events
+Database Backup
+Database Restore
+Database Backup Failed
+Transaction Log Backup
+Storage Media Exposure
+Security Reports
+Privilege Abuse
+Unauthorized Copies of Sensitive Data
+Account Lockouts
+SQL Injection
+Denial of Service
+Additional Security Events
+System Events
+Processes Killed by Host
+Access Violation
+Insufficient Resources Events
+Permission Denied Report
+Database Permission Denied
+Column Permission Denied
+Object Permission Denied
+Alter Database Permission
+Integrity Report
+Check Database Events
+Check Table Integrity
+Check Catalog Events
+DBCC Error Events
+Integrity Audit
+Authority Changes
+Admin Authority Changes
+Dropped Role Members
+Owner Changes
+Permission Changes
+Trace Changes
+Trace Audit C2 On
+Trace Audit C2 Off
+Started Trace Audits
+Stopped Trace Audits
+Read also
+This document elaborated the SQL Server reports available in the product console and their role in auditing database activity, security events, and configuration changes. Explore related report sections to gain deeper visibility into security events and operational trends.
+MySQL reports
+Oracle reports
+PGSQL reports
+Printer reports
+SAP reports

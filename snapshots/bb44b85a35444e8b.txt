@@ -1,0 +1,22 @@
+Locate and open the c
+onfig\Manager.properties
+file. The file path is as
+follows
+Windows -
+\SymantecDLP\Protect\config directory
+Linux -
+/opt/SymantecDLP/Protect/config directory
+Uncomment the
+systemevent.syslog.host= line
+and specify the
+EventLog Analyzer server IP address
+as follows:
+systemevent.syslog.host=xxx.xx.xx.xxx
+Uncomment the
+systemevent.syslog.port= line
+and specify
+514
+as the port to accept connections from the Symantec Enforce Server
+as follows:
+systemevent.syslog.port=514
+After making the above mentioned changes, save and close the properties file.

@@ -1,0 +1,117 @@
+In this page
+Creating a new IAM user in the AWS console
+Manage AWS environment for On-demand version
+To monitor your AWS environment, Log360 requires a valid IAM user with necessary permissions. The solution will use the designated IAM user to collect logs from your AWS environment.
+Creating a new IAM user in the AWS console
+An IAM user is an entity that you create in AWS to represent the person or service that uses it to interact with AWS.
+To create a new IAM user, follow these steps.
+Login to the AWS console.
+Navigate to IAM
+Go to
+AWS Services â Security, Identity and Compliance â IAM
+.
+Create a new user:
+Select
+Users
+from the Left pane and click on
+Create User
+.
+Enter an appropriate
+User name
+and click
+Next
+.
+Attach Policies
+Click on
+Attach policies directly
+and then Click on
+Create Policy
+.
+A new tab named
+Create Policy
+will open. Select
+JSON
+.
+Depending on whether you want to manually or automatically configure CloudTrail, copy and paste the inline policies accordingly.
+Auto-configuration
+: For automatic CloudTrail configuration by Log360, copy and paste the provided inline policy.
+Manual configuration
+: For manual CloudTrail configuration, copy and paste the provided inline policy.
+You can find the inline policy in the highlighted section of the image below.
+Click
+Next
+.
+Fill in the
+Policy Name
+field and click
+Create Policy
+.
+Return to the previous tab, refresh the policy table, select the newly created policy, and click
+Next
+.
+Finalize the user creation
+Verify the details and click
+Create user
+.
+Create security credentials
+Click on the created User.
+Go to
+Security Credentials
+and click on
+Create access key
+under the
+Access keys
+section.
+Choose
+Third-party service
+and check the confirmation box.
+Click
+Next
+and then click
+Create access key
+.
+Download the
+.csv file
+to save the Access key and Secret access Key.
+The generated access key and secret key pair should be used inside Log360 to configure the AWS account.
+Enter AWS credentials in Log360
+Go to the
+Log360 console
+.
+Click on
+Log360 Account Settings
+Click on
+Add Account
+Select the
+Cloud Type as AWS
+.
+Enter a
+Display name
+in the given box.
+Enter the
+Access Key ID
+and
+Secret Access Key of the IAM user
+in the given fields.
+Add CloudTrail.
+Auto-configuration
+: Select the
+Region
+. Log360 automatically creates and configures CloudTrail. Click
+Save
+.
+Note
+Log360 will create the following resources:
+S3 bucket
+: (accountnumber)-cloudtraillogs-(region)
+SNS topic
+: cloudtrailtopic
+SQS queue
+: cloudtrailqueue
+CloudTrail
+: cloudtrail
+Manual configuration
+: Click Connect an existing CloudTrail and follow the steps given in the
+Logging setup for AWS CloudTrail
+.
+To setup logging for your AWS environment, refer S3 server access logging and ELB access logging.

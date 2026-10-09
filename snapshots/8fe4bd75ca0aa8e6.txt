@@ -1,0 +1,57 @@
+In this page
+Home
+Reports
+Compliance
+Search
+Correlation
+Alerts
+Settings
+LogMe
+Support
++Add
+EventLog Analyzer is a comprehensive log management solution for SIEM and compliance. Here are some points to help you get started once you've installed EventLog Analyzer.
+Home
+The
+Home
+tab provides dashboards that allow you to gain a high-level overview of important security events in the network. You can view the severity levels of events, trends in logs, network traffic, and security threats that have been flagged.
+Reports
+The
+Reports
+tab displays audit reports. EventLog Analyzer provides over 1000 pre-built reports for a wide range of devices, networking equipment, and applications. You can view, add, manage, schedule, and filter reports from the reports tab. To learn more about EventLog Analyzer's reports, click here (attach link here).
+Compliance
+EventLog Analyzer simplifies IT compliance and regulatory audit(s). The
+Compliance
+tab in the UI helps you export comprehensive compliance reports in any format, tweak the existing report templates, and create new compliance reports.
+Click here
+to learn more about compliance reports.
+Search
+The
+Search
+tab allows you to search through your logs and extract relevant information about a security incident. The click-based search engine makes it easy to drill-down to the root cause of an incident. The search results can then be saved as a report for auditors.
+Correlation
+EventLog Analyzer's real-time correlation engine helps you detect and mitigate security threats at an early stage. You can leverage the predefined rules that address a wide range of use cases and set custom rules based on the requirements of your organization. Click here (attach link here) to learn more about
+correlation
+feature in EventLog Analyzer.
+Alerts
+The
+Alerts
+tab in the UI helps you view all alerts that have been triggered in your network. You can leverage the built-in alert profiles and configure custom alerting criteria as per your requirements. Furthermore, critical capabilities for incident response such as ticketing tool integrations and response workflows can be configured here.
+Settings
+The
+Settings
+tab can be used to access the configuration settings (attach link here), admin settings (attach link here) and system settings (attach link here).
+LogMe
+The
+LogMe
+tab in the UI displays the different log sources supported by EventLog Analyzer and describes how to configure them for auditing.
+Support
+The
+Support
+tab allows you to get in touch with our technical support team and gives you access to resources that help you learn more about the solution. You can also request for a new feature and create support logs from this tab.
++Add
+The
++Add
+button in the UI is a shortcut that helps you add log sources for auditing and configure alerts, reports and log filters without having to use the settings tab.
+Just getting started? Download our
+quick start guide
+to see how to install EventLog Analyzer, add devices, import logs etc.

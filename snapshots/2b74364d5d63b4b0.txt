@@ -1,0 +1,13 @@
+To change the date and time format of reports, follow the below given steps.
+Go to
+Settings → Admin settings → Report settings
+.
+Select the
+date and time format
+from the drop-down list.
+Depending on whether you want the time zone to be set automatically, enable or disable the
+Set Time Zone Automatically
+option.
+Click
+Save
+.

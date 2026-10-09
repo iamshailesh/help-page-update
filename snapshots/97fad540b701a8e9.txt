@@ -1,0 +1,35 @@
+The Certificate Trust Store contains a list of all the globally trusted CA certificates. Admins can also generate and add CA certificates on all Windows client machines that can be trusted. During packet inspection, the certificate issued to every HTTP session will be verified. So, it is crucial to ensure that all legitimate certificates are added to the Certificate Trust Store.
+To add certificates to the trust store:
+Navigate to
+Settings > Configuration > Certificate > Certificate Trust Store
+.
+Click
++Add Certificate to Trust Store
+button. On this page, you can add certificates to the
+Trust Store
+in two ways:
+Upload
+:
+Browse and add a certificate to the
+Trust Store
+.
+The certificate can be in .cer(DER encoded), .cer(Base64 encoded), and .crt, .der formats.
+Click
+Add
+to upload certificates.
+Reimport
+:
+Click
+Reimport Certificates
+to import certificates from the Log360 Cloud Trust Store.
+Click
+Yes
+to confirm the action. Newly added certificates in Log360 Trust Store will be imported automatically at scheduled intervals.
+To reset the Trust Store to default values:
+Click
+Reset Trust Store
+to delete all the certificates present in the
+Trust Store
+and restore its default values. Click
+Yes
+to confirm the reset action.

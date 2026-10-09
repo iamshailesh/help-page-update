@@ -1,0 +1,294 @@
+In this page
+Overview
+Default Device Groups
+How Windows devices are classified?
+Use cases
+Key considerations
+Prerequisites
+Adding a device group
+Editing a device group
+Deleting a device group
+Viewing Log Sources in a device group
+Managing device groups
+Overview
+Device groups
+in ManageEngine Log360 allow you to organize log sources into groups and manage them together. Instead of configuring each device individually, you can group related devices and perform bulk actions such as updating credentials, changing monitor intervals, and applying configuration settings across all devices in the group at once.
+Device groups can be organized by physical location, department, operating system, or any other criteria that suits your environment. The
+Technician and Roles
+lets you assign technicians to specific device groups, so each technician only has access to the devices relevant to their role.
+This page explains how to create and manage device groups, configure group-level settings, and perform bulk actions on devices in ManageEngine Log360.
+Default Device Groups
+Log360 includes the following predefined device groups by default:
+Default Group
+Log Source Type
+Description
+Cloud Account Group
+Cloud sources
+Contains log sources associated with cloud platforms such as AWS, Azure, and M365.
+DefaultGroup
+All
+The default group for any log source not explicitly assigned to another group, including custom log sources added via import or Syslog. The description for this group cannot be modified.
+Extension Group
+Extensions
+Contains log sources added through product extensions or integrations.
+Threat Group
+Threat feeds
+Contains log sources configured as threat feeds.
+Unix Group
+Syslog devices
+Contains log sources that send logs via Syslog, including Unix/Linux-based devices, Network devices like Firewall, Routers and Switches, AS400, and ESXi.
+Windows Workstation
+Windows workstation devices
+Contains Windows devices running workstation editions such as Windows 10 or Windows 11.
+Windows Group
+Windows servers
+Contains Windows devices running server editions such as Windows Server 2019 or Windows Server 2022.
+How Windows devices are classified?
+When a Windows device is added as a log source, Log360 automatically classifies it as either a
+workstation
+or a
+server
+based on its operating system type:
+Devices running
+Windows Workstation editions
+(such as Windows 10 or Windows 11) are automatically assigned to the
+Windows Workstation
+group.
+Devices running
+Windows Server editions
+(such as Windows Server 2019 or 2022) are assigned to the
+Windows Group
+.
+This automatic classification helps you immediately segregate endpoint devices from servers without any manual configuration, making it easier to apply different monitoring policies to each category.
+Use cases
+Device groups allow you to align your log management with how your organization is actually structured. Common scenarios include:
+Location-based management
+Group devices by physical site for example, New York Office or London Branch to apply region-specific monitoring policies or manage scheduled log collection across different time zones.
+Departmental restrictions
+Create groups such as Finance Servers or HR Workstations to isolate log access by department. This is especially useful when combined with Technician & Role settings, where a department's IT staff should only see logs from their own devices.
+OS or application type
+Build groups based on operating system (e.g., Linux Servers, Windows Workstations) or application log type (e.g., IIS Servers, SQL Servers) to apply targeted configurations or monitor intervals relevant to that technology.
+Role-Based Access Control (RBAC) with Technician & Roles
+Device groups integrate directly with the
+Technician and Roles
+feature. You can assign specific technicians to manage only the device groups relevant to their role. For example, a junior analyst in the finance team can be restricted to viewing logs only from the Finance Servers group, while a senior admin retains access across all groups. This ensures accountability and limits unnecessary exposure to sensitive log data.
+Key considerations
+Single group membership:
+A log source can belong to only one device group at a time. If you add a log source to a new group, it is automatically removed from its previous group.
+Log type and device groups:
+Device groups are device-based, not log-type-based. A single device (for example, a Windows server running both IIS and SQL) belongs to one group, regardless of how many log types it generates. To organize by log type, use filters and views within the product rather than separate groups.
+Default group:
+Any log source not assigned to a specific group is placed in the
+DefaultGroup
+automatically.
+Prerequisites
+User Role:
+You must be logged in as a user with the Admin role to access the Device Groups page and allocate devices to groups.
+Adding a device group
+To create a new device group, follow the steps below.
+Log in to the product console
+Navigate to
+Settings
+tab. Go to
+Admin Settings
+. Under
+Management
+, select
+Device Groups
+.
+Figure 1: Navigating to Device Groups
+In the
+Log Source Groups
+page, click
+Add Group
+in the top-right corner.
+Figure 2: Adding a group
+In the
+Add Group
+window, enter the following details:
+Group Name
+- Provide a unique name for the device group.
+Description
+- (Optional) Enter a description for the device group.
+Figure 3: Adding a group
+Under
+Log Source List
+, click the
+icon to select log sources to add to the group.
+The Select Log Source window, display a table with the following fields.
+Log Source
+- The name of the log-generating device or application.
+Log Source Type
+- The type of source sending logs, such as AWS, Microsoft 365, Syslog Device, Application, and more.
+Log Source Group
+- The group to which the log source currently belongs.
+Figure 4: Selecting a log source
+You can also select
+Show IP
+to display the associated IP address for each log source.
+You can use the
+icon to locate a log source by name.
+Figure 5: Locating a log source
+To clear the search, click the
+icon.
+To narrow down the list, use the
+icon to refine results based on:
+Device Category
+Device Group
+Type
+Figure 6: Filtering a log source
+Within each category, you can click
+All
+to display all available entries.
+Figure 7: Selecting a log source
+You can reset applied filters by selecting
+Clear Filter
+.
+Figure 8: Clearing filters
+To return to the previous window without making any changes, click
+Back
+in the top-right corner.
+Figure 9: Navigating to previous window
+Select the required log sources by selecting their corresponding checkbox and click
+OK
+to add them to the group.
+Figure 10: Selecting log sources
+Once you have selected all required log sources, click
+Add
+in the Add Group window to create the device group.
+Figure 11: Adding a group
+NOTE
+When you add log sources to a new device group, they will be removed from their current groups and reassigned to the newly created group.
+Editing device groups
+NOTE
+The
+DefaultGroup
+and
+Threat Group
+cannot be edited.
+In the
+Log Source Groups
+page, click the
+icon next to device group you want to modify.
+Figure 12: Editing a device group
+In the Update Group window, update the following fields as needed:
+Description
+- Modify or update the description for the device group.
+Log Source List
+- Click the
+icon to add or remove log sources associated with the group.
+Figure 13: Editing a device group
+Click
+Update
+to save the changes.
+Deleting a device group
+NOTE
+When a device group is deleted, all log sources previously assigned to it are automatically moved to the DefaultGroup. The following predefined groups cannot be deleted: Cloud Account Group, DefaultGroup, Extension Group, Threat Group, Unix Group, Windows Workstation, and Windows Group.
+In the
+Log Source Groups
+page, click the
+icon next to the device group you want to delete.
+Figure 14: Deleting a group
+A confirmation pop-up will appear, click
+Yes
+to proceed with deleting the group.
+Figure 15: Confirming deletion
+Viewing Log Sources in a device group
+In the
+Device Groups
+page, locate the device group you want to review.
+In the
+Log Sources
+column, click the number displayed below the log source count.
+Figure 16: Viewing log sources
+A
+Log Source(s)
+window opens, listing all log sources associated with that device group.
+To view the IP address or hostname, click
+Show IP
+or
+Show Name
+based on what you want to display.
+You can also use the
+icon to view a
+Log Source
+by its name or IP.
+In the Log Source(s) window, the following table is displayed.
+Log Source
+- Displays the IP address or hostname from which the logs are received.
+Log Source Type
+- Indicates the type of device or application sending the logs
+Status
+- Shows the current log collection status for that source
+Figure 17: Viewing log sources
+Click
+Close
+to exit the window.
+Managing device groups
+In the Device Groups table, additional actions can be performed using the
+Manage
+drop-down. Ensure that you select a device group before proceeding. The available options are:
+Monitor Interval
+Credentials
+Delete device group
+Figure 18: Viewing log sources
+Monitor Interval
+Use this option to modify how often logs are collected from all Windows devices configured for WMI-based log collection in the selected device group.
+When you select Monitor Interval:
+A confirmation message appears indicating that the update will apply to all devices in the selected group. Click
+Yes
+to proceed.
+Figure 19: Monitoring interval for device groups
+In the
+Update Monitor Interval
+window, choose one of the required Log Collection Mode.
+Scheduled
+- Logs are collected at fixed intervals.
+Realtime
+- Logs are collected immediately as they are generated
+Figure 20: Updating monitor interval
+If Scheduled mode is selected, specify the interval in minutes.
+NOTE
+The monitoring interval must be set between 10 minutes and 24 hours.
+Figure 21: Updating monitor interval
+Click
+Update
+to apply the new interval to all devices in the group.
+Credentials
+Use this option to update the credentials applied to all Windows devices in the selected device group.
+When you select
+Credentials
+:
+A confirmation message appears stating that the changes will apply to all devices in the group. Click
+Yes
+to continue.
+Figure 22: Updating credentials
+Provide the updated credential details in the
+Update Group Credentials
+window.
+Figure 23: Updating group credentials
+Click
+Save
+to apply the credentials across all devices in the group.
+Delete device group
+This action removes the selected device group from the product.
+NOTE
+A device group cannot be deleted if it is the only device group assigned to a technician. In such cases, the following message is displayed: Cannot delete some of the groups associated to certain users. Assign another device group to the technician or remove the technician's association with the device group before attempting to delete it.
+Once deleted, the associated devices will be removed from the following configurations, which must be reconfigured manually:
+Custom Reports
+Compliance
+Alert Profiles
+Archive Policy
+Log Collection Filter
+Log Collection Failure Alert
+When you select
+Delete device group
+, a confirmation message appears.
+Click
+Yes
+to delete the group.
+Figure 24: Confirming deletion
+Read also
+This page explained how to manage device groups, add log sources, and perform group-level actions such as updating credentials and monitor intervals. For more information on related administrative settings, refer to:
+Privacy settings
+Retention settings

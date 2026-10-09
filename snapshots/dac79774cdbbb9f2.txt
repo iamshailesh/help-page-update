@@ -1,0 +1,21 @@
+Note
+Previously known as 'Threat sources'
+This dashboard lets you manage all security applications monitored by EventLog Analyzer.
+Settings > Log Source Configuration > Applications > Security Applications
+How to add a security application?
+How to add a security application?
+Add Security application
+.
+How to view a security applications report?
+Go to
+Settings > Log Source Configuration > Applications > Security Applications
+Click on the
+View Report
+icon on the right corresponding to the security application.
+How to delete a security application?
+Go to
+Settings > Log Source Configuration > Applications > Security Applications
+Select the security application you want to delete and click on the delete icon.
+Click
+Yes
+in the delete confirmation pop-up.

@@ -1,0 +1,151 @@
+What is the difference between the Free and Professional Editions?
+The
+Free Edition
+of EventLog Analyzer is limited to handling event logs from a maximum of five devices, whereas the
+Professional Edition
+can handle event logs from an unlimited number of devices. There is no other difference between the two editions, with respect to features or functionality.
+Is a trial version of EventLog Analyzer available for evaluation?
+Yes, a 30-day free trial version can be downloaded
+here
+. At the end of 30 days it automatically becomes a Free Edition, unless a new license is applied.
+Does the trial version have any restrictions?
+The trial version is a fully functional version of EventLog Analyzer Premium Edition. When the trial period expires, EventLog Analyzer automatically reverts to the Free Edition.
+Do I have to reinstall EventLog Analyzer when moving to the paid version?
+No, you do not have to reinstall or shut down the server. You just need to enter the new license file in the
+Upgrade License
+box.
+What devices can EventLog Analyzer collect event logs from?
+ManageEngine EventLog Analyzer can collect and analyze logs from a wide range of sources, including Windows and Linux/Unix systems, network devices like Cisco switches and routers, and other syslog-supported devices.
+However, the capability depends on the operating system where it is installed:
+On Windows, it can collect event logs from Windows devices and syslogs from Unix systems, network devices, and applications.
+On Linux/Unix, it primarily collects syslogs from Unix systems, network devices, and other syslog-supported sources, but can also collect event logs from Windows machines using agent-based or agentless methods.
+How many users can access the application simultaneously?
+This depends only on the
+capacity of the server
+on which EventLog Analyzer is installed. The EventLog Analyzer license does not limit the number of users accessing the application at any time.
+EventLog Analyzer runs in a web browser. Does that mean I can access it from anywhere?
+Yes. As long as the web browser can access the server on which EventLog Analyzer is running, you can work with EventLog Analyzer from any location.
+How do I buy EventLog Analyzer?
+You can buy EventLog Analyzer directly from the ManageEngine Online Store, or from a
+reseller near your location
+.
+Can EventLog Analyzer work if DCOM is disabled on remote systems?
+For EventLog Analyzer to collect logs from remote Windows systems, DCOM must be enabled if you're using agentless log collection. However, if you're using agent-based collection, DCOM is not required.
+How to monitor Windows Events in EventLog Analyzer Linux Installation?
+You can collect logs from Windows devices in two ways with EventLog Analyzer:
+Convert Windows event logs to syslogs and forward them to EventLog Analyzer.
+Install an agent on the Windows device to directly monitor and collect logs.
+What are the differences between ELA installed in Windows and Linux machines?
+Most features from windows and linux are identical. Tight integration for windows machines are not available in linux builds, Although there are manual steps available to achieve the missing windows functionality.
+#
+Feature
+UI
+Windows Instance
+Linux Instance
+How to achieve the missing functionality?
+1
+Domain and workgroup discovery
+ELA UI → Settings → Domains and Workgroup
+Available
+N/A
+N/A
+2
+Device discovery
+ELA UI → Settings → Devices → Windows Devices → Add Device(s)
+Available
+N/A
+Manually enter device name and associate them with Agents.
+3
+Windows devices & Windows Application log collection
+ELA UI → Settings → Devices → Windows Devices → Add Device(s)
+Agentless, agent-based and snare supported.
+Only agent-based and snare supported.
+Download and install the agents manually or deploy using GPO/Endpoint Management Tool
+4
+Auto Push Windows agent
+ELA UI → Settings→ Agents → Windows → Install Agent
+Available
+Not Available
+Agents cannot be deployed to windows machines from Linux instances. Download and install the agents manually or deploy using GPO/Endpoint Management Tool
+5
+IIS Sites Discovery
+ELA UI → Settings → Applications → IIS Servers
+Available
+N/A
+We can collect IIS logs by selecting the device and browse the path manually through "Import Logs" feature
+6
+SQL Server as back-end database
+Available
+N/A
+N/A
+7
+MSSQL Discovery
+ELA UI → Settings → Database Audit → Mssql Servers
+Available
+Not Available.
+We can collect logs from MSSQL in Windows environments by manually entering the device details in the UI.
+8
+Mysql Discovery
+ELA UI → Settings → Database Audit → MySql Servers
+Available for Servers in Linux and Windows Environments
+Available for Linux Environments only
+We can collect logs from Mysql in Windows environments by manually entering the device details in the UI.
+9
+Workflow
+ELA UI → Alerts → Workflow Audit → Create new workflow
+All actions are available
+Windows enviroment related actions are not available. Process Actions, Service Actions , Active Directory Actions and windows Actions are not available.
+Not available
+10
+AD User Login
+ELA UI → Settings → Technicians & Roles → Add Technician
+Available
+Not Available
+Create and use in-built technicians or integrate with radius login.
+Installation
+What are the recommended minimum system requirements for EventLog Analyzer?
+It is recommended that you install EventLog Analyzer on a machine with the following configuration:
+Processor - 6
+RAM - 16GB
+Disk Space - 1.2 TB
+Operating System - Windows 7, 2000, XP, 2003, Linux Ubuntu 8.0/9.0
+Web Browser - Microsoft Edge, or Mozilla Firefox 1.0
+Look up
+System Requirements
+to see the minimum configuration required to install and run EventLog Analyzer.
+Can I install EventLog Analyzer as a root user?
+Yes, you can install EventLog Analyzer as the root user on Linux systems. However, itâs generally recommended to use a dedicated user account for better security. Installing as root modifies the installation directoryâs permissions, which may cause issues if you attempt to start the server using a different user account later.
+When I try to access the web client, another web server comes up. How is this possible?
+The web server port you have selected during installation is possibly being used by another application. Configure that application to use another port, or
+change
+the EventLog Analyzer web server port.
+Is a database backup necessary, or does EventLog Analyzer take care of this?
+If you need to back up the database, you can do so via Settings > Data Storage > Database Settings. It's also recommended to regularly take snapshots or backups of the EventLog Analyzer installation directory for added data protection.
+Please visit this page.
+Configuration
+How do I add devices to EventLog Analyzer so that it can start collecting event logs?
+Please refer to the relevant pages below for detailed steps:
+Windows devices
+Syslog devices
+Application addition
+How do I see session information of all users registered to log in to EventLog Analyzer?
+The session information for each user can be accessed from the User Management link. Click the
+View
+link under Login Details against each user to view the active session information and session history for that user.
+How to move EventLog Analyzer to a different machine/server?
+Please follow
+these steps
+given here to migrate your existing EventLog Analyzer installation to a new machine/server.
+How long can I store data in the EventLog Analyzer database?
+EventLog Analyzer stores data in two formats: live logs in Elasticsearch and compressed logs in archives.
+By default, live logs are retained for 32 days, but this duration can be customized based on your requirements.
+For archived logs, retention can also be configured as per your needs; options include indefinite storage, 6 months, 3 months, and more.
+How to change the log collection interval for Linux devices?
+The log collection interval cannot be changed for Linux devices as EventLog Analyzer keeps listening for logs that come through open ports configured for syslog collection. Therefore, you will not be able to view the 'Change Monitor Interval' icon in the Device Management page for Syslog Devices.
+Reporting
+Why am I seeing empty graphs?
+Graphs are empty if no data is available. If you have started the server for the first time, wait for at least one minute for graphs to be populated.
+What are the types of report formats that I can generate?
+Reports can be generated in HTML, CSV, and PDF formats. All reports are generally viewed as HTML in the web browser, and then exported to CSV or PDF format. However, reports that are scheduled to run automatically, or be emailed automatically, are generated only as PDF files.
+Can't find an answer here? Check out the
+EventLog Analyzer user forum

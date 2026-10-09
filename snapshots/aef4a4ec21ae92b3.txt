@@ -1,0 +1,11 @@
+You can share saved searches with other technicians within your organization. When you share a saved search, all the associated data will be accessible to the shared user.
+To share a search with other technicians, select the 'Saved Search' option from the 'More' dropdown menu and then click 'Share.'
+Note
+When a search is shared to a role, they won't have the ability to delete the shared search. The same applies for the guest users too.
+After clicking the 'Share' option, you can select technicians to notify via email by toggling the 'Notify recipients via mail' button. As you type the names of the technicians, the system will provide suggestions for your convenience.
+Alternatively, you can also click on
+Choose
+, which will redirect you to the following page where all the technician names along with their role can be seen.
+After sharing a search, you can modify the list of technicians or withdraw the shared search from selected technicians. To make changes, select the 'Edit Share' button. To remove all technicians, use the 'Revoke' button.
+Note
+Only users who have Administrator access can share a search. Operators don't have the privilege to share a search.

@@ -1,0 +1,72 @@
+Log360 can automatically back up its database and the databases used in the integrated products at regular intervals, as scheduled by you. Using this option, you can back up the built-in PostgreSQL DB or external PostgreSQL and MS SQL databases configured in the product.
+Supported DB versions for auto backup
+PostgreSQL: Version 10 to 14
+MS SQL: Version 2008 and above
+Prerequisite for backing up external PostgreSQL
+In the machine where PostgreSQL is installed, go to
+<postgresql_installdir>/data
+and open the
+posgresql.conf
+file. Search for
+wal_level
+entry. Uncomment the entry and change its value to
+archive.
+Copy all the files in
+<postgresql_installdir>/lib
+and
+<postgresql_installdir>/bin
+folders and paste them in <product_home>/pgsql/lib and <product_home>/pgsql/bin folders respectively. <product_home> refers to the home directory of Log360 or the integrated products for which you're configuring the auto backup scheduler.
+Restart
+the external PostgreSQL server.
+Repeat the steps 1 to 3 from above whenever you update the PostgreSQL server.
+Steps to schedule database backup
+Navigate to
+Admin → General Settings → Database Settings → Database Backup.
+Choose Log360 or an integrated product for which you want to schedule auto backup, and click the edit
+icon.
+Note
+Child components are available only in Log360
+Select whether you want to schedule the backup daily, weekly, or monthly and at what time from the
+Backup Frequency
+drop-down.
+Enter the number of incremental backups to take for every full backup in the
+Full Backup after __ incremental backups
+box. Enter 0 if you want to take only full backups.
+Enter the
+Backup Storage Path.
+You can either choose a local folder or shared folder to store the backups.
+If the shared folder youâve chosen needs permission to store the backups, then put a check against the
+Authentication Required
+box, and enter the necessary credentials.
+Note 1
+If the shared folder is located in a workgroup computer, then create a new domain account in AD. This new account should have the same username and password as that of a local account in the workgroup computer. Use the credentials of this new account for authentication.
+Note 2
+If the specified path is wrong or unreachable, the backup will be stored in the default backup folder (<Installation_Folder\Backup>).
+Set a retention period for the backup files from the
+Maintain Backup Files
+drop-down.
+Click
+Save.
+Other settings
+To
+disable
+auto backup for Log360 or a particular integrated product, click the
+icon located in the
+Actions
+column of the auto backup configuration table.
+To get the status of the latest backup, click the
+icon.
+To edit the backup schedule for a particular component, click on the
+icon located in the action column of the component.
+Use the
+Backup Now
+option to initiate a backup instantly.
+Use the
+Recent Backups
+icon in the status column to view all available backups.
+Restoring backup from an old version of MS SQL server to new MS SQL server
+If you've installed a new version of MS SQL server and want to configure it in Log360 or its integrated products in place of the old MS SQL server, you can do so by using the backup you've taken using Log360. Just note that, in addition to the backup you've taken using Log360, you need to copy the files in <MS_SQL_Old_Version>/Backup to <MS_SQL_New_Version>/backup.
+Troubleshooting tips
+If you get an error while backing up the database, please check whether:
+The database server is running.
+There is sufficient space in the backup storage location.

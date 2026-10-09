@@ -1,0 +1,87 @@
+To configure and monitor the logs of Print Servers, follow the procedure below.
+Navigate to
+Settings > Log Source Configuration > Applications
+.
+You can also click on the
++Add
+button on the top-right corner of the
+Home page and select Application.
+Next, select the
+General Application -> Add General Applications
+.
+Choose the Application Type as
+Printer
+.
+Expand the list by clicking the "
++
+" icon to add a new device.
+Choose from the drop-down menu to add Configured devices, Workgroup devices, domain
+devices, etc.
+To add new devices manually, click on
+Configure Manually
+and enter
+Log Source
+.
+If the device type is syslog, check the
+Add as Syslog device
+box. If
+the device type is Windows, enter
+Username > Password > Verify
+Credentials
+.
+Click on
+Select
+and
+Add
+to add the log source.
+Print Server Configuration
+Enable Print Server Log:
+Go to
+Event Viewer
+>
+Application and Service Logs
+>
+Print Service.
+Right
+click on this and select '
+Enable Log
+'. This will enable logging for the
+corresponding 'Admin', 'Debug' or 'Operational' processes. The logs can be viewed in Event
+Viewer.
+Note
+If the print server device is a 64-bit
+Windows OS machine (i.e., Windows Vista and above), carry out the following registry
+configuration:
+Open the registry editor '
+regedit
+' of the print server machine in the
+Command Line Window.
+Navigate
+to
+Computer\
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\eventlog\
+To create a new key, right click on
+eventlog,
+click new > key. You
+can name the key
+as
+Microsoft-Windows-PrintService/Operational
+or
+Microsoft-Windows-PrintService/Admin
+or
+Microsoft-Windows-PrintService/Debug
+as
+per your logging process requirement.
+For instance, if you need to enable logging for the Operation process, create a new key
+with the name
+Microsoft-Windows-PrintService/Operational.
+This will convert the log type to 'Administrative' thus enabling you to perform searches and
+generate reports out of these logs.
+This configuration is not required for a 32-bit Windows OS versions.
+In order to obtain the document name, you have to enable the audit policy:
+Computer Configuration>Administrative Templates>Printers>
+Allow job name in
+event logs
+(or) Registry edit:
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows NT\Printers]
+"ShowJobTitleInEventLogs"=dword:00000001

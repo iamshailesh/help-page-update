@@ -1,0 +1,42 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the reports available for Dell devices in the product console. These reports help administrators monitor device events, user authentication activities, interface and port status, system operations, and severity-based events to ensure operational stability and security visibility.
+Available Reports
+Report group name
+Report name
+Dell Events
+All Events
+Important Events
+Logon Reports
+Logons
+Logoff
+Failed Logons
+Logons Overview
+Interface Status
+Interface Up
+Interface Down
+Port Status
+Port Blocking
+Port Forwarding
+System Events
+System Start
+Fan Status
+Temperature Status
+Device Severity Reports
+Emergency Events
+Alert Events
+Critical Events
+Error Events
+Warning Events
+Notice Events
+Information Events
+Debug Events
+Read also
+This document elaborated the list of Dell reports available in the product console and how they help monitor device activity, system health, and security-related events. Explore related report sections to gain deeper visibility into security events and operational trends.
+Apache reports
+IBM DB2 reports
+DHCP Linux reports
+DHCP Windows reports
+ERP reports

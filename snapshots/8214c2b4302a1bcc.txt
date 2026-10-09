@@ -1,0 +1,62 @@
+In this page
+Log360 Cloud Threat Analytics
+Dark Web Monitoring
+VirusTotal
+Note
+Please refer to the Incident Workbench Overview page to learn about the feature, and check the
+Access
+page to learn how to invoke the Incident Workbench from different dashboards of the product.
+To access Advanced Threat Analytics data, you can click on any of the following fields that uniquely identify the external sources:
+Domain analysis:
+Domain
+Canonical Name
+Client Domain
+URL Site
+IP Analysis:
+Remote DeviceIp
+Source IP
+Client IP Address
+Server IP Address
+Address
+Destination IP
+Device Ip
+Remote Ip
+Source Host Address
+NAT Source Address
+NAT Destination Address
+Destination IP
+Original Client IP
+IP Address
+Endpoint IP
+Private Ip
+Target Ip
+Source Device
+Target Machine
+Destination Host Address
+Target Device
+URL Analysis:
+Payload URL
+Object Url
+URL
+The product supports the following vendors for the Advanced Threat Analytics in Incident Workbench:
+Log360 Cloud Threat Analytics
+Dark Web Monitoring
+VirusTotal
+Log360 Cloud Threat Analytics
+This is the default integration from Log360Cloud suite, and can be accessed once the Advanced Threat Analytics add-on from the product is purchased.
+Note:
+Check out the
+Advanced Threat Analytics
+page to learn about the configuration and analysis.
+Dark Web Monitoring
+When you purchase Advanced Threat Analytics, you also gain access to Dark Web monitoring. You can use your domain to enable Dark Web monitoring. This feature actively scans for any compromise of user data on the Dark Web and sends alerts. Compromised data can include credentials, credit card information, and more. With this information, the security analyst can gain insight into the depth of the breach and the type of information that has been breached.
+VirusTotal
+This is a third-party threat feed integration, and follows the Bring Your Own Key (BYOK) model. If you have purchased VirusTotal access separately or if you own a public API key for free, you can use your the key and get the threat analytics information in the product.
+Note:
+Check out the
+Advanced Threat Analytics
+page to learn about the configuration and analysis.
+Note
+Minimize the tab to access the Incident Workbench while you traverse through different pages in the product. As long as you don't close the workbench, the analysis will be available even if you log out of the product and login again. You can also
+save it to an existing incident
+or create a new one.

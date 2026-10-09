@@ -1,0 +1,61 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the reports available for Apache servers in the product console. These reports provide visibility into server events, HTTP error responses, visitor activity, attack patterns, and advanced performance metrics to help monitor web server health, usage trends, and potential security threats.
+Available Reports
+Report group name
+Report name
+Apache Server Events
+All Events
+Important Events
+WebServer Error Reports
+HTTP Status Success
+HTTP Bad Gateway
+HTTP Internal Server Error
+HTTP Gateway Timeout
+HTTP Request URI Too Large
+HTTP Unsupported Media Type
+HTTP Request Entity Too Large
+HTTP Forbidden
+HTTP Server Not Found
+HTTP Request Timeout
+HTTP Bad Request
+HTTP Unauthorized
+Information Reports
+Success Reports
+Redirection Reports
+Responses over time
+Client Error Reports
+Server Error Reports
+WebServer Top Reports
+Top Visitors
+Top Users
+Top URL
+Top Browsers
+Top Status Codes
+Top Referrers
+Server Trend Report
+Apache Overview Report
+Visitor browser
+Visitor platform
+Top slowest URLs (top 20)
+Top slowest servers (top 10)
+Top clients causing 4xx error
+WebServer Attack Reports
+SQL Injection
+Cross Site Scripting
+Directory Traversal
+Malicious URL Request
+Apache Spam EMail Header
+Webserver advanced reports
+Average bytes transferred
+Average response time
+Web activity trend mapping
+Read also
+This document elaborated the list of Apache server reports available in the product console and how they help analyze web traffic, detect attacks, and monitor server performance. Explore related report sections to gain deeper visibility into security events and operational trends.
+IBM DB2 reports
+DHCP Linux reports
+DHCP Windows reports
+ERP reports
+IIS W3C FTP reports

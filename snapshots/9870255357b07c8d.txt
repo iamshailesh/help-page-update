@@ -1,0 +1,59 @@
+Configuring ManageEngine Password Manager Pro
+Here are the steps to configure Password Manager Pro.
+Login to Password Manager Pro.
+Navigate to Audit -> Resource Audit -> Audit Actions -> Configure Resource Audit. Enable the
+Generate Syslog
+option for all operations and click Save.
+Navigate to Audit -> User Audit -> Audit Actions -> Configure User Audit. Enable the
+Generate Syslog
+option for all operations and click Save.
+Navigate to Admin -> Integration -> SNMP Traps / Syslog Settings and click
+Syslog Collector
+.
+Enter the EventLog Server name and a port that the EventLog Analyzer instance is listening to.
+Select the protocol (UDP/TCP) and a facility name. Click Save.
+Configuring ManageEngine OpManager
+The following are the steps to configure ManageEngine OpManager.
+Login to OpManager.
+Navigate to Settings -> Notifications.
+Click Add.
+Profile Type
+Select Syslog Profile and enter the following details.
+Destination Host - EventLog Analyzer server name or IP address.
+Destination Port - Any port that the EventLog Analyzer instance is listening to.
+Severity and Facility must be the default values i.e. $severity and kernel.
+For EventLog Analyzer to parse logs from OpManager, the message variables in the syslog profile of OpManager should be entered in the following format:
+Mandatory message variables
+ALARM_MESSAGE:$message
+ALARM_ID:$alarmid
+ALARM_CODE:$alarmid
+Other important message variables
+ALARM_SOURCE:$displayName
+ALARM_CATEGORY:$category
+ALARM_SEVERITY:$stringseverity
+ALARM_TRIGGER_TIME:$strModTime
+ALARM_EVENT_TYPE:$eventType
+Entity: $entity
+Last Polled Value: $lastPolledValue
+Click
+Next
+.
+Criteria
+Click on the
+Criteria
+check-box.
+Enable the notification for all severities and click
+Next
+.
+Device Selection
+Select the By Device option and select all the devices listed under Remaining Devices and click Next.
+Schedule
+You don't have to configure anything in this section. Click
+Next
+.
+Preview
+Enter a profile name and click Save.
+Note
+If the same machine is running two or more ManageEngine products, ensure the following:
+The ports used by the products are unique.
+The EventLog Analyzer port receiving logs from OpManager and Password Manager Pro is not used by other ManageEngine products.

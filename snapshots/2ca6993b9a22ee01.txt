@@ -1,0 +1,4 @@
+ManageEngine Log360 provides a comprehensive REST API that enables seamless integration with third-party applications and services. The API enables you to access the product from other applications and perform necessary log monitoring and analysis with ease.
+Refer to
+this
+page to learn more about Version 2 APIs.

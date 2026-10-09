@@ -1,0 +1,112 @@
+A gateway server is an HTTP proxy server which is used to monitor HTTP traffic from end points to cloud applications. The serverâs proxy settings can be configured manually on an individual endpoint or configured in bulk for a group of endpoints.
+Steps to configure a gateway server on an individual endpoint:
+Open the Internet Properties window using one of the following methods:
+Type inetcpl.cpl in the
+Run
+window.
+Open
+Internet Explorer
+and click the settings symbol at the top-right corner, then select
+Internet Options
+.
+Open the
+Control Panel
+and select
+Internet Options
+.
+On devices running Windows 10, you can also navigate to
+Settings > Network and Internet > Proxy
+.
+In the
+Internet Properties
+window that opens, navigate to the
+Connections
+tab and click the
+LAN settings
+button.
+In the
+Local Area Network (LAN) Settings
+window that appears:
+Uncheck the
+Automatically detect settings
+checkbox.
+Uncheck the
+Use automatic configuration script
+checkbox.
+Check the
+Use a proxy server for your LAN
+option.
+Enter the IP address or host name of the gateway server in the
+Address
+text box and include its port number in the Port text box.
+Click
+OK
+.
+The gateway server is now configured on the endpoint.
+Steps to configure gateway servers on multiple endpoints via a Group Policy Object (GPO):
+Launch the
+Group Policy Management
+console using any of the following methods:
+Navigate to
+Server Manager > Tools > Group Policy Management Console
+.
+Press
+Win+R
+and in the
+Run
+dialog box that appears, type gpmc.msc and click
+OK
+.
+The
+Group Policy Management Console
+window opens. You can create a new GPO or modify an existing one.
+To create a new GPO, right-click the domain, site, or OU where you want to apply the policy and click
+Create a GPO dialog in this domain and Link it here
+.
+Enter a name for the GPO in the
+New GPO
+dialog box and click
+OK
+. The GPO is now created.
+Right-click the newly created GPO or an existing one and select
+Edit
+.
+In the
+Group Policy Management Editor
+, navigate to
+User Configuration > Preferences > Control Panel Settings > Internet Settings.
+Right-click
+Internet Settings
+and select
+New > Internet Explorer 10.
+In the
+IE Settings
+window, go to
+Connection
+and click the
+LAN settings
+button.
+In the
+Local Area Network (LAN) Settings
+window that appears:
+Uncheck the
+Automatically detect settings
+checkbox.
+Uncheck the Use
+automatic configuration script
+checkbox.
+Check the
+Use a proxy server for your LAN
+option.
+Enter the IP address or host name in the
+Address
+text box and include the port number in the
+Port
+text box.
+Click
+OK
+.
+The gateway server is now configured across multiple endpoints.
+To configure gateway servers on multiple endpoints via a Proxy Auto-Configuration (PAC) script, update your PAC script with the IP address and port number of the gateway server.
+Learn more about PAC scripts
+.

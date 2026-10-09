@@ -1,0 +1,147 @@
+In this page
+Overview
+What are connections?
+Pre-requisites
+Supported authentication types
+How do connections work?
+Use cases
+Overview
+Connections in ManageEngine Log360 Cloud enable seamless integration with external applications and services, allowing the product to exchange data securely across diverse IT environments. Whether it's fetching logs from cloud platforms, integrating with IAM solutions, or automating responses through EDR applications, Connections serve as the foundation for unified communication between Log360 Cloud and third-party services.
+What are connections?
+Connections act as a secure bridge between Log360 Cloud and third-party applications. By setting up connections, you can authenticate with external services using supported methods such as API Keys, Basic Authentication, OAuth1, or OAuth2 and reuse these configurations across various modules like Custom Widgets, Custom Functions, and Marketplace applications. This ensures consistent, secure, and efficient data flow without repetitive manual setups.
+The feature simplifies cross-platform communication by centralizing credential management, supporting both marketplace and custom-built integrations, and offering a scalable approach to securely extend Log360 Cloud's capabilities across your infrastructure.
+Pre-requisites
+Before using Connections, ensure the following conditions are met:
+Agent accessibility
+In the case of on-premises applications, at least one of the
+installed agents
+should be able to reach the application to establish and maintain the connection.
+Role-based access control
+The ability to view, create, and manage services and connections depends on the user's role in Log360 Cloud. The following permissions apply:
+Feature
+Admin
+Operator
+Guest
+Create and Manage Custom Service
+Complete access
+No access
+No access
+View Services
+Complete access
+Complete access
+Complete access
+Create Connections
+Complete access
+Complete access
+No access
+Manage Connections
+Complete access
+Can manage only the connections created by themselves
+No access
+View and Use Connections
+Complete access
+Complete access
+Complete Access
+NOTE
+Guest users can only view connections and cannot use them.
+Supported authentication types
+The following table lists the supported authentication types available in the product console along with their configuration details and fields.
+Type
+Description
+Fields
+API Key
+The API Key authentication allows you to connect to external services using unique key-based credentials. It's typically used when a service expects an API token or key to be passed along with each request. Once the parameters are defined, you must provide their actual values (for example, an authtoken or api-key) to complete the connection setup.
+On choosing API Key as authentication type, you need to provide values to the following fields:
+Parameter Type:
+Determines how the authentication parameters are included in requests. Supported options: Query String (appends the key to the request URL), Form Data (sends the key in the request body), and Header (adds the key in the request header).
+Parameter Key:
+The key name as specified in the API documentation of the target service, such as api-key, user-key, authtoken, apitoken.
+Parameter Display Name:
+A name used for display in the configuration interface.
+Note
+You can add multiple parameters as needed. Ensure that parameter names exactly match the service's API specification.
+Basic Authentication
+Basic Authentication is a standard method that uses a username and password to authorize a request. The provided credentials are automatically encoded using the Base64 algorithm and sent in the request header in the format:
+Basic <encoded_username>:<encoded_password>
+.
+Fields
+: Not applicable.
+The system automatically handles encoding and header creation. You only need to provide the username and password in the connection setup step.
+OAuth 1.0
+OAuth 1.0 authentication is used to securely connect to services that require a token exchange process for authorization. It involves fetching request tokens, authorizing the app, and retrieving access tokens for secure API access.
+On choosing OAuth 1 as authentication Type, you need to provide values to the following fields:
+Consumer Key:
+Key issued by the service provider for your application.
+Consumer Secret:
+Secret key provided to authenticate your application.
+Request Token URL:
+Endpoint to fetch the temporary request token.
+Authorize URL
+: Endpoint to authorize the application.
+Access Token URL:
+Endpoint to exchange the request token for an access token.
+OAuth 2.0
+OAuth 2.0 is a widely used protocol for secure delegated access. It allows the product to obtain access tokens from supported services without sharing credentials. You can choose from multiple grant types depending on how the target service performs authorization.
+On choosing OAuth 2 as authentication Type, you need to provide values to the following fields:
+Grant Type:
+Select the grant type supported by the target service, such as Authorization Code, Authorization Code with Proof Key for Code Exchange (PKCE), or Client Credentials.
+Configuration Type:
+Specifies how client credentials are managed for the connection. Supported types:
+Auto
+- The Client ID and Client Secret are configured once during custom service creation. These credentials are automatically applied to all connections created using that service.
+Manual
+- The Client ID and Client Secret must be entered each time a new connection is created, allowing different credentials for each connection.
+Note
+Users must manually enter all required authorization URLs for both
+Auto
+and
+Manual
+configurations.
+Client ID:
+Unique identifier issued by the service provider.
+Client Secret:
+Secret key used to authenticate your application.
+Authorize URL:
+Endpoint for user authorization.
+Access Token URL:
+Endpoint to obtain the access token.
+Refresh Token URL:
+Endpoint to refresh the access token.
+Revoke Token URL:
+Endpoint to revoke a refresh token.
+Client Authentication:
+Specifies how the client credentials are sent during token requests. Supported methods are Client Secret Basic, Client Secret Post and Client Secret JWT.
+Parameter Key:
+Determines how authentication parameters are sent. Supported parameter types: Query String or Header.
+Scope:
+Defines the access levels or permissions requested during authentication.
+Scope Delimiter:
+Separator used between scopes. Supported delimiters: comma (,), space ( ), and plus (+). Default is comma.
+How do connections work?
+Connections in Log360 Cloud can be configured for two categories of services:
+1. Pre-defined applications
+Pre-defined applications include built-in authentication settings, mapped endpoints, and standardized connection flows. These services require no manual configuration beyond entering the necessary credentials.
+Before creating a connection, ensure that the corresponding extension for the pre-defined service is
+installed
+in your Log360 Cloud account. Only then can the service be used to establish a connection.
+2. Custom services
+Custom services allow you to integrate with any third-party application not available as a pre-defined option. You can configure the authentication type, parameters, and endpoints according to the service's API documentation. Once the custom service is created, you can proceed to create a connection by entering the required authorization details.
+Use cases
+1. Managing credentials across multiple tools
+The challenge Organizations that operate with a broad range of security tools often maintain separate authentication configurations for each one. This leads to credential sprawl, increases administrative overhead, and raises the risk of inconsistent or misconfigured access across systems.
+With Connections
+Log360 Cloud provides a centralized framework for storing and managing authentication credentials across all integrated services. Once a connection is established, it can be referenced and reused across multiple modules, including Custom Widgets, Custom Functions, and Marketplace applications, without requiring credentials to be re-entered. This ensures consistency, reduces manual effort, and minimizes the risk of authentication errors across the environment.
+2. Monitoring and managing active connections
+The challenge
+Authentication tokens and API keys expire or get revoked over time. When this happens, integrations that depend on them stop working, disrupting log collection, automated workflows, and security monitoring. In most cases, these failures are not immediately visible, making it difficult for teams to identify and address the issue quickly.
+With Connections
+With Connections Log360 Cloud continuously tracks the status of all configured connections and displays them through the Connections page, where administrators can monitor whether each connection is active, expired, disconnected, or partially connected. Admins can identify and resolve failed connections promptly by re-authenticating and restoring all dependent modules without having to reconfigure the entire integration.
+3. Integrating third-party applications
+The challenge
+Organizations typically operate with a diverse set of security and IT tools, many of which may not have native integration support within Log360 Cloud. This can result in visibility gaps and require teams to manage data collection and workflows manually across disconnected systems.
+With Connections
+Log360 Cloud addresses this through Custom Services, which enable administrators to configure integrations with any external application that exposes an API. Authentication can be established using one of four supported methods: API Key, Basic Authentication, OAuth 1, and OAuth 2. Once configured, these integrations become part of the centralized Connections framework, allowing them to be reused consistently across modules such as Custom Widgets, Custom Functions, and Marketplace applications.
+Read also:
+This page provided an overview of Connections in Log360 Cloud. For detailed configuration steps, refer to the following articles:
+Creating a custom service
+Creating a connection

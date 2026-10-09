@@ -1,0 +1,13 @@
+In this page
+Overview
+Overview
+Log360 allows you to configure periodic backup of the database that comes built-in with it and the integrated components. The product also allows you to migrate from the built-in database (PostgreSQL) to MS SQL.
+Database Auto Backup
+Database auto backup lets you schedule and manage automatic backups of your database to prevent data loss. You can configure the backup frequency, location, and retention period to ensure important configuration and log data are safely stored and easily restorable in case of failures.
+Database Migration
+Database migration allows you to move from the default built-in PostgreSQL database to an external Microsoft SQL Server. This enhances performance, scalability, and maintenance flexibility, especially for large-scale deployments handling high log volumes.
+Read also
+This page elaborated on the key aspects of managing and maintaining your database. To understand more about the related configurations and capabilities, refer to the following help documents:
+Database Access
+Log Level Settings
+Log Forwarder

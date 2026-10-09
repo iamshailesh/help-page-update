@@ -1,0 +1,210 @@
+File Integrity Monitoring is a feature that helps you monitor all changes (addition/deletion/modification) made to files and folders in Windows and Linux systems.
+Important Note
+It is recommended that FIM be implemented for strictly necessary files and folders so as to avoid disk space issues that may rise due to the high volume of generated logs.
+In Windows FIM module,
+If a
+Windows file server
+is configured for FIM, both
+Windows Server
+and
+file server licenses
+are required.
+If a
+Windows server
+is configured for FIM, only a
+Windows Server license
+is required.
+If a
+Windows workstation
+is configured for FIM, only a
+Windows workstation license
+is required.
+Linux FIM Agent Architecture:
+To install packages, please find the syntax here.
+Prerequisites for File Integrity Monitoring
+Windows:
+When you enable File Integrity Monitoring for Windows, certain access policies will be automatically enabled on the file server. If there are overriding GPOs for audit policy in your domain, follow the below procedure to manually enable them
+In administrator command prompt enter the command, auditpol/get/category:"Object Access"
+Then proceed to enable the following access policies
+Audit file share
+Audit file system
+Audit handle manipulation
+Audit detailed file share
+Audit other object access events.
+SACLs should be enabled for the monitored file/folders. These are automatically enabled by the product. If not, manually update SACLs with the following permissions
+Execute files/ traverse folder
+Write data/create files
+Append data/create folders
+Write attributes
+Write extended attributes
+Delete subfolders and files
+Delete read permissions
+Change permissions
+Take ownership
+Linux:
+The following packages should be installed on the agent machine
+openssh-server [For UI related operations]
+auditd
+acl
+Ensure that,
+SSH Port (default port 22) is reachable from the server.
+Server Port (default port 8095) is reachable from the agent machine.
+To verify if a port is reachable, you can use the below commands:
+Copy
+echo > /dev/tcp/[Server Machine HostName/IP]/[Server Port] && echo "Port is Reachable"
+Example
+: echo > /dev/tcp/ubuntu/8095 && echo "Port is Reachable"
+(or)
+Copy
+telnet [Server Machine HostName/IP] [Server Port]
+Example
+: telnet ubuntu 8095
+Also ensure that the:
+Linux kernel version is 2.6.25 or higher
+Linux audit framework version is higher than 1.8
+Remove the following rules from /etc/audit/audit.rules file if they are enabled and then reboot the machine.
+Syscall block rule, "-a never,task", and
+Immutable rule, "-e 2".
+If you are enabling auditing for SUSE machines, set the following rule:
+Navigate to
+/etc/sysconfig/auditd
+Set AUDITD_DISABLE_CONTEXTS = no
+If Security-Enhanced Linux (SELinux) exists, then it must either be in the permissive mode or disabled:
+Check SELinux status using the command: getenforce.
+If the status is 'Enforced', navigate to
+file/etc/selinux/config
+and make this edit: SELINUX = permissive.
+Restart the machine.
+Note
+The server utilizes the agent credential only for the actions mentioned in the document.
+Configuring FIM for Linux audits the following actions on Linux files:
+Read
+Write
+Execute
+Attribute change
+Since auditd requires root or sudo privileges, if the user does not have the privileges, please follow the privileges steps.
+Privileges for Installing FIM Agent:
+Adding AgentManager to the Sudoers file.
+Create a directory and assign privileges to it.
+1. Adding AgentManager to the Sudoers file:
+To run AgentManager with sudo privileges for the Non-Sudo User, please follow the below instructions:
+Use the root user for configuring the privileges.
+Please execute the below command:
+Copy
+visudo -f /etc/sudoers.d/<username>
+Add the below line to the sudoers file:
+Copy
+<username> ALL=NOPASSWD: /opt/ManageEngine/EventLogAnalyzer_Agent/bin/AgentManager *
+Example:
+visudo -f /etc/sudoers.d/testuser
+testuser ALL=NOPASSWD: /opt/ManageEngine/EventLogAnalyzer_Agent/bin/AgentManager *
+Note
+Ensure that AgentManager is added to the sudoers file prior to installation. To verify, follow the below command.
+cat /etc/sudoers.d/<username>
+Example
+: cat /etc/sudoers.d/testuser
+Expected Output: testuser
+ALL=NOPASSWD: /opt/ManageEngine/EventLogAnalyzer_Agent/bin/AgentManager *
+Reason for adding AgentManager in the Sudoers file:
+The following actions require sudo privileges:
+Transfer the ownership of the Agent Directory and elafim.conf file [Under audit [or] audisp directory], to the root user.
+Restarting auditd service may also require root privileges.
+2. Create a directory and assign privileges to it
+To prevent unauthorized access to directories other than ManageEngine, follow the below commands as the root user for the non-sudo user.
+Create a directory:
+Copy
+mkdir /opt/ManageEngine/
+Granting privileges to the directory:
+Copy
+setfacl -m u:<username>:rwx /opt/ManageEngine/
+For CentOS/RHEL v8 and later/Ubuntu/openSUSE/Debian/Fedora:
+Copy
+setfacl -m u:<username>:wx /etc/audit/ /etc/audit/plugins.d/
+For CentOS/RHEL v6 to v7.9:
+Copy
+setfacl -m u:<username>:wx /etc/audisp/ /etc/audisp/plugins.d/
+Granting privilege to the audit.rules:
+Copy
+setfacl -m u:<username>:r /etc/audit/audit.rules
+Example
+: setfacl -m u:
+testuser
+:rwx /opt/ManageEngine/
+Configuring File Integrity Monitoring
+To configure File Integrity Monitoring, go to
+Navigate to
+Settings
+>
+Configurations
+>
+Manage File Integrity Monitoring
+.
+Depending on which device the files and folders that you wish to monitor are located in, click on either the Windows or Linux tab.
+Click
+Add FIM
+.
+Pick the device in which the files/folders are located, enter correct credentials, browse and select the files and folders you wish to monitor. Alternatively, you can enter the location of the files/folders.
+Note
+For Linux devices, in addition to entering the details mentioned above, you will also be prompted to enter the SSH port number.
+The
+Exclude Filter
+gives you an option to exclude
+Certain file types.
+Certain sub-locations within the main location.
+All sub-locations within the main location.
+If you want to know who has made the change to the file or folder, check the
+Audit Username
+checkbox.
+Note
+For Linux devices, username is audited by default.
+Click
+Configure
+.
+Configuring Bulk File Integrity Monitoring
+If the same files and folders located in multiple devices need to be added for monitoring, then the Bulk File Integrity Monitoring feature can be used.
+Navigate to
+Settings
+>
+Configurations
+>
+Manage File Integrity Monitoring
+.
+Depending on which device the files and folders that you wish to monitor are located in, click on either the
+Windows
+or
+Linux
+tab.
+Click
+Add FIM.
+Select
+Configure multiple devices
+on the top right corner.
+Pick the device in which the files/folders are located, enter correct credentials, and select the file template(s).
+Note
+For Linux devices, in addition to entering the details mentioned above, you will also be prompted to enter the SSH port number.
+Click
+Configure
+.
+Notes
+If an agent is already installed in the device whose files you want to monitor, file monitoring will automatically be enabled in the agent.
+If no agent is installed in the device for which you want to monitor the files, then an agent will be installed and file monitoring will be enabled in the agent.
+Please note that the volume of logs generated for each change occurring on the folders can affect the performance of the file server. It is a recommended practice to limit file/folder monitoring to the required files/folders.
+Manage File Integrity Monitoring (FIM) Templates
+If the same file or folder needs to be monitored in a number of devices, then a template can be created and assigned to these devices. To create a FIM template follow the steps below:
+Navigate to
+Settings > Configurations > Manage File Integrity Monitoring > FIM Templates.
+Depending on which device the files and folders that you wish to monitor are located in, click on either the Windows or Linux tab.
+Click
+Add FIM.
+Enter a name for the template and select the locations of the files and folders.
+Alternatively, you can enter the location of the files/folders.
+The Exclude Filter gives you an option to exclude
+Certain file types.
+Certain sub-locations within the main location.
+All sub-locations within the main location.
+If you want to know who has made the change to the file or folder, check the
+Audit Username
+checkbox.
+Click
+Configure.
+All the created templates are listed in a tabular column with an option to edit / delete them.

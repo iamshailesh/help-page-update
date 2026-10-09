@@ -1,0 +1,49 @@
+In this page
+Overview
+Event alerts
+Core capabilities
+Remediation and response integration
+Working architecture
+Use cases
+Overview
+This page elaborates on how alerts notify you about security events, compliance issues, and critical file changes in real time. you can create predefined or custom alert profiles, set severity levels, and receive notifications. alerts can also trigger automated actions through playbooks for faster response.
+Event alerts
+Stay informed about critical security events through real-time alerting. The system analyzes audit logs for indicators of compromise (IoCs) and notifies you via SMS or email when necessary.
+Alerts are classified into three severity levels as attention, trouble, and critical, helping you prioritize and respond efficiently.
+Core capabilities
+Real-time security alerts, including those from imported logs
+Compliance-specific alerts for regulatory monitoring
+File integrity monitoring (FIM) alerts to flag critical changes in sensitive files or folders
+Predefined & custom alert profiles
+Choose from over 1,000 predefined alerting criteria to cover a wide range of threat scenarios. You can also build custom alert profiles tailored to your organizationâs needs, applying parameters like thresholds and time ranges for precise control.
+Remediation and response integration
+When an alert is triggered, you can handle incidents directly within the console or escalate them through external ticketing tools for enhanced accountability.
+For a faster, automated response, you can assign a
+playbook
+to instantly perform actions such as disabling compromised accounts, shutting down a system, or terminating suspicious processes.
+NOTE
+The playbooks capability is currently available
+only
+in
+EventLog Analyzer
+and
+Log360
+.
+View all triggered alerts under the alerts tab in the interface.
+Working architecture
+Use cases
+1. Securing sensitive configuration files
+Use case
+A finance department configuration file containing critical transaction settings is modified after hours, raising suspicion of tampering.
+With alerts
+A FIM (File Integrity Monitoring) alert triggers immediately. The playbook supports rapid response by executing actions such as restoring the last clean version of the file, logging the incident, and notifying the security team by minimizing risk and preserving system integrity.
+2. Detecting unauthorized login patterns
+Use case
+A series of failed login attempts from an employeeâs account over a short period suggests possible credential misuse.
+With alerts
+A security alert is generated in real time. The response system escalates the incident via a ticketing tool and optionally executes a playbook that temporarily locks the account and notifies administrators, containing potential damage while ensuring a speedy investigation.
+Read also
+This page outlined how alerts can enhance your organization's threat detection and remediation measures. Read more about creating alert profiles, configuring notifications, and monitoring events to strengthen security and compliance.
+Create Alert Profile
+Manage alert Profiles
+Alert Notification & Remediation

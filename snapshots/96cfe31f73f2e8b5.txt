@@ -1,0 +1,6 @@
+The vCenter servers to be monitored by EventLog Analyzer can be added by navigating to
+Settings > Log Source Configuration > VM Management and using the Add vCenter button.
+You can also
+view
+and manage
+the vCenter servers that are being monitored.

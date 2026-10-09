@@ -1,0 +1,35 @@
+The gateway server access key is used to establish a secure connection between gateway servers and the Log360 Cloud-Cloud Protection server. This key will be automatically used to set up initial gateway server installation. However, you can regenerate the key in case it has been exposed.
+In Log360 Cloud, in case of any security leak or unauthorized access attempt, you can regenerate the access key of the gateway server with the following steps:
+Login to your
+Log360 Cloud
+account.
+Go to
+Settings â Configuration â Cloud Protection Settings
+.
+Under
+Server
+, click on
+Gateway Servers
+.
+Click on
+Regenerate Access Key
+.
+In the pop-up that appears, click on
+Regenerate Access key
+.
+In the confirmation box that appears, click on
+Yes
+to regenerate the access key.
+The access key has been regenerated successfully.
+Note
+If the access key is regenerated, the current access key configurations will no longer work. So, the newly regenerated access key should be updated in the configured gateway servers in all the clusters to ensure secure connections with the Log360 Cloud-Cloud Protection server.
+Update Gateway Server Access Key in gateway servers
+In case the access key has been regenerated, please update all the gateway servers with their respective new access key by following the steps below:
+In Services.msc stop the gateway service.
+Open command prompt as an admisitrator at
+<Gateway Server Installation Location>\bin
+(Default Location - C:\Program Files\ManageEngine\ManageEngine Log360 Cloud - Cloud Protection Gateway\bin) and execute
+AccessKeyUpdater.exe
+.
+This will open AccessKeyUpdater popup. In AccessKeyUpdater window, enter newly generated key and click OK.
+Again start the gateway service. Now the new access key will be updated in the gateway server.

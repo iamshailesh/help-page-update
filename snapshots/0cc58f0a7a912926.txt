@@ -1,0 +1,59 @@
+In this page
+Overview
+Key features
+Pre-requisites for converting to the MSSP edition
+Default communication protocols
+Best practices for MSSP server deployment
+Overview
+This document provides a detailed walkthrough for converting the standalone edition of Log360 into MSSP edition.
+What is MSSP deployment:
+The MSSP deployment allows centralized management of multiple customer instances deployed in various geographical locations. It supports customer and technician management, secure multi-tenant views, and license allocation. The guide also explains necessary prerequisites, port requirements, and best practices to ensure a successful deployment.
+NOTE
+This document applies to both Log360 MSSP and EventLog Analyzer Distributed environments. Existing EventLog Analyzer Distributed customers who have upgraded to the latest version will experience the same features, configuration options, and User-Interface behavior described in this page. Terminology may vary between products, but the function remains identical.
+Reference glossary
+The terms used for central and distributed deployments vary based on the environment:
+Distributed environment
+Admin server:
+Acts as the central server in a distributed environment, coordinating data and configurations across all managed servers.
+Managed server:
+Refers to the servers deployed at different locations in a distributed environment, which report to the admin server.
+MSSP environment
+MSSP server
+: Functions as the central server in an MSSP environment, enabling service providers to manage multiple customer servers from one console.
+Customer server
+: Refers to the servers deployed at different customer locations in an MSSP environment, which are integrated with the MSSP server.
+Key features
+Supports multiple customers across different geographical locations.
+Supports customer management, technician management, and customers' license management.
+Exclusive segmented and secured view for various customers of the MSSP in a single console.
+NOTE
+Log360 MSSP edition will have the distributed architecture only for its core component, the log management system -- Log360. Please note that you cannot integrate the identity threat detection and response (ITDR) component -- ADAudit Plus, or the data security component -- DataSecurity Plus, with your MSSP deployment. If you need more assistance on the deployment, contact
+our technical support team
+.
+Pre-requisites for converting to the MSSP edition
+Here are a few of the prerequisites which need to be taken care of before converting a standalone setup to the MSSP edition:
+Port requirements
+If you want to convert your existing standalone Log360 to MSSP edition, ensure that the following ports to be free for web server and PostgreSQL communication.
+33335 (TCP):
+This is the port used for connecting to the bundled PostgreSQL database in Log360.
+8095 (Web server port):
+This is the default web server port used by Log360. This port is used for connecting to a web browser. You can change this port during conversion.
+Default communication protocols (HTTP/HTTPS)
+By default, the customer's server and the MSSP server communicate using HTTP (port number 8095). There is also an option to convert the mode of communication to HTTPS.
+Verify port availability to ensure it is unoccupied by concurrent local applications. This is crucial because for the product communication, the customer's server will send a request to port 8095 of the MSSP server and vice versa.
+Best practices for MSSP server deployment
+We always recommend the conversion of a new server (Log360) to MSSP server to avoid data loss. You can follow the steps given
+here
+to convert the standalone instance into an MSSP server.
+Both the MSSP server and the customer server should be in the same build. If they are not in the same build, follow the steps mentioned
+in this page
+to download and apply the latest service packs.
+NOTE
+If both the MSSP and customer servers are not in the same build number, it can lead to sync issues.
+One MSSP server is designed to manage up to 100 customer servers.
+Read also
+This document explained how to set up and convert Log360 to the MSSP edition, including its capabilities, default communication protocols, and post-conversion behavior. For more advanced deployment options and customer-specific configurations, refer to:
+License management
+Technician management
+Reverse proxy
+Auto-upgrade

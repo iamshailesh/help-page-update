@@ -1,0 +1,19 @@
+The Log360 Dashboard delivers a near real-time view of security and operational data through graphical reports and summary widgets. It provides centralized visibility into events, network activity, threat intelligence, incidents, Microsoft 365 activity, Active Directory audits, detections, and anomaly trends, organized into predefined tabs such as Events Overview, Network Overview, Security Overview, M365, Incident Overview, Threat Analytics, Detection Overview, Anomaly Trends, and AD Audit.
+The dashboard displays data collected from configured log sources and allows you to filter information based on a selected time range. It is organized into tabs, each containing widgets that present specific security insights.
+You can fully customize the dashboard by:
+Adding new tabs
+Adding widgets to a tab
+Editing, deleting, and reordering tabs
+Reordering and resizing widgets
+Editing and deleting widgets
+For better visibility and focused analysis, you can:
+View the dashboard in full screen mode
+View individual widgets in full screen mode
+Manually refresh the dashboard and widgets
+Configure and modify the refresh interval
+Log360 allows you to generate embed links for dashboards and individual widgets, enabling secure sharing and controlled external access when required. You can manage these embed links directly from the dashboard settings.
+Refer to the following pages to learn about each feature in detail.
+Predefined tabs and widgets
+Customizing dashboard views
+Embed dashboard
+Log sources

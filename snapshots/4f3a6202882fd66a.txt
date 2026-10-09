@@ -1,0 +1,28 @@
+In this page
+Overview
+Available Reports
+Overview
+This page lists the EMC server reports available in the product to monitor file and folder activities across servers. These reports provide visibility into file creation, modification, deletion, access attempts, permission changes, and failed operations, enabling effective auditing, compliance tracking, and incident investigation.
+Available Reports
+Report group name
+Report name
+File Monitoring
+All File or Folder Changes
+File Created
+File Modified
+File Deleted
+File Renamed
+File Permission Changes
+Summary based on Servers
+File Read Access
+File Moved
+Failed Attempt To Read File
+Failed Attempt To Write File
+Failed Attempt To Delete File
+Changes based on servers
+Read also
+This page outlined the EMC server reports supported by the product for tracking file system activity across servers. Explore related report sections to gain deeper visibility into security events and operational trends.
+Isilon reports
+NetApp reports
+QNAP NAS reports
+Synology NAS reports

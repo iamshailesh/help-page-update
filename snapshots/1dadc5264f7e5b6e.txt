@@ -1,0 +1,1208 @@
+In this page
+Overview
+Use cases
+Configuring Sophos integration via Connections
+Supported SOAR functionalities
+Overview
+Sophos Central is a cloud-native security management platform that delivers centralized control over endpoint protection, server security, firewall management, and threat response. It enables organizations to monitor alerts, isolate compromised endpoints, enforce exploit mitigation policies, and manage users and groups across distributed environments from a single console.
+The Sophos Central extension for ManageEngine Log360 Cloud integrates detection with enforcement, enabling security teams to trigger automated SOAR actions from correlated incidents, without switching consoles. By combining Log360 Cloud's correlation capabilities with Sophos Central's endpoint control mechanisms, organizations can rapidly contain threats and reduce response time.
+Use cases
+Isolate compromised endpoints instantly
+When Log360 Cloud detects ransomware-like behavior such as abnormal file encryption patterns, exploit detections, or suspicious script execution, it can automatically trigger the Endpoint Isolation action through the Sophos Central extension.
+The affected device is immediately isolated from the network while maintaining secure communication with Sophos Central for remediation.
+With the Sophos Central extension:
+Lateral movement is prevented
+Command and control communication is blocked
+Incident investigation can proceed safely
+Pre-requisites
+Before creating a connection for a pre-defined service, ensure that the corresponding integration/extension is
+installed
+in Log360 Cloud.
+Only after installing the extension, the service will appear in the
+Connections
+page for connection setup.
+Configuring Sophos integration via Connections
+To enable communication between Log360 Cloud and Sophos Central, a connection must be configured.
+Log in to the product console.
+Navigate to the
+Settings
+tab and select
+Admin
+.
+Under
+Integrations
+, select
+Connections
+.
+Figure 1: Accessing connections
+From the list of available integrations, select
+Sophos Central.
+Figure 2: Selecting Sophos Central
+In the window that opens, click
+Create Connection
+.
+Figure 3: Creating a connection
+In the
+Create Connection - Sophos Central
+window, provide the following details:
+Authentication Type:
+This is preselected based on the integration.
+Connection Name
+: Enter a name to identify the connection.
+Data Region
+: Specify the data region associated with your Sophos account.
+NOTE
+The Client ID and Client Secret can be generated from the
+Sophos Central Admin portal
+. For detailed steps on creating API credentials, refer to
+this
+document.
+Client ID:
+Enter the Client ID generated from the Sophos Central Admin portal.
+Client Secret:
+Enter the corresponding Client Secret.
+Tenant ID:
+Provide the Tenant ID from the Sophos Central portal.
+Figure 4: Configuring connection details
+Under
+Select Scope(s)
+, choose the required scope. You can also use the search bar to locate the required scope.
+Figure 5: Selecting scope(s)
+Click
+Authorize and Save
+to complete authentication and create the connection.
+Supported SOAR functionalities
+The Sophos Central extension provides custom functions that enable playbooks to interact with Sophos Central APIs. These functions can be used to retrieve alerts, manage endpoints, and perform automated response actions.
+1. sophoscentral_listAlerts
+Retrieves a list of security alerts from Sophos Central with pagination support.
+Parameter
+Param type
+Param Description
+Mandatory
+Reference link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+pageSize
+Int
+Maximum number of items to return per page (1-1000). The Default is 50.
+No
+pageFromKey
+String
+Pagination token from the previous response to fetch the next page.
+No
+2. sophoscentral_getAlert
+Fetches detailed information about a specific security alert by ID.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+alertId
+String
+The unique identifier (UUID) of the security alert.
+Yes
+3. sophoscentral_alertAction
+Performs actions on security alerts such as acknowledge, clean, or send to Central.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+alertId
+String
+The unique identifier (UUID) of the security alert.
+Yes
+action
+String
+The action to perform on the alert (e.g., acknowledge, cleanPua, cleanVirus, authPua, clearThreat).
+Yes
+message
+String
+Custom message to send to users for specific alert actions.
+No
+4. sophoscentral_searchAlert
+Searches and filters alerts by time range, product type, severity, and category.
+Parameter
+Param Type
+Param Description
+Mandatory
+Map parameter structure and description
+Reference link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+-
+Reference
+queryParams
+String
+JSON string with filter criteria: groupKey (string),
+from (datetime),
+to (datetime),
+product (array),
+ids (array),
+fields (array).
+No
+Copy
+{
+"groupKey": "string",
+"from": "string (datetime)",
+"to": "string (datetime)",
+"product": "array",
+"ids": "array",
+"fields": "array"
+}
+Description
+JSON string with filter criteria to search and filter alerts.
+groupKey - Alert group key. Use this to filter alerts belonging to a specific group.
+from - Retrieve alerts that were raised on or after the specified time.
+to - Retrieve alerts that were raised before the specified time.
+product - Filter alerts based on product types.
+ids - List of alert IDs to retrieve specific alerts.
+fields - Specify the fields to include in the response for a partial result.
+pageSize
+Int
+Maximum number of items to return per page (1-1000). Default is 50.
+No
+-
+pageFromKey
+String
+Pagination token from the previous response to fetch the next page.
+No
+-
+5. sophoscentral_listEndpoint
+Retrieves a list of managed endpoints with filtering options for health status and type.
+Parameter
+Param Type
+Param Description
+Map parameter structure and description
+Mandatory
+Reference link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+-
+Yes
+Reference
+queryParams
+String
+JSON string with filter criteria: healthStatus, tamperProtectionEnabled, lockdownStatus, overallEncryptionStatus, isolationStatus, search, ids.
+{ "healthStatus": "array", "tamperProtectionEnabled": bool, "tamperProtectionSupported": bool, "lockdownStatus": "array",
+"overallEncryptionStatus": "array", "isolationStatus": "string", "search": "array", "ids": "array"}JSON string with filter criteria to refine
+endpoint results.
+healthStatus - Find endpoints by health status.
+tamperProtectionEnabled - Filter endpoints based on whether Tamper Protection is enabled.
+tamperProtectionSupported - Filter endpoints based on whether Tamper Protection is supported.
+lockdownStatus - Find endpoints by lockdown status.
+overallEncryptionStatus - Filter endpoints based on overall encryption status.
+isolationStatus - Find endpoints by isolation status.
+search - List of fields to search for the given term. Defaults to all applicable fields.
+ids - Find endpoints with the specified endpoint IDs.
+No
+pageSize
+Int
+Maximum number of items to return per page (1-500). Default is 50.
+-
+No
+pageFromKey
+String
+Pagination token from the previous response to fetch the next page.
+-
+No
+6. sophoscentral_scanEndpoint
+Initiates an on-demand security scan on a specific endpoint.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+endpointId
+String
+The unique identifier (UUID) of the endpoint device.
+Yes
+7. sophoscentral_getTamperProtectionInfo
+Retrieves tamper protection status and configuration for an endpoint.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+endpointId
+String
+The unique identifier (UUID) of the endpoint device.
+Yes
+getPassword
+Bool
+Boolean to include the tamper protection password in the response (true/false).
+No
+8. sophoscentral_updateTamperProtectionInfo
+Updates tamper protection settings for an endpoint.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+endpointId
+String
+The unique identifier (UUID) of the endpoint device.
+Yes
+enabled
+Bool
+Boolean to enable (true) or disable (false) tamper protection.
+No
+regeneratePassword
+Bool
+Boolean to generate a new tamper protection password (true/false).
+No
+9. sophoscentral_listWhitelistItems
+Retrieves a list of whitelisted items allowed in Sophos Central.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+page
+Int
+The page number to retrieve, starting from 1.
+No
+pageSize
+Int
+Maximum number of items to return per page (1-100). Default is 50.
+No
+10. sophoscentral_getWhitelistItem
+Fetches details of a specific whitelisted item by ID.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+allowedItemId
+String
+The unique identifier (UUID) of the whitelisted item.
+Yes
+11. sophoscentral_addWhitelistItem
+Adds a new item to the whitelist in Sophos Central.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+comment
+String
+Descriptive note explaining why an item is allowed, blocked, or excluded.
+Yes
+certificateSigner
+String
+The certificate signer (issuer) of a digitally signed application or file.
+No
+fileName
+String
+The file name to allow, block, or exclude. Supports wildcards (e.g., '*.tmp').
+No
+path
+String
+File system path to allow, block, or exclude. Supports wildcards.
+No
+sha256
+String
+SHA-256 hash of the file for unique identification.
+No
+itemType
+String
+Property type to identify an item (sha256, path, certificateSigner).
+Yes
+originEndpointId
+String
+The unique identifier (UUID) of the endpoint where the item was detected.
+No
+12. sophoscentral_updateWhitelistItem
+Updates an existing whitelisted item configuration.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+allowedItemId
+String
+The unique identifier (UUID) of the whitelisted item.
+Yes
+comment
+String
+Descriptive note explaining why an item is allowed, blocked, or excluded.
+Yes
+13. sophoscentral_deleteWhitelistItem
+Removes a whitelisted item from Sophos Central.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+allowedItemId
+String
+The unique identifier (UUID) of the whitelisted item.
+Yes
+14. sophoscentral_getBlockedAddress
+Retrieves details of a blocked IP address or domain.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+pageSize
+Int
+Maximum number of items to return per page (1-50). Default is 50.
+No
+page
+Int
+The page number to retrieve, starting from 1.
+No
+15. sophoscentral_listBlockedItems
+Retrieves a list of blocked items in Sophos Central.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+pageSize
+Int
+Maximum number of items to return per page (1-50). Default is 50.
+No
+page
+Int
+The page number to retrieve, starting from 1.
+No
+16. sophoscentral_getBlockedItem
+Fetches details of a specific blocked item by ID.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+blockedItemId
+String
+The unique identifier (UUID) of the blocked item.
+Yes
+17. sophoscentral_addBlockedItem
+Adds a new item to the blocked list in Sophos Central.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+comment
+String
+Descriptive note explaining why an item is allowed, blocked, or excluded.
+Yes
+certificateSigner
+String
+The certificate signer (issuer) of a digitally signed application or file.
+No
+fileName
+String
+The file name to allow, block, or exclude. Supports wildcards (e.g., '*.tmp').
+No
+path
+String
+File system path to allow, block, or exclude. Supports wildcards.
+No
+sha256
+String
+SHA-256 hash of the file for unique identification.
+No
+itemType
+String
+Property type to identify an item (sha256, path, certificateSigner).
+Yes
+18. sophoscentral_deleteBlockedItem
+Removes a blocked item from Sophos Central.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+blockedItemId
+String
+The unique identifier (UUID) of the blocked item.
+Yes
+19. sophoscentral_listScanExclusion
+Retrieves a list of scan exclusions configured in Sophos Central.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+exclusionType
+String
+Type of scan exclusion (path, posixPath, virtualPath, process, web, pua, exploitMitigation, amsi, behavioral).
+No
+pageSize
+Int
+Maximum number of items to return per page (1-100). Default is 50.
+No
+page
+Int
+The page number to retrieve, starting from 1.
+No
+20. sophoscentral_getScanExclusion
+Fetches details of a specific scan exclusion by ID.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+exclusionId
+String
+The unique identifier (UUID) of the scan exclusion.
+Yes
+21. sophoscentral_addScanExclusion
+Adds a new scan exclusion in Sophos Central.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+comment
+String
+Descriptive note explaining why an item is allowed, blocked, or excluded.
+No
+scanMode
+String
+Scan types the exclusion applies to (onAccessScan, onDemandScan, onAccessAndOnDemandScan).
+No
+exclusionType
+String
+Type of scan exclusion (path, posixPath, virtualPath, process, web, pua, exploitMitigation, amsi, behavioral).
+Yes
+exclusionValue
+String
+The specific value for the exclusion (e.g., file path, process name, URL).
+Yes
+22. sophoscentral_updateScanExclusion
+Updates an existing scan exclusion configuration.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+comment
+String
+Descriptive note explaining why an item is allowed, blocked, or excluded.
+No
+scanMode
+String
+Scan types the exclusion applies to (onAccessScan, onDemandScan, onAccessAndOnDemandScan).
+No
+exclusionId
+String
+The unique identifier (UUID) of the scan exclusion.
+Yes
+exclusionValue
+String
+The specific value for the exclusion (e.g., file path, process name, URL).
+No
+23. sophoscentral_deleteScanExclusion
+Removes a scan exclusion from Sophos Central.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+exclusionId
+String
+The unique identifier (UUID) of the scan exclusion.
+Yes
+24. sophoscentral_listExploitMitigation
+Retrieves a list of exploit mitigation rules configured in Sophos Central.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+mitigationType
+String
+Type of exploit mitigation exclusion.
+No
+pageSize
+Int
+Maximum number of items to return per page (1-100). Default is 50.
+No
+page
+Int
+The page number to retrieve, starting from 1.
+No
+modified
+Bool
+Boolean to filter modified exploit mitigation (true/false).
+No
+25. sophoscentral_getExploitMitigation
+Fetches details of a specific exploit mitigation rule by ID.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+mitigationId
+String
+The unique identifier (UUID) of the exploit mitigation exclusion.
+Yes
+26. sophoscentral_addExploitMitigation
+Adds a new exploit mitigation rule in Sophos Central.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+path
+List
+File system path(s) to allow, block, or exclude. Supports wildcards.
+Yes
+27. sophoscentral_updateExploitMitigation
+Updates an existing exploit mitigation rule configuration.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+mitigationId
+String
+The unique identifier (UUID) of the exploit mitigation exclusion.
+Yes
+path
+List
+File system path(s) to allow, block, or exclude. Supports wildcards.
+Yes
+28. sophoscentral_deleteExploitMitigation
+Removes an exploit mitigation rule from Sophos Central.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+mitigationId
+String
+The unique identifier (UUID) of the exploit mitigation exclusion.
+Yes
+29. sophoscentral_getIsolationEndpoint
+Retrieves the network isolation status of an endpoint.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+endpointId
+String
+The unique identifier (UUID) of the endpoint device.
+No
+30. sophoscentral_addIsolationEndpoint
+Isolates an endpoint from the network for security containment.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+endpointIds
+List
+List of endpoint unique identifiers (UUIDs) for bulk operations.
+No
+comment
+String
+Descriptive note explaining why the endpoint is being isolated.
+No
+enabled
+Bool
+Boolean to enable (true) or disable (false) isolation.
+Yes
+31. sophoscentral_updateIsolationEndpoint
+Updates the network isolation settings for an endpoint.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+endpointId
+String
+The unique identifier (UUID) of the endpoint device.
+No
+comment
+String
+Descriptive note explaining the reason for updating isolation.
+No
+enabled
+Bool
+Boolean to enable (true) or disable (false) isolation.
+Yes
+32. sophoscentral_deleteIsolationEndpoint
+Removes network isolation from an endpoint, restoring connectivity.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+endpointId
+String
+The unique identifier (UUID) of the endpoint device.
+Yes
+enabled
+Bool
+Boolean set to false to remove isolation.
+Yes
+comment
+String
+Descriptive note explaining why isolation is being removed.
+No
+33. sophoscentral_addUserInUserGroup
+Adds a user to a specified user group in Sophos Central.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+groupId
+String
+The unique identifier (UUID) of the user group.
+Yes
+ids
+List
+List of user unique identifiers (UUIDs) to add.
+Yes
+34. sophoscentral_deleteUserInUserGroup
+Remove multiple users from a group.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+groupId
+String
+The unique identifier (UUID) of the user group.
+Yes
+ids
+List
+List of user unique identifiers (UUIDs) to remove.
+Yes
+35. sophoscentral_listUserGroup
+Returns a list of all user groups that match the search criteria.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+page
+Int
+The page number to retrieve, starting from 1.
+No
+pageSize
+Int
+Maximum number of items to return per page (1-100). Default is 50.
+No
+search
+String
+Search query string to filter results by name or other fields.
+No
+36. sophoscentral_getUserGroup
+Get group by ID.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+groupId
+String
+The unique identifier (UUID) of the user group.
+Yes
+37. sophoscentral_createUserGroup
+Add a new group to the directory.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+name
+String
+Display name for the user group.
+Yes
+userIds
+List
+List of user unique identifiers (UUIDs) to add to the group.
+No
+description
+String
+Detailed explanation or notes about the group.
+No
+38. sophoscentral_updateUserGroup
+Update a user group.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+groupId
+String
+The unique identifier (UUID) of the user group.
+Yes
+name
+String
+Display name for the user group.
+No
+description
+String
+Detailed explanation or notes about the group.
+No
+39. sophoscentral_deleteUserGroup
+Deletes the specified group.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+groupId
+String
+The unique identifier (UUID) of the user group.
+Yes
+40. sophoscentral_listUser
+Returns a list of all users.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+page
+Int
+The page number to retrieve, starting from 1.
+No
+pageSize
+Int
+Maximum number of items to return per page (1-100). Default is 50.
+No
+search
+String
+Search query string to filter results by name or other fields.
+No
+41. sophoscentral_getUser
+Fetches details of a specific user by ID.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+userId
+String
+The unique identifier (UUID) of the user account.
+Yes
+42. sophoscentral_addUser
+Add a new user.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+name
+String
+Display name for the user.
+Yes
+firstName
+String
+The first name (given name) of the user.
+No
+lastName
+String
+The last name (surname) of the user.
+No
+email
+String
+The email address of the user (e.g., 'user@example.com').
+No
+exchangeLogin
+String
+Microsoft Exchange or Office 365 login username for the user.
+No
+groupIds
+List
+List of group unique identifiers (UUIDs) to assign a user to.
+No
+43. sophoscentral_updateUser
+Update a user.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+userId
+String
+The unique identifier (UUID) of the user account.
+Yes
+name
+String
+Display name for the user.
+No
+firstName
+String
+The first name (given name) of the user.
+No
+lastName
+String
+The last name (surname) of the user.
+No
+exchangeLogin
+String
+Microsoft Exchange or Office 365 login username for the user.
+No
+email
+String
+The email address of the user (e.g., 'user@example.com').
+No
+44. sophoscentral_deleteUser
+Deletes a user.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+userId
+String
+The unique identifier (UUID) of the user account.
+Yes
+45. sophoscentral_listEndpointGroup
+List endpoint groups.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+page
+Int
+The page number to retrieve, starting from 1.
+No
+pageSize
+Int
+Maximum number of items to return per page (1-1000). Default is 50.
+No
+search
+String
+Search query string to filter results by name or other fields.
+No
+46. sophoscentral_getEndpointGroup
+Get an endpoint group by ID.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+groupId
+String
+The unique identifier (UUID) of the endpoint group.
+Yes
+47. sophoscentral_createEndpointGroup
+Create a new endpoint group.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+name
+String
+Display name for the endpoint group.
+Yes
+type
+String
+Type or category of the entity (e.g., computer, server).
+Yes
+description
+String
+Detailed explanation or notes about the entity.
+No
+endpointIds
+List
+List of endpoint unique identifiers (UUIDs) for bulk operations.
+No
+48. sophoscentral_updateEndpointGroup
+Update an endpoint group.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+groupId
+String
+The unique identifier (UUID) of the endpoint group.
+No
+name
+String
+Display name for the endpoint group.
+No
+description
+String
+Detailed explanation or notes about the entity.
+No
+49. sophoscentral_deleteEndpointGroup
+Delete an endpoint group by ID.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+groupId
+String
+The unique identifier (UUID) of the endpoint group.
+Yes
+50. sophoscentral_getEvents
+Retrieves threat detection events for specified endpoints within a given time range from Sophos Central SIEM.
+Parameter
+Param Type
+Param Description
+Mandatory
+Reference Link
+connectionName
+Connection
+The name of the pre-configured Sophos Central connection used for authentication and API access.
+Yes
+Reference
+fromDate
+Int
+Starting date and time in Unix timestamp format (seconds since epoch).
+No
+limit
+Int
+Maximum number of events to return (typically 1-1000). Default is 200.
+No
+cursor
+String
+Pagination cursor token to retrieve the next batch of events.
+No
+Read also
+This page explained how to configure the Sophos Central integration and use supported SOAR actions for automated response and endpoint management. For more information on related integration features, refer to:
+Veeam
+Okta

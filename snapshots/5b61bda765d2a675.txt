@@ -1,0 +1,36 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the reports available for MySQL in the product console. These reports help administrators monitor database events, track successful and failed login attempts, analyze executed SQL statements, review administrative and maintenance operations, and gain visibility into MySQL server startup and shutdown activities.
+Available Reports
+Report group name
+Report name
+MySQL Events
+All Events
+Important Events
+Logon Reports
+Successful Logins
+Failed Logins
+General Statements Reports
+DDL Statements
+DML Statements
+Transactional and Locking Statements
+Utility Statements
+Replication Statements
+Database Administrative Statements Reports
+Account Management Statements
+Resource Group Management Statements
+Table Maintenance Statements
+Component and Plugin Statements
+Other Administrative Statements
+Set Statements
+Show Statements
+MySQL Server Events
+Server Startup/Shutdown Events
+Read also
+This document elaborated the MySQL reports available in the product console and their usage in monitoring database activity, authentication events, and administrative operations. Explore related report sections to gain deeper visibility into security events and operational trends.
+Oracle reports
+PGSQL reports
+Printer reports
+SAP reports

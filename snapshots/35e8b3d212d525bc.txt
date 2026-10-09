@@ -1,0 +1,43 @@
+Note
+Ensure Log360 Cloud agent is installed on at least one Windows device in your network. To configure the agent, follow the steps provided
+here
+.
+In the Log360 Cloud console, navigate to
+Settings -> Configuration Settings -> Log source configuration -> Applications -> Security Applications -> Add Security Applications
+Select Add-on type as
+Trend Micro
+Expand the list by clicking the "
++
+" icon to add a new device.
+Choose from the drop-down menu to add Configured devices, Workgroup devices, domain devices, etc.
+To add new devices manually, click on
+Configure Manually
+and enter
+Log Source
+Click on
+Select
+and
+Add
+to add the log source.
+Use the
+Select Agent
+dropdown to select the device that is the agent to which the logs will be forwarded.
+The applications will now be added for monitoring.
+Configuration steps for Syslog forwarding from Trend Micro - Deep Security devices to Log360 Cloud
+To forward system events to Log360 Cloud
+Go to Administration â System Settings â Event Forwarding.
+Select Forward System Events to a remote computer (via Syslog) in the SIEM section.
+Specify the following information and then click Save:
+Hostname <Log360 Cloud agent server IP or host name>
+UDP port <Any port that the Log360 Cloud agent server is listening to>
+Syslog Format <CEF>
+Syslog Facility
+To forward security events to Log360 Cloud
+Go to Policies.
+Double-click the policy you want to use for computers to forward security events via the Deep Security Manager.
+Go to Settings > SIEM and select Forward Events To > Relay via the Manager for each applicable protection module.
+Specify the following information that is required for relaying events via the Deep Security Manager and then click Save:
+Hostname <Log360 Cloud agent server IP or host name>
+UDP port <Any port that the Log360 Cloud agent server is listening to>
+Syslog Format <CEF>
+Syslog Facility

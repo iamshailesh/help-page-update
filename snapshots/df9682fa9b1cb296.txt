@@ -1,0 +1,17 @@
+Log360 Cloud gives you a comprehensive report on access attempts to banned cloud applications in your organization. Here is how you can access the analytical reports on usage of applications in Log360 Cloud.
+Navigate to
+Reports
+and select the
+Cloud Protection
+from the
+Devices
+drop-down menu.
+Under Cloud Protection, go to the
+Banned Cloud Apps
+tab. The LHS pane lists the available analytical reports.
+Recent Banned Requests
+: Lists the latest requests made for banned web applications.
+Banned Cloud App Access
+: Lists banned cloud applications that received requests.
+Top Actors For Banned Apps
+: Lists client devices with the most requests for banned applications.

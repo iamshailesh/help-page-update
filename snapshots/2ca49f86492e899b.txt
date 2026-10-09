@@ -1,0 +1,39 @@
+In this page
+How to whitelist a new source?
+Threat Alerting
+Constella Intelligence is a digital risk protection platform that provides dark web monitoring. This integration with the product enables users to identify personal information such as credit card number, email information, usernames and credentials that are leaked in the dark web. Users can also
+Gain visibility into breaches using the Threat Analytics dashboard
+Get breach reports
+Get predefined alerts for supply chain breaches
+Configuring Dark Web threat feeds
+Once you have purchased the Advanced Threat Analytics add-on and applied the license, head to the Advanced Threat Analytics page.
+Navigation:
+Settings â Admin Settings â Management â Threat Feeds â Advanced Threat Analytics â Log360 Cloud Threat Analytics â Integrate
+To get the access key, please follow the steps (Until step 2) in
+this help document
+.
+After pasting the access key in the
+Access Key
+box, Malicious Threat Feeds will be enabled automatically. To enable dark web threat feeds, switch to
+Dark Web Threat Feeds
+and click the
+Configure
+button.
+Upon clicking
+Configure
+, a pop-up requesting an email domain to monitor for dark web exposure will be displayed. After entering the domain, you will be asked to provide a valid email address from that domain for verification.
+Note
+Domain configuration for email is linked to licensing. You can only configure domains associated with licenses you have purchased.
+You will receive an OTP (One-Time Password) to the entered email address. Upon successful verification of the OTP, you will have successfully configured your domain for dark web breaches.
+You will see this page once your domain is successfully configured.
+Analysis
+The product provides both email and domain analysis for configured domains. Users will be able to send emails from the Incident Workbench to notify individuals whose data has been breached.
+Domain analysis for the configured domain
+Email analysis for the configured domain
+The product provides an alert profile for supply chain breaches. A supply chain breach refers to the breach where the email domain and the domain where the user's data was breached are different.
+Troubleshooting tips:
+Ensure that L3C Feeds Server is reachable from ELA machine.
+Try reconfiguring Dark Web monitoring with your domain
+Ensure that the licensed domain and configured domain are the same.
+For further information regarding configuring non-licensed domains, please contact
+support@eventloganalyzer.com

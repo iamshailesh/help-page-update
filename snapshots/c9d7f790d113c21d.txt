@@ -1,0 +1,55 @@
+In this page
+Overview
+Available Reports
+Overview
+This page lists the Sysmon-related reports available in the product that help monitor low-level system activities on endpoints. These reports capture detailed telemetry on process execution, registry and file operations, network activity, WMI events, driver loading, and configuration changes, enabling deep forensic analysis and proactive threat detection.
+Available Reports
+Report group name
+Report name
+its.report.Sysmon events
+All Events
+Important Events
+its.report.Process audit report
+Process Created
+Process Terminated
+Remote Thread Creation
+Process Access
+Pipe Created
+Pipe Connected
+Process Tampering
+its.report.Registry audit report
+Registry Object Renamed
+Registry Value Set
+Registry Key Created
+Registry Key Deleted
+Registry Value Created
+Registry Value Deleted
+its.report.File audit report
+File Created
+File Stream Creation
+File Time Change
+Raw Access Read
+Clipboard Content Changed
+Executable File Blocked
+File Deleted And Archived
+File Shredding Blocked
+File Delete Logged
+its.report.Library and driver reports
+Driver Loaded
+Image Loaded
+its.report.Network audit report
+Network Connection
+DNS Query
+its.report.WMI audit report
+WMI Filter Events
+WMI Event Consumer Activity
+WMI Consumer To Filter Activity
+its.report.Configuration report
+Service State Change
+Config Modification
+Read also
+This page detailed the Sysmon reports supported by the product for tracking deep system-level activities and security-relevant events. Explore other related report categories to gain broader visibility into endpoint behavior, threat activity, and operational changes across the environment.
+Terminal reports
+AWS reports
+Salesforce reports
+CEF format reports

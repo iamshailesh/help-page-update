@@ -1,0 +1,97 @@
+In this page
+Overview
+Get jobs status
+Delete jobs
+Executing the API using cURL
+Executing the API using Postman
+Overview
+The Jobs API provides endpoints to monitor and manage all background search or alert tasks in ManageEngine Log360. You can retrieve job status for all jobs or a specific request_id, and you can delete completed jobs along with their results.
+1. Get jobs status
+Request URL
+GET http://localhost:8095/RestAPI/v1/jobs
+NOTE
+For the request URL, you can either use the IP address, or FQDN of the product server in place of localhost.
+Request Header
+Header name
+Value
+Mandatory
+Authorization
+Bearer {{AuthToken}}
+Yes
+Request Parameters
+Parameter name
+Mandatory
+Type
+Description
+request_id
+No
+String
+If provided only this request_id's status will be fetched
+Response
+The response is a JSON object containing the following key/value pairs:
+Parameter name
+Description
+total
+cursor for the next set of results
+requests
+JSON array contains information about each job as a JSONObject.
+Each JSONObject contains following fields
+running_time_in_millis
+= Human-readable running time, type = long
+hits_done
+= Total hits done
+status
+= Status of job, values = SUCCESS or FAILED or RUNNING
+submitted_at
+= Epoch time in unix milliseconds at which the job was submitted
+started_at
+= Epoch time in unix milliseconds at which the job started
+running_time
+= Job running time
+last_synced_time
+= Last synced time in unix milliseconds when the status was flushed to database
+total_pages
+= Total number of pages in this search result
+request_id
+= Request ID of the job
+2. Delete jobs
+This endpoint allows you to delete a job and its search results.
+Request URL
+DELETE http://localhost:8095/RestAPI/v1/jobs
+Request Header
+Header name
+Value
+Mandatory
+Authorization
+Bearer {{AuthToken}}
+Yes
+Request Parameters
+Parameter name
+Mandatory
+Type
+Description
+request_id
+No
+String
+If provided only this request_id's status will be fetched
+Response
+The response is a JSON object containing a message field:
+Parameter name
+Description
+message
+result of the delete request
+Executing the API using cURL
+Delete status information and hits for particular request_id
+Sample request
+curl --location --request DELETE 'http://localhost:8095/RestAPI/v1/jobs?request_id=AYVTeCb0wPH5eWuO5jkC' \ -H "Accept: application/json" -H "Authorization: Bearer mdrkoda0odmtmznloc00ndziltg0mgutmwzkztljmjvmzwmx "
+Sample response
+{ "message": "deleted hits for for request_id [AX6qJeaDhJby8kAkaqDE]" }
+Executing the API using Postman
+1. Get status for all jobs
+Figure 1: Get status for all jobs
+2. Get status for particular request_id
+Figure 2: Get status for particular request_id
+3. Delete hits for particular request_id
+Figure 3: Delete hits for particular request_id
+Read also
+This page explained how to manage background jobs using REST API.

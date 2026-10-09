@@ -1,0 +1,49 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the various Stormshield reports available in the product console to help administrators track firewall access, analyze allowed and denied traffic, monitor rule and administrative changes, detect intrusion attempts, and review system and device health events.
+Available Reports
+Report group name
+Report name
+Stormshield Events
+All Events
+Important Events
+Logon Reports
+Firewall Logons
+Firewall Failed Logons
+Logons Overview
+Traffic Reports
+Allowed Traffic
+Denied Connections
+Traffic Overview
+Rule Management
+Rules Added
+Rules Modified
+Rules Deleted
+Account Management
+Admin Added
+Admin Modified
+Admin Deleted
+IDS/IPS
+All Attacks
+System Events
+Clock Update
+System ShutDown
+System Reboot
+Device Severity Reports
+Emergency Events
+Alert Events
+Critical Events
+Error Events
+Warning Events
+Notice Events
+Information Events
+Debug Events
+Read also
+This document elaborated the list of Stormshield reports available in the product console and how they help monitor traffic behavior, access activity, rule changes, security threats, and system health. Explore related report sections to gain deeper visibility into security events and operational trends.
+Forcepoint reports
+Dell reports
+Apache reports
+IBM DB2 reports
+DHCP Linux reports

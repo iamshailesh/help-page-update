@@ -1,0 +1,58 @@
+Overview
+Configuring MySQL Server
+Overview
+Log360 enables you to add and monitor MySQL servers to track database activity and ensure complete visibility into security events. You can configure MySQL instances by specifying details such as the server name, port, protocol, and log file paths. The solution also supports automatic discovery of MySQL servers across Windows, UNIX, and Linux environments using standard protocols and configuration file lookups.
+Configuring MySQL Server
+To add a MySQL server for monitoring:
+Navigate to
+Settings > Log Source Configuration > Database Audit
+.
+Click on the
++Add Instance
+button.
+Enter the name of the device or click on the + icon to choose from the list of discovered MySQL servers.
+Enter the port number of the MySQL server.
+Note
+If the name of the MySQL server is manually entered, the port number has to be filled. For the MySQL servers selected from the list of discovered servers, the port number will be filled in automatically.
+Select the appropriate protocol to be used from the drop down.
+Enter the file path of the general and error logs.
+Click on Verify & Save to save the changes made
+Advanced Settings
+To make changes to the time zone and file encoding, click on the Advanced button and choose the relevant option from the drop downs provided.
+Prerequisites to Discover MySQL Servers
+Discovering MySQL servers in UNIX or Linux devices:
+The MySQL server configuration file is found using the
+mysqld process.
+The Secure Shell protocol is used to access the mysqld process to get the configuration file path.
+The SFTP protocol is used to read configuration file.
+Discovering MySQL servers in Windows devices:
+The MySQL server configuration file is found using the mysqld.exe process.
+WMI API is used to access mysqld.exe process to get the configuration file path.
+SMB protocol is used to read the configuration file.
+In addition, the configuration file parameters are explored in the order:
+--defaults-extra-file
+--defaults-file
+If the MySQL configuration file is not found with the mysqld or mysqld.exe process, then the following occurs:
+UNIX or Linux:
+The configuration file location defaults to the location
+/etc/my.cnf
+/etc/mysql/my.cnf.
+Windows:
+The configuration file location defaults to the following locations
+C:/Windows/my.ini
+C:/Windows/my.cnf
+C:/my.ini
+C:/my.cnf
+From the command line parameters and the configuration file, the MySQL server
+General log path
+and
+Error log path
+are discovered.
+Credentials for discovery:
+For Windows devices, credentials for discovery is picked in the following order:
+Domain/workgroup credential if a device is under a domain or a workgroup.
+Device credential, if it is provided in the "Manage Devices" page.
+Logon credential.
+For Linux devices, the credentials used while configuring auto log forward will be used for MySQL discovery.
+Note
+In Linux installations, MySQL server discovery on Windows devices is not possible.

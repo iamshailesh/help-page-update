@@ -1,0 +1,77 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the various F5 reports available in the product console to help administrators track firewall and application access, analyze allowed and denied traffic, monitor load balancer health, review policy and configuration changes, and detect security and severity events.
+Available Reports
+Report group name
+Report name
+Logon Reports
+Firewall Logons
+Logoff
+Logons Trend
+Failed Logon Reports
+Firewall Failed Logons
+Failed Logons Trend
+Allowed Traffic Reports
+Allowed Traffic
+Allowed Traffic Trend
+Denied Traffic Reports
+Denied Connections
+Denied Connections Trend
+Interface Status
+Interface Up
+Interface Down
+Interface Error
+VLAN Status
+Policy Changes
+Policy Added
+Policy Deleted
+Policy Modified
+LTM Health Monitoring
+Monitor Status
+Node Status
+Pool Status
+Pool Member Status
+Virtual Server Status
+Connection Monitoring
+CMI Events
+Connection Limit Monitoring
+System Events
+Configuration Change
+Configuration Errors
+License Status
+Policy Status
+Memory Status
+Chassis Module Status
+Temperature Status
+Fan Status
+Sensor Status
+Hardware Errors
+Device Severity Reports
+Emergency Events
+Alert Events
+Critical Events
+Error Events
+Warning Events
+Notice Events
+Information Events
+Debug Events
+IDS/IPS
+All Attacks
+Attacks Trend
+Application Security Reports
+Application Security Overview
+Requests Passed
+Requests Blocked
+Application Security Trend
+F5 Events
+All Events
+Important Events
+Read also
+This document elaborated the list of F5 reports available in the product console and how they help monitor traffic behavior, system health, policy changes, load balancer operations, and application security events. Explore related report sections to gain deeper visibility into security events and operational trends.
+Firepower reports
+H3C reports
+Stromshield reports
+Forcepoint reports
+Dell reports

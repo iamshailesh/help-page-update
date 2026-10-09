@@ -1,0 +1,22 @@
+In this page
+Overview
+Available Reports
+Overview
+This page lists the McAfee reports available in the product to help monitor security events, threat activity, and virus detections. These reports assist administrators in tracking critical events, identifying active threats, and analyzing malware incidents for effective security monitoring.
+Available Reports
+Report group name
+Report name
+McAfee Events
+All Events
+Important Events
+McAfee Threat Reports
+Threat Report
+McAfee Virus Reports
+Virus Report
+Read also
+This page detailed the McAfee reports supported by the product for monitoring security events, threats, and virus activity. Explore related report sections to gain deeper visibility into malware incidents and security trends.
+Symantec DLP reports
+Threat analytics reports
+Trend Micro reports
+VMware ESXi reports
+Hyper-V reports

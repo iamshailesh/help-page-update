@@ -1,0 +1,59 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the various reports available in the product console to help administrators monitor allowed and denied traffic, analyze website usage, detect intrusion attempts, track user logons, and review device severity and event information.
+Available Reports
+Report group name
+Report name
+Allowed Traffic Reports
+Allowed Traffic
+Top Traffic based on Destination
+Top Traffic based on Protocol
+Allowed Traffic Trend
+Top Traffic based on Source
+Top Traffic based on Port
+Denied Traffic Reports
+Denied Connections
+Top Denied Connections based on Destination
+Top Denied Connections based on Protocol
+Denied Connections Trend
+Top Denied Connections based on Source
+Top Denied Connections based on Port
+Website Traffic Reports
+Website Traffic
+Top Website Traffic based on Severity
+Website Traffic Trend
+Top Website Traffic based on Destination
+Top Website Traffic based on Source
+Top Website Traffic based on Website
+IDS/IPS
+Possible Attacks
+Top Attacks based on Destination
+Top Attacks based on Protocol
+Attacks Trend
+Top Attacks based on Source
+Top Attacks based on Port
+FirePower Events
+All Events
+Important Events
+Device Severity Reports
+Information Events
+Notice Events
+Critical Events
+Emergency Events
+Error Events
+Alert Events
+Warning Events
+Debug Events
+Logon Reports
+Logons
+Failed Logons
+Logons Overview
+Read also
+This document elaborated the list of reports available in the product console and how they help monitor traffic activity, intrusion attempts, website access, user authentication, and device severity events. Explore related report sections to gain deeper visibility into security events and operational trends.
+H3C reports
+Stromshield reports
+Forcepoint reports
+Dell reports
+Apache reports

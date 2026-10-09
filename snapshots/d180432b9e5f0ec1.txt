@@ -1,0 +1,76 @@
+In this page
+Overview
+Available Reports
+Overview
+This page provides an overview of the Oracle reports available in the product console. These reports help administrators track database-level activities, auditing operations, account and role management changes, server startup and logon behavior, and security-related events such as SQL injection attempts and denial-of-service attacks.
+Available Reports
+Report group name
+Report name
+Oracle Events
+All Events
+Important Events
+Auditing Report
+Created Databases
+Dropped Databases
+Altered Databases
+Created clusters
+Dropped clusters
+Altered Clusters
+Created Tables
+Dropped Tables
+Altered Tables
+Selected Tables
+Inserted Tables
+Updated Tables
+Deleted Tables
+Created functions
+Dropped functions
+Altered functions
+Created Schemas
+Created procedures
+Dropped procedures
+Altered procedures
+Executed procedures
+Created Triggers
+Dropped Triggers
+Altered Triggers
+Auditing Account Management
+Created profiles
+Dropped profiles
+Altered profiles
+User Created
+User Dropped
+User Altered
+Roles created
+Dropped roles
+Altered roles
+Granted roles
+Revoked roles
+System Grant
+System Revoke
+Alter System
+Auditing Server Report
+Connect Events
+Server Startup
+Server Shutdown
+Logons
+Logoff
+Failed Logons
+Top logons based on user
+Top logons based on remote devices
+Top failure logons based on users
+Top failure logons based on Remote devices
+Logons Trend
+Failed Logons Trend
+Oracle Events Trend
+Security Reports
+SQL Injection
+Account Lockouts
+Expired Passwords
+Denial of Service
+Read also
+This document describes the Oracle reports available in the product console for monitoring database activity, auditing changes, authentication trends, and security threats. Refer to related database and security report sections for comprehensive compliance and monitoring insights.
+PGSQL reports
+Printer reports
+SAP reports
+Sysmon reports

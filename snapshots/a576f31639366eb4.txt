@@ -1,0 +1,24 @@
+ManageEngine Log360 Cloud
+uses Zoho's Zia to bring AI capabilities into core SOC workflows. This includes four capabilities:
+Zia Insights
+, the
+Investigation Agent
+,
+Zia Agent Studio
+, and
+Ask Zia
+, each aimed at helping SOC teams detect, investigate, and respond to threats more effectively.
+Zia Insights
+delivers AI-powered analysis across logs, alerts, and incidents, providing contextual summaries, attack timelines, MITRE ATT&CKÂ® mappings, and mitigation guidance to support faster, more informed decision-making.
+In cases where an alert demands more thorough examination, the
+Investigation Agent
+carries out a structured, multi-stage analysis across related alerts, entities, and raw logs. It correlates events, evaluates entity risk through integrated threat intelligence sources such as VirusTotal and Log360 Cloud's Advanced Threat Analytics, reconstructs the attack chain, and produces a comprehensive, export-ready investigation report, while preserving analyst oversight through pause, resume, and interactive query options.
+Zia Agent Studio
+is the platform through which AI agents are built, configured, and deployed within Log360 Cloud. Administrators can enable prebuilt agents or develop fully custom agents suited to their organization's specific workflows through a no-code interface powered by Zoho Agent Studio. Each agent is configured with a defined role, instructions, tools, and a knowledge base, and can be managed, assigned to designated users, and audited from within the product console.
+All agents are accessible to analysts through
+Ask Zia
+, the conversational AI interface embedded across Log360 Cloud. Ask Zia provides a single point of interaction, enabling users to query data, initiate investigations, and engage with deployed agents in natural language, without leaving the product console.
+Together, these four capabilities establish a unified AI experience within Log360 Cloud, spanning instant contextual analysis, structured autonomous investigations, and custom agent-driven workflows, all accessible through a single conversational interface, built on a shared AI framework.
+Read also:
+This page provided an overview of Zia's AI-powered capabilities in ManageEngine Log360 Cloud. To configure and use these features, refer to the following articles:
+AI Configurations

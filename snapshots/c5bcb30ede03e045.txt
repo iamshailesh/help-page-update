@@ -1,0 +1,96 @@
+To meet industry and legal standards, organizations are required to retain and monitor audit data that demonstrates their compliance posture. The product simplifies this by offering a dedicated compliance reporting module that fetches relevant event data from log sources and displays it as structured reports aligned with various global and industry-specific regulations.
+The product supports a wide range of predefined compliance mandates. These reports are displayed as visual representations of audit data. In addition to built-in compliance standards, the users can also create custom reports tailored to meet their business requirements.
+Below is a list of pre-defined compliance regulations supported by the product.
+Compliance
+Description
+Federal Information Security Management Act (FISMA)
+Requires U.S federal agencies to provide security for information collected or maintained by or on behalf of the agency; and information systems used or operated by an agency or by a contractor of an agency or other organization on behalf of an agency.
+Personal Data Protection Act (PDPA)
+Aims to protect the personal information of Filipino citizens by regulating organizations to maintain secure systems for storing and managing it.
+California Consumer Privacy Act (CCPA)
+A privacy regulation that requires businesses to implement security measures to protect the personal data of California residents.
+California Privacy Rights Act (CPRA)
+An amendment to the CCPA that introduces stricter requirements for protecting personal data. It strengthens consumer privacy rights and mandates businesses to safeguard data, report breaches, and ensure compliance.
+Payment Card Industry Data Security Standard (PCI DSS 4.0)
+A set of 12 processes and practices designed to ensure the safe and secure transfer of payment card data. It aims to improve the safety of consumer data and trust in the payment ecosystem.
+Sarbanes-Oxley Act (SOX)
+A law enacted in the United States to ensure the accuracy, reliability, and protection of financial information from unnecessary disclosures by business entities. This compliance regulation is designed to increase transparency around financial reporting with defined processes for internal controls.
+Health Insurance Portability and Accountability Act (HIPAA) check
+An United States federal law to protect the patient's personally identifiable information from fraud and theft while also improving the portability of health insurance coverage for workers.
+Gramm-Leach-Bliley Act (GLBA) check
+Also known as the Financial Services Modernization Act, this regulation sets standards for financial institutions to ensure the confidentiality and security of customer's financial records and personal information.
+Protection of Personal Information Act (POPIA)
+A regulatory mandate aimed at safeguarding the personally identifiable information (PII) of South African citizens. It provides conditions for the lawful collection and processing of personal data of the citizens by all public and private organizations residing both in and outside the Republic of South Africa.
+Good Practice Guide 13 (GPG13)
+A framework with 12 protective monitoring controls (PMCs) for all His Majesty's Government (HMG) organizations. It is defined by the Communications-Electronics Security Group, Britainâs information assurance authority.
+Cyber Essentials
+A United Kingdom government-backed certification for organizations that ensures organizations have a set of basic security controls to secure their IT infrastructure from common cyber threats. These security controls help protect sensitive data while mitigating cyber risks.
+International Organization for Standardization / International Electrotechnical Commission 27001, version 2013 (ISO 27001:2013)
+Mandates organizations to manage the security of critical assets such as financial data, intellectual property, employee records, customer data, and other confidential information.
+International Organization for Standardization / International Electrotechnical Commission 27001, version 2022 (ISO 27001:2022)
+A framework that outlines best practices for establishing, implementing, maintaining, and continuously improving an Information Security Management System (ISMS). It ensures that organizations have appropriate controls in place to safeguard information assets such as confidential data, personal information, and intellectual property.
+Information security level protection (ISLP)
+A security framework that mandates organizations to protect sensitive data and maintain proper information security practices.
+Nuclear Regulatory Commission Regulatory Guide 5.71 (NRC RG 5.7)
+A U.S. regulation that provides cybersecurity requirements for protecting digital systems used in nuclear facilities. It outlines defensive strategies, security controls, and monitoring practices to prevent cyberattacks that could impact safety, security, or emergency response functions.
+General Data Protection Regulation (GDPR)
+A European Union regulation that sets strict guidelines on how organizations collect, process, and store personal data. It aims to give individuals more control over their personal information and ensures consistent data privacy practices across the EU.
+Family Educational Rights and Privacy Act (FERPA)
+A United States federal law that governs the privacy of student education records. It applies to all educational institutions receiving funding from the U.S. Department of Education.
+North American Electric Reliability Corporation Critical Infrastructure Protection (NERC CIP)
+A set of standards designed to strengthen the security of the bulk power system across the United States, parts of Canada, and one state in Mexico.
+Code of Connection (CoCo)
+A UK government standard that defines security requirements for local authorities connecting to the Government Connect Secure Extranet (GCSX), a component of the Public Services Network (PSN). It is based on ISO 27001 principles and covers technical, procedural, physical, and human risk categories.
+Cybersecurity Maturity Model Certification (CMMC)
+A U.S. Department of Defense framework that requires contractors and subcontractors to follow specific cybersecurity practices to safeguard Federal Contract Information (FCI) and Controlled Unclassified Information (CUI).
+National Institute of Standards and Technology (NIST CSF)
+A set of voluntary guidelines developed by the U.S. National Institute of Standards and Technology (NIST) to help organizations manage and reduce cybersecurity risks across their operations and critical infrastructure.
+Qatar Cybersecurity Framework (QCF)
+A set of guidelines developed by Qatarâs National Cyber Security Committee (NCSC) to help organizations implement and maintain cybersecurity best practices. It outlines six core components: strategy and governance, risk management, protection, detection and response, recovery, and collaboration and partnership.
+Trusted Information Security Assessment Exchange (TISAX)
+A cybersecurity standard developed by the German automotive industry association (Verband der Automobilindustrie - VDA) to ensure the secure processing of sensitive data within the automotive sector. TISAX helps manufacturers and suppliers maintain high security standards and build trust across the supply chain.
+Saudi Arabian Monetary Authority (SAMA)
+A cybersecurity framework established by the central bank of Saudi Arabia to guide and regulate financial institutions. The framework helps member organizations identify and address cybersecurity risks and outlines security requirements for their employees, subsidiaries, third parties, and customers.
+Essential Cybersecurity Controls (ECC)
+A cybersecurity framework Saudi Arabia that outlines key measures and best practices to help organizations protect their systems and data from cyber threats. It provides structured guidelines and controls covering areas such as access control, incident response, network security, and data protection, aimed at strengthening overall cybersecurity posture and reducing risk.
+Personal Data Protection Law (PDPL)
+A data privacy law from Saudi Arabia that regulates the collection, processing, disclosure, and retention of personal data. It is designed to protect individuals' privacy and ensure responsible data practices. Initially overseen by the Saudi Data and Artificial Intelligence Authority (SDAIA), its supervision may be transferred to the National Data Management Office.
+Criminal Justice Data Communications Network (CJDN)
+A secure communication infrastructure operated by the Minnesota Bureau of Criminal Apprehension (BCA) to enable authorized criminal justice agencies to access and share Criminal Justice Information (CJI). CJDN enforces compliance with the FBI's Criminal Justice Information Services Security Policy (CJISSECPOL), ensuring that CJI is transmitted, processed, and stored securely across Minnesota law enforcement networks.
+UAE Signals Intelligence Agency (UAE-NESA)
+A cybersecurity framework developed by the UAEâs Telecommunications and Digital Government Regulatory Authority (TDRA). It defines a set of management and technical controls to establish, implement, maintain, and enhance the nationâs information security measures and supports the countryâs National Cyber Security Strategy.
+Service Organization Control Type 2 (SOC 2)
+A framework developed by the American Institute of Certified Public Accountants (AICPA) to ensure organizations have cybersecurity measures in place to protect their customer's sensitive data.
+General Data Protection Law of Brazil (LGPD)
+Governs the collection, use, processing, and storage of personal and sensitive data. It aligns Brazil with global data protection standards like the GDPR and mandates strict controls to safeguard individual's privacy.
+Federal Act on Data Protection (FADP)
+A data protection law enforced in Switzerland that governs the collection, processing, and storage of personal data. It enhances privacy rights, places stricter obligations on organizations handling personal information, and ensures transparency and accountability in data processing activities.
+NOTE
+This compliance is currently available only as an extension compliance in the cloud version.
+Network and Information Security Directive 2 (NIS 2)
+A European Union (EU) directive that sets cybersecurity risk management and reporting requirements for essential and important entities across sectors such as energy, healthcare, finance, and digital infrastructure. It expands the scope of the original NIS Directive, imposes stricter security obligations, and establishes uniform penalties to strengthen resilience against cyber threats within the EU.
+NOTE
+This compliance is currently available only as an extension compliance in the cloud version.
+Standard Framework for Education
+The Standard Framework for Education compliance extension helps educational institutions comply with data security, privacy, and operational regulations. By integrating the standard framework compliance extension, IT teams can monitor student data access, enforce security policies, and ensure regulatory adherence.
+NOTE
+This compliance is currently available only as an extension compliance in the cloud version.
+Digital Operational Resilience Act (DORA)
+This compliance extension helps financial institutions meet the Digital Operational Resilience Act (DORA) requirements by providing continuous monitoring of IT risks and cyber threats. By integrating DORA compliance extension, organizations can track incidents, ensure operational resilience, and safeguard financial systems.
+NOTE
+This compliance is currently available only as an extension compliance in the cloud version.
+Center for Internet Security (CIS)
+The CIS extension helps organizations align their IT infrastructure with CIS security benchmarks. This integration enables security teams to assess system configurations, identify vulnerabilities, and implement best practices to strengthen cybersecurity posture.
+NOTE
+This compliance is currently available only as an extension compliance in the cloud version.
+Digital Personal Data Protection (DPDP) Act
+This compliance extension helps organizations comply with the Digital Personal Data Protection (DPDP) Act by ensuring secure data processing and storage. By integrating DPDP compliance extension, IT teams can track data access, detect unauthorized usage, and safeguard sensitive information.
+NOTE
+This compliance is currently available only as an extension compliance in the cloud version.
+Criminal Justice Information Services (CJIS)
+The CJIS (Criminal Justice Information Services) extension helps law enforcement agencies and organizations handling sensitive criminal justice data meet CJIS security policy requirements. By monitoring access logs, tracking user activities, and enforcing strict authentication protocols, this extension enhances data protection and ensures compliance with security standards.
+NOTE
+This compliance is currently available only as an extension compliance in the cloud version.
+Read also
+This section explained the importance of compliance reports and how the product aligns with various global and industry-specific regulations. Refer to the below document to learn more about the related capabilities.
+Reports Overview

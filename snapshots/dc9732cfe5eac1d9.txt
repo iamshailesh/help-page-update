@@ -1,0 +1,90 @@
+In this page
+Third-party Application Extensions
+How to download and install extensions
+Updating an Extension
+Uninstalling an Extension
+Modifying an Extension
+Troubleshooting Steps for Extension Installation Failure
+Extensions are pre-built software components that can either add a set of custom features into EventLog Analyzer or integrate other third-party applications into EventLog Analyzer. EventLog Analyzer's flexible platform enables it to address a wide-range of industry specific use cases.
+Third-party Application Extensions
+Third-party application extensions enable users to integrate data from external security or business applications into EventLog Analyzer. Customers can download the extension for the application they use in their organization from the Marketplace, install it, and utilize it seamlessly.
+How to download and install extensions
+To install an extension for EventLog Analyzer, you need to first download the extension from the Marketplace and must be uploaded to EventLog Analyzer. Here's how you can achieve this.
+Download the required EventLog Analyzer extension from the
+Marketplace
+.
+Once the download is completed, open EventLog Analyzer and navigate to
+Settings > Admin Settings > Marketplace > Installed Extensions
+.
+Click Install Extension and upload the extension.
+Click
+Continue to Install
+to finalise the installation.
+Before installing, you can customize extension components such as reports, log formats, and other configurations using the
+Customize
+feature.
+Updating an Extension
+If an update is available for an installed extension, an
+Update
+icon will appear in the
+Installed Extensions
+table.
+Click the
+Update
+icon to update the extension. You can customize the components that need to be updated.
+The user can also manually update the extension by uploading the updated version, following the same steps used during
+extension installation
+.
+Uninstalling an Extension
+To uninstall an extension:
+Click the
+Delete
+icon in the
+Manage Extensions
+table.
+When an extension is deleted, all configurations associated with it will also be removed.
+Modifying an Extension
+After an extension has been customized and installed, users can reinstall components that were not initially installed by clicking the
+Modify
+icon in the
+Manage Extensions
+table.
+Extension Details
+To view an extension's summary, usage statistics, installation history, and contents, click Details in the
+Manage Extensions
+table.
+Extension Configurations
+To configure applications or log sources for an extension:
+Click
+Manage
+in the
+Manage Extensions
+table.
+The configuration details window will open, allowing users to configure applications or log sources.
+Installation History
+To view the installation history of an extension, click the
+Installation History
+button.
+Troubleshooting Steps for Extension Installation Failure
+Step 1:
+Verify that the extension is compatible with your application's version.
+Step 2:
+Clear your browser cache and retry the installation.
+Step 3:
+Check the failure status in the Installation History for more details.
+Step 4:
+If the issue persists, contact our support team or the extension developer for further assistance.
+Manual Certificate Sync if Automatic Certificate Download Fails:
+If automatic certificate synchronization fails due to network issues, extension integrity verification will not occur. In such cases, the following error will appear:
+To import the certificate manually, navigate to
+server_home/bin/adsf
+and execute
+importCertificate.bat
+(for Windows) or
+importCertificate.sh
+(for Linux/macOS).
+The certificate download link will be available within the popup. Once downloaded, browse to the file and import the certificate.
+Note
+Only the certificate downloaded from the provided link can be synced. Attempting to import any other certificate will result in an error.
+After importing the appropriate certificate, a success popup will appear.
+Once the certificate is successfully imported, you can retry installing the same extension.

@@ -1,0 +1,26 @@
+General product and notification settings can be configured from the
+Settings > Admin > Product Customization > Product Settings
+section of Log360 Cloud.
+The Product Settings page has two segments: General and Notifications.
+Under the General section, you can:
+Enter the number of records that needs to be displayed in a page.
+Select the
+Direct Export Report Limit
+. this specifies the maximum number of records that can be included in an exported report.
+Specify the number of rows to be displayed in reports under the 'Top & Least Values' section.
+Specify the
+Export Timeout
+value in minutes. This will be the maximum time that Log360 cloud should take exporting the reports, after which the request will be timed out.
+Select the preferred
+language
+from the drop-down menu. By selecting the preferred language for the product, the language settings for organizational operations such as emails and messages will be updated.
+Choose the
+Time Zone
+which must be used throughout the product for sending notifications (this Time Zone will not be used for the alert notifications).
+Under the Notifications section, you can:
+Enter the maximum number of notification emails that can be sent in a day. This does not include alert notifications sent from the product.
+Once you've configured the general and notification settings, click
+Save
+. You can click on
+Reset
+to populate default values in all the fields.

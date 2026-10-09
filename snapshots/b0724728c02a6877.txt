@@ -1,0 +1,32 @@
+In this page
+Overview
+Available Reports
+Overview
+This page lists the Malwarebytes reports available in the product to help monitor blocked websites, exploit activity, and threat events. These reports assist administrators in tracking top exploits, top threats, allowed versus blocked actions, and quarantined or detected threats across users and sources in the environment.
+Available Reports
+Report group name
+Report name
+Malwarebytes Reports
+Top Websites blocked based on user
+Top Websites Blocked
+Malicious Websites Blocked
+Top Exploit Types
+Top Exploits based on user
+Top Exploits based on source
+Allowed Exploits
+Blocked Exploits
+Detected Exploits
+Top Websites blocked based on source
+Top Threat Types
+Top Threats based on user
+Top Threats based on source
+Allowed Threats
+Quarantined Threats
+Detected Threats
+Read also
+This page detailed the Malwarebytes reports supported by the product for monitoring website blocks, exploits, and threat events. Explore related report sections to gain deeper visibility into blocked and allowed activities, top threats, and user- or source-based security events.
+McAfee reports
+Symantec DLP reports
+Threat analytics reports
+Trend Micro reports
+VMware ESXi reports

@@ -1,0 +1,2 @@
+Configuring gateway server in endpoints
+Configuring CA certificate in endpoints

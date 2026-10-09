@@ -1,0 +1,488 @@
+In this page
+Overview
+Prerequisites
+List of devices supported
+List of prerequisites
+Overview
+This document outlines the prerequisites for executing playbook actions, including supported OS platforms, necessary ports, protocols, and permission settings. It details the configurations required across Windows, Linux, AD, and firewall devices to ensure seamless response execution during security events.
+Prerequisites
+List of devices supported
+All types of Windows operating system.
+Linux operating systems:
+Ubuntu
+Debian
+Fedora
+CentOS
+Red Hat Enterprise Linux (RHEL)
+Arch Linux
+SUSE Linux Enterprise Server (SLES)
+openSUSE
+Gentoo OS
+Below are the necessary configurations to be made in order to access the playbook capability
+Guide:
+Port:
+Used for communication (this port should be open, free, and allowed in firewall)
+Inbound:
+To which device/application the action is targeted towards.
+Outbound:
+From where the action is raised.
+Service:
+Which service/protocol will be used to execute this action.
+NETWORK ACTIONS
+BLOCK
+PORT
+INBOUND
+OUTBOUND
+PING DEVICE
+ICMP/No ports
+Audited Windows / Linux Device
+EventLog Analyzer Server
+TRACE ROUTE WINDOWS
+ICMP/No ports
+Audited Windows Device
+EventLog Analyzer Server
+TRACE ROUTE LINUX
+UDP/33434 -33534
+Audited Linux Device
+EventLog Analyzer Server
+WINDOWS ACTIONS
+BLOCK
+PORT
+INBOUND
+OUTBOUND
+SERVICE
+Additional Rights and Permissions
+LogOff
+TCP/135
+Audited Windows Device
+EventLog Analyzer Server
+RPC
+UserGroups:
+Distributed COM Users
+User Permissions:
+For root\cim v2 In WMI Properties:
+Execute Methods
+Enable Account
+Remote Enable
+Read Security
+Environment Permission:
+The computer should not include the EventLog Analyzer Installed server.
+TCP/139
+Audited Windows Device
+EventLog Analyzer Server
+NetBIOS session RPC/NP
+TCP/445
+Audited Windows Device
+EventLog Analyzer Server
+SMB RPC/NP
+RPC ports - TCP/1024 to 65,535
+Audited Windows Device
+EventLog Analyzer Server
+RPC randomly allocated high TCP ports
+Shutdown and Restart
+TCP/135
+Audited Windows Device
+EventLog Analyzer Server
+RPC
+UserGroups:
+Distributed COM Users
+User Permissions
+: For root\cim v2 In WMI Properties:
+Execute Methods
+Enable Account
+Remote Enable
+Read Security
+Environment Permission:
+The computer should not include EventLog Analyzer installed server
+TCP/139
+Audited Windows Device
+EventLog Analyzer Server
+NetBIOS session RPC/NP
+TCP/445
+Audited Windows Device
+EventLog Analyzer Server
+SMB RPC/NP
+RPC ports - TCP/1024 to 65,535
+Audited Windows Device
+EventLog Analyzer Server
+RPC randomly allocated high TCP ports
+Execute Windows Script
+TCP/135
+Audited Windows Device
+EventLog Analyzer Server
+RPC
+UserGroups:
+Distributed COM Users
+User Permissions:
+For root\cim v2 In WMI Properties:
+Execute Methods
+Enable Account
+Remote Enable
+Read Security
+Environment Permission:
+The user should have read, write and modify access to the shared path in the script.
+TCP/139
+Audited Windows Device
+EventLog Analyzer Server
+NetBIOS session RPC/NP
+TCP/445
+Audited Windows Device
+EventLog Analyzer Server
+SMB RPC/NP
+RPC ports - TCP/1024 to 65,535
+Audited Windows Device
+EventLog Analyzer Server
+RPC randomly allocated high TCP ports
+Disable USB
+TCP/135
+Audited Windows Device
+EventLog Analyzer Server
+RPC
+UserGroups:
+Distributed COM Users
+User Permissions:
+For root\cim v2 In WMI Properties:
+Execute Methods
+Enable Account
+Remote Enable
+Read Security
+Environment Permission:
+Remote Registry Service should be running.
+Full Control permission to HKEY_LOCAL_ MACHINE\SYSTEM\ CurrentControlSet\ Services\USBSTOR
+TCP/139
+Audited Windows Device
+EventLog Analyzer Server
+NetBIOS session RPC/NP
+TCP/445
+Audited Windows Device
+EventLog Analyzer Server
+SMB RPC/NP
+RPC ports - TCP/1024 to 65,535
+Audited Windows Device
+EventLog Analyzer Server
+RPC randomly allocated high TCP ports
+ALL SERVICE BLOCK
+TCP/135
+Audited Windows Device
+EventLog Analyzer Server
+RPC
+UserGroups:
+Distributed COM Users
+Administrators
+User Permissions:
+For root\cim v2 In WMI Properties:
+Execute Methods
+Enable Account
+Remote Enable
+Read Security
+TCP/139
+Audited Windows Device
+EventLog Analyzer Server
+NetBIOS session RPC/NP
+TCP/445
+Audited Windows Device
+EventLog Analyzer Server
+SMB RPC/NP
+RPC ports - TCP/1024 to 65,535
+Audited Windows Device
+EventLog Analyzer Server
+RPC randomly allocated high TCP ports
+START PROCESS
+TCP/135
+Audited Windows Device
+EventLog Analyzer Server
+RPC
+UserGroups:
+Distributed COM Users
+User Permissions:
+For root\cim v2 In WMI Properties:
+Execute Methods
+Enable Account
+Remote Enable
+Read Security
+TCP/139
+Audited Windows Device
+EventLog Analyzer Server
+NetBIOS session RPC/NP
+TCP/445
+Audited Windows Device
+EventLog Analyzer Server
+SMB RPC/NP
+RPC ports - TCP/1024 to 65,535
+Audited Windows Device
+EventLog Analyzer Server
+RPC randomly allocated high TCP ports
+STOP PROCESS
+TCP/135
+Audited Windows Device
+EventLog Analyzer Server
+RPC
+UserGroups:
+Distributed COM Users
+User Permissions:
+For root\cim v2 In WMI Properties:
+Execute Methods
+Enable Account
+Remote Enable
+Read Security
+TCP/139
+Audited Windows Device
+EventLog Analyzer Server
+NetBIOS session RPC/NP
+TCP/445
+Audited Windows Device
+EventLog Analyzer Server
+SMB RPC/NP
+RPC ports - TCP/1024 to 65,535
+Audited Windows Device
+EventLog Analyzer Server
+RPC randomly allocated high TCP ports
+TEST PROCESS
+TCP/135
+Audited Windows Device
+EventLog Analyzer Server
+RPC
+UserGroups:
+Distributed COM Users
+User Permissions:
+For root\cim v2 In WMI Properties:
+Execute Methods
+Enable Account
+Remote Enable
+Read Security
+TCP/139
+Audited Windows Device
+EventLog Analyzer Server
+NetBIOS session RPC/NP
+TCP/445
+Audited Windows Device
+EventLog Analyzer Server
+SMB RPC/NP
+RPC ports - TCP/1024 to 65,535
+Audited Windows Device
+EventLog Analyzer Server
+RPC randomly allocated high TCP ports
+LINUX ACTIONS
+BLOCK
+PORT
+INBOUND
+OUTBOUND
+SERVICE
+Additional Rights and Permissions
+Shutdown and Restart
+TCP/Specified port.
+Audited Linux Device
+EventLog Analyzer Server
+-
+Environment Permission :
+The user should be the root user.
+Execute Windows Script
+TCP/Specified port.
+Audited Linux Device
+EventLog Analyzer Server
+-
+Environment Permission :
+Sudo permission for user.
+ALL SERVICE BLOCK
+TCP/Specified port.
+Audited Linux Device
+EventLog Analyzer Server
+-
+Environment Permission :
+Sudo permission.
+START PROCESS
+TCP/Specified port.
+Audited Linux Device
+EventLog Analyzer Server
+-
+Environment Permission :
+The permission to execute the command should be available for the user whose credentials are provided.
+STOP PROCESS
+Specified port.
+Audited Linux Device
+EventLog Analyzer Server
+-
+Environment Permission :
+The permission to execute the command should be available for the user whose credentials are provided.
+TEST PROCESS
+TCP/Specified port.
+Audited Linux Device
+EventLog Analyzer Server
+-
+-
+NOTIFICATIONS
+BLOCK
+PORT
+INBOUND
+OUTBOUND
+SERVICE
+Additional Rights and Permissions
+Pop Up WINDOWS
+TCP/135
+Audited Linux Device
+EventLog Analyzer Server
+RPC
+UserGroups:
+Distributed COM Users
+User Permissions
+For root\cim v2 In WMI Properties:
+Execute Methods
+Enable Account
+Remote Enable
+Read Security
+Environment Permission:
+"AllowRemoteRPC" should be 1 for HKEY_ LOCAL_MACHINE\ SYSTEM\Current ControlSet\Control\Terminal
+Server.
+RPC ports - TCP/1024 to 65,535
+Audited Windows Device
+EventLog Analyzer Server
+RPC randomly allocated high TCP ports
+Pop Up LINUX
+TCP/Specified port.
+Audited Linux Device
+EventLog Analyzer Server
+-
+Environment Permission:
+Sudo permission for user.
+Send Email WINDOWS & LINUX
+TCP/Port mentioned while config using SMTP server
+Audited Linux Device
+EventLog Analyzer Server
+-
+Environment Permission:
+SMTP server should be configured on Event log analyzer server
+Send SMS WINDOWS & LINUX
+-
+-
+-
+-
+Environment Permission:
+SMS Server should be configured in the product.
+Send SNMP Trap WINDOWS & LINUX
+UDP/Port specified in workflow block
+Audited Windows / Linux Device
+EventLog Analyzer Server
+-
+Environment Permission:
+The port mentioned in workflow configuration should be open.
+AD ACTIONS
+BLOCK
+PORT
+INBOUND
+OUTBOUND
+SERVICE
+Additional Rights and Permissions
+DELETE AD USER WINDOWS
+TCP/389
+Audited Domain Controller
+EventLog Analyzer Server
+LDAP
+User Permissions:
+The user should have "Delete" Right in the AD to delete other Accounts.
+The user to delete should not have "Protect Object from accidental deletion" checked.
+DISABLE AD USER WINDOWS
+TCP/389
+Audited Domain Controller
+EventLog Analyzer Server
+LDAP
+User Permissions:
+The User account provided should have "Read","Write ","modify owners" and "modify permissions" permissions enabled.
+DISABLE USER COMPUTER WINDOWS & LINUX
+TCP/389
+Audited Domain Controller
+EventLog Analyzer Server
+LDAP
+User Permission:
+The User account provided should have "Read", "Write" , "modify owners" and "modify permissions" permissions enabled.
+MISCELLANEOUS ACTIONS
+BLOCK
+PORT
+INBOUND
+OUTBOUND
+Additional Rights and Permissions
+WRITE TO FILE WINDOWS
+TCP/135
+Audited Windows Device
+EventLog Analyzer Server
+UserGroups:
+Distributed COM Users
+User Rights
+:
+Act as part of the operating system
+Log on as a batch job
+Log on as a service
+Replace a process level token.
+User Permissions:
+For root\cim v2 In Properties:
+Execute Methods
+Enable Account
+Remote Enable
+Read Security
+Environment Permission:
+The user should have read,write and modify access to the shared path.
+RPC ports - TCP/1024 to 65,535
+Audited Windows Device
+EventLog Analyzer Server
+WRITE TO FILE LINUX
+TCP/Specified port.
+Audited Linux Device
+EventLog Analyzer Server
+Environment Permission:
+Sudo permission for user
+HTTP WebHook
+-
+-
+-
+Environment Permission:
+A "connect" Socket Permission to the host/port combination of the destination URL or a "URL Permission" that permits this request.
+FORWARD LOGS
+TCP/Specified Port
+Audited Windows / Linux Device
+EventLog Analyzer Server
+-
+CSV LOOKUP
+TCP/Specified Port
+Audited Windows / Linux Device
+EventLog Analyzer Server
+User Permissions:
+Read permission to the specified CSV file.
+FIREWALL ACTIONS
+BLOCK
+PORT
+INBOUND
+OUTBOUND
+Additional Rights and Permissions
+Cisco ASA deny inbound/Outbound rules
+https/443
+Firewall Device
+EventLog Analyzer Server
+Ports User Customizable Additional Rights:
+Refer to this page
+Fortigate deny Access rules
+https/443
+Firewall Device
+EventLog Analyzer Server
+Ports User Customizable Additional Rights:
+Refer to this page
+Palo Alto deny Access rules
+https/443
+Firewall Device
+EventLog Analyzer Server
+Ports User Customizable Additional Rights:
+Refer to this page
+Sophos XG deny Access rules
+https/443
+Firewall Device
+EventLog Analyzer Server
+Ports User Customizable Additional Rights:
+Refer to this page
+Barracuda deny Access rules
+https/8443
+Firewall Device
+EventLog Analyzer Server
+Ports User Customizable Additional Rights:
+Refer to this page
+Read also
+This guide covers the groundwork for executing playbooks. For a deeper understanding of automation and orchestration in security response, refer to:
+Manage playbooks
+Update playbook credentials

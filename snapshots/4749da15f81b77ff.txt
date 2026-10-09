@@ -1,0 +1,292 @@
+In this page
+Microsoft Entra ID reports
+Exchange Online reports
+OneDrive reports
+SharePoint reports
+Microsoft Teams reports
+Microsoft Entra ID
+Microsoft Entra ID audit reports provide detailed visibility into logon activity, user and group management, application access, device changes, and policy updates.
+Overview
+All Events
+Logon Activity
+Logon Activity
+User Logon Failure
+Logon Failure Due To Incorrect Password
+Logon Attempt by Locked Out User
+Logon Attempt by Disabled Account
+Password Reset Required for User
+Logon Failure Due To Unknown Username
+Logon Failures Related with AD
+Guest Logon Failure Due To Redemption Pending
+Logon Failure Due To Unauthorized Access
+Logon Using Expired Password
+Attempted Log In Using Old Password
+Attempted Log In Using New Weak Password
+Password Contains Username
+Logon Attempt Using Invalid Client Secret
+Logon Attempt on Disabled Application
+Logon Failure Due To Device Conditional Policy
+Logon Failure Due To Conditional Policy
+Non-Interactive User Logons
+Managed Identity Logons
+Service Principal Logons
+Logon Activity by MFA
+Logon Without MFA
+Logon With MFA
+Login Failure Due to MFA
+MFA Logon Summary
+Risky Sign-ins
+Risky Logon Activity
+Unfamiliar Sign-in Properties
+Login from Anonymized IP Address
+Login Attempt Using Password Spray Account
+Unusual Location Logins / Unrealistic Travel Logins / Geo-Anomaly Login Report (Impossible Travel and Atypical Locations)
+Login from Malicious IP Address
+Login from Malware Infected IP Address
+Login from Suspicious IP Address
+Login with Leaked Credentials
+User Management
+Recently Created Users
+Recently Deleted Users
+Recently Updated Users
+Recently Enabled Users
+Recently Disabled Users
+Recently Restored Users
+Recent Password Change Activities
+Recent Password Reset Activities
+Recent Self Password Change Activities
+Recently MFA Enabled Users
+Recently MFA Disabled Users
+MFA Update Activity
+All User Management Activities
+Role Management
+Added Roles
+Updated Roles
+Deleted Roles
+Recently Added Members to Role
+Recently Removed Members from Role
+All Role Management Activities
+Group Management
+Recently Created Groups
+Recently Deleted Groups
+Recently Modified Groups
+Recently Restored Groups
+Recently Added Owners to Groups
+Recently Removed Owners from Groups
+Recently Added Members to Group
+Recently Removed Members from Group
+All Group Events
+Application Management
+Recently Added Application
+Recently Deleted Application
+Recently Updated Application
+Owner Added to Application
+Owner Removed from Application
+Recently Granted Consent to Application
+Recently Added Application Permission
+Recently Removed Application Permission
+Recently Added Delegated Permission
+Recently Removed Delegated Permission
+Application Credential Changes
+All Application Events
+Device Management
+Recently Created Devices
+Recently Deleted Devices
+Recently Updated Devices
+Recently Enabled Devices
+Recently Disabled Devices
+Recently Added Device Owners
+Recently Removed Device Owners
+Recently Added Device Users
+Recently Removed Device Users
+Recently Added Device Configuration
+Recently Updated Device Configurations
+All Device Events
+License Management
+Recently Modified User Licenses
+Recently Modified Group Licenses
+Directory Management
+Recent Activities on Domains
+Recently Updated DirSync
+Recently Updated Password Policy
+All Directory Events
+Policy Management
+Conditional Policy Added
+Conditional Policy Updated
+Conditional Policy Deleted
+Added Policies
+Updated Policies
+Deleted Policies
+Exchange Online
+Exchange Online audit reports provide insights into mailbox activities, permission changes, mail flow, migration, and security events.
+Overview
+All Events
+Mailbox Activities Based On Sign-in
+Owner Activities on Mailbox
+Non Owner Activities on Mailbox
+Admin Activities on Mailbox
+Delegate Activities on Mailbox
+Mailbox Activities Based on Actions
+Send As Activities
+Send On Behalf Activities
+Move And Delete Activities
+Folder Permission Activities
+Mailbox Management Events
+Mailbox Created
+Mailbox Deleted
+Mailbox Enabled
+Mailbox Disabled
+Mailbox Updated
+Mailbox Restored
+Inbox Rule Activities
+All Mailbox Activities
+Mailbox Permission Changes
+Mailbox Permission Changes
+SendAs Permission Changes
+Mailbox Folder Permission Changes
+Mailflow Events
+Mailflow Configurations
+Transport Rule Activities
+Connector Configurations
+Accepted Domain Configuration
+Remote Domain Configurations
+Hybrid Configurations
+Federation Activities
+Mailbox Move Activity
+Mailbox Move Requests
+Mailbox Migration Activities
+Migration Endpoint Activities
+All Move Activities
+Mail Trace Events
+Successfully Delivered Mails
+Undelivered Mails
+Mails yet to be Delivered
+Quarantined Mails
+Spam Mails
+Expanded Mails
+Redirected Mails
+Mails Getting Status
+All Mail Trace Events
+Public Folder Events
+Recently Created Public Folder
+Recently Updated Public Folders
+Recently Deleted Public Folder
+All Public Folder Activities
+Role Changes
+Management-Role Activities
+Role Assignments Activities
+Role Scope Activities
+Role Entry Activities
+Role Group Activities
+Role Assignment-Policy Activities
+Recipient Events
+Exchange User Activities
+Mail Contact Activities
+Distribution Group Activities
+Dynamic Distribution Group Activities
+Microsoft 365 Groups Activities
+All Group Activities
+Threat Protection Policy Events
+Anti Phishing
+Safe Attachments
+Safe Links
+ATP Policy
+Anti Spam
+Anti Malware
+DomainKeys Identified Mail activities
+Calendar Events
+Calendar Activities
+OneDrive
+OneDrive audit reports provide detailed insights into user file and folder activities, sharing operations, synchronization, and permission changes
+Overview
+All Events
+OneDrive File Activities
+File Movement Activities
+File Deletion Activities
+File Recovery Activities
+Sensitive Label Events
+File Modification Activities
+File Rename Activities
+File Upload/Download Activities
+File Version Control Activities
+File Access Activities
+OneDrive Folder Activities
+Folder Creation and Modification Activities
+Folder Organization Activities
+Folder Deletion Activities
+Folder Recovery Activities
+OneDrive Sync Activities
+OneDrive Sync Activities
+OneDrive Sharing Activities
+Company Links
+Anonymous Links
+Secure Links
+Shared and Unshared Items
+Sharing Invitation
+OneDrive Site Permission Activities
+Site Collection Activities
+Group Activities
+Site Level Permission Activities
+SharePoint
+SharePoint audit reports provide insights into file and folder operations, sharing activities, synchronization, and site-level administration.
+Overview
+All Events
+SharePoint File Activities
+File Movement Activities
+File Deletion Activities
+File Recovery Activities
+Sensitive Label Events
+File Modification Activities
+File Rename Activities
+File Upload/Download Activities
+File Version Control Activities
+File Access Activities
+SharePoint Folder Activities
+Folder Creation and Modification Activities
+Folder Organization Activities
+Folder Deletion Activities
+Folder Recovery Activities
+SharePoint Sync Activities
+SharePoint Sync Activities
+SharePoint Sharing Activities
+Company Links
+Anonymous Links
+Secure Links
+Shared and Unshared Items
+Sharing Invitation
+Access Requests
+SharePoint Site Administrator Activities
+Access Policy Activities
+Sharing Policy Activities
+Site Activities
+HubSite Activities
+SharePoint Site Permission Activities
+Site Collection Activities
+Group Activities
+Site Level Permission Activities
+Microsoft Teams
+Microsoft Teams audit reports provide visibility into user activity, team and channel management, membership changes, and add-on usage.
+Overview
+All Events
+Microsoft Teams General Activities
+Teams Login Activity
+Teams Logout Activity
+Org-wide Setting Changes
+Microsoft Teams Management Activities
+Team Created
+Teams Settings Changed
+Team Deleted
+Channel Created
+Channel Settings Changed
+Channel Deleted
+Microsoft Teams Membership Activities
+Member Added
+Member Removed
+AddOn Activities
+Bots
+Tabs
+Connectors or Apps
+Read also
+This page detailed the categories of Microsoft 365 audit reports available in Log360. To learn more about related configurations, see the articles below:
+Adding a data source
+Configuring and managing

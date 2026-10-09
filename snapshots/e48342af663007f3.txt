@@ -1,0 +1,127 @@
+The Data Source Configuration section allows administrators to configure, manage, and monitor all log sources within their environment for auditing and threat detection. After completing the product setup, this configuration must be performed to include devices, applications, databases, cloud services, and other components. By setting up log sources, you can centralize log collection, improve visibility, and ensure comprehensive monitoring across your enterprise.
+This page includes:
+Windows infrastructure
+Syslog devices
+Linux and Unix systems, such as
+Unix
+and
+Mac OS
+devices.
+Database, such as
+SQL servers
+,
+MySQL servers
+and
+Oracle
+.
+Endpoint security solutions, such as
+FireEye devices
+,
+Malwarebytes devices
+,
+McAfee devices
+,
+Symantec DLP devices
+,
+Symantec Endpoint Protection devices
+, and
+Trend Micro - Deep Security
+.
+Network devices, such as
+HP-UX/Solaris/AIX device
+,
+Arista Switches
+,
+Cisco Switches
+,
+Cisco Firepower devices
+,
+Sonicwall devices
+,
+Juniper devices
+,
+PaloAlto devices
+,
+Cisco devices
+,
+Fortinet devices
+,
+CheckPoint devices
+,
+NetScreen devices
+,
+Watchguard devices
+.
+Sophos and Cyberoam devices
+,
+Barracuda devices
+,
+Huawei Firewall devices
+,
+Meraki devices
+,
+pfSense devices
+,
+H3C devices
+,
+StormShield devices
+,
+F5 devices
+,
+Forcepoint devices
+,
+Dell devices
+,
+Topsec devices
+,
+Sangfor devices
+,
+Stackato devices
+, and
+Scaler NSS devices
+.
+General applications, such as
+CEF devices
+,
+Printer server
+,
+Terminal server
+,
+Sysmon application
+, and
+Syslog application
+.
+Import logs
+from IIS and Apache web servers, Microsoft SQL Server, Oracle databases, print servers, and other custom sources.
+File Integrity Monitoring
+IBM AS400 devices
+Hypervisors on a
+VMware
+and
+vCenter
+.
+Vulnerability Scanners, such as
+Nessus
+,
+Nmap
+,
+Nexpose
+,
+OpenVAS
+, and
+Qualys
+.
+Web Servers such as
+IIS servers
+.
+Cloud sources such as
+M365
+,
+Salesforce
+and
+AWS
+.
+NOTE
+You can also configure
+log sources using extensions
+This section streamlines log source management and enhanced operational visibility.

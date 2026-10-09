@@ -1,0 +1,126 @@
+In this page
+Overview
+Pre-requisites
+Accessing Zia Insights
+Overview
+Zia Insights in Log360 Cloud provides AI-powered, actionable insights on incidents, alerts, and logs using the
+Bring Your Own Key (BYOK)
+model. Log360 Cloud supports integration with both
+Azure OpenAI
+and
+OpenAI
+, allowing you to choose your preferred AI provider. Only one provider can be active at a time, and all AI-driven features will use the currently enabled model.
+This page explains the configurations required to enable Zia Insights, including setting up your chosen AI provider, retrieving the required credentials, and integrating the service with Log360 Cloud.
+Pre-requisites
+Before beginning the setup, ensure the following:
+Zia Insights capability is only available for the
+Professional and MSSP plan subscription users
+.
+You must have an active OpenAI subscription or Azure subscription with access to the Azure OpenAI service.
+The following credentials are required from your Azure portal:
+Endpoint URL
+API key
+Deployed model name
+The following credentials are required from OpenAI:
+Model
+API key
+Accessing Zia Insights
+Log in to the product console
+Go to the
+Settings
+tab, and select
+Admin.
+Navigate to
+Zia
+and
+select
+Configuration
+.
+Figure 1: Navigating to Zia Insights
+In the
+Zia
+page, choose either
+Azure OpenAI
+or
+OpenAI
+and click
+Configure Now.
+NOTE
+Only one provider can be enabled at a time.
+Figure 2: Configuring AI service
+A configuration window appears.
+If you select Azure OpenAI, enter the following details obtained from your Azure Portal:
+Endpoint URL
+Deployment Name
+API Key
+NOTE
+Refer to the following pages to configure Azure OpenAI:
+Creating an Azure OpenAI resource
+Steps to obtain Endpoint URL and API key
+Deploying a model in Azure OpenAI
+Click
+Save
+to complete the initial setup.
+Figure 3: Configuring Azure OpenAI
+If you select
+OpenAI
+, select the
+Model
+from the dropdown.
+Figure 4: Selecting a model
+Enter the
+API Key
+.
+NOTE
+Refer to
+this
+section to configure OpenAI.
+Figure 5: Entering API key
+Click
+Save
+to complete the initial setup.
+After configuring Azure OpenAI or OpenAI:
+Use the Insights toggle to enable or disable
+Zia Insights
+.
+Figure 6: Enabling Zia Insights
+When you enable
+Zia Insights
+, a pop-up window appears displaying the data privacy notice. Read the notice carefully, select the checkbox to acknowledge the terms, and then click
+Proceed
+to continue.
+NOTE
+To generate AI-powered insights, the processes contextual data associated with logs, alerts, and entities. This includes the following types of information:
+User-related information: usernames, account names, email, phone number, department, group names, mailgroups, mailbox names, company names, user information, and security ID (SID).
+Device and directory information: hostnames, computer names, domain, distinguished path of AD object, and AD object names.
+Network and location information: IP address, region, and country.
+Request and URL information: URL links, HTTP requests, and HTTP request parameters.
+Application and database information: database name.
+This data is processed only to support contextual analysis, correlation, and remediation guidance within the product.
+Figure 7: Enabling Zia Insights
+Figure 8: Enabling Zia Insights
+To switch between
+Azure OpenAI
+and
+OpenAI
+, use the toggle to disable the currently active provider.
+Figure 9: Disabling an AI service
+A confirmation pop-up will appear. Click
+Yes
+to disable, and then configure the other provider.
+Figure 10: Disabling an AI service
+To delete a configuration, select
+Delete existing Azure/OpenAI configuration
+and click
+Yes
+to confirm your deletion.
+Figure 11: Deleting an AI service
+NOTE
+If you attempt to configure another provider while one is already enabled, the existing provider will be disabled automatically.
+Figure 12: Configuring an AI service
+In the confirmation pop-up that appears, click Proceed to continue with the new configuration.
+Figure 13: Configuring a new service
+Read also
+This document detailed the configuration steps required to enable Zia Insights in ManageEngine Log360 Cloud, including Azure OpenAI resource creation, model deployment, and integration setup. To leverage the capabilities of Zia Insights, refer to the following articles:
+Using Zia Insights
+Invoking Zia Insights

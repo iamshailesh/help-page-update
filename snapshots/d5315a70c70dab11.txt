@@ -1,0 +1,50 @@
+Note
+Ensure Log360 Cloud agent is installed on at least one Windows device in your network. To configure the agent, follow the steps provided
+here
+.
+In the Log360 Cloud console, navigate to
+Settings -> Configuration Settings -> Log source configuration -> Applications -> Security Applications -> Add Security Applications
+Select Add-on type as
+FireEye
+Expand the list by clicking the "
++
+" icon to add a new device.
+Choose from the drop-down menu to add Configured devices, Workgroup devices, domain devices, etc.
+To add new devices manually, click on
+Configure Manually
+and enter
+Log Source
+.
+Click on
+Select
+and
+Add
+to add the log source.
+Use the
+Select Agent
+dropdown to select the device that is the agent to which the logs will be forwarded.
+The applications will now be added for monitoring.
+Configuring the Syslog Service on FireEye devices
+Login to the FireEye device as an
+administrator
+.
+Navigate to
+Settings > Notifications
+, select
+rsyslog
+and the
+Event type
+.
+Click
+Add Rsyslog Server
+.
+In the dialog box that opens, enter the
+IP address or host name of the Log360 Cloud Agent server
+. in the given field. Choose
+UDP
+as the protocol and the format as
+CEF
+(default).
+Click
+Save
+.

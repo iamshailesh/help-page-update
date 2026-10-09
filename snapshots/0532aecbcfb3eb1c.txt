@@ -1,0 +1,42 @@
+In this page
+Creating a New Report Schedule
+Manage Report Schedules
+Log360 lets you schedule report generation, export, and redistribution over email. This page elaborates on the procedure to create and manage report schedules.
+Creating a New Report Schedule
+Click on the
+Schedule Report
+link on top right corner of the
+Reports
+page. Alternatively, you can click on the
++Create New Schedule
+button on the top right corner of the
+Scheduled Reports
+page. This will open the
+Create New Schedule
+page.
+In the
+Create New Schedule
+window,
+Enter the name of the schedule, devices for which the schedule is for, and the reports which are to be included in the schedule.
+Schedule Frequency
+: Specify the frequency at which reports need to be exported. The frequency can be 'Only Once', 'Hourly', 'Daily', 'Weekly', or 'Monthly'.
+Export Time Range
+: Select the time range for which the report needs to be created and later exported.
+Report Format
+: Choose the file format in which the report needs to be exported i.e. PDF, CSV, XLSX and HTML.
+Email Address
+: Configure the email address to which the reports need to be sent.
+Email Subject
+: Enter the subject of the mail that contains the exported reports.
+Once you've entered the necessary details for the schedule, click
+Save
+to complete creating the report schedule.
+Manage Report Schedules
+You can view, edit, delete, or disable report schedules. The procedure is as below.
+Navigate to the Reports page.
+In the left pane, click
+Scheduled Reports
+present at the bottom. You can now see a list of report schedules.
+To edit a report schedule, click the edit icon corresponding to the report schedule and make the necessary changes.
+To delete a report schedule, click the corresponding delete icon. Click Yes in the pop-up box that appears.
+To disable a report schedule, click on the corresponding tick in the Actions column.

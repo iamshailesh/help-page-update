@@ -1,0 +1,126 @@
+Organization Admins
+As an organization administrator in Log360 Cloud, you have complete control over team management. Administrators can create new teams and edit team details, such as team name and logo, from the Manage Team page. Admins can also be a part of multiple teams and directly join teams, whereas organization users have to request to join a team.
+Listed below are some of the various administrative functions available to organization administrators.
+Creating a New Team
+An organization admin can create a new team with the following steps:
+Login to your
+Log360 Cloud
+account.
+Go to the
+Manage Team
+page.
+Click on
+Create New Team
+.
+In the pop-up that appears, enter your
+Team Name
+, upload your
+Team Logo
+, and click
+Create
+.
+In the confirmation box, click
+Proceed
+.
+Note
+By clicking
+Proceed
+, you are agreeing to creating a separate space within your current organization and purchasing a separate license for the team.
+Your team has been created.
+Note
+An organization can add up to five teams to their account. If they want to add another team, they will have to terminate an existing team to do so.
+Editing a Team
+An organization admin can edit or modify a team with the following steps:
+Login to your
+Log360 Cloud
+account.
+In the
+Manage Team
+page, choose the team you want to modify.
+Click on the
+Edit icon
+to make changes to the team's name or logo.
+In the pop-up that appears, edit your
+Team Name
+or update your
+Team Logo
+.
+After making the necessary changes, click
+Update
+to save them. Your team details have been edited.
+Joining a Team
+An organization admin can join all the available teams in the organization using the following steps:
+Login to your
+Log360 Cloud
+account.
+From the available teams in your organization, select the
+Team
+you wish to join.
+Click
+Join
+to be a part of the team of your choice.
+Deleting a Team
+An organization admin can delete or terminate a team with the following steps:
+Login to your
+Log360 Cloud
+account.
+In the
+Manage Team
+tab in the header, choose the team you want to delete.
+Go to
+Settings â Admin â General â My Account
+.
+Under
+Organization Information
+, click on
+Terminate Log360 Cloud Account
+next to
+Check DPA
+.
+In the pop-up that appears, fill in the requested details.
+Enter the
+Captcha
+and click
+Terminate Account
+.
+By proceeding, you agree to losing all your log data, reports, threat feed services, and your product subscription.
+Once your account has been terminated, you will be redirected to the
+Manage Team
+page if your teams account has at least one team left.
+Otherwise, you will be redirected to the
+Sign in
+page.
+Organization Users
+As an organization user in Log360 Cloud, you can be a part of multiple teams simultaneously, allowing for diverse contributions across the organization.
+Listed below are some of the various functions available to organization users.
+Requesting to Join a Team
+An organization user can join all the available teams in the organization using the following steps:
+Login to your
+Log360 Cloud
+account.
+From the available teams in your organization, select the
+Team
+you wish to join and click
+Request
+.
+Your request to join the team has been submitted and will be sent to the team's admin for approval.
+Once the admin has approved the request, you will be a part of the team.
+Note
+App account admins can review and approve or reject requests from users wanting to join teams. Keep an eye on your email for confirmation of your team join requests.
+Cancelling a Team Request
+An organization user can cancel a team join request with the following steps:
+Login to your
+Log360 Cloud
+account.
+On the
+Manage Team
+page, choose the team request you want to cancel.
+Hover over
+Requested
+to cancel your pending request.
+Click
+Cancel
+to withdraw your request to join a particular team.
+Your team join request has been cancelled.
+Note
+Your participation and contributions to the teams are subject to the approvals and regulations set by your organization's administrators. Ensure to stay aligned with your organization's policies and guidelines while engaging with teams.

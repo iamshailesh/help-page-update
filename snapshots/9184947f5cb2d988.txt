@@ -1,0 +1,782 @@
+In this page
+Overview
+Pre-defined rules
+Overview
+SQL Server is designed as a secure database platform, but relying on default settings can leave security gaps. Its security features should be configured individually to ensure robust protection. Since organizational data is a critical asset, poorly secured databases are often a primary target for attacks.
+This article outlines SQL Server security best practices and essential considerations to help safeguard your databases from unauthorized access, tampering, and other malicious activity.
+Pre-defined rules
+The following are the key pre-defined rules used to assess SQL Server configurations and identify potential security risks.
+Ad Hoc Distributed Queries
+CLR Assembly Functions
+Cross DB Ownership Chaining
+Database Mail XPs
+OLE Automation Procedures
+Remote Access
+Remote Admin Connections
+Scan For Startup Procedures
+Trustworthy Database Property
+SQL Mail XPs
+Standard Port
+Hide Instance
+Disable SA Login
+Rename SA Login
+XP CMDSHELL
+Auto Close
+Restrict SA Login
+CLR Strict Security
+Authentication Mode
+Guest Connect Permissions
+Orphaned Users
+Contained Database Authentication
+Public Default Permissions
+Built-in Group as Login
+Local Group as Login
+Agent Proxy Access for public role
+Check Password Expiration
+Check Password Policy
+Number of Error Log Files
+Default Trace
+Login Audit
+SQL Server Audit
+CLR Assembly Permission
+Symmetric Key Encryption Algorithm
+Asymmetric Key Size
+1. Ad Hoc Distributed Queries
+Description:
+Ensure the 'Ad Hoc Distributed Queries' Server Configuration Option is set to '0'
+Vulnerability:
+Enabling Ad Hoc Distributed Queries allows users to query data and execute statements on external data sources. This feature can be used to access remotely and exploit vulnerabilities on remote SQL Server instances and to run unsafe visual basic for application functions.
+Possible Values:
+Enabled or '1'
+Disabled or '0'
+Best Practice:
+This configuration should be set to '0'.
+Recommendation:
+Run the following T-SQL command:
+EXECUTE sp_configure 'show advanced options', 1; RECONFIGURE;
+EXECUTE sp_configure 'Ad Hoc Distributed Queries', 0; RECONFIGURE;
+GO
+EXECUTE sp_configure 'show advanced options', 0; RECONFIGURE;
+2. CLR Assembly Functions
+Description:
+Ensure the 'CLR Enabled' Server Configuration Option is set to '0'
+Vulnerability:
+The CLR enabled option specifies whether user assemblies can be run by SQL Server. Enabling use of CLR assemblies widens the attack surface of SQL Server and puts it at risk from both inadvertent and malicious assemblies.
+Possible Values:
+Enabled or '1'
+Disabled or '0'
+Best Practice:
+This functionality should be disabled if the 'clr strict security' option is set to 0. Note that this option is only available since SQL Server 2017. If clr strict security is set to 1 this recommendation is not applicable. By default, clr strict security is enabled and treats SAFE and EXTERNAL_ACCESS assemblies as if they were marked UNSAFE. Though not recommended, the clr strict security option can be disabled for backward compatibility. To check the status of 'clr strict security' option, run the following T-SQL command:
+SELECT name, CAST(value as int) as value_configured, CAST(value_in_use as int) as value_in_use FROM sys.configurations WHERE name = 'clr strict security';
+Recommendation:
+Run the following T-SQL command:
+EXECUTE sp_configure 'clr enabled', 0; RECONFIGURE;
+3. Cross DB Ownership Chaining
+Description:
+Ensure the 'Cross DB Ownership Chaining' Server Configuration Option is set to '0'
+Vulnerability:
+This option allows a member of the db_owner role in a database to gain access to objects owned by a login in any other database, causing an unnecessary information disclosure. Cross-database ownership chaining should only be enabled for the specific databases requiring it, instead of enabling it at the instance level for all databases by using the ALTER DATABASESET DB_CHAINING ON command. This database option may not be changed on the master, model, or tempdb system databases.
+Possible Values:
+Enabled or '1'
+Disabled or '0'
+Best Practice:
+This configuration should be set to '0'.
+Recommendation:
+Run the following T-SQL command:
+EXECUTE sp_configure 'cross db ownership chaining', 0; RECONFIGURE; GO
+4. Database Mail XPs
+Description:
+Ensure 'Database Mail XPs' Server Configuration Option is set to '0'
+Vulnerability:
+The Database Mail XPs option controls the ability to generate and transmit email messages from SQL Server.
+Possible Values:
+Enabled or '1'
+Disabled or '0'
+Best Practice:
+This configuration should be set to '0'. Disabling the Database Mail XPs option reduces the SQL Server surface, eliminates a DOS attack vector and channel to exfiltrate data from the database server to a remote host.
+Recommendation:
+Run the following T-SQL command:
+EXECUTE sp_configure 'show advanced options', 1; RECONFIGURE; EXECUTE sp_configure 'Database Mail XPs', 0; RECONFIGURE; GO EXECUTE sp_configure 'show advanced options', 0; RECONFIGURE;
+5. OLE Automation Procedures
+Description:
+Ensure the 'Ole Automation Procedures' Server Configuration Option is set to '0'
+Vulnerability:
+The OLE Automation Procedures option controls whether OLE Automation objects can be instantiated within Transact-SQL batches. These are extended stored procedures that allow SQL Server users to execute functions external to SQL Server. Enabling this option will increase the attack surface of SQL Server and allow users to execute functions in the security context of SQL Server.
+Possible Values:
+Enabled or '1'
+Disabled or '0'
+Best Practice:
+This configuration should be set to '0'.
+Recommendation:
+Run the following T-SQL command:
+EXECUTE sp_configure 'show advanced options', 1; RECONFIGURE; EXECUTE sp_configure 'Ole Automation Procedures', 0; RECONFIGURE;
+GO
+EXECUTE sp_configure 'show advanced options', 0; RECONFIGURE;
+6. Remote Access
+Description:
+Ensure the 'Remote Access' Server Configuration Option is set to '0'
+Vulnerability:
+The 'Remote Access' option controls the execution of local stored procedures on remote servers or remote stored procedures on local servers. This functionality can be abused to launch a Denial-of-Service (DoS) attack on remote servers by off-loading query processing to a target.
+Possible Values:
+Enabled or '1'
+Disabled or '0'
+Best Practice:
+This configuration should be set to '0'.
+Recommendation:
+Run the following T-SQL command:
+EXECUTE sp_configure 'show advanced options', 1; RECONFIGURE; EXECUTE sp_configure 'remote access', 0; RECONFIGURE;
+GO
+EXECUTE sp_configure 'show advanced options', 0; RECONFIGURE;
+NOTE
+Restart the SQL Server service.
+7. Remote Admin Connections
+Description:
+Ensure the 'Remote Admin Connections' Server Configuration Option is set to '0'
+Vulnerability:
+The remote admin connections option controls whether a client application on a remote computer can use the Dedicated Administrator Connection (DAC).The DAC lets an administrator access a running server to execute diagnostic functions or Transact-SQL statements, or to troubleshoot problems on the server, even when the server is locked or running in an abnormal state and not responding to a SQL Server Database Engine connection.
+Possible Values:
+Enabled or '1'
+Disabled or '0'
+Best Practice:
+In a cluster scenario, the administrator may not actually be logged on to the same node that is currently hosting the SQL Server instance and thus is considered "remote". Therefore, this setting should usually be enabled (1) for SQL Server failover clusters; otherwise, it should be disabled (0).
+Recommendation:
+Run the following T-SQL command:
+EXECUTE sp_configure 'remote admin connections', 0; RECONFIGURE;
+GO
+8. Scan For Startup Procedures
+Description:
+Ensure the 'Scan For Startup Procs' Server Configuration Option is set to '0'
+Vulnerability:
+The scan for startup procedures option, if enabled, causes SQL Server to scan for and automatically run all stored procedures that are set to execute upon service startup. Setting Scan for Startup Procedures to 0 will prevent certain audit traces and other commonly used monitoring stored procedures from re-starting on start up. Additionally, replication requires this setting to be enabled (1) and will automatically change this setting if needed.
+Possible Values:
+Enabled or '1'
+Disabled or '0'
+Best Practice:
+This configuration should be set to '0'.
+Recommendation:
+Run the following T-SQL command:
+EXECUTE sp_configure 'show advanced options', 1; RECONFIGURE; EXECUTE sp_configure 'scan for startup procs', 0; RECONFIGURE;
+GO
+EXECUTE sp_configure 'show advanced options', 0; RECONFIGURE;
+NOTE
+Restart the SQL Server service.
+9. Trustworthy Database Property
+Description:
+Ensure the 'Trustworthy' Database Property is set to 'Off'
+Vulnerability:
+The TRUSTWORTHY database option allows database objects to access objects in other databases under certain circumstances. Provides protection from maliciousnCLR assemblies or extended procedures.
+Possible Values:
+Enabled or 'ON'
+Disabled or 'OFF'
+Best Practice:
+This configuration should be set to '0' except for msdb database which requires this to be 'ON'.
+Recommendation:
+Run the following T-SQL command for the databases where this property is turned on:
+ALTER DATABASE [<database_name>] SET TRUSTWORTHY OFF;
+10. SQL Mail XPs
+Description:
+Ensure the 'SQL Mail XPs' Server Configuration Option is set to '0'
+Vulnerability:
+SQL Mail provides a mechanism to send, receive, delete, and process e-mail messages using SQL Server in 2008 R2 or Before.
+Possible Values:
+Enabled or '1'
+Disabled or '0'
+Best Practice:
+This configuration should be set to '0'.
+Recommendation:
+Run the following T-SQL command:
+EXECUTE sp_configure 'show advanced options', 1; RECONFIGURE; EXECUTE sp_configure 'SQL Mail XPs', 0; RECONFIGURE;
+GO
+EXECUTE sp_configure 'show advanced options', 0; RECONFIGURE;
+11. Standard Port
+Description:
+Using default port(1433) makes the server vulnerable to the attacks directed to the default port.
+Vulnerability:
+Enabling Ad Hoc Distributed Queries allows users to query data and execute statements on external data sources. This feature can be used to access remotely and exploit vulnerabilities on remote SQL Server instances and to run unsafe Visual Basic for Application functions.
+Possible Values:
+Any port available on the server.
+Best Practice:
+The port can be anything but the default 1433.
+Recommendation:
+Using GUI,
+Open
+SQL Server Configuration Manager
+In the console pane, expand
+SQL Server Network Configuration
+, expand
+Protocols for <InstanceName>
+, and then double click the
+TCP/IP protocol
+.
+In the
+TCP/IP Properties
+dialog box, on the IP Addresses tab, several IP addresses appear in the format IP1, IP2, up to IPAll. One of these is for the IP address of the loopback adapter, 127.0.0.1. Additional IP addresses appear for each IP address on the computer.
+Under
+IPAll
+, do one of the following:
+Change the
+TCP Port
+field from
+1433
+to a
+non-standard port
+.
+Or, leave the
+TCP Port
+field empty and set
+TCP Dynamic Ports
+to
+0
+to enable dynamic port assignment.
+Click
+OK
+to save changes.
+In the console pane, click
+SQL Server Services
+.
+In the details pane, right-click
+SQL Server (<InstanceName>)
+and select
+Restart
+to stop and restart SQL Server.
+NOTE
+The connection settings of any application that uses port number to communicate with the SQL server needs to be reconfigured while changing the port of SQL server.
+Steps to reconfigure the port number of SQL server in EventLog Analyzer:
+Shut down the product.
+Open <EventLog Analyzer Home>\conf\database_params.conf
+Change existing port number to the required port number.
+Restart EventLog Analyzer for the changes to take effect.
+12. Hide Instance
+Description:
+Ensure the 'Hide Instance' option is set to 'Yes' for Production SQL Server instances
+Vulnerability:
+Non-clustered SQL Server instances within production environments should be designated as hidden to prevent advertisements by the SQL Server Browser service. However, clustered instances may break if this option is selected. If you hide a clustered named instance, the cluster service may not be able to connect to the SQL Server.
+Possible Values:
+Enabled or '1'
+Disabled or '0'
+Best Practice:
+This configuration should be set to '1'.
+Recommendation:
+Using GUI,
+Open
+SQL Server Configuration Manager
+Expand SQL Server Network Configuration, right-click Protocols for <InstanceName>, and then select
+Properties
+On the
+Flags
+tab, in the Hide Instance box, if
+Yes
+is selected, it is compliant.
+Alternatively, run the following T-SQL command:
+EXEC master.sys.xp_instance_regwrite @rootkey = N'HKEY_LOCAL_MACHINE', @key = N'SOFTWARE\Microsoft\Microsoft SQL Server\MSSQLServer\SuperSocketNetLib', @value_name = N'HideInstance', @type = N'REG_DWORD', @value = 1;
+NOTE
+Restart the SQL Server service.
+Applications that use the SQL Browser service to discover SQL Server instances will not be able to discover the instance automatically if 'Hide Instance' is enabled. Either the 'Hide Instance' should be temporarily disabled or the port number should be used to connect to the SQL Server instance.
+13. Disable SA Login
+Description:
+Ensure the 'SA' Login Account is set to 'Disabled'
+Vulnerability:
+The SA account is a widely known and often widely used SQL Server account with sysadmin privileges. This is the original login created during installation and always has the principal_id=1 and sid=0x01. Enforcing this control reduces the probability of an attacker executing brute force attacks against a well-known principal.
+Possible Values:
+Enabled
+Disabled
+Best Practice:
+It is not a good security practice to code applications or scripts to use the sa account. However, if this has been done, disabling the sa account will prevent scripts and applications from authenticating to the database server and executing required tasks or functions.
+Recommendation:
+Run the following T-SQL command:
+USE [master]
+GO
+DECLARE @tsql nvarchar(max) SET @tsql = 'ALTER LOGIN ' + SUSER_NAME(0x01) + ' DISABLE' EXEC (@tsql)
+GO
+NOTE
+The applications which use SA login to authenticate SQL Server connection need to be reconfigured with a different user while altering the SA login.
+14. Rename SA Login
+Description:
+Ensure the 'SA' Login Account has been renamed
+Vulnerability:
+It is easier to launch password-guessing and brute-force attacks against the sa login if the name is known.
+Possible Values:
+Any set of characters that are allowed by Microsoft SQL login name restrictions
+Best Practice:
+The SA Login should be renamed.
+Recommendation:
+Run the following T-SQL command:
+ALTER LOGIN SA WITH NAME = <different_user>;
+NOTE
+The applications which use SA login to authenticate SQL Server connection need to be reconfigured with a different user while altering the SA login.
+15. XP CMDSHELL
+Description:
+Ensure 'xp_cmdshell' Server Configuration Option is set to '0'
+Vulnerability:
+The xp_cmdshell option controls whether the xp_cmdshell extended stored procedure can be used by an authenticated SQL Server user to execute operating-system command shell commands and return results as rows within the SQL client.The xp_cmdshell procedure is commonly used by attackers to read or write data to/from the underlying Operating System of a database server.
+Possible Values:
+Enabled or '1'
+Disabled or '0'
+Best Practice:
+This configuration should be set to '0'.
+Recommendation:
+Run the following T-SQL command:
+EXECUTE sp_configure 'show advanced options', 1; RECONFIGURE; EXECUTE sp_configure 'xp_cmdshell', 0; RECONFIGURE;
+GO
+EXECUTE sp_configure 'show advanced options', 0; RECONFIGURE;
+16. Auto Close
+Description:
+Ensure 'AUTO_CLOSE' is set to 'OFF' on contained databases
+Vulnerability:
+AUTO_CLOSE determines if a given database is closed or not after a connection terminates. If enabled, subsequent connections to the given database will require the database to be reopened and relevant procedure caches to be rebuilt.
+Possible Values:
+Enabled or 'ON'
+Disabled or 'OFF'
+Best Practice:
+This configuration should be set to 'OFF'.
+Recommendation:
+Run the following T-SQL command for databases where this configuration is 'OFF':
+ALTER DATABASE <database_name> SET AUTO_CLOSE OFF;
+17. Restrict SA Login
+Description:
+Ensure no login exists with the name 'sa"
+Vulnerability:
+The SA login (e.g. principal) is a widely known and often widely used SQL Server account. Therefore, there should not be a login called SA even when the original SA login (principal_id = 1) has been renamed.
+Possible Values:
+Login names can be of any set of characters allowed by Microsoft SQL Login name guidelines.
+Best Practice:
+No Logins should be named as 'sa'.
+Recommendation:
+Run the following T-SQL command for logins where name is 'sa':
+USE [master]
+GO
+ALTER LOGIN [sa] WITH NAME = <different_name>;
+GO
+NOTE
+The applications which use the altered logins to authenticate the SQL Server connection need to be reconfigured by another user with equivalent privileges.
+18. CLR Strict Security
+Description:
+Ensure 'clr strict security' Server Configuration Option is set to '1'
+Vulnerability:
+The clr strict security option specifies whether the engine applies the PERMISSION_SET on the assemblies in SQL Server 2017 and 2019.
+Possible Values:
+Enabled or '1'
+Disabled or '0'
+Best Practice:
+This configuration should be set to '1'.
+Recommendation:
+Run the following T-SQL command:
+EXECUTE sp_configure 'show advanced options', 1; RECONFIGURE; EXECUTE sp_configure 'clr strict security', 1; RECONFIGURE;
+GO
+EXECUTE sp_configure 'show advanced options', 0; RECONFIGURE;
+19. Authentication Mode
+Description:
+Ensure the 'Server Authentication' Property is set to 'Windows Authentication Mode'
+Vulnerability:
+Windows provides a more robust authentication mechanism than SQL Server authentication.
+Possible Values:
+SQL Server Authentication
+Windows Authentication
+Mixed Authentication
+Best Practice:
+This configuration should be set to 'Windows Authentication Mode'.
+Recommendation:
+Using GUI,
+Open
+SQL Server Management Studio
+.
+Open the Object Explorer tab and connect to the target SQL Server instance.
+Right click the instance name and select
+Properties.
+Select the
+Security page
+from the left menu.
+Set the Server authentication setting to
+Windows Authentication Mode
+.
+Alternatively, run the following T-SQL command:
+USE [master]
+GO
+EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE', N'Software\Microsoft\MSSQLServer\MSSQLServer', N'LoginMode', REG_DWORD, 1
+GO
+NOTE
+Restart the SQL Server service.
+20. Guest Connect Permissions
+Description:
+Ensure CONNECT permissions on the 'guest' user is Revoked within all SQL Server databases excluding the master, msdb and tempdb
+Vulnerability:
+A login assumes the identity of the guest user when a login has access to SQL Server but does not have access to a database through its own account and the database has a guest user account. Revoking the CONNECT permission for the guest user will ensure that a login is not able to access database information without explicit access to do so.
+Possible Values:
+The guest users might have or might not have CONNECT permissions.
+Best Practice:
+CONNECT permission for guest users must be revoked in all databases except for master, msdb and tempdb.
+Recommendation:
+Run the following T-SQL command for the databases with guest connect permission on:
+USE <database_name>;
+GO
+REVOKE CONNECT FROM guest CASCADE;
+21. Orphaned Users
+Description:
+Ensure 'Orphaned Users' are Dropped From SQL Server Databases
+Vulnerability:
+A database user for which the corresponding SQL Server login is undefined or is incorrectly defined on a server instance cannot log in to the instance and is referred to as orphaned and should be removed. Orphan users should be removed to avoid potential misuse of those broken users in any way.
+Possible Values:
+A Database might have or might not have any orphaned users
+Best Practice:
+No orphaned users must be present in a database server.
+Recommendation:
+Run the following T-SQL command for all the orphaned users:
+USE <database_name>;
+GO
+DROP USER <username>;
+NOTE
+The orphaned users can be troubleshooted if possible. Refer
+Microsoft learn
+for further details.
+22. Contained Database Authentication
+Description:
+Ensure SQL Authentication is not used in contained databases
+Vulnerability:
+Contained databases do not enforce password complexity rules for SQL Authenticated users. The absence of an enforced password policy may increase the likelihood of a weak credential being established in a contained database.
+Possible Values:
+SQL Server Authentication
+Windows Authentication
+Mixed Authentication
+Best Practice:
+This configuration should be set to 'Windows Authentication Mode'.
+Recommendation:
+Leverage Windows Authenticated users in contained databases.
+NOTE
+Refer
+Microsoft learn
+for further details.
+If required, use the following T-SQL command to drop logins:
+USE <db_name>
+GO
+DROP USER <user_name>;
+NOTE
+Applications that use dropped logins to authenticate the SQL server need to be reconfigured with different logins.
+23. Public Default Permissions
+Description:
+Ensure only the default permissions specified by Microsoft are granted to the public server role
+Vulnerability:
+The 'public' is a special fixed server role containing all logins. Unlike other fixed server roles, permissions can be changed for the public role. In keeping with the principle of least privileges, the public server role should not be used to grant permissions at the server scope as these would be inherited by all users. Every SQL Server login belongs to the public role and cannot be removed from this role. Therefore, any permissions granted to this role will be available to all logins unless they have been explicitly denied to specific logins or user-defined server roles. When the extraneous permissions are revoked from the public server role, access may be lost unless the permissions are granted to the explicit logins or to user-defined server roles containing the logins which require the access.
+Possible Values:
+Any number of permissions might be given to public roles.
+Best Practice:
+No extraneous permission must be given to the public role and should be removed if given and delegated to a user defined role if needed.
+Recommendation:
+Add the extraneous permissions found in the results to the specific logins to user-defined server roles that require the access.
+Run the following T-SQL command for the permissions found:
+USE [master]
+GO
+REVOKE <permission_name> FROM public;
+GO
+NOTE
+For public roles, 'View any database' and 'Connect' are permissible.
+24. Builtin Group as Login
+Description:
+Ensure Windows BUILTIN groups are not SQL Logins
+Vulnerability:
+The BUILTIN groups (Administrators, Everyone, Authenticated Users, Guests, etc.) generally contain extensive memberships, which would not meet the best practice of ensuring only the necessary users have been granted access to a SQL Server instance. These groups should not be used for any level of access into a SQL Server Database Engine instance.
+Possible Values:
+Any group, whether it be BUILTIN or user defined, can be SQL Logins.
+Best Practice:
+The Windows BUILTIN groups must be removed from SQL Logins. Note that before dropping the BUILTIN group logins, ensure that alternative AD Groups or Windows logins have been added with equivalent permissions. Otherwise, the SQL Server instance may become totally inaccessible.
+Recommendation:
+Using GUI,
+Open
+Computer Management.
+Click on
+Local Users and Groups.
+If needed, create a restrictive AD group containing only the required user accounts.
+Open
+SQL Server Management Studio
+â Connect to the database â Select
+New Login
+in the Left pane â Add the AD group or individual Windows accounts as a SQL Server login and grant it the permissions required.
+Drop the BUILTIN login using the syntax below after replacing <name>.
+USE [master]
+GO
+DROP LOGIN [<name>]
+GO
+25. Local Group as Login
+Description:
+Ensure Windows Local groups are not SQL Logins
+Vulnerability:
+Local Windows groups should not be used as logins for SQL Server instances. Allowing local Windows groups as SQL Logins provides a loophole whereby anyone with OS level administrator rights (and no SQL Server rights) could add users to the local Windows groups and give themselves or others access to the SQL Server instance.
+Possible Values:
+Any windows group can be SQL Login.
+Best Practice:
+The Windows Local groups must be removed from SQL Logins. Note that before dropping the Local group logins, ensure that alternative AD Groups or Windows logins have been added with equivalent permissions. Otherwise, the SQL Server instance may become totally inaccessible.
+Recommendation:
+Using GUI,
+Open
+Computer Management.
+Click on
+Local Users and Groups
+. If needed, create a restrictive AD group containing only the required user accounts.
+Open
+SQL Server Management Studio
+â
+Connect to the database
+â Select
+New Login
+in the Left pane â Add the AD group or individual Windows accounts as a SQL Server login and grant it the permissions required.
+Drop the Local group name logins using the syntax below after replacing <name>.
+USE [master]
+GO
+DROP LOGIN [<name>]
+GO
+26. Agent Proxy Access for public role
+Description:
+Ensure the public role in the msdb database is not granted access to SQL Agent proxies
+Vulnerability:
+Granting access to SQL Agent proxies for the public role would allow all users to utilize the proxy, which may have high privileges. This would likely break the principle of least privileges.
+Possible Values:
+The public role might have access to any number of proxies.
+Best Practice:
+Revoke any agent proxy access to the public role. Before revoking the public role from the proxy, ensure that alternative logins or appropriate user-defined database roles have been added with equivalent permissions. Otherwise, SQL Agent job steps dependent upon this access will fail.
+Recommendation:
+Using GUI,
+Open
+SQL Server Management Studio
+â Connect to the database â Select
+Server SQL Agent
+â Select the proxy in interest â Right Click and select
+Properties
+â Add specific security principals which require access.
+Alternatively use sp_grant_login_to_proxy T-SQL.
+NOTE
+Refer
+Microsoft learn
+for further details.
+Revoke access to the <proxyname> from the public role using the following T-SQL command:
+USE [msdb]
+GO
+EXEC dbo.sp_revoke_login_from_proxy @name = N'public', @proxy_name = N'<proxyname>';
+GO
+27. Check Password Expiration
+Description:
+Ensure the 'CHECK_EXPIRATION' option is set to 'ON' for all SQL Authenticated Logins Within the Sysadmin Role
+Vulnerability:
+Applies the same password expiration policy used in Windows to passwords used inside SQL Server if turned on. Else, the passwords in use might be weak.
+Possible Values:
+Enabled or 'ON'
+Disabled or 'OFF'
+Best Practice:
+This option should be set to 'ON'. This is a mitigating recommendation for systems which cannot follow the recommendation to use only Windows Authenticated logins.
+Recommendation:
+Run the following T-SQL command for the login names where check expiration is set to 'OFF':
+ALTER LOGIN [<login_name>] WITH CHECK_EXPIRATION = ON;
+28. Check Password Policy
+Description:
+Ensure the 'CHECK_POLICY' Option is set to 'ON' for All SQL Authenticated Logins
+Vulnerability:
+Applies the same password complexity policy used in Windows to passwords used inside SQL Server if turned on. Else, the passwords in use might be weak.
+Possible Values:
+Enabled or 'ON'
+Disabled or 'OFF'
+Best Practice:
+This option should be set to 'ON'. The setting is only enforced when the password is changed. This setting does not force existing weak passwords to be changed. Thus existing passwords need to be changed manually.
+Recommendation:
+Run the following T-SQL command for the login names where check policy is set to 'OFF':
+ALTER LOGIN [<login_name>] WITH CHECK_POLICY = ON;
+29. Number of Error Log Files
+Description:
+Ensure 'Maximum number of error log files' is set to greater than or equal to '12'
+Vulnerability:
+SQL Server error log files must be protected from loss. The log files must be backed up before they are overwritten. Retaining more error logs helps prevent loss from frequent recycling before backups can occur.
+Possible Values:
+All positive numerical values
+Best Practice:
+This option should be set to greater than or equal to 12.
+Recommendation:
+Using GUI,
+Open
+SQL Server Management Studio
+.
+Open Object Explorer and connect to the target instance.
+Navigate to the Management tab in Object Explorer and expand. Right click on the SQL Server Logs file and select
+Configure.
+Verify the Limit the number of error log files before they are recycled checkbox is checked.
+Verify the Maximum number of error log files is greater than or equal to 12.
+Alternatively, run the following T-SQL command replacing <NumberGreaterThanOrEqualTo12>:
+EXEC master.sys.xp_instance_regwrite N'HKEY_LOCAL_MACHINE', N'Software\Microsoft\MSSQLServer\MSSQLServer', N'NumErrorLogs', REG_DWORD, <NumberGreaterThanOrEqualTo12>;
+30. Default Trace
+Description:
+Ensure the 'Default Trace Enabled' Server Configuration Option is set to '1'
+Vulnerability:
+The default trace provides audit logging of database activity including account creations, privilege elevation and execution of DBCC commands.
+Possible Values:
+Enabled or '1'
+Disabled or '0'
+Best Practice:
+This configuration should be set to '1'.
+Recommendation:
+Run the following T-SQL command:
+EXECUTE sp_configure 'show advanced options', 1; RECONFIGURE; EXECUTE sp_configure 'default trace enabled', 1; RECONFIGURE;
+GO
+EXECUTE sp_configure 'show advanced options', 0; RECONFIGURE;
+31. Login Audit
+Description:
+Ensure 'Login Auditing' is set to 'failed logins'
+Vulnerability:
+This setting will record failed authentication attempts for SQL Server logins to the SQL Server Error-log. Capturing failed logins provides key information that can be used to detect or confirm password guessing attacks. Capturing successful login attempts can be used to confirm server access during forensic investigations, however, using this audit level setting to also capture successful logins creates excessive noise in the SQL Server Error-log which can hamper a DBA trying to troubleshoot problems.
+Possible Values:
+None
+Failed
+Successful
+Both Failed and Successful
+Best Practice:
+This configuration should be set to 'failure'.
+Recommendation:
+Using GUI,
+Open
+SQL Server Management Studio
+.
+Right click the target instance and select
+Properties
+and navigate to the Security tab.
+Select the option Failed logins only under the Login Auditing section and click
+O
+K.
+Alternatively, run the following T-SQL command:
+EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE', N'Software\Microsoft\MSSQLServer\MSSQLServer', N'AuditLevel', REG_DWORD, 2
+NOTE:
+Restart SQL Server service.
+32. SQL Server Audit
+Vulnerability:
+SQL Server Audit is capable of capturing both failed and successful logins and writing them to one of three places: the application event log, the security event log, or the file system. By utilizing Audit instead of the traditional setting under the security tab to capture successful logins, we reduce the noise in the ERRORLOG.
+Possible Values:
+Any number of Server Audits might be present in a Server with Audit Action Type of AUDIT_CHANGE_GROUP, FAILED_LOGIN_GROUP and SUCCESSFUL_LOGIN_GROUP.
+Best Practice:
+There should be atleast one Server Audit specification must be created/present with following audit names:
+AUDIT_CHANGE_GROUP
+FAILED_LOGIN_GROUP
+SUCCESSFUL_LOGIN_GROUP
+Recommendation:
+Using GUI,
+Open
+SQL Server Management Studio
+.
+Expand the SQL Server in Object Explorer.
+Expand the
+Security Folde
+r.
+Right-click on the
+Audits folder
+and choose
+New Audit
+.
+Specify a name for the Server Audit.
+Specify the audit destination details and then click
+O
+K to save the Server Audit.
+Right-click on
+Server Audit Specifications
+and choose
+New Server Audit Specification
+.
+Name the
+Server Audit Specification
+.
+Select the created
+Server Audit
+in the Audit drop-down selection.
+Click the drop-down under
+Audit Action Type
+and select
+AUDIT_CHANGE_GROUP
+.
+Click the new drop-down
+Audit Action Type
+and select
+FAILED_LOGIN_GROUP
+.
+Click the new drop-down under
+Audit Action Type
+and select
+SUCCESSFUL_LOGIN_GROUP.
+Click
+OK
+to save the Server Audit Specification.
+Right-click on the
+new Server Audit Specification
+and select
+Enable Server Audit Specification.
+Right-click on the
+new Server Audit
+and select
+Enable Server Audit
+.
+Alternatively, run the following T-SQL command replacing <Enter audit name here> and <Enter audit spec name here>:
+USE master
+GO
+CREATE SERVER AUDIT <Enter audit name here> TO APPLICATION_LOG;
+GO
+CREATE SERVER AUDIT SPECIFICATION <Enter audit spec name here> FOR SERVER AUDIT <Enter audit name here> ADD (FAILED_LOGIN_GROUP), ADD (SUCCESSFUL_LOGIN_GROUP), ADD (AUDIT_CHANGE_GROUP), ADD (SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP), ADD (FAILED_DATABASE_AUTHENTICATION_GROUP) WITH (STATE = ON);
+GO
+ALTER SERVER AUDIT <Enter audit name here> WITH (STATE = ON);
+GO
+33. CLR Assembly Permission
+Description:
+Ensure 'CLR Assembly Permission Set' is set to 'SAFE_ACCESS' for All CLR Assemblies
+Vulnerability:
+Setting CLR Assembly Permission Sets to SAFE_ACCESS will prevent assemblies from accessing external system resources such as files, the network, environment variables, or the registry. Assemblies with EXTERNAL_ACCESS or UNSAFE permission sets can be used to access sensitive areas of the operating system, steal and/or transmit data and alter the state and other protection measures of the underlying Windows Operating System.
+Possible Values:
+SAFE_ACCESS
+EXTERNAL_ACCESS
+UNSAFE
+Best Practice:
+All CLR Assemblies should have the permission set to 'SAFE_ACCESS' except for those which are Microsoft-created (is_user_defined = 0) are excluded from this check as they are required for overall system functionality. The remediation measure should first be tested within a test environment before production to ensure the assembly still functions as designed with SAFE permission setting.
+Recommendation:
+Run the following T-SQL command:
+USE <database_name>;
+GO
+ALTER ASSEMBLY <assembly_name> WITH PERMISSION_SET = SAFE;
+Symmetric Key Encryption Algorithm
+Description:
+Ensure 'Symmetric Key Encryption algorithm' is set to 'AES_128' or higher in non-system databases
+Vulnerability:
+As per the Microsoft Best Practices, only the SQL Server AES algorithm options, AES_128, AES_192, and AES_256, should be used for a symmetric key encryption algorithm. The following algorithms (as referred to by SQL Server) are considered weak or deprecated and should no longer be used in SQL Server: DES, DESX, RC2, RC4, RC4_128.
+Possible Values:
+DES
+Triple DES
+TRIPLE_DES_3KEY
+RC2
+RC4
+128-bit RC4
+DESX
+128-bit AES
+192-bit AES
+256-bit AES
+Best Practice:
+All Symmetric keys in the database must use 'AES_128' or higher as encryption algorithm.
+Recommendation:
+NOTE:
+Refer
+Microsoft learn
+to know more about Altering symmetric key.
+If required, use the following T-SQL command to drop symmetric keys:
+USE <database_name>
+GO
+DROP SYMMETRIC KEY <key_name>;
+35. Asymmetric Key Size
+Description:
+Ensure Asymmetric Key Size is set to 'greater than or equal to 2048' in non-system databases
+Vulnerability:
+Microsoft Best Practices recommend using at least a 2048-bit encryption algorithm for asymmetric keys. The RSA_2048 encryption algorithm for asymmetric keys in SQL Server is the highest bit-level provided and therefore the most secure available choice.
+Possible Values:
+512 bit
+1024 bit
+2048 bit
+Best Practice:
+Asymmetric key size should be set to greater than or equal to 2048 bits.
+Recommendation:
+NOTE:
+Refer
+Microsoft learn
+to know more about Altering asymmetric key.
+If required, use the following T-SQL command to drop asymmetric keys:
+USE <database_name>
+GO
+DROP ASYMMETRIC KEY <key_name>;
+Read Also
+This section details the pre-defined rules for SQL Server, including descriptions, default values, vulnerabilities, best practices, and recommendations. For more information, see:
+Active Directory

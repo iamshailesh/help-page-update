@@ -1,0 +1,67 @@
+In this page
+Overview
+Configuring predefined compliance reports
+Add, edit, or delete custom compliance sections
+Overview
+This page outlines how to configure predefined compliance reports in Log360 Cloud. It explains how to add source devices to generate compliance reports and how to manage custom compliance sections by creating, editing, deleting, or showing and hiding them based on organizational and regulatory needs.
+Configuring predefined compliance reports
+In order to generate the predefined compliance reports, you will first have to add source devices. To add source devices follow the steps given below.
+Select the required compliance from the left panel and click on the link
+Click here to add
+.
+Then select the required source devices and click
+Save.
+.
+Now you will be able to see compliance reports on the selected devices.
+Add, edit, or delete custom compliance sections
+Log360 Cloud enables you to create custom compliance reports for satisfying internal audits and other regulatory requirements.
+Adding custom compliance sections
+To add a custom compliance section follow the steps given below.
+In the
+Compliance
+tab, click
+Manage Compliance
+at the top-right corner.
+Click on the
++ Create New Compliance
+button.
+Enter a name for the compliance and select the reports that you would like to add to it.
+To add the new compliance to Log360 Cloud's list, click
+Save
+.
+Editing custom compliance sections
+To edit an already added compliance section section follow the steps given below.
+In the
+Compliance
+tab, click
+Manage Compliance
+at the top-right corner.
+Click the edit icon corresponding to the compliance section you want to edit.
+Make the necessary changes and click
+Save
+.
+Alternatively, click on the edit icon present on the respective compliance widget and make the necessary changes.
+Deleting custom compliance sections
+To delete an already added compliance section follow the steps given below.
+In the
+Compliance
+tab, click
+Manage Compliance
+at the top-right corner.
+Click the delete icon corresponding to the compliance section you want to delete.
+In the pop-up box that appears, click
+Yes
+.
+Show/Hide an existing compliance section
+To show/hide an existing compliance section follow the steps given below.
+In the
+Compliance
+tab, click
+Manage Compliance
+at the top-right corner.
+Click the
+Show or Hide
+button, corresponding to the required compliance name. Choosing hide will remove the compliance from the left panel.
+Read also
+This document explained how to configure predefined compliance reports and manage custom compliance sections in Log360 Cloud. You can also refer to the following page for related information.
+Compliance overview

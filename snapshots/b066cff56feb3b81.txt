@@ -1,0 +1,17 @@
+Installation procedure
+Ensure that EventLog Analyzer server can access EC2 Windows instance.
+Welcome screen with copyright protection message appears.
+Confirm the agent installation.
+Confirm the agent installation.
+Enter the server details: Server Name or Server IP Address, Server Database, Server Protocol, AWS Instance (choose Yes if agent installation is on AWS, No if it is not), Server Port (mention the HTTP/HTTPS server port, default port is 8095).
+Confirm the agent installation.
+EventLog Analyzer agent is installed as a service in AWS Windows instance.
+Check whether the service is running.
+EC2 server name is resolved from the IP address provided.
+EC2 server name is resolved from the IP address provided.
+You can check that the AWS instance is displayed in both the Devices tab and the Agent Administration settings page.
+EC2 server name is resolved from the IP address provided.
+After five minutes you can view the reports rolling out for the AWS instance.
+Note
+Install one agent on each AWS Windows server instance.
+You should not associate other AWS server instances with an AWS agent.

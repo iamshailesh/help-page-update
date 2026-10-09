@@ -1,0 +1,28 @@
+In this page
+Overview
+Available Reports
+Overview
+This page lists the FireEye reports available in the product to help monitor infections, malware activity, callback events, and domain-related incidents. These reports assist administrators in identifying top severities, tracking sources and targets, and analyzing the most active sensors for effective threat management.
+Available Reports
+Report group name
+Report name
+FireEye Reports
+FireEye Reports Overview
+Domain Match Reports
+Infection Events
+Callback Events
+Malware Object Events
+Web Infection Events
+Top Severities
+Top Source IPs
+Top Target IPs
+Top Target Ports
+Top Malware
+Top Active Sensor
+Read also
+This page detailed the FireEye reports supported by the product for monitoring malware, infection, and callback events. Explore related report sections to gain deeper visibility into threat sources, affected targets, and active sensors in your environment.
+Malwarebytes reports
+McAfee reports
+Symantec DLP reports
+Threat analytics reports
+Trend Micro reports

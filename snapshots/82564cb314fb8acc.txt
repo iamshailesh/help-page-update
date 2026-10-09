@@ -1,0 +1,92 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the various Huawei reports available in the product console to help administrators monitor firewall operations, track user and administrative activities, analyze allowed and denied traffic, and identify security events across the network.
+Available Reports
+Report Group Name
+Report Name
+Device Severity Reports
+Warning Events
+Notice Events
+Error Events
+Critical Events
+Emergency Events
+Information Events
+Alert Events
+Debug Events
+Logon Reports
+Top logons based on user
+Logons Trend
+Logons
+Top Successful Logons from Source
+Allowed Traffic Reports
+Allowed Traffic
+Top Traffic based on Source
+Top Traffic based on Port
+Top Traffic based on Protocol
+Allowed Traffic Trend
+Top Traffic based on Destination
+VPN Logon Reports
+Top VPN Logon based on users
+VPN logon trend reports
+VPN Logons
+Top firewall VPN logons by Source
+Failed VPN Logon Reports
+Top Failed VPN Logons based on Source
+Top Failed VPN Logons based on User
+VPN Failed logon trend reports
+Failed VPN Logons
+Firewall Security Reports
+Email Filter Reports
+Antivirus Reports
+DLP Reports
+Application Filter Reports
+Web Filter
+System Events
+Power Status
+Command executed
+Clock Update
+Interface Status
+Temperature Status
+Fan Status
+CPU Status
+Policy Management
+Policy Added
+Disabled Policy
+Enabled Policy
+Policy Modified
+Policy Deleted
+IDS/IPS
+Top Attacks based on Destination
+Attacks Trend
+Top Attacks based on Source
+All Attacks
+Account Management
+Group Deleted
+Users Added
+Group Added
+Users Deleted
+Group Modified
+Denied Traffic Reports
+Denied Connections Trend
+Top Denied Connections based on Destination
+Top Denied Connections based on Protocol
+Top Denied Connections based on Source
+Top Denied Connections based on Port
+Denied Connections
+Failed Logon Reports
+Failed Logons Trend
+Top Failed Logons from Source
+Top logons based on user
+Failed Logons
+Huawei Events
+All Events
+Important Events
+Read also
+This document elaborated the list of Huawei reports available in the product console and how they help monitor security events, traffic patterns, system performance, and access activities. Explore related report sections to gain deeper visibility into security events and operational trends.
+NetScreen reports
+Checkpoint reports
+Arista reports
+HP reports
+pfSense reports

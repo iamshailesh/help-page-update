@@ -1,0 +1,33 @@
+To configure the Syslog service in your Topsec devices, follow the steps below:
+Login to the Topsec device as an administrator.
+Navigate to Logs and alarms > Log Settings
+Configure the details as mentioned below:
+Server address - Provide EventLog Analyzer's server address
+Server port - Enter 513 or 514 which is EventLog Analyzer's default syslog collection port
+Transmission type - Syslog
+Select the Whether to transmit check box.
+Ensure that you DO NOT select 'Whether to combine transmission data' and 'Whether the data is encrypted or not' check boxes.
+Log level - Information
+Check all the necessary Log Type boxes
+Select Input Log language as English
+Click Apply to save the above settings
+Topsec reports
+EventLog Analyzer supports Topsec Firewall and provides out-of-the-box reports for the following categories of events:
+Topsec Events:
+Provides information on all the events associated with Topsec devices.
+Logon Reports
+These reports provide information on successful logons, logoffs, failed logons, and logon overview.
+Firewall Allowed and Denied Traffic:
+Provides insights on traffic based on source, destination, protocol and also generates a report on traffic trends.
+Firewall IDS/IPS Events:
+Provides insights on attacks based on source and destination IP address, also provides a report on attack trends.
+Firewall Policy Management
+The reports in this category provide useful information on policies added, deleted or modified.
+Firewall Account Management
+This category provides reports on users and roles added, deleted or modified.
+Interface Events
+The reports in this category let you monitor interface events such as Interface Up and Interface Down.
+System Events:
+Provides reports on configuration changes and system reboot.
+Device Severity Reports:
+Provides reports on emergency, alerts, critical, error, warning, and notice events.

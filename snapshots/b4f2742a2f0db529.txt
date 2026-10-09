@@ -1,0 +1,11 @@
+EventLog Analyzer automatically adds and collects your stackato logs upon executing the following command in your tty console:$kato config set logyard
+drainformats/<Format Name>[<PRI>{{.Text}}]
+For UDP based log collection:
+$kato drain add ela udp://<ela_server_name>:<udp_port_no> -f systail-ela-local
+For TCP based log collection:
+$kato drain add ela tcp://<ela_server_name>:<tcp_port_no> -f systail-ela-local
+Example:
+$kato config set logyard drainformats/systail-ela-local[{<13>{{.Text}}]
+$kato drain add ela udp://ELA:514 -f systail-ela-local
+By default, EventLog Analyzer uses 513 and 514 as default UDP ports. In case you have changed the UDP port number, specify the same here.
+Logyard will now drain all logs in the format name as specified to EventLog Analyzer's UDP port number as given. EventLog Analyzer can now collect all the stackato logs as syslogs and analyze them with special reports.

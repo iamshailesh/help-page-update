@@ -1,0 +1,25 @@
+Login to the switch.
+Go to the config mode.
+Configure the switch as below (here, we have used
+Catalyst 2900
+) to send the logs to the EventLog Analyzer server:
+<Catalyst2900>#
+config terminal
+<Catalyst2900>(config)#
+logging <ela_server_IP>
+For the latest catalyst switches
+Catalyst6500(config)#
+set logging <ela_server_IP>
+We can also configure logging facility and trap notifications with the below commands:
+Copy
+Catalyst6500(config)#
+logging facility local7
+Catalyst6500(config)#
+logging trap notifications
+Note
+The same commands are also applicable for Cisco Routers.
+Please refer Cisco
+®
+documentation for detailed steps on configuring the Syslog service in the respective routers or switches. Contact
+eventlog-support@manageengine.com
+if the Syslog format of your Cisco devices are different from the standard syslog format supported by EventLog Analyzer.

@@ -1,0 +1,1029 @@
+In this page
+Overview
+Basic Criteria
+Datatypes
+Numerical relational operators
+String relational operators
+Logical Operators
+Example
+Query Syntax
+Advanced operator
+isMalicious function
+isVulnerable function
+misConfiguredFor function
+Query components
+Aggregation Function
+Sort Operator
+Timewindow Operator
+Groupby Operator
+Distinct Operator
+Having Operator
+First/Last Operator
+With Operator
+Order of Statements
+Correlation criteria
+Arithmetic operator
+Correlation multi-action
+Link statement
+Sequence statement
+Def and Filter statement
+Select statement
+Use case specific examples
+Detection rule limitation
+Overview
+Query Grammar
+is the language you can use while building the
+Query
+Syntax
+that the ML (Machine Learning) model understands and helps you build
+rule criteria and rule parameters during advanced rule creation.
+This page contains the complete query grammar reference, including basic criteria, supported
+datatypes, relational and logical operators, advanced functions, aggregation constructs,
+correlation statements, and practical detection examples.
+Basic Criteria
+Datatypes
+Numerical relational operators
+String relational operators
+Logical Operators
+Example
+1. Data types
+Type name
+Description
+Examples
+String
+A string value
+"surname" "198.51.100.255" "Number of bytes"
+Int
+An integer value
+23 -32 4000000244553
+Float
+A floating-point number.
+3.14 -1.2e5
+Timespan
+A time interval represented by one or two digits followed by 's' for seconds, 'm' for minute. 'h' for hour, 'd' for days, 'w' for week, 'M' for month, 'q' for quarter, 'y' for year.
+2s, 45m, 4h, 2d, 3w, 2M, 4q, 1y
+Memory
+A data size represented in 'B' for bytes, ''KB' for kilobytes, 'MB' for
+megabytes, 'GB' for gigabytes,'TB' for terabytes, 'PB' for petabytes.
+2B, 3KB, 3 MB, 34GB, 9TB, 9PB
+Date-time
+A date-time format represented by "YYYY-MM-DD", "YYYY-MM-DD HH-MM-SS"
+"2000-08-30" "2000-08-30 15:45:06"
+2. Numerical relational operators
+Operators
+Description
+Supported data types
+Examples
+>
+Greater than
+Int, Float, Memory, IP
+source_IP > 10.53.12.0
+>=
+Greater than or Equal to
+Int, Float, Memory, IP
+source_ip >= 10.53.12.0
+<
+Less than
+Int, Float, Memory, IP
+source_IP < 10.53.12.0
+<=
+Less than or Equal to
+Int, Float, Memory, IP
+source_IP <= 10.53.12.0
+=
+Equal to
+String, Int, Float, Memory, IP
+EventID=4624
+!=
+Not Equal to
+String, Int, Float, Memory, IP
+EventID!=4624
+in/IN
+Equals to one of the elements
+String, Int, Float, IP
+EventID in (4624,4625)
+notin/NOTIN
+Not equals to any of the elements
+String, Int, Float, IP
+EventID notin (4624,4625)
+isExist
+Field isn't an empty string, and it isn't null.
+For all fields
+isExist(source_ip)
+isNotExist
+Field is an empty string, and it is null.
+For all fields
+isNotExist(source_ip)
+3. String relational operators
+Operators
+Description
+Examples
+=
+Equal to
+username = "name"
+!=
+Not Equal to
+username != "name"
+contains/CONTAINS
+Returns true if the field has a set of data
+eventname contains "success"
+notcontains/NOTCONTAINS
+Returns true if the field hasn't set of data
+eventname notcontains "success"
+startswith/STARTSWITH
+Returns true if the field value starts with data
+username startswith "Ja"
+endswith/ENDSWITH
+Returns true if the field value ends with data
+username endswith "kumar"
+notstartswith/NOTSTARTSWITH
+Returns true if the field value does not start with data
+username notstartswith "Ja"
+notendswith/NOTENDSWITH
+Returns true if the field value does not end with data
+username notendswith "kumar"
+matches/MATCHES
+Returns true if the field value matches the regex
+username matches "pree.*"
+notmatches/NOTMATCHES
+Returns true if the field value does not match the regex
+username notmatches "pree.*"
+4. Logical Operators
+Operators
+Description
+Examples
+AND/and
+Returns true only if both condition are true
+username = "preethi" and eventid=4624
+OR/or
+Returns true if either of the condition is true, regardless of the other
+condition.
+eventid = "4688" or eventid = "592"
+Example
+Basic Criteria for Repeated failed SUDO
+commands:
+logtype="
+unix
+" and iename = "
+sudo command
+execution failed
+"
+Basic Criteria for Excessive password change failure:
+common_report_name
+= "
+user account password changes
+" and severity =
+"
+failure
+" or iename = "
+password update failure
+"
+Basic Criteria for Ryuk Wake on LAN Command:
+logtype in
+("
+Windows
+", "
+Fortinet
+", "
+Sonic wall
+")
+and (eventid = "
+4688
+" or eventid = "
+592
+" ) and (
+commandline contains "
+8 lan
+" or commandline contains "
+9
+rep
+" )
+Basic criteria for window failed logon:
+logtype =
+"
+Windows
+" and actionname = "
+Failed logon
+"
+Basic criteria for success logon:
+actionname = "
+Success
+logon
+"
+NOTE:
+logtype
+will contain values such as *(include all logtype),
+Windows,
+Unix, Cisco, etc.
+Using the actionname operator, you can use both predefined and custom actions in the query.
+Query Syntax
+The query language supports different operators and clauses. Below is the complete syntax
+reference.
+1. Base syntax:
+action_name:
+logtype = (* | windows | syslog | ...) [ logical_operator basic_criteria ... ] with [
+aggregate_func(fieldname), ... ]
+Example
+: eventid = 4624
+2. Sorting:
+| sort fieldname (asc | desc)
+3. Time window:
+| timewindow value unit sort [ aggregateField | count ] (asc | desc) limit value having count
+operator value
+4. Grouping:
+| groupby fieldname with [ aggregate_func(fieldname), ... ] sort [ aggregateExpr | count ]
+(asc | desc) limit nums having [ aggregateExpr | count ] comparison_operator nums
+NOTE:
+Operators inside the brackets (groupby, etc.) may appear in any order.
+The
+timewindow
+operator can occur only once.
+The
+groupby
+can occur up to
+three times in any order.
+The
+sort
+function cannot be used together with the first or last functions in the same query.
+5. Distinct:
+| distinct fieldname sort (asc | desc) limit [1-200] having count operator value
+6. Post-processing:
+| having aggregateExpr operator value [ logical_operator (aggregateExpr operator value) ]
+| isanomalous(field, model, field)
+7. First and last:
+| first [1-10] fieldname [, fieldname ...]
+| last [1-10] fieldname [, fieldname ...]
+8. Definitions:
+def
+: variable_name = <expression>
+Supported types
+: int, string, float, time, boolean
+9. Filtering:
+filter
+: <condition>
+This removes results that do not match the condition.
+10. Event sequence:
+follow
+: actionname1 followedby | notfollowedby actionname2 within [1-60]
+(millisecond |
+second | minute | hour | day)
+Example
+: correlation-based detection of one event followed by another
+within 10 minutes.
+11. Selection:
+select action_name.field, action_name.fields, def_name
+Advanced operator
+isMalicious function
+isVulnerable function
+misConfiguredFor function
+1. Is Malicious
+The 'isMalicious' condition is available only for IP address fields. It checks if the
+detected IP address is present in the predefined list of malicious IP addresses stored
+in the internal database.
+This function returns true or false.
+Syntax:
+isMalicious(fieldname)
+Example: External Remote Services
+Failed Logon From Public IP:
+logtype = "*" and eventid = 4625 and isExists(remoteip) and isMalicious(remoteip)
+2. Is Vulnerable
+Available only after integration with Endpoint Central and can be used with device
+fields. Checks if a device is tagged as vulnerable in Endpoint Central and identifies
+devices vulnerable to specific attacks (e.g., CVE-2023-38831).
+This function returns true or false.
+NOTE:
+This operator is available only for EventLog Analyzer's
+continuous execution mode.
+Syntax:
+isVulnerable(fieldname)
+isVulnerable(fieldname , matchvalue)
+Examples:
+A. Microsoft Outlook Vulnerability Exploitation
+Outlook connecting to webDAV or SMB Share:
+logtype = "windows" and eventid = 4656 and objectname contains "\REGISTRY\MACHINE\SYSTEM" or
+objectname contains "Services" or objectname contains
+"WebClient\NetworkProvider,LanmanWorkstation\NetworkProvider" and accesslist contains
+"ReadData (or ListDirectory)" and isVulnerable(Device Name, "CVE-2023-23397")
+| groupby processname
+Suspicious webDAV client execution via Rundll.exe:
+logtype = "sysmon" and iename = "Sysmon Process Creation" and parentprocessname contains
+"svchost.exe" and parentprocesscommandline contains "-s WebClient" and processname contains
+"rundll.exe" and processname = Outlook connecting to webDAV or SMB Share.processname
+B. AWS Failed logon
+Error events:
+logtype = "aws cloudtrail" and isVulnerable(errorcode)
+3. MisconfiguredFor
+Available only after integration with Endpoint Central and can be used with device fields.
+Detects devices with misconfigurations identified by Endpoint Central (e.g., Windows
+Credential Guard disabled).
+NOTE:
+This operator is available only for EventLog Analyzer's
+continuous execution mode.
+Syntax:
+misConfiguredFor(fieldname , match_value)
+Examples:
+A. Built-in guest account privilege escalation
+Successful Network Guest Logon:
+logtype = "windows" and eventid = 4624 and username contains "Guest" and logontype = 3 and
+MisconfiguredFor(Devicename, "Built-in guest account is not disabled or properly
+restricted")
+| groupby logonid
+B. Privileged Operation Attempt:
+logtype = "windows" and eventid = 4672 and logonid = Successful Network Guest Logon.logonid
+and MisconfiguredFor(Devicename, "Built-in guest account is not disabled or properly
+restricted")
+C. User Account Local Group Membership change Attempt:
+logtype = "windows" and eventid = 4732 and groupname contains "Administrators" and logonid =
+Successful Network Guest Logon.logonid and MisconfiguredFor(Devicename, "Built-in guest
+account is not disabled or properly restricted")
+Query components
+Aggregation Function
+Sort Operator
+Timewindow Operator
+Groupby Operator
+Distinct Operator
+Having Operator
+First/Last Operator
+With Operator
+Order of Statements
+1. Aggregation Function
+Function
+Description
+Syntax
+Example
+Output
+SUM
+Returns the sum of the selected values in the field.
+Returns a single numerical value.
+sum(field) or SUM(field)
+sum(bytes_in)
+3.27mb (3,432,605)
+AVG
+Returns the average of the values in the field.
+Returns a single numerical value.
+avg(field) or AVG(field)
+avg(_zl_timestamp)
+1.36kb (1,393.156)
+MAX
+Returns the maximum value in the field.
+Returns a single numerical value.
+max(field) or MAX(field)
+max(received_bytes_i)
+107.61kb (110,196)
+MIN
+Returns the minimum value in the field.
+Returns a single numerical value.
+min(field) or MIN(field)
+min(received_bytes_i)
+107.61kb (110,196)
+STDEV
+Returns the standard deviation of the given field.
+Returns a single numerical value.
+stdev(field) or STDEV(field)
+stdev(_zl_timestamp)
+2.46kb (2,521.297)
+COUNT
+Returns the number of log messages that match the query.
+With âwithâ operator â returns a number.
+With âhavingâ operator â returns a boolean (true/false).
+count
+having count > 100
+true/false
+DCOUNT
+Returns the count of distinct values. With âwithâ operator â returns a
+number. With âhavingâ operator â returns a boolean (true/false).
+dcount(field) or DCOUNT(field)
+having dcount(_zl_host) > 2
+true/false
+2. Sort Operator
+Sorts all results by specified fields.
+By default results are sorted by count descending.
+After "sort", only non-aggregate fields are allowed.
+Syntax
+: sort fieldname1 (asc/desc) [, fieldname2 (asc/desc) ...]
+Example:
+logtype="windows" and eventid = 4625 | sort username asc, hosttype desc
+3. Timewindow Operator
+Groups logs into specified slices of time.
+After "sort", only aggregate fields are allowed.
+Max limit value for group by keyword is 1000.
+Possible timewindow units
+: y (year), M (month), w (week), d (day), h
+(hour), m (minute), s (second).
+Syntax
+: timewindow value unit sort [aggregateField, count] (asc/desc)
+limit value having count operator value
+Examples
+:
+logtype="windows" | timewindow 5m
+logtype="windows" | timewindow 5m sort count desc
+logtype="windows" | timewindow 1h sort sum(bytes_in) as totalBytes asc
+logtype="windows" | timewindow 1h sort timewindow desc
+logtype="windows" | timewindow 5m limit 5
+logtype="unix" and eventid = 4625 | timewindow 10m limit 10 having count >
+100
+logtype="windows" | timewindow 10m | groupby username
+4. Groupby Operator
+Used to get unique values of a field.
+When multiple groupby fields are given, the first is primary and second is secondary.
+After "sort", only aggregate fields are allowed.
+Maximum limit for groupby is 1000.
+Syntax
+: groupby fieldname1 with aggregateField sort [aggregateField,
+count] [asc/desc] limit [1-1000] having aggregateExpr operator value
+Examples
+:
+logtype="unix" | groupby username sort sum(sent_bytes_i) as total desc
+logtype="unix" | groupby username sort sum(sent_bytes_i) as total desc limit 10
+|
+groupby hostname
+logtype="unix" | groupby username sort sum(sent_bytes_i) as total desc limit 10
+|
+groupby hostname with sum(sent_bytes_i) as total
+logtype="windows" and eventid = 4625 | groupby username having count > 100
+logtype="windows" and eventid = 4625 | groupby username having avg(sent_bytes)
+as
+average > 10 MB
+logtype="windows" | groupby username limit 20 | groupby hosttype having
+avg(sent_bytes_i) as average > 10MB | groupby hostname having
+sum(received_bytes_i) as total < 500 MB
+5. Distinct Operator
+Fetches a table with only distinct values.
+Only one distinct field is allowed.
+Distinct field can only be sorted by count.
+Max limit for distinct = 200.
+Syntax
+: distinct fieldname sort (asc | desc) limit [1-200] having count
+operator value
+Examples
+:
+logtype="windows" | distinct zuid
+logtype="windows" | distinct zuid sort asc
+logtype="windows" | distinct zuid limit 150
+logtype="windows" | distinct location having count > 5
+6. Having Operator
+Post-result operator. Used for outer aggregation conditions.
+Syntax
+: having aggregateExpr operator value [ logical operator
+(aggregateExpr operator value) ]
+Examples
+:
+logtype="unix" and eventname contains "logon" | having count > 120
+logtype="windows" and eventid = 4625 | having avg(sent_bytes) as average > 10
+MB
+7. First/Last Operator
+First operator returns the earliest logs, last operator returns the most recent logs.
+Either first or last can be used.
+Limit can be used with first/last.
+Maximum limit = 10.
+Syntax
+: first/last [1-10] fieldname1 (, fieldname2, ...)
+Examples
+:
+logtype="windows" | groupby status | first 2 request_uri,remote_ip
+logtype="windows" | groupby status | last 2 request_uri,remote_ip
+8. With Operator
+Aggregate expression can be used in basic criteria and group operators.
+Syntax
+: with aggregateExpr (, aggregateExpr ...)
+Examples
+:
+logtype="windows" and with sum(sent_bytes) as bytesSum, avg(received_bytes) as
+average | groupby srcip
+logtype="windows" and | groupby srcip with sum(sent_bytes) as bytesSum,
+avg(received_bytes) as average
+9. Order of Statements
+| basic_criteria with field.aggregate_func [, field.aggregate_func, ...]
+| sort field (asc/desc)
+[sort [aggregateField, count] [asc/desc]
+| timewindow value limit value
+| groupby field sort aggregate(field) (asc/desc) limit number ]
+| distinct field
+| first/last [1-10] fieldname
+| having (groupby_field.field / timewindow.count operator /
+groupby_field.distinct_field.aggregate/aggregate_func.field) operator value
+NOTE:
+Operators inside brackets may occur in any order.
+Timewindow
+can occur only once.
+Groupby
+can occur up to three times in
+any order.
+Correlation criteria
+Arithmetic operator
+Correlation multi-action
+Link statement
+Sequence statement
+Def and Filter statement
+Select statement
+1. Arithmetic operator
+Operator
+Description
+Example
++
+Add
+timestamp + 3600000ms > 4800000
+-
+Subtract
+timestamp - 3600000ms > 2400000
+*
+Multiply
+ratio = (failure_event.count / access.count)
+/
+Divide
+ratio = (failure_event.count / access.count) * 100
+2. Correlation (Multi-Action)
+You can define multiple actions (e1, e2, etc.) with conditions.
+Each action must have basic criteria. Aggregate functions and lookups are optional.
+Syntax
+: actionname : basic_criteria | aggregate criteria |
+lookup_criteria | correlation_criteria
+Examples
+:
+e1: logtype = cisco and common_report_name in (unix user added, firewall user
+added,
+user account created, computer account created)
+e2: logtype = cisco and common_report_name in (computer account deleted, user
+account deleted, unix user deleted, firewall user deleted) and hosttype =
+e1.hosttype and targetuser = e1.targetuser and _zl_timestamp between
+e1._zl_timestamp and (e1._zl_timestamp + 3600000ms)
+3. Link statement
+The link statement compares whether one actionâs field matches or does not match another
+actionâs field.
+You can combine it with other conditions using AND / OR / NOT.
+Syntax
+: fieldname (operator) actionname.fieldname [ and/or more
+comparisons ]
+Examples
+:
+Brute force login
+e1:
+logtype = windows and event_name = failed windows
+login
+|
+groupby username | groupby devicename
+e2:
+logtype = windows and event_name = successful
+windows
+login
+and username = e1.username and devicename = e1.devicename
+Sequence
+: e1 followedby e2 within 10m
+Select e1.username, e2.devicename
+Anomalous user account change
+e1:
+logtype = windows and common_report_name in (unix
+user
+added, firewall user added, user account created, computer account
+created)
+e2:
+logtype = windows and common_report_name in
+(computer
+account deleted, user account deleted, unix user deleted, firewall user
+deleted)
+and hosttype = e1.hosttype and targetuser = e1.targetuser and time >=
+e1.time
+Select e1.hosttype, e1.targetuser
+4. Sequence statement
+Defines whether one action follows or does not follow another within a specific time.
+You must always specify the time frame.
+Syntax
+: sequence : action1 (followedby / notfollowedby) action2 within
+time [ and action2 followedby/notfollowedby action3 ... ]
+Examples
+:
+File Access Without Authorization
+e1:
+logtype = windows and eventid = 4663 (object access
+attempt)
+e2:
+logtype = windows and eventid = 4656 (handle
+requested)
+Sequence
+: e1 notfollowedby e2 within 5m
+Select e1.username, e1.devicename
+Brute Force Login
+e1:
+logtype = windows and event_name = failed windows
+login
+|
+groupby username | groupby devicename
+e2:
+logtype = windows and event_name = successful
+windows
+login
+and username = e1.username and devicename = e1.devicename
+Sequence
+: e1 followedby e2 within 10m
+Select e1.username, e2.devicename
+Ragnar Locker ransomware detection
+e1:
+logtype = windows and processid = 4688 and
+processname
+=
+msiexec.exe
+e2:
+logtype = windows and eventid = 4654 and objectname
+contains Program Files(X86) and endswith VirtualAppliances\va.exe and
+devicename
+= e1.devicename
+e3
+: logtype = windows and processid = 4688 and
+processname
+=
+e2.objectname and devicename = e1.devicename
+Sequence
+: e1 followedby e2 within 30m followedby e3
+within
+2m
+Suspicious SQL Backup Activity
+e1:
+logtype = windows and eventid = 4625 | distinct
+devicename
+e2:
+logtype = windows and eventid = 4624 and devicename
+=
+e1.devicename and username = e1.username
+e3:
+logtype = mssql and actionid = lgis
+e4:
+logtype = * and action = ba
+Sequence
+: e1 followedby e2 within 10m and e3 followedby
+e4
+within 5m
+NOTE
+Actions in a rule are executed sequentially in the order they are defined. For
+continuous
+rules, the default
+followedby
+time is
+4 hours
+. For
+scheduled
+rules, logs are matched within the configured time frame.
+5. Def and Filter statement
+Def statement
+The def statement calculates an expression and puts the resulting value into a search
+results field.
+It is used to create a new field in your search results, and the values in that new
+field are the result of an expression.
+In a def statement, you can only get the overall count, average, or sum, such as action
+count or action-based field aggregation like 'e1.count' or 'e1.sent_bytes.sum'.
+Syntax
+: def: variable_name = actionname. (count /
+field.aggregate_function) operator actionname. (count | field.aggregate_function /
+value)
+Filter statement
+The filter operator keeps only the records that match the filter criteria.
+The def statement field constraints will apply to the filter statement.
+Syntax
+: filter: (def_variable_name / actionname. (count /
+field.aggregate_function)) operator value
+Example: Ratio of two events
+access
+: logtype="windows" and
+failure_event:
+eventid=4625
+def:
+ratio = count(failure_event) / count(access)
+def:
+percent = ratio * 100
+filter:
+percent > 50
+Select ratio, count(failure_event), count(access)
+6. Select statement
+Select is used to display fields or aggregates you want to see in results.
+Syntax:
+select fields, aggregates
+Examples:
+Excessive logon failures
+e1:
+logtype = windows and common_report_name in (router
+logon
+failed, unix logon failed, firewall logon failed, logon failed, vpn
+logout,
+firewall logoff, failed cloud logon) | groupby username
+Select e1._zl_timestamp, e1.hostname
+Anomalous user account change
+e1:
+logtype = windows and common_report_name in (unix
+user
+added, firewall user added, user account created, computer account
+created)
+e2:
+logtype = * and common_report_name in (computer
+account
+deleted, user account deleted, unix user deleted, firewall user deleted)
+and
+hosttype = e1.hosttype and targetuser = e1.targetuser and _zl_timestamp
+between
+e1._zl_timestamp and (e1._zl_timestamp + 3600000ms)
+Select e1._zl_timestamp, e1.log_uuid, e2._zl_timestamp, e2.log_uuid
+Excessive VPN logon failure
+failed_logon
+: logtype = * and eventtype =
+vpn_logon_failure
+|
+distinct username having count > 5
+Select failed_logon.username, count(failed_logon)
+Suspicious file access
+file_access:
+logtype = windows and eventid = 4663 |
+groupby
+username | groupby objectname having count > 3
+file_modified
+: logtype = windows and eventid = 4663 and
+type =
+modify and username = file_access.username and objectname =
+file_access.objectname
+Sequence
+: file_access followedby file_modified within
+5m
+Select file_access.username, file_modified.objectname,
+count(file_access.objectname)
+Use case specific examples
+Below are practical examples of how query grammar can be applied to detect common security
+scenarios. Each example shows the query logic, supported operators, and output fields.
+1. Successful Logon
+Description:
+Detects successful logon events in Windows.
+Query:
+logtype = "
+Windows
+"
+and eventid = 4624
+and message contains "
+successful logon
+"
+2. Excessive Failed Login attempts
+Description
+: Flags usernames or devices with excessive failed login
+attempts.
+Query
+:
+logtype in ("
+windows
+", "
+unix
+")
+and eventid = 4625
+| groupby username
+| groupby devicename having count > 10
+3. Brute Force Login detection
+Description
+: Detects brute-force attempts where multiple failed logins are
+followed by a
+successful login for the same user on the same device within a short time window.
+Query
+:
+Step 1 â Failed Logins (e1):
+e1:
+logtype = "
+windows
+"
+and event_name = "
+Failed Windows Login
+"
+| groupby username
+| groupby devicename
+Step 2 â Successful Login (e2):
+e2:
+logtype = "
+windows
+"
+and event_name = "
+Successful Windows Login
+"
+and username = e1.username
+and devicename = e1.devicename
+Sequence Logic:
+e1 followedby e2 within 10m
+Final output:
+select e1.username, e2.devicename
+4. Port Scanning attack
+Description:
+Identifies devices or IPs scanning multiple ports within a
+short period.
+Query:
+e1:
+logtype in ("
+unix
+", "
+windows
+", "
+sysmon
+")
+and event_name = "
+allowed connection
+"
+| groupby remoteip
+| groupby host
+| groupby port having count > 100
+select e1.host, count(e1.host)
+5. Data Exfiltration detection
+Description:
+Detects unusually high outbound data transfer volumes.
+Query:
+netlog:
+logtype = "
+unix
+"
+and event_name = "
+allowed connection
+"
+| groupby srcip
+| groupby destip having sum(sentbytes) > 100MB
+select netlog.srcip, netlog.destip, sum(netlog.sentbytes)
+6. Ratio of Failed vs. Successful events
+Description:
+Calculates the percentage of failed access events compared to
+total access events.
+Query:
+Step 1 â Total Access events
+:
+access:
+logtype = "
+*
+"
+and type = "
+access
+"
+Step 2 â Failed Access events:
+failure_event:
+logtype = "
+*
+"
+and type = "
+access
+"
+and status = "
+failure
+"
+Define ratio:
+def: ratio = (failure_event.count / access.count) * 100
+Filter high failure rate:
+filter
+: ratio > 50
+Final output:
+select ratio, access.count, failure_event.count
+Detection rule limitation
+Detection rule limitations specify the functional constraints and operator support across ELA
+and L3C correlation modes.
+The below table details differences in supported operators, thresholds, aggregations, and
+query constructs between scheduled and continuous detection rules.
+Feature
+Description
+EventLog Analyzer scheduled correlation
+EventLog Analyzer continuous correlation
+Log360 Cloud scheduled correlation
+Log360 Cloud continuous correlation
+Numerical relational operator
+Basic comparisons (>, <, =, !=, >=, <=, in, not in, exists, not
+exists, between, not between)
+IP range not supported
+All operators supported
+IP range not supported
+All operators supported
+String relational operator
+Text-based comparisons (contains, not contains, starts with, ends with,
+matches, not matches)
+Matches and Not matches not supported
+All operators supported
+Matches and Not matches not supported
+All operators supported
+Logical operator
+Logical conditions (and, or)
+All supported
+All supported
+All supported
+All supported
+Advanced operator
+Security checks (isMalicious, isVulnerable, misconfiguredFor)
+Only isMalicious supported
+All supported
+None supported
+Only isMalicious supported
+Link to statement
+Links actions in the criteria builder
+Multiple + nested criteria supported
+Multiple supported; nested not supported
+Multiple + nested criteria supported
+Up to 3 criteria supported; nested not supported
+Threshold limits
+Threshold count limit
+No limit
+Max limit 999
+No limit
+Default limit 10 (can be increased)
+IN operator value limit
+Max number of terms inside IN
+25
+25
+25
+25
+Aggregation functions
+Aggregates (sum, avg, max, min, stdev, percentile, count, distinct)
+All supported
+Only count and distinct supported
+All supported
+Only count and distinct supported
+WITH operator
+Use of aggregate functions in basic criteria
+Up to 10 terms
+Not supported
+Up to 10 terms
+Not supported
+Sort operator
+Sort results by fields
+Supported (max 5 fields)
+Not supported
+Supported (max 5 fields)
+Not supported
+Time window operator
+Sets time-based threshold
+Up to 7 days; max 200
+No limit (time window not supported)
+Up to 1 day; max 200
+Default 1 hour (extendable); time window not supported
+GroupBy operator
+Group fields in criteria
+Max 3 fields
+No limit
+Max 3 fields (with restrictions)
+Max 3 fields
+Distinct operator
+Distinct count in threshold/query
+Only 1 distinct field (no sort/limit)
+Only 1 distinct field (no sort/limit)
+Only 1 distinct field (no sort/limit)
+Only 1 distinct field (no sort/limit)
+Max GroupBy + Distinct
+Limit on combined use
+Max 3 groupby + 1 distinct
+Multiple groupby + 1 distinct
+Either (max 2 groupby + 1 distinct) or (max 3 groupby + 0 distinct)
+Max 3 groupby + 1 distinct
+First/Last operator fields
+Returns first or last record
+Max 10 fields
+Not supported
+Max 10 fields
+Not supported
+Arithmetic operator
+Arithmetic in queries
+Supported
+Not supported
+Supported
+Not supported
+Maximum action limit
+Number of actions allowed
+Up to 10
+Up to 10
+Up to 3
+Up to 3
+Sequence statement
+Ordered event checks (followed by / not followed by)
+Up to 7 days
+Up to 30 days
+Up to 1 day
+Up to 1 hour
+Def statement
+Create new calculated fields
+Max 10
+Not supported
+Max 10
+Not supported
+Filter statement
+Keep records matching condition
+Max 10
+Not supported
+Max 10
+Not supported
+Select statement
+Choose fields (alias in scheduled rules only)
+Max 20
+Max 20
+Max 20
+Max 20
+Query length
+Maximum characters per query
+10000
+10000
+10000
+10000
+Anomaly action in advanced rule
+Cannot combine anomaly with threshold/groupby/distinct/link criteria
+â
+â
+â
+â
+Read also
+This document explained how query grammar supports advanced rule creation, from defining
+criteria with operators and functions to applying correlation logic and building practical
+detection use cases.
+Rule management overview
+Understanding rules
+Creating custom rules
+Managing rules
+Scheduled detection reports

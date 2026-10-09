@@ -1,0 +1,349 @@
+EventLog Analyzer helps you streamline the process of managing and investigating security incidents.. You can track the status of security incidents by navigating to the
+Alerts tab → Incident
+.
+Viewing and editing incidents
+In the
+Incident page
+, you can view the list of all incidents in your network along with crucial information such as the
+assignee, status, and severity
+. You can click on any incident to view and edit the incident's name, description, assignee, status, and severity. The
+Evidence
+and
+Notes
+tab display the list of evidence and notes attached to an incident. The
+Activity Logs
+page records and displays the events pertaining to the creation, modification, and deletion of incidents.
+The incident page displays details such as the age of the incident, who created it, and when it was created. The
+Actors
+widget contains the list of users, entities, services, and processes responsible for the incident to help the assignee quickly investigate the incident and take remedial action.
+Steps to create an incident
+You can create an incident in EventLog Analyzer by navigating to the
+Alerts tab → Incident → +Add Incident
+.
+In the
+Incident
+page, enter a name and description for your incident in the respective fields.
+Select the
+assignee, severity, and status
+of your incident from the respective drop-down menus.
+Click on
+Create
+.
+You can view the incident creation event being logged in the
+Activity Logs
+pane.
+Additionally, you can create incidents in EventLog Analyzer by:
+Mapping alerts as incidents
+Mapping search results as incidents
+Mapping reports as incidents
+Automating incident creation by configuring incident rules
+Steps to map alerts as incidents
+In EventLog Analyzer, you can map a triggered alert as an incident, assign a security technician to respond to the incident, and track its status by following the steps given below:
+Navigate to the
+Alerts
+tab.
+Select the alert for which you want to create an incident.
+Click on the
++Add to Incident
+button present at the top of the alerts table and click on the
++Add New Incident
+option to create a new incident.
+Enter the name and description of the incident.
+Select the
+assignee, status, and severity
+of the incident from the respective drop-down menus.
+Click on
+Create
+.
+You can also add an alert as evidence to an incident by selecting the alert, clicking on the
++Add to Incident
+button, and selecting the required incident from the list displayed. The alert can now be viewed under the Evidence tab of the selected incident.
+Steps to map search results as incidents
+EventLog Analyzer allows you to map search results as incidents to help you backtrack an attack and conduct root cause analysis by following the steps given below:
+Navigate to the
+Search tab
+and execute the required search query.
+In the search results pane, click on the
+Incident
+button.
+Now, select the search result(s) you want to add to an incident.
+Click the
++Add to Incident
+button and choose the incident to which you want to add the search result(s).
+Alternatively, you can also create a new incident to map the selected search results by clicking the
++Add New Incident
+link.
+If you're creating a new incident, enter a name and description for the incident. Select the
+assignee, status, and severity
+from the respective drop-down menus.
+Click
+Create
+.
+You can now view the search results added as evidence under the Evidence tab of the incident.
+Steps to map reports as incidents
+If anomalies are detected in a report, you can further investigate the deviant events specified in the report by mapping those events as incidents and thoroughly examining them by assigning a dedicated IT security professional. You can map reported events as incidents by following the steps given below:
+Navigate to the
+Reports tab
+and click the report you want to add as an incident.
+Click the
+Incident
+button and select the events of interest.
+Click the
++Add to Incident
+button and select the name of the incident to which you want to add the selected events.
+Alternatively, you can also create a new incident by clicking the
++Add New Incident
+link.
+If you're creating a new incident, enter a name and description for the incident. Select the
+assignee, status, and severity
+from the respective drop-down menus.
+Click
+Create
+.
+You can now view the events of the report listed under the Evidence tab of the selected incidents.
+Configuring incident rules
+You can configure pre-defined incident rules for devices, device groups, and alert profiles to automatically create incidents when a specific number of alerts get triggered within a specified time span.
+Steps to create an incident rule
+Navigate to the
+Alerts tab → Incident → Incident Rule → +Add Incident Rule
+.
+Enter a name and description for your incident rule.
+Assign the incidents created by this rule to a technician by selecting a name from the
+Assign To
+drop-down menu.
+Select the severity:
+Attention, Critical
+, or
+Trouble
+from the
+Severity
+field.
+Enter the threshold value to create the incident. An incident will be created when the specified number of alerts get triggered within the time frame.
+In the
+Criteria field
+, specify the
+Device, Device Group
+, or
+Alert Profile
+for which you want to create an incident. You can also create a criteria with multiple fields by clicking on the
++
+icon to add another field and combine them using
+AND
+and
+OR
+logical operators.
+Click on
+Save
+.
+You can click on the Incident name to edit the name, description, assignee, severity, and status of the incident. You can view the Evidence, Notes, Activity Logs, and Actors of the incident. Additionally, you can also view who created the incident, when it was created, and the age of the incident in this page.
+Note
+: You can create up to 10 incident rules in your EventLog Analyzer instance. The solution is capable of triggering up to fifty incidents per incident rule in a day.
+Creating Incident views
+You can view the incidents under various categories, such as
+All incidents, Active incidents, Critical incidents, and Incident with third-party ticketing tool
+by selecting the required view from the
+Select View
+drop-down menu. You can also create custom views by configuring a filter for the type of incidents you want to view.
+Apply the filter and click the
+Save as View
+link to enter a name for the view and click
+Save
+. Custom views are personal to the users who created them and can be viewed only by them. You can edit and delete the custom view by hovering your mouse pointer over the created view in the Select View drop-down menu.
+Viewing and editing incident rules
+In the Incident Rule page, you can select incidents to enable, disable, and delete them.
+OnDemand Workflows
+To run a workflow for an incident,
+Navigate to
+Incident
+and select the particular incident.
+Click
+the Run Workflow button
+for the particular evidence under the
+Evidences
+tab.
+Select a workflow from the drop down menu and click
+Run
+.
+Click
+Activity Logs
+to find the workflow history.
+The status of the workflow will be displayed under
+Remediation Taken
+in the top-right corner. The same will be recorded in the exported report.
+Note
+: Users can also run multiple workflows for a single alert or incident.
+Creating Tickets for Incidents
+To create a ticket for an incident,
+Navigate to the
+Incident
+section and select the required incident.
+Click the
+Raise a Ticket
+button under the
+Ticket Status
+tab to create a ticket in the configured ticketing tool; ticket details will be displayed immediately.
+The priority of the created ticket is set based on the current severity of the incident.
+Any changes to the status or severity of the incident will automatically update the ticket's status and severity in the ticketing tool according to the mapped values.
+Refer to
+this link
+for status/severity mapping details.
+Note
+Bidirectional synchronization is only available if the EventLog Analyzer app is installed in the ticketing tool. If not yet installed, follow the steps at this
+link
+to install the EventLog Analyzer app.
+Incident Management Status/Severity Mapping with Ticketing Tool
+Understanding how incident statuses and severities in EventLog Analyzer correspond to those in various ticketing tools is crucial for seamless integration and efficient incident management.
+Default Status Mapping
+The table below outlines the mapping between EventLog Analyzer incident statuses and the corresponding statuses in different ticketing tools:
+Tool
+EventLog Analyzer - Incident Status
+Ticketing Tool - Ticket Status
+Kayako
+Open
+In Progress
+Closed
+Open
+Pending
+Closed
+Zendesk
+Open
+In Progress
+Closed
+Open
+Pending
+Solved
+ServiceNow
+Open
+In Progress
+Closed
+New
+In Progress / Active
+Closed
+Freshservice
+Open
+In Progress
+Closed
+Open
+Pending
+Closed
+Jira Cloud
+Open
+In Progress
+Closed
+Open
+Work in Progress
+Done
+Jira Service Desk
+Open
+In Progress
+Closed
+Open
+Work in Progress
+Done
+ServiceDesk Plus Cloud
+Open
+In Progress
+Closed
+Open
+Open
+Closed
+ServiceDesk Plus
+Open
+In Progress
+Closed
+Open
+In Progress
+Closed
+ServiceDesk Plus MSP
+Open
+In Progress
+Closed
+Open
+In Progress
+Closed
+Default Severity Mapping
+The following table illustrates how incident severities are mapped between EventLog Analyzer and various ticketing tools:
+Tool
+EventLog Analyzer - Incident Severity
+Ticketing Tool - Ticket Severity
+Kayako
+Critical
+Trouble
+Attention
+Impact:
+Urgent
+High
+Normal
+Zendesk
+Critical
+Trouble
+Attention
+Priority:
+Urgent
+High
+Normal
+ServiceNow
+Critical
+Trouble
+Attention
+Priority:
+1- Critical
+2 - High
+3 - Moderate
+Jira Cloud
+Critical
+Trouble
+Attention
+Priority:
+Highest
+Medium
+Low
+Freshservice
+Critical
+Trouble
+Attention
+Priority:
+Urgent
+High
+Low
+Jira Service Desk
+Critical
+Trouble
+Attention
+Priority:
+High
+Medium
+Low
+ServiceDesk Plus Cloud
+Critical
+Trouble
+Attention
+Priority:
+High
+Medium
+Normal
+ServiceDesk Plus
+Critical
+Trouble
+Attention
+Priority:
+High
+Medium
+Normal
+ServiceDesk Plus MSP
+Critical
+Trouble
+Attention
+Priority:
+High
+Medium
+Normal
+AlarmsOne
+Critical
+Trouble
+Attention
+Priority:
+Critical
+Major
+Info
+By aligning incident statuses and severities between EventLog Analyzer and your ticketing tools, you can ensure consistent communication and efficient incident resolution across platforms.

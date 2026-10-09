@@ -1,0 +1,10 @@
+Login to the H3C security device as an
+administrator
+.
+Navigate to System view mode.
+Enable the Info cente check box.
+Configure an output rule for the host:
+info-center source {<module-name>|default} {console|monitor|logbuffer|logfile|loghost} {deny|level <severity>}
+Specify a log host and configure the below parameters:
+info-center loghost {<ELA_SERVER_IP>} [port <port_number>][facility <local-number>]
+Now you have successfully configured the H3C security device.

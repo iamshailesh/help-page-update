@@ -1,0 +1,101 @@
+In this page
+Windows
+Unix
+Applications
+Network Devices
+Custom Reports
+Active Directory
+Cloud sources
+File Integrity Monitoring
+Threats
+The product offers 1000+ out-of-the-box reports and also the capability to create custom reports as per your requirements. These reports can help review the key security events happening in your network and also meet compliance requirements.
+The reports can be accessed from the
+Reports
+tab of the UI. The event counts shown in the reports can be drilled down to the raw logs. The logs can be further filtered based on various log fields. The product also allows you to schedule reports to be automatically generated and emailed periodically.
+Types of reports
+The product offers a wide category of reports. Some of them are listed below.
+Windows
+The Windows reports allow you to get an overview of the events happening in your Windows environment. A few examples are given below:
+Windows Logon Reports
+Policy Changes
+Windows Logoff Reports
+Windows Firewall Threats
+Application Crashes
+Unix
+The Unix reports allow you to get an overview of the events happening in your Unix environment. A few examples are given below:
+Unix Logon Reports
+Unix Logoff Reports
+Unix Failed Logon Reports
+Unix User Account Management
+SU Commands
+Applications
+The application reports allow you to get an overview of the events happening in the applications installed in your network. The product supports a wide range of applications including
+Terminal Server, DHCP Windows and Linux Servers, MS IIS W3C FTP Server, MS IIS W3C and Apache Web Servers, MS SQL and Oracle Database Servers, Sysmon
+, and
+Print Server
+. These reports also help you to identify the performance and security status of the above applications.
+A few examples are given below.
+Terminal Server Gateway Logons
+Terminal Server Gateway Logons
+SQLServer DDL Auditing Report
+Oracle Security Reports
+Printer Auditing
+Network Devices
+The network devices reports allow you to get an overview of the events happening in your networking devices. A few examples are given below.
+Router Logon Report
+Router Configuration Report
+Router Accepted Connections
+Firewall Account Management
+Network Device Risk Reports
+Custom Reports
+The custom reports that you have created will be listed in this section.
+Active Directory
+The Active Directory reports allow you to get an overview of the events happening in your Active Directory environment. A few examples are given below:
+User Logon Reports
+Account Management
+User Management
+Group Management
+Computer Management
+Permission Changes
+Configuration Auditing
+DNS Changes
+AzureAD Password Protection
+Domain Object Changes
+LAPS Audit
+GPO Setting Changes
+OU Management
+GPO Management
+Other AD Object Changes
+ADFS Auditing
+DNS Server Events
+DC Credential Validation
+Kerberos Events
+Trust Relationships Changes
+Advanced DNS Server Audit
+AD Replication Audit
+LDAP Auditing
+Netlogon vulnerable Schannel Connection Audit
+Cloud sources
+Cloud sources help you monitor security and activity logs from cloud platforms and services. The product aggregates events such as authentication activity, resource access, configuration changes, and security alerts, enabling centralized visibility and compliance reporting across your cloud environment. A few examples are given below:
+User Login Activity
+Failed/Unauthorized Activity
+IAM Activity
+User Activity
+Network Security Groups
+VPC Activity
+S3 Bucket Activity Reports
+WAF Reports
+Security Token Service
+AWS Config Reports
+File Integrity Monitoring
+File Integrity Monitoring (FIM) tracks changes made to critical files and folders across supported platforms and storage systems. These reports help detect unauthorized modifications, file access anomalies, and configuration tampering, allowing you to meet security and audit requirements. A few examples are given below:
+Windows File Monitoring
+EMC Isilon
+Synology NAS
+EMC Server
+Threats
+The threats section provides prebuilt reports that help you identify malicious activity, suspicious behavior, and policy violations across supported cloud services and SaaS platforms. These reports highlight risky logins, unauthorized access, security misconfigurations, and other indicators of compromise to support proactive threat detection. A few examples are given below:
+All Breach Data
+DarkWeb Breach Data
+Botnet Leak Data
+Supply Chain breach

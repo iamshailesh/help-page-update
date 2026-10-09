@@ -1,0 +1,14 @@
+In the
+Manage Devices
+page, navigate to the
+Other Devices
+tab and select the device type as required.
+Select the
+Device Type
+as ESXi/IBM AS/400.
+Enter the
+Device Name
+.
+Click on the
+Add
+button to add the device for monitoring.

@@ -1,0 +1,25 @@
+To configure the Syslog service in your Meraki devices, follow the steps below:
+Login to the Meraki device as an
+administrator.
+From the dashboard, navigate to
+Network-wide > Configure > General
+.
+Click on the
+Add
+a syslog server
+link. In the given fields enter the
+EventLog Analyzer server
+IP address
+and
+UDP port number
+.
+Define the roles so that data can be sent to the server.
+Note
+If the
+Flows
+role is enabled on a Meraki security appliance then logging for individual firewall rules can be enabled/disabled. This can be done by navigating to the
+Security appliance > Configure > Firewall
+and editing the
+Logging column.
+Click
+Save.

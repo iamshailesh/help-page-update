@@ -1,0 +1,108 @@
+In this page
+Overview
+Request URL
+Request Header
+Request Parameters
+API Response
+Executing the API using cURL
+Executing the API using Postman
+Overview
+The Synchronous Search API in ManageEngine Log360 allows you to perform searches against the product and retrieve all matching results. When a search request is made using the synchronous method, the product's server processes the query and returns the complete result set.
+The time taken to receive the response depends on the number of search results retrieved.
+The following steps outline how synchronous search works:
+A search request is created with relevant metadata.
+The server executes the request on the request thread and returns the result.
+If more results are available, the server includes a cursor in the response.
+The next set of results can be retrieved by sending a new request with the returned cursor.
+NOTE
+Continue making requests with the next cursor until all search hits are consumed and the server no longer returns a cursor in the response.
+The cursor remains active for five minutes if not used.
+Request URL
+POST http://hostname:8095/RestAPI/v1/search
+NOTE
+For the request URL, you can either use the IP address, or FQDN of the product server in place of hostname.
+Request Header
+Header name
+Value
+Mandatory
+Description
+Authorization
+Bearer {{AuthToken}}
+Yes
+AuthToken generated from API Settings page.
+e.g: Bearer mdrkoda0odmtmznloc00ndziltg0mgutmwzkztljmjvmzwmx
+Request Parameters
+The parameters must be sent in the request body in JSON format and should contain following key/value parameters.
+Parameter name
+Default value
+Mandatory
+Type
+Description
+query
+*
+No
+String
+Start value of the list
+hosts
+all
+No
+JSONArray
+List of hosts to search
+groups
+all
+No
+JSONArray
+List of device groups to search
+from
+current time - 24 hours
+No
+Long
+Start time for search in Unix milliseconds
+to
+current time
+No
+Long
+End time for search in Unix milliseconds
+cursor
+-
+No
+String
+Cursor from next query
+NOTE
+When the cursor is passed, the other parameters are not required.
+Quotes i.e ( " ") in query string must be escaped. If query in the product's search page is REMOTE_INTERFACE = "switch 1", then for Rest API the query parameter should be written as "REMOTE_INTERFACE = \"switch 1\""
+Response
+The API returns a JSON object containing the following key/value pairs.
+Parameter name
+Description
+hits
+JSON object which contain search hits for the request
+Contains following fields
+hits: List of search hits
+hits_count_in_current_page: Hits count in current search response
+Executing the API using
+cURL
+1. Search request with query
+Sample request
+curl --location --request POST 'http://localhost:8095/RestAPI/v1/search' \ -H "Accept: application/json" -H "Authorization: Bearer mdrkoda0odmtmznloc00ndziltg0mgutmwzkztljmjvmzwmx " --data-raw '{ "query": "EVENTID = 16384 AND USERNAME = mhtoc", "hosts": [1, 2, 601], "groups": [3], "from": 1643480792000, "to": 1643480479500 }'
+Sample response:
+{ "cursor": "DnF1ZXJ5VGhlbkZldGNoFwAAAAAAAARoFlloajVvRlN5UlQ2RGVTWlhPS2V1WHcAA", "hits": { "hits": [{ "COMMON_SEVERITY": "INFORMATION", "IS_THROWAWAY": true, "HOSTNAME": "lix", "APPID": 2, "FORMATID": 302, "RAWLOG": "roy.sulivan /event/emberAPI/ELANotificationActions \"https://eventlog.loin64; x64; rv:71.0) Gecko/20100101 Firefox/71.0\"", "TIME": "1643531422443", "IMPORTED_TIME": 1643531420365, "HOSTID": 601, "IPAddress2": "10.128.156.152" }, { "COMMON_SEVERITY": "INFORMATION", "IS_THROWAWAY": true, "HOSTNAME": "lix", "APPID": 2, "FORMATID": 302, "RAWLOG": "roy.sulivan /event/emberAPI/ELANotificationActions \"https://eventlog.l 15 142 200 \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0\"", "TIME": "1643531422446", "IPAddress1": "10.128.156.152", "HOSTID": 601, "IPAddress2": "10.128.156.152" }], "hits_count_in_current_page": 3 } }
+2. Search request with cursor
+Sample request
+curl --location --request POST 'http://localhost:8095/RestAPI/v1/search' \ -H "Accept: application/json" -H "Authorization: Bearer mdrkoda0odmtmznloc00ndziltg0mgutmwzkztljmjvmzwmx " --data-raw '{ "cursor": "DnF1ZXJ5VGhlbkZldGNoFwAAAAAAAARoFlloajVvRlN5UlQ2RGVTWlhPS2V1WHcAA" }'
+Sample response:
+{ "hits": { "hits": [{ "COMMON_SEVERITY": "INFORMATION", "IS_THROWAWAY": true, "HOSTNAME": "lix", "APPID": 2, "FORMATID": 302, "RAWLOG": "roy.sulivan /event/emberAPI/ELANotificationActions \"https://eventlog.loin64; x64; rv:71.0) Gecko/20100101 Firefox/71.0\"", "TIME": "1643531422443", "IMPORTED_TIME": 1643531420365, "HOSTID": 601, "IPAddress2": "10.128.156.152" }, { "COMMON_SEVERITY": "INFORMATION", "IS_THROWAWAY": true, "HOSTNAME": "lix", "APPID": 2, "FORMATID": 302, "RAWLOG": "roy.sulivan /event/emberAPI/ELANotificationActions \"https://eventlog.l 15 142 200 \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0\"", "TIME": "1643531422446", "IPAddress1": "10.128.156.152", "HOSTID": 601, "IPAddress2": "10.128.156.152" }], "hits_count_in_current_page": 3 } }
+3. Invalid Search query
+Sample request
+curl --location --request POST 'http://localhost:8095/RestAPI/v1/search' \ -H "Accept: application/json" -H "Authorization: Bearer mdrkoda0odmtmznloc00ndziltg0mgutmwzkztljmjvmzwmx " --data-raw '{ "query": "EVENTID := 16384 AND USERNAME <> mhtoc", "hosts": [1, 2, 601], "groups": [3], "from": 1643480792000, "to": 1643480479500 }'
+Sample response
+{ "ERROR": "SR007", "ERROR_DESCRIPTION": "QUERY NOT VALID", "ERRORS" : { "context": "Failed to build query", "cause": { "reason": "Encountered \" \":\" \": \"\" at line 1, column 159.\r\nWas expecting one of:\r\n ...\r\n \"+\" ...\r\n \"-\" ...\r\n ...\r\n \"(\" ...\r\n \"*\" ...\r\n ...\r\n ...\r\n ...\r\n ...\r\n ...\r\n \"[\" ...\r\n \"{\" ...\r\n ...\r\n ...\r\n ", "type": "ParseException" } } }
+Executing the API using Postman
+1. Search request with query
+Figure 1: Search request with query
+2. Search request with cursor
+Figure 2: Search request with cursor
+3. Invalid query
+Figure 3: Invalid query
+Read also
+This page explained how to perform searches using EventLog Analyzerâs REST API with synchronous execution.

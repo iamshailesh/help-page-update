@@ -1,0 +1,626 @@
+In this page
+Overview
+Supported data sources and event types monitored
+Overview
+This page outlines the detailed list of the different data sources along with their corresponding event types supported by the User and Entity Behavior Analytics (UEBA) module of Log360 Cloud.
+These data sources include firewalls, cloud services, operating systems, applications, and databases. The corresponding events are categorized into types such as logon activities, system changes, policy modifications, user management, threat detection, and more.
+Supported data sources and event types monitored
+The supported data sources span across:
+Cloud platforms: AWS, Salesforce, CASB
+Security solutions: FireEye, Symantec, Sophos, and WatchGuard
+Firewalls and network devices like Palo Alto, Fortinet, Sonicwall, Cisco, and Juniper
+Operating systems: Windows and Unix
+Databases: Oracle, MSSQL, and PostgreSQL
+Applications and infrastructure including Hypervisors, IIS, and Password Manager Pro
+List of data sources supported
+DATA SOURCES
+EVENTS
+Apache
+Web Attack Events:
+SQL injection detected
+Malicious URL request detected
+Cross-site scripting detected
+AWS
+Logon events:
+Successful logon
+Failed logon
+VPC Events:
+Network Gateway Changes
+Endpoint Changes
+Route Table Changes
+Route Changes
+Subnet Changes
+IAM Events:
+IAM Error Events
+IAM Unauthorized Activities
+AWS S3 Bucket Events:
+Modified Bucket Events
+Deleted Bucket Events
+CASB
+Shadow Cloud Apps:
+Recent Shadow Apps Request
+Banned Cloud Apps:
+Recent Banned App Requests
+File Uploads:
+All Upload Requests
+Check Point
+Logon Events:
+Successful logon
+Failed logon
+User Management Events:
+User added
+User deleted
+User group added
+User group deleted
+System Events:
+System shutdown
+Clock updated
+Configuration Events:
+Configuration changed
+Command executed
+Interface Events:
+Interface up
+Interface down
+Cisco
+Logon Events:
+Successful logon
+Successful SSH logon
+Failed logon
+Failed SSH logon
+Successful VPN logon
+Failed VPN logon
+Authentication Events:
+Bad authentication detected
+System Events:
+System restarted
+System clock updated
+System temperature exceeded
+System shutdown due to temperature
+Memory allocation failure detected
+Fan failure detected
+User Management Events:
+Account created
+Account deleted
+Attack Detection Events:
+Routing table attack detected
+SYN flood attack detected
+VPN Events:
+VPN User Connected
+VPN User Disconnected
+ERP
+Mailbox Audit Logging:
+Non Owner Activity on Mailbox
+Mails Deleted or Moved
+Admin Audit Logging:
+Mailbox Permission Changes
+Mailbox Create and Delete
+Public Folder Create and Delete
+Exchange Database Dismounted
+Mailboxes Deactivated
+FireEye
+Malware object events
+Web infection events
+Fortinet
+Logon Events:
+Successful logon
+Failed logon
+Successful VPN logon
+Failed VPN logon
+VPN Logoff
+VPN IP Assigned
+User Management Events:
+User added
+User deleted
+User modified
+Admin Management Events:
+Admin added
+Admin deleted
+Admin modified
+Policy Management Events:
+Policy added
+Policy deleted
+Policy modified
+System Events:
+License expiry
+Power failure detected
+Power restore detected
+System rebooted
+System shutdown
+Command failed
+Configuration changed
+Attack Detection Events:
+Possible attack
+Critical attack
+H3C
+VPN Events:
+VPN Logon
+VPN Logoff
+Huawei
+VPN Events:
+VPN Logon
+VPN Logoff
+Hypervisor
+User Activity Events:
+User logon
+User Logoff
+SU logon
+SU Logoff
+SSH logon
+SSH Logoff
+Failed user logon
+Failed SU logon
+Failed SSH logon
+User Management Events:
+User added
+User deleted
+User modified
+IIS W3C FTP
+Logon Events:
+Failed logon
+FTP Activity Events:
+Bad sequence of commands detected
+File deleted
+Account Management Events:
+Password changed
+IIS W3C Web
+Web Attack Events:
+SQL injection detected
+Malicious URL request detected
+Cross site scripting detected
+Denial of Service (DoS) attack detected
+Authorization Events:
+UNC authorization failed
+Email Security Events:
+Spam mail header detected
+System Events:
+Web server restarted
+Juniper
+Logon Events:
+Successful logon
+Successful web logon
+Failed logon
+Failed web logon
+Security Events:
+Critical attack
+Possible attack
+System Events:
+Fan switched off
+System rebooted
+Fan failure detected
+Process restarted
+Meraki
+VPN Events:
+VPN Logon
+VPN Logoff
+MSSQL
+User Account Events:
+User created
+User dropped
+User altered
+Account lockout
+Successful password change
+Failed password change
+Database Events:
+Database created
+Database dropped
+Table dropped
+Schema dropped
+Logon Events:
+Successful logon
+Failed logon
+Security Events:
+Privilege abuse detected
+SQL injection detected
+Denial of Service (DoS) attack detected
+Role Management Events:
+Database role created
+Database role dropped
+Database role altered
+NetScreen
+Logon Events:
+Successful logon
+Failed logon
+Admin Management Events:
+Admin added
+Admin deleted
+Admin modified
+Policy Events:
+Policy added
+Policy deleted
+Policy modified
+Policy enabled
+Policy disabled
+System Events:
+Clock updated
+System temperature warning
+Power supply change
+Fan events
+Battery events
+License Events:
+License events
+Security Events:
+Possible attack
+Critical attack
+Oracle
+User Management Events:
+User created
+User deleted
+User altered
+Database Events:
+Database created
+Database dropped
+Table dropped
+Cluster dropped
+Procedure dropped
+Logon Events:
+Successful logon
+Failed logon
+Password expired
+Account lockout
+Security Events:
+SQL injection detected
+Denial of Service (DoS) attack detected
+System Events:
+Server started
+Server shut down
+Palo Alto
+Logon Events:
+Successful logon
+Failed logon
+VPN Logon
+VPN Logoff
+Threat Detection Events:
+Botnet attack detected (DNS signature)
+Flood attack detected
+Vulnerability exploit detected
+Port scan detected
+Threat Intelligence Events:
+Palo Alto Networks WildFire signature feed
+Password Manager Pro
+Remote Access Events:
+Shared password
+Remote session started
+Remote session ended
+PostgreSQL
+Logon Events:
+Failed logon
+Database Events:
+Database Dropped
+Database Altered
+Table Events:
+Table Dropped
+Table Altered
+Table(s) truncated
+Schema Events:
+Schema Dropped
+Schema Altered
+View Events:
+View Dropped
+View Altered
+Trigger Events:
+Trigger Created
+Trigger Dropped
+Trigger Altered
+User Management Events:
+User Created
+User Altered
+User Dropped
+Role Management Events:
+Role Created
+Role Altered
+Role Dropped
+Permission Events:
+Permission Granted
+Permission Revoked
+Salesforce
+Login Events:
+Salesforce Failed Login Events
+Salesforce Successful Login Events
+Salesforce Login As Events
+Unauthorized Events:
+Salesforce Unauthorized Events
+Salesforce Failed Events
+Report Events:
+Salesforce Report Exports
+Salesforce Report Activity
+Salesforce MultiBlock Report Activity
+Content Events:
+Salesforce Content Distribution Activity
+Salesforce Content Transfer Activity
+Audit and Setup Events:
+Salesforce Setup Audit Trail Events
+Custom Objects and User Management Events:
+Salesforce Custom Objects Events
+Salesforce Manage Users Events
+Salesforce User Management Settings Events
+Application Events:
+Salesforce Application Events
+Salesforce Connected Apps Events
+Sonicwall
+User Management Events:
+User added
+User deleted
+User account modified
+User privilege modified
+Policy Events:
+Policy enabled
+Policy disabled
+Policy added
+Policy modified
+Policy deleted
+Rule Events:
+Rule added
+Rule deleted
+Rule restored
+Rule modified
+Login Events:
+Successful logon
+Failed logon
+VPN Logon
+VPN Logoff
+System Events:
+PC card removed
+Clock updated
+Log storage full detected
+Logs cleared
+Fan failure detected
+Sophos
+User Management Events:
+User Added
+User Modified
+User Deleted
+User Enabled
+User Disabled
+Group Management Events:
+Group Added
+Group Modified
+Group Deleted
+Endpoint Events:
+Endpoint Normal
+Endpoint Warning
+Endpoint Risk
+Attack Events:
+Critical Attacks
+Possible Attack
+Login Events:
+Successful Logon
+Failed Logon
+VPN Logon
+VPN Logoff
+Rule Management Events:
+Rule Added
+Rule Modified
+Rule Deleted
+Rule Enabled
+Rule Disabled
+Security Events:
+Anti-virus Detected
+Anti-spam Events
+Web Filter Anomaly
+Application Control Events
+System Events:
+Clock Update
+System Shut Down
+System Reboot
+Service Status
+Fan Failure
+Thermal Condition
+Memory Status
+Symantec
+Login Events:
+Successful Logon
+Failed Logon
+Admin Management Events:
+Admin Added
+Admin Deleted
+Admin Modified
+Policy Events:
+Policy Changes
+Security Events:
+Security Risk Found
+Virus Found
+Network Events:
+Port Scan
+Application Events:
+Commercial Application Detected
+Threat Events:
+Threat Activity
+HIPS Activity
+Unix
+User Account Events:
+User Account Added
+User Account Deleted
+User Account Renamed
+Successful User Account Password Change
+Failed User Account Password Change
+Group Management Events:
+Group Added
+Group Deleted
+Group Renamed
+Logon Events:
+User Logon
+SU Logon
+SSH Logon
+FTP/SFTP Logon
+Failed Logon Events:
+Failed User Logon
+Failed SU Logon
+Failed SSH Logon
+Failed FTP/SFTP Logon
+Logoff Events:
+User Logoff
+SU Logoff
+SSH Logoff
+FTP/SFTP Logoff
+Device Events:
+Removable Disk Inserted
+Removable Disk Removed
+Command Execution Events:
+Successful Sudo Command Execution
+Failed Sudo Command Execution
+Service Events:
+Syslog Service Stopped
+Syslog Service Restarted
+System Events:
+Low Disk Space Detected
+WatchGuard
+Admin Management Events:
+Admin Added
+Admin Deleted
+Admin Modified
+Security Events:
+Possible Attack
+Logon Events:
+Successful Logon
+Failed Logon
+VPN Logon
+VPN Logoff
+Policy Management Events:
+Policy Added
+Policy Deleted
+Policy Modified
+Configuration Events:
+Configuration Changed
+System Events:
+Clock Updated
+System Status
+Service Events:
+Service Start Failed
+Feature Events:
+Feature Status
+Windows
+User Account Events:
+User Account Created
+User Account Modified
+User Account Deleted
+User Account Locked Out
+Successful User Account Password Change
+Failed User Account Password Change
+Machine Account Events:
+Machine Account Created
+Machine Account Modified
+Machine Account Deleted
+Privilege Management Events:
+Special Privileges Assigned to New Logon
+Backup/Restore Events:
+Password Change on Directory Service Restore Mode (DSRM) Account
+Successful Windows Backup
+Failed Windows Backup
+Successful Windows Restore
+Failed Windows Restore
+AD Backup Error Detected
+File Management Events:
+File Created
+File Modified
+File Deleted
+File Permission Modified
+Failed File Access
+Failed File Creation
+Failed File Deletion
+File Accessed
+Network Share Events:
+Network Share Object Accessed
+Failed Network Share Object Access
+Rule Management Events:
+Rule Added
+Rule Modified
+Rule Deleted
+Configuration Events:
+Setting Modified
+Attack Detection Events:
+Spoof Attack Detected
+Flood Attack Detected
+Ping of Death Attack Detected
+SYN Attack Detected
+Group Management Events:
+Group Created
+Group Deleted
+Member(s) Added to Security Group
+Member(s) Added to Security-Enabled Local Group
+Member(s) Added to Distribution Group
+Member(s) Removed from Security Group
+Member(s) Removed from Distribution Group
+Logon Events:
+Successful Logon
+Failed Logon
+Account Logoff
+Interactive Logon
+Network Logon
+Batch Logon
+Service Logon
+Workstation Unlock
+Network Clear Text Logon
+New Credentials-Based Logon
+Remote Interactive Logon
+Cached Interactive Logon
+Failed Interactive Logon
+Failed Network Logon
+Failed Batch Logon
+Failed Service Logon
+Failed Workstation Unlock
+Failed Network Clear Text Logon
+Failed New Credentials-Based Logon
+Failed Remote Interactive Logon
+Failed Cached Interactive Logon
+Interactive Logoff
+Network Logoff
+Remote Interactive Logoff
+Remote Logon
+Failed Remote Logon
+Terminal Logon
+Audit Policy Events:
+System Audit Policy Modified
+User Audit Policy Modified
+Object Audit Policy Modified
+Group Policy Events:
+GPO Created
+GPO Modified
+GPO Deleted
+Registry Events:
+Registry Accessed
+Registry Entry Created
+Registry Value Modified
+Registry Entry Deleted
+Failed Registry Access
+Failed Registry Entry Creation
+Failed Registry Value Modification
+Failed Registry Entry Deletion
+Removable Media Events:
+Removable Disk Inserted
+Removable Disk Removed
+Removable Media Data Theft
+Software Events:
+Software Installed
+Software Uninstalled
+Software Updated
+Failed Software Installation
+Hardware Events:
+Hard Disk Failure Detected
+Device Connectivity Events:
+Device Connected to Wired Network
+Device Connected to Wireless Network
+Device Disconnected from Wired Network
+Device Disconnected from Wireless Network
+Log Events:
+Event Logs Cleared
+Time Events:
+Time Modified
+System Events:
+Unexpected Shutdown
+Process Events:
+Process Started
+Process Stopped
+Service Events:
+Service Installed
+Service Started
+Service Failed
+Service Stopped
+Task Events:
+Scheduled Task Created
+Scheduled Task Deleted
+Application Events:
+Application Crashed
+Read also
+This document listed the data sources along with their corresponding event types supported by the anomaly detection model of Log360 Cloud's UEBA. For leveraging the capabilities of UEBA, refer the below articles:
+Anomaly rules in UEBA
+Investigating anomalies

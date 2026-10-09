@@ -1,0 +1,16 @@
+To enable log collection from Stormshield devices, follow the below steps:
+Login to the firewall.
+Click on the
+Configuration
+tab.
+Click on the
+Notification
+button. Select
+Enable
+to start the Syslog service.
+In the
+Destination
+field, enter the IP address of EventLog Analyzer.
+Click
+Save
+.

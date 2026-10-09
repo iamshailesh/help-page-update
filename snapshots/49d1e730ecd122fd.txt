@@ -1,0 +1,47 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the reports available for DHCP Windows servers in the product console. These reports help administrators monitor DHCP lease lifecycle events, track DNS update activities, identify authorization and network issues, detect rogue servers, and analyze DHCP server health and client usage patterns.
+Available Reports
+Report group name
+Report name
+DHCP Windows Events
+All Events
+Important Events
+DHCP Server Reports
+Lease renewed by client
+Lease denied
+Lease Granted
+Lease Released
+Lease Expired
+Lease Deleted
+IP Found To Use in Network
+Pool Exhausted
+DNS Update Request
+DNS Update failed
+DNS update successful
+Unreachable domain
+BOOTP Lease Report
+Authorization succeeded
+Authorization failed
+Server found in domain
+Network failure
+Log Started
+Log Stopped
+DHCP Windows Log Paused due to Low Disk
+Critical Reports
+Error Reports
+Rogue server Report
+Warning Reports
+Top MAC Address
+Top IP Address
+Top Clients
+DHCP Windows Overview
+Read also
+This document elaborated the DHCP Windows reports available in the product console and their role in monitoring lease activity, server health, and security-related events. Explore other related report sections to gain deeper visibility into security events and operational trends.
+ERP reports
+IIS W3C FTP reports
+IIS W3C Web reports
+MSSQL reports
+MySQL reports

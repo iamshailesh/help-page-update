@@ -1,0 +1,154 @@
+EventLog Analyzer comes packaged with over 1,000 predefined reports that help organizations view consolidated security events, conduct security audits, and meet various compliance requirements. These reports help organizations visualize security events in their network and meet various security and compliance requirements.
+In this help document, you will learn to set up Windows report generation.
+Setting up Windows report generation
+In EventLog Analyzer, most Windows reports get generated automatically when the device is added for monitoring and the event source is configured. To learn how to add a device, check out this
+page
+. To learn how to configure an event source, check out the
+How to configure event source files in a device?
+section in this
+page
+.
+There are certain reports, mentioned in the table below, that will require manual creation of keys in your Windows Registry. To set up the generation of these reports, follow the steps given below.
+Please make sure event logging has been enabled by
+right clicking on the event source > Properties
+> checking the
+Enable logging box
+, in
+Event Viewer
+.
+Open the
+Registry Editor
+and navigate to
+HKEY_LOCAL_MACHINE > SYSTEM > CurrentControlSet > Service > EventLog
+. Here, create the keys given in the
+New keys
+column of table below.
+Next, open
+Local Group Policy Editor
+and navigate to
+Computer Configuration > Windows Setting > Security Setting
+. Further paths and steps to enable the generation of reports are given in the
+Audit policies
+column.
+Reports
+New keys
+Audit policies
+Other prerequisites
+Application Whitelisting Reports
+Microsoft-Windows-AppLocker/EXEandDLL
+Microsoft-Windows-AppLocker/MSI and Script
+Enable
+AppLocker
+under
+Application Control Policies
+Start the service
+Application Identity
+.
+On creation of the two new keys, a event source
+Microsoft-Windows-AppLocker/EXEandDLL
+will be created on the left panel of Event Viewer. Right click on the event source, click
+Properties
+, and copy the
+Log path
+.
+Then navigate to
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-AppLocker/EXE and DLL
+, and create an expandable string value with name
+File
+. Use the copied log path from the previous step as
+Value data
+.
+Configure the
+Executable rules, Windows Installer rules
+, and
+Script rules
+under the mentioned audit policies.
+Restart the machine.
+Windows Firewall Auditing Reports
+Microsoft-Windows-Windows Firewall With Advanced Security/Firewall
+Enable
+Audit MPSSVC Rule - Level Policy change
+, under
+Advanced Audit Policy Configuration > Policy Change
+.
+To Enable Windows Firewall logs, execute the below commands in the target device from where the logs are to be collected.
+Copy
+auditpol.exe /set /subcategory:"MPSSVC rule-level policy change,Filtering Platform policy change" /success:enable /failure:enable
+Copy
+auditpol.exe /set /subcategory:"IPsec Driver,Other system events" /success:enable /failure:enable
+Copy
+auditpol.exe /set /subcategory:"Filtering Platform packet drop,Filtering Platform packet drop" /success:enable /failure:enable
+Removable Disk Auditing
+Microsoft-Windows-DriverFrameworks-UserMode/Operational
+Enable
+Audit Handle Manipulation, Audit Removable Storage
+and
+Audit File System
+(required for auditing delete operation in NT Version 6.2), under
+Advanced Audit Policy Configuration > Object Access
+.
+To start logging removable storage events, navigate to
+Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Storage
+and add new
+DWORD
+registry key named as
+HotPlugSecureOpen
+and set value as
+1
+.
+Registry changes
+Enable
+Audit Registry
+, under
+Advanced Audit Policy Configuration > Object Access
+.
+Set SACL for the registry key by right-clicking on the required registry and navigating to
+Permission > Advance > Auditing in Registry Editor
+.
+Windows Backup & Restore Reports
+Microsoft-Windows-Backup
+No modification required.
+Windows System Events
+Microsoft-Windows-GroupPolicy/Operational
+Microsoft-Windows-NetworkProfile/Operational
+Microsoft-Windows-WindowsUpdateClient/Operational
+Microsoft-Windows-Winlogon/Operational
+Microsoft-Windows-WLAN-AutoConfig/Operational
+Microsoft-Windows-TerminalServices-Gateway/Operational
+Microsoft-Windows-TerminalServices-RDPClient/Operational
+Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational
+Microsoft-Windows-Wired-AutoConfig/Operational
+No modification required.
+Hyper-V Server Events Hyper-V VM Management Reports
+Microsoft-Windows-Hyper-V-Worker-Admin
+Microsoft-Windows-Hyper-V-VMMS-Storage
+Microsoft-Windows-Hyper-V-VMMS-Networking
+Microsoft-Windows-Hyper-V-VMMS-Admin
+Microsoft-Windows-Hyper-V-Hypervisor-Operational
+Microsoft-Windows- Hyper-V-Config
+Microsoft-Windows-Hyper-V-High-Availability
+Microsoft-Windows-Hyper-V-Hypervisor
+Microsoft-Windows-Hyper-V-Integration
+Microsoft-Windows- Hyper-V-SynthFC
+Microsoft-Windows-Hyper-V-SynthNic
+Microsoft-Windows- Hyper-V-SynthStor
+Microsoft-Windows- Hyper-V-VID
+Microsoft-Windows- Hyper-V-VMMS
+No modification required.
+Program Inventory Reports
+Microsoft-Windows-Application-Experience/Program-Inventory
+No modification required.
+IIS
+Microsoft-IIS-Configuration/Operational
+No modification required.
+To access IIS reports, open EventLog Analyzer and navigate to
+Reports > IIS W3C web server > IIS Admin Configuration Reports
+.
+Print service
+Microsoft-Windows-PrintService/Operational
+Microsoft-Windows-PrintService/Admin
+No modification required.
+Terminal
+Microsoft-Windows-TerminalServices-Gateway/Operational
+No modification required.
+EventLog Analyzer will now start generating the reports mentioned in the table.

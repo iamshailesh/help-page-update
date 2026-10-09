@@ -1,0 +1,199 @@
+Errors in gateway server communication or configuration are displayed under
+Settings > Configurations > Cloud Protection Settings > Server > Gateway Servers
+column. The potential gateway server errors you may encounter are listed below along with the follow-up actions to troubleshoot each error.
+Error code
+Error message
+Reason for error
+Follow-up action
+600005
+Update Gateway Server
+The gateway server version is outdated, preventing access to new features. Performance will remain unaffected.
+Update the gateway server by following the steps found
+here
+.
+600009
+Sync blocked due to Gateway Server version mismatch
+The gateway server version is outdated, preventing access to new features and configuration sync updates. The gateway server will perform minimal functions only.
+Update the gateway server by following the steps found
+here
+.
+600006/600010
+Failed to communicate with the Log360 Cloud-Cloud Protection server
+The gateway server's attempts to communicate with the Log360 Cloud-Cloud Protection server failed.
+To resolve communication issues, try the following steps: In the machine where the gateway server is installed, access the Log360 Cloud-Cloud Protection server url via your browser.
+US domain:
+https://log360csp.manageengine.com
+EU domain:
+https://log360csp.manageengine.eu
+AU domain:
+https://log360cloud.manageengine.com.au/
+IN domain:
+https://log360cloud.manageengine.in/
+JP domain:
+https://log360cloud.manageengine.jp/
+CA domain:
+https://log360cloud.manageengine.ca/
+UK domain:
+https://log360cloud.manageengine.uk
+UAE domain:
+https://log360cloud.manageengine.ae
+600104
+Gateway Server Access Key regenerated
+The Gateway Server Access Key has been regenerated.
+Update the Gateway Server Access Key by following the steps found
+here
+.
+600105
+Low disk space
+The machine running the gateway server has less than 2GB of free space. Cloud app auditing will be stopped until the issue is resolved.
+To resolve the issue, free up disk space, or add additional space in the machine running the gateway server.
+This will take certain time to reflect in gateway server. For immediate effect kindly restart the gateway server.
+600202/600203
+Failed to start proxy unit/Proxy unit stopped
+The proxy unit within the gateway server could not be started.
+For assistance in resolving this issue, please write to us at
+support@log360cloud.com
+.
+600204
+Proxy unit port unavailable
+The port used by the proxy unit is unavailable.
+By default, the proxy unit uses port 8200.
+To resolve the issue, try the following steps:
+Check if the port is occupied by another process and resolve it.
+(OR)
+Change Gateway server port to any other port number
+To change another port:
+Go to
+Settings > Configurations > Cloud Protection Settings > Server > Gateway Servers
+.
+Click the edit icon next to the desired gateway server.
+Edit the Port value.
+Click Next to review the gateway server details.
+Click Update.
+600205
+Configuration files missing or corrupted
+Attempts to sync the gateway server configuration during initial installation were unsuccessful.
+For assistance in resolving this issue, please write to us at
+support@log360cloud.com
+.
+600206
+Failed to start proxy unit (-) Proxy Chain source unreachable
+Proxy chain source settings specified are incorrect.
+To resolve the issue, check the existing
+Proxy Chain
+configuration and reset it if required. To reset
+Proxy Chain
+configurations:
+Go to
+Settings > Configurations > Cloud Protection Settings > Server > Gateway Servers
+.
+Click the
+edit icon
+next to the desired gateway server.
+Navigate to the
+Proxy Chain
+setting.
+Edit the
+Proxy Chain value
+.
+Click
+Next
+to review the gateway server details.
+Click
+Update
+.
+600207
+Invalid PAC script
+The Proxy Auto-Configuration (PAC) file script has errors.
+Check the existing PAC script file you've configured and rectify syntax errors, if any.
+600208
+Unable to download PAC script
+The PAC Script location specified during initial set up is incorrect.
+To resolve the issue, check the existing Proxy Chain configuration and reset it if required. To reset Proxy Chain configurations:
+Go to
+Settings > Configurations > Cloud Protection Settings > Server > Gateway Servers
+Click the
+edit icon
+next to the desired gateway server
+Navigate to the
+Proxy Chain
+configuration tab
+Enter the correct PAC Script Location and also check if it is accessible
+Click
+Update
+600301/600309
+Configuration sync mismatch
+Configuration details from the Log360 Cloud-Cloud Protection server could not be sent to the gateway server.
+For assistance in resolving this issue, please write to us at
+support@log360cloud.com
+.
+600302
+Sync Error - Failed to sync CA certificate
+Configuration sync with CA certificates configured was unsuccessful.
+For assistance in resolving this issue, please write to us at
+support@log360cloud.com
+.
+600303
+Sync Error - Failed to sync Trust Store list
+Configuration sync with the Cloud Protection Trust Store was unsuccessful.
+For assistance in resolving this issue, please write to us at
+support@log360cloud.com
+.
+600304
+Sync Error - Failed to sync Sanctioned Applications list
+Configuration sync with the Sanctioned Applications list was unsuccessful.
+For assistance in resolving this issue, please write to us at
+support@log360cloud.com
+.
+600305
+Sync Error - Failed to sync Banned Applications list
+Configuration sync with the Banned Applications list was unsuccessful.
+For assistance in resolving this issue, please write to us at
+support@log360cloud.com
+.
+600306
+Sync Error - Unable to reach Proxy Chain source
+Configuration sync for updating gateway servers with Proxy Chain source details was unsuccessful.
+To resolve the issue, check the existing
+Proxy Chain
+configuration and reset it if required.
+To reset
+Proxy Chain
+configurations:
+Go to
+Settings > Configurations > Cloud Protection Settings > Server > Gateway Servers
+.
+Click the
+edit
+icon next to the desired gateway server.
+Navigate to the
+Proxy Chain
+setting.
+Edit the
+Proxy Chain value
+.
+Click
+Next
+to review the gateway server details.
+Click
+Update
+.
+600307
+Sync Error - Unable to parse PAC script
+The PAC script could not be parsed due to syntax errors.
+Check the existing PAC script file you've configured and rectify syntax errors, if any.
+600308
+Sync Error - Unable to download PAC script
+The PAC script download was unsuccessful during configuration sync or after configuration edits.
+To resolve the issue, check the existing Proxy Chain configuration and reset it if required. To reset Proxy Chain configurations:
+Go to
+Settings > Configurations > Cloud Protection Settings > Server > Gateway Servers
+Click the
+edit icon
+next to the desired gateway server
+Navigate to the
+Proxy Chain
+configuration tab
+Enter the correct PAC Script Location and also check if it is accessible
+Click
+Update

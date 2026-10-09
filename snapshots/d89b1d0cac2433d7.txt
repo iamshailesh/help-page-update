@@ -1,0 +1,31 @@
+How to audit LDAP events:
+LDAP queries allow administrators to retrieve objects in the Active Directory (AD) database based on specific criteria, such as:
+Disabled user accounts
+Users with empty email fields
+Groups created within the last 30 days
+Auditing LDAP queries helps system administrators detect potential security threats, ensuring the directory remains secure. Additionally, monitoring these queries provides valuable insights, especially for organizations running applications that generate resource-intensive or inefficient LDAP requests.
+Enabling LDAP auditing
+Steps to enable LDAP auditing
+Open Registry Editor
+Navigate to the following registry path:
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics
+Modify the "15 Field Engineering" value:
+Locate
+"15 Field Engineering"
+in the right pane.
+Set its value to
+5
+to enable logging of expensive and inefficient LDAP calls in Event Viewer.
+Ensure LDAP server signing requirement is enabled:
+Open
+Group Policy Management Editor.
+Navigate to:
+Default Domain Controller Policy â Computer Configuration â Policies â Windows Settings â Security Settings â Local Policies.
+Locate
+"Domain controller: LDAP Server Signing Requirement"
+and set it to
+"Required Signing"
+to generate
+Event ID 2888
+.
+Apply the changes and restart the domain controller (if necessary) for the settings to take effect.

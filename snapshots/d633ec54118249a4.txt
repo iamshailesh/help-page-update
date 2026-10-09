@@ -1,0 +1,34 @@
+The product allows you to create multiple views of the same report. This enables you to view the report based on different parameters such as time, domain, source, etc. The different views will be generated from the same set of log data.
+In this help document, you will learn to perform the following operations.
+Creating a new report view
+To create a new report view,
+Open the product and select the
+Reports
+tab.
+Choose the required report and click on the
+(Manage Custom Views) icon present on the right corner.
+In the pop-up window that appears, click on
++Add View
+.
+Enter a suitable name for the view and choose the required parameters on which the view should be based. You can choose up to four different parameters in the On-premise version and up to three different parameters in the On-demand version.
+Click on
+Add
+.
+The new view will be added as a separate tab in the report.
+Editing, deleting, or disabling report views
+To edit, delete, or disable the views that have been created:
+Open the product and select the
+Reports
+tab.
+Choose the report whose views you want to edit and click on the
+(Manage Custom Views) icon present on the right corner.
+In the pop-up that appears you can see a list of views for that report.
+To edit a report view, click the
+icon corresponding to the view that you want to modify. Make the required changes and click on
+Update
+.
+To delete a report view, click the
+icon corresponding to the view that you want to delete.
+To enable/disable a report view, check/uncheck the checkbox under the
+Enable/Disable
+column, corresponding to the required view.

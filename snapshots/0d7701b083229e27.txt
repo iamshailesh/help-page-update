@@ -1,0 +1,4 @@
+ManageEngine Log360 Cloud provides a comprehensive REST API that enables seamless integration with third-party applications and services. Users and developers can leverage this API to build custom applications using Log360 Cloud's capabilities.
+Refer to
+this
+page to learn more about Version 2 APIs.

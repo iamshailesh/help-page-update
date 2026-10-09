@@ -1,0 +1,58 @@
+In this page
+Overview
+Reset admin password
+Unblock admin account
+Reset TFA enrollment
+Overview
+This page explains how to reset account settings for the default admin in Log360. It covers steps to reset the admin password, unblock the admin account, and reset Two-Factor Authentication (TFA) enrollment.
+Reset admin password
+Follow the steps below to reset the admin password of your account.
+For Windows:
+Navigate to the <Log360>/troubleshooting folder.
+Execute the
+resetPwd.bat
+file.
+The admin password will be reset to the default password:
+admin
+.
+Please contact your administrator to change the password for other local admins.
+For Linux:
+Open a terminal.
+Navigate to the <Log360>/troubleshooting folder.
+Execute the
+resetPwd.sh
+file.
+You can access the account using
+admin
+as the password.
+Please contact your administrator to change the password for other local admins.
+Unblock admin account
+Multiple unsuccessful login attempts may block the default admin account for security reasons. The account will be automatically restored after a short period. To unblock it immediately, follow these steps:
+For Windows:
+Navigate to the <Log360>/bin/adsf folder.
+Run the
+unblockAccount.bat
+file.
+For Linux:
+Open a terminal.
+Navigate to the <Log360>/bin/adsf folder.
+Execute the
+unblockAccount.sh
+file.
+Reset TFA enrollment
+To reset the two-factor authentication (TFA) settings for the default admin account, follow the steps below:
+For Windows:
+Go to the <Log360>/bin/adsf folder.
+Execute the
+resetAdminTFAEnrollment.bat
+file.
+Log in to Log360 and re-register for TFA as per your preference.
+For Linux:
+Open a terminal.
+Navigate to the <Log360>/bin/adsf folder.
+Execute the
+resetAdminTFAEnrollment.sh
+file.
+Log in to Log360 as the default admin and complete TFA re-enrollment.
+Read also
+This page explained about resetting account settings for the default admin.

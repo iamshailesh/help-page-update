@@ -1,0 +1,26 @@
+In this page
+Overview
+Available Reports
+Overview
+QNAP NAS File Monitoring reports provide visibility into file and folder activities occurring within monitored QNAP NAS systems. These reports help administrators track key actions such as file creation, modification, deletion, access events, and movement operations.
+By presenting activity details based on servers, these reports support auditing, troubleshooting, and detection of unauthorized or unexpected changes within QNAP NAS storage environments.
+Available Reports
+Report group name
+Report name
+File Monitoring (QNAP NAS)
+Summary based on servers
+All file or folder changes
+File created
+File modified
+File deleted
+File moved
+File renamed
+File read access
+Changes based on servers
+Read also
+This document elaborated the File Monitoring reports available for QNAP NAS environments to help track and audit file and folder activities. Explore related report sections to gain deeper visibility into security events and operational trends.
+Synology NAS reports
+Windowscluster reports
+Reports overview
+Windows reports
+Unix reports

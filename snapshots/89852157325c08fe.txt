@@ -1,0 +1,31 @@
+Log360 Cloud helps you gain actionable insights on your organization's cloud access. To see intuitive analytical reports on usage of cloud application activities in Log360 Cloud:
+Navigate to
+Reports
+and select
+Cloud Protection
+from the
+Devices
+drop-down menu.
+Under Cloud Protection, go to the
+Common Cloud Apps
+tab. The LHS pane lists the available analytical reports.
+Recent Requests
+: All the recent web application requests are presented to you along with the data upload and download sizes.
+Recent HTTP Requests
+: All information on HTTP requests sent to the gateway server by web applications will be presented in this report.
+Recent Connect Requests
+: All the recent web applications that have established a HTTP connection over SSL will be listed in this report.
+Recent Failed Requests
+: All the applications that have failed to establish a connection with the gateway server and any other type of failure within a HTTP session will be presented in this report.
+Top Cloud Apps
+: This report lists the most used cloud applications with detailed information such as the request count, data upload size, and data download size.
+Top Actors
+: Users who have initiated web application requests and information on browser usage will be listed and sorted based on the number of requests.
+You can navigate to the Zoho tab to view reports for the following Zoho applications' file upload activities
+Cliq
+Writer
+Workdrive
+Projects
+Show
+Sheets
+Mail

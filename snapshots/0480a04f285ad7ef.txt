@@ -1,0 +1,161 @@
+In this page
+Overview
+Common integration issues
+Data source log collection errors
+Object sync error messages
+API changes
+Overview
+This section provides troubleshooting steps for common Microsoft 365 integration issues in the product console. Errors may occur due to missing configurations, expired credentials, or disabled settings in the Microsoft 365 environment. The following guidance will help you identify and resolve these issues.
+Common integration issues
+1. Audit Logging must be turned on to fetch data
+Cause:
+Audit logging is not enabled in the Microsoft 365 environment, which prevents user and admin activity from being recorded and fetched into Log360.
+Solution:
+Enable audit logging using either of the following methods:
+Through the Microsoft 365 portal
+Log in to the
+Microsoft 365 portal
+and navigate to the
+Admin
+tab.
+Go to
+Admin centers > Microsoft Purview > Solutions > Audit
+. Alternatively, directly open
+Audit Log Search
+.
+If auditing is not turned on, a banner will prompt you to enable activity recording.
+Select
+Start recording user and admin activity
+.
+Figure 1: Start recording user and admin activity
+NOTE
+Changes may take up to 60 minutes to take effect
+Turn on audit logging through PowerShell
+Steps to connect Exchange Online
+Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
+2. Invalid Application Password
+Cause:
+This error occurs if the configured Microsoft 365 application password is deleted or has expired.
+Solution:
+Create a new application password in Entra ID Portal and update it in the productâs
+Account Settings
+.
+Steps:
+Sign in to
+Entra ID portal
+using the credentials of a Global Administrator account.
+Select
+App registrations
+from the left pane.
+Select
+All applications
+.
+Search for the application name which is configured in the product.
+Select
+Certificates & secrets
+.
+Select
+Client secrets
+and click
+New client secret
+.
+Figure 2: Creating new client secret
+Enter the appropriate values and
+Add
+.
+Copy the value
+from created secret.
+Follow the
+Editing a cloud account
+steps to update secret in product
+3. Missing Microsoft Entra ID Application
+Cause:
+This error occurs if the Microsoft Entra ID application associated with Log360 has been deleted from the Azure portal.
+Solution:
+Reconfigure the application in the Azure portal.
+Step:
+Follow the manual configuration steps outlined
+here
+.
+Data source log collection errors
+1. UnauthorizedCause:
+The configured Microsoft 365 application does not have the necessary permissions to access log data.
+Solution:
+Update the required permissions in the Microsoft 365 application.
+Step:
+Follow the mentioned steps to update
+required scopes
+2. Request threshold reachedCause:
+The API request limit may have been exceeded due to high log collection activity.
+Solution:
+Wait for some time and monitor. Once the Microsoft 365 API rate limit resets, log collection will resume automatically.
+3. Unable to fetch Auth tokenCause:
+The client secret may have expired or been deleted from the Microsoft Entra ID portal.
+Solution:
+Ensure that the client secret is active in the Microsoft Entra ID portal. You can locate the Application ID by selecting the Edit option for that tenant under the
+Account Settings -> Configure Cloud Accounts
+page.
+Step:
+For steps to update the client secret, refer to
+manual configuration
+.
+4. Connection failureCause:
+This issue may occur due to a temporary network interruption in the Microsoft Azure environment.
+Solution:
+Wait for some time and monitor. If the issue persists, contact
+support
+.
+Object sync error messages
+1. Application not found. Please check your configuration.Cause:
+This error occurs if the Microsoft Entra ID application associated with the product console has been deleted from the Azure portal.
+Solution:
+Application needs to be reconfigured in Entra ID portal. Follow these steps to
+reconfigure
+.
+2. The Application Client Secret has expired.Cause:
+This error occurs if the configured Microsoft 365 application password (client secret) has expired or been deleted.
+Solution:
+Generate a new application secret and update in product. Follow the steps mentioned
+in
+this section.
+3. Application has been disabled. Enable access to the Azure AD application to fetch the data.Cause:
+This occurs when administrator access to the Azure AD application has been disabled, preventing data collection and report generation.
+Solution:
+Enable Azure AD application access for all users.
+Steps:
+Log in to
+Entra ID portal
+From the left pane, choose
+Enterprise apps
+.
+From the Application type drop-down, choose
+All Applications
+.
+Search for the application name which is configured in the product.
+Select
+Properties
+from the left pane.
+Toggle to
+Yes
+next to Enabled for users to sign-in
+Figure 3: Enabling Azure AD application access for all users
+API changes
+For tenants licensed with Microsoft Entra ID Premium, the product console now uses Microsoft Graph API for Entra ID data collection, replacing the previously used Office 365 Management API. As a result, certain operation names and message strings may differ slightly, which can affect alerts, saved searches, and saved reports configured with older conditions.
+If you notice discrepancies or missing results in your existing alert or report conditions, review and update them as per the mappings below.
+Previous Condition
+New Condition
+For operation values ending with period (.)Operation:add user.
+Add an or condition value without periodOperation : ("add user." OR "add user")
+Message: idslocked
+(message contains "idslocked") OR (message contains "The account is locked")
+Message: invalidusernameorpassword
+(message contains "invalidusernameorpassword") OR (message contains "Invalid username or password")
+Message: "blockedbyconditionalaccess"
+(Message: "blocked by Conditional Access" ) OR (Message: blockedbyconditionalaccess )
+Message: invalidresourceserviceprincipalnotfound
+Message: ( "The resource principal named {name} was not found in the tenant" OR "invalidresourceserviceprincipalnotfound"
+Read also
+This page explained common Microsoft 365 integration and troubleshooting issues, along with their solutions.
+For more details, refer to:
+Adding a data source
+Configuring and managing

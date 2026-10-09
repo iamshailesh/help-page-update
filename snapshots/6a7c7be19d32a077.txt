@@ -1,0 +1,33 @@
+In this page
+Overview
+Available Reports
+Overview
+NetApp File Monitoring reports provide detailed visibility into file and folder activities across monitored NetApp storage systems. These reports help administrators track critical actions such as file creation, modification, deletion, access attempts, permission changes, audit policy updates, and ownership changes.
+By presenting activity data based on servers, these reports support auditing, compliance monitoring, and investigation of unauthorized or suspicious file system changes within NetApp environments.
+Available Reports
+Report group name
+Report name
+File Monitoring (NetApp)
+Summary based on servers
+All file or folder changes
+File created
+File modified
+File deleted
+File moved
+File renamed
+File read access
+File permission changes
+Audit policy (SACL) on object changes
+Folder owner changed
+Failed attempt to read file
+Failed attempt to write file
+Failed attempt to delete file
+Changes based on servers
+Read also
+This document elaborated the File Monitoring reports available for NetApp storage environments to help track and audit file and folder activities. Explore related report sections to gain deeper visibility into security events and operational trends.
+NetApp reports
+QNAP NAS reports
+Synology NAS reports
+Windowscluster reports
+Windows reports
+Unix reports

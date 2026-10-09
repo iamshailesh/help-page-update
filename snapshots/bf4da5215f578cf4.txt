@@ -1,0 +1,59 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the various HP reports available in the product console to help administrators monitor device operations, track user access, review configuration and system changes, and analyze security and severity events across the network.
+Available Reports
+Report Group Name
+Report Name
+Logon Reports
+Logons
+Logoff
+Top Successful Logons from Source
+Top logons based on user
+Logons Trend
+Failed Logon Reports
+Failed Logons
+Top Failed Logons from Source
+Top failure logons based on users
+Failed Logons Trend
+Interface Status
+Interface Up
+Interface Down
+Trunk UP
+Trunk Down
+Trunk Added
+Trunk Removed
+Configuration Reports
+Successful Commands
+Failed Commands
+ACL Error
+VLAN Status
+System Events
+Configuration Change
+System Update
+License Status
+Fan Ok
+Fan Failed
+Power Status
+System Reboot
+Clock Update
+Device Severity Reports
+Emergency Events
+Alert Events
+Critical Events
+Error Events
+Warning Events
+Notice Events
+Information Events
+Debug Events
+HP Events
+All Events
+Important Events
+Read also
+This document elaborated the list of HP reports available in the product console and how they help monitor system events, user activity, configuration status, and device health. Explore related report sections to gain deeper visibility into security events and operational trends.
+pfSense reports
+F5 reports
+Firepower reports
+H3C reports
+Stromshield reports

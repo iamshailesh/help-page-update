@@ -1,0 +1,53 @@
+In this page
+Overview
+Windows
+Linux
+Overview
+This page outlines how to configure the product to run as a background service on both Windows and Linux machines. Running the product as a service ensures continuous operation even after system reboots and allows administrators to manage the application using standard service control commands. The procedures outlined below guide you through stopping existing instances, executing installation scripts, and verifying service status.
+Windows:
+Establish a connection with the server where the product is installed.
+Open the command prompt with Admin privileges.
+Navigate to
+<Log360>\bin
+.
+Execute the following commands sequentially to ensure that the instance is not running:
+shutdown.bat
+stopDB.bat
+stopSEC.bat
+Execute the following command to install the product as a service.
+service.bat -i
+Go to services.msc and start the
+ManageEngine SIEM
+service.
+NOTE
+Commands related to product service:
+Install the service:
+service.bat -i
+Start the service:
+service.bat -t
+Stop the service:
+service.bat -p
+Remove the service:
+service.bat -r
+Linux:
+Establish a connection with the server where the product is installed.
+Navigate to
+<Eventlog Analyzer>\bin
+.Execute the following commands sequentially with Admin privileges to ensure that the instance is not running:
+sudo sh shutdown.sh
+sudo sh stopDB.sh
+sudo sh stopSEC.sh
+Execute the command "
+sudo sh configureAsService.s
+h -i
+"
+`
+Execute the command "
+service eventloganalyzer status
+" to verify the service installation.
+Read also
+This page outlines how to install the product as a service on Windows and Linux systems. For related setup and administration operations, refer to the below help documents:
+Installation and uninstallation
+Starting and stopping the product
+Accessing the product
+Data source configuration- Syslog devices

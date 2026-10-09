@@ -1,0 +1,22 @@
+In this page
+Overview
+Available Reports
+Overview
+This section provides reports related to
+external threat intelligence
+. These reports help identify compromised data exposure, dark web activity, botnet involvement, and supply-chain related breaches affecting the organization.
+Available Reports
+Report group name
+Report name
+Threats
+External Threats Overview
+Breach Data Exposure
+Dark Web Intelligence
+Botnet Activity
+Supply Chain Breach Activity
+Read also
+This page listed the available threat intelligence reports that help monitor external threats and data exposure trends. Explore other related security reports to gain broader visibility into your environment and strengthen threat detection and response.
+Trend Micro reports
+VMware ESXi reports
+Hyper-V reports
+File Monitoring reports

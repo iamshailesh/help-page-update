@@ -1,0 +1,10 @@
+For EventLog Analyzer to collect logs Dell switches, logging has to be enabled on the switch.
+Logging can be enabled in Dell switches by entering the following commands in the command prompt.
+Command
+Parameters
+console# configure
+Enter configuration mode.
+console(conf)# logging <IP address of the EventLog Analyzer server>
+Set IP address or hostname identifying the external syslog server to send the log output.(Optional) UDP and TCP port designation can be entered as well.
+Note
+For more information, kindly refer to the documentation of your Dell switch.

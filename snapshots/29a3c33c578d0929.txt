@@ -1,0 +1,54 @@
+In this page
+Overview
+Available Reports
+Overview
+This page lists the Salesforce reports available in the product to help monitor user login behavior, report generation, content distribution, searches, setup changes, and dashboard insights. These reports assist administrators in tracking successful and failed events, unauthorized actions, user activity, and content interactions across the Salesforce environment.
+Available Reports
+Report group name
+Report name
+Salesforce overview
+All Events
+failed events
+unauthorized events
+Salesforce login activity
+failed logins
+successful logins
+login as events
+Salesforce report activity
+report exports
+report activity
+multiblock report activity
+Salesforce content activity
+content distribution activity
+content transfer activity
+document attachments download
+Salesforce search activity
+searches
+search clicks
+Salesforce setup audit trail
+setup audit trail all events
+custom object events
+manage users events
+user management settings events
+application events
+connected apps events
+Salesforce dashboard
+salesforce content distribution dashboard
+salesforce total logins
+salesforce top users
+salesforce dashboard all events
+salesforce dashboard failed events
+salesforce dashboard report activity
+salesforce dashboard content transfer
+dashboard login events multiple
+salesforce all logins
+content distribution action multi
+failed logins
+All Events
+Read also
+This page detailed the Salesforce reports supported by the product for monitoring login activity, report exports, content distribution, searches, setup changes, and dashboard insights. Explore related report sections to gain deeper visibility into user behavior, content interactions, and administrative events.
+CEF format reports
+FireEye reports
+Malwarebytes reports
+McAfee reports
+Symantec DLP reports

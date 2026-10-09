@@ -1,0 +1,158 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the various Unix reports available in the product console to help
+users
+track system activity, monitor user access, analyze risk levels, audit file and service operations, and detect security incidents across Unix and Linux environments.
+Available Reports
+Report Group Name
+Report Name
+Unix Risk Reports
+Risk Level
+Top Risk by Events
+Top Risk by Host
+Top Risk by RemoteHost
+Risks Trend
+Risks Overview
+Device Severity Reports
+Emergency Events
+Alert Events
+Critical Events
+Error Events
+Warning Events
+Information Events
+Debug Events
+Notice Events
+System Events
+Syslog Stopped
+Syslog Restarted
+Low Disk space
+System Shutdown
+Yum installs
+Yum updates
+Yum Uninstalls
+FTP Server Reports
+File downloads
+File uploads
+FTP Login time outs
+FTP session idle timeout
+FTP no transfer timeouts
+FTP Connection timeouts
+FTP Reports Overview
+Top Unix FTP Operation by User
+Top Unix FTP Operation by Remote host
+FTP Data transfer stall timeouts
+Other Events
+Cron Jobs
+Cron Edit
+Cron Job Started
+Cron Job Terminated
+Connection Abort by software
+Receive identification string
+Session Connected
+Session Disconnected
+Deactivated services
+UnSupported Protocol Version
+Timeout While Logging
+Update Failed
+HostName Mismatch Error
+Top cron jobs based on users
+HostAddress Mismatch Error
+NFS Events
+Successful NFS mounts
+Refused NFS Mounts
+User based NFS mounts denial
+Top Successful NFS mounts based on remote host
+Top Refused NFS mounts based on remote hosts
+Mail Server Reports
+Top mail rejection errors
+Mails Sent Overview
+Mails Received Overview
+Top mails sent based on senders
+Top mails sent based on remote host
+Top mails received from remote devices
+Top Sender Domain
+Top Recipient Domain
+Trend report on mails sent
+Top mails rejected based on sender
+Top receivers who rejected the mails
+Top Rejected Domains
+Mails rejected - Overview report
+Insufficient Storage
+Bad Sequence of Commands
+Bad Email Address
+Non existent email address on remote side
+Top Mail Errors
+Top mail errors based on senders
+Failed Mail Deliveries
+MailBox Unavailable
+Trend reports on mails received
+Removable Disk Auditing
+USB Plugged In
+USB Plugged Out
+User Account Management
+Users Added
+Users Deleted
+Users Renamed
+Group Added
+Group Deleted
+Group Renamed
+Password Changes
+Password Changes Failed
+Failed user additions
+Account Management Events
+Failed Logon Reports
+User Failed Logons
+Failed SSH Logons
+FTP/SFTP Failed Logon
+Top failure logons based on users
+Top Falied Logons based on devices
+Top failure logons based on Remote devices
+Top Failed Logon Methods
+Failed Logons Trend
+Repeated Authentication Failure
+Invalid User Login Attempt
+Unsuccessful logon Failure with Long Password
+Top Unix Repeated Login Failure by Remote host
+Top Unix Repeated Authentication Failure by Remote host
+SU Failed Logons
+Failed Logons
+Logon Reports
+User Logons
+SU Logons
+SSH logons
+Logons
+Top logons based on user
+Top Logons based on devices
+Top logons based on remote devices
+Top Logon Method
+Logons Trend
+FTP/SFTP Logons
+Logoff Reports
+User Logoff
+SU Logoff
+SSH Logoff
+FTP/SFTP Logoff
+Logoff
+SU Commands
+SU command executions
+Failed SU command executions
+Top Failed SU command executions
+Top SU command executions
+Threats
+Bad ISP Errors
+Reverse Lookup Errors
+Bad HostConfig Errors
+Invalid connection remote host
+Dos Attack
+Unix Events
+All Events
+Important Events
+Read also
+This document elaborated the list of Unix reports available in the product console and how they help monitor system events, user activity, risk indicators, and security threats. Explore related report sections to gain deeper visibility into security events and operational trends.
+Cisco reports
+Sonicwall reports
+Fortinet reports
+Juniper reports
+Meraki reports

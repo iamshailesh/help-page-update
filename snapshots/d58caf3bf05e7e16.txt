@@ -1,0 +1,65 @@
+In this page
+Log source configuration
+Admin Settings
+System Settings
+The
+Settings
+section in Log360 allows you to configure data sources, manage administrative controls, and customize system-level options. Settings are grouped into three categories:
+Log source configuration
+,
+Admin Settings
+, and
+System Settings
+.
+Log source configuration
+This section enables you to configure and manage all log sources in your environment. You can collect and monitor logs from devices, applications, databases, cloud services, and more. Refer to this page to learn more about log source configurations.
+Devices - Manage Windows, Linux/Unix, Cisco, Juniper, Sonic, IBM AS400 devices, and other network devices.
+Database Audit - Manage Microsoft SQL Server, MySQL Server, and Oracle databases.
+Applications - Manage Microsoft IIS servers, vulnerability scanners, security applications, and other enterprise applications.
+VM Management - Add and manage vCenter servers.
+File Monitoring - Configure file integrity monitoring.
+Import Logs - Import logs from IIS and Apache web servers, Microsoft SQL Server, Oracle databases, print servers, and other sources.
+Manage Cloud Sources - Monitor AWS and other cloud platforms.
+Admin Settings
+This section provides options to manage users, roles, device groups, data storage, integrations, and product configurations.
+Collectors and Agents
+Technicians and Roles
+Domain and Accounts
+Device Groups
+Product Settings
+Custom threat sources
+Installed Extensions
+Logon Settings
+General
+Two-factor authentication
+Allow/ restrict IPs
+Smart card authentication
+Working Hour Settings
+Privacy Settings
+Profiles
+Archives
+Retention Settings
+Log Collection Filters
+Log Collection Failure Alerts
+Database Settings
+Custom Log Format
+Report Profiles
+Tags
+API Settings
+Log Forwarding
+Log Processor
+Log360 Integration
+Custom widgets
+Zia Insights
+System Settings
+This section contains system-level configurations and support utilities. Use these options to set up connectivity, notifications, ports, branding, and diagnostics.
+Notification Settings
+Reverse proxy
+Connection Settings
+Rebranding
+System Diagnostics
+Listener Ports
+Syslog
+SNMP Traps
+Read also:
+This page provides an overview of the Settings section in Log360, including log source configurations, admin settings and system settings.

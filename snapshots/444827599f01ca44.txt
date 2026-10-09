@@ -1,0 +1,36 @@
+In this page
+Overview
+Using global search
+Overview
+The Global Search feature in ManageEngine Log360 allows you to search across all major sections of the product console, such as
+Reports, Compliance, Search, Security, Alerts,
+and
+Settings
+. It is accessible from all tabs of the product console, enabling quick navigation to specific features, report categories, configuration pages, or compliance standards, improving the efficiency and productivity of SOC teams. Global Search displays tab-specific content, allowing you to quickly view information from the respective sections without navigating between tabs.
+For instance, typing
+âWindowsâ
+in the Global Search bar displays all related reports, settings, and configuration options.
+Figure 1: Using global search
+Using Global Search
+To open
+Global Search
+, click the
+search bar
+at the top of the product console or use the keyboard shortcut
+Ctrl + Space
+.
+Figure 2: Navigating to global search
+When opened,
+Global Search
+displays results and suggestions organized into the following sections:
+Recent Searches
+This section lists your most recent queries, allowing you to revisit reports, settings, or configurations you accessed earlier.
+Frequent Searches
+This section shows the most commonly searched items across the product console. It highlights popular reports and configurations used by administrators and analysts.
+What's New in Log360
+This section highlights newly added features in the product console. Clicking a feature takes you directly to its corresponding page in the product console.
+Figure 3: Sections in global search
+Read also
+This page explained how to use Global Search to find reports, settings, and features across the product console. For more information on related interface components, refer to:
+Log receiver
+Device summary

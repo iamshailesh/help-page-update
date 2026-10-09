@@ -1,0 +1,165 @@
+In this page
+Overview
+Steps to configure a Access
+Gateway Cluster
+Adding Access Gateway Clusters
+Configuring Third Party Server
+Overview
+A Access Gateway Cluster acts as a secure entry point for logs from external sources. It
+masks the identity of internal systems and forwards incoming log data to internal Log
+Processors, ensuring secure log collection. This deployment enhances perimeter security by
+isolating external agents from the core system.
+This page explains how to configure Access Gateway Cluster.
+Steps to configure a Access Gateway Cluster
+Log in to your account.
+Go to the
+Settings
+tab.
+Under
+Admin Settings
+, navigate to
+Enterprise Essentials
+and
+select
+Access Gateway Cluster.
+Figure 1: Navigating to Access Gateway Cluster
+In the Access Gateway Cluster window, select
+Click to Configure
+. A
+setup window will open.
+Figure 2: Configuring Access Gateway Cluster
+In Step 1, click the Download button to download the Access Gateway Cluster installer.
+Launch the installer. On the welcome screen, click Next to begin the setup.
+Figure 3: Installing ManageEngine Access Gateway Cluster
+Read and accept the license agreement by selecting
+Yes
+.
+Figure 4: Installing ManageEngine Access Gateway Cluster
+Choose the destination folder to install the server and click
+Next
+.
+Figure 5: Installing ManageEngine Access Gateway Cluster
+In the Programs Folder screen, either use the default folder name, enter a new one, or
+select from the existing folder list, then click
+Next
+to continue.
+Figure 6: Installing ManageEngine Access Gateway Cluster
+(Optional) Fill in the technical support registration form, or click
+Skip
+to continue.
+Figure 7: Registration for technical support
+Click
+Install
+to begin installation
+Figure 8: Installing ManageEngine Access Gateway Cluster
+After installation, open the Access Gateway Cluster configuration window.
+Enter the
+Access URL
+,
+Server Host Name
+, choose
+HTTP/HTTPS
+protocol, set the
+Server Port
+, and paste
+the
+Access Key
+.
+NOTE:
+You can copy the access key from Step 2 of the
+Access Gateway Cluster window.
+Figure 9: Configuring server details
+Click
+Configure
+to apply the settings.
+Figure 10: Configuring server details
+A confirmation pop-up will appear instructing you to update dependent settings based on
+the new Access URL. Click
+Yes
+to continue.
+Figure 11: Updating Access Gateway Cluster settings
+Wait for the configuration to complete. Once completed, a confirmation will appear
+indicating that the reverse proxy is configured. Click
+OK
+to continue.
+Figure 12: Successful configuration of a reverse proxy
+The configured
+Access URL
+and corresponding
+Target
+URLs
+will now appear in the Access
+Gateway Cluster configuration window.
+Figure 13: Configured settings of Access Gateway Cluster
+After completing the configuration, return to the Access Gateway Cluster window. The
+page will reload automatically with the configured server details.
+Figure 14: Configured settings of Access Gateway Cluster
+NOTE:
+If it doesnât, select the click here link in
+Step 3 to reload it manually.
+Figure 15: Configuring a Access Gateway Cluster
+NOTE:
+To enable high availability for the Access Gateway Cluster, click
+Show More
+in the configuration window. Then, follow
+Steps 4
+and
+5
+in the expanded section to complete the setup.
+Figure 16: Enabling high availability for the Access Gateway Cluster
+NOTE:
+Refer to this section for detailed steps to configure and add a Access
+Gateway Cluster.
+Adding Access Gateway Clusters
+You can add multiple Access Gateway Clusters to support distributed deployments or load
+balancing across remote sites.
+Refer to the steps below to add additional servers.
+Navigate to the
+Access Gateway Cluster
+window and click
+Add
+Access Gateway
+Cluster
+in the top-right corner.
+Figure 17: Adding an Access Gateway Cluster
+A setup window will open.
+Follow the steps in the setup window to complete the
+configuration.
+Figure 18: Adding an Access Gateway Cluster
+NOTE:
+Refer to this section for detailed steps to configure and add a Access
+Gateway Cluster.
+Configuring Third Party Server
+Navigate to the
+Access Gateway Cluster
+window and click
+Add
+Access Gateway
+Cluster
+.
+In the top-right corner of the setup window, click
+Configure Third Party
+Server
+.
+Figure 19: Configuring Third Party Server
+NOTE:
+To retrieve the correct server URL and port, refer to the
+instructions shown under
+Third-Party Access Gateway Cluster Configuration
+Steps
+.
+In the
+Configure Third Party Server
+popup, select the appropriate
+protocol (HTTP or HTTPS),
+enter the server name or IP, and provide the port number.
+Figure 20: Configuring Third Party Server
+Click
+Save
+to apply the settings. The newly added server will now be
+used
+by agents to communicate and upload logs to the configured processors.
+Read also
+This document explained the steps to configure Access Gateway Cluster . To learn how to
+configure and manage these components effectively, refer to the following articles:
+Managing Access Gateway Cluster

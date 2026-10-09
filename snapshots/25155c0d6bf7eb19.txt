@@ -1,0 +1,35 @@
+In this page
+Overview
+Available Reports
+Overview
+This page lists the Terminal Server reports available in the product to help monitor gateway access, user connection activity, authorization events, and communication patterns. These reports assist administrators in tracking successful and failed connections, analyzing session behavior, and identifying high-usage users, clients, and resources across terminal server environments.
+Available Reports
+Report group name
+Report name
+Terminal Server Events
+All Events
+Important Events
+Terminal Server Gateway logons
+Successful user disconnections from the resource based on clients
+Successful user disconnections from the resource based on administrators
+Successful user connections to the resource
+Failed user connections to the resource
+Successful connection authorizations
+Failed connection authorizations
+Successful resource authorizations
+Failed resource authorizations
+Terminal Server Gateway communications
+Top Byte transferred
+Top Byte received
+Session Duration
+Top activities based on states
+Terminal Server Gateway top reports
+Top Gateway Users
+Top Clients
+Top Resources
+Read also
+This page detailed the Terminal Server reports supported by the product for monitoring gateway access, session activity, and resource usage. Explore related report sections to gain deeper visibility into security events and operational trends.
+AWS reports
+Salesforce reports
+CEF format reports
+FireEye reports

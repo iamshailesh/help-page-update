@@ -1,0 +1,17 @@
+Log360 Cloud allows you to export the results of a search in the form of a report. To export a search result, follow the steps given below.
+Once you have obtained the result for a search, you will see the option
+Export As
+.
+You can choose to export the report either as a
+PDF
+file or a
+CSV
+file. Click on the required file format to export the search result.
+Now the search results will be compiled in the form of a downloadable report.
+Now, click on the
+icon next to the
+Export As
+button. Then click on
+Download
+, which will appear when you hover over the required search result.
+The report will now be downloaded to your default download location.

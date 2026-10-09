@@ -1,0 +1,153 @@
+In this page
+Overview
+Active Directory troubleshooting
+SQL Server troubleshooting
+Overview
+This page provides details troubleshooting during compliance and risk posture checks in ManageEngine Log360 and EventLog Analyzer. It specifically addresses the resolution of the
+âUnable to Verifyâ
+status for Active Directory and SQL Server, the
+âNo SQL Server(s) Configuredâ
+issue in the Edit Compliance module,
+and provides guidance for ensuring proper configuration and access for accurate compliance reporting
+.
+Active Directory
+Active Directory is applicable only for Log360
+Status shows
+âUnable to Verifyâ
+Figure 1: Unable to verify status in Active Directory
+Possible causes:
+Insufficient domain details
+Access denied for SYSVOL folder
+Insufficient domain details
+This occurs when domain details or credentials are not synced properly during integration with child components.
+Troubleshooting steps:
+Navigate to
+Settings tab
+and under
+Integrations
+, select
+Log360 integration
+Figure 2: Navigating to Log360 Integration
+Ensure at least one child component is integrated and at least one domain is configured.
+Click
+Sync Now
+in the top right corner.
+Figure 3: Syncing changes
+Navigate to the
+Compliance
+tab and go to the respective compliance/risk posture.
+Figure 4: Navigating to Compliance tab
+Click
+Run Now
+.
+Figure 5: Running analysis
+Access denied for SYSVOL folder
+This occurs when the Log360 installed machine cannot access the SYSVOL folder (C:\Windows\SYSVOL\sysvol) of the domain controllers due to Microsoft restrictions introduced after 2015.
+Figure 6: Access denied for SYSVOL folder
+Troubleshooting steps:
+Ensure SYSVOL folder is shared with the configured domain user.
+Apply one of the following methods
+Using Group Policy Object (GPO)
+Using Local Security Policy Editor
+Using Command Prompt
+Using Group Policy Object (GPO)
+NOTE
+Ensure that the GPO is applied in the domain where the product console is installed.
+On the domain controller, go to:
+Computer Configuration â Administrative Templates â Network â Network Provider
+Figure 7: Navigating to Network Provider
+Enable
+Hardened UNC Paths
+.
+Figure 8: Enabling Hardened UNC Paths
+In
+Options
+, click
+Show
+:
+Value Name: \\*\SYSVOL
+Value: RequireMutualAuthentication=0,RequireIntegrity=0,RequirePrivacy=0
+Figure 9: Modifying value and value name
+For immediate results, open
+Command Prompt
+as administrator and run:
+gpupdate /force
+on the machine where the product console is installed.
+Click
+OK
+.
+Using Local Security Policy Editor
+Run gpedit.msc on the machine where the product is installed.
+Figure 10: Running gpedit.msc command
+Navigate to
+Computer Configuration â Administrative Templates â Network â Network Provider
+Figure 11: Navigating to Network Provider
+Enable
+Hardened UNC Paths
+.
+Figure 12: Enabling Hardened UNC Paths
+In
+Options
+, click
+Show
+:
+Value Name: \\*\SYSVOL
+Value: RequireMutualAuthentication=0,RequireIntegrity=0,RequirePrivacy=0
+Figure 13: Modifying value and value name
+Click
+OK
+.
+Using Command Prompt
+Run the following as Administrator on the machine where the product is installed:
+%COMSPEC% /C reg add HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths /v "\\*\SYSVOL" /d "RequireMutualAuthentication=0" /t REG_SZ
+After applying for changes, go to
+the Compliance tab.
+Under Risk Posture
+, select Active Directory
+and click
+Run Now
+.
+SQL Server
+Status shows
+âUnable to Verifyâ
+Figure 14: Unable to verify status in SQL server
+Possible causes:
+SQL Server down
+Insufficient server details or user credentials
+SQL Server down
+The analysis requires the SQL server to be up and running.
+Troubleshooting steps:
+Verify that the selected SQL server(s) is online and accessible.
+Insufficient server details/user credentials
+SQL server configuration details and credentials must be valid. The configured user requires the
+sysadmin
+role for all rules to succeed.
+Troubleshooting steps:
+Update credentials and server details in the product console.
+Go to
+Settings
+tab and under
+Log Source Configuration
+, select
+Database Audit.
+Ensure correct credentials are provided.
+Refer to
+this
+help document for more details.
+Resolving
+"SQL Server(s) not Configured"
+in Edit Compliance
+Figure 15: Resolving "SQL Server(s) not Configured" in Edit Compliance
+Possible causes:
+SQL server(s) not configured
+Advanced auditing not enabled for the SQL server
+SQL server(s) not configured
+To configure Microsoft SQL DB, refer to
+this
+help document.
+Advanced auditing not enabled
+To enable advanced auditing in SQL Server, refer to
+this
+help document.
+Read also:
+This page explained how to troubleshoot the âUnable to Verifyâ status for Active Directory and SQL Server, and how to resolve the âNo SQL Server(s) Configuredâ issue in Edit Compliance.

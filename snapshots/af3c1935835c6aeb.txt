@@ -1,0 +1,103 @@
+Adding a Log Source Group
+To add a Log Source Group, follow the steps given below.
+Open Log360 Cloud and select the
+Settings
+tab. Then navigate to
+Log Source Groups
+under
+Admin
+.
+Click the
++ Add Group
+button.
+In the window that pops-up, provide a suitable
+Group Name
+and
+Description
+in the respective fields.
+Under
+Log Source List
+, click the
+icon to select Log Sources. Tick the box corresponding to the desired Log Sources and click
+OK
+.
+Click the
+Add
+button.
+Editting a Log Source Group
+To edit an existing Log Source Group, follow the steps given below.
+Open Log360 Cloud and select the
+Settings
+tab. Then navigate to
+Log Source Groups
+under
+Admin
+.
+Click the
+icon corresponding to the desired Log Source Group.
+Provide a new
+Description
+in the given field.
+Under Log Source List, click the
+icon to select Log Sources. Tick the box corresponding to the desired Log Sources and click OK.
+Click the
+Update
+button.
+Deleting a Log Source Group
+To delete a Log Source Group, follow the steps given below.
+Open Log360 Cloud and select the
+Settings
+tab. Then navigate to
+Log Source Groups
+under
+Admin
+.
+Click the
+icon corresponding to the desired Log Source Group to be deleted.
+Click
+Yes
+to confirm the action.
+Update monitoring interval for a Log Source Group
+To update the monitoring interval for a Log Source Group, follow the steps given below.
+Open Log360 Cloud and select the
+Settings
+tab. Then navigate to
+Log Source Groups
+under
+Admin
+.
+Choose the Log Source Groups to be updated by ticking the box corresponding to the Log Source Group name.
+Click the
+Manage
+button and select
+Monitor Interval
+from the drop down list.
+Confirm the action by clicking
+Yes
+.
+In the pop-up window, choose either Real-Time or Scheduled mode, and click
+Update
+.
+Now the monitor interval for the selected Log Source Groups are updated successfully.
+Update credentials for a Log Source Group
+To update the credentials for a Log Source Group, follow the steps given below.
+Open Log360 Cloud and select the
+Settings
+tab. Then navigate to
+Log Source Groups
+under
+Admin
+.
+Choose the Log Source Groups to be updated by ticking the box corresponding to the Log Source Group name.
+Click the
+Manage
+button and select
+Credentials
+from the drop down list.
+Confirm the action by clicking
+Yes
+.
+In the window that appears, provide the new username and password and click
+Update
+.
+Now the credentials for the selected Log Source Groups are updated successfully.

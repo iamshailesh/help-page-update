@@ -1,0 +1,96 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the various Barracuda reports available in the product console to help administrators monitor firewall events, track user and administrative activity, analyze traffic flow, and identify security threats across the network.
+Available Reports
+Report Group Name
+Report Name
+Device Severity Reports
+Information Events
+Notice Events
+Critical Events
+Emergency Events
+Error Events
+Alert Events
+Warning Events
+Debug Events
+Website Traffic Reports
+Top Traffic based on Destination
+Top Traffic based on Website
+Website Traffic Trend
+Top Traffic based on Source
+Website Traffic
+Denied Traffic Reports
+Top Denied Connections based on Protocol
+Top Denied Connections based on Destination
+Top Denied Connections based on Source
+Denied Connections Trend
+Denied Connections
+Top Denied Connections based on Port
+Firewall Security Reports
+Anti-spam Reports
+Antivirus Reports
+Rule Management
+Rules Modified
+Rules Added
+Rules Deleted
+IDS/IPS
+Top Attacks based on Source
+Top Attacks based on Destination
+Critical Attacks
+Possible Attacks
+Attacks Trend
+Logon Reports
+Top logons based on user
+Logons Trend
+Logons
+Top Successful Logons from Source
+System Events
+Clock Update
+Power Status
+Memory Status
+System ShutDown
+System Reboot
+Services Status
+Account Management
+Group Added
+Users Deleted
+Admin Modified
+Users Added
+Admin Deleted
+Group Deleted
+Users Modified
+Admin Added
+Group Modified
+Allowed Traffic Reports
+Top Traffic based on Port
+Allowed Traffic
+Top Traffic based on Destination
+Top Traffic based on Protocol
+Allowed Traffic Trend
+Top Traffic based on Source
+Email Security Reports
+Email Attack
+Email Received Reports
+Email Scanned Reports
+Email Sent Reports
+Failed Logon Reports
+Top failure logons based on users
+Top Failed Logons from Source
+Failed Logons Trend
+Failed Logons
+Barracuda Events
+All Events
+Important Events
+VPN Logon Reports
+VPN Logons
+VPN Log Out
+VPN logon trend reports
+Read also
+This document elaborated the list of Barracuda reports available in the product console and how they help monitor security events, traffic activity, system health, and user operations. Explore related report sections to gain deeper visibility into security events and operational trends.
+Huawei reports
+NetScreen reports
+Checkpoint reports
+Arista reports
+HP reports

@@ -1,0 +1,324 @@
+In this page
+Overview
+Dashboard widgets
+Detection Pipeline
+Detection by Tactics
+Recent Detections
+Top 5 Users by Detections
+Top 5 Log Sources by Detections
+Overview
+The Security Dashboard provides a centralized view of detections across your environment. It helps security teams monitor threats, analyze patterns, and prioritize incidents using real-time visuals and context-driven insights.
+Dashboard widgets
+Widgets provide real-time snapshots of the detections, trends, and key security metrics made by the detection engine, helping you quickly assess and respond to threats proactively. In the widgets containing graphs, clicking on a severity type removes data corresponding to it from the said graph(s).
+There are a total of 7 widgets available in the Security Analytics dashboard:
+Detection Pipeline
+Detection by Tactics
+Recent Detections
+Top 5 Users by Detections
+Top 5 Log Sources by Detections
+Top 10 Detections by Rules
+Detection Trends
+Every widget in this dashboard includes two icons in its top-right corner:
+Expand
+: This option provides an expanded view of that widget, offering more, and deeper insights related to it.
+Refresh
+: Clicking on the
+Refresh
+icon instantly re-assesses the real-time log data and updates the widget with the same, ensuring you never miss even a second worth of key findings from your network's security analysis.
+Severity colors
+Security events (excluding the
+Top 10 Detections by Rules
+widget) are categorized by severity levels as set during the
+rules configuration
+, represented through distinct colors for quick identification as listed below:
+Red- Critical
+: Represent severe, high-priority security detections that require immediate attention and possible mitigation steps.
+Orange- Trouble
+: Indicate medium-level events/incidents hinting at potential risks, suspicious activities, or policy violations that demand prompt investigation.
+Yellow- Attention
+: Denote low-level detections that require monitoring but pose no immediate risk.
+Below is a complete breakdown of all the widgets that the
+Security Analytics
+dashboard is comprised of:
+1. Detection Pipeline
+The
+Detection Pipeline
+visualizes the flow of the
+detections
+and
+alerts
+across the three severity levels. It provides a quick overview of how many events were detected, categorized, and then escalated into actionable alerts.
+A. Concise widget view
+Details displayed
+Detections
+: The total count of events flagged by the system.
+Alerts
+: Number of detections that have been flagged as alerts.
+Severity distribution
+: Each of the three severity levels is displayed with its corresponding event(s) count.
+Role in Security Analytics
+The
+Detection Pipeline
+widget acts as the starting point for threat monitoring by helping analysts:
+Quickly identify the severity distribution of all the current threats.
+Detect spikes or anomalies in alert generation.
+Streamline the investigation process by focusing on high-priority alerts.
+B. Expanded widget view
+Image 1: Detection pipeline widget in security analytics dashboard
+The expanded widget view displayed upon clicking on the expand icon provides a clearer representation of the rules spread across the severity levels.
+2. Detection by Tactics
+The
+Detection by Tactics
+chart maps all the flagged events to the
+MITRE ATT&CK framework
+. It shows which stages of the cyberattack lifecycle, such as
+Initial Access
+,
+Execution
+,
+Privilege Escalation,
+are being set in motion via simultaneous events/activities.
+A. Concise widget view
+Details displayed
+Tactic categories
+: Includes the possible common attack stages like
+Initial Access
+,
+Discovery
+,
+Exfiltration
+, and
+Lateral Movement
+.
+Severity overlay
+: Each tactic is color-coded by the three severity levels.
+Role in Security Analytics
+This widget provides a tactical view of potential adversary behavior, helping teams:
+Analyze and understand attack patterns and prevalent tactics in their environment.
+Prioritize security controls for the most frequently targeted attack phases.
+Align detection rules with industry-recognized attack models for enhanced defense.
+B. Expanded widget view
+Image 2: Detection by tactics widget in security analytics dashboard
+The expanded widget view displayed upon clicking on the expand icon provides a clearer representation of the rules spread across the severity levels.
+Clicking on any data point representing a detection count slides open the data table for that particular rule severity level, similar to the expanded view of the four components.
+3. Recent Detections
+The
+Recent Detections
+widget provides a chronological list of the events triggered most recently, enabling real-time incident visibility.
+A. Concise widget view
+Image 3: Recent detections widget in security analytics dashboard
+Details displayed
+Rule name
+: The name of the rule that is associated with the detection triggered.
+Description
+: Brief summary of the detection. For example, "Interactive Logon â A process deleted a system backup".
+Username
+: Identifies the username of the account associated with the event/activity.
+Log Source
+: Specifies the origin device or system.
+MITRE ATT&CK Mapping
+: Associates the detection with a specific technique(s) or tactic(s) from the MITRE ATT&CK framework.
+Timestamp
+: Captures the exact date and time of the event occurrence.
+Role in Security Analytics
+This widget serves as a real-time threat feed, helping security analysts:
+Quickly detect and respond to emerging threats.
+Correlate events with specific users and devices.
+Perform rapid triage using MITRE mappings to understand the nature of attacks.
+B. Expanded widget view
+Image 4: Recent detections widget in security analytics dashboard
+The expanded widget view displayed upon clicking on the expand icon provides a clearer representation of the details of the most recent detections.
+Upon clicking on any rule from this view (or compact view), a complete analysis of that rule slides open as shown below.
+Image 5: Recent detections analysis in security analytics dashboard
+This analysis contains the following-
+Overview tab:
+Description-
+Text field summarizing what the rule is about (empty in this case).
+Time-
+Exact timestamp of when the rule was triggered.
+Severity-
+Indicates the impact level of the rule triggered - here, it is Critical.
+Insights section-
+Who:
+Username involved in the triggered rule.
+Where:
+Device or host where the event occurred.
+Client IP:
+IP address of the client involved in the incident.
+MITRE ATT&CK:
+Mapping to known adversarial tactics/techniques.
+Tags:
+Labels giving contextual information
+Mitigation section-
+Mitigation:
+Recommended or recorded response actions.
+Timeline tab:
+Inserts the detection in a chain of consecutive events providing a larger picture of all the occurring activities in a context that fits.
+Image 6: Recent detections analysis in security analytics dashboard
+Clicking on the Details button prompts open a pane containing ALL details of that particular event associated with that rule detection. Below is the list of details provided:
+Risk Level
+Message
+Source
+Remote DeviceIp
+Logon Type
+Process Id
+OS Category
+Host Type
+LogonId
+Task Category
+Member Group SID
+Authentication Package Name
+Event Name
+Device
+GUID
+Logon Process
+Severity
+Key Length
+Event ID
+ACTION_TAG
+Type
+Caller LogonID
+Username
+Security Id
+Source Port Number
+Domain
+4. Top 5 Users by Detections
+This chart highlights in a statistical view the top five user accounts with the highest detection counts, broken down by severity.
+A. Concise widget view
+Details displayed
+Username
+: Displays the usernames of the accounts of the top 5 users on the x-axis.
+Count
+: Total number of detections per user on the y-axis.
+Severity breakdown
+: Stacked bars visualize the proportion of the three severity levels of the alerts per user.
+Role in Security Analytics
+Identifies compromised accounts or potential insider threats.
+Helps prioritize account audits for high-risk users.
+Provides a behavioral snapshot of every suspicious user's activity patterns.
+B. Expanded widget view
+Image 7: Top 5 users by detections widget in security analytics dashboard
+The expanded widget view displayed upon clicking on the expand icon provides a clearer representation of the rules spread across the severity levels.
+5. Top 5 Log Sources by Detections
+This chart shows the devices or systems contributing the highest in order to the total detection counts.
+A. Concise widget view
+Details displayed
+Log Source
+: Specifies the origin device or system on the y-axis.
+Count
+: Number of detections per log source on the x-axis.
+Severity split
+: Bars of the graph, color coded with the three severity levels indicate which devices are generating alerts of varied severity.
+Role in Security Analytics:
+Highlights the most vulnerable or frequently attacked devices.
+Helps you focus on device hardening efforts on potential high-risk systems.
+Provides insights into log source health and configurations.
+B. Expanded widget view
+Image 8: Top 5 log sources by detections widget in security analytics dashboard
+The expanded widget view displayed upon clicking on the expand icon provides a clearer representation of the rules spread across the severity levels.
+6. Top 10 Detections by Rules
+This bar chart displayed here ranks the top 10 detection rules based on the frequency of detected triggers.
+A. Concise widget view
+Details displayed
+Rule Name
+: Includes rules such as
+Excessive file access
+,
+Repeated operations
+, or
+Brute force
+on the x-axis
+Count
+: Displays how many times each rule was triggered on the y-axis.
+Role in Security Analytics
+Identifies recurring threats or common triggers.
+Assists in fine-tuning detection rules to reduce false positives.
+Provides data to optimize threat hunting and response strategies.
+B. Expanded widget view
+Image 9: Top 10 detections by rules widget in security analytics dashboard
+The expanded widget view displayed upon clicking on the expand icon provides a clearer representation of the rules spread across the severity levels.
+Clicking on any data bar representing detection count slides open the data table for that particular rule severity level, similar to the expanded view of the four components.
+7. Detection Trends
+The
+Detection Trends
+chart tracks detection activity over time, segmented by severity.
+A. Concise widget view
+Details displayed
+Time
+: Displays yearly or monthly detection counts spread across the x-axis.
+Count
+: Displays the total count of detections across time periods on the y-axis.
+Severity trend lines
+: Separate lines of the graph track the detections assorted based on the three severity levels.
+Role in Security Analytics
+Helps spot anomalies or sudden spikes in activity.
+Provides historical context for incident analysis.
+Aids in capacity and resource planning for security operations.
+B. Expanded widget view
+Image 10: Detections trends widget in security analytics dashboard
+The expanded widget view displayed upon clicking on the expand icon provides a clearer representation of the rules spread across the severity levels.
+Actions available in the Security Analytics dashboard
+There are two mainly available actions in this tab:
+Custom time range
+: For data analysis in the form of widgets.
+Manage Rules
+: To view the rule management module. It acts as the backbone of the security analytics capability of Log360 by creating a highly effective framework that is followed by the analysis-identification-detection cycle by the SIEM (Security Information and Event Management) solution that assists you in safeguarding your enterprise network and enforcement of active threat detection and proactive threat response mechanisms.
+Custom time range
+Navigate to the
+Security Analytics
+dashboard via the
+Security
+tab and click anywhere in the highlighted area as shown below.
+Image 11: Configuring detections time period in security analytics dashboard
+The action prompts open the calendar view along with predefined time ranges for you to choose from.
+You can:
+Select the start date and end date for your desired time range.
+Click on any of the predefined time ranges available that suits your requirements.
+Click on
+Custom range
+and then proceed to enter a number in the box provided below that will represent the past number of days worth of data you wish to view.
+Click on
+Apply
+.
+Upon completion of action, you will see that the
+Security Analytics
+dashboard is instantly updated according to the time range you have selected.
+Manage Rules
+Navigate to the
+Security Analytics
+dashboard via the
+Security
+tab and click on the
+Manage Rule
+option as highlighted in the below image.
+Image 12: Manage rules button in the security tab
+You will be taken to the
+Manage Rules
+module, which is the central hub for managing rules, allowing you to configure rules efficiently.
+Image 13: Manage rules module via the security tab
+Click here to learn more about rule management and how to configure rules.
+Dashboard customization
+The
+Security Analytics
+tab in itself cannot be customized via the
+Security
+tab. Instead, the same sub-tab is provided in the product as the
+Detection Overview
+sub-tab in the
+Dashboard
+tab.
+The
+Detection Overview
+dashboard includes everything that is provided in the
+Security Analytics
+tab while also allowing you to customize the dashboard and the widgets in it.
+To learn how to customize your
+Detection Overview
+dashboard in the main
+Dashboard
+tab, refer to the
+Dashboard View
+help document.
+Read also
+This page detailed all seven security dashboard widgets, their compact and expanded views, and how they help you monitor threats, analyze adversary tactics, and identify high-risk users, rules, and devices.
+Security dashboard overview

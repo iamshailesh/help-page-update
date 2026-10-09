@@ -1,0 +1,77 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the various H3C reports available in the product console to help administrators analyze allowed and denied traffic, track user and VPN logon activity, monitor rule and DHCP operations, detect intrusion attempts, and review system and device health events.
+Available Reports
+Report group name
+Report name
+Allowed Traffic Reports
+Allowed Traffic
+Top Traffic based on Source
+Top Traffic based on Destination
+Allowed Traffic Trend
+Denied Traffic Reports
+Denied Connections
+Top Denied Connections based on Source
+Top Denied Connections based on Destination
+Denied Connections Trend
+Logon Reports
+Logons
+Logoff
+Logons Trend
+Failed Logon Reports
+Failed Logons
+Failed Logons Trend
+Rule Management
+Rules Added
+Rules Deleted
+Rules Modified
+DHCP Report
+IP Address Allocated
+Conflicted IP Address
+Lease Extended IP Address
+Interface Status
+Interface Up
+Interface Down
+IDS/IPS
+All Attacks
+Attacks Trend
+VPN Logon Reports
+VPN Logons
+VPN logon trend reports
+Failed VPN Logon Reports
+Failed VPN Logons
+VPN Failed logon trend reports
+Firewall Security Reports
+Web Filter
+Antivirus Reports
+System Events
+Configuration Change
+Clock Update
+System Reboot
+Fan Status
+Temperature Status
+Memory Status
+CPU Status
+HA Status
+Power Status
+Device Severity Reports
+Warning Events
+Notice Events
+Error Events
+Critical Events
+Emergency Events
+Information Events
+Alert Events
+Debug Events
+H3C Events
+All Events
+Important Events
+Read also
+This document elaborated the list of H3C reports available in the product console and how they help monitor traffic behavior, security threats, system operations, user access, and device severity events. Explore related report sections to gain deeper visibility into security events and operational trends.
+Stromshield reports
+Forcepoint reports
+Dell reports
+Apache reports
+IBM DB2 reports

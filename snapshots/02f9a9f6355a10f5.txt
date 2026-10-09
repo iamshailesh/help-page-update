@@ -1,0 +1,15 @@
+Login to the
+Firewall
+.
+Go to the
+config
+mode;
+Configure the switch as given below (here, we have used Catalyst 2900) to send the logs to the EventLog Analyzer server:
+Cisco-ASA#
+config terminal
+Cisco-ASA (config)#
+logging host <EventLog _server_IP> [TCP/UDP]/< Port_Number >
+Cisco-ASA (config)#
+logging trap information
+Cisco-ASA (config)#
+logging facility local7

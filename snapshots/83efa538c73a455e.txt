@@ -1,0 +1,31 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the reports available for DHCP Linux servers in the product console. These reports help administrators monitor DHCP events, analyze IP address allocation and lease activities, track client requests, and gain visibility into DHCP server operations for troubleshooting and audit purposes.
+Available Reports
+Report group name
+Report name
+DHCP Linux Events
+All Events
+Important Events
+DHCP Server Reports
+DHCP Linux Overview
+Information Reports
+Negative Acknowledges
+Releases
+Acknowledges
+Requests
+Offers
+Discovers
+Top MAC Address
+Top IP Address
+Top Operation
+Top Gateway
+Read also
+This document elaborated the DHCP Linux reports available in the product console and their usage in monitoring DHCP activity and IP address management. Explore other related report sections to gain deeper insights into network and infrastructure events.
+DHCP Windows reports
+ERP reports
+IIS W3C FTP reports
+IIS W3C Web reports
+MSSQL reports

@@ -1,0 +1,112 @@
+In this page
+Overview
+Adding or removing columns
+Pinning the graph to the dashboard
+Calendar Functionality
+Field Units
+Add to Incident
+Filters
+Overview
+The Personalize Reports feature allows users to tailor reports based on their analysis and monitoring needs. Using this feature, users can customize report columns, pin report graphs to dashboards, manage date ranges through enhanced calendar controls, define time-based field units, and map report events to incidents for further investigation.
+These personalization options help improve report readability, ensure consistency in analysis, and enable faster response to security and operational events.
+Adding or removing columns
+The product gives users the ability to add or remove columns to the reports.
+To add or remove columns:
+Select the report you want to add or remove columns and click on the top-right corner of the report.
+In the pop-up window, select the fields you want to display in the search results by ticking the corresponding boxes. To exclude fields, simply leave the boxes unticked.
+You can also rearrange the selected columns by dragging and dropping the column names accordingly, in the
+Selected Columns
+section.
+Click
+Save
+to apply your preferences.
+Now you have the options to
+Select all
+and
+Reset back
+to default settings.
+Note
+When the reports are exported, the columns that have been selected will be represented.
+Select All will be shown only when the Number of Fields is less than 10.
+Pinning the graph to the dashboard
+The product gives users the ability to pin graphs to the dashboard.
+To pin a graph:
+Select the report you want to pin.
+Click the
+More
+drop-down button on the top right corner and select
+Pin to Dashboard
+.
+In the pop-up window, you can select the tab, widget, widget type, and display name of the widget that you'd like to pin.
+Click
+Add
+to save your preferences.
+Calendar Functionality
+The
+Calendar Functionality
+feature introduces enhanced options for managing date ranges. This functionality provides greater flexibility and efficiency when working with date-specific data.
+NOTE
+The calendar functionality is available in both reports and dashboards.
+The date ranges can be managed in two ways as follows:
+Custom Ranges:
+Create new date ranges by selecting the
+Custom Range
+option.
+Easily delete any custom ranges that are no longer needed.
+Pinned Calendar Ranges:
+Pin a specific calendar range to a report.
+The pinned range will automatically load each time the report is accessed or reloaded, ensuring consistency and saving time.
+Field Units
+When creating a
+Custom Report
+based on summary or pivot view, the following units are available for the field Time, which will determine the unit of time:
+Hour - The time will be represented hour-wise.
+Day - The time will be represented day-wise (by days of the week).
+Date - The time will be represented date-wise (by dates of the month).
+Month - The time will be represented month-wise (by months of the year).
+Year - The time will be represented year-wise.
+Default - The time unit will adjust dynamically based on the selected time range in the date range picker. For example, if the time range is more than one hour, the time will be shown hour-wise; if the range exceeds one day, it will be displayed date-wise, and so on.
+Note
+The time units Hour and Year are available only in the On-Premise version of the product.
+If a custom report or report view is based on the time unit Hour, the time range is restricted to a maximum of 12 months for viewing data.
+Add to Incident
+You can further investigate the deviant events specified in the report by mapping those events as incidents and thoroughly examining them by assigning a dedicated IT security professional. You can map reported events as incidents by following the steps given below:
+Navigate to the
+Reports tab
+and click the report you want to add as an incident.
+Click the
+Incident
+button and select the events of interest.
+Click the
++Add to Incident
+button and select the name of the incident to which you want to add the selected events.
+Alternatively, you can also create a new incident by clicking the
++Add New Incident
+link.
+If you're creating a new incident, enter a name and description for the incident. Select the
+assignee, status, and severity
+from the respective drop-down menus.
+Click
+Create
+.
+You can now view the events of the report listed under the Evidence tab of the selected incidents.
+Filters
+The
+Filter Options
+feature allows flexible management of data filters to suit your needs.
+It supports two types of filtering behavior, depending on how the data is selected:
+Filter types:
+Full Value Selection
+Clicking on a complete value applies a filter using an equals (=) condition. This will return only the records that exactly match the selected value.
+Partial Text Selection
+Manually highlighting a portion of a value applies a filter using a contains condition. This will return records that include the selected text anywhere within the value.
+The filters can be applied as a new filter or to existing conditions.
+New filter:
+Clears all existing filters and applies a new filter, displaying only the newly filtered data.
+Add to filter:
+If a filter is already applied, this option allows you to append a new filter to the existing one. This enables you to refine your data further without removing the previously applied filters.
+Read also
+This document elaborated the various customization options available while working with reports to improve analysis efficiency and incident investigation. Explore other related content to understand additional report management and visualization capabilities supported by the product.
+Managing Predefined Reports
+Custom Reports
+Managing Report Views

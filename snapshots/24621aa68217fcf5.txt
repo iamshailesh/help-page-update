@@ -1,0 +1,83 @@
+In this page
+Overview
+UEBA workflow
+What is the Machine Learning Server
+Behavior profiling and anomaly model application
+RPCA mechanism
+Markov Chains mechanism
+Detection of anomalies
+Anomaly reporting and alerting
+Overview
+This page covers the underlying architecture and functioning of Log360 Cloud's User and Entity Behavior Analytics (UEBA), how it applies machine learning to monitor the user and entities activities, builds
+behavioral baselines
+to identify deviations and detect anomalies based on said deviations. It helps security teams quickly identify insider threats, compromised accounts, and policy violations.
+Image 1: ManageEngine Log360 Cloud's UEBA workflow
+Log360 Cloud's User and Entity Behavior Analytics (UEBA) leverages sophisticated Machine Learning (ML) techniques to identify abnormal behavior patterns across users and hosts within the network. By highlighting deviations from normal behavior baselines, UEBA helps analysts detect insider threats, compromised accounts, and policy violations with greater accuracy and efficiency.
+UEBA workflow
+1. Log collection
+The first step in the UEBA workflow involves aggregating logs from multiple sources within the monitored network. These include user authentication logs, file access events, process creation logs, system events, and other host or application activity data.
+These raw event logs are collected using the
+Log Collector
+, which supports collection via various log formats and protocols (e.g., Syslogs, Windows Event Logs, etc.).
+2. Routing logs to the machine learning engine
+Once collected, the logs are routed to the
+Machine Learning Server
+, the core processing engine within the UEBA architecture.
+What is the machine learning server?
+The
+Machine Learning Server
+is a specialized processing module that handles the ingestion and analysis of event logs using ML-based algorithms. It performs the following operations:
+Associates events with users and hosts.
+Feeds relevant event sequences into anomaly detection models.
+Applies multiple detection algorithms (RPCA and Markov Chains).
+Continuous learning process - The ML model creates the baselines and once the baselines are created, the model is queried and scans for the anomalies. With the continuous learning nature of this model, these baselines are continuously updated as well.
+Behavior profiling and anomaly model application
+Once the data reaches the ML Server, the UEBA engine performs
+behavior profiling
+by constructing baseline models for every user and entity over a defined observation window. These models evolve dynamically as more logs are analyzed.
+The behavioral analysis uses
+three distinct types of models
+, each leveraging specific mechanisms:
+Model Type
+Underlying Mechanism
+Purpose
+Time-based model
+Robust Principal Component Analysis (RPCA)
+Flags deviations in temporal activity patterns (e.g., logging in at unusual hours).
+Count-based model
+Robust Principal Component Analysis (RPCA)
+Highlights abnormal frequency of actions (e.g., too many file accesses).
+Pattern-based model
+Markov Chains
+Detects deviations in activity sequences (e.g., login followed by data exfiltration pattern).
+RPCA mechanism
+RPCA identifies low-rank behavior structures and separates noise or outliers (anomalies). It works well in detecting sudden spikes in behavior.
+Markov chains mechanism
+Markov models track sequences of actions and calculate the probability of an event sequence. When new sequences deviate significantly from the learned transitions, they're flagged as anomalies.
+Detection of anomalies
+The system does not treat individual logs as anomalies. Instead, it evaluates
+event occurrences over time
+across the different models. If a set of actions significantly deviates from the baseline behavior, it is classified as an
+anomalous behavior
+.
+Examples:
+A user downloading a file isn't anomalous.
+A policy change made during odd hours- A policy change, Firewall policy for example, in itself would not be an anomaly. But with the baseline hours for such changes being 9am-6pm, a policy change made at 11pm could be an anomaly.
+Anomaly reporting and alerting
+When behavioral anomalies are detected, the Machine Learning Server forwards the anomalous events/logs to the reporting engine. Hereâs what happens next:
+Events leading to the anomaly are
+grouped
+.
+These are then compiled into
+Anomaly Reports
+, highlighting:
+The user or entity involved
+Type of anomaly (time, count, pattern)
+Risk scores of anomalous users and entities
+Security analysts can then investigate the report. If they want to get a notification whenever the anomaly occurs, they can enable
+alert profile
+, add that as an incident and remediate it.
+Read also
+This document elaborated the working architecture behind the functioning of the anomaly models of Log360 Cloud's UEBA. For leveraging the capabilities of UEBA, refer the below articles:
+Anomaly rules in UEBA
+Investigating anomalies

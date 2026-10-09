@@ -1,0 +1,60 @@
+In Log360 Cloud, you can install a gateway server with the following steps:
+Login to your
+Log360 Cloud
+account.
+Go to
+Settings â Configuration â Cloud Protection Settings
+.
+Under
+Server
+, click on
+Gateway Servers
+.
+Click on
+Install Gateway Server
+.
+Download the
+MSI installer
+by clicking the
+Download Cloud Protection Gateway
+button.
+Once downloaded, double-click the
+Log360Cloud-CP-Gateway.msi
+file.
+Follow the steps in the gateway installation wizard. If your environment requires a proxy, enter the proxy details in the appropriate field. If not, proceed with a direct connection.
+Copy the
+Access Key
+, paste it into the installation wizard, and click
+OK
+.
+Once the installation process is complete, the gateway server will communicate with Log360 Cloud to sync the configuration details.
+Click the button to close the
+Install Gateway Server
+pop-up, then click the
+Refresh
+button in the top right corner to update the status.
+If DPI is disabled, the CA Certificate does not need to be installed. However, if DPI is enabled or set to mixed mode, users are required to install the
+CA Certificate
+on their endpoint machines to ensure secure communication between the gateway server and other endpoint devices.
+Configure proxy settings, in endpoint machines, for network traffic routing. For more details, refer to this
+page
+.
+Steps to update Gateway Server
+Open your system's Control Panel.
+Uninstall ManageEngine Log360Cloud - Cloud Protection Gateway program.
+Download the new gateway server and install using the steps given above.
+Steps to update Proxy Settings
+In the machine running the gateway server, go to
+Services.msc
+and stop the
+ManageEngine Log360Cloud - Cloud Protection Gateway
+Service.
+Run the Command Prompt as administrator at
+<Gateway Server installation location>\bin
+(The default location is C:\Program Files\ManageEngine\ManageEngine Log360 Cloud - Cloud Protection Gateway\bin), and execute the
+EditProxySettings.bat file
+.
+This will open Proxy Settings popup. In the window, update your proxy settings and click Save.
+Now go to Services.msc and restart the
+ManageEngine Log360Cloud - Cloud Protection Gateway
+service.

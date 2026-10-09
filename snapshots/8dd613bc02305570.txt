@@ -1,0 +1,237 @@
+In this page
+Overview
+Create agents from Scratch
+Create agents with Zia AI
+Deploy agents from Store
+Multi-Agent workflows
+Deploying a custom agent
+Overview
+Zoho Agent Studio is a dedicated workspace for building and managing custom AI agents. This section covers the different methods available to create an agent in Agent Studio, including building from scratch, using Zia AI assistance, and adding agents from the Store. It also covers how to configure multi-agent workflows and how to deploy an agent so that it becomes available in Log360 Cloud.
+Create agents from Scratch
+Go to
+Agent Studio,
+click
+Create From Scratch
+and provide a name for the agent.
+Figure 1: Creating agents from scratch
+In the
+Basic Information
+window, provide the following details:
+Agent Description
+- Defines the purpose of the agent.
+Vendor Configuration
+- Select the AI provider.
+Model
+- Choose the AI model.
+Agent Role
+- Define the agent's function and scope.
+Agent Instructions
+- Specify the context and tasks the agent should perform.
+Figure 2: Configuring basic information
+After entering the required information, click
+Continue
+to proceed.
+In the
+Knowledge Base
+window, select documents or articles that guide how the agent responds and behaves. The documents or articles that appear here are files uploaded in the Knowledge Base section.
+Figure 3: Attaching content
+After attaching the required content, click
+Continue
+to proceed.
+In the
+Tools
+window, click
+Add Tools
+to select the required APIs that define the actions the agent can perform. These tools enable the agent to interact with external systems and retrieve or process data as required.
+Figure 4: Configuring tools
+After selecting the required tools, click
+Continue
+to proceed.
+Review and configure the additional settings for the agent, including
+guardrails
+such as fairness, bias control, and toxicity checks, as required.
+Figure 5: Configuring additional settings
+After reviewing the configuration, click
+Create
+to complete the setup.
+Create agents with Zia AI
+This method generates an agent configuration based on a description of the agent's intended purpose.
+Go to
+Agent Studio
+, click
+Create with Zia AI.
+Figure 6: Create with Zia AI
+Enter a description of the agent's intended function and click
+. For example, "
+Create an agent that retrieves technician audit logs and supports user queries.
+"
+Figure 7: Entering a description
+Respond to any follow-up questions presented by the AI.
+Review the generated configuration and click
+Create From Scratch.
+Deploy agents from Store
+In
+Agent Studio
+, navigate to
+Store
+.
+Click the category dropdown and select a category to filter agents by business function. Select
+All Categories
+to view all available agents.
+Figure 8: Selecting a category
+Click the
+Rating
+dropdown and select a minimum star rating to filter agents by quality.
+Figure 9: Filter by rating
+Use the
+Search Agents
+field to look up a specific agent by name.
+Figure 10: Locating a agent
+Select an agent card to view its details, including its description and capabilities and then click
+Hire
+to add the agent to your organization.
+Figure 11: Hiring an agent
+In the confirmation pop-up that appears, select the portal from the
+Portal Name
+dropdown.
+Figure 12: Hiring confirmation
+Select the checkboxes to agree to the
+Terms of Service
+and
+Privacy Policy
+of the vendor and the Agent Marketplace.
+Click
+Hire
+to add the agent.
+Multi-Agent workflows
+Multi-Agent mode enables multiple agents to be connected into a coordinated workflow for complex, multi-step processes. A master agent manages the overall process and delegates tasks to sub-agents, each responsible for a defined step.
+In
+Agent Studio
+, navigate to
+Multi-Agent
+. In the Multi-Agent window click
+Create Multi-Agent
+.
+Figure 13: Creating a multi-agent
+The window opens with a Master Agent panel on the right. Enter the
+Agent Name
+,
+Agent Description
+,
+Model Configuration
+,
+Model
+,
+Agent Role,
+and
+Agent Instructions
+. Click
+Update
+to save the master agent configuration.
+Figure 14: Configuring master agent
+To modify the master agent, click the agent and select
+Edit
+. Update the required fields such as
+Agent Name, Agent Description, Model Configuration, Model, Agent Role,
+and
+Agent Instructions,
+then click
+Update
+to save your changes.
+Figure 15: Modifying configured details
+In the multi-agent window, the Master Agent appears at the top. Click
+Add Sub-Agent(s)
+below the master agent node to add specialized agents that will handle specific tasks in the workflow.
+The
+Add Sub-Agents
+panel opens on the right, displaying a list of available agents. Use the search bar to find a specific agent, then select the checkbox next to the desired agent(s) and click
+Add
+.
+Figure 16: Adding sub-agents
+Once all sub-agents are configured, click
+Mark As Ready
+in the top-right corner to mark the workflow as complete and ready for deployment.
+The multi-agent page displays a list of agents marked as ready. Click a multi-agent to view its
+Agent Info
+and an
+Agents Preview
+of the workflow. From here, click
+Test Agent
+to chat with and verify the agent is working correctly before deploying, or click
+Deploy
+to publish the workflow.
+Figure 17: Viewing details of multi-agents
+To make changes, click the
+icon and select from the following options:
+Edit
+- Modify the existing configuration of the multi-agent workflow.
+Edit As New Version
+- Save changes as a new version while preserving the existing version.
+Delete
+- Permanently remove the multi-agent workflow. A confirmation pop-up appears after clicking Delete, click
+Yes
+to confirm the deletion.
+Figure 18: Deleting an agent
+Deploying a custom agent
+After a custom agent has been created in Agent Studio, it must be deployed before it becomes available in Log360 Cloud.
+In
+Agent Studio
+, go to the
+Agents
+tab and select the agent to be deployed.
+Figure 19: Viewing agents
+Hover over Tool, Knowledge Base, or Guardrails in the list and click
+Edit
+to modify its configuration.
+Figure 20: Modifying configurations
+Click
+Manage Connections
+to open the
+Service Deployment Details
+panel. This panel displays the connected service and allows you to associate a connection with the tool. Select an existing connection from the Select Connection dropdown, or click
+New
+to create a new connection. Click
+Save
+to apply the changes.
+Figure 21: Configuring service deployment details
+Click
+Set Parameters
+to open the
+Tools Param Mapping
+window. This window allows you to define how each parameter value should be sourced for the tool. For each parameter, select one of the following options:
+Model
+- The value is auto-filled by the model.
+On-Trigger
+- The value is passed when the agent is triggered.
+Constant -
+You provide a fixed value manually.
+Optional Params
+- Uncheck the parameter to exclude it from the tool params.
+NOTE
+When deploying an agent, only the Model option is supported for Tools Param Mapping. This means parameter values will be automatically filled by the model during execution.
+Figure 22: Defining parameters
+Click
+Save
+once all parameters have been mapped.
+Click
+Test Agent
+to open the chat window and validate that the agent functions as expected. Send test messages to verify the agent responds correctly before proceeding with deployment.
+Once validated, click
+Deploy
+to activate the agent and make it available in Log360 Cloud. To perform additional actions, click the
+and select from the following options:
+Clone
+- Create a duplicate of the agent with the same configuration.
+Share
+- Share the agent with other users in your organization.
+Delete
+- Permanently remove the agent. A confirmation pop-up appears; click
+Yes
+to confirm the deletion.
+Figure 23: Performing additional actions
+NOTE
+Changes made in Agent Studio, such as creating, editing, or deleting agents, are not automatically reflected in Log360 Cloud. The
+icon on the Zia Agents page must be used to sync the latest changes.
+Read also
+This page explains how to create and deploy custom AI agents in Agent Studio. To learn more about related configurations and features, refer to:
+Configuring Zia Agents

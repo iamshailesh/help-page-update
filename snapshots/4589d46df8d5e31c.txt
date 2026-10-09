@@ -1,0 +1,110 @@
+The Syslog service in your
+Bararacuda
+devices, can be configured by following these five steps:
+Enable the Syslog Service
+Navigate to
+CONFIGURATION > Full Configuration > Box > Infrastructure Services > Syslog Streaming
+.
+Click on
+Lock
+.
+Enable the Syslog service.
+Click
+Send Changes
+and
+Activate
+.
+Configure Logdata Filters
+Navigate to
+CONFIGURATION > Full Configuration > Box > Infrastructure Services > Syslog Streaming.
+From the menu select
+Logdata Filters.
+Click on
+Configuration Mode
+>
+Switch to Advanced View
+>
+Lock
+Click on
++
+icon to add a new entry.
+Enter a descriptive name in the
+Filters
+and click
+OK
+.
+In the
+Data Selection
+table, add the log files to be streamed. (e.g. Fatal_log, Firewall_Audit_Log, Panic_log)
+In the
+Affected Box Logdata
+section, define what kind of box logs are to be affected by the Syslog daemon from the
+Data Selection list
+.
+In the
+Affected Service Logdata
+section, define what kind of logs created by services are to be affected by the Syslog daemon from the Data Selection list.
+Click on
+Send Changes
+and
+Activate.
+Configure Logstream Destinations
+Navigate to
+CONFIGURATION > Full Configuration > Box > Infrastructure Services > Syslog Streaming.
+From the menu select
+Logstream Destinations
+.
+Expand the
+Configuration Mode
+>
+Switch to Advanced View
+> Lock.
+Click on
++
+icon to add a new entry.
+Enter a descriptive name and click
+OK
+.
+In the Destinations window select the
+Remote Loghost
+.
+Enter the EventLog Analyzer server IP address as destination IP address in the
+Loghost IP
+address field.
+Enter the destination port for delivering syslog message as
+513, 514
+.
+Enter the destination protocol as
+UDP
+.
+Click
+OK
+Click on
+Send Changes
+and
+Activate.
+Disable
+Log Data Tagging
+Configure Logdata Streams
+Navigate to
+CONFIGURATION > Full Configuration > Box > Infrastructure Services > Syslog Streaming.
+From the menu, select
+Logdata Streams
+.
+Expand the
+Configuration Mode
+menu and select
+Switch to Advanced View
+.
+Click the
++
+icon to add a new entry.
+Enter a descriptive name and click
+OK
+.
+Configure Active Stream, Log Destinations and Log Filters settings.
+Click on
+Send Changes
+and
+Activate
+.

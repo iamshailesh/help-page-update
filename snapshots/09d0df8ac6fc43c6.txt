@@ -1,0 +1,168 @@
+In this page
+Overview
+Common issues and resolutions
+Collecting logs for support
+Service recovery steps
+Overview
+This page helps you troubleshoot common Log Processor issues, including connectivity, service failures, delayed log processing, and performance problems. It also explains how to collect diagnostic data and restore services.
+Common issues and resolutions
+1. My Log Processor status appears Down. What should I check?
+Confirm that the Log Processor service is running.
+Verify network connectivity (ping, firewall, DNS).
+Ensure the processor is running the same product version as the other processors.
+2. The Log Processor status shows Service Status Unavailable. What does this mean?
+The processor is reachable, but its internal services are not responding.
+Review the product logs for initialization or startup errors.
+Restart the Log Processor service and recheck the status.
+3. Why am I unable to add a new Log Processor?
+Possible causes include:
+The
+common database
+is not configured or unreachable.
+The
+shared storage path
+is not configured or inaccessible.
+An incorrect Admin Username/Password was provided.
+Solution
+: Verify that all
+pre-requisites
+are met before adding the processor.
+4. Logs are not being processed or are delayed. What could be the cause?
+The distributed queue may be overloaded.
+Roles may be incorrectly configured, such as the Processing Engine is disabled.
+Shared storage may be unavailable or at capacity.
+Solution
+:
+Validate role assignments
+,
+monitor system utilization
+, and confirm storage availability.
+5. Elasticsearch archive data is not accessible. Why?
+The shared archive path may not be accessible from all processors.
+Solution
+: Update the
+Elasticsearch archive location
+to a shared path, validate access credentials, and manually move existing data if necessary.
+6. The system health status shows Needs Attention. What does this indicate?
+Minor configuration issues or module-level failures exist.
+Example: the Archive module is inactive, or Alerts are disabled.
+Solution
+: Refer to
+this
+section and identify the affected module.
+7. A role, such as Alerts or Log Forwarding, has stopped functioning. Why?
+The role may have been removed during custom role reassignment.
+Solution
+: Refer to
+this
+section to reassign the required modules.
+8. After deleting a Log Processor, logs from associated devices are not reaching the system. Why?
+Devices may still be configured to forward logs to the deleted processor.
+Solution
+: Update device or syslog forwarding to direct logs to an active Log Processor.
+9. Search and indexing performance is slow. What can I do?
+Verify accessibility of the Elasticsearch archive path.
+Enable
+replicas
+in Search Engine settings to improve performance.
+Assign
+additional processors
+dedicated to the Search role if required.
+10. My Log Processor terminated unexpectedly. Why?
+The processorâs Log Queue Engine went down.
+Disk space fell below the 16 GB threshold.
+Solution:
+Check the Log Queue Engine health on the affected processor.
+If disk space is below the threshold, free up or increase disk capacity.
+Restart the processor after ensuring sufficient disk space.
+11. Log Processor startup is paused during module population and then terminated. Why?
+The Log Queue Engine failed to find enough active processors to start the cluster.
+Solution:
+Verify that the LogQueueEngine-enabled processors are running.
+Ensure that the majority of processors are up and healthy.
+Check available disk space and make sure it exceeds 16 GB.
+If the processor has stopped, restart it to reconnect to the cluster.
+Once the majority of processors are up, a paused processor will automatically resume startup.
+12. A Log Queue Engine-enabled processor was added to the existing cluster, but it failed to start. Why?
+The LogQueueEngine cluster might be unstable due to one or more nodes being unavailable.
+Solution:
+Check the health status of existing LogQueueEngine nodes.
+Once the majority of processors are up and running, restart the newly added processor to allow it to join the cluster.
+13. Unable to create Log Queue cluster. What should I check?
+Solution:
+Ensure that all nodes use consistent hostnames or IP addresses in the Log Queue configuration.
+Ensure that each processor's hostname or IP address is reachable from all other processors.
+Verify that DNS entries or hosts-file mappings are consistent across all machines.
+14. A Log Queue node's IP address has changed. How should I proceed?
+If only one or a few nodes have changed their IP address:
+Solution:
+Update the new IP information in the Log Queue cluster configuration.
+If the node's metadata is valid, the Log Queue node will register itself with the updated IP during startup.
+When several nodes are unavailable or only a few nodes are running:
+Solution:
+Keep the active nodes running and do not stop them.
+Bring additional processors online until a majority is available.
+Once the cluster reaches a stable majority, update the new IP addresses in the Log Queue configuration.
+When all nodes have changed their IP addresses:
+If all processors in the Log Queue cluster have new IP addresses, the existing metadata no longer reflects the current environment.
+Solution:
+Clear or reset the existing Log Queue metadata on all nodes.
+Reconfigure the Log Queue cluster using the updated IP addresses.
+Recommendations:
+Use hostnames or static IPs across all nodes.
+Apply IP changes at the DNS or operating system hosts-file level.
+Avoid modifying Log Queue configurations solely to accommodate IP changes.
+15. A Log Queue node machine has crashed
+When metadata from the crashed machine is available
+Solution:
+Retrieve the metadata from the affected machine.
+Copy the metadata to the replacement machine.
+Update the replacement machine's IP address in the Log Queue cluster configuration.
+If a majority of nodes are online, the restored node will join the cluster during startup.
+When metadata cannot be retrieved
+Solution
+Remove the failed node from the Log Queue cluster configuration.
+16. Restarting all Log queue nodes at the same time causes cluster failure
+Solution:
+Do not restart all nodes at once.
+Ensure that a majority of nodes are started first.
+After these nodes are running, start the remaining nodes.This ensures the cluster initializes without interruption.
+17. Log Queue does not stop when using the stop script
+The Log Queue stop script depends on PowerShell. The script may not run if any of the following conditions apply:
+The logged-in user does not have permission to run PowerShell scripts.
+The PowerShell installation is damaged or not functioning correctly.
+The PowerShell execution policy restricts script execution.
+Required PowerShell modules are unavailable or inaccessible.
+Solution:
+Ensure the user account has the necessary privileges to run PowerShell scripts.
+Verify that the PowerShell installation is functioning properly.
+Ensure that all required PowerShell modules load without errors.
+Update the PowerShell execution policy if it prevents script execution.
+Collecting logs for support
+Refer to
+this
+section to generate diagnostic files such as:
+Server logs
+Thread dumps
+Memory dumps
+NOTE
+Agent logs can be collected only from the Primary Processor.
+Service recovery steps
+1. My Log Processor is Down. How do I bring it back up?
+Log in to the server hosting the Log Processor.
+Open
+Services
+(services.msc).
+Locate
+ManageEngine Log360 Service
+.
+Right-click and select
+Start
+(or
+Restart
+if already running).
+Wait for the service to initialize, then refresh the Log Processor status in the product console.
+Read also
+This document outlines troubleshooting tips for Log Processors. For a complete overview of configuration and management, refer to the following articles:
+Configuring Log Processors
+Managing Log Processors

@@ -1,0 +1,435 @@
+In this page
+Required ports
+Required permissions
+Hardware Requirements
+Operating System Requirements
+Supported log and data sources
+RAM Requirement Approximation
+URL whitelisting
+Resolution requirement
+Prerequisites for remediation actions
+The Log360 Cloud agent supports automated remediation through SOAR (Security Orchestration, Automation and Response) playbooks. These actions allow you to respond to security incidents directly from Log360 Cloud by performing operations such as managing services and processes, executing scripts, disabling USB ports, and more on audited devices in your network via agent.
+For these actions to execute successfully, the Log360 Cloud agent machine must have the required network connectivity, user group memberships for credentials associated with the device, WMI permissions, and environment-level access on the target devices. The specific requirements vary based on the action being performed and whether the target device is a Windows or Linux machine.
+The following table lists the port, protocol, and permission prerequisites for each supported SOAR agent action.
+State
+Port
+Source
+Destination
+Protocol
+Permissions / Notes
+Manage Service
+TCP/135
+Audited Windows Device
+Log360 Cloud Agent
+RPC
+UserGroups: Distributed COM Users, Administrators. User Permissions: For root\cimv2 in WMI Properties: Execute Methods, Enable Account, Remote Enable, Read Security.
+TCP/139
+Audited Windows Device
+Log360 Cloud Agent
+NetBIOS session RPC/NP
+-
+TCP/445
+Audited Windows Device
+Log360 Cloud Agent
+SMB RPC/NP
+-
+RPC ports - TCP/1024-65535
+Audited Windows Device
+Log360 Cloud Agent
+RPC
+Randomly allocated high TCP ports
+TCP/Specified port
+Audited Linux Device
+Log360 Cloud Agent
+-
+Environment Permission: Sudo permission.
+Manage Process
+TCP/135
+Audited Windows Device
+Log360 Cloud Agent
+RPC
+UserGroups: Distributed COM Users. User Permissions: For root\cimv2 in WMI Properties: Execute Methods, Enable Account, Remote Enable, Read Security.
+TCP/139
+Audited Windows Device
+Log360 Cloud Agent
+NetBIOS session RPC/NP
+-
+TCP/445
+Audited Windows Device
+Log360 Cloud Agent
+SMB RPC/NP
+-
+RPC ports - TCP/1024-65535
+Audited Windows Device
+Log360 Cloud Agent
+RPC
+Randomly allocated high TCP ports
+TCP/Specified port
+Audited Linux Device
+Log360 Cloud Agent
+-
+Environment Permission: The permission to execute the command should be available for the user whose credentials are provided.
+Machine Actions
+TCP/135
+Audited Windows Device
+Log360 Cloud Agent
+RPC
+UserGroups: Distributed COM Users. User Permissions: For root\cimv2 in WMI Properties: Execute Methods, Enable Account, Remote Enable, Read Security. Environment Permission: The computer should not include EventLog Analyzer Installed server.
+TCP/139
+Audited Windows Device
+Log360 Cloud Agent
+NetBIOS session RPC/NP
+-
+TCP/445
+Audited Windows Device
+Log360 Cloud Agent
+SMB RPC/NP
+-
+RPC ports - TCP/1024-65535
+Audited Windows Device
+Log360 Cloud Agent
+RPC
+Randomly allocated high TCP ports
+TCP/Specified port
+Audited Linux Device
+Log360 Cloud Agent
+-
+Environment Permission: The user should be the root user.
+Disable Usb
+TCP/135
+Audited Windows Device
+Log360 Cloud Agent
+RPC
+UserGroups: Distributed COM Users. User Permissions: For root\cimv2 in WMI Properties: Execute Methods, Enable Account, Remote Enable, Read Security. Environment Permission: Remote Registry Service should be running. Full Control permission to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR.
+TCP/139
+Audited Windows Device
+Log360 Cloud Agent
+NetBIOS session RPC/NP
+-
+TCP/445
+Audited Windows Device
+Log360 Cloud Agent
+SMB RPC/NP
+-
+RPC ports - TCP/1024-65535
+Audited Windows Device
+Log360 Cloud Agent
+RPC
+Randomly allocated high TCP ports
+Write To File
+TCP/135
+Audited Windows Device
+Log360 Cloud Agent
+RPC
+UserGroups: Distributed COM Users. User Rights: Act as part of the operating system, Log on as a batch job, Log on as a service, Replace a process level token. User Permissions: For root\cimv2 Properties: Execute Methods, Enable Account, Remote Enable, Read Security. Environment Permission: The user should have read, write and modify access to the shared path (read-only access is sufficient for file existence checks).
+TCP/139
+Audited Windows Device
+Log360 Cloud Agent
+NetBIOS session RPC/NP
+-
+TCP/445
+Audited Windows Device
+Log360 Cloud Agent
+SMB RPC/NP
+-
+RPC ports - TCP/1024-65535
+Audited Windows Device
+Log360 Cloud Agent
+RPC
+Randomly allocated high TCP ports
+TCP/Specified port
+Audited Linux Device
+Log360 Cloud Agent
+-
+Environment Permission: Sudo permission for user.
+Send Popup Message
+TCP/135
+Audited Windows Device
+Log360 Cloud Agent
+RPC
+UserGroups: Distributed COM Users. User Permissions: For root\cimv2 in WMI Properties: Execute Methods, Enable Account, Remote Enable, Read Security. Environment Permission: "AllowRemoteRPC" should be 1 for HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Terminal Server.
+RPC ports - TCP/1024-65535
+Audited Windows Device
+Log360 Cloud Agent
+RPC
+Randomly allocated high TCP ports
+TCP/Specified port
+Audited Linux Device
+Log360 Cloud Agent
+-
+Environment Permission: Sudo permission for user.
+Execute Script
+TCP/135
+Audited Windows Device
+Log360 Cloud Agent
+RPC
+UserGroups: Distributed COM Users. User Permissions: For root\cimv2 in WMI Properties: Execute Methods, Enable Account, Remote Enable, Read Security. Environment Permission: The user should have read, write and modify access to the shared path in the script.
+TCP/139
+Audited Windows Device
+Log360 Cloud Agent
+NetBIOS session RPC/NP
+-
+TCP/445
+Audited Windows Device
+Log360 Cloud Agent
+SMB RPC/NP
+-
+RPC ports - TCP/1024-65535
+Audited Windows Device
+Log360 Cloud Agent
+RPC
+Randomly allocated high TCP ports
+TCP/Specified port
+Audited Linux Device
+Log360 Cloud Agent
+-
+Environment Permission: Sudo permission for user.
+Ping Device
+ICMP/No ports
+Audited Windows / Linux Device
+Log360 Cloud Agent
+ICMP
+-
+Trace Route
+ICMP/No ports
+Audited Windows Device
+Log360 Cloud Agent
+ICMP
+-
+UDP/33434-33534
+Audited Linux Device
+Log360 Cloud Agent
+UDP
+-
+Invoke Url Via Agent
+-
+-
+-
+HTTP/HTTPS
+Environment Permission: A "connect" Socket Permission to the host/port combination of the destination URL or a "URL Permission" that permits this request.
+Prerequisites for Log360 Cloud Agent
+Required ports
+The Log360 Cloud Agent requires the following ports to communicate with the cloud application server and to listen to the syslogs.
+Port Numbers
+Ports Usage
+Description
+443 (TCP)
+Communication with cloud server
+This is the default port used by the Log360 Cloud agent to communicate with the cloud application server.
+513, 514 (UDP)
+Syslog listener port
+These are the default Syslog listener ports for UDP. Ensure that the
+devices are configured
+to send Syslogs to any one of these ports.
+514 (TCP)
+Syslog listener port
+This is the default Syslog listener port for TCP. Ensure that
+devices are configured
+to send Syslogs to this port.
+Log360 Cloud Agent and devices in your network use the following ports for WMI, RPC, SMB, LDAP and DCOM services.
+Port Numbers
+Ports Usage
+Description
+135, 445, 139 (TCP)
+WMI, DCOM, RPC
+These are the traffic ports for the Log360 Cloud agent. The same ports will be used as incoming traffic ports in the devices and must be opened. Windows services DCOM, WMI, and RPC use these ports, while Log360 Cloud agent uses these services to collect logs from Windows machines in default mode (Event Log mode).
+49152-65534 (TCP)
+WMI, DCOM, RPC
+These are the incoming traffic ports in the Log360 Cloud agent. The same ports will be used as outgoing traffic ports in the devices and must be opened. DCOM uses callback mechanism on random ports between 49152-65534 for Windows Server 2008 and 1024-65534 for previous versions.
+389
+LDAP
+This port is used for domain discovery, it allows application to query directory services, such as Active Directory, to discover information about domains.
+139, 445, 135
+1024-65535
+SMB
+RPC
+These ports are used for workgroup discovery, SMB & RPC services are used to discover other computers in the workgroup.
+139
+135, 137, 138
+SMB
+RPC
+These ports are for event source discovery. SMB and RPC is used for interacting with remote machines and identifying event log sources.
+Required permissions
+Agent orchestration
+Log360 Cloud Agent is manually installed on Windows devices, following permissions needs to be enabled for agent installation.
+Action
+Permissions
+Windows Agent Installation
+User Permissions
+Agent Installation:Enable read,write and modify files in "C:/Program Files (x86)" for 64-bit Windows systems and "C:\Program Files" for 32-bit Windows systems.
+Agent Upgrade: Enable read, write and modify permission to files in "C:\ProgramData"
+Windows Agent Management
+User Permissions
+Access/Read/Write registry keys - SOFTWARE\Wow6432Node\ZOHO Corp\Log360Cloud\(or) SOFTWARE\ZOHO Corp\Log360Cloud\
+Log collection
+Following permissions are needed for log collection using Log360 Cloud.
+Action
+Permissions
+WMI Log Collection
+User Groups
+Event Log Readers
+Distributed COM Users
+User Permissions
+Enable Account
+Remote Enable
+Read Security
+Execute Methods
+Syslog Collection
+Environmental variables
+The "Syslog listener port" mentioned in "Ports Requirements" should be allowed in firewall.
+Auto Log Forwarding
+User Rights
+Service restart rights for 'rsyslog' or 'syslog' service.
+User Permissions
+Enable "rw" permission to files (/etc/ rsyslog.conf or /etc/syslog.conf)
+Discovery
+Action
+Permissions
+Event Source Discovery
+User Permissions
+At least read control should be granted for winreg registry key. (Computer\HKEY_LOCAL _MACHINE\SYSTEM\CurrentControl Set\Control\SecurePipe Servers\winreg)
+Full control permission should be granted for credentials in the EventLog registry key. (Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog).
+Environmental Variables
+Remote registry service should be running.
+Should have files in event file location. (C:\Windows\System32\winevt\Logs).
+"C$" should be enabled in remote device in order to configure event source files.
+Windows Domain Discovery
+User Permissions
+User should have read permission to Active Directory Domain Objects.
+Permission to run LDAP query in ADS_SECURE_AUTHENTICATION mode should be present.
+Windows Workgroup Discovery
+User Permissions
+Permission to run WinNT query in ADS_SECUREAUTHENTICATION mode.
+Hardware Requirements
+This section provides information about the hardware requirements for the Log360 Cloud agent.
+For 32-bit machines
+1 GHz, 32-bit (x86) Pentium Dual Core processor or equivalent
+2 GB RAM
+100 MB disk space
+For 64 bit machines
+2.80 GHz, 64-bit (x64) XeonÂ® LV processor or equivalent
+2 GB RAM
+100 MB disk space
+Windows agent requirements
+For the Windows agent to run properly, please ensure the following requirements are fulfilled. The below table denotes the suggested hardware requirements & maximum supported EPS based on the type of flow.
+Low flow
+Normal flow
+High flow
+Minimum Processor Cores needed in the agent machine
+4
+6
+12
+Maximum Log EPS
+(Events per second)
+Log Category (size in bytes)
+Log Type
+Windows (900 bytes)
+Windows
+300
+1500
+3000
+Type 1 Syslog (150 bytes)
+Linux, HP, pfSense, Juniper
+2000
+10000
+20000
+Type 2 Syslog (300 bytes)
+Cisco, Sonicwall, Huaweii, Netscreen, Meraki, H3C
+1500
+6000
+12000
+Type 3 Syslog (450 bytes)
+Barracuda, Fortinet, Checkpoint
+1200
+4000
+7000
+Type 4 Syslog (600 bytes)
+Palo Alto, Sophos, F5, Firepower, and other syslog
+800
+2500
+5000
+Note
+The free disk space must be at least 1GB greater than the maximum size of the data directory configured in the
+agent settings
+page if offline log collection is enabled.
+A single agent can handle either a maximum of 3000 Windows logs or any of the high flow values mentioned for each log type in the above table.
+For log types which are not mentioned in the above table, choose the appropriate category based on the log size.
+Operating System Requirements
+The Log360 Cloud agent can be installed and run on the following operating systems (both 32 Bit and 64 Bit architecture) and versions:
+WindowsÂ®
+Windows Server Editions
+Windows Client Editions
+Windows Server 2008
+Windows 7
+Windows Server 2008 R2
+Windows 8
+Windows Server 2012
+Windows 8.1
+Windows Server 2012 R2
+Windows 10
+Windows Server 2016
+Windows 11
+Windows Server 2019
+Windows Server 2022
+Windows Server 2025
+Supported Logs and Data Sources
+Log360 Cloud can collect, index, analyze, search, and report on logs from various devices, platforms and services. To know the latest supported logs and data sources, click
+here
+.
+Note
+For analyzing logs from Windows NT machine, WMI core should be installed on the Windows NT machine.
+Syslogs received from SNARE agents for Windows will be displayed as Windows devices.
+RAM Requirement Approximation
+The recommended RAM size of the machine in which the Log360 Cloud agent has been installed is 1 GB.
+URL whitelisting
+The following URLs have to be whitelisted in all the devices that have the Log360 Cloud agents for the agents to function effectively:
+For the US region:
+log360cloud.manageengine.com
+upload.zoho.com
+*dms.zoho.com
+staticdownloads-log360cloud.zohodl.com
+downloads.zohocdn.com
+For the EU region:
+log360cloud.manageengine.eu
+upload.zoho.eu
+*dms.zoho.eu
+staticdownloads-log360cloud.zohodl.com
+downloads.zohocdn.com
+For the AU region:
+log360cloud.manageengine.com.au
+upload.zoho.com.au
+*dms.zoho.com.au
+staticdownloads-log360cloud.zohodl.com
+downloads.zohocdn.com
+For the IN region:
+log360cloud.manageengine.in
+upload.zoho.in
+*dms.zoho.in
+staticdownloads-log360cloud.zohodl.com
+downloads.zohocdn.com
+For the JP region:
+log360cloud.manageengine.jp
+upload.zoho.jp
+*dms.zoho.jp
+staticdownloads-log360cloud.zohodl.com
+downloads.zohocdn.com
+For the CA region:
+log360cloud.manageengine.ca
+upload.zohocloud.ca
+*dms.zohocloud.ca
+staticdownloads-log360cloud.zohodl.com
+downloads.zohocdn.com
+For the UK region:
+log360cloud.manageengine.uk
+upload.zoho.uk
+*dms.zoho.uk
+staticdownloads-log360cloud.zohodl.com
+downloads.zohocdn.com
+For the UAE region:
+log360cloud.manageengine.ae
+files.zoho.ae
+*dms.zoho.ae
+staticdownloads-log360cloud.zohodl.com
+downloads.zohocdn.com/*
+Resolution requirement
+Log360 Cloud requires a minimum browser resolution of 1280x720 to avoid UI distortion.

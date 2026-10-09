@@ -1,0 +1,49 @@
+In this page
+Overview
+Available Reports
+Overview
+This page outlines the reports available for ERP events and mailbox auditing in the product console. These reports help administrators track mailbox access activities, monitor administrative configuration changes, audit permission modifications, and review mailbox import and export operations for compliance and security analysis.
+Available Reports
+Report group name
+Report name
+ERP events
+All Events
+Important Events
+Mailbox audit logging
+Admin Activity On Mailbox
+Delegate Activity On Mailbox
+Non Owner Activity On Mailbox
+Owner Activity On Mailbox
+Mails Deleted Or Moved
+Admin audit logging
+Mailbox Permission Changes
+Mailbox Storage Quota Changes
+Mailbox Move Request
+Mailbox Create And Delete
+Send And Receive Connector Changes
+Circular Logging Changes
+Hub Transport Settings Changes
+Distribution Group Changes
+Cmdlets Summary
+Distribution Group Membership Changes
+Public Folder Create And Delete
+Mailbox Send As Permission Changes
+Message Size Restriction Changes
+Databases Mounted
+Databases Dismounted
+User Actions On Databases
+Mailboxes Activated
+Mailboxes Deactivated
+Mailbox import export changes
+Mailbox Import Changes
+Mailbox Export Changes
+Folder access permission changes
+Mailbox Folder Permission Changes
+Public Folder Permission Changes
+Read also
+This document elaborated the ERP and mailbox auditing reports available in the product console and their relevance in tracking administrative actions, mailbox usage, and permission changes. Explore related report sections to gain deeper visibility into security events and operational trends.
+IIS W3C FTP reports
+IIS W3C Web reports
+MSSQL reports
+MySQL reports
+Oracle reports

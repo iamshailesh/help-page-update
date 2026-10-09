@@ -1,0 +1,23 @@
+Login to the pfSense device.
+Navigate to
+Status > System Logs > Settings
+.
+Enable
+Remote Logging
+.
+Choose
+BSD (RFC 3164, default)
+as the
+Log Message Format
+.
+Specify the
+IP address
+and
+Port
+of the EventLog Analyzer server.
+Check all the
+Remote Syslog Content
+.
+Click
+Save
+.

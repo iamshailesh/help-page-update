@@ -1,0 +1,52 @@
+Log360 Cloud allows users to create and tailor templates for various types of notifications, whether email or SMS. Users can customize the subject, MailTo address, and message based on the alert.
+Creating a New Notification Template
+To create a new notification template,
+Go to
+Settings > Admin > System Settings > Notification Template
+.
+Click on the
++ Create Notification Template
+button in the top-right corner to open the
+Create Template
+page.
+Enter a template name, a short description of the template, which module to use this template in, and whether this template should be created for mail, SMS, or both.
+If Mail is chosen, in the following section, enter the
+Mail To
+address,
+CC
+address (if necessary), a subject for the notification, and the message that should appear in the body of the email. You can also use the predefined macros in the right section.
+Note
+Log360 Cloud's GUI remains in the user-based language, while emails are triggered using the org-based language. Therefore, the content visibility under the preview is in the user-based language, whereas the emails are in the organization-based language.
+Once done, click
+Preview
+to see what the email will look like when received.
+You can also check the SMS preview if you have selected SMS notifications.
+Click
+Save
+to create the notification template.
+Editing a Notification Template
+To edit a notification template,
+Go to
+Settings â Admin â System Settings â Notification Template.
+Click on the
+Edit
+(
+) icon to open the
+Edit Templates
+page.
+Make the necessary changes, check the
+Preview
+to see if the changes are reflected, and then click
+Save
+.
+Note
+Please note that you cannot edit the SMS content in the template as it will be created automatically. Similarly, you cannot edit the default notification template available in Log360 Cloud.
+Deleting a Notification Template
+To delete a notification template,
+Click on the Delete (
+) icon.
+Click
+Yes
+in the following confirmation message to delete the template.
+Note
+You cannot delete the default notification template available in Log360 Cloud.

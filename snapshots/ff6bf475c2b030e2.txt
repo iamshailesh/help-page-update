@@ -1,0 +1,40 @@
+Please follow the steps given below to
+send log data to the cloud
+.
+Download and install the
+EventLog Analyzer agent
+.
+Login to Log360 Cloud and navigate to
+Settings → Admin Settings → Agent Configuration
+. Copy the access key given in the page.
+To send log data to the cloud, Open EventLog Analyzer and navigate to
+Settings → Admin Settings → Log360 Cloud
+. Enter the access key obtained from the previous step in the console's
+Access Key
+field and click
+Save
+.
+Note
+This access key should be used only if you are an existing user who wants to skip the
+Log360 Cloud agent
+installation. To install Log360 Cloud agent,
+click here
+.
+Please follow the steps given below to
+enable threat feeds
+.
+Download and install the
+EventLog Analyzer
+agent.
+Login to Log360 Cloud and navigate to
+Settings → Admin Settings → Agent Configuration
+. Copy the access key given in the page.
+Open EventLog Analyzer and navigate to
+Settings → Configuration → Threat Management
+. Click on the
+Advanced Threat Analytics
+tab and click on the
+icon next to the Access Key field. Enter the access key copied from the previous step and click on
+Update Key
+.
+Now the threat feeds have been enabled.

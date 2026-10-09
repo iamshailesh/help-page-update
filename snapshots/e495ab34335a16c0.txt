@@ -1,0 +1,95 @@
+In this page
+What are anomaly rules?
+List of pre-defined anomaly rules
+What are anomaly rules in UEBA module?
+Anomaly rules are predefined or custom-defined conditions or logic employed by the UEBA module of Log360 Cloud to identify unusual or suspicious behaviors and potential threats.
+Anomaly rules in Log360 Cloud are categorized into
+Predefined anomaly rules:
+Out-of-the-box detection patterns that help detecting a wide range of potential threats. While they cannot be modified or deleted, users can activate or deactivate them as required. Users can also view a pre-defined rule by clicking on the
+View Rule
+icon
+Custom rules:
+Created by the user based on their model definition. Click
+here
+to know how to create custom anomaly rules.
+NOTE
+A maximum of 20 anomaly rules can be active, including both pre-defined and custom rules. If the user tries to create new rule(s) or activate any existing rule(s) after reaching this limit, an error message like the below pops up. In that case the user has to first
+deactivate rule(s)
+in order to activate another.
+List of anomaly rules
+Following is the complete list of the
+pre-defined
+anomaly detection rules existing in the UEBA module in Log360 Cloud grouped into categories such as privileged user activity anomalies, account compromise, firewall policy anomalies, and more. Each rule is designed to detect specific deviations from typical user or entity behavior, enhancing the accuracy of threat detection and response.
+Rule Category Name
+Rule Name
+Rule Description
+Privileged User Activity Anomalies
+IIS FTP Server Privileged Command Execution Anomaly
+Abnormal privileged command execution on an IIS FTP server.
+Unix Privileged Command Execution Anomaly
+Abnormal successful sudo command executions detected on a Unix device.
+Unix Privileged Command Execution Failure Anomaly
+Abnormal sudo command execution failures detected on a Unix device.
+Fortinet Privileged Command Execution Failure Anomaly
+Abnormal privileged command execution failure detected on a Fortinet device.
+Check Point Privileged Command Execution Anomaly
+Abnormal privileged command execution detected on a Check Point device.
+Account Compromise
+Suspicious Successful Password Change Activity on a Workstation
+Suspicious successful password change activity detected on a workstation.
+MSSQL Suspicious Successful Password Change Activity
+Suspicious successful password change detected on SQL Server.
+Suspicious Successful Password Change Activity in Windows
+Suspicious successful password change activity detected in Windows.
+Suspicious Failed Password Change Activity in Windows
+Suspicious failed attempts to change a user account password detected in Windows.
+Suspicious Password Change on Directory Service Restore Mode (DSRM) Account
+Suspicious password change detected on Directory Service Restore Mode (DSRM) account on Domain Controllers.
+MSSQL Suspicious Failed Password Change Activity
+Suspicious failed password change attempts detected on SQL Server.
+Suspicious Password Change Activity on IIS FTP Server
+Suspicious password change activity detected on an IIS FTP server.
+Suspicious Failed Password Change Activity on a Workstation
+Suspicious failed password change attempts detected on a workstation.
+Suspicious Software Changes
+Excessive Software Installation Attempts on Windows
+Excessive Software Installation Attempts by a user detected on Windows.
+Excessive Software Update Attempts on Windows
+Excessive Software Update Attempts by a user detected on Windows.
+Firewall Policy Anomalies
+Sonicwall Policy Deleted during non-working hours
+A policy was deleted during non-working hours on a SonicWall device.
+Netscreen Policy Added during non-working hours
+A policy was added during non-working hours on a NetScreen device.
+WatchGuard Policy Deleted during non-working hours
+A policy was deleted during non-working hours on a WatchGuard device.
+WatchGuard Policy Added during non-working hours
+A policy was added during non-working hours on a WatchGuard device.
+Fortinet Policy Added during non-working hours
+A policy was added during non-working hours on a Fortinet device.
+Sonicwall Policy Added during non-working hours
+A policy was added during non-working hours on a SonicWall device.
+Netscreen Policy Deleted during non-working hours
+A policy was deleted during non-working hours on a NetScreen device.
+Fortinet Policy Deleted during non-working hours
+A policy was deleted during non-working hours on a Fortinet device.
+Data Exfiltration
+Suspicious Bulk File Modifications or Deletions on Windows
+Suspicious Bulk File Modifications or Deletions detected on Windows.
+Suspicious Bulk Data Transfer Activity in Salesforce
+Suspicious bulk data transfer activity detected in Salesforce.
+SaaS Configuration Anomalies
+Salesforce User Management Settings Modification
+Suspicious modification of UserManagement settings detected in Salesforce.
+Connected App Integration Activity during non-working hours in Salesforce
+A connected app integration activity was detected during non-working hours in Salesforce.
+Suspicious Email Access
+Unusual Mailbox Access
+Unusual Mailbox Access detected
+Endpoint Behavior Anomalies
+Suspicious Scheduled Tasks Created during non-working hours on Windows
+Suspicious Scheduled Tasks created during non-working hours on Windows.
+Read also
+This document explained the anomaly rules of Log360 Cloud's UEBA. For leveraging the capabilities of UEBA, refer the below articles:
+Working with anomaly rules in UEBA
+Investigating anomalies

@@ -1,0 +1,50 @@
+EventLog Analyzer collects log data from McAfee solution and presents it in the form of
+graphical reports. For the solution to start collecting this log data, it has to be added as
+a threat source.
+To configure McAfee in EventLog Analyzer, please follow the steps below.
+Configure HTTPS in
+EventLog Analyzer.
+Enable the required TLS port.
+Settings > System Settings > Listener
+ports
+Configure your McAfee ePO server to use the newly created syslog server.
+Add a new registered server and select
+Syslog
+for the type of server.
+Enter the FQDN of the Syslog server.
+Enter 6514 for the port number. If the listener port number was changed in the TLS,
+enter that port number.
+Click on
+enable event forwarding
+.
+Click on
+test connection
+. A Syslog connection success message will be
+displayed.
+Click on
+save
+.
+Once the threat source is added, EventLog Analyzer will start parsing the fields in the logs.
+This log data can now be viewed in the form of reports.
+In the EventLog Analyzer console, navigate to
+Settings > Log Source
+Configurations > Applications > Security Applications > Add Security
+Applications
+Select Add-on type as
+McAfee
+Expand the list by clicking the "
++
+" icon to add a new device.
+Choose from the drop-down menu to add Configured devices, Workgroup devices, domain
+devices, etc.
+To add new devices manually, click on
+Configure Manually
+and enter
+Log Source
+>Select and click on
+Add
+.
+Available reports:
+McAfee Events
+McAfee Threat Reports
+McAfee Virus Reports

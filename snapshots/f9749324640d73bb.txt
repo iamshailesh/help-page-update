@@ -1,0 +1,73 @@
+Step 1: Syslog server configuration
+To configure a Syslog Server for traffic events, navigate to
+Configuration > ASA Firepower Configuration > Policies > Actions Alerts
+and click the
+Create Alert
+drop-down menu and choose option
+Create Syslog Alert.
+For web interfaces, navigate to
+Policies > Actions Alerts.
+Enter the values for the Syslog server.
+Name:
+Specify the name which uniquely identifies the Syslog server.
+Host:
+Specify the IP address/hostname of Syslog server.
+Port:
+Specify the port number of Syslog server.
+Facility:
+Select any facility that is configured on your Syslog server.
+Severity:
+Select any Severity that is configured on your Syslog server.
+Tag:
+Specify tag name that you want to appear with the Syslog message.
+Step 2: Enable external logging for Connection Events
+Connection Events are generated when traffic hits an access rule with logging enabled. In order to enable the external logging for connection events, navigate to
+ASDM Configuration > ASA Firepower Configuration > Policies > Access Control Policy
+. For web interfaces, navigate to
+Policies > Access Control Policy
+. Edit the
+access rule
+and navigate to
+logging
+option.
+Select the logging option either
+log at Beginning and End of Connection
+or
+log at End of Connection
+. Navigate to
+Send Connection Events to
+option and specify where to send events.
+In order to send events to an external Syslog server, select
+Syslog
+, and then select a Syslog alert response from the drop-down list. Optionally, you can add a Syslog alert response by clicking the add icon.
+Step 3: Enable external logging for Intrusion Events
+Intrusion events are generated when a signature (snort rules) matches some malicious traffic. In order to enable the external logging for intrusion events, navigate to
+ASDM Configuration > ASA Firepower Configuration > Policies > Intrusion Policy > Intrusion Policy
+. For web interfaces, navigate to
+Policies > Intrusion Policy > Intrusion Policy
+. Either create a new Intrusion policy or edit an existing one. Navigate to
+Advanced Setting > External Responses
+.
+In order to send intrusion events to an external Syslog server, select option
+Enabled
+in
+Syslog
+Alerting
+then click the
+Edit
+option.
+Logging Host:
+Specify the IP address/hostname of Syslog server.
+Facility:
+Select any facility that is configured on your Syslog server.
+Severity:
+Select any Severity that is configured on your Syslog server.
+Note
+From Version 6.3 and above, make sure to enable timestamping in the RFC 5242 format in
+Firepower Threat Defense
+for collecting syslogs along with their timestamps.
+To forward audit logs from
+Cisco Secure Firewall Management Center
+(formerly Firepower Management Center) to EventLog Analyzer, please follow the steps
+here
+.

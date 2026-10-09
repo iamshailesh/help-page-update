@@ -1,0 +1,32 @@
+In this page
+Overview
+Available Reports
+Overview
+This page lists the Hyper-V reports available in the product for tracking server-level events and virtual machine management activities. These reports help monitor partition operations, Hyper-V service status, virtual machine lifecycle events, and failures affecting virtualization performance and availability.
+Available Reports
+Report group name
+Report name
+Hyper-V Server Events
+Partitions Created
+Partitions Deleted
+Failed Partition Creations
+Hyper-V Start Events
+Failed Hyper-V Launch
+Hyper-V Switch Creations
+Hyper-V Switch Deletions
+Hyper-V VM Management
+VM Management Service Started
+Failed Starts of VM Management Service
+VM Management Service ShutDown
+VM Creation
+VM Deletion
+Failed VM Creations
+Failed VM imports
+Failed VM exports
+Hyper-V Disk Out of Space
+Failed Hyper-V Worker operation
+Read also
+This page outlined the Hyper-V reports supported by the product for monitoring server events and virtual machine management activities. Explore related report sections to gain deeper visibility into security events and operational trends.
+File Monitoring reports
+EMC server reports
+Isilon reports

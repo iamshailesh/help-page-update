@@ -1,0 +1,237 @@
+In this page
+Overview
+Available Reports
+Overview
+The Active Directory Reports page provides a centralized set of reports to monitor changes and activities within the Active Directory environment. These reports help track user and group management actions, GPO and policy changes, authentication events, password operations, DNS modifications, and permission updates, enabling administrators to maintain security, meet compliance requirements, and investigate directory-level changes.
+Available Reports
+Report Group Name
+Report Name
+User Logon Reports
+Logon Failures
+Logon Failures based on users
+Failures due to Bad Password
+Failures due to Bad User Name
+Logon Activity based on DC
+Logon Activity based on IP Address
+Recent User Logon Activity
+User Work Hours
+ADFS Auditing
+Logon Success
+Logon Failure
+Extranet Lockout
+Account Management
+All AD Changes
+All AD Changes By User
+All AD Changes On DCs
+User Management
+Recently Created Users
+Recently Deleted Users
+Recently Enabled Users
+Recently Disabled Users
+Recently Moved Users
+Renamed Users
+Recently Locked Out Users
+Recently Unlocked Users
+Frequently Lockedout Users
+Frequently Unlocked Users
+Recently Password Changed Users
+Recently Password Set Users
+User Based Password Changes
+User Based Password Reset
+Password Never Expires Set Users
+Recently Modified Users
+Extended Attribute Changes for Users
+User Attribute New and Old Value
+Account Lockout Analyzer
+Service Account Auditing
+Recently Undeleted Users
+Recently Added SIDHistory
+Recently Failed to Add SIDHistory
+Recently Reset DSRM Administrator Password
+User Object History
+Group Management
+Recently Created Security Groups
+Recently Created Distribution Groups
+Recently Deleted Security Groups
+Recently Deleted Distribution Groups
+Recently Moved Groups
+Renamed Groups
+Recently Modified Groups
+Recently Added Members to Security Groups
+Recently Added Members to Distribution Groups
+Recently Removed Members from Security Groups
+Recently Removed Members from Distribution Groups
+Extended Attribute Changes for Groups
+Group Attribute New and Old Value
+Recently Undeleted Groups
+Group Object History
+Security Group Changed
+Distribution Group Changed
+Group Type Changes
+Special Groups Logon table modifications
+Computer Management
+Recently Created Computers
+Recently Deleted Computers
+Recently Modified Computers
+Recently Enabled Computers
+Recently Disabled Computers
+Recently Moved Computers
+Extended Attribute Changes for Computers
+Computer Attribute New and Old Value
+Recently Undeleted Computers
+Computer Object History
+OU Management
+Recently Created OUs
+Recently Deleted OUs
+Recently Moved OUs
+Recently Modified OUs
+Renamed OUs
+Extended Attribute Changes for OUs
+OU History
+Recently Undeleted OUs
+GPO Management
+Recently Created GPOs
+Recently Deleted GPOs
+Recently Modified GPOs
+GPO Link changes
+Recently Undeleted GPOs
+GPO History
+GPO Queries - Failed
+GPO Setting Changes
+Group Policy Setting Changes
+Computer Configuration Changes
+User Configuration Changes
+Password Policy Changes
+Account Lockout Policy Changes
+Security Settings Changes
+Administrative Template Changes
+User Rights Assignment Changes
+Windows Settings Changes
+Group Policy Preference changes
+Other AD Object ChangesOther AD Object ChangesOther AD Object Changes
+Password Settings Object Changes
+Recently Created Containers
+Recently Deleted Containers
+Recently Modified Containers
+Containers Permission Changes
+Recently Created Contacts
+Recently Deleted Contacts
+Recently Modified Contacts
+Recently Undeleted Other ADObjects
+Permission Changes
+Domain Level Permission Changes
+OU Permission Changes
+Container Permission Changes
+GPO Permission Changes
+User Permission Changes
+Group Permission Changes
+Computer Permission Changes
+Schema Permission Changes
+Configuration Permission Changes
+DNS Permission Changes
+Configuration Auditing
+Schema Changes
+Schema Permission Changes
+Configuration Permission Changes
+Configuration Changes
+Site Changes
+FSMO Role Changes
+Active Directory database corruptions
+AD Backup Error
+DNS Changes
+DNS Nodes Added
+DNS Nodes Removed
+DNS Nodes Modified
+DNS Zones Added
+DNS Zones Removed
+DNS Zones Modified
+DNS Permission Changes
+AzureAD Password Protection
+Password Set Success
+Password Change Success
+Password Set Failure
+Password Change Failure
+Audit-only Password Set
+Audit-only Password Chang
+Domain Object Changes
+Domain Policy Changes
+Changes to Domain DNS Object
+Domain Level Permission Changes
+LAPS Audit
+LAPS Password Read
+LAPS Password Expiry Changes
+DNS Server Events
+DNS Server Error from AD
+DNS Server Waiting for AD
+DNS Server unable to open AD
+Failed DNS Server DS Zone Open
+Failed DNS Server DS Record Loads
+DC Credential Validation
+DC Credentials Validation Success
+DC Credential Validation Failure due to Bad Username
+DC Credential Validation Failure due to Bad Password
+DC Credential Validation Failure due to account lockouts
+DC Credential validation failure due to disabled account
+DC Credential validation failure during to non-working hour logons
+DC Credential validation failure due to account expiry
+DC Credential validation failure due to password expiry
+DC Credential validation failure Overview
+User wise top successful DC credential validations
+Client wise top successful DC credential validations
+User wise top failure DC credential validations
+Client wise top failure DC credential validations
+Successful Pre Authentication
+Successful Post Authentication
+UnSuccessful Pre Authentication
+UnSuccessful Post Authentication
+Kerberos Events
+Kerberos authentication ticket (TGT) - Requested
+Kerberos pre-authentication failures
+Kerberos authentication ticket - failed requests
+Requested Kerberos service tickets
+Renewed Kerberos service tickets
+Kerberos service ticket - failed requests
+Kerberos policy changes
+Recently Detected Replay Attack
+Trust Relationships Changes
+Trusted Domain Created
+Trusted Domain Modified
+Trusted Domain Deleted
+Advanced DNS Server Audit
+DNS Scavenging Activity
+DNS Zone Changes
+Activity on DNS Zone
+DNS Node deleted
+DNS Record Changes
+DNS Configuration Changes
+DNS Server Autoconfiguration
+DNS Server Service Status
+DNS Server Active Directory Integration
+AD Replication Audit
+Replica Source NC Changes
+Replica Destination NC Changes
+AD Object Attributes Replication
+Lingering Objects Removed From Replica
+Replication Failure Details
+LDAP Auditing
+Unsecure LDAP Binds
+No of Daily Unsecure LDAP Bind
+No of LDAP Queries
+Recent LDAP Queries
+Error from LDAP Server
+No of rejected unsecure LDAP Binds
+Attempt to make LDAPS connection
+Time-out LDAP Connection
+Netlogon vulnerable Schannel Connection Audit
+Denied connection from a machine account
+Denied connection using a trust account
+Allowed connection
+Allowed connection from a machine account
+Allowed connection using a trust account
+Read also
+This page explained the available Active Directory report categories and their role in auditing directory changes, authentication activity, policy updates, and administrative actions across the domain. Explore related report sections to gain deeper insight into Active Directory security, compliance, and operational trends.
+Paloalto reports
+WatchGuard reports
+Barracuda reports
+Huawei reports
+NetScreen reports

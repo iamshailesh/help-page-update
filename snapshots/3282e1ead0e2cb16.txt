@@ -1,0 +1,1 @@
+The logs received from the configured log sources that contain the formatted view option are presented in a json structured format as it is, in each log row's formatted view.
