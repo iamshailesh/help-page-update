@@ -37,6 +37,14 @@ SEND_IF_NO_CHANGES = os.getenv("SEND_IF_NO_CHANGES", "true").lower() == "true"
 # Pages whose "Last updated" date is on or after this date get listed.
 # Format: YYYY-MM-DD, e.g. 2026-10-01. Leave empty to turn the date filter off.
 SINCE_DATE = os.getenv("SINCE_DATE", "").strip()
+# SINCE_DATE=auto -> use day AUTO_SINCE_DAY (default 2) of the PREVIOUS month,
+# e.g. a run in November uses 2026-10-02. No monthly editing needed.
+AUTO_SINCE_DAY = int(os.getenv("AUTO_SINCE_DAY", "2"))
+if SINCE_DATE.lower() == "auto":
+    _today = datetime.now(timezone.utc).date()
+    _y, _m = (_today.year - 1, 12) if _today.month == 1 else (_today.year, _today.month - 1)
+    SINCE_DATE = f"{_y:04d}-{_m:02d}-{AUTO_SINCE_DAY:02d}"
+    print(f"SINCE_DATE=auto -> using {SINCE_DATE}")
 
 DATA_DIR = Path(os.getenv("DATA_DIR", "snapshots"))
 STATE_FILE = DATA_DIR / "state.json"
@@ -482,7 +490,10 @@ def post_to_connect(posts):
 
 
 # ---------- New-pages-only report ----------
-REPORT_MODE = os.getenv("REPORT_MODE", "new").strip().lower()  # "new" = only new pages, "all" = full report
+# "date" = only pages whose "Last updated on" date is on/after SINCE_DATE (default)
+# "new"  = only pages that didn't exist on the last run
+# "all"  = date list plus new/changed/removed pages
+REPORT_MODE = os.getenv("REPORT_MODE", "date").strip().lower()
 
 
 def build_new_only_posts(new, pages, total, baseline):
@@ -510,6 +521,24 @@ def build_new_only_posts(new, pages, total, baseline):
             for i, c in enumerate(chunks, 1)]
 
 
+def build_date_only_posts(recent, undated, total):
+    today = datetime.now(timezone.utc).strftime("%d %b %Y")
+    since_txt = datetime.strptime(SINCE_DATE, "%Y-%m-%d").strftime("%d %b %Y")
+    if not recent:
+        return [(f"Log360 help docs: no pages updated since {since_txt}",
+                 f"No help page has a 'Last updated on' date on or after {since_txt}."
+                 f"<br><br>_{total} pages checked on {today}._")]
+    title = (f"Log360 help docs: {len(recent)} page{'s' if len(recent) != 1 else ''} "
+             f"updated since {since_txt}")
+    rows = [f"{d.strftime('%d %b %Y')} – {connect_link(u)}" for d, u in recent]  # newest first
+    rows += ["", f"_{total} pages checked on {today}._"]
+    if undated:
+        rows.insert(-1, f"_{len(undated)} pages had no readable date and were skipped._")
+    chunks = [rows[i:i + MAX_LINES_PER_POST] for i in range(0, len(rows), MAX_LINES_PER_POST)]
+    return [(title if len(chunks) == 1 else f"{title} ({i}/{len(chunks)})", "<br>".join(c))
+            for i, c in enumerate(chunks, 1)]
+
+
 # ---------- Main ----------
 def main():
     print("Crawling help docs…")
@@ -524,6 +553,25 @@ def main():
     save_state(new_state, pages)
 
     print(f"Pages: {len(pages)} | changed {len(changed)} | new {len(new)} | removed {len(removed)}")
+
+    if REPORT_MODE == "date":
+        if not SINCE_DATE:
+            print("REPORT_MODE=date needs SINCE_DATE (YYYY-MM-DD or auto).")
+            sys.exit(1)
+        recent, undated = filter_by_date(pages)
+        print(f"Updated on/after {SINCE_DATE}: {len(recent)} | no date found: {len(undated)}")
+        for d, u in recent[:50]:
+            print(f"  {d}  {u}")
+        for u in undated[:15]:
+            print(f"  no date: {u}")
+        posts = build_date_only_posts(recent, undated, len(pages))
+        if os.getenv("DRY_RUN", "false").lower() == "true":
+            Path("connect_preview.txt").write_text(
+                "\n\n".join(f"{t}\n{m}" for t, m in posts), encoding="utf-8")
+            print(f"DRY_RUN: would post {len(posts)} message(s) (connect_preview.txt)")
+        else:
+            post_to_connect(posts)
+        return
 
     if REPORT_MODE == "new":
         print(f"New pages since last run: {len(new)}")
