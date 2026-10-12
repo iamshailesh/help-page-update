@@ -58,8 +58,9 @@ LAST_UPDATED_RE = re.compile(r"last\s+updated\s*(on)?\s*:?\s*(.*)", re.I)
 DATE_FORMATS = ["%d %B %Y", "%d %b %Y", "%B %d %Y", "%b %d %Y",
                 "%Y-%m-%d", "%d/%m/%Y", "%m/%d/%Y"]
 # Matches "May 02, 2026", "30th April, 2026", "12 Sep 2025", "April 30th, 2026", "2026-04-30"
-DATE_PART = (r"\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]{3,9}\.?,?\s+\d{4}"
-             r"|[A-Za-z]{3,9}\.?\s+\d{1,2}(?:st|nd|rd|th)?,?\s+\d{4}"
+# \s* before st/nd/rd/th: "30<sup>th</sup>" turns into "30 th" in page text
+DATE_PART = (r"\d{1,2}\s*(?:st|nd|rd|th)?\s+[A-Za-z]{3,9}\.?,?\s+\d{4}"
+             r"|[A-Za-z]{3,9}\.?\s+\d{1,2}\s*(?:st|nd|rd|th)?,?\s+\d{4}"
              r"|\d{4}-\d{2}-\d{2}|\d{1,2}/\d{1,2}/\d{4}")
 DATE_IN_TEXT_RE = re.compile("(" + DATE_PART + ")", re.I)
 
@@ -69,7 +70,7 @@ def parse_date(text: str):
     m = DATE_IN_TEXT_RE.search(text or "")
     if not m:
         return None
-    raw = re.sub(r"(\d)(st|nd|rd|th)\b", r"\1", m.group(1), flags=re.I)  # 30th -> 30
+    raw = re.sub(r"(\d)\s*(st|nd|rd|th)\b", r"\1", m.group(1), flags=re.I)  # 30th / 30 th -> 30
     raw = " ".join(raw.replace(".", "").replace(",", " ").split())
     for fmt in DATE_FORMATS:
         try:
