@@ -55,11 +55,13 @@ HEADERS = {"User-Agent": "Log360-HelpDoc-Monitor/1.0 (internal docs change track
 # so a date bump alone doesn't count as a content change.
 LAST_UPDATED_RE = re.compile(r"last\s+updated\s*(on)?\s*:?\s*(.*)", re.I)
 
-DATE_FORMATS = ["%B %d, %Y", "%b %d, %Y", "%B %d %Y", "%d %B %Y", "%d %b %Y",
+DATE_FORMATS = ["%d %B %Y", "%d %b %Y", "%B %d %Y", "%b %d %Y",
                 "%Y-%m-%d", "%d/%m/%Y", "%m/%d/%Y"]
-DATE_IN_TEXT_RE = re.compile(
-    r"([A-Za-z]{3,9}\.? \d{1,2},? \d{4}|\d{1,2} [A-Za-z]{3,9}\.? \d{4}|"
-    r"\d{4}-\d{2}-\d{2}|\d{1,2}/\d{1,2}/\d{4})")
+# Matches "May 02, 2026", "30th April, 2026", "12 Sep 2025", "April 30th, 2026", "2026-04-30"
+DATE_PART = (r"\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]{3,9}\.?,?\s+\d{4}"
+             r"|[A-Za-z]{3,9}\.?\s+\d{1,2}(?:st|nd|rd|th)?,?\s+\d{4}"
+             r"|\d{4}-\d{2}-\d{2}|\d{1,2}/\d{1,2}/\d{4}")
+DATE_IN_TEXT_RE = re.compile("(" + DATE_PART + ")", re.I)
 
 
 def parse_date(text: str):
@@ -67,7 +69,8 @@ def parse_date(text: str):
     m = DATE_IN_TEXT_RE.search(text or "")
     if not m:
         return None
-    raw = m.group(1).replace(".", "")
+    raw = re.sub(r"(\d)(st|nd|rd|th)\b", r"\1", m.group(1), flags=re.I)  # 30th -> 30
+    raw = " ".join(raw.replace(".", "").replace(",", " ").split())
     for fmt in DATE_FORMATS:
         try:
             return datetime.strptime(raw, fmt).date()
@@ -79,10 +82,7 @@ def parse_date(text: str):
 # Any quoted/linked path ending in .html, e.g. "soar/playbooks/x.html" or "/log-management/help/x.html"
 HTML_PATH_RE = re.compile(r"""["'(]((?:https?://[^"'()\s]+|[\w./-]+)\.html)(?:#[^"'()\s]*)?["')]""")
 
-PAGE_DATE_RE = re.compile(
-    r"last\s+updated\s*(?:on)?\s*:?\s*"
-    r"([A-Za-z]{3,9}\.? \d{1,2},? \d{4}|\d{1,2} [A-Za-z]{3,9}\.? \d{4}|"
-    r"\d{4}-\d{2}-\d{2}|\d{1,2}/\d{1,2}/\d{4})", re.I)
+PAGE_DATE_RE = re.compile(r"last\s+updated\s*(?:on)?\s*:?\s*(" + DATE_PART + ")", re.I)
 
 session = requests.Session()
 session.headers.update(HEADERS)
